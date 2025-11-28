@@ -1,0 +1,55 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{/* Get the current taxonomy term (e.g., "Pseudocódigo", "Enunciado") */}}
+{{ $currentTerm := .Title }}
+{{ $currentTaxonomy := .Type }}
+
+{{/* Filter all site pages to find those with this taxonomy term */}}
+{{ $pages := slice }}
+{{ range .Site.RegularPages }}
+    {{ if eq $currentTaxonomy "languages" }}
+        {{ if in .Params.languages $currentTerm }}
+            {{ $pages = $pages | append . }}
+        {{ end }}
+    {{ else if eq $currentTaxonomy "categories" }}
+        {{ if in .Params.categories $currentTerm }}
+            {{ $pages = $pages | append . }}
+        {{ end }}
+    {{ else if eq $currentTaxonomy "professors" }}
+        {{ if in .Params.professors $currentTerm }}
+            {{ $pages = $pages | append . }}
+        {{ end }}
+    {{ else if eq $currentTaxonomy "tags" }}
+        {{ if in .Params.tags $currentTerm }}
+            {{ $pages = $pages | append . }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+<p>Total de ejercicios: {{ len $pages }}</p>
+
+{{ if $pages }}
+<ul class="exercise-list">
+    {{ range $pages }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <div class="tags">
+            {{ with .Params.languages }}
+                {{ range . }}
+                <span class="tag">{{ . }}</span>
+                {{ end }}
+            {{ end }}
+            {{ with .Params.categories }}
+                {{ range . }}
+                <span class="tag" style="background: #e74c3c;">{{ . }}</span>
+                {{ end }}
+            {{ end }}
+        </div>
+    </li>
+    {{ end }}
+</ul>
+{{ else }}
+<p>No se encontraron ejercicios para esta taxonomía.</p>
+{{ end }}
+{{ end }}

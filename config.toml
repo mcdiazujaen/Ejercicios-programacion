@@ -1,0 +1,54 @@
+baseURL = "https://example.org/"
+languageCode = "es-es"
+title = "Ejercicios de Programación"
+theme = "hugo-book"
+
+[params]
+  description = "Ejercicios de programación en diferentes lenguajes"
+  author = "Manuel C. Díaz Galiano"
+  
+  # Hugo-Book theme parameters
+  BookTheme = 'auto'
+  BookToC = true
+  BookSearch = true
+  BookSection = 'ejercicios'
+  BookComments = false
+
+[taxonomies]
+  tag = "tags"
+  language = "languages"
+  professor = "professors"
+  category = "categories"
+
+[menu]
+  [[menu.before]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+  
+  [[menu.after]]
+    name = "Por Lenguaje"
+    url = "/languages/"
+    weight = 1
+  
+  [[menu.after]]
+    name = "Categorías"
+    url = "/categories/"
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

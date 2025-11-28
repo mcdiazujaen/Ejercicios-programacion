@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article>
+    <h1>{{ .Title }}</h1>
+
+    {{ if .Params.languages }}
+    <div class="tags">
+        <strong>Lenguajes:</strong>
+        {{ range .Params.languages }}
+        <a href="/languages/{{ . }}" class="tag">{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.professors }}
+    <div class="tags">
+        <strong>Profesor:</strong>
+        {{ range .Params.professors }}
+        <a href="/professors/{{ . }}" class="tag">{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.categories }}
+    <div class="tags">
+        <strong>Categorías:</strong>
+        {{ range .Params.categories }}
+        <a href="/categories/{{ . }}" class="tag">{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}

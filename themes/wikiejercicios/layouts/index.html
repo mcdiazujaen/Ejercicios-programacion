@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="home">
+    <h1>Bienvenido a Ejercicios de Programación</h1>
+
+    <p>Aquí encontrarás toda clase de ejercicios de programación con distintas soluciones para cada uno de ellos.</p>
+
+    <div
+        style="background: #3498db; color: white; padding: 20px; border-radius: 5px; margin: 30px 0; text-align: center;">
+        <h2 style="color: white; margin-top: 0; border: none;">📚 Ver Todos los Ejercicios</h2>
+        <p style="margin: 10px 0;">Accede a la lista completa de ejercicios ordenados alfabéticamente</p>
+        <a href="/ejercicios/"
+            style="background: white; color: #3498db; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">Ver
+            Lista Completa</a>
+    </div>
+
+    <h2>Explorar por Lenguaje</h2>
+    <div class="tags">
+        {{ range .Site.Taxonomies.languages }}
+        <a href="{{ .Page.Permalink }}" class="tag">{{ .Page.Title }} ({{ .Count }})</a>
+        {{ end }}
+    </div>
+
+    <h2>Explorar por Categoría</h2>
+    <div class="tags">
+        {{ range .Site.Taxonomies.categories }}
+        <a href="{{ .Page.Permalink }}" class="tag">{{ .Page.Title }} ({{ .Count }})</a>
+        {{ end }}
+    </div>
+
+    <h2>Últimos Ejercicios</h2>
+    <ul class="exercise-list">
+        {{ range first 10 (where .Site.RegularPages "Section" "ejercicios") }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}

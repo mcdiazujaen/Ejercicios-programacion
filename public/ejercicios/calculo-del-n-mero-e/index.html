@@ -1,0 +1,3091 @@
+<!DOCTYPE html>
+<html lang="es-es" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calculo del número E# Enunciado# El número e (2.7183…) se puede aproximar mediante la suma:
+Sumatorio de 1/n! desde n=0 hasta n=N
+En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·…·(n -1)·n). Recordemos que, por definición, 0!=1.
+Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/calculo-del-n-mero-e/">
+  <meta property="og:site_name" content="Ejercicios de Programación">
+  <meta property="og:title" content="Calculo del número E">
+  <meta property="og:description" content="Calculo del número E# Enunciado# El número e (2.7183…) se puede aproximar mediante la suma:
+Sumatorio de 1/n! desde n=0 hasta n=N
+En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·…·(n -1)·n). Recordemos que, por definición, 0!=1.
+Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.">
+  <meta property="og:locale" content="es_es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ejercicios">
+    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+    <meta property="article:tag" content="Sin_c">
+    <meta property="article:tag" content="Sin_matlab">
+
+
+  <meta itemprop="name" content="Calculo del número E">
+  <meta itemprop="description" content="Calculo del número E# Enunciado# El número e (2.7183…) se puede aproximar mediante la suma:
+Sumatorio de 1/n! desde n=0 hasta n=N
+En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·…·(n -1)·n). Recordemos que, por definición, 0!=1.
+Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.">
+  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1019">
+  <meta itemprop="keywords" content="Sin_c,Sin_matlab">
+
+<title>Calculo del número E | Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/ejercicios/calculo-del-n-mero-e/">
+<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.241ccfb382daf39e1b1a9c08cc9dc78bf1e1258884c9047c609d6e45ec50b695.js" integrity="sha256-JBzPs4La854bGpwIzJ3Hi/HhJYiEyQR8YJ1uRexQtpU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-ejercicios">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Ejercicios de Programación</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+<ul><li><a href="/">Inicio</a></li></ul>
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/an-lisis-de-bucle-for-para-una-variable-booleana/" class="">
+      Análisis de bucle FOR para una variable booleana</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/an-lisis-de-la-salida-de-ciclos/" class="">
+      Análisis de la salida de ciclos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/an-lisis-de-llamadas-a-procedimientos/" class="">
+      Análisis de llamadas a procedimientos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/analisis-de-seno-entre-2-valores/" class="">
+      Analisis de Seno entre 2 valores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/an-lisis-del-bucle-mientras/" class="">
+      Análisis del bucle MIENTRAS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/area-de-un-tri-ngulo/" class="">
+      Area de un triángulo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/array-bidimensional/" class="">
+      Array bidimensional</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/array-de-caracteres-que-devuelve-el-n-mero-de-comas-leido/" class="">
+      Array de caracteres que devuelve el número de comas leido</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/ascensores/" class="">
+      Ascensores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/busca-del-n-mero-mayor-y-menor/" class="">
+      Busca del número mayor y menor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/buscar-subcadena/" class="">
+      Buscar subcadena</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/calcular-la-varianza/" class="">
+      Calcular la varianza</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/calculo-de-la-diferencia-entre-dos-fechas/" class="">
+      Calculo de la diferencia entre dos fechas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/calculo-de-los-esca-os-electorales/" class="">
+      Calculo de los escaños electorales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/calculo-de-n-meros-primos/" class="">
+      Calculo de números primos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/calculo-de-potencias/" class="">
+      Calculo de potencias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/c-lculo-de-un-polinomio/" class="">
+      Cálculo de un polinomio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/calculo-del-determenante-de-una-matriz-3x3/" class="">
+      Calculo del determenante de una matriz 3x3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/c-lculo-del-m-s-repetido/" class="">
+      Cálculo del más repetido</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/calculo-del-n-mero-e/" class="active">
+      Calculo del número E</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/c-lculo-del-valor-pi/" class="">
+      Cálculo del valor Pi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/c-lculo-n-mero-combinatorio/" class="">
+      Cálculo número combinatorio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/cambio-de-los-duplicados-de-un-array/" class="">
+      Cambio de los duplicados de un array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-an-lisis/" class="">
+      Categoría:Análisis</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-c/" class="">
+      Categoría:C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-comentario/" class="">
+      Categoría:Comentario</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-enunciado/" class="">
+      Categoría:Enunciado</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-matlab/" class="">
+      Categoría:Matlab</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-pascal/" class="">
+      Categoría:Pascal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-profesor-angel/" class="">
+      Categoría:Profesor angel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-profesor-lperez/" class="">
+      Categoría:Profesor lperez</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-profesor-mcdiaz/" class="">
+      Categoría:Profesor mcdiaz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-profesores/" class="">
+      Categoría:Profesores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-pseudoc-digo/" class="">
+      Categoría:Pseudocódigo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-revisar/" class="">
+      Categoría:Revisar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-sin-c/" class="">
+      Categoría:Sin C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-sin-matlab/" class="">
+      Categoría:Sin Matlab</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-sin-pseudoc-digo/" class="">
+      Categoría:Sin Pseudocódigo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/categor-a-sin-soluci-n/" class="">
+      Categoría:Sin Solución</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/especial-categor-as/" class="">
+      Categorías</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/comparar-dos-arrays/" class="">
+      Comparar dos arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/comparar-dos-arrays-desordenados/" class="">
+      Comparar dos arrays desordenados</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/comprobar-si-un-n-mero-es-primo/" class="">
+      Comprobar si un número es primo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/contar-vocales/" class="">
+      Contar vocales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/conversaci-n-en-c/" class="">
+      Conversación en C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/conversi-n-de-temperaturas/" class="">
+      Conversión de temperaturas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/conversion-decimal-a-octal/" class="">
+      Conversion decimal a octal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/conversor-euros-2fpesetas/" class="">
+      Conversor euros/pesetas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/coste-de-un-autom-vil/" class="">
+      Coste de un automóvil</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/criba-de-erat-stenes/" class="">
+      Criba de Eratóstenes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/cuadrado-m-gico/" class="">
+      Cuadrado Mágico</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/curiosa-propiedad/" class="">
+      Curiosa propiedad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/decodificar-clave-de-acceso/" class="">
+      Decodificar clave de acceso</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/descomposici-n-en-d-gitos/" class="">
+      Descomposición en dígitos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/descomposici-n-en-factores-primos/" class="">
+      Descomposición en factores primos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/" class="">
+      Descompsición en monedas de una cantidad en euros</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/d-a-de-la-semana/" class="">
+      Día de la semana</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/dia-de-la-semana-de-hoy/" class="">
+      Dia de la semana de hoy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/dibujo-tri-ngulo-de-asteriscos/" class="">
+      Dibujo triángulo de asteriscos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/diferencia-entre-elementos-consecutivos-de-un-vector/" class="">
+      Diferencia entre elementos consecutivos de un vector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/distancia-entre-ciudades/" class="">
+      Distancia entre ciudades</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/divisible/" class="">
+      Divisible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/divisi-n-entera-y-resto-utilizan-restar-y-sumar/" class="">
+      División entera y resto utilizan restar y sumar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/ecuaci-n-de-segundo-grado/" class="">
+      Ecuación de segundo grado</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/ejercicios-acerca-de/" class="">
+      Ejercicios:Acerca de</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/el-primer-ejercicio-en-c/" class="">
+      El primer ejercicio en C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/el-sultan-y-el-estudiante/" class="">
+      El sultan y el estudiante</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/elecciones-de-rector/" class="">
+      Elecciones de rector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/elecciones-municipales/" class="">
+      Elecciones municipales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/elemento-de-un-vector-igual-a-la-suma-del-resto/" class="">
+      Elemento de un vector igual a la suma del resto</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/eliminar-duplicados-de-un-array/" class="">
+      Eliminar duplicados de un array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/enteros-abundantes/" class="">
+      Enteros abundantes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/equipo-que-mas-partidos-a-ganado-fuera/" class="">
+      Equipo que mas partidos a ganado fuera</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/errores-de-pepito/" class="">
+      Errores de pepito</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/errores-subalgoritmos/" class="">
+      Errores subalgoritmos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/estaci-n-meteorol-gica/" class="">
+      Estación meteorológica</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/estad-stica-de-asistencia-al-cine/" class="">
+      Estadística de asistencia al cine</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/estad-sticas-de-f-tbol/" class="">
+      Estadísticas de fútbol</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/estad-sticas-de-f-tbol-2/" class="">
+      Estadísticas de fútbol 2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/evaluaci-n-de-la-funci-n-exp-x--por-desarrollo-serie/" class="">
+      Evaluación de la función Exp(x) por desarrollo serie</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/evaluar-condiciones/" class="">
+      Evaluar condiciones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/f-brica-de-electrodom-sticos/" class="">
+      Fábrica de electrodomésticos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/fabrica-de-piezas/" class="">
+      Fabrica de piezas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/formas-de-utilizar-el-bucle-for/" class="">
+      Formas de utilizar el bucle For</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/formas-de-utilizar-el-bucle-mientras/" class="">
+      Formas de utilizar el bucle MIENTRAS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/funcion-que-busca-un-valor-en-un-vector/" class="">
+      Funcion que busca un valor en un vector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/funci-n-que-comprueba-si-los-elementos-de-una-matriz-son-distintos/" class="">
+      Función que comprueba si los elementos de una Matriz son distintos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/funci-n-sigma-y-funci-n-prod/" class="">
+      Función SIGMA y función PROD</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/funci-n-sin-argumentos/" class="">
+      Función sin argumentos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/gestionar-lotes-de-sutura/" class="">
+      Gestionar lotes de sutura</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/giro-de-una-barra-extensible/" class="">
+      Giro de una barra extensible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/hijos-de-los-empleados/" class="">
+      Hijos de los empleados</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/invertir-contenido-de-un-archivo/" class="">
+      Invertir contenido de un archivo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/leer-fichero-con-matriz-y-calcular-una-suma/" class="">
+      Leer fichero con matriz y calcular una suma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/leer-matrices-2x2-de-un-fichero/" class="">
+      Leer matrices 2x2 de un fichero</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/leer-numero-de-un-fichero-mayores-de-un-umbral/" class="">
+      Leer numero de un fichero mayores de un umbral</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/leer-n-meros-sin-repetidos/" class="">
+      Leer números sin repetidos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/leer-una-frase-y-escribirla-al-reves/" class="">
+      Leer una frase y escribirla al reves</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/leer-una-palabra-y-escribirla-al-reves/" class="">
+      Leer una palabra y escribirla al reves</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/letra-del-dni/" class="">
+      Letra del DNI</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/limite-peso/" class="">
+      Limite peso</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/listar-fichero-enumerando-lineas/" class="">
+      Listar fichero enumerando lineas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/llamadas-a-subalgoritmos/" class="">
+      Llamadas a subalgoritmos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/llamadas-a-subalgoritmos-desde-el-algoritmo-principal/" class="">
+      Llamadas a subalgoritmos desde el algoritmo principal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/llamadas-desde-algoritmos/" class="">
+      Llamadas desde algoritmos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/losas-de-tres-colores/" class="">
+      Losas de tres colores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/m-quina-fotocopiadora-impresora/" class="">
+      Máquina fotocopiadora-impresora</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/matriz-sim-trica/" class="">
+      Matriz simétrica</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/matriz-sim-trica-subalgoritmo/" class="">
+      Matriz Simétrica Subalgoritmo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/matriz-transpuesta/" class="">
+      Matriz transpuesta</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/m-ximo-de-un-conjunto-de-tres-n-meros/" class="">
+      Máximo de un conjunto de tres números</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/m-ximo-de-una-submatriz/" class="">
+      Máximo de una submatriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/m-ximo-elemento-de-un-conjunto-de-n-meros/" class="">
+      Máximo elemento de un conjunto de números</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/mayor-n-mero-de-divisores/" class="">
+      Mayor número de divisores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/mediawiki-sidebar/" class="">
+      MediaWiki:Sidebar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/m-dicos/" class="">
+      Médicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/men--de-un-restaurante/" class="">
+      Menú de un restaurante</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/minimo-elemento-de-un-conjunto-de-n-meros/" class="">
+      Minimo elemento de un conjunto de números</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/modificar-el-programa-de-preguntas-indiscretas/" class="">
+      Modificar el programa de Preguntas indiscretas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/modificar-el-programa-de-suma-primeros-cinco-n-meros-naturales/" class="">
+      Modificar el programa de Suma primeros cinco números naturales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/multiplicar-dos-n-meros-sumando/" class="">
+      Multiplicar dos números sumando</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/n-mero-primo/" class="">
+      Número Primo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/numeros-amigos/" class="">
+      Numeros amigos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/n-meros-perfectos/" class="">
+      Números perfectos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/operaci-n-aritmetica/" class="">
+      Operación aritmetica</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/operaci-n-con-cadena-de-caracteres/" class="">
+      Operación con cadena de caracteres</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/operaci-n-con-dos-vectores/" class="">
+      Operación con dos vectores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/operaciones-aritm-ticas/" class="">
+      Operaciones aritméticas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/operaciones-con-vectores/" class="">
+      Operaciones con vectores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/operaciones-estadisticas/" class="">
+      Operaciones estadisticas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/ordenaci-n-de-la-burbuja/" class="">
+      Ordenación de la burbuja</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/ordenar-por-prioridad/" class="">
+      Ordenar por prioridad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/ordenar-sin-olvidar-el-orden-inicial/" class="">
+      Ordenar sin olvidar el orden inicial</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/otra-funci-n-recursiva--la-suma-de-los-n-primeros-n-mero-enteros/" class="">
+      Otra función recursiva: La suma de los N primeros número enteros</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/p-gina-principal/" class="">
+      Página Principal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/paridad/" class="">
+      Paridad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/paso-de-segundos-a-hora-min-seg/" class="">
+      Paso de segundos a hora-min-seg</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/pir-mide-de-d-gitos/" class="">
+      Pirámide de dígitos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/plantilla-revisar/" class="">
+      Plantilla:Revisar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/polinomios/" class="">
+      Polinomios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/porcentajes-de-notas/" class="">
+      Porcentajes de notas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/preguntas-indiscretas/" class="">
+      Preguntas indiscretas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/premios-primitiva/" class="">
+      Premios Primitiva</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/procedimiento-que-intercambia-filas-en-una-matriz/" class="">
+      Procedimiento que intercambia filas en una matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/procedimiento-que-multiplica-las-diagonales-de-una-matriz/" class="">
+      Procedimiento que multiplica las diagonales de una Matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/procesamiento-en-una-f-brica/" class="">
+      Procesamiento en una fábrica</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/producto-de-matrices/" class="">
+      Producto de matrices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/producto-de-una-matriz-por-un-vector/" class="">
+      Producto de una matriz por un vector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/programa-que-opera-con-matriz/" class="">
+      Programa que opera con matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/puntos-de-corte-de-dos-circuferencias/" class="">
+      Puntos de corte de dos circuferencias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/puntos-de-un-equipo/" class="">
+      Puntos de un equipo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/reescribir-un-bucle-cambiando-las-sentencias/" class="">
+      Reescribir un bucle cambiando las sentencias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/rellenar-array/" class="">
+      Rellenar array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/rellenar-matriz/" class="">
+      Rellenar matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/rellenar-matriz-con-ceros/" class="">
+      Rellenar matriz con ceros</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/rellenar-sudoku/" class="">
+      Rellenar sudoku</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/reorganizaci-n-de-un-array/" class="">
+      Reorganización de un array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/reservas-multicines/" class="">
+      Reservas Multicines</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/resultado-seg-n-el-orden-de-las-instrucciones/" class="">
+      Resultado según el orden de las instrucciones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/resultados-de-la-carrera/" class="">
+      Resultados de la carrera</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/resultados-del-bucle-for/" class="">
+      Resultados del bucle FOR</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/resultados-parciales/" class="">
+      Resultados parciales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/resumen-de-sensores/" class="">
+      Resumen de sensores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/sistema-de-ecuaciones/" class="">
+      Sistema de ecuaciones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/sopa-de-letras/" class="">
+      Sopa de letras</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/submatriz-cuadrada/" class="">
+      Submatriz cuadrada</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/suma-condicional/" class="">
+      Suma condicional</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/suma-de-las-diagonales-inferiores/" class="">
+      Suma de las diagonales inferiores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/suma-de-los-4-vecinos-en-una-matriz/" class="">
+      Suma de los 4 vecinos en una matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/suma-de-los-cuadrados-de-los-100-primeros-n-meros-enteros/" class="">
+      Suma de los cuadrados de los 100 primeros números enteros</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/suma-de-una-serie/" class="">
+      Suma de una serie</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/suma-entre-l-mites/" class="">
+      Suma entre límites</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/suma-primeros-cinco-n-meros-naturales/" class="">
+      Suma primeros cinco números naturales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/sumar-filas-impares-y-columnas-pares/" class="">
+      Sumar filas impares y columnas pares</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/sumar-valores-pares-de-posiciones-pares/" class="">
+      Sumar valores pares de posiciones pares</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/sumar-vectores-y-buscar-el-m-ximo/" class="">
+      Sumar vectores y buscar el máximo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/tabla-de-conversi-n-de-grados-centigrados-a-fahrenheit/" class="">
+      Tabla de conversión de grados centigrados a fahrenheit</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/tabla-de-multiplicar/" class="">
+      Tabla de multiplicar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/tipo-de-tri-ngulo/" class="">
+      Tipo de triángulo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/transformar-un-texto/" class="">
+      Transformar un texto</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/tri-ngulo-de-pascal/" class="">
+      Triángulo de Pascal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/tri-ngulo-de-pascal-centrado/" class="">
+      Triángulo de Pascal centrado</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ejercicios/vectores-planos/" class="">
+      Vectores planos</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+<ul><li><a href="/languages/">Por Lenguaje</a></li><li><a href="/categories/">Categorías</a></li></ul>
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Calculo del número E</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#enunciado">Enunciado</a></li>
+    <li><a href="#soluciones">Soluciones</a>
+      <ul>
+        <li><a href="#programa-en-c-por-angel">Programa en C por <strong>angel</strong></a></li>
+        <li><a href="#programa-en-matlab">Programa en Matlab</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="calculo-del-número-e">Calculo del número E<a class="anchor" href="#calculo-del-n%c3%bamero-e">#</a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
+<p>El número <strong>e</strong> (2.7183&hellip;) se puede aproximar mediante la suma:</p>
+<p><img src="images/0/05/Numero_e.GIF" alt="Imagen:Numero_e.GIF" /></p>
+<p>Sumatorio de 1/n! desde n=0 hasta n=N</p>
+<p>En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·&hellip;·(n -1)·n). Recordemos que, por definición, 0!=1.</p>
+<p>Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.</p>
+<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
+<h3 id="programa-en-c-por-angel">Programa en C por <strong>angel</strong><a class="anchor" href="#programa-en-c-por-angel">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Este programa realiza la aproximacion al numero e.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Lo hemos realizado de 2 maneras:
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * - Recursivamente.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * - Forma mas eficiente (sin usar recursividad).
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Un ejemplo: (introduciendo 10000 terminos)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * - Recursividad: 12 segundos aproximadamente
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * - Eficientemente: Se obtiene el resultado instantaneamente.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
+</span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define OK 1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define ERR -10001
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define NO 0
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define MAX_TERM 1000000
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="kt">float</span> <span class="n">n_term</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">eficiente</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">lectura</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">eficiente</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">n_term</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">calcular</span><span class="p">(</span><span class="kt">float</span> <span class="n">n_term</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">sacarpantalla</span><span class="p">(</span><span class="kt">float</span> <span class="n">numeroe</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">es_digito</span><span class="p">(</span><span class="kt">char</span> <span class="n">caracter</span><span class="p">[]);</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="nf">lectura</span><span class="p">(</span><span class="o">&amp;</span><span class="n">eficiente</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n_term</span><span class="p">)</span> <span class="o">==</span> <span class="n">ERR</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error al leer el numero de terminos</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="nf">sacarpantalla</span><span class="p">(</span><span class="nf">calcular</span><span class="p">(</span><span class="n">n_term</span><span class="p">))</span> <span class="o">==</span> <span class="n">ERR</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error al sacar por pantalla/calcular el numero</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="n">OK</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: int sacarpantalla(float numeroe)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Toma la variable numeroe de tipo float.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: Devuelve OK si lo consigue, ERR si hay algun
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Saca por pantalla el resultado. No modifica ninguna  variable.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">sacarpantalla</span><span class="p">(</span><span class="kt">float</span> <span class="n">numeroe</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">El valor de la aproximacion al numero e es: %f</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">numeroe</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">OK</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: int lectura(int *eficiente, float *n_term)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Toma la direccion de la variable eficiente, y el numero de  términos
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: Nos devuelve OK si lo consigue ERR si hay algun fallo.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Se encarga de leer el numero de terminos a calcular.  Modifica
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * n_term y eficiente.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">lectura</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">eficiente</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">n_term</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="n">numero</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">continuar</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Introduzca el numero de terminos a calcular del numero e: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">gets</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span> <span class="p">((</span><span class="o">*</span><span class="n">n_term</span> <span class="o">=</span> <span class="nf">es_digito</span><span class="p">(</span><span class="n">numero</span><span class="p">))</span> <span class="o">==</span> <span class="n">ERR</span> <span class="o">||</span> <span class="p">(</span><span class="o">*</span><span class="n">n_term</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Desea usar el modo de calculo rapido? [S,N]:</span><span class="se">\t</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">fflush</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">((</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;S&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;N&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;s&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;n&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">       <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="n">continuar</span> <span class="o">=</span> <span class="n">OK</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="p">((</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;S&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;s&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">         <span class="o">*</span><span class="n">eficiente</span> <span class="o">=</span> <span class="n">OK</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="o">*</span><span class="n">eficiente</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="p">(</span><span class="nf">strlen</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="cm">/* Permitimos hasta el numero 9999 */</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span>
+</span></span><span class="line"><span class="cl">             <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Si desea calcular este numero con recursividad puede ocasionar problemas.&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"> <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Intentelo con la manera eficiente.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">continuar</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Por favor introduzca un valor valido!!! </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">continuar</span> <span class="o">!=</span> <span class="n">OK</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">OK</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: float calcular(float terminos)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Numero de terminos para realizar la aproximacion.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: La aproximacion al numero e si es correcto o ERR si ha habido un
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * fallo.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Calcula la serie: 1 entre el factorial de un numero dado.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">calcular</span><span class="p">(</span><span class="kt">float</span> <span class="n">terminos</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">facto</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="cm">/* Va a ir acumulando el valor del factorial cuando se haya seleccionado &#34;eficiente&#34; */</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">eficiente</span> <span class="o">==</span> <span class="n">OK</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Se esta calculando el numero e de la manera mas eficiente.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">terminos</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">facto</span> <span class="o">*=</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">e</span> <span class="o">+=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">facto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="k">else</span> <span class="cm">/* Calculamos la serie usando recursividad */</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">e</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="nf">factorial</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="n">terminos</span><span class="o">--</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">terminos</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">     <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Se esta calculando el numero e usando recursividad.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: float factorial (int n)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Numero de terminos de los que se calcularan sucesivos   factoriales
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: El factorial del numero o ERR si ha habido algun error.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Calcula el factorial de un numero dado.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: int es_digito(char caracter)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Se le da una serie de caracteres para que se pasen a numero
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: Nos devolvera ERR si se produce un eroor
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Comprueba la integridad de los datos
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
+</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">es_digito</span><span class="p">(</span><span class="kt">char</span> <span class="n">caracter</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">i</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">rango</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="cm">/* Si la cadena esta vacía */</span>
+</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="n">caracter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="n">caracter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="cm">/* Si se ha introducido un numero negativo */</span>
+</span></span><span class="line"><span class="cl">     <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="cm">/* Empezamos el bucle para ver si es caracter desde el siguiente caracter */</span>
+</span></span><span class="line"><span class="cl">      <span class="n">rango</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="cm">/* Debe un numero positivo o hay algun error */</span>
+</span></span><span class="line"><span class="cl">     <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">rango</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/* Comprobamos que todos los elementos sean digitos */</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/* El mayor numero permitido es 9999999 */</span>
+</span></span><span class="line"><span class="cl"> <span class="k">if</span> <span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">rango</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;No puede introducir esa cantidad de numeros!!!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Es demasiado grande. Rango: -9999999 y 9999999</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">caracter</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">caracter</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">||</span> <span class="n">caracter</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Introduzca unicamente digitos, por favor.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/* Si solo se ha introducido un caracter */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nf">strlen</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">num</span> <span class="o">=</span> <span class="n">caracter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="cm">/* Devolvemos el digito */</span>
+</span></span><span class="line"><span class="cl"> <span class="cm">/* Si hay mas de un caracter */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">caracter</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">       <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">caracter</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div><h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>res<span class="p">=</span><span class="nf">factorial_recursivo</span><span class="p">(</span>n<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% FUNCIÓN res=factorial_recursivo(n)</span>
+</span></span><span class="line"><span class="cl"><span class="c">% DESCRIPCIÓN: Calcula el factorial de n de forma recursiva</span>
+</span></span><span class="line"><span class="cl"><span class="c">% ENTRADAS:</span>
+</span></span><span class="line"><span class="cl"><span class="c">%    n: ENTERO;  valor para calcular el factorial</span>
+</span></span><span class="line"><span class="cl"><span class="c">% SALIDAS:</span>
+</span></span><span class="line"><span class="cl"><span class="c">%    res: ENTERO; factorial de n</span>
+</span></span><span class="line"><span class="cl"><span class="c">% VARIABLES:</span>
+</span></span><span class="line"><span class="cl"><span class="c">%    No son necesarias</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="o">||</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">=</span><span class="n">n</span><span class="o">*</span><span class="n">factorial_recursivo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%Programa Calcular_e</span>
+</span></span><span class="line"><span class="cl"><span class="c">%Descripción: Aproxima el valor del número e</span>
+</span></span><span class="line"><span class="cl"><span class="c">%Entradas: Número de iteraciones</span>
+</span></span><span class="line"><span class="cl"><span class="c">%Salidas: El valor de e aproximado</span>
+</span></span><span class="line"><span class="cl"><span class="c">%Variables:</span>
+</span></span><span class="line"><span class="cl"><span class="c">%    N,n: ENTEROS;</span>
+</span></span><span class="line"><span class="cl"><span class="c">%    aprox: REAL.</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c">%Pedir el factor de aproximacion (iteraciones)</span>
+</span></span><span class="line"><span class="cl"><span class="n">N</span><span class="p">=</span><span class="n">input</span><span class="p">(</span><span class="s">&#39;Introduzca el número de términos (&lt;170):&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">aprox</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c">%Calcular e</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">n</span><span class="p">=</span><span class="mi">0</span><span class="p">:</span><span class="n">N</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">aprox</span><span class="p">=</span><span class="n">aprox</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">factorial_recursivo</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="c">%Mostrar resultado</span>
+</span></span><span class="line"><span class="cl"><span class="nb">disp</span><span class="p">(</span><span class="n">aprox</span><span class="p">);</span></span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/ejercicios/c-lculo-del-m-s-repetido/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Cálculo del más repetido</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/ejercicios/c-lculo-del-valor-pi/" class="flex align-center">
+        <span>Cálculo del valor Pi</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#enunciado">Enunciado</a></li>
+    <li><a href="#soluciones">Soluciones</a>
+      <ul>
+        <li><a href="#programa-en-c-por-angel">Programa en C por <strong>angel</strong></a></li>
+        <li><a href="#programa-en-matlab">Programa en Matlab</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ if .Content }}
+<div class="content">
+    {{ .Content }}
+</div>
+{{ end }}
+
+<p style="color: #666; margin: 20px 0;">
+    <strong>Total de ejercicios:</strong> {{ len .Pages }}
+</p>
+
+<ul class="exercise-list">
+    {{ range .Pages.ByTitle }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ if .Params.languages }}
+        <div class="tags">
+            {{ range .Params.languages }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

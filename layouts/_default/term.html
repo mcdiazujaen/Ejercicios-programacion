@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="markdown book-post">
+  <h1>{{ .Title }}</h1>
+  
+  {{ .Content }}
+  
+  <h2>Ejercicios ({{ len .Pages }})</h2>
+  
+  {{ if .Pages }}
+  <ul>
+    {{ range .Pages.ByTitle }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+    <p>No hay ejercicios en esta {{ .Data.Singular }}.</p>
+  {{ end }}
+</article>
+{{ end }}
