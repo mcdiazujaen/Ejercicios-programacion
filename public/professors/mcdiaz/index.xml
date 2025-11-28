@@ -9,13 +9,6 @@
     <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/professors/mcdiaz/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Categoría:Profesores</title>
-      <link>http://localhost:1313/ejercicios/categor-a-profesores/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ejercicios/categor-a-profesores/</guid>
-      <description>&lt;h1 id=&#34;categoríaprofesores&#34;&gt;Categoría:Profesores&lt;a class=&#34;anchor&#34; href=&#34;#categor%c3%adaprofesores&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Listado de profesores que han realizado alguna aportación.&lt;/p&gt;&#xA;&lt;h2 id=&#34;subcategorías&#34;&gt;Subcategorías&lt;a class=&#34;anchor&#34; href=&#34;#subcategor%c3%adas&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Esta categoría incluye las siguientes 3 subcategorías, de un total de 3.&lt;/p&gt;&#xA;&lt;h3 id=&#34;a&#34;&gt;A&lt;a class=&#34;anchor&#34; href=&#34;#a&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/ejercicios/profesor-angel/&#34;&gt;Profesor angel&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;l&#34;&gt;L&lt;a class=&#34;anchor&#34; href=&#34;#l&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/ejercicios/profesor-lperez/&#34;&gt;Profesor lperez&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;m&#34;&gt;M&lt;a class=&#34;anchor&#34; href=&#34;#m&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/ejercicios/profesor-mcdiaz/&#34;&gt;Profesor mcdiaz&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
       <title>Conversión de temperaturas</title>
       <link>http://localhost:1313/ejercicios/conversi-n-de-temperaturas/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>

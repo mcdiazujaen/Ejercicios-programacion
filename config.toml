@@ -26,15 +26,15 @@ theme = "hugo-book"
     url = "/"
     weight = 1
   
-  [[menu.after]]
+  [[menu.before]]
     name = "Por Lenguaje"
     url = "/languages/"
-    weight = 1
+    weight = 2
   
-  [[menu.after]]
+  [[menu.before]]
     name = "Categorías"
     url = "/categories/"
-    weight = 2
+    weight = 3
 
 [markup]
   [markup.highlight]
