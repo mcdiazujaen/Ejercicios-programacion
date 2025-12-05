@@ -171,9 +171,9 @@
     </item>
     <item>
       <title>Criba de Eratóstenes</title>
-      <link>http://localhost:1313/ejercicios/criba-de-erat-stenes/</link>
+      <link>http://localhost:1313/ejercicios/criba-de-eratostenes/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ejercicios/criba-de-erat-stenes/</guid>
+      <guid>http://localhost:1313/ejercicios/criba-de-eratostenes/</guid>
       <description>&lt;h1 id=&#34;criba-de-eratóstenes&#34;&gt;Criba de Eratóstenes&lt;a class=&#34;anchor&#34; href=&#34;#criba-de-erat%c3%b3stenes&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;enunciado&#34;&gt;Enunciado&lt;a class=&#34;anchor&#34; href=&#34;#enunciado&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;La criba de Eratóstenes, renombrado astrónomo y geógrafo griego del siglo III a. De C., es una técnica para generar números primos. Se comienza escribiendo todos los enteros impares desde 3 hasta N; luego se elimina cada tercer elemento después de 3, cada quinto elemento después de 5, etc., hasta que los múltiplos de todos los enteros impares menores que hayan sido eliminados. Los enteros que quedan constituyen la lista exacta de los números primos entre 3 y N.&lt;/p&gt;</description>
     </item>
     <item>

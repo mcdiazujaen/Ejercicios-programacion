@@ -14,7 +14,7 @@ tags: ['sin_pseudocódigo']
 
 En la siguiente figura se muestra una barra AB extensible, es decir, de longitud variable, que gira alrededor de su extremo fijo A. Las coordenadas (xi, yi) de su extremo móvil B son conocidas en diez instantes del movimiento. 
 
-![imagen:Giro.JPG](images/8/8d/Giro.JPG)
+![Barra AB extensible que gira alrededor de su extremo fijo A](/images/giro.jpg)
 
 Las coordenadas del extremo B son las siguientes: (2, 0), (1.5, 3), (-1, 3), (-1.5, 2), (-2.5, 0), (-2.5, -1), (-1.5, -1.5), (0, -1), (1, -2), (1.5, -1.5). Estas coordenadas se almacenarán en el fichero **datos.d**. Realiza un programa que calcule el ángulo formado por la barra con la horizontal y su longitud, en cada uno de los diez instantes de tiempo. El ángulo se calculará leyendo los datos del fichero **datos.d** , y utilizando la función arcotangente. La librería matemática de C dispone de dos funciones para calcular el arcotangente: atan() y atan2(), cuyos prototipos son: 
 

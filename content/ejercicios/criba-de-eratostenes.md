@@ -78,7 +78,8 @@ El algoritmo lee el número hasta el que queremos obtener la secuencia de primos
 La operación se puede repetir hasta que deseemos terminar. 
 
 ###  Programa en Pascal por **lperez**
-```text
+
+```pascal
 program Criba_Erastostenes;
 uses crt;
 type vector=array[1..100] of integer;
