@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/syntax.css">
+<style>
+/* Ensure code blocks have dark background */
+.highlight,
+.chroma,
+pre.chroma {
+  background-color: #272822 !important;
+  color: #f8f8f2 !important;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.highlight pre {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure inline code also has proper styling with dark gray background */
+/* More specific selector to override theme styles */
+.markdown code,
+code {
+  background-color: #3a3a3a !important;
+  color: #f8f8f2 !important;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+/* But not for code inside pre (already styled) */
+pre code,
+.markdown pre code {
+  background-color: transparent !important;
+  padding: 0;
+}
+</style>
