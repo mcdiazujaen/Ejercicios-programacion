@@ -27,7 +27,7 @@ theme = "hugo-book"
     weight = 1
   
   [[menu.before]]
-    name = "Por Lenguaje"
+    name = "Lenguajes"
     url = "/languages/"
     weight = 2
   
@@ -35,6 +35,16 @@ theme = "hugo-book"
     name = "Categorías"
     url = "/categories/"
     weight = 3
+  
+  [[menu.before]]
+    name = "Profesores"
+    url = "/professors/"
+    weight = 4
+  
+  [[menu.before]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 5
 
 [markup]
   [markup.highlight]
