@@ -20,16 +20,14 @@ Puedes explorar los ejercicios de las siguientes formas:
 
 ## Acerca de
 
-Este sitio web es un compendio de diversos ejercicios realizados y explicados en la asignatura _Fundamentos de Informática_ de la titulación de _Ingeniería Técnica Industrial_ de la **Universidad de Jaén**. 
+Este sitio web es una copia y actualización de la [web de ejercicios resueltos y explicados de la asignatura _Fundamentos de Informática_](https://sinai.ujaen.es/mcdiaz/docencia/ejercicios/) de la titulación de _Ingeniería Técnica Industrial_ de la [**Universidad de Jaén**](https://www.ujaen.es/). 
 
-Su desarrollo comenzó en 2006 y se financió con el proyecto de innovación docente _PID23B_ de la Universidad de Jaén. 
+Su desarrollo comenzó en 2006 como una wiki y se financió con el proyecto de innovación docente _PID23B_ de la Universidad de Jaén. 
 
 En la creación de gran parte del material de este compendio han participado los profesores: 
 
-  * Angel Inocencia Aguilera García 
+  * Angel Inocencio Aguilera García 
   * Manuel Carlos Díaz Galiano 
   * María Dolores Pérez Godoy 
 
-Además, este material es actualizado continuamente gracias a la colaboración de diversos alumnos de la titulación y bajo la supervisión de: 
-
-  * Manuel Carlos Díaz Galiano
+El cambio de plataforma de la web se ha realizado para facilitar la actualización y mantenimiento del material.
