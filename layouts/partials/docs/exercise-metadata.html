@@ -7,38 +7,38 @@
   </div>
   {{ end }}
   
-  {{ with .Params.languages }}
+  {{ with .GetTerms "languages" }}
   <div class="metadata-item">
     <span class="metadata-label">💻 Lenguajes:</span>
     {{ range . }}
-      <span class="badge badge-language">{{ . }}</span>
+      <a href="{{ .RelPermalink }}" class="badge badge-language">{{ .LinkTitle }}</a>
     {{ end }}
   </div>
   {{ end }}
   
-  {{ with .Params.professors }}
+  {{ with .GetTerms "professors" }}
   <div class="metadata-item">
     <span class="metadata-label">👨‍🏫 Profesores:</span>
     {{ range . }}
-      <span class="badge badge-professor">{{ . }}</span>
+      <a href="{{ .RelPermalink }}" class="badge badge-professor">{{ .LinkTitle }}</a>
     {{ end }}
   </div>
   {{ end }}
   
-  {{ with .Params.categories }}
+  {{ with .GetTerms "categories" }}
   <div class="metadata-item">
     <span class="metadata-label">📂 Categorías:</span>
     {{ range . }}
-      <span class="badge badge-category">{{ . }}</span>
+      <a href="{{ .RelPermalink }}" class="badge badge-category">{{ .LinkTitle }}</a>
     {{ end }}
   </div>
   {{ end }}
   
-  {{ with .Params.tags }}
+  {{ with .GetTerms "tags" }}
   <div class="metadata-item">
     <span class="metadata-label">🏷️ Tags:</span>
     {{ range . }}
-      <span class="badge badge-tag">{{ . }}</span>
+      <a href="{{ .RelPermalink }}" class="badge badge-tag">{{ .LinkTitle }}</a>
     {{ end }}
   </div>
   {{ end }}
@@ -65,6 +65,7 @@
   font-weight: 600;
   color: #495057;
   margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 .badge {
@@ -75,26 +76,37 @@
   line-height: 1;
   border-radius: 12px;
   text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Hover effects for clickable badges */
+a.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
 }
 
 .badge-language {
   background-color: #007bff;
-  color: white;
+  color: white !important;
 }
 
 .badge-professor {
   background-color: #28a745;
-  color: white;
+  color: white !important;
 }
 
 .badge-category {
   background-color: #ffc107;
-  color: #212529;
+  color: #212529 !important;
 }
 
 .badge-tag {
   background-color: #6c757d;
-  color: white;
+  color: white !important;
 }
 
 /* Dark mode support */
@@ -110,7 +122,7 @@
   
   .badge-category {
     background-color: #d69e2e;
-    color: #1a202c;
+    color: #1a202c !important;
   }
 }
 </style>

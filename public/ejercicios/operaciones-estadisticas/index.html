@@ -236,7 +236,7 @@ pre code,
   <div class="metadata-item">
     <span class="metadata-label">💻 Lenguajes:</span>
     
-      <span class="badge badge-language">c</span>
+      <a href="/languages/c/" class="badge badge-language">C</a>
     
   </div>
   
@@ -245,7 +245,7 @@ pre code,
   <div class="metadata-item">
     <span class="metadata-label">👨‍🏫 Profesores:</span>
     
-      <span class="badge badge-professor">angel</span>
+      <a href="/professors/angel/" class="badge badge-professor">Angel</a>
     
   </div>
   
@@ -254,11 +254,11 @@ pre code,
   <div class="metadata-item">
     <span class="metadata-label">📂 Categorías:</span>
     
-      <span class="badge badge-category">enunciado</span>
+      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
     
-      <span class="badge badge-category">comentario</span>
+      <a href="/categories/comentario/" class="badge badge-category">Comentario</a>
     
-      <span class="badge badge-category">análisis</span>
+      <a href="/categories/an%C3%A1lisis/" class="badge badge-category">Análisis</a>
     
   </div>
   
@@ -267,9 +267,9 @@ pre code,
   <div class="metadata-item">
     <span class="metadata-label">🏷️ Tags:</span>
     
-      <span class="badge badge-tag">sin_matlab</span>
+      <a href="/tags/sin_matlab/" class="badge badge-tag">Sin_matlab</a>
     
-      <span class="badge badge-tag">sin_pseudocódigo</span>
+      <a href="/tags/sin_pseudoc%C3%B3digo/" class="badge badge-tag">Sin_pseudocódigo</a>
     
   </div>
   
@@ -296,6 +296,7 @@ pre code,
   font-weight: 600;
   color: #495057;
   margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 .badge {
@@ -306,26 +307,37 @@ pre code,
   line-height: 1;
   border-radius: 12px;
   text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+ 
+a.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
 }
 
 .badge-language {
   background-color: #007bff;
-  color: white;
+  color: white !important;
 }
 
 .badge-professor {
   background-color: #28a745;
-  color: white;
+  color: white !important;
 }
 
 .badge-category {
   background-color: #ffc107;
-  color: #212529;
+  color: #212529 !important;
 }
 
 .badge-tag {
   background-color: #6c757d;
-  color: white;
+  color: white !important;
 }
 
  
@@ -341,7 +353,7 @@ pre code,
   
   .badge-category {
     background-color: #d69e2e;
-    color: #1a202c;
+    color: #1a202c !important;
   }
 }
 </style>
