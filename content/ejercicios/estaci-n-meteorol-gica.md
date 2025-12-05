@@ -15,8 +15,8 @@ Tenemos una estación meteorológica que nos proporciona los datos de temperatur
 miércoles
  2    0    4    6    5    7    6		
 12    9   10   20   16   18   14		
-
 ```
+
 Lo que significa que los datos de este archivo se empiezaron a medir el miércoles, y el viernes (tercer dato de cada fila) hubo una temperatura mínima de 4 y máxima de 10 
 
 ```text
@@ -28,8 +28,8 @@ Para el ejemplo anterior, el vector que debe devolver es
 10	9	6	14	11	11	8
 
 Y el día: sábado (diferencia 14 y cuarto día, empezando desde el miércoles) 
-
 ```
+
 ##  Soluciones
 
 ###  Programa en Matlab 
@@ -56,8 +56,8 @@ else
     fclose(fich);
     temperaturas=temperaturas';
 end
-
 ```
+
 ####  Apartado 2 
 ```matlab
 

@@ -53,8 +53,8 @@ Un subalgoritmo que dada una matriz cuadrada de enteros, obtenga un vector de re
       B(h)<--prod
    FIN_PARA
  FIN
-
 ```
+
 ###  Programa en Pascal por **lperez**
 ```text
  Procedure Diagonales(var a:matriz;t:integer;var b:vector;var n:integer);

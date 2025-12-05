@@ -64,8 +64,8 @@ double serie(double z, int numero) {
   }
   return miserie;
 }
-
 ```
+
 ####  Comentario 
 
 La complejidad de este tipo de programas reside en el algoritmo concreto que se utilice. En este caso, la condición que tiene el bucle para finalizar la iteración es el número de términos, que se ha introducido por el teclado como dato. La forma de calcular la serie es añadiendo una nueva fracción a la serie. Para el cálculo de esta nueva fracción utilizamos el valor que tenía la fracción en la iteración anterior, según explica el enunciado del ejercicio. En este tipo de sumas los errores son más pequeños sumando primero los términos más pequeños y luego los más grandes, pues al sumar un número pequeño a uno grande unas cuantas cifras del número pequeño se pierden de modo irremediable. Además, es posible que un número pequeño sea despreciable frente a uno grade, pero la suma de muchos números pequeños puede no ser tan insignificante. Si cada número pequeño se suma al número grande individualmente, el resultado puede ser diferente que si todos los número pequeños se suman entre sí primero, y luego el resultado se suma al número grande.

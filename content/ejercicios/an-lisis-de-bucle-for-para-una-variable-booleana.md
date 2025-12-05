@@ -18,16 +18,16 @@ categories: ['enunciado']
  PARA contador <-- 1 HASTA N HACER
     test <-- NO test
  FIN_PARA
-
 ```
+
 ###  Enunciado b) 
 ```text
  test <-- (N MOD 2 = 0)
  PARA contador <-- 1 HASTA N HACER
     test <-- NO test
  FIN_PARA
-
 ```
+
 ##  Soluciones 
 
 ###  Solución de a) 

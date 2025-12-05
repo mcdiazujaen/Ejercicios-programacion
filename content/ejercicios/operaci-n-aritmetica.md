@@ -40,8 +40,8 @@ void main(void) {
   kilometros=1.609*(millas+yardas/1760.0);
   printf("\nUn marathon tiene %f kilometros.\n\n", kilometros);
 }
-
 ```
+
 ####  Comentario 
 
 En C las constantes que incluyen un punto decimal son de tipo double. La variable yardas es de tipo int. Si en el denominador se pone sólo **1760** , el resultado de **yardas/1760** es entero y por tanto incorrecto. Basta poner **1760.0** para que yardas sea promovido a double y todas las operaciones aritméticas de esa sentencia se realicen con precision double.

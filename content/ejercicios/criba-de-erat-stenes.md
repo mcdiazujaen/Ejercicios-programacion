@@ -69,8 +69,8 @@ INICIO
    LEER seguir;
  HASTA QUE seguir=0
 FIN
-
 ```
+
 ####  Comentario 
 
 El algoritmo lee el número hasta el que queremos obtener la secuencia de primos, llama a un procedimiento que calcula dichos números primos y es el algoritmo el que los muestra por pantalla. En el procedimiento se ha utilizado Raiz(), se supone que es una función a la que se le da un número y devuelve un real que es su raíz cuadrada. En cuanto a Redondeo(), se supone que es una función a la que se le da un real y devuelve un entero resultado de redondear el real dado como entrada. 

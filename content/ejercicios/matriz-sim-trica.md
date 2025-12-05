@@ -45,8 +45,8 @@ INICIO
   SI NO ESCRIBIR ‘La matriz  no es simétrica’
   FIN_SI
 FIN
-
 ```
+
 ####  Solución 2 
 ```text
 ALGORITMO Matriz_simetrica
@@ -68,8 +68,8 @@ INICIO
   SI NO ESCRIBIR ‘La matriz  no es simétrica’
   FIN_SI
 FIN
-
 ```
+
 ####  Comentario
 
 En la primera solución para el cálculo de la simetría se realiza una llamada a la función Calculo_simetría (se puede ver en Matriz Simétrica Subalgoritmo) 

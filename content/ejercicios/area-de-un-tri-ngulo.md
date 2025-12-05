@@ -40,8 +40,8 @@ Diseñar un algoritmo para leer las longitudes de los tres lados de un triángul
  
  	ESCRIBIR "El área del triángulo es: ", area
  FIN
-
 ```
+
 ###  Programa en C 
 ```c
 
@@ -69,8 +69,8 @@ Diseñar un algoritmo para leer las longitudes de los tres lados de un triángul
  
     system("PAUSE");
  }
-
 ```
+
 ##  Soluciones 
 
 ###  Programa en Matlab 

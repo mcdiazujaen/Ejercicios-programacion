@@ -44,8 +44,8 @@ INICIO
 	ESCRIBIR i, “ / ”, j, “ = ”, division
 	ESCRIBIR i, “ * ”, j, “ = ”, multiplicacion
 FIN
-
 ```
+
 ###  Solución en C 
 ```c
 

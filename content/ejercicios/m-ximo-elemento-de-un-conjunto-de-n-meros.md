@@ -44,8 +44,8 @@ void main(void) {
   printf("\nEl maximo valor del conjunto es: %d.\n", max);
   printf("\ny esta en la posicion %d.\n", imax+1);
 }
-
 ```
+
 ####  Comentario 
 
 Este programa es muy sencillo, si se entiende el algoritmo. La variable `max` acabará siendo igual al elemento mayor del conjunto, e `imax` indicará la posición del máximo. 

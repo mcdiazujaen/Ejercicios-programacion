@@ -55,8 +55,8 @@ void main(void) {
     putchar(frase[n]);
   printf("\n");
 }
-
 ```
+
 ####  Comentario 
 
 En este caso, la lectura del array se realiza mediante un bucle while cuya condición de ejecución es la de encontrar un carácter distinto del carácter fin de fichero (EOF). Cuando en vez de leer la frase desde un fichero, ésta se introduce desde teclado, el carácter equivalente al EOF es control-z, que también se suele denotar como ^z. Una solución más sencilla a este ejercicio consiste en sustituir la línea scanf(" %s", palabra); del programa alreves.c por scanf(" %[^\n]", frase); El fichero frase2.c muestra esta nueva versión del programa. Una vez almacenada la frase en el array, se procede a escribirla al revés de la misma forma que se hacía en el programa anterior. En este caso se ha utilizado la macro de librería putchar(c); en lugar de printf(), de modo que la frase se escribe carácter a carácter con dicha macro.

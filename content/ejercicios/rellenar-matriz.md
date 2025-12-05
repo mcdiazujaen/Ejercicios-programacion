@@ -20,8 +20,8 @@ Crea un algoritmo que pida al usuario el número de filas que desea rellenar de 
 4  | 16   15   14    13
 ...|...  ...  ...   ...
 n  |...  ...  ...   ...
-
 ```
+
 Ten en cuenta que las filas impares van incrementándose y pares decrementándose. 
 
 ##  Soluciones

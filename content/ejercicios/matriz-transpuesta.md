@@ -39,8 +39,8 @@ Realizar un subalgoritmo al que se le de una matriz de orden _**NxM**_ y devuelv
           FIN_PARA
      FIN_PARA
  FIN
-
 ```
+
 ###  Programa en Matlab 
 
 ####  Solución con programación básica 
@@ -63,8 +63,8 @@ for x=1:n
         b(y,x) = a(x,y);
     end
 end
-
 ```
+
 ####  Solución con programación Matlab avanzada 
 ```text
 function b = Transpuesta( a )

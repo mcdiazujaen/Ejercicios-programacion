@@ -15,14 +15,14 @@ Diseñar un algoritmo que lea un vector desordenado _A_ , compuesto de _n_ enter
 ```text
    A1   A2   A3   A4   A5   A6   A7   A8   A9   A10
    15   31   23   15   75   23   41   15   31   85
-
 ```
+
 compuesto de 10 enteros, el vector comprimido que resulta estará formado por 
 ```text
    A1   A2   A3   A4   A5   A6   A7   A8   A9   A10
    15   31   23   75   41   85
-
 ```
+
 con _m_ = 6. 
 
 ##  Soluciones 

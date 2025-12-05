@@ -3,8 +3,8 @@
 Este directorio contiene el sitio WikiEjercicios convertido al framework Hugo.
 
 ## Estructura del Proyecto
-
 ```
+
 hugo_deploy/
 ├── config.toml              # Configuración de Hugo
 ├── content/

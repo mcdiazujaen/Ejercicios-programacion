@@ -45,8 +45,8 @@ INICIO
   FIN_SI
   DEVOLVER c
 FIN
-
 ```
+
 ####  Subalgoritmo 2
 ```text
 PROCEDIMIENTO Rellena_suelo(VAR suelo, n, m)
@@ -68,8 +68,8 @@ INICIO
     FIN_PARA
   FIN_PARA
 FIN
-
 ```
+
 ####  Subalgoritmo 3
 ```text
 FUNCION Cuenta_losas(suelo, n, m, color): ENTERO
@@ -92,8 +92,8 @@ INICIO
   FIN_PARA
   DEVOLVER cont
 FIN
-
 ```
+
 ####  Subalgoritmo 4
 ```text
 FUNCION Precio_suelo(suelo, n, m):REAL
@@ -123,8 +123,8 @@ INICIO
   FIN_PARA
   DEVOLVER suma
 FIN
-
 ```
+
 ####  Algoritmo principal
 
 ![Icono de revisar](images/4/44/Icono_revisar.png)

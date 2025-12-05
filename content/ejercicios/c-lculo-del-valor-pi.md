@@ -15,13 +15,13 @@ Realizar un subalgoritmo que calcule el valor de la constante PI, con un error m
 PI1 = 4 * (1 – 1/3)
 PI2 = 4 * (1 – 1/3 + 1/5 – 1/7)
 PIn = 4 * (1 – 1/3 + 1/5 – 1/7 + ...)
-
 ```
+
 El error se calcula como la diferencia entre un término de la serie y el anterior. 
 ```text
 error = PIi - PIi-1
-
 ```
+
 ##  Soluciones 
 
 ###  Pseudocódigo 
@@ -51,8 +51,8 @@ error = PIi - PIi-1
  
     DEVOLVER 4*siguiente
  FIN
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 

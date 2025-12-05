@@ -37,8 +37,8 @@ INICIO
 	
 	ESCRIBIR “El coste del vehículo para el comprador es de ”, coste_comprador, “ euros.”
 FIN
-
 ```
+
 ###  Programa en C 
 ```c
 

@@ -17,8 +17,8 @@ Cambiando simplemente el orden de las sentencias (sin cambiar cómo se ha escrit
         Numero <-- Numero + 1
         ESCRIBIR Numero
  FIN_MIENTRAS
-
 ```
+
 ##  Soluciones 
 
 Lo único que debemos hacer es cambiar la posición de las sentencias que hay dentro del bucle MIENTRAS. El bucle quedaría: 

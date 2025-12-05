@@ -32,14 +32,14 @@ void main(void) {
   }
 printf("suma = %d\n", suma);
 }
-
 ```
+
 ####  Comentario 
 
 El bucle while realiza la sentencia simple o compuesta que le sigue mientras la condición definida entre paréntesis sea verdadera (es decir distinta de cero). El bucle while del programa anterior podía también haberse escrito en la siguiente forma (más compacta): 
 ```text
    while (i<=5)    /* se ejecuta el bloque mientras i<=5 */
       suma += i++; /* equivale a suma=suma+i e i=i+1; */
-
 ```
+
 No hacen falta las llaves porque sólo hay una sentencia simple detrás del while.

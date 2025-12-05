@@ -17,8 +17,8 @@ Array inicial: 3-20-8-40
 Valor de reorganización: 8
 
 Array final: 8-40-3-20
-
 ```
+
 ##  Soluciones 
 
 ###  Diseño en pseudocódigo 
@@ -56,8 +56,8 @@ INICIO
         V(j) <-- W(j)
    FIN PARA
 FIN
-
 ```
+
 ###  Programa en C
 ```c
 

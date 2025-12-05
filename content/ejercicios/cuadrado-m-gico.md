@@ -65,8 +65,8 @@ if sdp==sds
 else
    disp('No es cuadrado mágico');
 end
-
 ```
+
 ####  Módulo 1 
 ```matlab
 
@@ -86,10 +86,11 @@ suma=0;
 for pos=1:size(m,2)
    suma = suma+m(f,pos);
 end
-
 ```
+
 ####  Módulo 2 
-```text
+```matlab
+
 function suma=sumac(m,c)
 %FUNCIÓN suma=sumac(m,c)
 %DESCRIPCIÓN: Devuelva la suma de una columna de una matriz.
@@ -106,8 +107,8 @@ suma=0;
 for pos=1:size(m,1)
    suma=suma+m(pos,c);
 end
-
 ```
+
 ####  Módulo 3 
 ```matlab
 

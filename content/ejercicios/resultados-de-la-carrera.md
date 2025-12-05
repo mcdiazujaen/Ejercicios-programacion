@@ -32,8 +32,8 @@ Por ejemplo si el fichero de entrada es el siguiente:
 el programa escribiría en el fichero de salida: 
 
   Los dorsales de los corredores que han abandonado son: 10 30 60.
-
 ```
+
 ##  Soluciones
 
 ###  Programa en Matlab 
@@ -62,8 +62,8 @@ else
   salida=[];
   llegada=[];
 end
-
 ```
+
 ####  Apartado 2 
 ```text
 function posicion=Busca(v,x)
@@ -82,8 +82,8 @@ while (h<=t && posicion==-1)
     h=h+1;
   end
 end
-
 ```
+
 ####  Apartado 3 
 ```text
 function vabandonos=Abandono(salida,llegada)
@@ -104,8 +104,8 @@ if (tsalida~=tllega) % si son iguales no ha habido ningún abandono
     end
   end
 end
-
 ```
+
 ####  Apartado 4 
 ```matlab
 

@@ -20,8 +20,8 @@ Por ejemplo, para la matriz:
  1   7   2
  4   5  -1
 12   6   4
-
 ```
+
 debería devolver 32 para la suma de las filas impares (1+7+2+12+6+4) y 18 para la suma de columnas pares (7+5+6). 
 
 ##  Soluciones
@@ -51,8 +51,8 @@ sumapar=0;
 for x=2:2:nc
   sumapar=sumapar+sum(m(:,x));
 end
-
 ```
+
 ####  Solución Matlab 
 ```text
 function [sumaimpar,sumapar]=SumaMat(m)

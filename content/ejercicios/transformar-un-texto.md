@@ -45,8 +45,8 @@ void main(void) {
      printf("%c", texto[n]);
   printf("\n");
 }
-
 ```
+
 ####  Comentario 
 
 Como ya se ha visto, en C se utiliza la constante simbólica **EOF** para indicar el final de un fichero (esta constante está definida en el fichero **stdio.h**). Su valor numérico es (−1) y equivale también a <control>z (^z) cuando se introduce el texto desde teclado. 

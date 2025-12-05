@@ -68,8 +68,8 @@ void main(void) {
                      printf("No hay solucion.\n");
             }
 }
-
 ```
+
 ####  Comentario 
 
 El algoritmo para la resolución de este programa (resolución en C de un sistema de dos ecuaciones lineales con dos incógnitas), se ha basado en la regla de Cramer y se tienen en cuenta los diferentes valores del determinante de la matriz del sistema definido por la variable aux. Respecto a la comparación numérica de variables tipo double hay que decir que es preferible realizar la comparación con números muy pequeños que nos marquen un límite, por ejemplo, la sentencia if(a[0]*c[1]==c[0]*a[1]) sería más recomendable poner if(abs(a[0]*c[1]-c[0]*a[1])<1.0e-10). Esto es debido a que en el manejo de números decimales en el ordenador, siempre existe un error correspondiente al número máximo de cifras significativas que puede almacenar la variable. Por ese motivo, en este caso consideraríamos “cero” los valores absolutos inferiores a 1.0e-10. Para calcular la solución de modulo mínimo en el caso de ser a y b colineales y ser c colineal a su vez con a y b, utilizamos una operación de máximos y mínimos que da como solución: alfa = a[1]*c[1]/(a[1]*a[1] + a[2]*a[2]) beta = a[2]*c[1]/(a[1]*a[1] + a[2]*a[2])

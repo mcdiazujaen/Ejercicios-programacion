@@ -32,8 +32,8 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:
 **Apartado 3.** Implementar un programa que pida al usuario que introduzca un polinomio y un valor y, utilizando las funciones anteriores, muestre por pantalla el resultado de evaluar el polinomio para ese valor así como su derivada, siguiendo el formato (para el ejemplo): 
 
 **`P’(x)= 54.0x^5 - 25.0x^4 + 12.0x^2 - 18.0**`
-
 ```
+
 ##  Soluciones
 
 ###  Programa en Matlab 
@@ -54,8 +54,8 @@ valor=0;
 for g=1:t
     valor=valor+p(g)*(x^(g-1));
 end
-
 ```
+
 ####  Apartado 2 
 ```text
 function pd=Derivada(p)
@@ -70,8 +70,8 @@ t=length(p);
 for g=2:t
     pd=[pd (p(g)*(g-1))];
 end
-
 ```
+
 ####  Apartado 3 
 ```matlab
 

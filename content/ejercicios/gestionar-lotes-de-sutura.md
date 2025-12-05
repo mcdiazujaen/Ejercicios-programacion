@@ -21,8 +21,8 @@ Ejemplo de archivo:
 53	160.3	58.9	2.51
 23	159.5	58.9	2.01
 42	160.3	61.2	1.98
-
 ```
+
 Escribe un programa en Matlab que pida al usuario el nombre de un archivo con los datos sobre los lotes de sutura, calcule los tres porcentajes comentados y escriba los resultados en un archivo de texto con el siguiente formato (para el ejemplo anterior): 
 
   * Porcentaje de lotes rechazados por temperatura: 60 

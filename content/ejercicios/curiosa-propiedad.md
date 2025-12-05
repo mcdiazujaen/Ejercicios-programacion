@@ -13,8 +13,8 @@ tags: ['sin_matlab', 'sin_solución']
 El número 3025 tiene la curiosa propiedad de que cuando se separa en dos números de dos dígitos cada uno, 30 y 25, se suman, y dicha suma se eleva al cuadrado, el resultado final es 3025: 
 ```text
  (30+25)² = 55² = 3025
-
 ```
+
 Diseña un algoritmo con los siguientes apartados: 
 
 **Apartado 1** : Un módulo al que se le dé como parámetro de entrada un número entero y devuelva verdad si el número cumple la condición anteriormente descrita. El módulo devolverá falso si no cumple la propiedad o no es un número de cuatro cifras. 

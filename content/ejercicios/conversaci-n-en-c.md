@@ -30,8 +30,8 @@ Solución comentada al Ejercicio
    scanf("%s", nombre);
    printf("Que tal estas, %s?\n", nombre);
  }
-
 ```
+
 ####  Comentario 
 
 La sentencia char nombre[30], declara una variable llamada nombre que es una cadena de 30 caracteres (tipo char). Estos caracteres se numeran del 0 al 29, y deben incluir la marca de fin de cadena '\0'. Con la función scanf(), se lee lo que será el contenido de dicha cadena por medio del formato %s, que es propio de las cadenas de caracteres. Como la lectura se detiene al encontrar un blanco, un carácter nueva línea o un tabulador, por medio de este programa no se puede leer una frase completa, sino sólo una palabra. 

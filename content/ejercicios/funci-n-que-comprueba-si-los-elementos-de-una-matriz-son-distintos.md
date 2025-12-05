@@ -43,8 +43,8 @@ INICIO
   FIN_PARA
   DEVOLVER VERDAD
 FIN
-
 ```
+
 ###  Programa en C
 ```c
 
@@ -70,8 +70,8 @@ FIN
     }  
     return p;
  }
-
 ```
+
 ####  Comentario 
 
 Los arrays en C deben tener un tamaño fijo, por eso se ha optado por darles una tamaño de 1000. Si dicho tamaño no es suficiente debe cambiarse por otro superior. 
@@ -115,8 +115,8 @@ INICIO
   FIN_MIENTRAS
   DEVOLVER p
 FIN
-
 ```
+
 ####  Comentario 
 
 En la primera solución se compara un elemento con todos los de la martriz, incluido el mismo, por lo que tenemos que comprobar que si es con él mismo no debemos tener en cuenta la comparación. En la segunda cada elemento de la matriz no se compara con todos sino sólo con aquellos elementos siguientes a él. 
@@ -141,8 +141,8 @@ begin
            then p:=false;
  Distintos:=p;
 end;
-
 ```
+
 ###  Programa en Pascal por **lperez**
 ```text
 Function Distin2(var a:matriz;t:integer):boolean;
@@ -183,8 +183,8 @@ begin
      end;
  Distin2:=p;
 end;
-
 ```
+
 ####  Comentario 
 
 En las funciones anteriores hemos utilizado el tipo martiz, que debe estar declarado en la sección type del programa principal. Por ejemplo type matriz=array[1..10,1..10] of integer;

@@ -39,8 +39,8 @@ void main(void) {
   printf("Como puede gustarte el %s,\n", color);
   printf("calzando un %d y pesando %6.2f Kg.?\n", calzado, peso);
 }
-
 ```
+
 ####  Comentario 
 
 En la función **printf()** hay que utilizar diferentes formatos de salida para las variables que deseamos imprimir en pantalla. Así, el formato **%6.2f** mostrará peso en 6 espacios, de los cuales dos serán para los decimales y uno para el punto decimal. Observa cómo se pide el peso, calzado y color favorito de forma que los dos puntos (:) queden alineados en la pantalla.

@@ -38,8 +38,8 @@ Los números introducidos son:
 2
 El mayor es el 7.
 El menor es el 2.
-
 ```
+
 ##  Soluciones 
 
 ###  Programa en C por **Angel**
@@ -207,8 +207,8 @@ El menor es el 2.
   num = (num * 10) + (caracter[i] - '0');
   return num;
  }
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 

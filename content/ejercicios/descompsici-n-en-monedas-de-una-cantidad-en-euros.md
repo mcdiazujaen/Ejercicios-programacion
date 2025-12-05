@@ -67,8 +67,8 @@ INICIO
     FIN_SI  *)  Esto puede sustituir al último mientras
   ESCRIBIR m2, m1, m05, m02, m005, m002, m001
 FIN
-
 ```
+
 ###  Diseño 2 en Pseudocódigo por **lperez**
 ```text
 ALGORITMO Cambio_dinero
@@ -100,8 +100,8 @@ INICIO
      ESCRIBIR salida(i)
   FIN_PARA
 FIN
-
 ```
+
 ####  Comentario 
 
 En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo. 
@@ -167,8 +167,8 @@ int main(void){
   }        
   printf("%f,%f,%f,%f,%f,%f,%f,%f",m2,m1,m05,m02,m01,m005,m002,m001);                               
 }
-
 ```
+
 ###  Solución 2 en C
 ```c
 
@@ -215,8 +215,8 @@ int main(void){
        printf("%i",salida[i]);
   }
 }
-
 ```
+
 ###  Programa 1 en Pascal por **lperez**
 ```text
 (* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0.
@@ -283,8 +283,8 @@ begin
     writeln('Pulse enter para acabar');
     readln;
 end.
-
 ```
+
 ###  Programa 2 en Pascal por **lperez**
 ```text
 (* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0.

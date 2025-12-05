@@ -27,8 +27,8 @@ Solución comentada al Ejercicio
  void main(void) {
      printf("Hola! Que tal estas, futuro programador?\n");
  }
-
 ```
+
 ####  Comentario 
 
 La primera línea de este programa es un comentario, y es ignorado por el compilador. 

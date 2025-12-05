@@ -40,8 +40,8 @@ Un departamento de climatología ha realizado recientemente su conversión al si
     milimetros <-- pulgadas * 25.5
     ESCRIBIR pulgadas, " pulgadas = ", milimetros, " milímetros."
  FIN
-
 ```
+
 ###  Programa en C 
 ```c
 
@@ -69,8 +69,8 @@ Un departamento de climatología ha realizado recientemente su conversión al si
  
     system("PAUSE");
  }
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 

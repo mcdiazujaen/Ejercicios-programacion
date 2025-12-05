@@ -39,8 +39,8 @@ Solución comentada del Ejercicio:
       if(esPrimo==1) printf("%d\n", numero);
    }
  }
-
 ```
+
 ####  Comentario 
 
 Para poder escribir todos los números primos hasta un límite, basta introducir un nuevo bucle for al programa anterior que vaya recorriendo todos los números enteros desde el 2 hasta dicho límite inclusive. En cada ejecución del bucle se comprueba si el número considerado es primo aprovechando las sentencias del programa anterior. En este caso se calcula si un número es primo mediante el bucle for (divisor=2; divisor<=sqrt(numero); divisor++). Observa que se ha definido una variable esPrimo que indica si el número es primo o no. Al principio se supone que el número es primo, y esta condición se cambia si se encuentra un divisor exacto. En esta caso, la sentencia break hace que se termine el bucle for más interno. 
@@ -74,8 +74,8 @@ Para poder escribir todos los números primos hasta un límite, basta introducir
       FIN_SI
    FIN_PARA 
  FIN
-
 ```
+
 ####  Comentario 
 
 En la creación del pseudocódigo a partir del código en C mostrado en el apartado anterior hemos realizado algunas sustituciones para que el pseudocódigo fuera correcto. El bucle `for` más interno ha sido sustituido por una sentecia `MIENTRAS`, ya que en el código C dicho bucle estaba siendo utilizado como una sentencia `MIENTRAS`. Además en el diseño en pseudocódigo no es recomendable incluir sentencias de ruptura de flujo como `break`, por lo que se ha simulado su comportamiento incluyendo en la condición del `MIENTRAS` la comparación `esPrimo=1`. Por último, se ha utilizado la función ficticia `RAIZ(numero)` como si ya estubiera declarada anteriormente. 

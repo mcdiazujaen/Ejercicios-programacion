@@ -84,8 +84,8 @@ double productoEscalar(double* vec1, double* vec2) {
     escalar+=vec1[i]*vec2[i];
   return (escalar);
 }
-
 ```
+
 ####  Comentario 
 
 Este ejercicio es similar al anterior, pero con algunas diferencias interesantes. La más importante es que el resultado de algunas operaciones con vectores (como la suma, la diferencia o el producto vectorial), son también vectores. Por tanto el resultado de dichas operaciones no es un valor único y no se devuelve como valor de retorno. Lo que se hace es pasar todos los vectores como argumentos por referencia. Como el nombre de un vector es la dirección de su primer elemento, la función es capaz de recibir datos y devolver resultados leyendo y escribiendo en las zonas de memoria adecuadas. En el momento de imprimir resultados, se puede hacer que los letreros de suma, resta y producto vectorial, sean colocados a la hora de imprimir con cierto espacio, lo cual mejora la presentación de los resultados. Esto se hace con instrucciones de cadenas de caracteres reservando los espacios que consideramos necesarios (p.ej: %10s, reserva un espacio mínimo de 10 caracteres para imprimir el letrero correspondiente). Se ha incluido un bucle for que imprime una línea discontinua para subrayar los títulos. Luego, a los resultados se le da el formato indicado para que ocupen un número de espacios acorde con los títulos.

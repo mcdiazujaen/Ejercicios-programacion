@@ -45,8 +45,8 @@ int maximo(int a, int b, int c) {
       max=c;
   return max;
 }
-
 ```
+
 ####  Comentario 
 
 Como la función maximo() devuelve un valor entero. Las variables a, b, y c, argumentos formales de la función, reciben una copia de los argumentos actuales: x, y, z. La forma de calcular el máximo de una lista de números es ya conocida.

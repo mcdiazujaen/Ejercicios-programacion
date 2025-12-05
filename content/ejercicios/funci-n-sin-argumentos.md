@@ -39,8 +39,8 @@ int minutos(void) {
   scanf("%d:%d", &horas, &mins);
   return (horas*60+mins); 
 }
-
 ```
+
 ###  Diseño en Pseudocódigo
 ```text
  FUNCION Minutos():ENTERO

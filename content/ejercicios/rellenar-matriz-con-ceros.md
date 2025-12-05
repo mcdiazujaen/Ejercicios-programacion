@@ -24,8 +24,8 @@ El formato del fichero de entrada es el siguiente: en la primera línea la dimen
 0	0	0	0	9
 8	2	6	5	0
 1	4	4	8	6
-
 ```
+
 **Ejemplo:** Archivo de salida 
 ```text
 5				
@@ -34,8 +34,8 @@ El formato del fichero de entrada es el siguiente: en la primera línea la dimen
 **1**	**1**	**1**	**1**	9
 8	2	6	5	**4**
 1	4	4	8	6
-
 ```
+
 ##  Soluciones 
 
 ###  Programa en Matlab 
@@ -65,8 +65,8 @@ if idf ~= -1
     m = m';
     fclose(idf);
 end
-
 ```
+
 ####  Función que transforma la matriz 
 ```text
 function s = transforma(m)
@@ -93,8 +93,8 @@ for f = 1:nf
     end
 end
 s = m;
-
 ```
+
 ####  Función que escribe en el fichero 
 ```text
 function escribeFich(m)
@@ -116,8 +116,8 @@ if idf ~= -1
     end
     fclose(idf);
 end
-
 ```
+
 ####  Programa principal 
 ```matlab
 

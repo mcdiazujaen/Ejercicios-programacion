@@ -22,8 +22,8 @@ Pieza 3 |  6 |  5 |  7             Pieza 3 |  10
 Pieza 4 |  4 |  5 | 23             Pieza 4 | 500
 ...                                ...
 ----------------------             --------------
-
 ```
+
 Se quiere diseñar un algoritmo que permita obtener información del proceso de fabricación. Dicho algoritmo se ha de dividir en los siguientes apartados: 
 
 ###  Apartado a

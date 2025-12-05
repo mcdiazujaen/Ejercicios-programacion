@@ -20,8 +20,8 @@ Diseñar un algoritmo que calcule el triángulo de Pascal de coeficientes binomi
         1   4   6   4   1
       1   5  10   10   5  1
    ... ... ... ... ... ... ...
-
 ```
+
 donde, en general, cada elemento de un renglón se calcula realizando la suma de los dos elementos situados en el renglón de más arriba en una posición a la izquierda y a la derecha. Generar los 10 primeros renglones de este triángulo. 
 
 ##  Soluciones

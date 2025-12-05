@@ -196,8 +196,8 @@ INICIO
        valor <-- LeerEntero(0,9)
     FIN_MIENTRAS
 FIN
-
 ```
+
 ###  Programa en C 
 ```c
 

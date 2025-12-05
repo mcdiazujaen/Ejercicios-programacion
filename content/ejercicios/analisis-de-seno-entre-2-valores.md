@@ -13,8 +13,8 @@ categories: ['enunciado']
 En matemáticas, la siguiente expresión es siempre verdadera: 
 ```text
 seno(x)<=1
-
 ```
+
 Diseñar un algoritmo para verificar esta propiedad en la (utilizando la función interna `sen`) para los valores de x que van de -10.0 hasta 10.0 en pasos de 0.2. 
 
 ##  Soluciones 
@@ -47,8 +47,8 @@ Diseñar un algoritmo para verificar esta propiedad en la (utilizando la funció
        ESCRIBIR "SI verifica la función"
     FIN_SI
  FIN
-
 ```
+
 ###  Solución en C
 ```c
 
@@ -84,8 +84,8 @@ int main(void){
       printf("SI verifica la funcion");
    }
 }
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 

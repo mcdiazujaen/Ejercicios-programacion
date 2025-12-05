@@ -16,8 +16,8 @@ Realizar el diseño y programa capaces de calcular el combinatorio de dos númer
                         a!
           C(a,b) = -------------
                      b! * (a-b)!
-
 ```
+
 ##  Soluciones 
 
 ###  Diseño en Pseudocódigo 
@@ -53,8 +53,8 @@ Realizar el diseño y programa capaces de calcular el combinatorio de dos númer
    FIN_SI   
    ESCRIBIR combi 
  FIN
-
 ```
+
 ####  Diseño 2 por **lperez**
 ```text
  PROCEDIMIENTO Factorial (n, VAR f)
@@ -88,8 +88,8 @@ Realizar el diseño y programa capaces de calcular el combinatorio de dos númer
    FIN_SI   
    ESCRIBIR combi 
  FIN
-
 ```
+
 ####  Comentario 
 
 En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento. 
@@ -139,8 +139,8 @@ En la primera solución se ha utilizado una función para resolver el factorial,
     }
     printf("%i",combi);
  }
-
 ```
+
 ####  Solución 2 
 ```c
 
@@ -182,8 +182,8 @@ En la primera solución se ha utilizado una función para resolver el factorial,
     }
     printf("%i",combi);
   }
-
 ```
+
 ####  Comentario 
 
 En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento. 
@@ -272,8 +272,8 @@ En la primera solución se ha utilizado una función para resolver el factorial,
     readln(opcion);
   until opcion='n';
  end.
-
 ```
+
 ####  Comentario 
 
 Tal y como está el programa anterior, utiliza el procedimiento para resolver el cálculo del factorial. Si se quiere utilizar la función se tendría que quitar de comentario la línea que lo hace y se tendría que comentar las líneas de llamadas al procediemiento. 

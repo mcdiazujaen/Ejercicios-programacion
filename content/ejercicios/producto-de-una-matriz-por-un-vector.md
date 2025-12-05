@@ -54,8 +54,8 @@ void main(void) {
      printf("Elemento %d = %lf\n", i+1, solucion[i]);
   }
 }
-
 ```
+
 ####  Comentario 
 
 Se presentan en este programa algunos pasos típicos de manejo de matrices que son muy similares en todos los lenguajes de programación. En cuanto al algoritmo, es ya conocida la forma de multiplicar una matriz por un vector columna: cada elemento del vector producto es el producto escalar (la suma de los productos elemento a elemento) de la fila correspondiente de la matriz por el vector columna. Para ello hacen falta dos bucles: uno recorre las filas de la matriz y el otro realiza el sumatorio propio del producto escalar. Observa que, para realizar el sumatorio, se inicializa cada vez la variable sum a cero.

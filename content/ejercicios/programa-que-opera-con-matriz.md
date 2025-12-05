@@ -39,8 +39,8 @@ Inicio
         A(fila2,i) <-- aux
    Fin_Para
 Fin
-
 ```
+
 ####  Apartado 2 
 ```text
 Procedimiento SumaProducto (Var A, m, n, ope)
@@ -93,8 +93,8 @@ Inicio
       Fin_Para
    Fin_Si
 Fin
-
 ```
+
 ####  Apartado 3 
 ```text
 Procedimiento SumaUltimaFilaColumna (Var A, m, n)
@@ -116,8 +116,8 @@ Inicio
    Fin_Para
    A(m,n) <-- sum
 Fin
-
 ```
+
 ####  Algoritmo principal 
 ```text
 Procedimiento RellenaMatriz (Var A, m, n)

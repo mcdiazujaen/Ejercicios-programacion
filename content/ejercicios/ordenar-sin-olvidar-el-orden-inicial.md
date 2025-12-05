@@ -64,8 +64,8 @@ void main(void) {
       printf("%d, ", orden[i]);
   printf("\b\b}, respectivamente.\n");
 }
-
 ```
+
 ####  Comentario 
 
 El funcionamiento del programa de ordenación de los elementos de un vector se vió en la [práctica anterior](/ejercicios/ordenación-de-la-burbuja/). Para evitar perder el vector original con el cambio, lo que se hace es una simple copia del mismo con la instrucción **copia[i] = vector[i]**. 

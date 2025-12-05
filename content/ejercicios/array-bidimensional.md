@@ -55,8 +55,8 @@ b) Un subalgoritmo que se le pase un terreno representado mediante un array y ob
        FIN_PARA
     FIN_SI
  FIN
-
 ```
+
 ####  Apartado b 
 ```text
  PROCEDIMIENTO Invierte (Terreno, nf, nc, VAR Invertido)

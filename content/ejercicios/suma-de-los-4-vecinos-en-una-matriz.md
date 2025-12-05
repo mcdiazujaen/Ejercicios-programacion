@@ -18,8 +18,8 @@ Diseña un módulo al que se le dé como parámetro de entrada una matriz **M** 
    1  7 -8  7                 1  1  2  2  3
    5  0  9  8                 2  4  1  3  2
    1 14  3  5
-
 ```
+
 Observe que el primer valor que es mayor a la suma de sus vecinos es 7 (fila 1, columna 2). Sus vecinos valen 1 (izquierda), 0 (abajo) y -8 (derecha), arriba no tiene vecino. 
 
 Usando el módulo anterior diseña un algoritmo que lea una matriz de un archivo y muestre en la pantalla la suma de los valores de la matriz que son mayores a la suma de sus cuatro vecinos. El formato del fichero tiene en la primera fila el número de filas y columnas de la matriz y en las filas siguientes los elementos de la matriz por filas. 
@@ -30,8 +30,8 @@ Usando el módulo anterior diseña un algoritmo que lea una matriz de un archivo
     1  7 -8  7  
     5  0  9  8
     1 14  3  5
-
 ```
+
 Para el fichero de ejemplo el algoritmo debe mostrar _42_ , que es la suma de los valores mayores a sus vecinos (7+7+5+9+14). 
 
 ##  Soluciones 
@@ -76,8 +76,8 @@ for f = 1:nf
         end
     end
 end
-
 ```
+
 ####  Apartado b 
 ```matlab
 

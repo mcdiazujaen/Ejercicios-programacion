@@ -15,15 +15,15 @@ Dada las siguientes declaraciones en un determinado algoritmo:
 a, b, c : ENTERO
 k: LÓGICO
 d,e : REAL
-
 ```
+
 Y las siguientes declaraciones de subalgoritmos: 
 ```text
 FUNCIÓN Uno (x:REAL, y:ENTERO): LÓGICO
 PROCEDIMIENTO Dos (VAR x: REAL, y: ENTERO)
 FUNCIÓN Tres (x:ENTERO, VAR z: LÓGICO):ENTERO
-
 ```
+
 Decir si las siguientes llamadas a los subalgoritmos desde el cuerpo del algoritmo principal son validas o no. Justificar la respuesta: 
 ```text
 Dos(1.4, 5)
@@ -38,8 +38,8 @@ SI Tres(a,k) ENTONCES ...
 SI Uno(d, Tres(c,k)) ENTONCES ...
 a <-- Tres(c, Uno(e,b))
 Tres(a,k)
-
 ```
+
 ##  Soluciones 
 
 ###  Pseudocódigo 

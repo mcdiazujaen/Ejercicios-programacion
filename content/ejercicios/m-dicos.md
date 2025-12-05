@@ -41,8 +41,8 @@ for x=1:num
     fprintf('Introduzca citas del medico %d',x);
     c(x) = input(': ');
 end
-
 ```
+
 ####  Módulo 2 
 ```matlab
 
@@ -62,8 +62,8 @@ for x=1:num
     fprintf('Introduzca precio por cita del medico %d',x);
     c(x) = input(': ');
 end
-
 ```
+
 ####  Módulo 3 
 ```matlab
 
@@ -80,8 +80,8 @@ function valor = PorcentajeDr( c, n )
 % Variables (internas): Ninguna
  
 valor = (c(n)/sum(c))*100;
-
 ```
+
 ####  Módulo 4 
 ```text
 function ganado = GananciaDr( c, p )
@@ -101,8 +101,8 @@ ganado = zeros(1,tama);
 for x=1:tama
     ganado(x) = c(x)*p(x);
 end
-
 ```
+
 ####  Módulo 5 
 ```text
 function media = MediaPaciente( c, p )
@@ -119,8 +119,8 @@ function media = MediaPaciente( c, p )
  
 gana = GananciaDr( c, p );
 media = sum(gana) / sum(c);
-
 ```
+
 ####  Programa principal 
 ```matlab
 

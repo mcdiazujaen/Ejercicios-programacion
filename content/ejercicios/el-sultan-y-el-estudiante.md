@@ -42,8 +42,8 @@ Solución comentada al Ejercicio:
        printf("%4d %15.2e %16.2e %12.2e\n", cont, actual, total, total/COSECHA);
     }
  }
-
 ```
+
 ####  Comentario 
 
 El interés de este ejercicio está en ver una forma de disponer los resultados de salida en columnas, formando una tabla. Primero se deben imprimir los encabezamientos de las columnas y luego las cifras correspondientes a cada línea o fila de la tabla. 

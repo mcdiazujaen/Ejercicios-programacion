@@ -21,14 +21,14 @@ La función debe devolver dos cosas. En primer lugar un valor lógico indicando 
 4  5  6  7  8
 2 33  1  2  4
 5  4  3  6 -5
-
 ```
+
 y los valores p = (1,4) y t = 3 hay que devolver que no se puede construir una submatriz de tamaño 3 empezando en la fila 1 y columna 4. Si los valores fueran p = (2,2) y t = 2, entonces se puede construir la submatriz, que sería: 
 ```text
 33  1
  4  3
-
 ```
+
 y habría que devolver el máximo de la submatriz (33 en este caso). 
 
 ##  Soluciones

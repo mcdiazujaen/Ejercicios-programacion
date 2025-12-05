@@ -33,8 +33,8 @@ f=3 y c=4
    6 1 _**3 1 2**_
 
 Suma=7
-
 ```
+
 ##  Soluciones
 
 ###  Programa en Matlab 

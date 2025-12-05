@@ -93,8 +93,8 @@ Se quire realizar un programa al que se le de un número positivo y devuelva su 
     end;
   repeat until keypressed;
  end.
-
 ```
+
 ####  Comentario 
 
 El programa se ha descompuesto de forma modular. De forma que existe una función que se encarga de ver si un número es primo o no y un procedimiento que se encarga de obtener los factores primos de un número.

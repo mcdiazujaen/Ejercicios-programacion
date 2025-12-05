@@ -19,8 +19,8 @@ Considera el siguiente procedimiento:
      long <-- long - 1
    FIN_MIENTRAS
  FIN
-
 ```
+
 ###  Enunciado a) 
 
 Si `ch` tiene el valor 'X' y `numero` el valor 5, ¿cuál sería el efecto de ejecutar cada una de las siguientes llamadas al procedimiento? 
@@ -31,8 +31,8 @@ Si `ch` tiene el valor 'X' y `numero` el valor 5, ¿cuál sería el efecto de ej
  Escr('/',numero)
  Escr('.',6)
  Escr('p',-10)
-
 ```
+
 ###  Enunciado b) 
 
 Escribe llamadas al procedimiento `Escr` para que cuando se ejecuten produzcan las siguientes salidas: 

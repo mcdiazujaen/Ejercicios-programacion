@@ -32,8 +32,8 @@ Diseñar un algoritmo para imprimir la suma de los cuadrados de los 100 primeros
     FIN_PARA
     ESCRIBIR "La suma vale:", suma 
   FIN
-
 ```
+
 ###  Solución en C
 ```c
 

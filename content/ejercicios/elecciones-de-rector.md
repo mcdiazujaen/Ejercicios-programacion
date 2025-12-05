@@ -30,6 +30,6 @@ ENTRADAS:
    x: ARRAY (1..4) DE REALES (* array con los porcentajes para dibujar un diagrama de sectores *)
 SALIDAS:
    (* Ninguna *)
-
 ```
+
 ##  Soluciones

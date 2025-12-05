@@ -43,8 +43,8 @@ Diseñar una función que tenga como entradas un vector, su tamaño y un valor q
     ''(*Devolver el resultado*)''
     DEVOLVER (enc)
  FIN
-
 ```
+
 ###  Programa en C 
 ```c
 

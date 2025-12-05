@@ -50,8 +50,8 @@ La división se puede considerar como una sucesión de restas. El algoritmo debe
    ESCRIBIR "El cociente de la división es:", cociente
    ESCRIBIR "El resto es:", resto
  FIN
-
 ```
+
 ###  Programa en C
 ```c
 

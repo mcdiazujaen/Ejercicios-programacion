@@ -44,8 +44,8 @@ INICIO
    FIN_PARA
    DEVOLVER p
 FIN
-
 ```
+
 ####  Diseño 2 en Pseudocódigo por **lperez**
 ```text
 FUNCION Calculo_simetria(A, tam): LOGICO
@@ -65,8 +65,8 @@ INICIO
   FIN_PARA
   DEVOLVER p
 FIN
-
 ```
+
 ####  Diseño 3 en Pseudocódigo por **lperez**
 ```text
 FUNCION Calculo_simetria(A, tam): LOGICO
@@ -88,8 +88,8 @@ INICIO
   FIN_PARA
   DEVOLVER p
 FIN
-
 ```
+
 ####  Diseño 4 en Pseudocódigo por **lperez**
 ```text
 PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria
@@ -110,8 +110,8 @@ INICIO
      FIN_PARA
   FIN_PARA
 FIN
-
 ```
+
 ####  Comentario
 
 En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos. 
@@ -153,8 +153,8 @@ int Calculo_simetrica(int A[1000][1000],int tam){
    }
    return(p);
 }
-
 ```
+
 ####  Solución 2 en C
 ```text
 //CONSTANTES: 
@@ -181,8 +181,8 @@ int Calculo_simetrica(int A[1000][1000],int tam){
    }
    return(p);
 }
-
 ```
+
 ####  Solución 3 en C
 ```text
 //CONSTANTES: 
@@ -211,8 +211,8 @@ int Calculo_simetrica(int A[1000][1000],int tam){
   }
   return(p);
 }
-
 ```
+
 ####  Solución 4 en C
 ```text
 //CONSTANTES: 

@@ -11,8 +11,8 @@
 - **Imágenes copiadas**: Todas (directorio completo)
 
 ## 📁 Estructura Creada
-
 ```
+
 hugo_deploy/
 ├── config.toml              # Configuración de Hugo con 4 taxonomías
 ├── README.md                # Documentación completa

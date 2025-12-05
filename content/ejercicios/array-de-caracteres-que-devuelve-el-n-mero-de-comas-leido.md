@@ -38,8 +38,8 @@ Diseña un algoritmo que lea un array de caracteres hasta que se introduzca un p
     ESCRIBIR "Se han leido ", n, " caracteres" 
     ESCRIBIR "El número de comas es:",coma 
   FIN
-
 ```
+
 ###  Programa en C
 ```c
 
@@ -71,8 +71,8 @@ Diseña un algoritmo que lea un array de caracteres hasta que se introduzca un p
     printf("Se han leído %i caracteres.\n",n);
     printf("El número de comas es:%i \n",coma);
  }
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 

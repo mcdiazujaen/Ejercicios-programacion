@@ -38,8 +38,8 @@ _Ejemplo_ : Entrada: Modo: 1 Salida:
   Trabajo 6
   Trabajo 8
   Trabajo 11
-
 ```
+
 ###  Apartado 2 
 
 Realizar un subalgoritmo que dado como entrada la matriz y su tamaño devuelva la posición de la matriz (o sea el número de fila) del próximo trabajo a realizar. Si no se encuentra ningún trabajo entonces el subalgoritmo devolverá un -1. Pista: El próximo trabajo a realizar es aquel que tenga el valor 1 en la columna de prioridades (Columna 4). 

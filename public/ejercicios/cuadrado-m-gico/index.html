@@ -280,22 +280,23 @@ pre code,
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">pos</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">   <span class="n">suma</span> <span class="p">=</span> <span class="n">suma</span><span class="o">+</span><span class="n">m</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">pos</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="módulo-2">Módulo 2<a class="anchor" href="#m%c3%b3dulo-2">#</a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function suma=sumac(m,c)
-</span></span><span class="line"><span class="cl">%FUNCIÓN suma=sumac(m,c)
-</span></span><span class="line"><span class="cl">%DESCRIPCIÓN: Devuelva la suma de una columna de una matriz.
-</span></span><span class="line"><span class="cl">%PARÁMETROS DE ENTRADA: 
-</span></span><span class="line"><span class="cl">%   m: ARRAY(?,?) DE REALES, Matriz cuadrada
-</span></span><span class="line"><span class="cl">%   c: ENTERO, Número de columna.
-</span></span><span class="line"><span class="cl">%PARÁMETROS DE SALIDA:
-</span></span><span class="line"><span class="cl">%   suma: REAL, Suma de dicha columna.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>suma<span class="p">=</span><span class="nf">sumac</span><span class="p">(</span>m,c<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">%FUNCIÓN suma=sumac(m,c)</span>
+</span></span><span class="line"><span class="cl"><span class="c">%DESCRIPCIÓN: Devuelva la suma de una columna de una matriz.</span>
+</span></span><span class="line"><span class="cl"><span class="c">%PARÁMETROS DE ENTRADA: </span>
+</span></span><span class="line"><span class="cl"><span class="c">%   m: ARRAY(?,?) DE REALES, Matriz cuadrada</span>
+</span></span><span class="line"><span class="cl"><span class="c">%   c: ENTERO, Número de columna.</span>
+</span></span><span class="line"><span class="cl"><span class="c">%PARÁMETROS DE SALIDA:</span>
+</span></span><span class="line"><span class="cl"><span class="c">%   suma: REAL, Suma de dicha columna.</span>
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">%Variables: 
-</span></span><span class="line"><span class="cl">%   pos: ENTERO.
+</span></span><span class="line"><span class="cl"><span class="c">%Variables: </span>
+</span></span><span class="line"><span class="cl"><span class="c">%   pos: ENTERO.</span>
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">suma=0;
-</span></span><span class="line"><span class="cl">for pos=1:size(m,1)
-</span></span><span class="line"><span class="cl">   suma=suma+m(pos,c);
-</span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="módulo-3">Módulo 3<a class="anchor" href="#m%c3%b3dulo-3">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="n">suma</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">pos</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">suma</span><span class="p">=</span><span class="n">suma</span><span class="o">+</span><span class="n">m</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="módulo-3">Módulo 3<a class="anchor" href="#m%c3%b3dulo-3">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[dp ds]<span class="p">=</span><span class="nf">sumad</span><span class="p">(</span>m<span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">%Programa: Devuelva la suma de la diagonal principal y de la secundaria de una matriz cuadrada.</span>

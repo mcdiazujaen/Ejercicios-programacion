@@ -37,8 +37,8 @@ void main (void) {
     printf("%c", palabra[--i]);
   printf("\n");
 }
-
 ```
+
 ####  Comentario 
 
 La forma de almacenar el array leyéndolo del teclado es mediante la función scanf(). Luego, mediante un bucle while se determina el número de letras. La forma de chequear la condición de final del bucle es por reconocimiento del carácter '\0' que tienen todas las cadenas de caracteres al final. El contador incluye el carácter de fin de la cadena. La cadena se podría haber rellenado de otra manera, como se verá en el Ejercicio siguiente. También el número de caracteres de la cadena se puede determinar mediante otra forma: llamando a la función de libreria strlen(char*). Una vez que conocemos el número de caracteres de la cadena, se puede escribir el array al revés mediante un bucle con un contador decreciente. Conviene utilizar el operador --i para que decrezca antes de ser utilizado. 
@@ -73,8 +73,8 @@ INICIO
     FIN_MIENTRAS
                     
 FIN
-
 ```
+
 ####  Comentario 
 
 En en lenguaje C las cadenas de caracteres terminan con el carácter especial `'\0'`. Debido a que en el pseudocódigo hemos leído la cadena de caracteres como un `ARRAY DE CARACTERES` se ha modificado la solución para que el final de la palabra introducida quede marcada por un punto (`.`) en lugar de por el carácter especial `'\0'`.

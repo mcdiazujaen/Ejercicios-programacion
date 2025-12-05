@@ -54,8 +54,8 @@ Realizar un subalgoritmo que dado un vector _A_ de _n_ números reales, obtener 
        FIN_SI
     FIN_PARA
  FIN
-
 ```
+
 ###  Programa en C++ 
 ```c
 
@@ -101,8 +101,8 @@ Realizar un subalgoritmo que dado un vector _A_ de _n_ números reales, obtener 
        }
     }
 }
-
 ```
+
 ###  Programa en Matlab 
 
 ####  Solución con programación básica 
@@ -145,8 +145,8 @@ for pos=2:n-1
         menor = dif;
     end
 end
-
 ```
+
 ####  Solución con programación Matlab avanzada 
 
 Para realizar esta función se utilizan las siguientes funciones de Matlab: 

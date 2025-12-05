@@ -41,8 +41,8 @@ void main(void) {
      num++;
   }
 }
-
 ```
+
 ####  Comentario 
 
 En este programa las instrucciones: num=num+1, num+=1 y num++, las podrás utilizar de la forma que más te convenga, es decir, que la mayor o menor utilidad de una sobre otra se dará en la medida que quieras simplificar tus programas que realizarás más adelante. Como ya hemos dicho, la macro getchar() espera a que el usario teclee un valor cualquiera para continuar ejecutando el programa. Es una forma de esperar una señal del usario para continuar con la solución del programa. Se puede observar que si se pulza un carácter cualquiera seguido de un Intro, en realidad se han pulsado dos caracteres y el programa tiene suficiente para llegar hasta el final. Si se pulsa sólo el Intro hay que pulsarlo dos veces. 
@@ -79,8 +79,8 @@ INICIO
    FIN_PARA
                  
 FIN
-
 ```
+
 ####  Comentario 
 
 En pseudocódigo no existe las diferentes formas de realizar el incremento como en C. Por lo tanto, se han realizado 3 bucles distintos para mostrar 3 formas de calcular el cuadrado de los 20 primeros números enteros.

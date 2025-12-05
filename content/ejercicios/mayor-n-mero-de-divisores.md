@@ -15,8 +15,8 @@ Diseña un algoritmo que lea desde teclado dos enteros positivos y muestre en pa
 ```text
 Entero con mayor cantidad de divisores: 12
 Divisores 2, 3, 4, 6
-
 ```
+
 Para ello diseñar también un subalgoritmo que dado un número entero devuelva cuáles son sus divisores y la cantidad de éstos. Dicho subalgoritmo debe ser invocado en el algoritmo principal cuando se requiera dicha tarea. 
 
 ##  Soluciones 

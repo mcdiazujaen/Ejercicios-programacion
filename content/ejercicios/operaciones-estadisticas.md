@@ -93,8 +93,8 @@ Solución comentada al Ejercicio:
  double semisuma(double max, double min) {
     return ((max+min)/2.0);
  }
-
 ```
+
 ####  Comentario 
 
 En este fichero se presentan funciones para calcular la media, el máximo, el mínimo, y la semisuma del máximo y el mínimo de los elementos de un conjunto. Cada uno de estos cálculos es muy sencillo. El interés de este ejercicio está en ver cómo se definen, declaran y llaman las distintas funciones que en él aparecen. El resultado de todas estas funciones es un valor único que se devuelve como valor de retorno.

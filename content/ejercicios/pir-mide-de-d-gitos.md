@@ -17,6 +17,6 @@ Necesitamos un programa que imprima una pirámide de dígitos como la de la figu
     1 2 3 2 1
   1 2 3 4 3 2 1
 1 2 3 4 5 4 3 2 1
-
 ```
+
 ##  Soluciones

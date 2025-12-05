@@ -27,16 +27,16 @@ Se desea hacer un algoritmo para resolver si se encuentra o no una palabra en un
 ...| I   N   O   T   A   R   P
 ...| L   R   W   O   O   Y   T
  n | O   S   N   A   V   N   I
-
 ```
-  * **buscar** : Array de caracteres 
+
+* **buscar** : Array de caracteres 
 
 ```text
  1   2   3  ...  m
 -------------------
  R   A   T   O   N
-
 ```
+
 Para resolver este problema habrá que realizar los siguientes subalgoritmos: 
 
 ###  Apartado a 
@@ -74,6 +74,6 @@ INICIO
      LEER op
   HASTA ( (*PON TU CÓDIGO AQUÍ*) )
 FIN
-
 ```
+
 ##  Soluciones

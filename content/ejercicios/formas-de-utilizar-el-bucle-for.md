@@ -47,8 +47,8 @@ int i=1, suma=0;
   ;
   printf("suma 4 = %d\n", suma);
 }
-
 ```
+
 ####  Comentario 
 
 Para definir un bucle hace falta un contador o variable de control (que casi siempre es un entero y suele nombrarse con las letras típicas de subíndices: i, j, k, ...). Esta variable de control es la que se chequea cada vez que comienza el bucle y la que permite continuar o no realizando las operaciones de dentro del bucle. Por otra parte, en C, el bucle for tiene tres componentes separadas por puntos y comas: la primera es una inicialización de la variable de control (u otras que pudieran afectar al bucle), la segunda es la sentencia de chequeo de la variable de control que siempre es necesaria (véase la primera forma); por último, la tercera son sentencias de actualización que se ejecutan al final del bucle (que también se podrían poner entre las llaves del bucle, detrás de las demás sentencias). Conociendo estas características, la forma más habitual de expresar un bucle es la segunda, ya que el bucle for contiene las instrucciones pertinentes a la variable de control. La forma primera es más asimilable a un bucle while, ya que la instrucción for contiene sólo el chequeo de la variable. La diferencia entre las formas tercera y cuarta es el orden en que se ejecutan las instrucciones: la forma tercera ejecuta antes el incremento de la variable que el chequeo y la suma, por tanto cuando i vale 6 ya se ha sumado a la variable suma y, por eso el resultado sale 20 en lugar de 15.

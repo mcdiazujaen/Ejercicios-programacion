@@ -31,8 +31,8 @@ void main(void) {
        suma+=i;
   printf("La suma de los cinco primeros numeros es: %d\n", suma);
 }
-
 ```
+
 ####  Comentario 
 
 En este fichero se ha utilizado la equivalencia directa entre los bucles for y while. Por lo demás, este programa no tiene nada de particular. 

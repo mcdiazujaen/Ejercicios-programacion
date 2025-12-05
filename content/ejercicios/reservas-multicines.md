@@ -21,8 +21,8 @@ Ejemplo de matriz de ocupación (1 ocupado, 0 libre):
 1	0	0	1	0	0	1	…  |	
 0	1	0	0	0	0	0	…  |	
 …	…	…	…	…	…	…	…  |	M
-
 ```
+
 Ejemplo de array con los nombres de las salas 
 ```text
 A  |	1
@@ -30,8 +30,8 @@ P  |
 B  |	
 H  |	
 …  |	M
-
 ```
+
 Con este planteamiento implementa los siguientes apartados, especificando de forma clara las variables de entrada, salida e intermedias así como sus tipos para cada uno de los módulos: 
 
 ###  Apartado A 

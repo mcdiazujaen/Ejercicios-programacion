@@ -40,8 +40,8 @@ Diseñar la función PROD para calcular el producto de los _n_ elementos de un v
    FIN PARA
    DEVOLVER (suma)
  FIN
-
 ```
+
 ####  Función PROD 
 ```text
  FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL
@@ -59,8 +59,8 @@ Diseñar la función PROD para calcular el producto de los _n_ elementos de un v
    FIN PARA
    DEVOLVER(producto)
  FIN
-
 ```
+
 ###  Programa en C
 
 ####  Función SIGMA
@@ -82,8 +82,8 @@ float SIGMA(float X[], int n){
   }
   return(suma);
 }
-
 ```
+
 ####  Función PROD
 ```text
  float PROD(float X[], int n){
@@ -102,8 +102,8 @@ float SIGMA(float X[], int n){
    }
    return(producto);
 }
-
 ```
+
 ####  Comentario
 
 Las sección `ENTRADAS` de ambas funciones está totalmente comentada, ya que en C no se puede repetir la declaración de los parámetros (`X, n`) dentro de la función.

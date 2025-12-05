@@ -49,8 +49,8 @@ INICIO
    FIN_SI
    POS<--J-1
 FIN
-
 ```
+
 ####  Apartado 2 
 ```text
 FUNCIÓN SUMADIVISORES(NUM): LÓGICO
@@ -77,8 +77,8 @@ INICIO
    FIN_SI
    DEVOLVER RESULT
 FIN
-
 ```
+
 ####  Apartado 3 
 ```text
 PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO)

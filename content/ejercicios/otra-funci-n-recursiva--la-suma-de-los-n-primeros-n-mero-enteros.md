@@ -37,8 +37,8 @@ double suma(int n) {
       return 1.0;
   return ((2*n-1)+suma(n-1));
 }
-
 ```
+
 ####  Comentario 
 
 Sólo reseñar que no se trata de la suma de los impares hasta el número n que se teclea, sino que es la suma de los n primeros números impares, es decir, si por ejemplo tecleamos 3, el resultado será 9 que es la suma de 1 más 3 más 5.

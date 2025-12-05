@@ -15,15 +15,15 @@ Dadas las siguientes declaraciones en un algoritmo:
 i, j, k : ENTERO
 c : LÓGICO
 a : ARRAY [1...10] DE ENTEROS
-
 ```
+
 y las siguientes declaraciones de subalgoritmos: 
 ```text
 FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO
 FUNCIÓN Segunda( y: LOGICO, VAR h: ENTERO ): LÓGICO
 PROCEDIMIENTO Tercero( c: LÓGICO, VAR y: LÓGICO, a: ENTERO )
-
 ```
+
 Di si las siguientes llamadas desde el algoritmo son correctas o no. Justifica la respuesta dada. 
 ```text
 MIENTRAS Segunda(c, k) HACER ...
@@ -36,8 +36,8 @@ SI Segunda(c,a(2)) O c ENTONCES ...
 Tercero(FALSO, VERDAD, j)
 SI j > k ENTONCES Primera(4,5)
 ESCRIBIR Segunda(c, k)
-
 ```
+
 ##  Soluciones 
 
 ###  Pseudocódigo 

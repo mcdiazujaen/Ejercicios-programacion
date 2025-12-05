@@ -225,8 +225,8 @@ Escribir un programa que permita calcular la aproximación al número e dada por
        num = (num * 10) + (caracter[i] - '0');
   return num;
  }
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 
@@ -245,8 +245,8 @@ if n==0||n==1,
 else
     res=n*factorial_recursivo(n-1);
 end
-
 ```
+
 * * *
 ```matlab
 

@@ -43,8 +43,8 @@ Diseñar un subalgoritmo que devuelva **VERDAD** si los dos arrays dados como en
    FIN SI
    DEVOLVER igual
  FIN
-
 ```
+
 ###  Solucion en C
 ```text
   int IGUALES(float V[],float W[], int n, int m){
@@ -73,8 +73,8 @@ Diseñar un subalgoritmo que devuelva **VERDAD** si los dos arrays dados como en
     }
     return(igual);
  }
-
 ```
+
 ###  Programa en Matlab 
 
 ####  Solución con programación clásica 
@@ -102,8 +102,8 @@ function igual=iguales(v,w)
     else
         igual=false;
     end
-
 ```
+
 ####  Solución Matlab 
 ```text
 function igual=iguales(v,w)

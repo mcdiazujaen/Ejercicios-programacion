@@ -29,13 +29,13 @@ Ejemplo fichero:
 3 3 5
 2 1 2
 -1
-
 ```
+
 Vector de Salida: 
 ```text
 [3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 1 1 3 3 5 2 1 2]
-
 ```
+
 ###  Función de decodificación 
 
 Función que reciba como parámetro de entrada un vector de enteros positivos de tamaño NxNx3 y devuelva como salida dos valores: un valor lógico indicando si la decodificación se ha realizado con éxito y un entero que es la clave decodificada. La forma de realizar la decodificación es la siguiente: a partir del vector de entrada se ha de construir una matriz cuadrada de tamaño NxN. Cada elemento de la matriz se obtiene a partir de tres elementos del vector que informan de una posición de fila, una posición de columna y el valor que se va a situar en dicha posición. Si todo ha sido correcto la clave se obtiene formando un número entero con los dígitos situados en la primera fila de la matriz. 
@@ -43,8 +43,8 @@ Función que reciba como parámetro de entrada un vector de enteros positivos de
 Ejemplo: 
 ```text
 Vector=[3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 2 1 3 3 5 2 1 2]
-
 ```
+
 La matriz quedaría: 
 
 3 |  1 |  7   
@@ -96,8 +96,8 @@ else
         v=[];
     end
 end
-
 ```
+
 ####  Función de decodificación 
 ```text
 function [exito,clave]=Decodifica(v)
@@ -142,8 +142,8 @@ for i=1:dim
     clave=clave+m(1,i)*(10^pot);
     pot=pot-1;
 end
-
 ```
+
 ####  Programa principal 
 ```matlab
 

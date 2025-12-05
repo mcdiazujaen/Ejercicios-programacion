@@ -16,8 +16,8 @@ Dar tres formas diferentes de cambiar el siguiente bucle de forma que se ejecute
  MIENTRAS Cont < 20 HACER
    Cont <-- Cont+1
  FIN_MIENTRAS
-
 ```
+
 ##  Soluciones
 
 ###  Primera solución 
@@ -34,8 +34,8 @@ Lo que vamos a hacer para que el bucle llegue hasta 20, en lugar de hasta 19, es
  while (cont<=20){
   cont++;
 }
-
 ```
+
 ###  Segunda solución 
 
 Definiremos _Cont_ desde 0, así el bucle se ejecutará 20 veces pero llegará hasta 19 : 
@@ -50,8 +50,8 @@ Definiremos _Cont_ desde 0, así el bucle se ejecutará 20 veces pero llegará h
   while (cont<20){
       cont++;
   }
-
 ```
+
 ###  Tercera solución 
 
 En este caso definiremos _Cont_ en el bucle MIENTRAS para que llegue hasta 20, lo haremos poniendo que sea menor que 21: 

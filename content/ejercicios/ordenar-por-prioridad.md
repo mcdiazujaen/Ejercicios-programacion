@@ -18,8 +18,8 @@ Vector con los códigos de las tareas:	123	543	276	27	76	34	145
 Vector con las prioridades..........:	8	3	1	2	4	7	5
 
 Vector de salida....................:	276	27	543	76	145	34	123
-
 ```
+
 ##  Soluciones 
 
 ###  Programa en Matlab 

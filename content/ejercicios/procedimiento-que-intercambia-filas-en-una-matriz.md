@@ -38,8 +38,8 @@ INICIO
      ultimo<--ultimo-1
      FIN_MIENTRAS
 FIN
-
 ```
+
 ###  Programa en Pascal por **lperez**
 ```text
 Procedure Intercambia(var a:matriz;t:integer);

@@ -35,8 +35,8 @@ INICIO
 
 	ESCRIBIR euros, “euros son ”, pesetas, “pesetas.”
 FIN
-
 ```
+
 ###  Programa en C 
 ```c
 

@@ -20,8 +20,8 @@ Supongamos que concurren 3 partidos a las elecciones y que la provincia o distri
 Partido 1: 6000 (Se lleva el escaño 1) <-- restos <-- 6000/(1+1) = 3000
 Partido 2: 4000                        <-- restos <-- 4000/(1+0) = 4000 <-- Se lleva el escaño 2.
 Partido 3: 2000                        <-- restos <-- 2000/(1+0) = 2000
-
 ```
+
 El programa que te presentamos a continuación es para 3 partidos y 2 escaños, pero queda a tu entera disposición para que lo particularices -si dispones de datos-. Ten mucho cuidado porque un fallo en la programación puede hacer caer sobre ti una acusación de fraude electoral. 
 
 Lo primero que hace este programa es inicializar a cero el vector **nEsca [ ]**. En este vector se va a almacenar el numero de escaños de cada partido: **nEsca [0]** contendrá el numero de escaños del partido numero 1, **nEsca [1]** los escaños del partido número 2, etc. Este vector se va a ir modificando a lo largo de la ejecución del programa. 
@@ -76,8 +76,8 @@ Solución comentada al Ejercicio:
    }
    return imaximo;
  }
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 
@@ -108,8 +108,8 @@ end
 for pos=1:npar
     disp( ['Partido ', num2str(pos) ': ', num2str(esca(pos)),' escaños'] );
 end
-
 ```
+
 * * *
 ```matlab
 

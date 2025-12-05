@@ -39,8 +39,8 @@ Solución comentada del Ejercicio:
       printf("PI elevado a %d es %5.2lf y su raiz es %5.2lf\n", i, poten(PI, i), sqrt(poten(PI, i)) );
    }
  }
-
 ```
+
 ####  Comentario 
 
 Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle for que va de **i=2** a **i=10** , llamando en cada ejecución a la función **poten()**. A esta función se le pasa una constante **double** , que es el número PI, y el exponente entero **i**. La función **poten()** sirve para calcular la potencia i-ésima de cualquier número. En este caso, la variable a de la función toma el valor de PI en todas las llamadas, mientras que la variable **b** copia el valor de **i** que será distinto en cada una de las llamadas. 
@@ -81,8 +81,8 @@ Para realizar el ejercicio en pseudocódigo vamos a partir de la premisa de que 
           ESCRIBIR "PI elevado a ", i, " es ", poten(PI,i), " y su raiz es ", raiz(poten(PI,i))
     FIN_PARA
  FIN
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 

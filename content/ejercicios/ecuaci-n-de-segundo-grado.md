@@ -65,8 +65,8 @@ void main(void) {
       printf("\nLas dos raices son iguales y valen: %12.6e \n", x1);
   }
 }
-
 ```
+
 ####  Comentario 
 
 Incluyendo la librería math.h se pueden usar las funciones matemáticas tales como sqrt() para la raíz cuadrada; cos() para calcular el coseno de un ángulo, etc. La instrucción if...else permite hacer una bifurcación, dependiendo de la cual se realizarán diferentes actividades. Merece la pena observar la forma utilizada para partir en varias líneas las distintas llamadas a la función printf(). La idea fundamental es que, en el fichero *.c la cadena de control (lo que va entre comillas como primer argumento de la función printf()) no se puede partir entre dos o más líneas. 

@@ -30,8 +30,8 @@ En estos subalgoritmos se han cometido errores, identifique estos errores y diga
 12       resultado <-- resultado + N
 13    FIN_PARA
 14 FIN
-
 ```
+
 ###  Subalgoritmo 2 
 ```text
 01 PROCEDIMIENTO PRIMO (N:ENTERO, salida: LOGICO)
@@ -53,8 +53,8 @@ En estos subalgoritmos se han cometido errores, identifique estos errores y diga
 16       FIN_SI
 17    FIN_MIENTRAS
 18 FIN
-
 ```
+
 ##  Soluciones 
 
 ###  Subalgoritmo 1 

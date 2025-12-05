@@ -59,8 +59,8 @@ for fila = 1:nf
       codigo = matriz(fila,1);
    end
 end
-
 ```
+
 ####  Apartado b 
 ```text
 function codigo = MayorDiferencia(matriz)

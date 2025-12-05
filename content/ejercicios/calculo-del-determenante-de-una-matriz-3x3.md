@@ -55,8 +55,8 @@ void main(void) {
   }
   printf("\nY su determinante es: %12.4lf\n", determinante);
 }
-
 ```
+
 ####  Comentario 
 
 En principio este programa no existe ninguna dificultad respecto al manejo de las matrices (ya se ha visto en programas anteriores). Lo único que es importante comentar es el algoritmo: tenemos siempre una matriz 3x3 y, por ello, podemos realizar las operaciones **“a mano”** (sin más complejidades en el algoritmo, es decir, sin introducir bucles o bifurcaciones). Si quisiéramos calcular el determinante de una matriz cualquiera, tendríamos que triangularizar la matriz y, una vez triangularizada, el determinante sería el producto de los elementos de la diagonal. La matriz se lee de un fichero de disco. Para ello es necesario abrir el fichero mediante la función **fopen()** , que devuelve un puntero a FILE. Después se van leyendo los datos de dicho fichero mediante la función **fscanf()** a la que se pasa como primer argumento el puntero al fichero abierto; excepto en que lee de fichero, esta función es completamente análoga a **scanf()**. Al acabar de leer la matriz se debe cerrar el fichero con la función **fclose()**. Es interesante observar como se ha dividido una expresión muy larga en seis expresiones más cortas, utilizando los operadores de suma y diferencia acumulativas (+= y -=). 
@@ -96,8 +96,8 @@ deter=deter-matriz(1,1)*matriz(3,2)*matriz(2,3);
 % Mostrar el resultado
 disp('El determinante es:');
 disp(deter);
-
 ```
+
 ####  Solución con programación Matlab avanzada 
 ```matlab
 

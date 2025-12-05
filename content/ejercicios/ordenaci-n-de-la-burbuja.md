@@ -80,8 +80,8 @@ void main(void) {
   }
   printf("\n");
 }
-
 ```
+
 ####  Comentario 
 
 Para intercambiar entre sí los valores de dos variables no se pueden emplear las dos instrucciones siguientes: 
@@ -89,6 +89,6 @@ Para intercambiar entre sí los valores de dos variables no se pueden emplear la
 **vector[j]=vector[i];** /* esta instrucción pone en la posición j el valor de la posición i, perdiéndose el valor de la posición j */
 
 **vector[i]=vector[j];** /* esta instrucción pone en la posición i el valor de la posición j, pero no el original, que se ha perdido, sino el nuevo */
-
 ```
+
 Por eso es necesaria una variable intermedia, que en este caso hemos llamado temp, que guarda temporalmente el valor de la posición **j**. Por esto se requieren tres instrucciones.

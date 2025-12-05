@@ -37,8 +37,8 @@ Diseñar un procedimiento que acepte como parámetro un vector que pueda contene
       FIN PARA
     FIN PARA
   FIN
-
 ```
+
 ###  Programa en C 
 ```c
 
@@ -67,8 +67,8 @@ Diseñar un procedimiento que acepte como parámetro un vector que pueda contene
        }
     }         
  }
-
 ```
+
 ###  Solución en Matlab 
 ```matlab
 

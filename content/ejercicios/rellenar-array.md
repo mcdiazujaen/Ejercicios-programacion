@@ -29,6 +29,6 @@ La matriz `M` de salida tendría:
 0  0  0  0  2
 0  0  0  4  4
 0  0  5  5  5
-
 ```
+
 ##  Soluciones

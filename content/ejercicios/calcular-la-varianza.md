@@ -56,8 +56,8 @@ INICIO
   ESCRIBIR "La media es:", media
   ESCRIBIR "La varianza es:", varianza
 FIN
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 

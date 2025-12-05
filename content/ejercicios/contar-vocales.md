@@ -17,8 +17,8 @@ cadena: El saber no ocupa lugar.
 
            a e i o u
 resultado: 3 2 0 2 2
-
 ```
+
 El vector resultado significa que en la cadena hay: 3 aes, 2 es, 0 ies, 2 oes, y 2 ues. 
 
 Es importante la eficiencia y claridad a la hora de resolver el algoritmo y fundamentalmente la utilización de las estructuras de control más adecuadas. 
@@ -67,8 +67,8 @@ INICIO
    ESCRIBIR res(4), " oes"
    ESCRIBIR res(5), " ues"
 FIN
-
 ```
+
 ###  Programa en Matlab 
 ```matlab
 

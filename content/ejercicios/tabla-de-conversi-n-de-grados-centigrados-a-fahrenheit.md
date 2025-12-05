@@ -51,8 +51,8 @@ Solución comentada al Ejercicio:
     printf("%17.2lf%17.2lf\n", gradosFahr, gradosCent);
   }
  }
-
 ```
+
 ####  Comentario 
 
 Como podrás observar la diferencia entre los dos programas está fundamentalmente en la forma de utilizar los bucles respectivos, a diferencia del while, en los parámetros del bucle for está incluidas todas las condiciones necesarias para su ejecución, es decir se encuentran: la inicialización, la condición a cumplir y además el incremento del contador, lo cual simplifica mucho el programa.

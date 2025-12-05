@@ -18,8 +18,8 @@ Programa que sea capaz de sacar la siguiente pirámide de “*” dada la altura
   * *
  * * *
 * * * *
-
 ```
+
 ##  Soluciones 
 
 ###  Programa en Pascal por **lperez**

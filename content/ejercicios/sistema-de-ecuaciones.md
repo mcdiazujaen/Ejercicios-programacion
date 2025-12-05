@@ -101,8 +101,8 @@ INICIO
      FIN_PARA
   FIN_SI
 FIN
-
 ```
+
 ###  Programa en Pascal por **lperez**
 ```text
 program Gauss;
@@ -193,8 +193,8 @@ begin
  writeln('Pulsa enter para acabar');
  repeat until keypressed;
 end.
-
 ```
+
 ###  Comentario 
 
 En el programa en Pascal el tamaño de los arrays utilizados se ha de especificar por lo que tiene un límite superior que es de matrices de 10x10.

@@ -58,8 +58,8 @@ long segs(void) {
   total+=(minutos*60+segundos);
   return total;
 }
-
 ```
+
 ####  Comentario 
 
 Para calcular la diferencia entre las dos horas es necesario convertirlas antes en segundos, para así poder restarlas. Después hay que convertir este número, en segundos, a horas, minutos y segundos. Para obtener las horas se divide el número entre 3600 segundos/hora, quedándonos con el número entero que resulta. El resto de esta división, es decir, el resto de los segundos se convertirán a minutos dividiendo por 60 segundos/minuto. El número entero resultante de esta división serán los minutos y el resto los segundos. Dentro de la funcion **segs()** aparece un bucle **do while** , que como ya sabemos siempre se ejecuta al menos una vez. En nuestro caso el bucle se ejecutará sólo una vez, si el usuario ha tecleado correctamente la hora. De lo contrario, es decir, si se equivoca al teclear el número correspondiente a las horas, los minutos o los segundos, la variable pass tomará el valor 1, que es la condición para que el bucle se vuelva a ejecutar. De esta forma se pueden teclear otra vez los datos. Obsérvese que la función **segs()** devuelve un valor de tipo **long** , esto es debido a que si la diferencia entre horas es 24 (máximo valor posible). Este valor en segundos (86400) supera la capacidad de una variable de tipo **int**. Dentro de **main()** también hay otro bucle **do while** , que se ejecuta más de una vez en el caso de que la segunda hora sea anterior a la primera, dando así la posibilidad de volver a teclear la hora. 
@@ -130,8 +130,8 @@ _(Programa principal)_
      ESCRIBIR "La diferencia es ",horas, " hora(s), ", minutos, " minuto(s), ", diferencia, " segundo(s)."
 
  FIN
-
 ```
+
 ####  Comentario 
 
 En pseudocódigo no tiene sentido la limitación de leer la hora en el formato _3:22:17_ , por lo tanto, no se ha tomado en cuenta.

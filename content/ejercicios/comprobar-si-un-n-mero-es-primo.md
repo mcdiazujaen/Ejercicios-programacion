@@ -41,8 +41,8 @@ Solución comentada al Ejercicio:
    }
    printf("%d es primo.\n", numero);
  }
-
 ```
+
 ####  Comentario 
 
 El comentario más apropiado para este ejercicio es el algoritmo para calcular el primo con el bucle for (divisor=2; divisor<=sqrt(numero); divisor++). Observa que este bucle se termina cuando se encuentra un divisor del número, en cuyo caso se escribe el mensaje de que el número no es primo y se termina la ejecución del programa con un return, o cuando divisor llega a su valor límite, en cuyo caso el número es primo porque no se ha encontrado ningún divisor. 
@@ -84,8 +84,8 @@ switch num
             disp('No es primo');
         end
 end
-
 ```
+
 ####  Solución con programación básica mejorada
 
 Se sustituye el bucle **for** por uno de tipo **while** , para que el programa sea más rápido. 
@@ -126,8 +126,8 @@ switch num
             disp('No es primo');
         end
 end
-
 ```
+
 ####  Solución con programación Matlab avanzada 
 ```matlab
 
@@ -156,8 +156,8 @@ switch num
             disp('No es primo');
         end
 end
-
 ```
+
 #####  Comentario 
 
 Para esta solución se han utilizado las siguientes funciones de Matlab: 

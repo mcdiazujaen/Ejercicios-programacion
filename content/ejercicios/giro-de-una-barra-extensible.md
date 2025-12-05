@@ -86,8 +86,8 @@ double atan2a(double x, double y) {
            resul=aux; /* si el angulo esta en el primer o cuarto cuadrante */
  return resul;
 }
-
 ```
+
 ####  Comentario 
 
 Este programa va leyendo las coordenadas x e y para cada posición de la barra y llama **calculaLongitud()** y **atan2a()** respectivamente a las funciones que calculan la longitud de la barra y que devuelve el ángulo que forma la barra en radianes. En cuanto a la función **atan2a()** , queremos que devuelva un ángulo comprendido entre -π y π radianes basándonos en la función **atan()** que devulve un ángulo comprendido entre −π/2 y π/2. Para ello hay que tener en cuenta que: 

@@ -60,8 +60,8 @@ Generalizar y que haga un cambio de base como dato la base a la que se quiera pa
        ESCRIBIR resul(i)
     FIN_PARA
  FIN
-
 ```
+
 ###  Programa en C
 ```c
 

@@ -62,14 +62,14 @@ Solución comentada del Ejercicio:
       printf("\n");
    }
  }
-
 ```
+
 ####  Comentario 
 
 Tal vez el aspecto más interesante de este programa es la necesidad de utilizar 3 bulces for para la multiplicación de dos matrices. Para verlo más claramente, sea **a ij** un elemento de la primera matriz, **b ij** un elemento de la segunda y **c ij** un elemento de la matriz solución. Pensemos por un momento cómo se obtiene un elemento cualquiera de la matriz solución. El elemento **c 23**, por ejemplo, se obtiene multiplicando los elementos de la fila 2 de la primera matriz, por los elementos de la columna 3 de la segunda matriz. Suponiendo que las matrices son de dimensión 3 tendremos: 
 ```text
 c23 = a21*b13+a22*b23+a23*b33 y en general:
 cij = ai1*b1j+ai2*b2j+ai3*b3j
-
 ```
+
 Por lo tanto, para poder acceder a los elementos de la fila i de la primera matriz y a los elementos de la columna j de la segunda matriz, y para realizar el sumatorio son necesarios tres bucles, para los que se han utilizado las variables **i** , **j** y **k**.
