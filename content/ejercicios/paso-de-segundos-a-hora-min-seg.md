@@ -6,7 +6,6 @@ languages: ['pseudocódigo']
 categories: ['enunciado']
 ---
 
-
 # Paso de segundos a hora-min-seg
 
 ##  Enunciado 
@@ -17,7 +16,6 @@ Diseñar un algoritmo para convertir un tiempo expresado en segundos a un format
 
 ###  Pseudocódigo 
 ```text
-
 
 ALGORITMO ConvertirSegundos
 ENTRADAS:

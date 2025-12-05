@@ -6,10 +6,7 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Procedimiento que intercambia filas en una matriz
-
-  
 
 ##  Enunciado 
 
@@ -21,7 +18,6 @@ Se desea un subalgoritmo que permute las columnas de la matriz, moficándola y d
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 
 PROCEDIMIENTO Intercambia(VAR A,n)
 ENTRADAS: A: ARRAY[1..n, 1..n] DE ENTEROS, matriz cuadrada
@@ -44,11 +40,9 @@ INICIO
      FIN_MIENTRAS
 FIN
 
-
 ```
 ###  Programa en Pascal por **lperez**
 ```text
-
 
 Procedure Intercambia(var a:matriz;t:integer);
 (* Entradas:a, una matriz y t su tamaño

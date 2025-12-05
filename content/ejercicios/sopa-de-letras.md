@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Sopa de letras
 
 ##  Enunciado 
@@ -16,7 +15,6 @@ Se desea hacer un algoritmo para resolver si se encuentra o no una palabra en un
   * **sopa** : Array bidimensional de caracteres 
 
 ```text
-
 
      1   2   3  ... ... ...  n
    +---------------------------
@@ -31,17 +29,14 @@ Se desea hacer un algoritmo para resolver si se encuentra o no una palabra en un
 ...| L   R   W   O   O   Y   T
  n | O   S   N   A   V   N   I
 
-
 ```
   * **buscar** : Array de caracteres 
 
 ```text
 
-
  1   2   3  ...  m
 -------------------
  R   A   T   O   N
-
 
 ```
 Para resolver este problema habrá que realizar los siguientes subalgoritmos: 
@@ -58,7 +53,6 @@ Realizar un subalgoritmo que compruebe si la palabra se encuentra en horizontal.
 
 Termina de rellenar el código del algoritmo principal que se indica a continuación de forma que se pida al usuario jugar tantas veces como quiera. Utiliza los subalgoritmos que has generado en los apartados anteriores. 
 ```text
-
 
 ALGORITMO SopaDeLetras
 ENTRADAS:

@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Tabla de multiplicar
-
-  
 
 ##  Enunciado 
 
@@ -22,7 +19,6 @@ Te proponemos este programa que imprime los 21 primeros números y sus repectivo
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero cuadrados.c */
 # include <stdio.h>
@@ -46,7 +42,6 @@ void main(void) {
   }
 }
 
-
 ```
 ####  Comentario 
 
@@ -54,7 +49,6 @@ En este programa las instrucciones: num=num+1, num+=1 y num++, las podrás utili
 
 ###  Solucion en Pseudocódigo
 ```text
-
 
 ALGORITMO cuadrados
 ENTRADAS:
@@ -86,7 +80,6 @@ INICIO
    FIN_PARA
                  
 FIN
-
 
 ```
 ####  Comentario 

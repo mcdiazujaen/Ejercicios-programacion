@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Fabrica de piezas
 
 ##  Enunciado
@@ -16,7 +15,6 @@ Tenemos una fábrica de piezas metálicas, dónde tenemos almacenadas las medida
 Las estructuras que tenemos tendrían el siguiente aspecto: 
 ```text
 
-
 **Matriz medidas**                     **Vector cantidad**
 -----------------------            --------------
 Pieza 1 | 10 | 20 |  3             Pieza 1 |  40
@@ -25,7 +23,6 @@ Pieza 3 |  6 |  5 |  7             Pieza 3 |  10
 Pieza 4 |  4 |  5 | 23             Pieza 4 | 500
 ...                                ...
 ----------------------             --------------
-
 
 ```
 Se quiere diseñar un algoritmo que permita obtener información del proceso de fabricación. Dicho algoritmo se ha de dividir en los siguientes apartados: 

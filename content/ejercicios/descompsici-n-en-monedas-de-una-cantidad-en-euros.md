@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario']
 tags: ['sin_matlab']
 ---
 
-
 # Descompsición en monedas de una cantidad en euros
 
 ##  Enunciado 
@@ -19,7 +18,6 @@ Dada una cantidad de dinero en euros se desea conocer el número mínimo de mone
 
 ###  Diseño 1 en Pseudocódigo por **lperez**
 ```text
-
 
 ALGORITMO Cambio_dinero
 ENTRADAS:
@@ -71,11 +69,9 @@ INICIO
   ESCRIBIR m2, m1, m05, m02, m005, m002, m001
 FIN
 
-
 ```
 ###  Diseño 2 en Pseudocódigo por **lperez**
 ```text
-
 
 ALGORITMO Cambio_dinero
 ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0.
@@ -107,9 +103,6 @@ INICIO
   FIN_PARA
 FIN
 
-
-  
-
 ```
 ####  Comentario 
 
@@ -117,7 +110,6 @@ En la segunda forma se utiliza array para almacenar los valores de las monedas d
 
 ###  Solución 1 en C
 ```c
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -178,11 +170,9 @@ int main(void){
   printf("%f,%f,%f,%f,%f,%f,%f,%f",m2,m1,m05,m02,m01,m005,m002,m001);                               
 }
 
-
 ```
 ###  Solución 2 en C
 ```c
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -228,11 +218,9 @@ int main(void){
   }
 }
 
-
 ```
 ###  Programa 1 en Pascal por **lperez**
 ```text
-
 
 (* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0.
 SALIDAS: m2, m1, m05, m02,m01, m005, m002, m001, cantidad mínima de monedas en
@@ -299,11 +287,9 @@ begin
     readln;
 end.
 
-
 ```
 ###  Programa 2 en Pascal por **lperez**
 ```text
-
 
 (* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0.
 SALIDAS: salida, array con la cantidad mínima de monedas en

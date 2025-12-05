@@ -8,10 +8,7 @@ categories: ['enunciado', 'análisis']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Busca del número mayor y menor
-
-  
 
 ##  Enunciado 
 
@@ -30,7 +27,6 @@ Funciones C a utilizar:
 Ejemplo de ejecución: lo que se vería por pantalla debe ser algo así como 
 ```text
 
-
 Introduce la cantidad de números:
 3
 Introduce los números:
@@ -44,13 +40,11 @@ Los números introducidos son:
 El mayor es el 7.
 El menor es el 2.
 
-
 ```
 ##  Soluciones 
 
 ###  Programa en C por **Angel**
 ```c
-
 
  /**********************************************************/
  #include <stdio.h>
@@ -218,7 +212,6 @@ El menor es el 2.
 ```
 ###  Programa en Matlab 
 ```matlab
-
 
 %PROGRAMA BuscaMayorMenor
 %DESCRIPCION: Escribir un programa que pida por teclado una serie de números enteros, 

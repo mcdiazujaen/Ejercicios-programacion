@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Analisis de Seno entre 2 valores
 
 ##  Enunciado 
@@ -14,9 +13,7 @@ categories: ['enunciado']
 En matemáticas, la siguiente expresión es siempre verdadera: 
 ```text
 
-
 seno(x)<=1
-
 
 ```
 Diseñar un algoritmo para verificar esta propiedad en la (utilizando la función interna `sen`) para los valores de x que van de -10.0 hasta 10.0 en pasos de 0.2. 
@@ -25,7 +22,6 @@ Diseñar un algoritmo para verificar esta propiedad en la (utilizando la funció
 
 ###  Pseudocódigo 
 ```text
-
 
  ALGORITMO seno
  ENTRADAS:
@@ -58,8 +54,6 @@ Diseñar un algoritmo para verificar esta propiedad en la (utilizando la funció
 ###  Solución en C
 ```c
 
-
- 
 #include <stdio.h>
 #include <stdlib.h>
 //Incluir math.h para utilizar la función seno: sin(x)
@@ -96,7 +90,6 @@ int main(void){
 ```
 ###  Programa en Matlab 
 ```matlab
-
 
 % Programa Confirmar_Seno
 % Descripción: verificar la propiedad del seno.

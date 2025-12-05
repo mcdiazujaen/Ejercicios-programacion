@@ -8,7 +8,6 @@ categories: ['enunciado', 'análisis']
 tags: ['sin_matlab']
 ---
 
-
 # Leer fichero con matriz y calcular una suma
 
 ##  Enunciado 
@@ -23,10 +22,8 @@ En una matriz con un número par de columnas suponemos que la central es cualqui
 El formato del fichero es como el siguiente (este es solo un ejemplo): 
 ```text
 
-
 4 3
 8 7 6 5 4 3 21 -8 2 3 4 0
-
 
 ```
 En la primera fila aparece el número de filas y columnas de la matriz y en la segunda fila los elementos de la matriz. 

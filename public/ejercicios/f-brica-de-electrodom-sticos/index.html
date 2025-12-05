@@ -38,7 +38,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -148,13 +148,11 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>En una fábrica de electrodomésticos se quiere informatizar las estadísticas del proceso de fabricación. Para ello se almacena en un vector la información referente al código del producto fabricado, el número de máquinas por las que procesa y el tiempo en minutos que tarda en el procesamiento. La información de cada producto se almacena de forma consecutiva. Un ejemplo de vector con información es el siguiente:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> 10  3  20  10  8  40  2  6  40  20  50  2  15  34  ...</span></span></code></pre></div><p>El primer producto tiene código 10 y pasa por 3 máquinas; la duración de procesamiento en cada una de las máquinas es de 20, 10 y 8 minutos respectivamente. El segundo producto tiene código 40 y pasa por 2 máquinas y tarde en ellas 6 y 40 minutos respectivamente. Y así sucesivamente se irán almacenando los datos de todos los productos.</p>
 <p>Realiza una función que reciba como parámetro de entrada un vector con el formato descrito y devuelva el código del producto cuyo tiempo de procesamiento medio es mayor.</p>
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>codigoMax<span class="p">=</span><span class="nf">ProcesamientoMax</span><span class="p">(</span>v<span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% FUNCION codigoMax=ProcesamientoMax(v)</span>
 </span></span><span class="line"><span class="cl"><span class="c">% Parámetro de entrada:</span>

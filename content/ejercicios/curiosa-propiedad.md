@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Curiosa propiedad
 
 ##  Enunciado
@@ -14,9 +13,7 @@ tags: ['sin_matlab', 'sin_solución']
 El número 3025 tiene la curiosa propiedad de que cuando se separa en dos números de dos dígitos cada uno, 30 y 25, se suman, y dicha suma se eleva al cuadrado, el resultado final es 3025: 
 ```text
 
-
  (30+25)² = 55² = 3025
-
 
 ```
 Diseña un algoritmo con los siguientes apartados: 

@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Calculo del número E
 
 ##  Enunciado 
@@ -27,7 +26,6 @@ Escribir un programa que permita calcular la aproximación al número e dada por
 
 ###  Programa en C por **angel**
 ```c
-
 
  /*********************************************************
  *
@@ -232,7 +230,6 @@ Escribir un programa que permita calcular la aproximación al número e dada por
 ###  Programa en Matlab 
 ```matlab
 
-
 function res=factorial_recursivo(n)
 % FUNCIÓN res=factorial_recursivo(n)
 % DESCRIPCIÓN: Calcula el factorial de n de forma recursiva
@@ -252,7 +249,6 @@ end
 ```
 * * *
 ```matlab
-
 
 %Programa Calcular_e
 %Descripción: Aproxima el valor del número e

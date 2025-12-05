@@ -7,7 +7,6 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Sumar vectores y buscar el máximo
 
 ##  Enunciado 
@@ -18,7 +17,6 @@ Diseñar un algoritmo que lea por teclado dos vectores de números enteros del m
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
 ALGORITMO SumarVectoresYMaximo
 ENTRADAS:

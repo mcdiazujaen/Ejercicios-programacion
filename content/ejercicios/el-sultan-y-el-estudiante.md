@@ -8,10 +8,7 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab']
 ---
 
-
 # El sultan y el estudiante
-
-  
 
 ##  Enunciado 
 
@@ -23,7 +20,6 @@ Habrás oído hablar de la historia de un poderoso sultán que deseaba recompens
 
 Solución comentada al Ejercicio: 
 ```c
-
 
  /* fichero trigo.c */
  #define CUADRADOS 64 /* cuadrados del tablero */
@@ -54,7 +50,6 @@ El interés de este ejercicio está en ver una forma de disponer los resultados 
 
 ###  Diseño en Pseudocódigo
 ```text
-
 
  ALGORITMO granos_trigo
  CONSTANTES:

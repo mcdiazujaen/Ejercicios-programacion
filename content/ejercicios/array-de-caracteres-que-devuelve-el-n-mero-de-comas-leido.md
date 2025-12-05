@@ -6,7 +6,6 @@ languages: ['c', 'pseudocódigo', 'matlab']
 categories: ['enunciado']
 ---
 
-
 # Array de caracteres que devuelve el número de comas leido
 
 ##  Enunciado 
@@ -17,7 +16,6 @@ Diseña un algoritmo que lea un array de caracteres hasta que se introduzca un p
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
   ALGORITMO ContarComas
   ENTRADAS: 
@@ -45,7 +43,6 @@ Diseña un algoritmo que lea un array de caracteres hasta que se introduzca un p
 ```
 ###  Programa en C
 ```c
-
 
  #include <stdio.h>
  #include <stdlib.h>
@@ -76,12 +73,9 @@ Diseña un algoritmo que lea un array de caracteres hasta que se introduzca un p
     printf("El número de comas es:%i \n",coma);
  }
 
-  
-
 ```
 ###  Programa en Matlab 
 ```matlab
-
 
 %PROGRAMA LeerCaracteres
 %DESCRIPCION: Algoritmo que lea un array de caracteres hasta que se introduzca un punto.

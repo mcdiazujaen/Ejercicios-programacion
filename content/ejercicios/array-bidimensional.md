@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Array bidimensional
 
 ##  Enunciado 
@@ -26,7 +25,6 @@ b) Un subalgoritmo que se le pase un terreno representado mediante un array y ob
 
 ####  Apartado a 
 ```text
-
 
  PROCEDIMIENTO LeerEscribir (VAR Terreno, VAR nf, VAR nc, tipo)
  ENTRADAS: 
@@ -62,7 +60,6 @@ b) Un subalgoritmo que se le pase un terreno representado mediante un array y ob
 ```
 ####  Apartado b 
 ```text
-
 
  PROCEDIMIENTO Invierte (Terreno, nf, nc, VAR Invertido)
  ENTRADAS:

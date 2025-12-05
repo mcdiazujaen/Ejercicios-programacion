@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Puntos de un equipo
 
 ##  Enunciado 

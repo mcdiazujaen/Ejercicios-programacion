@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Leer una frase y escribirla al reves
-
-  
 
 ##  Enunciado 
 
@@ -24,7 +21,6 @@ Solución comentada del Ejercicio:
 
 /* fichero frase.c */ 
 ```c
-
 
 #include <stdio.h>
 void main(void) {
@@ -44,8 +40,6 @@ void main(void) {
   printf("\n");
 }
 
-
-
 /* fichero frase2.c */
 #include <stdio.h>
 #include <string.h>
@@ -61,7 +55,6 @@ void main(void) {
     putchar(frase[n]);
   printf("\n");
 }
-
 
 ```
 ####  Comentario 

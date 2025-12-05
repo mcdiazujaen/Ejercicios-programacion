@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Triángulo de Pascal centrado
 
 ##  Enunciado 
@@ -24,13 +23,10 @@ Implementa una función que reciba como parámetro de entrada un número entero 
   
 Para resolver el problema se parte de una matriz de ceros y se empieza poniendo un 1 en la posición central de la primera fila. Cada elemento del resto de filas se obtiene sumando los elementos que están a su izquierda y derecha en la fila de arriba. 
 
-  
-
 ##  Soluciones 
 
 ###  Programa en Matlab 
 ```matlab
-
 
 function t = triangPascal (n)
 % FUNCION t = triangPascal (n)

@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Funcion que busca un valor en un vector
 
 ##  Enunciado 
@@ -18,7 +17,6 @@ Diseñar una función que tenga como entradas un vector, su tamaño y un valor q
 
 ###  Diseño en Pseudocódigo 
 ```text
-
 
  FUNCION  Buscar(v:ARRAY(1..1000) DE REAL; n:ENTERO; x:REAL): LÓGICO
  ENTRADAS:
@@ -50,7 +48,6 @@ Diseñar una función que tenga como entradas un vector, su tamaño y un valor q
 ```
 ###  Programa en C 
 ```c
-
 
  #include <stdio.h>
  #include <stdlib.h>

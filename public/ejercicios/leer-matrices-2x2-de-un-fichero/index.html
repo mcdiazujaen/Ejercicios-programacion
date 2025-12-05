@@ -47,7 +47,7 @@ NúmeroDeMatrices Fila1Col1Mat1 Fila1Col2Mat1 Fila2Col1Mat1 Fila2Col2Mat1 Fila1C
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -157,28 +157,23 @@ NúmeroDeMatrices Fila1Col1Mat1 Fila1Col2Mat1 Fila2Col1Mat1 Fila2Col2Mat1 Fila1C
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Un archivo de texto almacena matrices de dos por dos con el siguiente formato:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">NúmeroDeMatrices
 </span></span><span class="line"><span class="cl">Fila1Col1Mat1  Fila1Col2Mat1  Fila2Col1Mat1  Fila2Col2Mat1
 </span></span><span class="line"><span class="cl">Fila1Col1Mat2  Fila1Col2Mat2  Fila2Col1Mat2  Fila2Col2Mat2
 </span></span><span class="line"><span class="cl">...</span></span></code></pre></div><p>Por ejemplo, dado el archivo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">3
 </span></span><span class="line"><span class="cl">1 2 3 4
 </span></span><span class="line"><span class="cl">1 1 2 2
 </span></span><span class="line"><span class="cl">7 8 6 4</span></span></code></pre></div><p>El archivo almacena las matrices:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">1 2      1 1      7 8
 </span></span><span class="line"><span class="cl">3 4      2 2      6 4</span></span></code></pre></div><p>Realiza una función que tome como parámetro un nombre de archivo con el formato especificado y una posición y devuelva la matriz 2x2 que ocupa la posición indicada en el archivo. Si el archivo tiene menos matrices que la posición indicada debe devolver una matriz vacía. Por ejemplo, si para el archivo de ejemplo se indica la posición 2 entonces se debe devolver la matriz:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">1 1
 </span></span><span class="line"><span class="cl">2 2</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>matriz <span class="p">=</span><span class="w"> </span><span class="nf">LeerMatriz2x2</span><span class="p">(</span>nombre, posicion<span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% Funcion matriz = LeerMatriz2x2(nombre, posicion)</span>
 </span></span><span class="line"><span class="cl"><span class="c">% Descripción: Extrae de un fichero de texto una matriz 2x2</span>

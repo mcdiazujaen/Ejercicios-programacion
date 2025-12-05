@@ -42,7 +42,7 @@ El siguiente programa, al que llamarás ordena.c , ordena un conjunto de número
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -170,7 +170,6 @@ El siguiente programa, al que llamarás ordena.c , ordena un conjunto de número
 <h3 id="programa-en-c-por-angel">Programa en C por <strong>Angel</strong><a class="anchor" href="#programa-en-c-por-angel">#</a></h3>
 <p>Solución comentada al Ejercicio:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cm">/* fichero ordena.c*/</span>
 </span></span><span class="line"><span class="cl"><span class="cm">/* Programa para ordenar un conjunto de números enteros*/</span>
 </span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
@@ -202,10 +201,7 @@ El siguiente programa, al que llamarás ordena.c , ordena un conjunto de número
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario">#</a></h4>
 <p>Para intercambiar entre sí los valores de dos variables no se pueden emplear las dos instrucciones siguientes:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">**vector[j]=vector[i];** /* esta instrucción pone en la posición j el valor de la posición i, perdiéndose el valor de la posición j */
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">**vector[i]=vector[j];** /* esta instrucción pone en la posición i el valor de la posición j, pero no el original, que se ha perdido, sino el nuevo */</span></span></code></pre></div><p>Por eso es necesaria una variable intermedia, que en este caso hemos llamado temp, que guarda temporalmente el valor de la posición <strong>j</strong>. Por esto se requieren tres instrucciones.</p>
 </article>

@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Criba de Eratóstenes
 
 ##  Enunciado 
@@ -21,7 +20,6 @@ Diseñar un algoritmo para generar los números primos entre 2 y N, utilizando l
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 
 PROCEDIMIENTO Criba (N, VAR primos, VAR t)
 ENTRADAS: N: ENTERO, controla el número de primos que queremos obtener, N>0.
@@ -73,7 +71,6 @@ INICIO
  HASTA QUE seguir=0
 FIN
 
-
 ```
 ####  Comentario 
 
@@ -83,7 +80,6 @@ La operación se puede repetir hasta que deseemos terminar.
 
 ###  Programa en Pascal por **lperez**
 ```text
-
 
 program Criba_Erastostenes;
 uses crt;

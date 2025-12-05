@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Leer numero de un fichero mayores de un umbral
 
 ##  Enunciado
@@ -17,7 +16,6 @@ Implementa una función que reciba como parámetros de entrada los nombres de do
 
 ###  Programa en Matlab 
 ```matlab
-
 
 function [exito, ncopias]=CopiaMayor(nfichero1, nfichero2, umbral)
 % FUNCION [exito, ncopias]=CopiaMayor(nfichero1, nfichero2, umbral)

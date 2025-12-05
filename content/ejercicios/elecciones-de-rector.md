@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Elecciones de rector
 
 ##  Enunciado
@@ -18,7 +17,6 @@ Diseña un algoritmo que dada la matriz de resultados muestre en un diagrama de 
 Para la realización del algoritmo se pueden usar los siguientes módulos que ya están diseñados: 
 ```text
 
-
 PROCEDIMIENTO Recuento(VAR votos)
 ENTRADAS:
   (* Ninguna *)
@@ -26,7 +24,6 @@ SALIDAS:
    votos: ARRAY(1..M, 1..4) DE ENTEROS (* matriz con los votos de los candidatos, 
                los votos de cada candidato están en una fila y las columnas son 
                los votos obtenidos en cada sector: PAS, %alumnos, PDI permanente y PDI no permanente *)
-
 
 PROCEDIMIENTO pie(x)
 (* Descripción: la función dibuja un diagrama de sectores con los datos contenidos en el array x *)

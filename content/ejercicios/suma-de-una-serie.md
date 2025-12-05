@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab']
 ---
 
-
 # Suma de una serie
 
 ##  Enunciado 
@@ -16,16 +15,13 @@ tags: ['sin_matlab']
 Diseñar un algoritmo para calcular la suma de los siguientes 100 primeros términos de la serie: 
 ```text
 
-
   1 - 1/2 + 1/4 - 1/6 + 1/8 - 1/10 + 1/12 - ...
-
 
 ```
 ##  Soluciones
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
  ALGORITMO Suma_serie
  ENTRADAS:

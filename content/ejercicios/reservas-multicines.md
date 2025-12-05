@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Reservas Multicines
 
 ##  Enunciado 
@@ -16,7 +15,6 @@ Se quiere realizar un programa que gestione las reservas de las salas de un Mult
 Ejemplo de matriz de ocupación (1 ocupado, 0 libre): 
 ```text
 
-
 1							N
 -----------------------------------------------------------	
 1	1	0	0	0	0	0	…  |	1
@@ -25,11 +23,9 @@ Ejemplo de matriz de ocupación (1 ocupado, 0 libre):
 0	1	0	0	0	0	0	…  |	
 …	…	…	…	…	…	…	…  |	M
 
-
 ```
 Ejemplo de array con los nombres de las salas 
 ```text
-
 
 A  |	1
 P  |	
@@ -37,8 +33,6 @@ B  |
 H  |	
 …  |	M
 
-
-  
 ```
 Con este planteamiento implementa los siguientes apartados, especificando de forma clara las variables de entrada, salida e intermedias así como sus tipos para cada uno de los módulos: 
 

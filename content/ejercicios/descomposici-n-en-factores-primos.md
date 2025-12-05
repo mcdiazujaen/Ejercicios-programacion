@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Descomposición en factores primos
-
-  
 
 ##  Enunciado 
 
@@ -20,7 +17,6 @@ Se quire realizar un programa al que se le de un número positivo y devuelva su 
 
 ###  Programa en Pascal por **lperez**
 ```text
-
 
  program desompone_primos;
  uses crt;

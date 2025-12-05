@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Rellenar matriz con ceros
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ El formato del fichero de entrada es el siguiente: en la primera línea la dimen
 **Ejemplo:** Archivo de entrada 
 ```text
 
-
 5				
 5	0	7	0	0
 4	2	7	0	0
@@ -28,11 +26,9 @@ El formato del fichero de entrada es el siguiente: en la primera línea la dimen
 8	2	6	5	0
 1	4	4	8	6
 
-
 ```
 **Ejemplo:** Archivo de salida 
 ```text
-
 
 5				
 5	**2**	7	**2**	**2**
@@ -41,7 +37,6 @@ El formato del fichero de entrada es el siguiente: en la primera línea la dimen
 8	2	6	5	**4**
 1	4	4	8	6
 
-
 ```
 ##  Soluciones 
 
@@ -49,7 +44,6 @@ El formato del fichero de entrada es el siguiente: en la primera línea la dimen
 
 ####  Función que lee el fichero 
 ```matlab
-
 
 function m = leeFich(nombre)
 % Función m = leeFich(nombre)
@@ -77,7 +71,6 @@ end
 ```
 ####  Función que transforma la matriz 
 ```text
-
 
 function s = transforma(m)
 % Función s = transforma(m)
@@ -108,7 +101,6 @@ s = m;
 ####  Función que escribe en el fichero 
 ```text
 
-
 function escribeFich(m)
 % Función escribeFich(m)
 % Descripción: Escribe una matriz de enteros en un fichero llamado
@@ -132,7 +124,6 @@ end
 ```
 ####  Programa principal 
 ```matlab
-
 
 % Programa TransformaMatriz
 % Entradas:

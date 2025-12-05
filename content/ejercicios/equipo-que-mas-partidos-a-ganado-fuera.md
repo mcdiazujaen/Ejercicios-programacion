@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Equipo que mas partidos a ganado fuera
 
 ##  Enunciado 

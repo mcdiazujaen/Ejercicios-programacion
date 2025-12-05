@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Estación meteorológica
 
 ##  Enunciado
@@ -14,11 +13,9 @@ categories: ['enunciado']
 Tenemos una estación meteorológica que nos proporciona los datos de temperaturas a lo largo de una semana completa, empezándose a medir cualquier día entre el lunes y el domingo. Los datos se almacenan en un fichero de 3 líneas: la 1ª almacena el día de la semana en el que se empiezan a tomar medidas, la 2ª para temperaturas mínimas y la 3ª para las máximas. Por ejemplo: 
 ```text
 
-
 miércoles
  2    0    4    6    5    7    6		
 12    9   10   20   16   18   14		
-
 
 ```
 Lo que significa que los datos de este archivo se empiezaron a medir el miércoles, y el viernes (tercer dato de cada fila) hubo una temperatura mínima de 4 y máxima de 10 
@@ -29,9 +26,7 @@ Lo que significa que los datos de este archivo se empiezaron a medir el miércol
 **Apartado 2.** Implementa un programa que pida al usuario el nombre del archivo con los datos de las temperaturas y calcule y muestre un vector con la diferencia entre temperaturas máxima y mínima de cada día de la semana y el día en el que se obtuvo una mayor diferencia entre ambas. Si hay varios con el mismo valor se puede devolver cualquiera de ellos. 
 Para el ejemplo anterior, el vector que debe devolver es 
 
-
 10	9	6	14	11	11	8
-
 
 Y el día: sábado (diferencia 14 y cuarto día, empezando desde el miércoles) 
 
@@ -42,7 +37,6 @@ Y el día: sábado (diferencia 14 y cuarto día, empezando desde el miércoles)
 
 ####  Apartado 1 
 ```matlab
-
 
 function [dia,temperaturas]=Lectura(nombre)
 %Parámetros de entrada:
@@ -67,7 +61,6 @@ end
 ```
 ####  Apartado 2 
 ```matlab
-
 
 %Programa Temperaturas
 %Entradas:

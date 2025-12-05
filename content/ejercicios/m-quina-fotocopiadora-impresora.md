@@ -6,10 +6,7 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Máquina fotocopiadora-impresora
-
-  
 
 ##  Enunciado 
 
@@ -39,11 +36,9 @@ Realizar un subalgoritmo que dado como entrada un modo de la fotocopiadora (valo
 _Ejemplo_ : Entrada: Modo: 1 Salida: 
 ```text
 
-
   Trabajo 6
   Trabajo 8
   Trabajo 11
-
 
 ```
 ###  Apartado 2 
@@ -72,8 +67,6 @@ ID |  Num |  Modo |  Prioridad
 9 |  5 |  3 |  4   
 10 |  1 |  3 |  5   
 11 |  2 |  1 |  3   
-  
-  
 
 ###  Apartado 5 
 
@@ -104,8 +97,6 @@ ID |  Num |  Modo |  Prioridad
 10 |  1 |  3 |  6   
 11 |  2 |  1 |  3   
 12 |  10 |  1 |  4   
-  
-  
 
 ###  Apartado 6 
 
@@ -134,8 +125,6 @@ ID |  Num |  Modo |  Prioridad
 10 |  1 |  3 |  5   
 11 |  2 |  1 |  2   
 12 |  10 |  1 |  3   
-  
-  
 
 ###  Apartado 7 
 

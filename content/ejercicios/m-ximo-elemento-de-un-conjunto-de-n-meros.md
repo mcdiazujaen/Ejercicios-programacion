@@ -7,7 +7,6 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Máximo elemento de un conjunto de números
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ Este programa calcula el máximo entre un conjunto de números enteros. Para ell
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero maximo.c */
 /* Programa para calcular el máximo de un conjunto de números */
@@ -47,17 +45,13 @@ void main(void) {
   printf("\ny esta en la posicion %d.\n", imax+1);
 }
 
-
 ```
 ####  Comentario 
 
 Este programa es muy sencillo, si se entiende el algoritmo. La variable `max` acabará siendo igual al elemento mayor del conjunto, e `imax` indicará la posición del máximo. 
 
-  
-
 ###  Diseño en pseudocódigo
 ```text
-
 
 ALGORITMO Maximo
 ENTRADAS:

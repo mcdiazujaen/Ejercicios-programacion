@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Suma de las diagonales inferiores
 
 ##  Enunciado
@@ -15,7 +14,6 @@ Implementa una función a la que se le de cómo parámetro de entrada una matriz
 
 Ejemplos: 
 ```text
-
 
 f=2 y c=2 
 
@@ -27,8 +25,6 @@ f=2 y c=2
 
 Suma=22
 
-
-
 f=3 y c=4
 
    3 1 2 7 4
@@ -39,13 +35,11 @@ f=3 y c=4
 
 Suma=7
 
-
 ```
 ##  Soluciones
 
 ###  Programa en Matlab 
 ```matlab
-
 
 function suma=Diagonales(m,f,c)
 %Parámetros de Entrada: 

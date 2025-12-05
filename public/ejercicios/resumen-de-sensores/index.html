@@ -43,7 +43,7 @@ Ejemplo del contenido del fichero de datos del sensor:">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -157,7 +157,6 @@ Ejemplo del contenido del fichero de datos del sensor:">
 <p>Hemos diseñado un dispositivo con 5 sensores de diversa índole. El dispositivo almacena en un archivo de texto los datos captados por los sensores durante todo el día. La primera línea del archivo contiene el día, mes y año al que corresponden los valores captados. Las siguientes líneas contienen 5 valores, separados por espacios, que son: hora, minuto, segundo, número de sensor y valor captado.</p>
 <p>Ejemplo del contenido del fichero de datos del sensor:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">24 11 2013
 </span></span><span class="line"><span class="cl">00 12 24 2 530
 </span></span><span class="line"><span class="cl">00 12 25 1 100
@@ -167,10 +166,8 @@ Ejemplo del contenido del fichero de datos del sensor:">
 <p>Módulo que lea el fichero de datos. La entrada será el nombre del fichero y las salidas un vector con la fecha (día, mes y año) y una matriz con los datos de cada captura en cada fila, y con 5 columnas (hora, minuto, segundo, sensor y valor).</p>
 <p>Ejemplo del vector fecha:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">24 11 2013</span></span></code></pre></div><p>Ejemplo de matriz de datos:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">0 12 24 2 530
 </span></span><span class="line"><span class="cl">0 12 25 1 100
 </span></span><span class="line"><span class="cl">0 12 30 5 300
@@ -184,18 +181,15 @@ Ejemplo del contenido del fichero de datos del sensor:">
 <li>La fecha (separada por guiones) del fichero a la que corresponde el resumen. Ejemplo:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Resumen de sensores del día 24-11-2013</span></span></code></pre></div><ul>
 <li>El número de valores que se han recogido. Ejemplo:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">- Se han recogido 4 valores</span></span></code></pre></div><ul>
 <li>Cuanto datos se han recogido en cada hora. Si durante alguna hora no se han recogido datos</li>
 </ul>
 <p>no deberá escribirse información de dicha hora. Ejemplo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">- Los datos recogidos en cada hora son:
 </span></span><span class="line"><span class="cl">   Hora 0: 3 datos.
 </span></span><span class="line"><span class="cl">   Hora 1: 1 datos.</span></span></code></pre></div><ul>
@@ -203,7 +197,6 @@ Ejemplo del contenido del fichero de datos del sensor:">
 </ul>
 <p>se escribirá su media como 0. Ejemplo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">- La media de cada sensor es:
 </span></span><span class="line"><span class="cl">   Sensor 1: 100
 </span></span><span class="line"><span class="cl">   Sensor 2: 315.50000

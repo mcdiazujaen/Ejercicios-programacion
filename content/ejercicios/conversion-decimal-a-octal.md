@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Conversion decimal a octal
 
 ##  Enunciado 
@@ -28,7 +27,6 @@ Generalizar y que haga un cambio de base como dato la base a la que se quiera pa
 
 ###  Diseño en Pseudocódigo 
 ```text
-
 
  PROGRAMA CambioDeBase
  ENTRADAS:
@@ -67,7 +65,6 @@ Generalizar y que haga un cambio de base como dato la base a la que se quiera pa
 ```
 ###  Programa en C
 ```c
-
 
  #include <stdlib.h>
  

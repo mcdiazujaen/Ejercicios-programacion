@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab', 'sin_pseudocódigo']
 ---
 
-
 # Operaciones estadisticas
 
 ##  Enunciado 
@@ -37,7 +36,6 @@ Tanto el programa principal como las funciones deberán estar en el mismo ficher
 
 Solución comentada al Ejercicio: 
 ```c
-
 
  /* fichero numeros.c */
  #include <stdio.h>

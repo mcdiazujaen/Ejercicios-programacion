@@ -44,7 +44,7 @@ Soluciones# Programa en C por Angel# Solución comentada del Ejercicio:
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -159,7 +159,6 @@ Soluciones# Programa en C por Angel# Solución comentada del Ejercicio:
 <h3 id="programa-en-c-por-angel">Programa en C por <strong>Angel</strong><a class="anchor" href="#programa-en-c-por-angel">#</a></h3>
 <p>Solución comentada del Ejercicio:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="cm">/* fichero primos1.c */</span>
 </span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
@@ -182,7 +181,6 @@ Soluciones# Programa en C por Angel# Solución comentada del Ejercicio:
 <p>Para poder escribir todos los números primos hasta un límite, basta introducir un nuevo bucle for al programa anterior que vaya recorriendo todos los números enteros desde el 2 hasta dicho límite inclusive. En cada ejecución del bucle se comprueba si el número considerado es primo aprovechando las sentencias del programa anterior. En este caso se calcula si un número es primo mediante el bucle for (divisor=2; divisor&lt;=sqrt(numero); divisor++). Observa que se ha definido una variable esPrimo que indica si el número es primo o no. Al principio se supone que el número es primo, y esta condición se cambia si se encuentra un divisor exacto. En esta caso, la sentencia break hace que se termine el bucle for más interno.</p>
 <h3 id="solucion-en-pseudocódigo">Solucion en Pseudocódigo<a class="anchor" href="#solucion-en-pseudoc%c3%b3digo">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> ALGORITMO primos1
 </span></span><span class="line"><span class="cl"> ENTRADAS:
 </span></span><span class="line"><span class="cl">    n: ENTERO (* Valor límite *)
@@ -213,7 +211,6 @@ Soluciones# Programa en C por Angel# Solución comentada del Ejercicio:
 <p>En la creación del pseudocódigo a partir del código en C mostrado en el apartado anterior hemos realizado algunas sustituciones para que el pseudocódigo fuera correcto. El bucle <code>for</code> más interno ha sido sustituido por una sentecia <code>MIENTRAS</code>, ya que en el código C dicho bucle estaba siendo utilizado como una sentencia <code>MIENTRAS</code>. Además en el diseño en pseudocódigo no es recomendable incluir sentencias de ruptura de flujo como <code>break</code>, por lo que se ha simulado su comportamiento incluyendo en la condición del <code>MIENTRAS</code> la comparación <code>esPrimo=1</code>. Por último, se ha utilizado la función ficticia <code>RAIZ(numero)</code> como si ya estubiera declarada anteriormente.</p>
 <h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">%Programa Primos1</span>
 </span></span><span class="line"><span class="cl"><span class="c">%Descripción: Nos localiza los números primos entre el 2 y el número que queramos.</span>
 </span></span><span class="line"><span class="cl"><span class="c">%Entradas: El valor límite hasta el que queremos analizar.</span>

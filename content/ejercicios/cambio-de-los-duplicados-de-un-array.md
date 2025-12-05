@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Cambio de los duplicados de un array
 
 ##  Enunciado 
@@ -18,7 +17,6 @@ Diseñar un procedimiento que acepte como parámetro un vector que pueda contene
 
 ###  Diseño en Pseudocódigo 
 ```text
-
 
   PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO)
   ENTRADAS:
@@ -44,7 +42,6 @@ Diseñar un procedimiento que acepte como parámetro un vector que pueda contene
 ```
 ###  Programa en C 
 ```c
-
 
  #include <stdio.h>
  #include <stdlib.h>
@@ -75,7 +72,6 @@ Diseñar un procedimiento que acepte como parámetro un vector que pueda contene
 ```
 ###  Solución en Matlab 
 ```matlab
-
 
 function [v,nrepe]=Repeticion(w)
 %FUNCION [v,nrepe]=Repeticion(w)

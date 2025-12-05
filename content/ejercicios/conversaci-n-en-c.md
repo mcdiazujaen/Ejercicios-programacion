@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Conversación en C
 
 ##  Enunciado 
@@ -21,7 +20,6 @@ Si has realizado [el primer ejercicio en C](/ejercicios/el-primer-ejercicio-en-c
 
 Solución comentada al Ejercicio 
 ```c
-
 
  /* fichero hola2.c */
  /* Este programa saluda más personalmente */

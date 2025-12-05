@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_solución']
 ---
 
-
 # Cuadrado Mágico
 
 ##  Enunciado 
@@ -24,7 +23,6 @@ Diseña un algoritmo que determine si una matriz cuadrada forma un cuadrado mág
 
 ####  Programa principal 
 ```matlab
-
 
 %Programa CuadradoMagico
 %Descripción: Determina si una matriz cuadrada forma un cuadrado mágico.
@@ -72,7 +70,6 @@ end
 ####  Módulo 1 
 ```matlab
 
-
 function suma=sumaf(m,f)
 %FUNCIÓN suma=sumaf(m,f)
 %DESCRIPCIÓN: Devuelve la suma de una fila de una matriz.
@@ -94,7 +91,6 @@ end
 ####  Módulo 2 
 ```text
 
-
 function suma=sumac(m,c)
 %FUNCIÓN suma=sumac(m,c)
 %DESCRIPCIÓN: Devuelva la suma de una columna de una matriz.
@@ -115,7 +111,6 @@ end
 ```
 ####  Módulo 3 
 ```matlab
-
 
 function [dp ds]=sumad(m)
 %Programa: Devuelva la suma de la diagonal principal y de la secundaria de una matriz cuadrada.

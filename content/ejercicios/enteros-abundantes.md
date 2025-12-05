@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Enteros abundantes
 
 ##  Enunciado 
@@ -14,9 +13,7 @@ tags: ['sin_matlab', 'sin_solución']
 Un entero **n** se llama **[abundante](http://es.wikipedia.org/wiki/N%C3%BAmero_abundante "http://es.wikipedia.org/wiki/N%C3%BAmero_abundante")** si es menor que la suma de sus divisores diferentes de él. Por ejemplo, el número 12 es abundante ya que 
 ```text
 
-
 12 < 1+2+3+4+6 
-
 
 ```
 Los números abundantes impares son escasos. 

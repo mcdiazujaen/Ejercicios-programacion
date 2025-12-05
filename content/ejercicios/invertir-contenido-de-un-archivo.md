@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Invertir contenido de un archivo
 
 ##  Enunciado 
@@ -17,7 +16,6 @@ Escribe un programa que lea una lista de números reales a partir de un archivo.
 
 ###  Programa en Matlab 
 ```matlab
-
 
 % Se lee una lista de números reales a partir de un archivo. El programa los almacena
 % en un vector, y presenta la lista en pantalla en orden inverso al que tienen en el archivo.

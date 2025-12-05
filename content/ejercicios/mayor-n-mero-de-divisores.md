@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_solución']
 ---
 
-
 # Mayor número de divisores
 
 ##  Enunciado 
@@ -15,17 +14,14 @@ tags: ['sin_solución']
 Diseña un algoritmo que lea desde teclado dos enteros positivos y muestre en pantalla el entero, de los situados entre los dos enteros leídos, que tenga más divisores, así como un listado de sus divisores (el 1 y el propio número no se consideran divisores). Por ejemplo, si se leen los valores 13 y 6, el resultado a mostrar en pantalla debe ser: 
 ```text
 
-
 Entero con mayor cantidad de divisores: 12
 Divisores 2, 3, 4, 6
-
 
 ```
 Para ello diseñar también un subalgoritmo que dado un número entero devuelva cuáles son sus divisores y la cantidad de éstos. Dicho subalgoritmo debe ser invocado en el algoritmo principal cuando se requiera dicha tarea. 
 
 ##  Soluciones 
 ```matlab
-
 
 %Programa Masdivisores
 %Entradas: dos números enteros positivos

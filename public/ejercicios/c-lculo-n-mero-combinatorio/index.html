@@ -41,7 +41,7 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -154,14 +154,12 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">                        a!
 </span></span><span class="line"><span class="cl">          C(a,b) = -------------
 </span></span><span class="line"><span class="cl">                     b! * (a-b)!</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo">#</a></h3>
 <h4 id="diseño-1-por-lperez">Diseño 1 por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-por-lperez">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> FUNCION Factorial (n): ENTERO
 </span></span><span class="line"><span class="cl"> ENTRADAS: n: ENTERO, un número entero positivo.
 </span></span><span class="line"><span class="cl"> SALIDAS: el factorial de n.
@@ -192,7 +190,6 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 </span></span><span class="line"><span class="cl">   ESCRIBIR combi 
 </span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h4 id="diseño-2-por-lperez">Diseño 2 por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-por-lperez">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> PROCEDIMIENTO Factorial (n, VAR f)
 </span></span><span class="line"><span class="cl"> ENTRADAS: n: ENTERO, un número entero positivo.
 </span></span><span class="line"><span class="cl"> SALIDAS: f: ENTERO, el factorial de n.
@@ -228,7 +225,6 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 <h3 id="programa-en-c">Programa en C<a class="anchor" href="#programa-en-c">#</a></h3>
 <h4 id="solución-1">Solución 1<a class="anchor" href="#soluci%c3%b3n-1">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="c1">//&#39;&#39;(Este programa se ha hecho con una función)&#39;&#39;            
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="kt">int</span> <span class="nf">Factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">//ENTRADAS: &#39;&#39;(n: un número entero positivo)&#39;&#39;
@@ -270,7 +266,6 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 </span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span><span class="n">combi</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div><h4 id="solución-2">Solución 2<a class="anchor" href="#soluci%c3%b3n-2">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">Factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//VARIABLES
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
@@ -312,7 +307,6 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 <p>En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.</p>
 <h3 id="programa-en-pascal-por-lperez">Programa en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-en-pascal-por-lperez">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> program Combinatorio;
 </span></span><span class="line"><span class="cl"> {ENTRADAS: a,b, dos n£meros enteros positivos, a&gt;b y a&lt;&gt;0
 </span></span><span class="line"><span class="cl"> SALIDAS: combi, el n£mero combinatorio a sobre b, calculado de la forma:
@@ -399,7 +393,6 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 <h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <p>Para realizar este programa utilizamos el módulo <strong>factorial</strong> existente en Matlab.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">%Programa CalcularCombinatorio</span>
 </span></span><span class="line"><span class="cl"><span class="c">%Descripción: Calcula el combinatorio de dos números a y b, de la forma:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%                          a!</span>

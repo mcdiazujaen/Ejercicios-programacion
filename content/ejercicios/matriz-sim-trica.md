@@ -8,7 +8,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Matriz simétrica
 
 ##  Enunciado 
@@ -29,7 +28,6 @@ Ejemplo de matriz simétrica:
 ####  Solución 1 
 ```text
 
-
 ALGORITMO Matriz_simetrica
 ENTRADAS: Mat: ARRAY [1..tamano, 1.tamano] DE ENTEROS; matriz 
                matemática  cuadarada.
@@ -49,11 +47,9 @@ INICIO
   FIN_SI
 FIN
 
-
 ```
 ####  Solución 2 
 ```text
-
 
 ALGORITMO Matriz_simetrica
 ENTRADAS: Mat: ARRAY [1..tamano, 1.tamano] DE ENTEROS; matriz 
@@ -74,7 +70,6 @@ INICIO
   SI NO ESCRIBIR ‘La matriz  no es simétrica’
   FIN_SI
 FIN
-
 
 ```
 ####  Comentario

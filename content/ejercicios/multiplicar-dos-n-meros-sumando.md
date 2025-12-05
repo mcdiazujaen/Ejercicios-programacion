@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Multiplicar dos números sumando
 
 ##  Enunciado
@@ -17,7 +16,6 @@ Implementa un programa que obtenga el producto de dos números enteros a base de
 
 ###  Programa en Matlab 
 ```matlab
-
 
 %Programa ProductoSumas
 %Entrada: 

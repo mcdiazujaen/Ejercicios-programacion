@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Elecciones municipales
 
 ##  Enunciado
@@ -25,28 +24,21 @@ Módulo que lea la información y devuelva las estructuras de datos correspondie
 Censo (_El municipio 1 tiene 110000 habitantes y el 2 tiene 4500_) 
 ```text
 
-
   110000  4500  
- 
-
 
 ```
 Fichero **recuentoVotos.txt** : 
 ```text
 
-
   3 20000 1600 10000 800  60000 480
-
 
 ```
 Matriz resultante: (_En este caso se tienen que el partido 1 ha obtenido 20000 votos en el municipio 1 y el mismo partido ha obtenido 1600 en el municipio 2_) 
 ```text
 
-
   20000  1600 
   10000   800
   60000   480
-
 
 ```
 ###  Módulo 2 

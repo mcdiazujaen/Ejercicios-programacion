@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab', 'sin_pseudocódigo']
 ---
 
-
 # Tabla de conversión de grados centigrados a fahrenheit
 
 ##  Enunciado 
@@ -26,7 +25,6 @@ siendo ºC la temperatura en grados Centígrados y ºF en grados Fahrenheit.
 Solución comentada al Ejercicio: 
 ```c
 
-
  /* fichero temp1.c */
  #include <stdio.h>
  void main(void) {
@@ -40,7 +38,6 @@ Solución comentada al Ejercicio:
    gradosFahr+=20.0;
   }
  }
-
 
  /* fichero temp2.c */
  #include <stdio.h>

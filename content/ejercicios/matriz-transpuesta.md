@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_c']
 ---
 
-
 # Matriz transpuesta
 
 ##  Enunciado 
@@ -22,7 +21,6 @@ Realizar un subalgoritmo al que se le de una matriz de orden _**NxM**_ y devuelv
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
  PROCEDIMIENTO transpuesta( mat, n, m, VAR trans)
  
@@ -49,7 +47,6 @@ Realizar un subalgoritmo al que se le de una matriz de orden _**NxM**_ y devuelv
 ####  Solución con programación básica 
 ```matlab
 
-
 function b = Transpuesta( a )
 % FUNCION b = Transpuesta( a )
 % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a
@@ -71,7 +68,6 @@ end
 ```
 ####  Solución con programación Matlab avanzada 
 ```text
-
 
 function b = Transpuesta( a )
 % FUNCION b = Transpuesta( a )

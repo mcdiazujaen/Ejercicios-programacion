@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Función SIGMA y función PROD
 
 ##  Enunciados 
@@ -27,7 +26,6 @@ Diseñar la función PROD para calcular el producto de los _n_ elementos de un v
 ####  Función SIGMA 
 ```text
 
-
  FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL
  ENTRADAS:
    X: ARRAY DE REALES  _(Elementos que se van a sumar, la primera posición del array es 0)_
@@ -44,11 +42,9 @@ Diseñar la función PROD para calcular el producto de los _n_ elementos de un v
    DEVOLVER (suma)
  FIN
 
-
 ```
 ####  Función PROD 
 ```text
-
 
  FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL
  ENTRADAS: (Están definidas en la cabecera de la función)
@@ -66,13 +62,11 @@ Diseñar la función PROD para calcular el producto de los _n_ elementos de un v
    DEVOLVER(producto)
  FIN
 
-
 ```
 ###  Programa en C
 
 ####  Función SIGMA
 ```c
-
 
 float SIGMA(float X[], int n){
 /*ENTRADAS:
@@ -91,11 +85,9 @@ float SIGMA(float X[], int n){
   return(suma);
 }
 
-
 ```
 ####  Función PROD
 ```text
-
 
  float PROD(float X[], int n){
  /*ENTRADAS:
@@ -113,7 +105,6 @@ float SIGMA(float X[], int n){
    }
    return(producto);
 }
-
 
 ```
 ####  Comentario

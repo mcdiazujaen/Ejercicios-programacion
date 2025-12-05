@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Operación aritmetica
 
 ##  Enunciado 
@@ -28,7 +27,6 @@ Compila el programa y ejecútalo; apuntando el resultado. Después modifica el p
 Solución comentada al Ejercicio 
 ```c
 
-
 /* fichero marathon.c */
 /* Un marathon tiene 26 millas y 385 yardas. */
 /* Una milla tiene 1760 yardas. */
@@ -42,7 +40,6 @@ void main(void) {
   kilometros=1.609*(millas+yardas/1760.0);
   printf("\nUn marathon tiene %f kilometros.\n\n", kilometros);
 }
-
 
 ```
 ####  Comentario 

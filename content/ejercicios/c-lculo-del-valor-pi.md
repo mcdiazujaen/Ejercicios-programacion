@@ -6,7 +6,6 @@ languages: ['pseudocódigo', 'matlab']
 categories: ['enunciado']
 ---
 
-
 # Cálculo del valor Pi
 
 ##  Enunciado 
@@ -14,26 +13,21 @@ categories: ['enunciado']
 Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie: 
 ```text
 
-
 PI1 = 4 * (1 – 1/3)
 PI2 = 4 * (1 – 1/3 + 1/5 – 1/7)
 PIn = 4 * (1 – 1/3 + 1/5 – 1/7 + ...)
-
 
 ```
 El error se calcula como la diferencia entre un término de la serie y el anterior. 
 ```text
 
-
 error = PIi - PIi-1
-
 
 ```
 ##  Soluciones 
 
 ###  Pseudocódigo 
 ```text
-
 
  FUNCION Pi (error):REAL
  ENTRADAS:
@@ -64,7 +58,6 @@ error = PIi - PIi-1
 ```
 ###  Programa en Matlab 
 ```matlab
-
 
 function aproxpi = CalcularPi( valorerror )
 % FUNCION aproxpi = CalcularPi( valorerror )

@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Calculo del determenante de una matriz 3x3
 
 ##  Enunciado 
@@ -25,7 +24,6 @@ En vez de tener que introducir la matriz tecleándola cada vez, utiliza un fiche
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero determin.c */
 #include <stdio.h>
@@ -58,7 +56,6 @@ void main(void) {
   printf("\nY su determinante es: %12.4lf\n", determinante);
 }
 
-
 ```
 ####  Comentario 
 
@@ -70,7 +67,6 @@ En principio este programa no existe ninguna dificultad respecto al manejo de la
 
 El siguiente programa en MatLab utiliza funciones similares a las utilizadas en lenguaje C. 
 ```matlab
-
 
 % Programa Calcular_Determinante
 % Descripción: Calcula el determinante de una matriz 3×3
@@ -104,7 +100,6 @@ disp(deter);
 ```
 ####  Solución con programación Matlab avanzada 
 ```matlab
-
 
 % Programa Calcular_Determinante
 % Descripción: Calcula el determinante de una matriz 3×3

@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Estadísticas de fútbol
 
 ##  Enunciado 
@@ -16,9 +15,7 @@ Disponemos de un archivo de texto con información sobre un partido de fútbol. 
 Ejemplo de contenido del fichero de datos: 
 ```text
 
-
 1 12 23 1 2 3 10 2
-
 
 ```
 En el ejemplo hay apuntadas 2 goles. Los datos del primero (1 12 23 1) indican que el gol fue en el primer tiempo, en el minuto 12, por el jugador 23 del equipo 1. 

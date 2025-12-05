@@ -6,7 +6,6 @@ languages: ['pseudocódigo', 'matlab']
 categories: ['enunciado']
 ---
 
-
 # Calcular la varianza
 
 ##  Enunciado
@@ -21,7 +20,6 @@ Diseñar un algoritmo para leer los elementos de un vector _x_ y calcular la med
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
 ALGORITMO varianza_medida
 ENTRADAS:
@@ -63,7 +61,6 @@ FIN
 ```
 ###  Programa en Matlab 
 ```matlab
-
 
 % Programa Varianza_Media
 % Entradas: Número de elementos del vector.

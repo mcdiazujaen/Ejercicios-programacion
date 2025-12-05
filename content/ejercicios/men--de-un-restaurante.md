@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Menú de un restaurante
 
 ##  Enunciado 
@@ -24,7 +23,6 @@ El siguiente es el menú de un restaurante de bocadillos. Diseñar un algoritmo 
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
 ALGORITMO Menu
 ENTRADAS:

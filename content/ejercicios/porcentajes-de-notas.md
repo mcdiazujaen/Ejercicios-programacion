@@ -8,7 +8,6 @@ categories: ['enunciado']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Porcentajes de notas
 
 ##  Enunciado 
@@ -22,7 +21,6 @@ Queremos conocer los datos estadísticos de una asignatura, por lo tanto, necesi
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
 ALGORITMO Estadisticas
 ENTRADAS:

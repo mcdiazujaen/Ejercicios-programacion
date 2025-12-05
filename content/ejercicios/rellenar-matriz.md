@@ -6,14 +6,12 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Rellenar matriz
 
 ##  Enunciado 
 
 Crea un algoritmo que pida al usuario el número de filas que desea rellenar de una matriz de 4 columnas y genere una matriz como la siguiente: 
 ```text
-
 
       1    2    3     4
    +--------------------    
@@ -23,7 +21,6 @@ Crea un algoritmo que pida al usuario el número de filas que desea rellenar de 
 4  | 16   15   14    13
 ...|...  ...  ...   ...
 n  |...  ...  ...   ...
-
 
 ```
 Ten en cuenta que las filas impares van incrementándose y pares decrementándose. 

@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Otra función recursiva: La suma de los N primeros número enteros
 
 ##  Enunciado 
@@ -24,7 +23,6 @@ Seguro que con la experiencia adquirida en el ejercicio [**factor2.c**](/ejercic
 Solución comentada al Ejercicio: 
 ```c
 
-
 /* fichero sum2.c */
 #include <stdio.h>
 void main(void) {
@@ -39,7 +37,6 @@ double suma(int n) {
       return 1.0;
   return ((2*n-1)+suma(n-1));
 }
-
 
 ```
 ####  Comentario 

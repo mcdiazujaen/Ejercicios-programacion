@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Suma de los 4 vecinos en una matriz
 
 ##  Enunciado
@@ -16,12 +15,10 @@ Diseña un módulo al que se le dé como parámetro de entrada una matriz **M** 
 **Ejemplo** : 
 ```text
 
-
  Si la matriz M es:         El módulo devolvería la matriz:
    1  7 -8  7                 1  1  2  2  3
    5  0  9  8                 2  4  1  3  2
    1 14  3  5
-
 
 ```
 Observe que el primer valor que es mayor a la suma de sus vecinos es 7 (fila 1, columna 2). Sus vecinos valen 1 (izquierda), 0 (abajo) y -8 (derecha), arriba no tiene vecino. 
@@ -31,12 +28,10 @@ Usando el módulo anterior diseña un algoritmo que lea una matriz de un archivo
 **Ejemplo** : Para el caso de la matriz anterior, el fichero contendría lo siguiente: 
 ```text
 
-
     3  4
     1  7 -8  7  
     5  0  9  8
     1 14  3  5
-
 
 ```
 Para el fichero de ejemplo el algoritmo debe mostrar _42_ , que es la suma de los valores mayores a sus vecinos (7+7+5+9+14). 
@@ -47,7 +42,6 @@ Para el fichero de ejemplo el algoritmo debe mostrar _42_ , que es la suma de lo
 
 ####  Apartado a 
 ```matlab
-
 
 function coord = mayorVecinos (m)
 % Funcion coord = mayorVecinos (m)
@@ -88,7 +82,6 @@ end
 ```
 ####  Apartado b 
 ```matlab
-
 
 % Programa Ejer2Principal
 % Entradas: el nombre de un fichero que contiene una matriz con 

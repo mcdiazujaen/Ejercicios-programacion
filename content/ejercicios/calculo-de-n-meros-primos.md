@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Calculo de números primos
-
-  
 
 ##  Enunciado 
 
@@ -22,7 +19,6 @@ Basándote en el ejercicio [Comprobar si un número es primo](/ejercicios/compro
 
 Solución comentada del Ejercicio: 
 ```c
-
 
  /* fichero primos1.c */
  #include <stdio.h>
@@ -51,7 +47,6 @@ Para poder escribir todos los números primos hasta un límite, basta introducir
 
 ###  Solucion en Pseudocódigo
 ```text
-
 
  ALGORITMO primos1
  ENTRADAS:
@@ -88,7 +83,6 @@ En la creación del pseudocódigo a partir del código en C mostrado en el apart
 
 ###  Programa en Matlab 
 ```matlab
-
 
 %Programa Primos1
 %Descripción: Nos localiza los números primos entre el 2 y el número que queramos.

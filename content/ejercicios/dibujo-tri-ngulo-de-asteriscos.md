@@ -8,31 +8,23 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Dibujo triángulo de asteriscos
-
-  
 
 ##  Enunciado 
 
 Programa que sea capaz de sacar la siguiente pirámide de “*” dada la altura que tiene (representada por medio de un número entero). Por ejemplo para altura 4 debe quedar de la siguiente forma: 
 ```text
 
-
    *
   * *
  * * *
 * * * *
-
-
-  
 
 ```
 ##  Soluciones 
 
 ###  Programa en Pascal por **lperez**
 ```text
-
 
 program triaast;
 {ENTRADAS:n, la base del tri ngulo

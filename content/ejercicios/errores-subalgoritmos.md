@@ -6,7 +6,6 @@ languages: ['pseudocódigo']
 categories: ['enunciado']
 ---
 
-
 # Errores subalgoritmos
 
 ##  Enunciado 
@@ -17,7 +16,6 @@ En estos subalgoritmos se han cometido errores, identifique estos errores y diga
 
 ###  Subalgoritmo 1 
 ```text
-
 
 01 FUNCION FACTORIAL (N:ENTERO)
 02 ENTRADA:
@@ -34,11 +32,9 @@ En estos subalgoritmos se han cometido errores, identifique estos errores y diga
 13    FIN_PARA
 14 FIN
 
-
 ```
 ###  Subalgoritmo 2 
 ```text
-
 
 01 PROCEDIMIENTO PRIMO (N:ENTERO, salida: LOGICO)
 02 ENTRADA:
@@ -59,7 +55,6 @@ En estos subalgoritmos se han cometido errores, identifique estos errores y diga
 16       FIN_SI
 17    FIN_MIENTRAS
 18 FIN
-
 
 ```
 ##  Soluciones 

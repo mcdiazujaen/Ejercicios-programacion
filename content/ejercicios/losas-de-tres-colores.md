@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['revisar', 'sin_matlab']
 ---
 
-
 # Losas de tres colores
 
 ##  Enunciado
@@ -25,15 +24,12 @@ El programa se dividirá en los siguientes apartados:
   4. Subalgoritmo que calcule el precio del suelo. Para ello le pedirá al usuario el precio para las losas de cada color (utilizar el subalgoritmo anterior). 
   5. Algoritmo principal que tendrá que rellenar la matriz de colores, y mostrar al usuario el precio final del suelo. 
 
-  
-
 ##  Soluciones 
 
 ###  Diseño en Pseudocódigo
 
 ####  Subalgoritmo 1
 ```text
-
 
 FUNCION Lee_color():ENTERO
 ENTRADAS:
@@ -54,7 +50,6 @@ FIN
 ```
 ####  Subalgoritmo 2
 ```text
-
 
 PROCEDIMIENTO Rellena_suelo(VAR suelo, n, m)
 ENTRADAS:
@@ -80,7 +75,6 @@ FIN
 ####  Subalgoritmo 3
 ```text
 
-
 FUNCION Cuenta_losas(suelo, n, m, color): ENTERO
 ENTRADAS:
   suelo: ARRAY(n,m) DE ENTEROS  (* Array con información de las baldosas *)
@@ -105,7 +99,6 @@ FIN
 ```
 ####  Subalgoritmo 4
 ```text
-
 
 FUNCION Precio_suelo(suelo, n, m):REAL
 ENTRADAS:
@@ -143,7 +136,6 @@ FIN
 **Este ejercicio no está revisado y puede contener errores.**  
 Cuando el ejercicio esté corregido, no aparecerá este mensaje. 
 ```text
-
 
 ALGORITMO LosasDeTresColores
 ENTRADAS:

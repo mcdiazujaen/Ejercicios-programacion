@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Sumar filas impares y columnas pares
 
 ##  Enunciado
@@ -19,11 +18,9 @@ Realiza una función que, dada una matriz, devuelva dos valores:
 Por ejemplo, para la matriz: 
 ```text
 
-
  1   7   2
  4   5  -1
 12   6   4
-
 
 ```
 debería devolver 32 para la suma de las filas impares (1+7+2+12+6+4) y 18 para la suma de columnas pares (7+5+6). 
@@ -34,7 +31,6 @@ debería devolver 32 para la suma de las filas impares (1+7+2+12+6+4) y 18 para 
 
 ####  Solución con programación clásica 
 ```matlab
-
 
 function [sumaimpar,sumapar]=SumaMat(m)
 %Parámetros de entrada:
@@ -60,7 +56,6 @@ end
 ```
 ####  Solución Matlab 
 ```text
-
 
 function [sumaimpar,sumapar]=SumaMat(m)
 %Parámetros de entrada:

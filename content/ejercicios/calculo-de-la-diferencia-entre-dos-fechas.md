@@ -7,7 +7,6 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Calculo de la diferencia entre dos fechas
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ Modifica el programa [**tiempo.c**](/ejercicios/función-sin-argumentos/) de man
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero tiempo2.c */
 #include <stdio.h>
@@ -61,7 +59,6 @@ long segs(void) {
   return total;
 }
 
-
 ```
 ####  Comentario 
 
@@ -69,7 +66,6 @@ Para calcular la diferencia entre las dos horas es necesario convertirlas antes 
 
 ###  Diseño en Pseudocódigo
 ```text
-
 
  FUNCION segs():ENTERO
  ENTRADAS:
@@ -104,8 +100,6 @@ Para calcular la diferencia entre las dos horas es necesario convertirlas antes 
                   
  FIN
 
-
-
 _(Programa principal)_              
  ALGORITMO tiempo2
  ENTRADAS:
@@ -137,7 +131,6 @@ _(Programa principal)_
      ESCRIBIR "La diferencia es ",horas, " hora(s), ", minutos, " minuto(s), ", diferencia, " segundo(s)."
 
  FIN
-
 
 ```
 ####  Comentario 

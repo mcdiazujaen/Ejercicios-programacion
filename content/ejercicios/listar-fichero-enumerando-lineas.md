@@ -6,10 +6,7 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Listar fichero enumerando lineas
-
-  
 
 ##  Enunciado 
 
@@ -19,7 +16,6 @@ Realizar un programa que abra un fichero denominado **fich1.txt** , que vaya ley
 
 ###  Programa en Matlab 
 ```matlab
-
 
 %borro la pantalla
 clc;

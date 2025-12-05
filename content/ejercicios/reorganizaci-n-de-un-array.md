@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Reorganización de un array
 
 ##  Enunciado 
@@ -15,19 +14,16 @@ tags: ['sin_matlab']
 Realizar un procedimiento que permita reestructurar un array a partir de un elemento dado según el siguiente ejemplo: 
 ```text
 
-
 Array inicial: 3-20-8-40
 Valor de reorganización: 8
 
 Array final: 8-40-3-20
-
 
 ```
 ##  Soluciones 
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
 PROCEDIMIENTO Reorg(VAR V: ARRAY DE ENTEROS, n:ENTERO ,x: ENTERO)
 ENTRADAS:
@@ -63,13 +59,10 @@ INICIO
    FIN PARA
 FIN
 
-
 ```
 ###  Programa en C
 ```c
 
-
- 
  void Reorg(float V[1000], int n, int x){
     /*----
      ENTRADAS:

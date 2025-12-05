@@ -31,7 +31,7 @@ Supongamos que concurren 3 partidos a las elecciones y que la provincia o distri
 Supongamos que concurren 3 partidos a las elecciones y que la provincia o distrito electoral dispone de 2 escaños. El primer escaño se lo llevara el partido mas votado. Para el segundo escaño se dividen los votos de cada partido entre el numero de escaños obtenidos mas uno (el partido que no tenga todavía ningún escaño se dividirá entre 1) y se calculan los restos de dichas divisiones. El escaño se asigna al partido que tras esta operación tenga un resto mas elevado. Vamos a verlo con un ejemplo:">
   <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="809">
+  <meta itemprop="wordCount" content="808">
   <meta itemprop="keywords" content="Sin_pseudocódigo">
 
 <title>Calculo de los escaños electorales | Ejercicios de Programación</title>
@@ -42,7 +42,7 @@ Supongamos que concurren 3 partidos a las elecciones y que la provincia o distri
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -154,13 +154,9 @@ Supongamos que concurren 3 partidos a las elecciones y que la provincia o distri
 <p>Vamos a ver como se convierten en escaños los votos de los sufridos ciudadanos siguiendo el método d&rsquo;Hont. ¿Estas familiarizado con este método? Por si acaso te lo vamos a recordar.</p>
 <p>Supongamos que concurren 3 partidos a las elecciones y que la provincia o distrito electoral dispone de 2 escaños. El primer escaño se lo llevara el partido mas votado. Para el segundo escaño se dividen los votos de cada partido entre el numero de escaños obtenidos mas uno (el partido que no tenga todavía ningún escaño se dividirá entre 1) y se calculan los restos de dichas divisiones. El escaño se asigna al partido que tras esta operación tenga un resto mas elevado. Vamos a verlo con un ejemplo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Partido 1: 6000 (Se lleva el escaño 1) &lt;-- restos &lt;-- 6000/(1+1) = 3000
 </span></span><span class="line"><span class="cl">Partido 2: 4000                        &lt;-- restos &lt;-- 4000/(1+0) = 4000 &lt;-- Se lleva el escaño 2.
-</span></span><span class="line"><span class="cl">Partido 3: 2000                        &lt;-- restos &lt;-- 2000/(1+0) = 2000
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  </span></span></code></pre></div><p>El programa que te presentamos a continuación es para 3 partidos y 2 escaños, pero queda a tu entera disposición para que lo particularices -si dispones de datos-. Ten mucho cuidado porque un fallo en la programación puede hacer caer sobre ti una acusación de fraude electoral.</p>
+</span></span><span class="line"><span class="cl">Partido 3: 2000                        &lt;-- restos &lt;-- 2000/(1+0) = 2000</span></span></code></pre></div><p>El programa que te presentamos a continuación es para 3 partidos y 2 escaños, pero queda a tu entera disposición para que lo particularices -si dispones de datos-. Ten mucho cuidado porque un fallo en la programación puede hacer caer sobre ti una acusación de fraude electoral.</p>
 <p>Lo primero que hace este programa es inicializar a cero el vector <strong>nEsca [ ]</strong>. En este vector se va a almacenar el numero de escaños de cada partido: <strong>nEsca [0]</strong> contendrá el numero de escaños del partido numero 1, <strong>nEsca [1]</strong> los escaños del partido número 2, etc. Este vector se va a ir modificando a lo largo de la ejecución del programa.</p>
 <p>A continuación se almacenan en el vector <strong>nVotos [ ]</strong> los números de votos obtenidos por cada partido, estos datos serán introducidos por el usuario a través del teclado.</p>
 <p>La novedad de este programa es que incluye una función: <strong>nextEsc(long *, int *)</strong>. Esta función tiene como argumentos dos punteros a sendos vectores, es decir, las direcciones de memoria o los nombres de dos vectores. Cuando se llama a la función, <strong>nextEsc(nVotos, nEsca)</strong> se pasa la dirección de memoria de los vectores <strong>nEsca [ ]</strong> y <strong>nVotos [ ]</strong>. El nombre de un vector (como por ejemplo <strong>nEsca</strong>) es un puntero a la dirección del primer elemento. La función devuelve el numero del partido que ha conseguido el escaño y se almacena en la variable <strong>esca</strong>. Este numero sera cero si el escaño corresponde al primer partido, 1 si corresponde al segundo, etc.</p>
@@ -169,7 +165,6 @@ Supongamos que concurren 3 partidos a las elecciones y que la provincia o distri
 <h3 id="programa-en-c-por-angel">Programa en C por <strong>Angel</strong><a class="anchor" href="#programa-en-c-por-angel">#</a></h3>
 <p>Solución comentada al Ejercicio:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="cm">/* fichero elecciones.c*/</span>
 </span></span><span class="line"><span class="cl"> <span class="cm">/* Calculo de escanos por partido (d&#39;Hondt). */</span>
 </span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
@@ -208,7 +203,6 @@ Supongamos que concurren 3 partidos a las elecciones y que la provincia o distri
 </span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="n">imaximo</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div><h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">%PROGRAMA Elecciones</span>
 </span></span><span class="line"><span class="cl"><span class="c">%DESCRIPCIÓN: Diseñar un algoritmo para asignar escaños a los diferentes </span>
 </span></span><span class="line"><span class="cl"><span class="c">%    partidos que concurren en unas elecciones.</span>
@@ -237,7 +231,6 @@ Supongamos que concurren 3 partidos a las elecciones y que la provincia o distri
 </span></span><span class="line"><span class="cl">    <span class="nb">disp</span><span class="p">(</span> <span class="p">[</span><span class="s">&#39;Partido &#39;</span><span class="p">,</span> <span class="n">num2str</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="s">&#39;: &#39;</span><span class="p">,</span> <span class="n">num2str</span><span class="p">(</span><span class="n">esca</span><span class="p">(</span><span class="n">pos</span><span class="p">)),</span><span class="s">&#39; escaños&#39;</span><span class="p">]</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><hr>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w">  </span>p <span class="p">=</span><span class="w"> </span><span class="nf">nextEsc</span><span class="p">(</span> nVotos, nEsca <span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">%FUNCION p = nextEsc( nVotos, nEsca )</span>
 </span></span><span class="line"><span class="cl"><span class="c">%DESCRIPCION: Devuelve cual es el partido que debería tener el siguiente escaño</span>

@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Preguntas indiscretas
-
-  
 
 ##  Enunciado 
 
@@ -22,7 +19,6 @@ En este programa vas a utilizar la función scanf() con distintos tipos de varia
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero mascota.c */
 #include <stdio.h>
@@ -39,7 +35,6 @@ void main(void)
  printf(" Como te puede gustar un %s?\n", cachorro);
 }
 
-
 ```
 ####  Comentario 
 
@@ -47,7 +42,6 @@ En la función scanf(), se incluye el operador dirección (&) delante de las var
 
 ###  Solucion en Pseudocódigo
 ```text
-
 
 ALGORITMO mascota
 ENTRADAS
@@ -71,7 +65,6 @@ INICIO
   ESCRIBIR **SaltoDeLinea**
   
 FIN
-
 
 ```
 ####  Comentario 

@@ -8,10 +8,7 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Giro de una barra extensible
-
-  
 
 ##  Enunciado 
 
@@ -40,7 +37,6 @@ Guarda el programa como **barra.c**.
 
 Solución comentada del Ejercicio: 
 ```c
-
 
 /* fichero barra.c */
 #include <stdio.h>
@@ -90,7 +86,6 @@ double atan2a(double x, double y) {
            resul=aux; /* si el angulo esta en el primer o cuarto cuadrante */
  return resul;
 }
-
 
 ```
 ####  Comentario 

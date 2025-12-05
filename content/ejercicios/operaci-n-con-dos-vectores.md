@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Operación con dos vectores
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ Realizar un subalgoritmo que dados dos arrays `x` e `y` de `n` reales, calcule l
 
 ###  Solución en pseudocódigo 
 ```text
-
 
 FUNCION Suma (X, Y, n): REAL
 ENTRADAS:

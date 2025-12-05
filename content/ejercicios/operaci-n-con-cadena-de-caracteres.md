@@ -6,7 +6,6 @@ languages: ['c', 'pseudocódigo', 'matlab']
 categories: ['enunciado']
 ---
 
-
 # Operación con cadena de caracteres
 
 ##  Enunciado 
@@ -17,7 +16,6 @@ Realizar un subalgoritmo que dada una cadena de caracteres obtenga otra cadena d
 
 ###  Pseudocódigo 
 ```text
-
 
 PROCEDIMIENTO Blancos(Ent, VAR Sal, tam1, VAR tam2)
 ENTRADAS:

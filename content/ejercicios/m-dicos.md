@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Médicos
 
 ##  Enunciado
@@ -25,7 +24,6 @@ Queremos conocer los datos estadísticos de una consulta médica de varios docto
 
 ####  Módulo 1 
 ```matlab
-
 
 function c = PedirCitas( num )
 % FUNCIÓN c = PedirCitas( num )
@@ -48,7 +46,6 @@ end
 ####  Módulo 2 
 ```matlab
 
-
 function c = PedirPrecios( num )
 % FUNCION c = PedirPrecios( num )
 % Descripción: Pedir el precio por cita de cada médico
@@ -70,7 +67,6 @@ end
 ####  Módulo 3 
 ```matlab
 
-
 function valor = PorcentajeDr( c, n )
 % FUNCIÓN valor = PorcentajeDr( c, n )
 % Descripción: Devuelve el porcentaje de pacientes que han tenido cita con
@@ -88,7 +84,6 @@ valor = (c(n)/sum(c))*100;
 ```
 ####  Módulo 4 
 ```text
-
 
 function ganado = GananciaDr( c, p )
 % FUNCIÓN ganado = GananciaDr( c, p )
@@ -112,7 +107,6 @@ end
 ####  Módulo 5 
 ```text
 
-
 function media = MediaPaciente( c, p )
 % FUNCIÓN media = MediaPaciente( c, p )
 % Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general
@@ -131,7 +125,6 @@ media = sum(gana) / sum(c);
 ```
 ####  Programa principal 
 ```matlab
-
 
 % Programa Medicos
 % Entradas: Citas de los médicos y precios de los médicos

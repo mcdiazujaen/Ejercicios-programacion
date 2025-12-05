@@ -7,7 +7,6 @@ professors: ['lperez']
 categories: ['enunciado', 'comentario']
 ---
 
-
 # Cálculo número combinatorio
 
 ##  Enunciado 
@@ -15,11 +14,9 @@ categories: ['enunciado', 'comentario']
 Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b: 
 ```text
 
-
                         a!
           C(a,b) = -------------
                      b! * (a-b)!
-
 
 ```
 ##  Soluciones 
@@ -28,7 +25,6 @@ Realizar el diseño y programa capaces de calcular el combinatorio de dos númer
 
 ####  Diseño 1 por **lperez**
 ```text
-
 
  FUNCION Factorial (n): ENTERO
  ENTRADAS: n: ENTERO, un número entero positivo.
@@ -63,7 +59,6 @@ Realizar el diseño y programa capaces de calcular el combinatorio de dos númer
 ```
 ####  Diseño 2 por **lperez**
 ```text
-
 
  PROCEDIMIENTO Factorial (n, VAR f)
  ENTRADAS: n: ENTERO, un número entero positivo.
@@ -106,7 +101,6 @@ En la primera solución se ha utilizado una función para resolver el factorial,
 
 ####  Solución 1 
 ```c
-
 
  //''(Este programa se ha hecho con una función)''            
  int Factorial(int n){
@@ -152,7 +146,6 @@ En la primera solución se ha utilizado una función para resolver el factorial,
 ```
 ####  Solución 2 
 ```c
-
 
   void Factorial(int n, int &f){
     //VARIABLES
@@ -200,7 +193,6 @@ En la primera solución se ha utilizado una función para resolver el factorial,
 
 ###  Programa en Pascal por **lperez**
 ```text
-
 
  program Combinatorio;
  {ENTRADAS: a,b, dos n£meros enteros positivos, a>b y a<>0
@@ -294,7 +286,6 @@ Tal y como está el programa anterior, utiliza el procedimiento para resolver el
 
 Para realizar este programa utilizamos el módulo **factorial** existente en Matlab. 
 ```matlab
-
 
 %Programa CalcularCombinatorio
 %Descripción: Calcula el combinatorio de dos números a y b, de la forma:

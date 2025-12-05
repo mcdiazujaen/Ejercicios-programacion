@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Resultados de la carrera
 
 ##  Enunciado
@@ -26,17 +25,13 @@ Implementa las siguientes funciones:
 
 Por ejemplo si el fichero de entrada es el siguiente: 
 
-
   8
   10 20 30 40 50 60 70 80
   70 40 50 20 80
 
-
 el programa escribiría en el fichero de salida: 
 
-
   Los dorsales de los corredores que han abandonado son: 10 30 60.
-
 
 ```
 ##  Soluciones
@@ -45,7 +40,6 @@ el programa escribiría en el fichero de salida:
 
 ####  Apartado 1 
 ```matlab
-
 
 function [salida,llegada]=Lectura(nombre)
 %Parámetros de entrada:
@@ -73,7 +67,6 @@ end
 ####  Apartado 2 
 ```text
 
-
 function posicion=Busca(v,x)
 %Parámetros de entrada:
 %  v: vector de números
@@ -94,7 +87,6 @@ end
 ```
 ####  Apartado 3 
 ```text
-
 
 function vabandonos=Abandono(salida,llegada)
 %Parámetros de entrada:
@@ -118,7 +110,6 @@ end
 ```
 ####  Apartado 4 
 ```matlab
-
 
 %Programa Principal
 %Entradas:

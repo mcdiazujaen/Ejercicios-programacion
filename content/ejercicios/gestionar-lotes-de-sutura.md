@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Gestionar lotes de sutura
 
 ##  Enunciado
@@ -18,13 +17,11 @@ Un ingeniero de control de calidad quiere analizar esta información para determ
 Ejemplo de archivo: 
 ```text
 
-
 51	145.5	62.3	2.23
 82	153.7	63.2	2.52
 53	160.3	58.9	2.51
 23	159.5	58.9	2.01
 42	160.3	61.2	1.98
-
 
 ```
 Escribe un programa en Matlab que pida al usuario el nombre de un archivo con los datos sobre los lotes de sutura, calcule los tres porcentajes comentados y escriba los resultados en un archivo de texto con el siguiente formato (para el ejemplo anterior): 
@@ -39,7 +36,6 @@ El nombre del archivo de salida es un dato que se le debe pedir al usuario.
 
 ###  Programa en Matlab 
 ```matlab
-
 
 %Programa LotesDefectuosos
 %Entrada:

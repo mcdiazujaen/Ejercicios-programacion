@@ -8,10 +8,7 @@ categories: ['enunciado', 'comentario']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # El primer ejercicio en C
-
-  
 
 ##  Enunciado 
 
@@ -23,7 +20,6 @@ EL PRIMER PROGRAMA. Para que tu debut como programador en C sea todo un éxito, 
 
 Solución comentada al Ejercicio 
 ```c
-
 
  /* fichero hola.c */
  /* Este programa saluda desenfadadamente. */

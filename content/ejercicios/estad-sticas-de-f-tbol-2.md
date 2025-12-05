@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Estadísticas de fútbol 2
 
 ##  Enunciado

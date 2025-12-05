@@ -4,10 +4,7 @@ date: 2024-01-01
 draft: false
 ---
 
-
 # Plantilla:Revisar
-
-  
 
 ![Icono de revisar](images/4/44/Icono_revisar.png)
 

@@ -42,7 +42,7 @@ Suma_radios = Radio1&#43; Radio2 Distancia = RaizCuadrada( (x1-x2)2 &#43; (y1-y2
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -152,13 +152,11 @@ Suma_radios = Radio1&#43; Radio2 Distancia = RaizCuadrada( (x1-x2)2 &#43; (y1-y2
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Diseñar un algoritmo que dado dos circunferencias (coordenadas en el plano x e y, y su radio) calcule cuantos puntos tienen en común dichas circunferencias (cero, uno, dos o infinitos). Para realizar este programa, tienes que calcular la suma de los radios y la distancia entre los dos centros de las circunferencias utilizando las siguientes fórmulas:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Suma_radios = Radio1+ Radio2
 </span></span><span class="line"><span class="cl">Distancia   = RaizCuadrada( (x1-x2)2 + (y1-y2)2 )</span></span></code></pre></div><p>Si la distancia es cero y los radios son iguales es que se trata de la misma circunferencia y todos sus puntos coinciden (infinitos puntos de corte). Si la distancia es cero y los radios no son iguales entonces no existe ningún punto de corte. En otro caso, si la distancia es menor que la suma de los radios, entonces existen dos puntos de corte. Si la distancia es igual a la suma de los radios, entonces sólo existe un punto de corte. Por ultimo, si la distancia es mayor que la suma de los radios, entonces no existe ningún punto de corte.</p>
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="pseudocódigo-por-mcdiaz">Pseudocódigo por <strong>mcdiaz</strong><a class="anchor" href="#pseudoc%c3%b3digo-por-mcdiaz">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> ALGORITMO PuntosDeCorte
 </span></span><span class="line"><span class="cl"> ENTRADAS:
 </span></span><span class="line"><span class="cl">   x1, y1: REALES &#39;&#39;(*Coordenadas del centro de la primera circunferencia*)&#39;&#39;

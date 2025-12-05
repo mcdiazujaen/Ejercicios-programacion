@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Area de un triángulo
 
 ##  Enunciado 
@@ -18,7 +17,6 @@ Diseñar un algoritmo para leer las longitudes de los tres lados de un triángul
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
  ALGORITMO AreaTriangulo
  ENTRADAS:
@@ -47,7 +45,6 @@ Diseñar un algoritmo para leer las longitudes de los tres lados de un triángul
 ```
 ###  Programa en C 
 ```c
-
 
   #include <stdio.h>
   #include <stdlib.h>
@@ -79,7 +76,6 @@ Diseñar un algoritmo para leer las longitudes de los tres lados de un triángul
 
 ###  Programa en Matlab 
 ```matlab
-
 
 % Programa Area_Triangulo
 % Descripcion: calcula el área de un triángulo introduciendo los lados.

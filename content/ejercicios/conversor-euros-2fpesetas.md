@@ -8,7 +8,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Conversor euros/pesetas
 
 ##  Enunciado 
@@ -19,7 +18,6 @@ Diseñar un algoritmo que lea un valor en euros y lo convierta a pesetas (1 euro
 
 ###  Pseudocódigo 
 ```text
-
 
 ALGORITMO Conversor
 CONSTANTES:
@@ -39,13 +37,9 @@ INICIO
 	ESCRIBIR euros, “euros son ”, pesetas, “pesetas.”
 FIN
 
-
-  
-
 ```
 ###  Programa en C 
 ```c
-
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab']
 ---
 
-
 # Evaluación de la función Exp(x) por desarrollo serie
 
 ##  Enunciado 
@@ -30,7 +29,6 @@ Guarda el programa en un fichero con el nombre **serie.c**.
 Solución comentada al Ejercicio: 
 ```c
 
-
 /* fichero serie.c */
 #include <stdio.h>
 #include <math.h>
@@ -50,8 +48,6 @@ void main(void) {
   printf("Error cometido: %16.6lf\n", serie(x, terminos)-exp(x));
 }
 
-
-
 double serie(double z, int numero) {
   double miserie=1, frac;
   int i;
@@ -68,7 +64,6 @@ double serie(double z, int numero) {
   }
   return miserie;
 }
-
 
 ```
 ####  Comentario 

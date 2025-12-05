@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Programa que opera con matriz
 
 ##  Enunciado 
@@ -23,7 +22,6 @@ Suponemos una matriz MxN elementos, la cual se ha rellenado con reales exceptuan
 
 ####  Apartado 1 
 ```text
-
 
 Procedimiento IntercambiaFilas (Var A, m, n, fila1, fila2)
 Entradas:
@@ -43,11 +41,9 @@ Inicio
    Fin_Para
 Fin
 
-
 ```
 ####  Apartado 2 
 ```text
-
 
 Procedimiento SumaProducto (Var A, m, n, ope)
 Entradas:
@@ -100,11 +96,9 @@ Inicio
    Fin_Si
 Fin
 
-
 ```
 ####  Apartado 3 
 ```text
-
 
 Procedimiento SumaUltimaFilaColumna (Var A, m, n)
 Entradas:
@@ -126,11 +120,9 @@ Inicio
    A(m,n) <-- sum
 Fin
 
-
 ```
 ####  Algoritmo principal 
 ```text
-
 
 Procedimiento RellenaMatriz (Var A, m, n)
 Entradas:
@@ -149,8 +141,6 @@ Inicio
    Fin_Para
 Fin
 
-
-
 Procedimiento MuestraMatriz (A, m, n)
 Entradas:
    A: Array (1..1000,1..1000) de Reales  _(matriz bidimensional)_
@@ -167,8 +157,6 @@ Inicio
       Fin_Para
    Fin_Para
 Fin
-
-
 
 Algoritmo Matrices
 Entradas:

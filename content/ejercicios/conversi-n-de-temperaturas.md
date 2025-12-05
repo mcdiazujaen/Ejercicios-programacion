@@ -7,7 +7,6 @@ professors: ['mcdiaz']
 categories: ['enunciado']
 ---
 
-
 # Conversión de temperaturas
 
 ##  Enunciado 
@@ -21,7 +20,6 @@ Un departamento de climatología ha realizado recientemente su conversión al si
 
 ###  Diseño en Pseudocódigo 
 ```text
-
 
  ALGORITMO SistemaMetrico
  ENTRADAS:
@@ -47,7 +45,6 @@ Un departamento de climatología ha realizado recientemente su conversión al si
 ```
 ###  Programa en C 
 ```c
-
 
  #include <stdio.h>
  #include <stdlib.h>
@@ -77,7 +74,6 @@ Un departamento de climatología ha realizado recientemente su conversión al si
 ```
 ###  Programa en Matlab 
 ```matlab
-
 
 %Programa Conversión
 %Descripción: Leer la temperatura dada en la escala Celsius e imprimir en su 

@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Letra del DNI
 
 ##  Enunciado 
@@ -19,7 +18,6 @@ Escribe una función que calcule la letra del DNI a partir del número. La letra
 
 ####  Solución con arrays 
 ```matlab
-
 
 function letra = LetraDNI( dni )
 % FUNCION letra = LetraDNI( dni )

@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Errores de pepito
 
 ##  Enunciado 
@@ -18,7 +17,6 @@ Pepito esta descontento con su rendimiento en la clase de fundamentos de inform�
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
  ALGORITMO ErroresPepito
  ENTRADAS:

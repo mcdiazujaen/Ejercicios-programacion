@@ -29,7 +29,7 @@ https://github.com/alex-shpak/hugo-book
   <meta itemprop="description" content="Reservas Multicines# Enunciado# Se quiere realizar un programa que gestione las reservas de las salas de un Multicines. El número de salas es M y el número de asientos por sala es N. Para guardar la información sobre la ocupación se utiliza una matriz de MxN donde cada fila representa una de las salas y cada columna uno de los asientos en las mismas. Esta matriz está rellena de 0’s y 1’s para indicar si un asiento de una determinada sala está libre o está ocupado. Cada sala está identificada por un nombre (un carácter) que se puede almacenar en un array de tamaño M.">
   <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="416">
+  <meta itemprop="wordCount" content="415">
   <meta itemprop="keywords" content="Sin_matlab,Sin_solución">
 
 <title>Reservas Multicines | Ejercicios de Programación</title>
@@ -40,7 +40,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -154,7 +154,6 @@ https://github.com/alex-shpak/hugo-book
 <p>Se quiere realizar un programa que gestione las reservas de las salas de un Multicines. El número de salas es <em><strong>M</strong></em> y el número de asientos por sala es <em><strong>N</strong></em>. Para guardar la información sobre la ocupación se utiliza una matriz de <em><strong>MxN</strong></em> donde cada fila representa una de las salas y cada columna uno de los asientos en las mismas. Esta matriz está rellena de 0’s y 1’s para indicar si un asiento de una determinada sala está libre o está ocupado. Cada sala está identificada por un nombre (un carácter) que se puede almacenar en un array de tamaño <em><strong>M</strong></em>.</p>
 <p>Ejemplo de matriz de ocupación (1 ocupado, 0 libre):</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">1							N
 </span></span><span class="line"><span class="cl">-----------------------------------------------------------	
 </span></span><span class="line"><span class="cl">1	1	0	0	0	0	0	…  |	1
@@ -163,15 +162,11 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span class="line"><span class="cl">0	1	0	0	0	0	0	…  |	
 </span></span><span class="line"><span class="cl">…	…	…	…	…	…	…	…  |	M</span></span></code></pre></div><p>Ejemplo de array con los nombres de las salas</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">A  |	1
 </span></span><span class="line"><span class="cl">P  |	
 </span></span><span class="line"><span class="cl">B  |	
 </span></span><span class="line"><span class="cl">H  |	
-</span></span><span class="line"><span class="cl">…  |	M
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  </span></span></code></pre></div><p>Con este planteamiento implementa los siguientes apartados, especificando de forma clara las variables de entrada, salida e intermedias así como sus tipos para cada uno de los módulos:</p>
+</span></span><span class="line"><span class="cl">…  |	M</span></span></code></pre></div><p>Con este planteamiento implementa los siguientes apartados, especificando de forma clara las variables de entrada, salida e intermedias así como sus tipos para cada uno de los módulos:</p>
 <h3 id="apartado-a">Apartado A<a class="anchor" href="#apartado-a">#</a></h3>
 <p>Módulo que lea desde un fichero llamado <strong>SalasMulticines.txt</strong> los nombres de las salas y las devuelva en un array. El formato del fichero es: <em><strong>A P B H &hellip;</strong></em> , los nombres de todas las salas en la misma fila separados por espacios en blanco.</p>
 <h3 id="apartado-b">Apartado B<a class="anchor" href="#apartado-b">#</a></h3>

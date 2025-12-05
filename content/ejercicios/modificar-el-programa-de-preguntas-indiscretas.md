@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Modificar el programa de Preguntas indiscretas
-
-  
 
 ##  Enunciado 
 
@@ -24,7 +21,6 @@ En este ejercicio se te pide una modificación del programa del Ejercicio [**mas
 
 Solución comentada del Ejercicio 
 ```c
-
 
 /* fichero pregunta.c */
 #include <stdio.h>
@@ -43,7 +39,6 @@ void main(void) {
   printf("Como puede gustarte el %s,\n", color);
   printf("calzando un %d y pesando %6.2f Kg.?\n", calzado, peso);
 }
-
 
 ```
 ####  Comentario 

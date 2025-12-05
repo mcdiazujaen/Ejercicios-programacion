@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Números perfectos
 
 ##  Enunciado 
@@ -26,7 +25,6 @@ Realizar los siguientes apartados para el cálculo de números perfectos:
 
 ####  Apartado 1 
 ```text
-
 
 PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS)
 ENTRADAS:
@@ -53,11 +51,9 @@ INICIO
    POS<--J-1
 FIN
 
-
 ```
 ####  Apartado 2 
 ```text
-
 
 FUNCIÓN SUMADIVISORES(NUM): LÓGICO
 ENTRADAS:
@@ -84,11 +80,9 @@ INICIO
    DEVOLVER RESULT
 FIN
 
-
 ```
 ####  Apartado 3 
 ```text
-
 
 PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO)
 ENTRADAS:
@@ -108,8 +102,6 @@ INICIO
       A <-- A + 1
    FIN_MIENTRAS
 FIN
-
-
 
 ALGORITMO NUMEROPERFECTO
 ENTRADAS:

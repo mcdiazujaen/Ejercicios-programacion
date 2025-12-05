@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_pseudocódigo', 'sin_matlab']
 ---
 
-
 # Divisible
 
 ##  Enunciado

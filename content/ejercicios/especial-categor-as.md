@@ -6,7 +6,6 @@ languages: ['pseudocódigo']
 categories: ['enunciado']
 ---
 
-
 # Categorías
 
 Las siguientes categorías contienen páginas o ficheros. No se muestran las [categorías sin uso](http://sinai.ujaen.es/mcdiaz/docencia/ejercicios/index.php?title=Especial:Categor%C3%ADasSinUso "Especial:CategoríasSinUso"). Véase también las [categorías requeridas](http://sinai.ujaen.es/mcdiaz/docencia/ejercicios/index.php?title=Especial:Categor%C3%ADasRequeridas "Especial:CategoríasRequeridas"). 

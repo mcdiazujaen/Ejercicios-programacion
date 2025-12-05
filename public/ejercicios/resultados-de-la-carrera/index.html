@@ -41,7 +41,7 @@ Implementa las siguientes funciones:">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -161,20 +161,16 @@ Implementa las siguientes funciones:">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Por ejemplo si el fichero de entrada es el siguiente: 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  8
 </span></span><span class="line"><span class="cl">  10 20 30 40 50 60 70 80
 </span></span><span class="line"><span class="cl">  70 40 50 20 80
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">el programa escribiría en el fichero de salida: 
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  Los dorsales de los corredores que han abandonado son: 10 30 60.</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <h4 id="apartado-1">Apartado 1<a class="anchor" href="#apartado-1">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[salida,llegada]<span class="p">=</span><span class="nf">Lectura</span><span class="p">(</span>nombre<span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">%Parámetros de entrada:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%  nombre: nombre del fichero donde están los datos.</span>
@@ -197,7 +193,6 @@ Implementa las siguientes funciones:">
 </span></span><span class="line"><span class="cl">  <span class="n">llegada</span><span class="p">=[];</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="apartado-2">Apartado 2<a class="anchor" href="#apartado-2">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">function posicion=Busca(v,x)
 </span></span><span class="line"><span class="cl">%Parámetros de entrada:
 </span></span><span class="line"><span class="cl">%  v: vector de números
@@ -215,7 +210,6 @@ Implementa las siguientes funciones:">
 </span></span><span class="line"><span class="cl">  end
 </span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="apartado-3">Apartado 3<a class="anchor" href="#apartado-3">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">function vabandonos=Abandono(salida,llegada)
 </span></span><span class="line"><span class="cl">%Parámetros de entrada:
 </span></span><span class="line"><span class="cl">%  salida: vector con los dorsales de los corredores en la salida
@@ -235,7 +229,6 @@ Implementa las siguientes funciones:">
 </span></span><span class="line"><span class="cl">  end
 </span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="apartado-4">Apartado 4<a class="anchor" href="#apartado-4">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">%Programa Principal</span>
 </span></span><span class="line"><span class="cl"><span class="c">%Entradas:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%  Nombre fichero con los datos dorsales de los corredores en la salida y los dorsales de los corredores que llegan a meta.</span>

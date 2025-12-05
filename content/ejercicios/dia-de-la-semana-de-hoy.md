@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Dia de la semana de hoy
 
 ##  Enunciado
@@ -21,7 +20,6 @@ Observación: En este ejercicio se requiere usar dos estructuras switch, una par
 
 ###  Programa en Matlab 
 ```matlab
-
 
 % Programa DiaSemana
 % Entradas:

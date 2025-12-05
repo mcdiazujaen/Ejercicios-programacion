@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Buscar subcadena
 
 ##  Enunciado

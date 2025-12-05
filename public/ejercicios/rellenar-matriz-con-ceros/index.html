@@ -38,7 +38,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -151,7 +151,6 @@ https://github.com/alex-shpak/hugo-book
 <p>El formato del fichero de entrada es el siguiente: en la primera línea la dimensión de la matriz, y en las siguientes líneas cada una de las filas de la matriz.</p>
 <p><strong>Ejemplo:</strong> Archivo de entrada</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">5				
 </span></span><span class="line"><span class="cl">5	0	7	0	0
 </span></span><span class="line"><span class="cl">4	2	7	0	0
@@ -159,7 +158,6 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span class="line"><span class="cl">8	2	6	5	0
 </span></span><span class="line"><span class="cl">1	4	4	8	6</span></span></code></pre></div><p><strong>Ejemplo:</strong> Archivo de salida</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">5				
 </span></span><span class="line"><span class="cl">5	**2**	7	**2**	**2**
 </span></span><span class="line"><span class="cl">4	2	7	**3**	**3**
@@ -169,7 +167,6 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <h4 id="función-que-lee-el-fichero">Función que lee el fichero<a class="anchor" href="#funci%c3%b3n-que-lee-el-fichero">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>m <span class="p">=</span><span class="w"> </span><span class="nf">leeFich</span><span class="p">(</span>nombre<span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% Función m = leeFich(nombre)</span>
 </span></span><span class="line"><span class="cl"><span class="c">% Descripción: Extrae una matriz cuadrada de enteros almacenada en</span>
@@ -193,7 +190,6 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span class="line"><span class="cl">    <span class="n">fclose</span><span class="p">(</span><span class="n">idf</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="función-que-transforma-la-matriz">Función que transforma la matriz<a class="anchor" href="#funci%c3%b3n-que-transforma-la-matriz">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">function s = transforma(m)
 </span></span><span class="line"><span class="cl">% Función s = transforma(m)
 </span></span><span class="line"><span class="cl">% Descripción: Dada una matriz, construye otra en la que se 
@@ -219,7 +215,6 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span class="line"><span class="cl">end
 </span></span><span class="line"><span class="cl">s = m;</span></span></code></pre></div><h4 id="función-que-escribe-en-el-fichero">Función que escribe en el fichero<a class="anchor" href="#funci%c3%b3n-que-escribe-en-el-fichero">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">function escribeFich(m)
 </span></span><span class="line"><span class="cl">% Función escribeFich(m)
 </span></span><span class="line"><span class="cl">% Descripción: Escribe una matriz de enteros en un fichero llamado
@@ -240,7 +235,6 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span class="line"><span class="cl">    fclose(idf);
 </span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="programa-principal">Programa principal<a class="anchor" href="#programa-principal">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">% Programa TransformaMatriz</span>
 </span></span><span class="line"><span class="cl"><span class="c">% Entradas:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%    - Nombre del fichero donde se encuentra la matriz a transformar</span>

@@ -10,7 +10,7 @@ https://github.com/alex-shpak/hugo-book
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Matriz Simétrica Subalgoritmo# Enunciado# Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
 Ejemplo de matriz simétrica:
-1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FINComentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.
+1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FINComentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
@@ -19,7 +19,7 @@ Ejemplo de matriz simétrica:
   <meta property="og:title" content="Matriz Simétrica Subalgoritmo">
   <meta property="og:description" content="Matriz Simétrica Subalgoritmo# Enunciado# Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
 Ejemplo de matriz simétrica:
-1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FINComentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.">
+1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FINComentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.">
   <meta property="og:locale" content="es_es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="ejercicios">
@@ -31,10 +31,10 @@ Ejemplo de matriz simétrica:
   <meta itemprop="name" content="Matriz Simétrica Subalgoritmo">
   <meta itemprop="description" content="Matriz Simétrica Subalgoritmo# Enunciado# Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
 Ejemplo de matriz simétrica:
-1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FINComentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.">
+1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FINDiseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FINComentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.">
   <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="738">
+  <meta itemprop="wordCount" content="737">
   <meta itemprop="keywords" content="Sin_matlab">
 
 <title>Matriz Simétrica Subalgoritmo | Ejercicios de Programación</title>
@@ -45,7 +45,7 @@ Ejemplo de matriz simétrica:
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -181,7 +181,6 @@ Ejemplo de matriz simétrica:
 <h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo">#</a></h3>
 <h4 id="diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">FUNCION Calculo_simetrica(A, tam): LOGICO
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
 </span></span><span class="line"><span class="cl">                            cuadrada.
@@ -200,7 +199,6 @@ Ejemplo de matriz simétrica:
 </span></span><span class="line"><span class="cl">   DEVOLVER p
 </span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">FUNCION Calculo_simetria(A, tam): LOGICO
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
 </span></span><span class="line"><span class="cl">                            cuadrada.
@@ -217,12 +215,8 @@ Ejemplo de matriz simétrica:
 </span></span><span class="line"><span class="cl">     FIN_PARA
 </span></span><span class="line"><span class="cl">  FIN_PARA
 </span></span><span class="line"><span class="cl">  DEVOLVER p
-</span></span><span class="line"><span class="cl">FIN
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  </span></span></code></pre></div><h4 id="diseño-3-en-pseudocódigo-por-lperez">Diseño 3 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-3-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-3-en-pseudocódigo-por-lperez">Diseño 3 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-3-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">FUNCION Calculo_simetria(A, tam): LOGICO
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
 </span></span><span class="line"><span class="cl">                            cuadrada.
@@ -243,7 +237,6 @@ Ejemplo de matriz simétrica:
 </span></span><span class="line"><span class="cl">  DEVOLVER p
 </span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-4-en-pseudocódigo-por-lperez">Diseño 4 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-4-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
 </span></span><span class="line"><span class="cl">                            cuadrada.
@@ -270,7 +263,6 @@ Ejemplo de matriz simétrica:
 <h3 id="programa-en-c">Programa en C<a class="anchor" href="#programa-en-c">#</a></h3>
 <h4 id="solución-1-en-c">Solución 1 en C<a class="anchor" href="#soluci%c3%b3n-1-en-c">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//CONSTANTES: 
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define VERDAD 1
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define FALSO  0
@@ -296,7 +288,6 @@ Ejemplo de matriz simétrica:
 </span></span><span class="line"><span class="cl">   <span class="k">return</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h4 id="solución-2-en-c">Solución 2 en C<a class="anchor" href="#soluci%c3%b3n-2-en-c">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">//CONSTANTES: 
 </span></span><span class="line"><span class="cl">#define VERDAD 1
 </span></span><span class="line"><span class="cl">#define FALSO  0
@@ -322,7 +313,6 @@ Ejemplo de matriz simétrica:
 </span></span><span class="line"><span class="cl">   return(p);
 </span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h4 id="solución-3-en-c">Solución 3 en C<a class="anchor" href="#soluci%c3%b3n-3-en-c">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">//CONSTANTES: 
 </span></span><span class="line"><span class="cl">#define VERDAD 1
 </span></span><span class="line"><span class="cl">#define FALSO  0
@@ -350,7 +340,6 @@ Ejemplo de matriz simétrica:
 </span></span><span class="line"><span class="cl">  return(p);
 </span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h4 id="solución-4-en-c">Solución 4 en C<a class="anchor" href="#soluci%c3%b3n-4-en-c">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">//CONSTANTES: 
 </span></span><span class="line"><span class="cl">#define VERDAD 1
 </span></span><span class="line"><span class="cl">#define FALSO  0

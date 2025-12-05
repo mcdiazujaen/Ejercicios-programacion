@@ -8,7 +8,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Puntos de corte de dos circuferencias
 
 ##  Enunciado 
@@ -16,10 +15,8 @@ tags: ['sin_matlab']
 Diseñar un algoritmo que dado dos circunferencias (coordenadas en el plano x e y, y su radio) calcule cuantos puntos tienen en común dichas circunferencias (cero, uno, dos o infinitos). Para realizar este programa, tienes que calcular la suma de los radios y la distancia entre los dos centros de las circunferencias utilizando las siguientes fórmulas: 
 ```text
 
-
 Suma_radios = Radio1+ Radio2
 Distancia   = RaizCuadrada( (x1-x2)2 + (y1-y2)2 )
-
 
 ```
 Si la distancia es cero y los radios son iguales es que se trata de la misma circunferencia y todos sus puntos coinciden (infinitos puntos de corte). Si la distancia es cero y los radios no son iguales entonces no existe ningún punto de corte. En otro caso, si la distancia es menor que la suma de los radios, entonces existen dos puntos de corte. Si la distancia es igual a la suma de los radios, entonces sólo existe un punto de corte. Por ultimo, si la distancia es mayor que la suma de los radios, entonces no existe ningún punto de corte. 
@@ -28,7 +25,6 @@ Si la distancia es cero y los radios son iguales es que se trata de la misma cir
 
 ###  Pseudocódigo por **mcdiaz**
 ```text
-
 
  ALGORITMO PuntosDeCorte
  ENTRADAS:

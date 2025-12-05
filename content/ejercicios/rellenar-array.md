@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Rellenar array
 
 ##  Enunciado 
@@ -19,21 +18,17 @@ Ejemplo:
 ```text
 Si las entradas fueran las siguientes: 
 
-
 n = 5
 A = (5, 4, 2, 9, 3)
 B = (3, 2, 1, 3, 5)
 
-
 La matriz `M` de salida tendría: 
-
 
 3  3  3  3  3
 0  0  9  9  9
 0  0  0  0  2
 0  0  0  4  4
 0  0  5  5  5
-
 
 ```
 ##  Soluciones

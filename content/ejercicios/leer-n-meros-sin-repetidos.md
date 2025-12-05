@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Leer números sin repetidos
 
 ##  Enunciado
@@ -14,24 +13,19 @@ categories: ['enunciado']
 Realiza una función que lea números del teclado hasta que se introduzca un valor ya introducido. La función debe devolver un vector con los valores leídos (salvo el último que está repetido). Por ejemplo, si se leen los siguientes valores: 
 ```text
 
-
 3 7 8 2 5 7
-
 
 ```
 habría que devolver el vector 
 ```text
 
-
 [3 7 8 2 5]
-
 
 ```
 ##  Soluciones 
 
 ###  Programa en Matlab 
 ```matlab
-
 
 function vector = SinRepetidos
 % Funcion vector = SinRepetidos

@@ -44,7 +44,7 @@ FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO FUNCIÓN Segunda( y: LOGICO, VAR
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -154,17 +154,14 @@ FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO FUNCIÓN Segunda( y: LOGICO, VAR
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Dadas las siguientes declaraciones en un algoritmo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">i, j, k : ENTERO
 </span></span><span class="line"><span class="cl">c : LÓGICO
 </span></span><span class="line"><span class="cl">a : ARRAY [1...10] DE ENTEROS</span></span></code></pre></div><p>y las siguientes declaraciones de subalgoritmos:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO
 </span></span><span class="line"><span class="cl">FUNCIÓN Segunda( y: LOGICO, VAR h: ENTERO ): LÓGICO
 </span></span><span class="line"><span class="cl">PROCEDIMIENTO Tercero( c: LÓGICO, VAR y: LÓGICO, a: ENTERO )</span></span></code></pre></div><p>Di si las siguientes llamadas desde el algoritmo son correctas o no. Justifica la respuesta dada.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">MIENTRAS Segunda(c, k) HACER ...
 </span></span><span class="line"><span class="cl">SI Segunda (VERDAD, 5) ENTONCES ...
 </span></span><span class="line"><span class="cl">Segunda (FALSO, j)
@@ -177,63 +174,43 @@ FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO FUNCIÓN Segunda( y: LOGICO, VAR
 </span></span><span class="line"><span class="cl">ESCRIBIR Segunda(c, k)</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="pseudocódigo">Pseudocódigo<a class="anchor" href="#pseudoc%c3%b3digo">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">MIENTRAS Segunda(c, k) HACER ...
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Correcta** : El valor devuelto por la función es un lógico, necesario para la condición del `MIENTRAS`. El número de parámetros formales y actuales es el mismo, son del mismo tipo y están en el mismo orden. El segundo parámetro formal está pasado por variable (`VAR h:ENTERO`) y el segundo parámetro actual es un variable (`k`). 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">SI Segunda(VERDAD, 5) ENTONCES ...
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Incorrecta** : El segundo parámetro formal está pasado por variable (`VAR h:ENTERO`), sin embargo, el segundo parámetro actual es un valor constante (`5`). 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Segunda(FALSO, j)
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Incorrecta** : El valor lógico devuelto por la función no es utilizado. 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Tercero(c, Segunda(FALSO, k), Primera(5,a(4)))
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Incorrecta** : El segundo parámetro formal del procedimiento `Tercero` está pasado por variable (`VAR y:LÓGICO`), sin embargo, el parámetro actual correspondiente es el valor devuelto por una función (`Segunda(FALSO, k)`) en lugar de una variable. 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">SI Primera(i, 4) &gt; 5 ENTONCES ...
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Correcta** : El valor devuelto por la función `Primera` es un entero y es comparado con el valor constante `5`, por lo tanto, tenemos una expresión lógica necesaria para la condición del `SI`. El número de parámetros formales y actuales es el mismo, son del mismo tipo y están en el mismo orden. 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">C &lt;-- Segunda(Segunda(VERDAD, k), Primera(i, j))
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Incorrecta** : El segundo parámetro formal de la función `Segunda` está pasado por variable (`VAR h:ENTERO`), sin embargo, el parámetro actual correspondiente en la primera llamada es el valor devuelto por una función (`Primera(i, j)`) en lugar de una variable. 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">SI Segunda(c, a(2)) O c ENTONCES ...
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Correcta** : El valor devuelto por la función `Segunda` es lógico que junto con la expresión`O c` forman una expresión lógica, necesaria para la condición del `SI`. El número de parámetros formales y actuales de la función es el mismo, son del mismo tipo y están en el mismo orden. El segundo parámetro de la función `Segunda` se pasa por variables y como parámetro actual se utiliza un elemento de un vector (`a(2)`), lo cual es correcto. 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Tercero(FALSO, VERDAD, j)
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Incorrecta** : El segundo parámetro formal del procedimiento `Tercero` está pasado por variable (`VAR y:LÓGICO`), sin embargo, el parámetro actual correspondiente es un valor constante (`VERDAD`) en lugar de una variable. 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">SI j &gt; k ENTONCES Primera(4,5)
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Incorrecta** : El valor entero devuelto por la función `Primera` no es utilizado. 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">ESCRIBIR Segunda(c, k)
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Incorrecta** : El valor devuelto por la función `Segunda` es lógico y la orden ESCRIBIR no puede mostrar el valor de un lógico.</span></span></code></pre></div></article>
  

@@ -33,7 +33,7 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
   <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="410">
+  <meta itemprop="wordCount" content="409">
   <meta itemprop="keywords" content="Enunciado,Matlab">
 
 <title>Polinomios | Ejercicios de Programación</title>
@@ -44,7 +44,7 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.6a73dafe526cd72d5fc9578b307aa7528992396140fff910b41c5928fa6341f2.js" integrity="sha256-anPa/lJs1y1fyVeLMHqnUomSOWFA//kQtBxZKPpjQfI=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dca6c7f02dd55c78fb73c8660ce4f2a7c68978063e14182d6c5e732d4939674e.js" integrity="sha256-3KbH8C3VXHj7c8hmDOTyp8aJeAY&#43;FBgtbF5zLUk5Z04=" crossorigin="anonymous"></script>
 
 
 
@@ -159,18 +159,13 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">**Apartado 2.** Implementar una función que dado un polinomio cualquiera devuelva la derivada de dicho polinomio. Para el ejemplo anterior: 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> -18 |  0 |  12 |  0 |  -25 |  54   </span></span></code></pre></div><p>&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">**Apartado 3.** Implementar un programa que pida al usuario que introduzca un polinomio y un valor y, utilizando las funciones anteriores, muestre por pantalla el resultado de evaluar el polinomio para ese valor así como su derivada, siguiendo el formato (para el ejemplo): 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">**`P’(x)= 54.0x^5 - 25.0x^4 + 12.0x^2 - 18.0**`
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  </span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
+</span></span><span class="line"><span class="cl">**`P’(x)= 54.0x^5 - 25.0x^4 + 12.0x^2 - 18.0**`</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <h4 id="apartado-1">Apartado 1<a class="anchor" href="#apartado-1">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>valor<span class="p">=</span><span class="nf">Evalua</span><span class="p">(</span>p,x<span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">%Parámetros de entrada:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%   p: un vector que representa un polinomio. El primer elemento</span>
@@ -185,7 +180,6 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 </span></span><span class="line"><span class="cl">    <span class="n">valor</span><span class="p">=</span><span class="n">valor</span><span class="o">+</span><span class="n">p</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span>^<span class="p">(</span><span class="n">g</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="apartado-2">Apartado 2<a class="anchor" href="#apartado-2">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">function pd=Derivada(p)
 </span></span><span class="line"><span class="cl">%Parámetros de entrada:
 </span></span><span class="line"><span class="cl">%   p: un vector que representa un polinomio. El primer elemento
@@ -199,7 +193,6 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 </span></span><span class="line"><span class="cl">    pd=[pd (p(g)*(g-1))];
 </span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="apartado-3">Apartado 3<a class="anchor" href="#apartado-3">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">%Programa Polinomio</span>
 </span></span><span class="line"><span class="cl"><span class="c">%Entradas:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%   un polinomio (representado como vector, empieza con el término </span>

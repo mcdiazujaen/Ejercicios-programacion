@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Hijos de los empleados
 
 ##  Enunciado
@@ -32,7 +31,6 @@ b) De los empleados que tienen dos hijos, el código del empleado cuya diferenci
 
 ####  Apartado a 
 ```matlab
-
 
 function codigo = MasHijos(matriz)
 % Funcion codigo = MasHijos(matriz)
@@ -65,7 +63,6 @@ end
 ```
 ####  Apartado b 
 ```text
-
 
 function codigo = MayorDiferencia(matriz)
 % Funcion codigo = MayorDiferencia(matriz)

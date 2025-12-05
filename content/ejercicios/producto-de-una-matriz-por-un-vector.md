@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Producto de una matriz por un vector
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ Para que no dejes sin explotar todas las posibilidades de los bules for, te prop
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero vmatriz.c */
 /* Producto de matriz por vector */
@@ -56,7 +54,6 @@ void main(void) {
      printf("Elemento %d = %lf\n", i+1, solucion[i]);
   }
 }
-
 
 ```
 ####  Comentario 

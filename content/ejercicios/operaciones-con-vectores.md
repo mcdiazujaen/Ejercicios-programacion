@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Operaciones con vectores
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ Realiza un programa, que lea dos vectores de 3 componentes, y luego los sume, re
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero vectores.c */
 #include <stdio.h>
@@ -86,7 +84,6 @@ double productoEscalar(double* vec1, double* vec2) {
     escalar+=vec1[i]*vec2[i];
   return (escalar);
 }
-
 
 ```
 ####  Comentario 

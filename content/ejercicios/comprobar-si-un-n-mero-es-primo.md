@@ -7,7 +7,6 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Comprobar si un número es primo
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ El siguiente programa comprueba si un número es primo o no. Recuerda que un nú
 
 Solución comentada al Ejercicio: 
 ```c
-
 
  /* fichero primos.c */
  /* programa para determinar si un número es primo */
@@ -53,7 +51,6 @@ El comentario más apropiado para este ejercicio es el algoritmo para calcular e
 
 ####  Solución con programación básica 
 ```matlab
-
 
 %Programa NumeroPrimo
 %Descripción: Comprueba si un número es primo o no.
@@ -94,7 +91,6 @@ end
 Se sustituye el bucle **for** por uno de tipo **while** , para que el programa sea más rápido. 
 ```matlab
 
-
 %Programa NumeroPrimo
 %Descripción: Comprueba si un número es primo o no.
 %Entradas: valor a comprobar.
@@ -134,7 +130,6 @@ end
 ```
 ####  Solución con programación Matlab avanzada 
 ```matlab
-
 
 %Programa NumeroPrimo
 %Descripción: Comprueba si un número es primo o no.

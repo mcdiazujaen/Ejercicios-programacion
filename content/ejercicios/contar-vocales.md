@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_c']
 ---
 
-
 # Contar vocales
 
 ##  Enunciado
@@ -15,14 +14,10 @@ tags: ['sin_c']
 Dado un vector de caracteres llamado cadena como el que se indica a continuación, que contiene una frase que termina cuando encuentra un punto (Nota: el tamaño del vector está determinado por el punto). Haz un algoritmo que obtenga en otro vector, denominado resultado, el número de vocales de cada tipo que hay en un vector. Por ejemplo: 
 ```text
 
-
 cadena: El saber no ocupa lugar.
-
-
 
            a e i o u
 resultado: 3 2 0 2 2
-
 
 ```
 El vector resultado significa que en la cadena hay: 3 aes, 2 es, 0 ies, 2 oes, y 2 ues. 
@@ -33,7 +28,6 @@ Es importante la eficiencia y claridad a la hora de resolver el algoritmo y fund
 
 ###  Diseño en pseudocódigo
 ```text
-
 
 ALGORITMO cuentaVocales
 ENTRADAS:
@@ -79,7 +73,6 @@ FIN
 ```
 ###  Programa en Matlab 
 ```matlab
-
 
 %PROGRAMA CuentaVocales
 %DESCRIPCIÓN: Dado un vector de caracteres, se obtiene en otro vector el número de vocales de cada tipo que hay en el primer vector. 

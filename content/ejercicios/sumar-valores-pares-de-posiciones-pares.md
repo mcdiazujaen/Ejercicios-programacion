@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Sumar valores pares de posiciones pares
 
 ##  Enunciado
@@ -16,9 +15,7 @@ Implementa un programa que lea desde teclado una secuencia de números enteros t
 **Observación:** hay que resolverlo sin utilizar arrays. Por ejemplo, si la secuencia introducida es 
 ```text
 
-
 7 4 2 1 8 6 0
-
 
 ```
 el programa mostraría 2 (correspondiente al 4 de la posición 2 y al 6 de la posición 6). 
@@ -27,7 +24,6 @@ el programa mostraría 2 (correspondiente al 4 de la posición 2 y al 6 de la po
 
 ###  Programa en Matlab 
 ```matlab
-
 
 %Programa Secuencia
 %Entradas: secuencia de números terminada en 0

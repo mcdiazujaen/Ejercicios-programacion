@@ -8,7 +8,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Coste de un automóvil
 
 ##  Enunciado 
@@ -19,7 +18,6 @@ El coste de un automóvil nuevo para un comprador es la suma total del coste del
 
 ###  Pseudocódigo 
 ```text
-
 
 ALGORITMO ComprarAuto
 ENTRADAS:
@@ -41,11 +39,9 @@ INICIO
 	ESCRIBIR “El coste del vehículo para el comprador es de ”, coste_comprador, “ euros.”
 FIN
 
-
 ```
 ###  Programa en C 
 ```c
-
 
  #include <stdio.h>
  #include<stdlib.h>

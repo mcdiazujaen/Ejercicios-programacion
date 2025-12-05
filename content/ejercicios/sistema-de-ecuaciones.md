@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab']
 ---
 
-
 # Sistema de ecuaciones
 
 ##  Enunciado 
@@ -23,7 +22,6 @@ Para ello vamos a obtener un sistema equivalente en el que la primera ecuación 
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 
 PROCEDIMIENTO Ceros(VAR a,nf,nc)
 ENTRADAS: a: ARRAY [1..nf,1..nc] DE REALES, representa la matriz
@@ -105,11 +103,9 @@ INICIO
   FIN_SI
 FIN
 
-
 ```
 ###  Programa en Pascal por **lperez**
 ```text
-
 
 program Gauss;
 {ENTRADAS: e: una matriz que contine los coeficientes y t‚rminos independientes
@@ -199,7 +195,6 @@ begin
  writeln('Pulsa enter para acabar');
  repeat until keypressed;
 end.
-
 
 ```
 ###  Comentario 

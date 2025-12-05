@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Suma de los cuadrados de los 100 primeros números enteros
 
 ##  Enunciado 
@@ -19,7 +18,6 @@ Diseñar un algoritmo para imprimir la suma de los cuadrados de los 100 primeros
 
 ###  Diseño en pseudocódigo 
 ```text
-
 
   ALGORITMO suma100
   ENTRADAS: 
@@ -39,7 +37,6 @@ Diseñar un algoritmo para imprimir la suma de los cuadrados de los 100 primeros
 ```
 ###  Solución en C
 ```c
-
 
   #include <stdio.h>
   #include <stdlib.h>

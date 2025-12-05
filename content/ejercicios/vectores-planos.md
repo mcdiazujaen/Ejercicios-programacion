@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab', 'sin_pseudocódigo']
 ---
 
-
 # Vectores planos
 
 ##  Enunciado 
@@ -31,7 +30,6 @@ Realizar un programa que lea los vectores a[ ], b[ ] y c[ ] y calcule los coefic
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero vector2d.c */
 #include <stdio.h>
@@ -70,7 +68,6 @@ void main(void) {
                      printf("No hay solucion.\n");
             }
 }
-
 
 ```
 ####  Comentario 

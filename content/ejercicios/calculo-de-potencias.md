@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Calculo de potencias
-
-  
 
 ##  Enunciado 
 
@@ -22,7 +19,6 @@ Realiza un programa que calcule las potencias de la 2 a la 10 del número PI y l
 
 Solución comentada del Ejercicio: 
 ```c
-
 
  /* fichero potencia.c */
  #include <stdio.h>
@@ -54,7 +50,6 @@ Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle 
 Para realizar el ejercicio en pseudocódigo vamos a partir de la premisa de que existe una función llamada **raiz** que calcula la raiz cuadrada de un real. 
 ```text
 
-
  FUNCION  poten(a,b):REAL
  ENTRADAS:
       a:REAL
@@ -70,10 +65,6 @@ Para realizar el ejercicio en pseudocódigo vamos a partir de la premisa de que 
       FIN_PARA
       DEVOLVER resul
  FIN
-
-  
-
-
 
  (* PROGRAMA PRINCIPAL *)
  
@@ -96,7 +87,6 @@ Para realizar el ejercicio en pseudocódigo vamos a partir de la premisa de que 
 ###  Programa en Matlab 
 ```matlab
 
-
 function res=poten(base,expo)
 % FUNCIÓN res=poten(base,expo)
 % DESCRIPCIÓN: Devuelve el resultado de elevar un número a una potencia dada
@@ -111,7 +101,6 @@ res=base;
 for cont=1:(expo-1)
     res=res*base;
 end
-
 
 % PROGRAMA Potencia
 % DESCRIPCIón: Eleva el número "pi" desde la potencia 2 hasta la 10 y después le realiza la raíz cuadrada.

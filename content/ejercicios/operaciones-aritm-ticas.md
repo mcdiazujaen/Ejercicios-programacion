@@ -8,10 +8,7 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Operaciones aritméticas
-
-  
 
 ##  Enunciado 
 
@@ -21,7 +18,6 @@ Diseñar un algoritmo que lea dos valores reales y nos muestre los resultados de
 
 ###  Pseudocódigo por mcdiaz 
 ```text
-
 
 ALGORITMO Operaciones
 ENTRADAS:
@@ -50,11 +46,9 @@ INICIO
 	ESCRIBIR i, “ * ”, j, “ = ”, multiplicacion
 FIN
 
-
 ```
 ###  Solución en C 
 ```c
-
 
 #include <stdio.h>
 #include <stdlib.h>

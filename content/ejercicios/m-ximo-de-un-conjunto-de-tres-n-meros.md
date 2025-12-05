@@ -7,7 +7,6 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Máximo de un conjunto de tres números
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ Realiza un programa principal que lea tres números enteros por teclado, los alm
 
 Solución comentada del Ejercicio 5.4. 
 ```c
-
 
 /* fichero maxval.c */
 #include <stdio.h>
@@ -38,8 +36,6 @@ void main(void) {
   printf("%d\n", maximo(x, y, z));
 }
 
-
-
 int maximo(int a, int b, int c) {
   int max;
   max=a;
@@ -49,7 +45,6 @@ int maximo(int a, int b, int c) {
       max=c;
   return max;
 }
-
 
 ```
 ####  Comentario 

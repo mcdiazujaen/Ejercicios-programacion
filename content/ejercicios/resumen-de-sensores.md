@@ -6,7 +6,6 @@ categories: ['enunciado']
 tags: ['sin_matlab', 'sin_solución']
 ---
 
-
 # Resumen de sensores
 
 ##  Enunciado
@@ -16,13 +15,11 @@ Hemos diseñado un dispositivo con 5 sensores de diversa índole. El dispositivo
 Ejemplo del contenido del fichero de datos del sensor: 
 ```text
 
-
 24 11 2013
 00 12 24 2 530
 00 12 25 1 100
 00 12 30 5 300
 01 00 00 2 101
-
 
 ```
 Implementar los siguientes módulos: 
@@ -34,20 +31,16 @@ Módulo que lea el fichero de datos. La entrada será el nombre del fichero y la
 Ejemplo del vector fecha: 
 ```text
 
-
 24 11 2013
-
 
 ```
 Ejemplo de matriz de datos: 
 ```text
 
-
 0 12 24 2 530
 0 12 25 1 100
 0 12 30 5 300
 1  0  0 2 101
-
 
 ```
 ###  Módulo de datos captados por hora 
@@ -66,18 +59,14 @@ Programa principal, que utilizando los módulos anteriores, pida al usuario el n
 
 ```text
 
-
 Resumen de sensores del día 24-11-2013
-
 
 ```
   * El número de valores que se han recogido. Ejemplo: 
 
 ```text
 
-
 - Se han recogido 4 valores
-
 
 ```
   * Cuanto datos se han recogido en cada hora. Si durante alguna hora no se han recogido datos 
@@ -85,11 +74,9 @@ Resumen de sensores del día 24-11-2013
 no deberá escribirse información de dicha hora. Ejemplo: 
 ```text
 
-
 - Los datos recogidos en cada hora son:
    Hora 0: 3 datos.
    Hora 1: 1 datos.
-
 
 ```
   * La media de los valores recogidos por cada sensor. Si algún sensor no ha recogido valores 
@@ -97,14 +84,12 @@ no deberá escribirse información de dicha hora. Ejemplo:
 se escribirá su media como 0. Ejemplo: 
 ```text
 
-
 - La media de cada sensor es:
    Sensor 1: 100
    Sensor 2: 315.50000
    Sensor 3: 0
    Sensor 4: 0
    Sensor 5: 300
-
 
 ```
 ##  Soluciones

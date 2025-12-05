@@ -8,10 +8,7 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab', 'sin_pseudocódigo']
 ---
 
-
 # Ecuación de segundo grado
-
-  
 
 ##  Enunciado 
 
@@ -42,7 +39,6 @@ Compila y ejecuta este programa cambiando los valores de a, b y c, de modo que s
 Solución comentada al Ejercicio: 
 ```c
 
-
 /* fichero ecuacion2.c */
 /* resolución de la ecuación de segundo grado */
 #include <stdio.h>
@@ -70,7 +66,6 @@ void main(void) {
   }
 }
 
-
 ```
 ####  Comentario 
 
@@ -78,7 +73,6 @@ Incluyendo la librería math.h se pueden usar las funciones matemáticas tales c
 
 ###  Diseño en pseudocódigo
 ```text
-
 
  ALGORITMO divisonSegundoGrado
  ENTRADAS:

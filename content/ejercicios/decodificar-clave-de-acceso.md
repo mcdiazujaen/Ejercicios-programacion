@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Decodificar clave de acceso
 
 ##  Enunciado
@@ -20,7 +19,6 @@ Función que tome como parámetro de entrada el nombre de un fichero y devuelva 
 Ejemplo fichero: 
 ```text
 
-
 3
 3 1 5
 2 3 6
@@ -33,14 +31,11 @@ Ejemplo fichero:
 2 1 2
 -1
 
-
 ```
 Vector de Salida: 
 ```text
 
-
 [3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 1 1 3 3 5 2 1 2]
-
 
 ```
 ###  Función de decodificación 
@@ -50,9 +45,7 @@ Función que reciba como parámetro de entrada un vector de enteros positivos de
 Ejemplo: 
 ```text
 
-
 Vector=[3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 2 1 3 3 5 2 1 2]
-
 
 ```
 La matriz quedaría: 
@@ -76,7 +69,6 @@ Programa principal que lea desde el teclado el nombre de un fichero donde están
 
 ####  Función de lectura 
 ```matlab
-
 
 function v=Lectura(nombre)
 %Parámetros de Entrada: 
@@ -111,7 +103,6 @@ end
 ```
 ####  Función de decodificación 
 ```text
-
 
 function [exito,clave]=Decodifica(v)
 %Parámetros de Entrada: 
@@ -159,7 +150,6 @@ end
 ```
 ####  Programa principal 
 ```matlab
-
 
 %Programa Decodificar_clave
 %Entradas: el nombre de un fichero

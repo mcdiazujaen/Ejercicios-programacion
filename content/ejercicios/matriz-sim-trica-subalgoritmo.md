@@ -8,7 +8,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Matriz Simétrica Subalgoritmo
 
 ##  Enunciado 
@@ -21,8 +20,6 @@ Ejemplo de matriz simétrica:
 ---|---|---  
 4 |  2 |  9   
 7 |  9 |  3   
-  
-  
 
 ##  Soluciones 
 
@@ -30,7 +27,6 @@ Ejemplo de matriz simétrica:
 
 ####  Diseño 1 en Pseudocódigo por **lperez**
 ```text
-
 
 FUNCION Calculo_simetrica(A, tam): LOGICO
 ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
@@ -50,11 +46,9 @@ INICIO
    DEVOLVER p
 FIN
 
-
 ```
 ####  Diseño 2 en Pseudocódigo por **lperez**
 ```text
-
 
 FUNCION Calculo_simetria(A, tam): LOGICO
 ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
@@ -74,13 +68,9 @@ INICIO
   DEVOLVER p
 FIN
 
-
-  
-
 ```
 ####  Diseño 3 en Pseudocódigo por **lperez**
 ```text
-
 
 FUNCION Calculo_simetria(A, tam): LOGICO
 ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
@@ -102,11 +92,9 @@ INICIO
   DEVOLVER p
 FIN
 
-
 ```
 ####  Diseño 4 en Pseudocódigo por **lperez**
 ```text
-
 
 PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria
 ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
@@ -127,7 +115,6 @@ INICIO
   FIN_PARA
 FIN
 
-
 ```
 ####  Comentario
 
@@ -141,13 +128,10 @@ En la tercer solución se recorre los elementos sobre la diagonal principal, igu
 
 La cuarta solución es análoga a la tercera pero realizado con un procedimiento en lugar de con una función. 
 
-  
-
 ###  Programa en C
 
 ####  Solución 1 en C
 ```c
-
 
 //CONSTANTES: 
 #define VERDAD 1
@@ -174,11 +158,9 @@ int Calculo_simetrica(int A[1000][1000],int tam){
    return(p);
 }
 
-
 ```
 ####  Solución 2 en C
 ```text
-
 
 //CONSTANTES: 
 #define VERDAD 1
@@ -205,11 +187,9 @@ int Calculo_simetrica(int A[1000][1000],int tam){
    return(p);
 }
 
-
 ```
 ####  Solución 3 en C
 ```text
-
 
 //CONSTANTES: 
 #define VERDAD 1
@@ -238,11 +218,9 @@ int Calculo_simetrica(int A[1000][1000],int tam){
   return(p);
 }
 
-
 ```
 ####  Solución 4 en C
 ```text
-
 
 //CONSTANTES: 
 #define VERDAD 1

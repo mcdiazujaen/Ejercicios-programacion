@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_c', 'sin_matlab']
 ---
 
-
 # Limite peso
 
 ##  Enunciado 
@@ -18,7 +17,6 @@ Los reglamentos de pesca imponen un limite a la cantidad total permitida de kilo
 
 ###  Diseño en Pseudocódigo
 ```text
-
 
 ALGORITMO Pesca
 ENTRADAS:

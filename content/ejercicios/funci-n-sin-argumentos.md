@@ -7,7 +7,6 @@ professors: ['angel']
 categories: ['enunciado', 'análisis']
 ---
 
-
 # Función sin argumentos
 
 ##  Enunciado 
@@ -22,7 +21,6 @@ Otra novedad de este programa es la existencia del carácter dos puntos (**:**) 
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero tiempo.c */
 /* calcula la diferencia entre dos horas distintas */
@@ -42,11 +40,9 @@ int minutos(void) {
   return (horas*60+mins); 
 }
 
-
 ```
 ###  Diseño en Pseudocódigo
 ```text
-
 
  FUNCION Minutos():ENTERO
  ENTRADAS:
@@ -61,8 +57,6 @@ int minutos(void) {
     LEER mins
     DEVOLVER (horas*60)+mins
  FIN
-
-
 
  _(Programa Principal)_
               

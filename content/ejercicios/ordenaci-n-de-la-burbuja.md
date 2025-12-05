@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Ordenación de la burbuja
 
 ##  Enunciado 
@@ -33,15 +32,12 @@ Recorremos el vector desde **j=1** hasta **j=4** y comparamos **vector [0]=7** c
 
 Recorremos el vector desde **j=2** hasta **j=4** y comparamos **vector [1]=7** con **vector [j]**. 
 
-  
 **j = 2** {1 **5** **7** 3 4} Se intercambia 5 con 7 **j = 3** {1 **3** 7 **5** 4} Se intercambia 3 con 5 **j = 4** {1 **3** 7 5 **4**} No se intercambia 3 con 4 
 
-  
 **i = 2** {1 3 **7** 5 4} 
 
 **j = 3** {1 3 **5** **7** 4} Se intercambia 5 con 7 **j = 4** {1 3 **4** 7 **5**} Se intercambia 4 con 5 
 
-  
 **i = 3** {1 3 4 **7** 5} 
 
 **j = 4** {1 3 4 **5** **7**} Se intercambia 5 con 7 ¡Números ordenados! 
@@ -54,7 +50,6 @@ Ya se ve que no es necesario que el bucle i llegue hasta el valor 4.
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero ordena.c*/
 /* Programa para ordenar un conjunto de números enteros*/
@@ -86,20 +81,15 @@ void main(void) {
   printf("\n");
 }
 
-
 ```
 ####  Comentario 
 
 Para intercambiar entre sí los valores de dos variables no se pueden emplear las dos instrucciones siguientes: 
 ```text
 
-
 **vector[j]=vector[i];** /* esta instrucción pone en la posición j el valor de la posición i, perdiéndose el valor de la posición j */
 
-
-
 **vector[i]=vector[j];** /* esta instrucción pone en la posición i el valor de la posición j, pero no el original, que se ha perdido, sino el nuevo */
-
 
 ```
 Por eso es necesaria una variable intermedia, que en este caso hemos llamado temp, que guarda temporalmente el valor de la posición **j**. Por esto se requieren tres instrucciones.

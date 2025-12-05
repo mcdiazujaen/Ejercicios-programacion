@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Rellenar sudoku
 
 ##  Enunciado 
@@ -23,7 +22,6 @@ El algoritmo solicitará al usuario la casilla que desea rellenar (fila y column
 
 ###  Diseño en Pseudocódigo 
 ```text
-
 
 PROCEDIMIENTO Inicializa( VAR m )
 ENTRADAS:
@@ -203,7 +201,6 @@ FIN
 ```
 ###  Programa en C 
 ```c
-
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_c']
 ---
 
-
 # Procedimiento que multiplica las diagonales de una Matriz
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ Un subalgoritmo que dada una matriz cuadrada de enteros, obtenga un vector de re
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 
  PROCEDIMIENTO Diagonales(A, t, VAR B, VAR h)
  ENTRADAS: A: ARRAY[1..t, 1..t] DE ENTEROS, // matriz cuadrada
@@ -60,7 +58,6 @@ Un subalgoritmo que dada una matriz cuadrada de enteros, obtenga un vector de re
 ```
 ###  Programa en Pascal por **lperez**
 ```text
-
 
  Procedure Diagonales(var a:matriz;t:integer;var b:vector;var n:integer);
  (* Entradas: a, una matriz cuadrada y t su tama¤o

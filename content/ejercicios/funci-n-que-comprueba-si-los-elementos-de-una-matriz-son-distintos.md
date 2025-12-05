@@ -8,10 +8,7 @@ categories: ['enunciado', 'comentario']
 tags: ['sin_matlab']
 ---
 
-
 # Función que comprueba si los elementos de una Matriz son distintos
-
-  
 
 ##  Enunciado 
 
@@ -21,7 +18,6 @@ Vamos a contruir un subalgoritmo para saber si todos los elementos dentro de una
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 
 FUNCION Distintos(A, n): LOGICO
 ENTRADAS: A: ARRAY [1..n, 1..n] DE ENTEROS; matriz cuadrada.
@@ -49,11 +45,9 @@ INICIO
   DEVOLVER VERDAD
 FIN
 
-
 ```
 ###  Programa en C
 ```c
-
 
  int Distintos(int A[1000][1000], int n){
     /*VARIABLES*/
@@ -78,17 +72,13 @@ FIN
     return p;
  }
 
-
 ```
 ####  Comentario 
 
 Los arrays en C deben tener un tamaño fijo, por eso se ha optado por darles una tamaño de 1000. Si dicho tamaño no es suficiente debe cambiarse por otro superior. 
 
-  
-
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 
 FUNCION Distintos(A, n): LOGICO
 ENTRADAS: A: ARRAY [1..n, 1..n] DE ENTEROS; matriz cuadrada.
@@ -128,7 +118,6 @@ INICIO
   DEVOLVER p
 FIN
 
-
 ```
 ####  Comentario 
 
@@ -136,7 +125,6 @@ En la primera solución se compara un elemento con todos los de la martriz, incl
 
 ###  Programa en Pascal por **lperez**
 ```text
-
 
 Function Distintos(var a:matriz;t:integer):boolean;
 (* Entradas: a,una matriz y t su tama¤o
@@ -157,11 +145,9 @@ begin
  Distintos:=p;
 end;
 
-
 ```
 ###  Programa en Pascal por **lperez**
 ```text
-
 
 Function Distin2(var a:matriz;t:integer):boolean;
 (* Entradas: a,una matriz y t su tama¤o
@@ -201,7 +187,6 @@ begin
      end;
  Distin2:=p;
 end;
-
 
 ```
 ####  Comentario 

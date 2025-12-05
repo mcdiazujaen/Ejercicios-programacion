@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Comparar dos arrays desordenados
 
 ##  Enunciado
@@ -17,7 +16,6 @@ Implementa una función que reciba como parámetros de entrada dos vectores y de
 
 ###  Programa en Matlab 
 ```matlab
-
 
 function igual=VectoresIguales(v1, v2)
 % FUNCION igual=VectoresIguales(v1, v2)

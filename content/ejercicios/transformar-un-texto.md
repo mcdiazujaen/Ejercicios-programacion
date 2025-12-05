@@ -8,7 +8,6 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_matlab', 'sin_pseudocódigo']
 ---
 
-
 # Transformar un texto
 
 ##  Enunciado 
@@ -21,7 +20,6 @@ El siguiente programa lee un texto cualquiera y lo escribe al revés transforman
 
 Solución comentada del Ejercicio: 
 ```c
-
 
 /* fichero inverso.c */
 /* Este programa convierte las mayusculas en minusculas y viceversa */
@@ -47,7 +45,6 @@ void main(void) {
      printf("%c", texto[n]);
   printf("\n");
 }
-
 
 ```
 ####  Comentario 

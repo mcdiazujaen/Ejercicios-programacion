@@ -6,7 +6,6 @@ languages: ['c', 'matlab', 'pascal', 'pseudocódigo']
 categories: ['enunciado']
 ---
 
-
 # Página Principal
 
 Bienvenido al sitio Ejercicios. 

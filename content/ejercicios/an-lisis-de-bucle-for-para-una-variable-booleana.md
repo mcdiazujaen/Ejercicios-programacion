@@ -6,10 +6,7 @@ languages: ['pseudocódigo']
 categories: ['enunciado']
 ---
 
-
 # Análisis de bucle FOR para una variable booleana
-
-  
 
 ##  Enunciado 
 
@@ -18,23 +15,19 @@ categories: ['enunciado']
 ###  Enunciado a) 
 ```text
 
-
  test <-- VERDADERO
  PARA contador <-- 1 HASTA N HACER
     test <-- NO test
  FIN_PARA
 
-
 ```
 ###  Enunciado b) 
 ```text
-
 
  test <-- (N MOD 2 = 0)
  PARA contador <-- 1 HASTA N HACER
     test <-- NO test
  FIN_PARA
-
 
 ```
 ##  Soluciones 

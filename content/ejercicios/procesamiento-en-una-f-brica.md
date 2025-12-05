@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Procesamiento en una fábrica
 
 ##  Enunciado
@@ -30,8 +29,7 @@ JR432
 AC222   
 CA498   
 …   
-  
-  
+
 En este caso el producto 1 (ref. AC123) sólo se procesa dos veces y pasa por las máquinas 1 y 3. El producto 2 (ref. JR432) se procesa 7 veces pasando por las máquinas 4, 3, 2, 1, 4, 5 y 3. Así sucesivamente estaría representado en cada fila el procesamiento (secuencia de máquinas) de cada producto. 
 
 Se quiere diseñar un algoritmo que permita obtener información del proceso de fabricación. Dicho algoritmo se ha de dividir en los siguientes apartados: 

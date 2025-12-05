@@ -6,7 +6,6 @@ languages: ['matlab']
 categories: ['enunciado']
 ---
 
-
 # Polinomios
 
 ##  Enunciado
@@ -25,8 +24,6 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:
 
 **Apartado 2.** Implementar una función que dado un polinomio cualquiera devuelva la derivada de dicho polinomio. Para el ejemplo anterior: 
 
-
-
  -18 |  0 |  12 |  0 |  -25 |  54   
 ```
 ---|---|---|---|---|---  
@@ -36,8 +33,6 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:
 
 **`P’(x)= 54.0x^5 - 25.0x^4 + 12.0x^2 - 18.0**`
 
-  
-
 ```
 ##  Soluciones
 
@@ -45,7 +40,6 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:
 
 ####  Apartado 1 
 ```matlab
-
 
 function valor=Evalua(p,x)
 %Parámetros de entrada:
@@ -65,7 +59,6 @@ end
 ####  Apartado 2 
 ```text
 
-
 function pd=Derivada(p)
 %Parámetros de entrada:
 %   p: un vector que representa un polinomio. El primer elemento
@@ -82,7 +75,6 @@ end
 ```
 ####  Apartado 3 
 ```matlab
-
 
 %Programa Polinomio
 %Entradas:

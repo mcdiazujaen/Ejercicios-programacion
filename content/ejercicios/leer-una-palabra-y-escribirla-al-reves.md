@@ -7,7 +7,6 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Leer una palabra y escribirla al reves
 
 ##  Enunciado 
@@ -20,7 +19,6 @@ Para leer una palabra, contar las letras y escribirla al revés, lo primero que 
 
 Solución comentada del Ejercicio: 
 ```c
-
 
 /* fichero alreves.c */
 /* Este programa lee una palabra y la escribe al revés */
@@ -40,17 +38,13 @@ void main (void) {
   printf("\n");
 }
 
-
 ```
 ####  Comentario 
 
 La forma de almacenar el array leyéndolo del teclado es mediante la función scanf(). Luego, mediante un bucle while se determina el número de letras. La forma de chequear la condición de final del bucle es por reconocimiento del carácter '\0' que tienen todas las cadenas de caracteres al final. El contador incluye el carácter de fin de la cadena. La cadena se podría haber rellenado de otra manera, como se verá en el Ejercicio siguiente. También el número de caracteres de la cadena se puede determinar mediante otra forma: llamando a la función de libreria strlen(char*). Una vez que conocemos el número de caracteres de la cadena, se puede escribir el array al revés mediante un bucle con un contador decreciente. Conviene utilizar el operador --i para que decrezca antes de ser utilizado. 
 
-  
-
 ###  Soucion en Pseudocódigo
 ```text
-
 
 ALGORITMO AlReves
 ENTRADAS:
@@ -80,7 +74,6 @@ INICIO
     FIN_MIENTRAS
                     
 FIN
-
 
 ```
 ####  Comentario 

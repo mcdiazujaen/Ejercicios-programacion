@@ -7,7 +7,6 @@ categories: ['enunciado']
 tags: ['sin_matlab']
 ---
 
-
 # Diferencia entre elementos consecutivos de un vector
 
 ##  Enunciado 
@@ -18,7 +17,6 @@ Realizar un subalgoritmo que dado un vector _A_ de _n_ números reales, obtener 
 
 ###  Diseño en Pseudocódigo 
 ```text
-
 
  PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor)
  ENTRADAS:
@@ -61,7 +59,6 @@ Realizar un subalgoritmo que dado un vector _A_ de _n_ números reales, obtener 
 ```
 ###  Programa en C++ 
 ```c
-
 
  #include <stdio.h> 
  #include <stdlib.h>
@@ -112,7 +109,6 @@ Realizar un subalgoritmo que dado un vector _A_ de _n_ números reales, obtener 
 ####  Solución con programación básica 
 ```matlab
 
-
 function [mayor,menor] = Diferencias( A )
 %FUNCIÓN [mayor,menor] = Diferencias( A )
 %DESCRIPCIÓN: Dado un vector A de n números reales, obtener la diferencia mas grande y 
@@ -160,10 +156,7 @@ Para realizar esta función se utilizan las siguientes funciones de Matlab:
   * **abs** : para obtener los valores absolutos de todos los elementos de un array. 
   * **max** y **min** : para encontrar el máximo y el mínimo de array, respectivamente. 
 
-  
-
 ```text
-
 
 function [mayor,menor] = Diferencias( A )
 %FUNCIÓN [mayor,menor] = Diferencias( A )

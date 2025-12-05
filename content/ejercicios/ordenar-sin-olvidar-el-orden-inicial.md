@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Ordenar sin olvidar el orden inicial
-
-  
 
 ##  Enunciado 
 
@@ -30,7 +27,6 @@ que ocupaban los lugares {4, 6, 3, 1, 5, 7, 2}, respectivamente.
 
 Solución comentada del Ejercicio: 
 ```c
-
 
 /* fichero reordena.c */
 #include <stdio.h>
@@ -69,7 +65,6 @@ void main(void) {
   printf("\b\b}, respectivamente.\n");
 }
 
-
 ```
 ####  Comentario 
 
@@ -79,7 +74,6 @@ Para saber en qué posición estaban los elementos en el vector original, se cre
 
 ###  Diseño en Pseudocódigo
 ```text
-
 
 ALGORITMO Reordena
 CONSTANTES:

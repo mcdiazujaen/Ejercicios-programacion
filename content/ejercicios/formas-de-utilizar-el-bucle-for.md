@@ -8,10 +8,7 @@ categories: ['enunciado', 'comentario', 'análisis']
 tags: ['sin_pseudocódigo']
 ---
 
-
 # Formas de utilizar el bucle For
-
-  
 
 ##  Enunciado 
 
@@ -25,7 +22,6 @@ En el siguiente programa se muestran distintas formas de escribir un bucle for p
 
 Solución comentada al Ejercicio: 
 ```c
-
 
 /* fichero sumaFor2.c */
 /* Programa para sumar los enteros del 1 al 5 */
@@ -51,7 +47,6 @@ int i=1, suma=0;
   ;
   printf("suma 4 = %d\n", suma);
 }
-
 
 ```
 ####  Comentario 

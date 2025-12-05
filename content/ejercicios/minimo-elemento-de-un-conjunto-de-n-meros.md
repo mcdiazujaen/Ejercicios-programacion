@@ -7,10 +7,7 @@ professors: ['angel']
 categories: ['enunciado', 'comentario', 'análisis']
 ---
 
-
 # Minimo elemento de un conjunto de números
-
-  
 
 ##  Enunciado 
 
@@ -22,7 +19,6 @@ Modifica el programa [**maximo.c**](/ejercicios/máximo-elemento-de-un-conjunto-
 
 Solución comentada del Ejercicio: 
 ```c
-
 
 /*fichero minimo.c */
 #include <stdio.h>
@@ -48,16 +44,13 @@ void main(void) {
   printf("\ny esta en la posicion %d.\n", imin+1);
 }
 
-
 ```
 ####  Comentario 
 
 Este programa es prácticamente idéntico al anterior. En lugar de las variables max e imax se emplean las variables min e imin que almacenan el valor mínimo y su posición, respectivamente. Una vez hechos estos cambios de nombre de variables, la única línea del programa que varía es la correspondiente a la condición del if, que como se está buscando el valor mínimo, habrá de ser: 
 ```text
 
-
 if (conjunto[i]<min)
-
 
 ```
 es decir, habrá de chequear si el elemento considerado es menor que el valor mínimo encontrado hasta ese momento.

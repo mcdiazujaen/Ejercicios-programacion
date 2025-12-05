@@ -8,7 +8,6 @@ categories: ['enunciado', 'análisis']
 tags: ['sin_matlab']
 ---
 
-
 # División entera y resto utilizan restar y sumar
 
 ##  Enunciado 
@@ -23,7 +22,6 @@ La división se puede considerar como una sucesión de restas. El algoritmo debe
 
 ###  Pseudocódigo 
 ```text
-
 
  ALGORITMO DivisiónEnteraYResto
  ENTRADAS:
@@ -57,7 +55,6 @@ La división se puede considerar como una sucesión de restas. El algoritmo debe
 ```
 ###  Programa en C
 ```c
-
 
   #include <stdio.h>
   #include <stdlib.h>
