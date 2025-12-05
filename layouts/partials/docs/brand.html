@@ -1,0 +1,25 @@
+<h2 class="book-brand">
+  <a class="flex align-center" href="{{ cond (not .Site.Home.File) .Sites.Default.Home.RelPermalink .Site.Home.RelPermalink }}">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    <span>{{ .Site.Title }}</span>
+  </a>
+</h2>
+
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+</style>
