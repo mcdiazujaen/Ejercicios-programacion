@@ -1,0 +1,59 @@
+{{ define "main" }}
+<article class="markdown book-article">
+  <h1>{{ .Title }}</h1>
+  
+  {{ .Content }}
+  
+  {{ if .Pages }}
+  <h2>Lista de Ejercicios ({{ len .Pages }})</h2>
+  
+  <ul class="exercise-list">
+    {{ range .Pages.ByTitle }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Params.languages }}
+          <span class="exercise-meta">
+            {{ delimit . ", " }}
+          </span>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+    <p>No hay ejercicios disponibles.</p>
+  {{ end }}
+</article>
+
+<style>
+.exercise-list {
+  list-style: none;
+  padding: 0;
+}
+
+.exercise-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.exercise-list li:last-child {
+  border-bottom: none;
+}
+
+.exercise-list a {
+  font-weight: 500;
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.exercise-list a:hover {
+  text-decoration: underline;
+}
+
+.exercise-meta {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+</style>
+{{ end }}
+
