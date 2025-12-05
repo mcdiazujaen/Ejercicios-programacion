@@ -3,9 +3,7 @@ title: "Ejercicios de Programación"
 type: docs
 ---
 
-# Bienvenido a Ejercicios de Programación
-
-Esta es una colección de ejercicios de programación en diferentes lenguajes, incluyendo:
+Esta web contiene una colección de ejercicios de programación en diferentes lenguajes, incluyendo:
 
 - **Pseudocódigo**
 - **C**
