@@ -2,7 +2,7 @@
 title: "Estadísticas de fútbol 2"
 date: 2024-01-01
 draft: false
-languages: ['matlab']
+languages: []
 categories: ['enunciado']
 ---
 
