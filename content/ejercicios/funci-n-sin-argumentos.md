@@ -43,7 +43,6 @@ int minutos(void) {
 ```
 ###  Diseño en Pseudocódigo
 ```text
-
  FUNCION Minutos():ENTERO
  ENTRADAS:
     _(no tiene, las lee de teclado)_

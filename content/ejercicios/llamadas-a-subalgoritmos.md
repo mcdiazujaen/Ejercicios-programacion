@@ -12,7 +12,6 @@ categories: ['enunciado']
 
 Dada las siguientes declaraciones en un determinado algoritmo: 
 ```text
-
 a, b, c : ENTERO
 k: LÓGICO
 d,e : REAL
@@ -20,7 +19,6 @@ d,e : REAL
 ```
 Y las siguientes declaraciones de subalgoritmos: 
 ```text
-
 FUNCIÓN Uno (x:REAL, y:ENTERO): LÓGICO
 PROCEDIMIENTO Dos (VAR x: REAL, y: ENTERO)
 FUNCIÓN Tres (x:ENTERO, VAR z: LÓGICO):ENTERO
@@ -28,7 +26,6 @@ FUNCIÓN Tres (x:ENTERO, VAR z: LÓGICO):ENTERO
 ```
 Decir si las siguientes llamadas a los subalgoritmos desde el cuerpo del algoritmo principal son validas o no. Justificar la respuesta: 
 ```text
-
 Dos(1.4, 5)
 Dos(e+2, b+3)
 a <-- Dos(e,b)
@@ -47,7 +44,6 @@ Tres(a,k)
 
 ###  Pseudocódigo 
 ```text
-
 Dos(1.4, 5)
 
  **Incorrecta** : el primer parámetro formal de `Dos` se pasa por variable (`VAR x:REAL`), sin embargo, el primer parámetro actual es un valor constante (`1.4`) que se pasa por copia. 

@@ -12,7 +12,6 @@ tags: ['sin_pseudocódigo', 'sin_matlab']
 
 Dado un polinomio `p(x)` de la forma: 
 ```text
-
 p(x) = a0xn+a1xn-1+...+an-1x+an
 
 ```

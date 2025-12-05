@@ -158,8 +158,7 @@ Soluciones# Diseño 1 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRA
 <p>Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.</p>
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-en-pseudoc%c3%b3digo-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ALGORITMO Cambio_dinero
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ALGORITMO Cambio_dinero
 </span></span><span class="line"><span class="cl">ENTRADAS:
 </span></span><span class="line"><span class="cl">   dinero: REAL  _(cantidad de dinero que se tiene, dinero &gt;=0.)_
 </span></span><span class="line"><span class="cl">SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1,  0.05, 0.02 y 0.01.)_
@@ -208,8 +207,7 @@ Soluciones# Diseño 1 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRA
 </span></span><span class="line"><span class="cl">    FIN_SI  *)  Esto puede sustituir al último mientras
 </span></span><span class="line"><span class="cl">  ESCRIBIR m2, m1, m05, m02, m005, m002, m001
 </span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h3 id="diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-en-pseudoc%c3%b3digo-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ALGORITMO Cambio_dinero
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ALGORITMO Cambio_dinero
 </span></span><span class="line"><span class="cl">ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
 </span></span><span class="line"><span class="cl">SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que 
 </span></span><span class="line"><span class="cl">           se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. 
@@ -343,8 +341,7 @@ Soluciones# Diseño 1 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRA
 </span></span><span class="line"><span class="cl">       <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span><span class="n">salida</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="programa-1-en-pascal-por-lperez">Programa 1 en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-1-en-pascal-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
 </span></span><span class="line"><span class="cl">SALIDAS: m2, m1, m05, m02,m01, m005, m002, m001, cantidad mínima de monedas en
 </span></span><span class="line"><span class="cl">las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
 </span></span><span class="line"><span class="cl">(***************************************)
@@ -408,8 +405,7 @@ Soluciones# Diseño 1 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRA
 </span></span><span class="line"><span class="cl">    writeln(&#39;Pulse enter para acabar&#39;);
 </span></span><span class="line"><span class="cl">    readln;
 </span></span><span class="line"><span class="cl">end.</span></span></code></pre></div><h3 id="programa-2-en-pascal-por-lperez">Programa 2 en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-2-en-pascal-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
 </span></span><span class="line"><span class="cl">SALIDAS: salida, array con la cantidad mínima de monedas en
 </span></span><span class="line"><span class="cl">     las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
 </span></span><span class="line"><span class="cl">(*********************************)

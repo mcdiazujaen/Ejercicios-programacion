@@ -13,7 +13,6 @@ tags: ['sin_solución']
 
 Diseña un algoritmo que lea desde teclado dos enteros positivos y muestre en pantalla el entero, de los situados entre los dos enteros leídos, que tenga más divisores, así como un listado de sus divisores (el 1 y el propio número no se consideran divisores). Por ejemplo, si se leen los valores 13 y 6, el resultado a mostrar en pantalla debe ser: 
 ```text
-
 Entero con mayor cantidad de divisores: 12
 Divisores 2, 3, 4, 6
 

@@ -14,7 +14,6 @@ Disponemos de un archivo de texto con información sobre un partido de fútbol. 
 
 Ejemplo de contenido del fichero de datos: 
 ```text
-
 1 12 23 1 2 3 10 2
 
 ```

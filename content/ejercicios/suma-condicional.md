@@ -17,7 +17,6 @@ Elabora un algoritmo que calcule la suma de los números múltiplos de 3 a parti
 
 ###  Diseño en pseudocódigo
 ```text
-
 ALGORITMO SumaMultiplos
 ENTRADAS:
    (* Ninguna *)

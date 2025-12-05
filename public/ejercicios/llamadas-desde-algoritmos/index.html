@@ -153,16 +153,13 @@ FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO FUNCIÓN Segunda( y: LOGICO, VAR
   <article class="markdown book-article"><h1 id="llamadas-desde-algoritmos">Llamadas desde algoritmos<a class="anchor" href="#llamadas-desde-algoritmos">#</a></h1>
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Dadas las siguientes declaraciones en un algoritmo:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">i, j, k : ENTERO
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">i, j, k : ENTERO
 </span></span><span class="line"><span class="cl">c : LÓGICO
 </span></span><span class="line"><span class="cl">a : ARRAY [1...10] DE ENTEROS</span></span></code></pre></div><p>y las siguientes declaraciones de subalgoritmos:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO
 </span></span><span class="line"><span class="cl">FUNCIÓN Segunda( y: LOGICO, VAR h: ENTERO ): LÓGICO
 </span></span><span class="line"><span class="cl">PROCEDIMIENTO Tercero( c: LÓGICO, VAR y: LÓGICO, a: ENTERO )</span></span></code></pre></div><p>Di si las siguientes llamadas desde el algoritmo son correctas o no. Justifica la respuesta dada.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">MIENTRAS Segunda(c, k) HACER ...
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">MIENTRAS Segunda(c, k) HACER ...
 </span></span><span class="line"><span class="cl">SI Segunda (VERDAD, 5) ENTONCES ...
 </span></span><span class="line"><span class="cl">Segunda (FALSO, j)
 </span></span><span class="line"><span class="cl">Tercero(c, Segunda(FALSO, k), Primera(5,a(4)))
@@ -173,8 +170,7 @@ FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO FUNCIÓN Segunda( y: LOGICO, VAR
 </span></span><span class="line"><span class="cl">SI j &gt; k ENTONCES Primera(4,5)
 </span></span><span class="line"><span class="cl">ESCRIBIR Segunda(c, k)</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="pseudocódigo">Pseudocódigo<a class="anchor" href="#pseudoc%c3%b3digo">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">MIENTRAS Segunda(c, k) HACER ...
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">MIENTRAS Segunda(c, k) HACER ...
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Correcta** : El valor devuelto por la función es un lógico, necesario para la condición del `MIENTRAS`. El número de parámetros formales y actuales es el mismo, son del mismo tipo y están en el mismo orden. El segundo parámetro formal está pasado por variable (`VAR h:ENTERO`) y el segundo parámetro actual es un variable (`k`). 
 </span></span><span class="line"><span class="cl">

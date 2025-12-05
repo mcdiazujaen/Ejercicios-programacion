@@ -45,7 +45,6 @@ La forma de almacenar el array leyéndolo del teclado es mediante la función sc
 
 ###  Soucion en Pseudocódigo
 ```text
-
 ALGORITMO AlReves
 ENTRADAS:
     palabra:ARRAY (0...20)DE CARACTERES _(Palabra que vamos a mostrar al revés, terminada en punto)_

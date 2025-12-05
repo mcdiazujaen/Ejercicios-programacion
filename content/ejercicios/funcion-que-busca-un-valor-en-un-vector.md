@@ -17,7 +17,6 @@ Diseñar una función que tenga como entradas un vector, su tamaño y un valor q
 
 ###  Diseño en Pseudocódigo 
 ```text
-
  FUNCION  Buscar(v:ARRAY(1..1000) DE REAL; n:ENTERO; x:REAL): LÓGICO
  ENTRADAS:
     v: ARRAY(1..1000) DE REAL  ''(*Vector donde se realiza la búsqueda*)''

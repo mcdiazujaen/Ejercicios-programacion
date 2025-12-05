@@ -17,7 +17,6 @@ Diseñar un procedimiento que acepte como parámetro un vector que pueda contene
 
 ###  Diseño en Pseudocódigo 
 ```text
-
   PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO)
   ENTRADAS:
     V: ARRAY DE REALES  ''(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)''

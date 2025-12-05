@@ -150,15 +150,13 @@ https://github.com/alex-shpak/hugo-book
 <p>Haz una descomposición modular del problema de forma que el programa enlace tres funciones: una que lea los dados desde el archivo y devuelva la matriz, otra que transforme la matriz dada y la última que reciba de entrada la matriz resultado y la escriba en el fichero.</p>
 <p>El formato del fichero de entrada es el siguiente: en la primera línea la dimensión de la matriz, y en las siguientes líneas cada una de las filas de la matriz.</p>
 <p><strong>Ejemplo:</strong> Archivo de entrada</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">5				
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">5				
 </span></span><span class="line"><span class="cl">5	0	7	0	0
 </span></span><span class="line"><span class="cl">4	2	7	0	0
 </span></span><span class="line"><span class="cl">0	0	0	0	9
 </span></span><span class="line"><span class="cl">8	2	6	5	0
 </span></span><span class="line"><span class="cl">1	4	4	8	6</span></span></code></pre></div><p><strong>Ejemplo:</strong> Archivo de salida</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">5				
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">5				
 </span></span><span class="line"><span class="cl">5	**2**	7	**2**	**2**
 </span></span><span class="line"><span class="cl">4	2	7	**3**	**3**
 </span></span><span class="line"><span class="cl">**1**	**1**	**1**	**1**	9
@@ -189,8 +187,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span class="line"><span class="cl">    <span class="n">m</span> <span class="p">=</span> <span class="n">m</span><span class="o">&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">fclose</span><span class="p">(</span><span class="n">idf</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="función-que-transforma-la-matriz">Función que transforma la matriz<a class="anchor" href="#funci%c3%b3n-que-transforma-la-matriz">#</a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">function s = transforma(m)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function s = transforma(m)
 </span></span><span class="line"><span class="cl">% Función s = transforma(m)
 </span></span><span class="line"><span class="cl">% Descripción: Dada una matriz, construye otra en la que se 
 </span></span><span class="line"><span class="cl">%              sustituyen los ceros por el número de valores
@@ -214,8 +211,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span class="line"><span class="cl">    end
 </span></span><span class="line"><span class="cl">end
 </span></span><span class="line"><span class="cl">s = m;</span></span></code></pre></div><h4 id="función-que-escribe-en-el-fichero">Función que escribe en el fichero<a class="anchor" href="#funci%c3%b3n-que-escribe-en-el-fichero">#</a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">function escribeFich(m)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function escribeFich(m)
 </span></span><span class="line"><span class="cl">% Función escribeFich(m)
 </span></span><span class="line"><span class="cl">% Descripción: Escribe una matriz de enteros en un fichero llamado
 </span></span><span class="line"><span class="cl">%              &#39;resultado.txt&#39;. El formato del fichero es igual

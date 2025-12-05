@@ -166,8 +166,7 @@ Numero &lt;-- 1 MIENTRAS Numero &lt; 11 HACER Numero &lt;-- Numero &#43; 1 ESCRI
 <p>Analiza los siguientes trozos de pseudocódigo y responde a las preguntas.</p>
 <h3 id="enunciado-a">Enunciado a)<a class="anchor" href="#enunciado-a">#</a></h3>
 <p>¿Cuántas veces se ejecutará la <code>_Acción 1_</code>?</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Cont &lt;- 0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Cont &lt;- 0
 </span></span><span class="line"><span class="cl"> MIENTRAS Cont&lt;10 HACER
 </span></span><span class="line"><span class="cl">   Cont &lt;- Cont+1
 </span></span><span class="line"><span class="cl">   SI Cont=10 ENTONCES
@@ -175,15 +174,13 @@ Numero &lt;-- 1 MIENTRAS Numero &lt; 11 HACER Numero &lt;-- Numero &#43; 1 ESCRI
 </span></span><span class="line"><span class="cl">   FIN SI
 </span></span><span class="line"><span class="cl"> FIN MIENTRAS</span></span></code></pre></div><h3 id="enunciado-b">Enunciado b)<a class="anchor" href="#enunciado-b">#</a></h3>
 <p>¿Qué escribirá el siguiente bucle?</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Numero &lt;-- 1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Numero &lt;-- 1
 </span></span><span class="line"><span class="cl"> MIENTRAS Numero &lt; 11 HACER
 </span></span><span class="line"><span class="cl">    Numero &lt;-- Numero + 1
 </span></span><span class="line"><span class="cl">    ESCRIBIR Numero
 </span></span><span class="line"><span class="cl"> FIN_MIENTRAS</span></span></code></pre></div><h3 id="enunciado-c">Enunciado c)<a class="anchor" href="#enunciado-c">#</a></h3>
 <p>¿Cuántas iteraciones del bucle se realizarán?</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Numero &lt;-- 2
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Numero &lt;-- 2
 </span></span><span class="line"><span class="cl"> hecho &lt;-- FALSO
 </span></span><span class="line"><span class="cl"> MIENTRAS NO hecho HACER
 </span></span><span class="line"><span class="cl">      Numero &lt;-- Numero * 2
@@ -192,8 +189,7 @@ Numero &lt;-- 1 MIENTRAS Numero &lt; 11 HACER Numero &lt;-- Numero &#43; 1 ESCRI
 </span></span><span class="line"><span class="cl">      FIN_SI
 </span></span><span class="line"><span class="cl"> FIN_MIENTRAS</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="solución-a">Solución a)<a class="anchor" href="#soluci%c3%b3n-a">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Cont &lt;- 0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Cont &lt;- 0
 </span></span><span class="line"><span class="cl"> MIENTRAS Cont&lt;10 HACER
 </span></span><span class="line"><span class="cl">   Cont &lt;- Cont+1
 </span></span><span class="line"><span class="cl">   SI Cont=10 ENTONCES
@@ -201,15 +197,13 @@ Numero &lt;-- 1 MIENTRAS Numero &lt; 11 HACER Numero &lt;-- Numero &#43; 1 ESCRI
 </span></span><span class="line"><span class="cl">   FIN SI
 </span></span><span class="line"><span class="cl"> FIN MIENTRAS</span></span></code></pre></div><p>La <code>_Accion 1_</code> no se ejecutará nunca porque, según el diseño, para que se ejecute, la variable <code>Cont</code> tiene que ser igual a 10, pero la orden condicional <code>SI</code> está dentro de un bucle <code>MIENTRAS</code> que se ejecuta sólo si la variable <code>Cont</code> es menor que 10. Por lo tanto no se ejecutará en ningún momento ya que <code>Cont</code> no llega a ser nunca 10.</p>
 <h3 id="solución-b">Solución b)<a class="anchor" href="#soluci%c3%b3n-b">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Numero &lt;-- 1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Numero &lt;-- 1
 </span></span><span class="line"><span class="cl"> MIENTRAS Numero &lt; 11 HACER
 </span></span><span class="line"><span class="cl">    Numero &lt;-- Numero + 1
 </span></span><span class="line"><span class="cl">    ESCRIBIR Numero
 </span></span><span class="line"><span class="cl"> FIN_MIENTRAS</span></span></code></pre></div><p>A la variable <code>Numero</code> en cada vuelta del bucle <code>MIENTRAS</code> se le suma 1, como entra en el bucle valiendo 1 irá tomando valores desde 2 hasta <strong>11</strong> que será su valor final, ya que el bucle acaba cuando <code>Numero</code> es menor que 11. Por lo tanto, escribirá en el dispositivo de salida todos los números del 2 al 11.</p>
 <h3 id="solución-c">Solución c)<a class="anchor" href="#soluci%c3%b3n-c">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Numero &lt;-- 2
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Numero &lt;-- 2
 </span></span><span class="line"><span class="cl"> hecho &lt;-- FALSO
 </span></span><span class="line"><span class="cl"> MIENTRAS NO hecho HACER
 </span></span><span class="line"><span class="cl">      Numero &lt;-- Numero * 2

@@ -16,7 +16,6 @@ Un ingeniero de control de calidad quiere analizar esta información para determ
 
 Ejemplo de archivo: 
 ```text
-
 51	145.5	62.3	2.23
 82	153.7	63.2	2.52
 53	160.3	58.9	2.51

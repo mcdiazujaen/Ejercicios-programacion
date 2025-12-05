@@ -35,7 +35,6 @@ Realizar un subalgoritmo que dado como entrada un modo de la fotocopiadora (valo
 
 _Ejemplo_ : Entrada: Modo: 1 Salida: 
 ```text
-
   Trabajo 6
   Trabajo 8
   Trabajo 11

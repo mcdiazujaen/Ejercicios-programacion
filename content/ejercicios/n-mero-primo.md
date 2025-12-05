@@ -17,7 +17,6 @@ Un número se define como primo si no tiene otros divisores ademas de 1 y de el 
 
 ###  Diseño en pseudocódigo 
 ```text
-
 ALGORITMO Primo
 ENTRADAS:
    numero: ENTERO  _(Valor del que se quiere saber si es primo)_

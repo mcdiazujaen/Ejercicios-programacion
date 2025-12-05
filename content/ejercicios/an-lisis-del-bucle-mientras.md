@@ -16,7 +16,6 @@ Analiza los siguientes trozos de pseudocódigo y responde a las preguntas.
 
 ¿Cuántas veces se ejecutará la `_Acción 1_`? 
 ```text
-
  Cont <- 0
  MIENTRAS Cont<10 HACER
    Cont <- Cont+1
@@ -30,7 +29,6 @@ Analiza los siguientes trozos de pseudocódigo y responde a las preguntas.
 
 ¿Qué escribirá el siguiente bucle? 
 ```text
-
  Numero <-- 1
  MIENTRAS Numero < 11 HACER
     Numero <-- Numero + 1
@@ -42,7 +40,6 @@ Analiza los siguientes trozos de pseudocódigo y responde a las preguntas.
 
 ¿Cuántas iteraciones del bucle se realizarán? 
 ```text
-
  Numero <-- 2
  hecho <-- FALSO
  MIENTRAS NO hecho HACER
@@ -57,7 +54,6 @@ Analiza los siguientes trozos de pseudocódigo y responde a las preguntas.
 
 ###  Solución a) 
 ```text
-
  Cont <- 0
  MIENTRAS Cont<10 HACER
    Cont <- Cont+1
@@ -71,7 +67,6 @@ La `_Accion 1_` no se ejecutará nunca porque, según el diseño, para que se ej
 
 ###  Solución b) 
 ```text
-
  Numero <-- 1
  MIENTRAS Numero < 11 HACER
     Numero <-- Numero + 1
@@ -83,7 +78,6 @@ A la variable `Numero` en cada vuelta del bucle `MIENTRAS` se le suma 1, como en
 
 ###  Solución c) 
 ```text
-
  Numero <-- 2
  hecho <-- FALSO
  MIENTRAS NO hecho HACER

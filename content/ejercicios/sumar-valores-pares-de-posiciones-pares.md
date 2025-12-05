@@ -14,7 +14,6 @@ Implementa un programa que lea desde teclado una secuencia de números enteros t
 
 **Observación:** hay que resolverlo sin utilizar arrays. Por ejemplo, si la secuencia introducida es 
 ```text
-
 7 4 2 1 8 6 0
 
 ```

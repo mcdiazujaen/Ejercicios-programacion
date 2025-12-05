@@ -157,8 +157,7 @@ Soluciones# Diseño en Pseudocódigo por lperez# FUNCION Distintos(A, n): LOGICO
 <p>Vamos a contruir un subalgoritmo para saber si todos los elementos dentro de una matriz son distintos o no.</p>
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="diseño-en-pseudocódigo-por-lperez">Diseño en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">FUNCION Distintos(A, n): LOGICO
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FUNCION Distintos(A, n): LOGICO
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..n, 1..n] DE ENTEROS; matriz cuadrada.
 </span></span><span class="line"><span class="cl">                     n: ENTERO, nº de filas y de columnas de A; n&gt;0. 
 </span></span><span class="line"><span class="cl">SALIDAS: VERDAD si todos los elementos de A son distintos y FALSO en otro 
@@ -208,8 +207,7 @@ Soluciones# Diseño en Pseudocódigo por lperez# FUNCION Distintos(A, n): LOGICO
 </span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario">#</a></h4>
 <p>Los arrays en C deben tener un tamaño fijo, por eso se ha optado por darles una tamaño de 1000. Si dicho tamaño no es suficiente debe cambiarse por otro superior.</p>
 <h3 id="diseño-en-pseudocódigo-por-lperez-1">Diseño en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo-por-lperez-1">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">FUNCION Distintos(A, n): LOGICO
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FUNCION Distintos(A, n): LOGICO
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..n, 1..n] DE ENTEROS; matriz cuadrada.
 </span></span><span class="line"><span class="cl">                     n: ENTERO, nº de filas y de columnas de A; n&gt;0. 
 </span></span><span class="line"><span class="cl">SALIDAS: VERDAD si todos los elementos de A son distintos y FALSO en otro 
@@ -248,8 +246,7 @@ Soluciones# Diseño en Pseudocódigo por lperez# FUNCION Distintos(A, n): LOGICO
 </span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="comentario-1">Comentario<a class="anchor" href="#comentario-1">#</a></h4>
 <p>En la primera solución se compara un elemento con todos los de la martriz, incluido el mismo, por lo que tenemos que comprobar que si es con él mismo no debemos tener en cuenta la comparación. En la segunda cada elemento de la matriz no se compara con todos sino sólo con aquellos elementos siguientes a él.</p>
 <h3 id="programa-en-pascal-por-lperez">Programa en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-en-pascal-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Function Distintos(var a:matriz;t:integer):boolean;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Function Distintos(var a:matriz;t:integer):boolean;
 </span></span><span class="line"><span class="cl">(* Entradas: a,una matriz y t su tama¤o
 </span></span><span class="line"><span class="cl">  Salidas: verdadero si todos los elementos de la matriz son distintos y
 </span></span><span class="line"><span class="cl">           falso en otro caso *)
@@ -267,8 +264,7 @@ Soluciones# Diseño en Pseudocódigo por lperez# FUNCION Distintos(A, n): LOGICO
 </span></span><span class="line"><span class="cl">           then p:=false;
 </span></span><span class="line"><span class="cl"> Distintos:=p;
 </span></span><span class="line"><span class="cl">end;</span></span></code></pre></div><h3 id="programa-en-pascal-por-lperez-1">Programa en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-en-pascal-por-lperez-1">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Function Distin2(var a:matriz;t:integer):boolean;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Function Distin2(var a:matriz;t:integer):boolean;
 </span></span><span class="line"><span class="cl">(* Entradas: a,una matriz y t su tama¤o
 </span></span><span class="line"><span class="cl">  Salidas: verdadero si todos los elementos de la matriz son distintos y
 </span></span><span class="line"><span class="cl">           falso en otro caso *)

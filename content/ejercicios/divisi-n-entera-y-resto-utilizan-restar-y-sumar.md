@@ -22,7 +22,6 @@ La división se puede considerar como una sucesión de restas. El algoritmo debe
 
 ###  Pseudocódigo 
 ```text
-
  ALGORITMO DivisiónEnteraYResto
  ENTRADAS:
    dividendo: ENTERO  (*Número que se va a dividir*)

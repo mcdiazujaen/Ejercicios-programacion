@@ -30,7 +30,6 @@ El programa se dividirá en los siguientes apartados:
 
 ####  Subalgoritmo 1
 ```text
-
 FUNCION Lee_color():ENTERO
 ENTRADAS:
   (* Se pedirá por teclado *)
@@ -50,7 +49,6 @@ FIN
 ```
 ####  Subalgoritmo 2
 ```text
-
 PROCEDIMIENTO Rellena_suelo(VAR suelo, n, m)
 ENTRADAS:
   n: ENTERO   (* Número de filas de la matriz *)                 
@@ -74,7 +72,6 @@ FIN
 ```
 ####  Subalgoritmo 3
 ```text
-
 FUNCION Cuenta_losas(suelo, n, m, color): ENTERO
 ENTRADAS:
   suelo: ARRAY(n,m) DE ENTEROS  (* Array con información de las baldosas *)
@@ -99,7 +96,6 @@ FIN
 ```
 ####  Subalgoritmo 4
 ```text
-
 FUNCION Precio_suelo(suelo, n, m):REAL
 ENTRADAS:
   suelo: ARRAY(n,m) DE ENTEROS (* Array con información de las baldosas *)
@@ -136,7 +132,6 @@ FIN
 **Este ejercicio no está revisado y puede contener errores.**  
 Cuando el ejercicio esté corregido, no aparecerá este mensaje. 
 ```text
-
 ALGORITMO LosasDeTresColores
 ENTRADAS:
   (* ... *)

@@ -27,7 +27,6 @@ Ejemplo de matriz simétrica:
 
 ####  Solución 1 
 ```text
-
 ALGORITMO Matriz_simetrica
 ENTRADAS: Mat: ARRAY [1..tamano, 1.tamano] DE ENTEROS; matriz 
                matemática  cuadarada.
@@ -50,7 +49,6 @@ FIN
 ```
 ####  Solución 2 
 ```text
-
 ALGORITMO Matriz_simetrica
 ENTRADAS: Mat: ARRAY [1..tamano, 1.tamano] DE ENTEROS; matriz 
                matemática  cuadarada.

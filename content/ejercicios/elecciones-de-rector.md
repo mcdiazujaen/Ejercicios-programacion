@@ -16,7 +16,6 @@ Diseña un algoritmo que dada la matriz de resultados muestre en un diagrama de 
 
 Para la realización del algoritmo se pueden usar los siguientes módulos que ya están diseñados: 
 ```text
-
 PROCEDIMIENTO Recuento(VAR votos)
 ENTRADAS:
   (* Ninguna *)

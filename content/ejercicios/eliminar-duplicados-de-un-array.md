@@ -13,14 +13,12 @@ tags: ['sin_matlab']
 
 Diseñar un algoritmo que lea un vector desordenado _A_ , compuesto de _n_ enteros e imprima este vector en la misma secuencia, pero ignorando los valores duplicados que se encuentren en él. También se necesita saber el número de elementos que permanecen en él (_m_); por ejemplo, dado el vector siguiente 
 ```text
-
    A1   A2   A3   A4   A5   A6   A7   A8   A9   A10
    15   31   23   15   75   23   41   15   31   85
 
 ```
 compuesto de 10 enteros, el vector comprimido que resulta estará formado por 
 ```text
-
    A1   A2   A3   A4   A5   A6   A7   A8   A9   A10
    15   31   23   75   41   85
 
@@ -31,7 +29,6 @@ con _m_ = 6.
 
 ###  Diseño en pseudocódigo
 ```text
-
 ALGORITMO Duplicados
 ENTRADAS:
    v: ARRAY (1..n) DE ENTEROS (* vector con los duplicados *)

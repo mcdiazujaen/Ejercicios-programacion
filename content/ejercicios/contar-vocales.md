@@ -13,7 +13,6 @@ tags: ['sin_c']
 
 Dado un vector de caracteres llamado cadena como el que se indica a continuación, que contiene una frase que termina cuando encuentra un punto (Nota: el tamaño del vector está determinado por el punto). Haz un algoritmo que obtenga en otro vector, denominado resultado, el número de vocales de cada tipo que hay en un vector. Por ejemplo: 
 ```text
-
 cadena: El saber no ocupa lugar.
 
            a e i o u
@@ -28,7 +27,6 @@ Es importante la eficiencia y claridad a la hora de resolver el algoritmo y fund
 
 ###  Diseño en pseudocódigo
 ```text
-
 ALGORITMO cuentaVocales
 ENTRADAS:
    cadena: ARRAY(1..100) DE CARACTERES  (* contiene la frase para contar vocales *)

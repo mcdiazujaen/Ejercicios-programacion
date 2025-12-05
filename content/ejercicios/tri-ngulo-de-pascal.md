@@ -13,7 +13,6 @@ tags: ['sin_matlab']
 
 Diseñar un algoritmo que calcule el triángulo de Pascal de coeficientes binomiales. Este triángulo tiene la forma: 
 ```text
-
                 1
               1   1
             1   2   1

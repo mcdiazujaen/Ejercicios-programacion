@@ -12,7 +12,6 @@ categories: ['enunciado']
 
 Dadas las siguientes declaraciones en un algoritmo: 
 ```text
-
 i, j, k : ENTERO
 c : LÓGICO
 a : ARRAY [1...10] DE ENTEROS
@@ -20,7 +19,6 @@ a : ARRAY [1...10] DE ENTEROS
 ```
 y las siguientes declaraciones de subalgoritmos: 
 ```text
-
 FUNCIÓN Primera( x: ENTERO, a:ENTERO ): ENTERO
 FUNCIÓN Segunda( y: LOGICO, VAR h: ENTERO ): LÓGICO
 PROCEDIMIENTO Tercero( c: LÓGICO, VAR y: LÓGICO, a: ENTERO )
@@ -28,7 +26,6 @@ PROCEDIMIENTO Tercero( c: LÓGICO, VAR y: LÓGICO, a: ENTERO )
 ```
 Di si las siguientes llamadas desde el algoritmo son correctas o no. Justifica la respuesta dada. 
 ```text
-
 MIENTRAS Segunda(c, k) HACER ...
 SI Segunda (VERDAD, 5) ENTONCES ...
 Segunda (FALSO, j)
@@ -45,7 +42,6 @@ ESCRIBIR Segunda(c, k)
 
 ###  Pseudocódigo 
 ```text
-
 MIENTRAS Segunda(c, k) HACER ...
 
  **Correcta** : El valor devuelto por la función es un lógico, necesario para la condición del `MIENTRAS`. El número de parámetros formales y actuales es el mismo, son del mismo tipo y están en el mismo orden. El segundo parámetro formal está pasado por variable (`VAR h:ENTERO`) y el segundo parámetro actual es un variable (`k`). 

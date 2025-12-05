@@ -14,7 +14,6 @@ categories: ['enunciado']
 
 ###  Enunciado a) 
 ```text
-
  test <-- VERDADERO
  PARA contador <-- 1 HASTA N HACER
     test <-- NO test
@@ -23,7 +22,6 @@ categories: ['enunciado']
 ```
 ###  Enunciado b) 
 ```text
-
  test <-- (N MOD 2 = 0)
  PARA contador <-- 1 HASTA N HACER
     test <-- NO test

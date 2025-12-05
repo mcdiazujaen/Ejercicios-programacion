@@ -14,7 +14,6 @@ Diseña un módulo al que se le dé como parámetro de entrada una matriz **M** 
 
 **Ejemplo** : 
 ```text
-
  Si la matriz M es:         El módulo devolvería la matriz:
    1  7 -8  7                 1  1  2  2  3
    5  0  9  8                 2  4  1  3  2
@@ -27,7 +26,6 @@ Usando el módulo anterior diseña un algoritmo que lea una matriz de un archivo
 
 **Ejemplo** : Para el caso de la matriz anterior, el fichero contendría lo siguiente: 
 ```text
-
     3  4
     1  7 -8  7  
     5  0  9  8

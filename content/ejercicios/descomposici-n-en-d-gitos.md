@@ -58,7 +58,6 @@ end
 
 Para esta solución se va a utilizar la función **num2str** que convierte un número a un array de caracteres (cada elemento del array es el carácter de un dígito). A continuación se le resta el código ASCII de caracter '0' para que el array se convierta en la representación en número entero de cada dígito. 
 ```text
-
 function vec = DescomponerEntero( n )
 % FUNCION vec = DescomponerEntero( n )
 % DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero "n". 

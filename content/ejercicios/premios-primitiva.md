@@ -12,13 +12,11 @@ categories: ['enunciado']
 
 Implementa un módulo para calcular cuántos premios nos han tocado en “La Primitiva”. Para ello el módulo recibirá como entradas un vector de 6 números enteros, que representa la combinación ganadora, y una matriz de enteros de 6 columnas, en el que cada fila representa las combinaciones que nosotros hemos jugado (una selección de 6 números entre el 1 y el 49). El módulo devolverá tres valores que indiquen cuántos premios de 6, de 5 y de 4 aciertos hemos obtenido. Se considera que una fila de la matriz tiene un “premio de N” cuando contenga N números de la combinación ganadora. Ejemplo: si la combinación ganadora es: 
 ```text
-
 5  16  18  19  26  31
 
 ```
 Y nuestras apuestas son 5: 
 ```text
-
 Apuesta 1:  3  18  20  26  40  48  --> 2 aciertos
 Apuesta 2:  5  16  18  26  30  31  --> 5 aciertos
 Apuesta 3: 16  18  26  31  32  49  --> 4 aciertos

@@ -27,7 +27,6 @@ Generalizar y que haga un cambio de base como dato la base a la que se quiera pa
 
 ###  Diseño en Pseudocódigo 
 ```text
-
  PROGRAMA CambioDeBase
  ENTRADAS:
     numero: ENTERO  ''(*Número en formato decimal que se desea cambiar de base*)''

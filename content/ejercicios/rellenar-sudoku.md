@@ -22,7 +22,6 @@ El algoritmo solicitará al usuario la casilla que desea rellenar (fila y column
 
 ###  Diseño en Pseudocódigo 
 ```text
-
 PROCEDIMIENTO Inicializa( VAR m )
 ENTRADAS:
    (*Ninguna*)

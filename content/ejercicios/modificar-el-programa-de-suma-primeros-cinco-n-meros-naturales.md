@@ -41,7 +41,6 @@ En este fichero se ha utilizado la equivalencia directa entre los bucles for y w
 
 A continuación se presenta la versión en pseudocódigo del algoritmo anterior. 
 ```text
-
  ALGORITMO sumaFor
  ENTRADAS:
        _(Este algoritmo no tiene entradas)_

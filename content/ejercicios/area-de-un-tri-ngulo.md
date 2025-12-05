@@ -17,7 +17,6 @@ Diseñar un algoritmo para leer las longitudes de los tres lados de un triángul
 
 ###  Diseño en pseudocódigo 
 ```text
-
  ALGORITMO AreaTriangulo
  ENTRADAS:
  	L1, L2, L3: ENTEROS  (* Longitudes de los lados del triángulo *)

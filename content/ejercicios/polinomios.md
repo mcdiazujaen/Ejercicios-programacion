@@ -58,7 +58,6 @@ end
 ```
 ####  Apartado 2 
 ```text
-
 function pd=Derivada(p)
 %Parámetros de entrada:
 %   p: un vector que representa un polinomio. El primer elemento

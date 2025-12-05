@@ -14,13 +14,11 @@ tags: ['sin_matlab']
 
 Realiza una función que reciba como parámetro de entrada un vector de enteros y devuelva un valor lógico indicando si existe un entero en el vector que es igual a la suma del resto de elementos del vector. Por ejemplo, si recibe el vector: 
 ```text
-
 [1 2 1 2] 
 
 ```
 debe devolver falso; sin embargo, si recibe el vector 
 ```text
-
 [1 2 6 3] 
 
 ```

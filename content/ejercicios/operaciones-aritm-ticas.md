@@ -18,7 +18,6 @@ Diseñar un algoritmo que lea dos valores reales y nos muestre los resultados de
 
 ###  Pseudocódigo por mcdiaz 
 ```text
-
 ALGORITMO Operaciones
 ENTRADAS:
 	i, j: REAL;           _(Valores sobre los que se realizan las operaciones aritméticas)_

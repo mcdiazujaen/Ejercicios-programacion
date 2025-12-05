@@ -49,7 +49,6 @@ Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle 
 
 Para realizar el ejercicio en pseudocódigo vamos a partir de la premisa de que existe una función llamada **raiz** que calcula la raiz cuadrada de un real. 
 ```text
-
  FUNCION  poten(a,b):REAL
  ENTRADAS:
       a:REAL

@@ -151,15 +151,12 @@ PI1 = 4 * (1 – 1/3) PI2 = 4 * (1 – 1/3 &#43; 1/5 – 1/7) PIn = 4 * (1 – 1
   <article class="markdown book-article"><h1 id="cálculo-del-valor-pi">Cálculo del valor Pi<a class="anchor" href="#c%c3%a1lculo-del-valor-pi">#</a></h1>
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">PI1 = 4 * (1 – 1/3)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PI1 = 4 * (1 – 1/3)
 </span></span><span class="line"><span class="cl">PI2 = 4 * (1 – 1/3 + 1/5 – 1/7)
 </span></span><span class="line"><span class="cl">PIn = 4 * (1 – 1/3 + 1/5 – 1/7 + ...)</span></span></code></pre></div><p>El error se calcula como la diferencia entre un término de la serie y el anterior.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">error = PIi - PIi-1</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">error = PIi - PIi-1</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="pseudocódigo">Pseudocódigo<a class="anchor" href="#pseudoc%c3%b3digo">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> FUNCION Pi (error):REAL
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> FUNCION Pi (error):REAL
 </span></span><span class="line"><span class="cl"> ENTRADAS:
 </span></span><span class="line"><span class="cl">    error: REAL (* valor permitido de error en el calculo de PI *)
 </span></span><span class="line"><span class="cl"> SALIDAS:

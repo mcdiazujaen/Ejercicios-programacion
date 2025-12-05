@@ -47,7 +47,6 @@ Para poder escribir todos los números primos hasta un límite, basta introducir
 
 ###  Solucion en Pseudocódigo
 ```text
-
  ALGORITMO primos1
  ENTRADAS:
     n: ENTERO (* Valor límite *)

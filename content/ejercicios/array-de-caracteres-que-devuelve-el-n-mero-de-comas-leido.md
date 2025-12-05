@@ -16,7 +16,6 @@ Diseña un algoritmo que lea un array de caracteres hasta que se introduzca un p
 
 ###  Diseño en pseudocódigo 
 ```text
-
   ALGORITMO ContarComas
   ENTRADAS: 
     V: ARRAY DE CARACTERES   (*Array donde contaremos el número de comas. La primera poscion del array es 1*)

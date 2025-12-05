@@ -22,7 +22,6 @@ Suponemos una matriz MxN elementos, la cual se ha rellenado con reales exceptuan
 
 ####  Apartado 1 
 ```text
-
 Procedimiento IntercambiaFilas (Var A, m, n, fila1, fila2)
 Entradas:
    A: Array (1..1000,1..1000) de Reales  _(matriz que queremos modificar)_
@@ -44,7 +43,6 @@ Fin
 ```
 ####  Apartado 2 
 ```text
-
 Procedimiento SumaProducto (Var A, m, n, ope)
 Entradas:
    A: Array (1..1000,1..1000) de Reales  _(Matriz que solo rellenamos hasta m-1 y n-1)_
@@ -99,7 +97,6 @@ Fin
 ```
 ####  Apartado 3 
 ```text
-
 Procedimiento SumaUltimaFilaColumna (Var A, m, n)
 Entradas:
    A: Array (1..1000,1..1000) de Reales  _(matriz bidimensional)_
@@ -123,7 +120,6 @@ Fin
 ```
 ####  Algoritmo principal 
 ```text
-
 Procedimiento RellenaMatriz (Var A, m, n)
 Entradas:
    m, n: Enteros   _(número de filas y de columnas de la matriz)_

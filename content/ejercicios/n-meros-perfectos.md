@@ -25,7 +25,6 @@ Realizar los siguientes apartados para el cálculo de números perfectos:
 
 ####  Apartado 1 
 ```text
-
 PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS)
 ENTRADAS:
    N: ENTERO  _(NÚMERO PARA SACAR SUS DIVISORES, N > 0 )_
@@ -54,7 +53,6 @@ FIN
 ```
 ####  Apartado 2 
 ```text
-
 FUNCIÓN SUMADIVISORES(NUM): LÓGICO
 ENTRADAS:
    NUM: ENTERO    _(NÚMERO QUE ESTUDIAMOS PARA VER SI LA SUMA DE SUS DIVISORES ES IGUAL AL NÚMERO O NO, NUM > 0)_
@@ -83,7 +81,6 @@ FIN
 ```
 ####  Apartado 3 
 ```text
-
 PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO)
 ENTRADAS:
    TOPE: ENTERO  _(CANTIDAD DE NÚMEROS PERFECTOS QUE DEBEMOS ENCONTRAR)_

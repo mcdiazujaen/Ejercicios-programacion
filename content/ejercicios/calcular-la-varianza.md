@@ -20,7 +20,6 @@ Diseñar un algoritmo para leer los elementos de un vector _x_ y calcular la med
 
 ###  Diseño en pseudocódigo 
 ```text
-
 ALGORITMO varianza_medida
 ENTRADAS:
   n: REAL  (* número de valores del vector *)

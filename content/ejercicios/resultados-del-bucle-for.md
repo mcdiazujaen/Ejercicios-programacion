@@ -14,7 +14,6 @@ En cada uno de los siguientes segmentos indicar el valor que se imprimirá para 
 
 a) 
 ```text
-
     Var <-- 0
     PARA i <-- 1 HASTA 10 CON INCREMENTO DE 1 HACER
        Var <-- Var+1
@@ -24,7 +23,6 @@ a)
 ```
 b) 
 ```text
-
     Var <-- 0
     PARA i <-- 4 HASTA 36 CON INCREMENTO DE 4 HACER
        Var <-- Var+1
@@ -34,7 +32,6 @@ b)
 ```
 c) 
 ```text
-
     Var <-- 0
     PARA i <-- 1 HASTA 14 CON INCREMENTO DE 1 HACER
          PARA j <-- 1 HASTA 8 CON INCREMENTO DE 1 HACER
@@ -46,7 +43,6 @@ c)
 ```
 d) 
 ```text
-
    Var <-- 0
    PARA i <-- 10 HASTA 1 CON DECREMENTO DE 1 HACER
       Var <-- Var+1
@@ -58,7 +54,6 @@ d)
 
 ###  Solución a) 
 ```text
-
     Var <-- 0
     PARA i <-- 1 HASTA 10 CON INCREMENTO DE 1 HACER
        Var <-- Var+1
@@ -70,7 +65,6 @@ En este caso el bucle da 10 vueltas (con los valores de `i`: 1,2,3,...,10), por 
 
 ###  Solución b) 
 ```text
-
     Var <-- 0
     PARA i <-- 4 HASTA 36 CON INCREMENTO DE 4 HACER
        Var <-- Var+1
@@ -82,7 +76,6 @@ Como el bucle está definido para que el incremento sea de 4, dará 9 vueltas (c
 
 ###  Solución c) 
 ```text
-
     Var <-- 0
     PARA i <-- 1 HASTA 14 CON INCREMENTO DE 1 HACER
          PARA j <-- 1 HASTA 8 CON INCREMENTO DE 1 HACER
@@ -96,7 +89,6 @@ Por cada vuelta que dé el primer bucle, el segundo bucle da 8 vueltas (con valo
 
 ###  Solución d) 
 ```text
-
    Var <-- 0
    PARA i <-- 10 HASTA 1 CON DECREMENTO DE 1 HACER
       Var <-- Var+1

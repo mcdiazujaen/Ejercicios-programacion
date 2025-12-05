@@ -153,8 +153,7 @@ https://github.com/alex-shpak/hugo-book
 <p>Diseñar un algoritmo para generar los números primos entre 2 y N, utilizando la técnica de la criba.</p>
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="diseño-en-pseudocódigo-por-lperez">Diseño en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">PROCEDIMIENTO Criba (N, VAR primos, VAR t)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PROCEDIMIENTO Criba (N, VAR primos, VAR t)
 </span></span><span class="line"><span class="cl">ENTRADAS: N: ENTERO, controla el número de primos que queremos obtener, N&gt;0.
 </span></span><span class="line"><span class="cl">SALIDAS: primos: ARRAY [1..t] DE ENTEROS, contiene los números primos menores que 
 </span></span><span class="line"><span class="cl">                  N. 
@@ -206,8 +205,7 @@ https://github.com/alex-shpak/hugo-book
 <p>El algoritmo lee el número hasta el que queremos obtener la secuencia de primos, llama a un procedimiento que calcula dichos números primos y es el algoritmo el que los muestra por pantalla. En el procedimiento se ha utilizado Raiz(), se supone que es una función a la que se le da un número y devuelve un real que es su raíz cuadrada. En cuanto a Redondeo(), se supone que es una función a la que se le da un real y devuelve un entero resultado de redondear el real dado como entrada.</p>
 <p>La operación se puede repetir hasta que deseemos terminar.</p>
 <h3 id="programa-en-pascal-por-lperez">Programa en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-en-pascal-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">program Criba_Erastostenes;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">program Criba_Erastostenes;
 </span></span><span class="line"><span class="cl">uses crt;
 </span></span><span class="line"><span class="cl">type vector=array[1..100] of integer;
 </span></span><span class="line"><span class="cl">(*************************************)

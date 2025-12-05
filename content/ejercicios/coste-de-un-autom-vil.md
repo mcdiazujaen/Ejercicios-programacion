@@ -18,7 +18,6 @@ El coste de un automóvil nuevo para un comprador es la suma total del coste del
 
 ###  Pseudocódigo 
 ```text
-
 ALGORITMO ComprarAuto
 ENTRADAS:
 	coste_total: REAL; Coste del vehículo en euros

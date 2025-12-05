@@ -158,8 +158,7 @@ la suma de todos los elementos ubicados en filas impares la suma de todos los el
 <li>la suma de todos los elementos ubicados en columnas pares.</li>
 </ul>
 <p>Por ejemplo, para la matriz:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> 1   7   2
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> 1   7   2
 </span></span><span class="line"><span class="cl"> 4   5  -1
 </span></span><span class="line"><span class="cl">12   6   4</span></span></code></pre></div><p>debería devolver 32 para la suma de las filas impares (1+7+2+12+6+4) y 18 para la suma de columnas pares (7+5+6).</p>
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
@@ -186,8 +185,7 @@ la suma de todos los elementos ubicados en filas impares la suma de todos los el
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span><span class="p">=</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">nc</span>
 </span></span><span class="line"><span class="cl">  <span class="n">sumapar</span><span class="p">=</span><span class="n">sumapar</span><span class="o">+</span><span class="n">sum</span><span class="p">(</span><span class="n">m</span><span class="p">(:,</span><span class="n">x</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="solución-matlab">Solución Matlab<a class="anchor" href="#soluci%c3%b3n-matlab">#</a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">function [sumaimpar,sumapar]=SumaMat(m)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function [sumaimpar,sumapar]=SumaMat(m)
 </span></span><span class="line"><span class="cl">%Parámetros de entrada:
 </span></span><span class="line"><span class="cl">%  m: matriz de números
 </span></span><span class="line"><span class="cl">%Parámetros de salida:

@@ -12,7 +12,6 @@ tags: ['sin_matlab', 'sin_solución']
 
 Crea un algoritmo que pida al usuario el número de filas que desea rellenar de una matriz de 4 columnas y genere una matriz como la siguiente: 
 ```text
-
       1    2    3     4
    +--------------------    
 1  |  1    2    3     4

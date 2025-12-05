@@ -152,15 +152,13 @@ Cont &lt;-- 1 MIENTRAS Cont &lt; 20 HACER Cont &lt;-- Cont&#43;1 FIN_MIENTRASSol
   <article class="markdown book-article"><h1 id="formas-de-utilizar-el-bucle-mientras">Formas de utilizar el bucle MIENTRAS<a class="anchor" href="#formas-de-utilizar-el-bucle-mientras">#</a></h1>
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Dar tres formas diferentes de cambiar el siguiente bucle de forma que se ejecute 20 veces en lugar de 19. ¿Cuál de los tres cambios hace que el valor de Cont vaya desde 1 a 20?</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Cont &lt;-- 1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Cont &lt;-- 1
 </span></span><span class="line"><span class="cl"> MIENTRAS Cont &lt; 20 HACER
 </span></span><span class="line"><span class="cl">   Cont &lt;-- Cont+1
 </span></span><span class="line"><span class="cl"> FIN_MIENTRAS</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="primera-solución">Primera solución<a class="anchor" href="#primera-soluci%c3%b3n">#</a></h3>
 <p>Lo que vamos a hacer para que el bucle llegue hasta 20, en lugar de hasta 19, es poner un igual ( &lt;= ) al comparar <em>Cont</em> en el bucle MIENTRAS, de esta forma contará desde 1 hasta 20.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Cont &lt;-- 1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Cont &lt;-- 1
 </span></span><span class="line"><span class="cl"> MIENTRAS **Cont &lt;= 20** HACER
 </span></span><span class="line"><span class="cl">   Cont &lt;-- Cont+1
 </span></span><span class="line"><span class="cl"> FIN_MIENTRAS
@@ -171,8 +169,7 @@ Cont &lt;-- 1 MIENTRAS Cont &lt; 20 HACER Cont &lt;-- Cont&#43;1 FIN_MIENTRASSol
 </span></span><span class="line"><span class="cl">  cont++;
 </span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h3 id="segunda-solución">Segunda solución<a class="anchor" href="#segunda-soluci%c3%b3n">#</a></h3>
 <p>Definiremos <em>Cont</em> desde 0, así el bucle se ejecutará 20 veces pero llegará hasta 19 :</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> **Cont &lt;--  0**
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> **Cont &lt;--  0**
 </span></span><span class="line"><span class="cl"> MIENTRAS Cont &lt; 20 HACER
 </span></span><span class="line"><span class="cl">   Cont &lt;-- Cont+1
 </span></span><span class="line"><span class="cl"> FIN_MIENTRAS
@@ -183,8 +180,7 @@ Cont &lt;-- 1 MIENTRAS Cont &lt; 20 HACER Cont &lt;-- Cont&#43;1 FIN_MIENTRASSol
 </span></span><span class="line"><span class="cl">      cont++;
 </span></span><span class="line"><span class="cl">  }</span></span></code></pre></div><h3 id="tercera-solución">Tercera solución<a class="anchor" href="#tercera-soluci%c3%b3n">#</a></h3>
 <p>En este caso definiremos <em>Cont</em> en el bucle MIENTRAS para que llegue hasta 20, lo haremos poniendo que sea menor que 21:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Cont &lt;-- 1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Cont &lt;-- 1
 </span></span><span class="line"><span class="cl"> MIENTRAS **Cont &lt; 21** HACER
 </span></span><span class="line"><span class="cl">   Cont &lt;-- Cont+1
 </span></span><span class="line"><span class="cl"> FIN_MIENTRAS

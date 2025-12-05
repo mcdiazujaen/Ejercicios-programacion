@@ -66,7 +66,6 @@ Para calcular la diferencia entre las dos horas es necesario convertirlas antes 
 
 ###  Diseño en Pseudocódigo
 ```text
-
  FUNCION segs():ENTERO
  ENTRADAS:
    _(No tiene entradas, las lee por teclado)_

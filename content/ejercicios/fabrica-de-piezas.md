@@ -14,7 +14,6 @@ Tenemos una fábrica de piezas metálicas, dónde tenemos almacenadas las medida
 
 Las estructuras que tenemos tendrían el siguiente aspecto: 
 ```text
-
 **Matriz medidas**                     **Vector cantidad**
 -----------------------            --------------
 Pieza 1 | 10 | 20 |  3             Pieza 1 |  40

@@ -50,7 +50,6 @@ El interés de este ejercicio está en ver una forma de disponer los resultados 
 
 ###  Diseño en Pseudocódigo
 ```text
-
  ALGORITMO granos_trigo
  CONSTANTES:
  	CUADRADOS=64

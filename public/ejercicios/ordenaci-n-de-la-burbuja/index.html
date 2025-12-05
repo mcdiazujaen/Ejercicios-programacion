@@ -200,8 +200,7 @@ El siguiente programa, al que llamarás ordena.c , ordena un conjunto de número
 </span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario">#</a></h4>
 <p>Para intercambiar entre sí los valores de dos variables no se pueden emplear las dos instrucciones siguientes:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">**vector[j]=vector[i];** /* esta instrucción pone en la posición j el valor de la posición i, perdiéndose el valor de la posición j */
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">**vector[j]=vector[i];** /* esta instrucción pone en la posición j el valor de la posición i, perdiéndose el valor de la posición j */
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">**vector[i]=vector[j];** /* esta instrucción pone en la posición i el valor de la posición j, pero no el original, que se ha perdido, sino el nuevo */</span></span></code></pre></div><p>Por eso es necesaria una variable intermedia, que en este caso hemos llamado temp, que guarda temporalmente el valor de la posición <strong>j</strong>. Por esto se requieren tres instrucciones.</p>
 </article>

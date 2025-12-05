@@ -14,7 +14,6 @@ La gente que trata con fechas históricas utiliza un nombre llamado **Día Julia
 
 También existen fórmulas que utilizan el Día Juliano. Una fórmula muy sencilla que calcula el día de la semana de un Día Juliano dado es: 
 ```text
-
 Día de la semana = (Día Juliano+1) MOD 7
 
 ```

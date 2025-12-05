@@ -151,16 +151,13 @@ A1 A2 A3 A4 A5 A6 A7 A8 A9 A10 15 31 23 15 75 23 41 15 31 85compuesto de 10 ente
   <article class="markdown book-article"><h1 id="eliminar-duplicados-de-un-array">Eliminar duplicados de un array<a class="anchor" href="#eliminar-duplicados-de-un-array">#</a></h1>
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Diseñar un algoritmo que lea un vector desordenado <em>A</em> , compuesto de <em>n</em> enteros e imprima este vector en la misma secuencia, pero ignorando los valores duplicados que se encuentren en él. También se necesita saber el número de elementos que permanecen en él (<em>m</em>); por ejemplo, dado el vector siguiente</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">   A1   A2   A3   A4   A5   A6   A7   A8   A9   A10
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">   A1   A2   A3   A4   A5   A6   A7   A8   A9   A10
 </span></span><span class="line"><span class="cl">   15   31   23   15   75   23   41   15   31   85</span></span></code></pre></div><p>compuesto de 10 enteros, el vector comprimido que resulta estará formado por</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">   A1   A2   A3   A4   A5   A6   A7   A8   A9   A10
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">   A1   A2   A3   A4   A5   A6   A7   A8   A9   A10
 </span></span><span class="line"><span class="cl">   15   31   23   75   41   85</span></span></code></pre></div><p>con <em>m</em> = 6.</p>
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="diseño-en-pseudocódigo">Diseño en pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ALGORITMO Duplicados
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ALGORITMO Duplicados
 </span></span><span class="line"><span class="cl">ENTRADAS:
 </span></span><span class="line"><span class="cl">   v: ARRAY (1..n) DE ENTEROS (* vector con los duplicados *)
 </span></span><span class="line"><span class="cl">   n: ENTERO (* tamaño del vector v *)

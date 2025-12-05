@@ -12,7 +12,6 @@ categories: ['enunciado']
 
 En matemáticas, la siguiente expresión es siempre verdadera: 
 ```text
-
 seno(x)<=1
 
 ```
@@ -22,7 +21,6 @@ Diseñar un algoritmo para verificar esta propiedad en la (utilizando la funció
 
 ###  Pseudocódigo 
 ```text
-
  ALGORITMO seno
  ENTRADAS:
     (* No hay entradas *)

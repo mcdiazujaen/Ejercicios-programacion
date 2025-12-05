@@ -49,7 +49,6 @@ En este programa las instrucciones: num=num+1, num+=1 y num++, las podrás utili
 
 ###  Solucion en Pseudocódigo
 ```text
-
 ALGORITMO cuadrados
 ENTRADAS:
    _(No tiene entradas)_

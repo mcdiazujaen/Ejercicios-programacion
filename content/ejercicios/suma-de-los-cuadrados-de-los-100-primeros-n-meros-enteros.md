@@ -18,7 +18,6 @@ Diseñar un algoritmo para imprimir la suma de los cuadrados de los 100 primeros
 
 ###  Diseño en pseudocódigo 
 ```text
-
   ALGORITMO suma100
   ENTRADAS: 
     (* No hay, porque cogemos directamente los primeros 100 números enteros *)

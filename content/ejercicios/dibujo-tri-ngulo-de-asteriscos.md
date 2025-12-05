@@ -14,7 +14,6 @@ tags: ['sin_matlab']
 
 Programa que sea capaz de sacar la siguiente pirámide de “*” dada la altura que tiene (representada por medio de un número entero). Por ejemplo para altura 4 debe quedar de la siguiente forma: 
 ```text
-
    *
   * *
  * * *
@@ -25,7 +24,6 @@ Programa que sea capaz de sacar la siguiente pirámide de “*” dada la altura
 
 ###  Programa en Pascal por **lperez**
 ```text
-
 program triaast;
 {ENTRADAS:n, la base del tri ngulo
 SALIDAS:dibuja un tri ngulo de asteriscos, ej, base 3

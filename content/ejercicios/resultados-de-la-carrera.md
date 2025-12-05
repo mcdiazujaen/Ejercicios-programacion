@@ -66,7 +66,6 @@ end
 ```
 ####  Apartado 2 
 ```text
-
 function posicion=Busca(v,x)
 %Parámetros de entrada:
 %  v: vector de números
@@ -87,7 +86,6 @@ end
 ```
 ####  Apartado 3 
 ```text
-
 function vabandonos=Abandono(salida,llegada)
 %Parámetros de entrada:
 %  salida: vector con los dorsales de los corredores en la salida

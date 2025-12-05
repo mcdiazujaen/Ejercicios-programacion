@@ -18,7 +18,6 @@ Función que tome como parámetro de entrada el nombre de un fichero y devuelva 
 
 Ejemplo fichero: 
 ```text
-
 3
 3 1 5
 2 3 6
@@ -34,7 +33,6 @@ Ejemplo fichero:
 ```
 Vector de Salida: 
 ```text
-
 [3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 1 1 3 3 5 2 1 2]
 
 ```
@@ -44,7 +42,6 @@ Función que reciba como parámetro de entrada un vector de enteros positivos de
 
 Ejemplo: 
 ```text
-
 Vector=[3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 2 1 3 3 5 2 1 2]
 
 ```
@@ -103,7 +100,6 @@ end
 ```
 ####  Función de decodificación 
 ```text
-
 function [exito,clave]=Decodifica(v)
 %Parámetros de Entrada: 
 %  v: vector de N*N*3 elementos

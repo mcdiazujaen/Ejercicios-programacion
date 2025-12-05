@@ -18,7 +18,6 @@ Diseñar un algoritmo que lea un valor en euros y lo convierta a pesetas (1 euro
 
 ###  Pseudocódigo 
 ```text
-
 ALGORITMO Conversor
 CONSTANTES:
 	UN_EURO=166.386

@@ -14,7 +14,6 @@ En cada uno de los siguientes segmentos de algoritmos, indicar cuándo el ciclo 
 
 **a)**
 ```text
-
    Contador <-- 0
    Total <-- 0
    MIENTRAS Contador >= 0 HACER
@@ -24,7 +23,6 @@ En cada uno de los siguientes segmentos de algoritmos, indicar cuándo el ciclo 
 ```
 **b)**
 ```text
-
    Contador <-- 0
    Total <-- 0
    MIENTRAS Contador <= 10 HACER
@@ -35,7 +33,6 @@ En cada uno de los siguientes segmentos de algoritmos, indicar cuándo el ciclo 
 ```
 **c)** En caso de que este ciclo termine, ¿cúando sería y qué valores tendrían `h`, `a` y `termina` al finalizar?. 
 ```text
-
    suma <-- 0
    a <-- 0
    h <-- 1
@@ -58,7 +55,6 @@ En cada uno de los siguientes segmentos de algoritmos, indicar cuándo el ciclo 
 
 **a)**
 ```text
-
    Contador <-- 0
    Total <-- 0
    MIENTRAS Contador >= 0 HACER
@@ -70,7 +66,6 @@ El ciclo no acabaría nunca porque `Contador` será siempre mayor o igual que 0,
 
 **b)**
 ```text
-
    Contador <-- 0
    Total <-- 0
    MIENTRAS Contador <= 10 HACER

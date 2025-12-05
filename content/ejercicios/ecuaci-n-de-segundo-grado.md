@@ -73,7 +73,6 @@ Incluyendo la librería math.h se pueden usar las funciones matemáticas tales c
 
 ###  Diseño en pseudocódigo
 ```text
-
  ALGORITMO divisonSegundoGrado
  ENTRADAS:
     a,b,c: REALES _(Coeficientes de la ecuación)_

@@ -12,7 +12,6 @@ categories: ['enunciado']
 
 Necesitamos un programa que imprima una pirámide de dígitos como la de la figura, tomando como entrada el número de filas de la misma: 
 ```text
-
         1 
       1 2 1
     1 2 3 2 1

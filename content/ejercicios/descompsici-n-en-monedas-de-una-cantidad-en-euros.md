@@ -18,7 +18,6 @@ Dada una cantidad de dinero en euros se desea conocer el número mínimo de mone
 
 ###  Diseño 1 en Pseudocódigo por **lperez**
 ```text
-
 ALGORITMO Cambio_dinero
 ENTRADAS:
    dinero: REAL  _(cantidad de dinero que se tiene, dinero >=0.)_
@@ -72,7 +71,6 @@ FIN
 ```
 ###  Diseño 2 en Pseudocódigo por **lperez**
 ```text
-
 ALGORITMO Cambio_dinero
 ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0.
 SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que 
@@ -221,7 +219,6 @@ int main(void){
 ```
 ###  Programa 1 en Pascal por **lperez**
 ```text
-
 (* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0.
 SALIDAS: m2, m1, m05, m02,m01, m005, m002, m001, cantidad mínima de monedas en
 las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
@@ -290,7 +287,6 @@ end.
 ```
 ###  Programa 2 en Pascal por **lperez**
 ```text
-
 (* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0.
 SALIDAS: salida, array con la cantidad mínima de monedas en
      las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)

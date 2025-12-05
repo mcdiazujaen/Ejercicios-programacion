@@ -12,7 +12,6 @@ categories: ['enunciado']
 
 En una fábrica de electrodomésticos se quiere informatizar las estadísticas del proceso de fabricación. Para ello se almacena en un vector la información referente al código del producto fabricado, el número de máquinas por las que procesa y el tiempo en minutos que tarda en el procesamiento. La información de cada producto se almacena de forma consecutiva. Un ejemplo de vector con información es el siguiente: 
 ```text
-
  10  3  20  10  8  40  2  6  40  20  50  2  15  34  ...
 
 ```

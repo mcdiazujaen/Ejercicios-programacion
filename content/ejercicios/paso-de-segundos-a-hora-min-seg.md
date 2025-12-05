@@ -16,7 +16,6 @@ Diseñar un algoritmo para convertir un tiempo expresado en segundos a un format
 
 ###  Pseudocódigo 
 ```text
-
 ALGORITMO ConvertirSegundos
 ENTRADAS:
    tiempo: ENTERO    _(Número de segundos que queremos convertir)_

@@ -52,7 +52,6 @@ Este programa es muy sencillo, si se entiende el algoritmo. La variable `max` ac
 
 ###  Diseño en pseudocódigo
 ```text
-
 ALGORITMO Maximo
 ENTRADAS:
     conjunto: ARRAY (0...SIZE-1) DE ENTEROS  _(Elementos donde buscar el máximo)_

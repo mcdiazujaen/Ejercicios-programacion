@@ -17,7 +17,6 @@ Vamos a ver como se convierten en escaños los votos de los sufridos ciudadanos 
 Supongamos que concurren 3 partidos a las elecciones y que la provincia o distrito electoral dispone de 2 escaños. El primer escaño se lo llevara el partido mas votado. Para el segundo escaño se dividen los votos de cada partido entre el numero de escaños obtenidos mas uno (el partido que no tenga todavía ningún escaño se dividirá entre 1) y se calculan los restos de dichas divisiones. El escaño se asigna al partido que tras esta operación tenga un resto mas elevado. Vamos a verlo con un ejemplo: 
 
 ```text
-
 Partido 1: 6000 (Se lleva el escaño 1) <-- restos <-- 6000/(1+1) = 3000
 Partido 2: 4000                        <-- restos <-- 4000/(1+0) = 4000 <-- Se lleva el escaño 2.
 Partido 3: 2000                        <-- restos <-- 2000/(1+0) = 2000

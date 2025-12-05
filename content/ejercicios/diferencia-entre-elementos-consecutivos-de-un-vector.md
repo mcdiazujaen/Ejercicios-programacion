@@ -17,7 +17,6 @@ Realizar un subalgoritmo que dado un vector _A_ de _n_ números reales, obtener 
 
 ###  Diseño en Pseudocódigo 
 ```text
-
  PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor)
  ENTRADAS:
     A: ARRAY (0..1000) DE REALES  ''(*Array donde buscar la menor y mayor diferencia de elementos*)''
@@ -157,7 +156,6 @@ Para realizar esta función se utilizan las siguientes funciones de Matlab:
   * **max** y **min** : para encontrar el máximo y el mínimo de array, respectivamente. 
 
 ```text
-
 function [mayor,menor] = Diferencias( A )
 %FUNCIÓN [mayor,menor] = Diferencias( A )
 %DESCRIPCIÓN: Dado un vector A de n números reales, obtener la diferencia mas grande y 

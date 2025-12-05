@@ -17,7 +17,6 @@ Realiza una función que, dada una matriz, devuelva dos valores:
 
 Por ejemplo, para la matriz: 
 ```text
-
  1   7   2
  4   5  -1
 12   6   4
@@ -56,7 +55,6 @@ end
 ```
 ####  Solución Matlab 
 ```text
-
 function [sumaimpar,sumapar]=SumaMat(m)
 %Parámetros de entrada:
 %  m: matriz de números

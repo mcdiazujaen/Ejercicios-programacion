@@ -14,7 +14,6 @@ Implementa una función a la que se le de cómo parámetro de entrada una matriz
 
 Ejemplos: 
 ```text
-
 f=2 y c=2 
 
    3 1 2 7 4

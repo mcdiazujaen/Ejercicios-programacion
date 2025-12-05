@@ -159,8 +159,7 @@ Función de lectura# Función que tome como parámetro de entrada el nombre de u
 <h3 id="función-de-lectura">Función de lectura<a class="anchor" href="#funci%c3%b3n-de-lectura">#</a></h3>
 <p>Función que tome como parámetro de entrada el nombre de un fichero y devuelva un vector con los elementos válidos del fichero, si el fichero no puede abrirse, sus elementos no son válidos o no hay un número correcto de datos, devolverá el array vacío. El formato del fichero es el siguiente: en la primer línea un entero que indica un tamaño N, las NxN siguientes líneas están formadas por tres dígitos enteros separados por espacios, la última línea está formada por un entero. Los elementos que deben devolverse en el vector son los almacenados en las NxN líneas anteriormente descritas y son válidos si el valor almacenado en la última fila es un -1.</p>
 <p>Ejemplo fichero:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">3
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">3
 </span></span><span class="line"><span class="cl">3 1 5
 </span></span><span class="line"><span class="cl">2 3 6
 </span></span><span class="line"><span class="cl">1 1 3
@@ -171,12 +170,10 @@ Función de lectura# Función que tome como parámetro de entrada el nombre de u
 </span></span><span class="line"><span class="cl">3 3 5
 </span></span><span class="line"><span class="cl">2 1 2
 </span></span><span class="line"><span class="cl">-1</span></span></code></pre></div><p>Vector de Salida:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 1 1 3 3 5 2 1 2]</span></span></code></pre></div><h3 id="función-de-decodificación">Función de decodificación<a class="anchor" href="#funci%c3%b3n-de-decodificaci%c3%b3n">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 1 1 3 3 5 2 1 2]</span></span></code></pre></div><h3 id="función-de-decodificación">Función de decodificación<a class="anchor" href="#funci%c3%b3n-de-decodificaci%c3%b3n">#</a></h3>
 <p>Función que reciba como parámetro de entrada un vector de enteros positivos de tamaño NxNx3 y devuelva como salida dos valores: un valor lógico indicando si la decodificación se ha realizado con éxito y un entero que es la clave decodificada. La forma de realizar la decodificación es la siguiente: a partir del vector de entrada se ha de construir una matriz cuadrada de tamaño NxN. Cada elemento de la matriz se obtiene a partir de tres elementos del vector que informan de una posición de fila, una posición de columna y el valor que se va a situar en dicha posición. Si todo ha sido correcto la clave se obtiene formando un número entero con los dígitos situados en la primera fila de la matriz.</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Vector=[3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 2 1 3 3 5 2 1 2]</span></span></code></pre></div><p>La matriz quedaría:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Vector=[3 1 5 2 3 6 1 1 3 3 2 4 1 3 7 2 2 3 1 2 1 3 3 5 2 1 2]</span></span></code></pre></div><p>La matriz quedaría:</p>
 <table>
   <thead>
       <tr>
@@ -235,8 +232,7 @@ Función de lectura# Función que tome como parámetro de entrada el nombre de u
 </span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="p">=[];</span>
 </span></span><span class="line"><span class="cl">    <span class="k">end</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="función-de-decodificación-1">Función de decodificación<a class="anchor" href="#funci%c3%b3n-de-decodificaci%c3%b3n-1">#</a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">function [exito,clave]=Decodifica(v)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function [exito,clave]=Decodifica(v)
 </span></span><span class="line"><span class="cl">%Parámetros de Entrada: 
 </span></span><span class="line"><span class="cl">%  v: vector de N*N*3 elementos
 </span></span><span class="line"><span class="cl">%Parámetros de Salida:

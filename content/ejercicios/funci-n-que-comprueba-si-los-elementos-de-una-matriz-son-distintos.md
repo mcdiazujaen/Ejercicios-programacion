@@ -18,7 +18,6 @@ Vamos a contruir un subalgoritmo para saber si todos los elementos dentro de una
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 FUNCION Distintos(A, n): LOGICO
 ENTRADAS: A: ARRAY [1..n, 1..n] DE ENTEROS; matriz cuadrada.
                      n: ENTERO, nº de filas y de columnas de A; n>0. 
@@ -79,7 +78,6 @@ Los arrays en C deben tener un tamaño fijo, por eso se ha optado por darles una
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 FUNCION Distintos(A, n): LOGICO
 ENTRADAS: A: ARRAY [1..n, 1..n] DE ENTEROS; matriz cuadrada.
                      n: ENTERO, nº de filas y de columnas de A; n>0. 
@@ -125,7 +123,6 @@ En la primera solución se compara un elemento con todos los de la martriz, incl
 
 ###  Programa en Pascal por **lperez**
 ```text
-
 Function Distintos(var a:matriz;t:integer):boolean;
 (* Entradas: a,una matriz y t su tama¤o
   Salidas: verdadero si todos los elementos de la matriz son distintos y
@@ -148,7 +145,6 @@ end;
 ```
 ###  Programa en Pascal por **lperez**
 ```text
-
 Function Distin2(var a:matriz;t:integer):boolean;
 (* Entradas: a,una matriz y t su tama¤o
   Salidas: verdadero si todos los elementos de la matriz son distintos y

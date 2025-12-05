@@ -18,7 +18,6 @@ El formato del fichero de entrada es el siguiente: en la primera línea la dimen
 
 **Ejemplo:** Archivo de entrada 
 ```text
-
 5				
 5	0	7	0	0
 4	2	7	0	0
@@ -29,7 +28,6 @@ El formato del fichero de entrada es el siguiente: en la primera línea la dimen
 ```
 **Ejemplo:** Archivo de salida 
 ```text
-
 5				
 5	**2**	7	**2**	**2**
 4	2	7	**3**	**3**
@@ -71,7 +69,6 @@ end
 ```
 ####  Función que transforma la matriz 
 ```text
-
 function s = transforma(m)
 % Función s = transforma(m)
 % Descripción: Dada una matriz, construye otra en la que se 
@@ -100,7 +97,6 @@ s = m;
 ```
 ####  Función que escribe en el fichero 
 ```text
-
 function escribeFich(m)
 % Función escribeFich(m)
 % Descripción: Escribe una matriz de enteros en un fichero llamado

@@ -16,7 +16,6 @@ En estos subalgoritmos se han cometido errores, identifique estos errores y diga
 
 ###  Subalgoritmo 1 
 ```text
-
 01 FUNCION FACTORIAL (N:ENTERO)
 02 ENTRADA:
 03    N, un entero positivo.
@@ -35,7 +34,6 @@ En estos subalgoritmos se han cometido errores, identifique estos errores y diga
 ```
 ###  Subalgoritmo 2 
 ```text
-
 01 PROCEDIMIENTO PRIMO (N:ENTERO, salida: LOGICO)
 02 ENTRADA:
 03    N, un entero positivo.

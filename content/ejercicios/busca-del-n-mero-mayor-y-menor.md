@@ -26,7 +26,6 @@ Funciones C a utilizar:
 
 Ejemplo de ejecución: lo que se vería por pantalla debe ser algo así como 
 ```text
-
 Introduce la cantidad de números:
 3
 Introduce los números:

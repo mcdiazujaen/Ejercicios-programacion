@@ -21,7 +21,6 @@ En una matriz con un número par de columnas suponemos que la central es cualqui
 
 El formato del fichero es como el siguiente (este es solo un ejemplo): 
 ```text
-
 4 3
 8 7 6 5 4 3 21 -8 2 3 4 0
 

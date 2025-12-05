@@ -13,7 +13,6 @@ categories: ['enunciado', 'comentario']
 
 Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b: 
 ```text
-
                         a!
           C(a,b) = -------------
                      b! * (a-b)!
@@ -25,7 +24,6 @@ Realizar el diseño y programa capaces de calcular el combinatorio de dos númer
 
 ####  Diseño 1 por **lperez**
 ```text
-
  FUNCION Factorial (n): ENTERO
  ENTRADAS: n: ENTERO, un número entero positivo.
  SALIDAS: el factorial de n.
@@ -59,7 +57,6 @@ Realizar el diseño y programa capaces de calcular el combinatorio de dos númer
 ```
 ####  Diseño 2 por **lperez**
 ```text
-
  PROCEDIMIENTO Factorial (n, VAR f)
  ENTRADAS: n: ENTERO, un número entero positivo.
  SALIDAS: f: ENTERO, el factorial de n.
@@ -193,7 +190,6 @@ En la primera solución se ha utilizado una función para resolver el factorial,
 
 ###  Programa en Pascal por **lperez**
 ```text
-
  program Combinatorio;
  {ENTRADAS: a,b, dos n£meros enteros positivos, a>b y a<>0
  SALIDAS: combi, el n£mero combinatorio a sobre b, calculado de la forma:

@@ -25,7 +25,6 @@ Diseñar la función PROD para calcular el producto de los _n_ elementos de un v
 
 ####  Función SIGMA 
 ```text
-
  FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL
  ENTRADAS:
    X: ARRAY DE REALES  _(Elementos que se van a sumar, la primera posición del array es 0)_
@@ -45,7 +44,6 @@ Diseñar la función PROD para calcular el producto de los _n_ elementos de un v
 ```
 ####  Función PROD 
 ```text
-
  FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL
  ENTRADAS: (Están definidas en la cabecera de la función)
    X: ARRAY DE REALES  _(Elementos que se van a multiplicar, la primera posición del array es 0)_
@@ -88,7 +86,6 @@ float SIGMA(float X[], int n){
 ```
 ####  Función PROD
 ```text
-
  float PROD(float X[], int n){
  /*ENTRADAS:
   _float X[] -- > (es un array de reales,cuya primera posicion es 0)_

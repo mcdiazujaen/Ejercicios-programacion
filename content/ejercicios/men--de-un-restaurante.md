@@ -23,7 +23,6 @@ El siguiente es el menú de un restaurante de bocadillos. Diseñar un algoritmo 
 
 ###  Diseño en pseudocódigo 
 ```text
-
 ALGORITMO Menu
 ENTRADAS:
 	jamon: ENTERO; Cantidad de bocadillos de jamón

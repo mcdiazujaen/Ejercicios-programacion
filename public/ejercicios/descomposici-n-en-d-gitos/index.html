@@ -199,8 +199,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span class="line"><span class="cl">    <span class="n">vec</span><span class="p">(</span><span class="n">tama</span><span class="o">-</span><span class="n">pos</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">v</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="solución-con-programación-matlab-avanzada">Solución con programación Matlab avanzada<a class="anchor" href="#soluci%c3%b3n-con-programaci%c3%b3n-matlab-avanzada">#</a></h4>
 <p>Para esta solución se va a utilizar la función <strong>num2str</strong> que convierte un número a un array de caracteres (cada elemento del array es el carácter de un dígito). A continuación se le resta el código ASCII de caracter &lsquo;0&rsquo; para que el array se convierta en la representación en número entero de cada dígito.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">function vec = DescomponerEntero( n )
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function vec = DescomponerEntero( n )
 </span></span><span class="line"><span class="cl">% FUNCION vec = DescomponerEntero( n )
 </span></span><span class="line"><span class="cl">% DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero &#34;n&#34;. 
 </span></span><span class="line"><span class="cl">% PARÁMETROS DE ENTRADA:

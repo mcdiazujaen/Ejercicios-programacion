@@ -63,7 +63,6 @@ end
 ```
 ####  Apartado b 
 ```text
-
 function codigo = MayorDiferencia(matriz)
 % Funcion codigo = MayorDiferencia(matriz)
 % Descripción: calcula el código del empleado con dos hijos con

@@ -15,7 +15,6 @@ Se desea hacer un algoritmo para resolver si se encuentra o no una palabra en un
   * **sopa** : Array bidimensional de caracteres 
 
 ```text
-
      1   2   3  ... ... ...  n
    +---------------------------
  1 | A   Q   A   Z   P   V   A 
@@ -33,7 +32,6 @@ Se desea hacer un algoritmo para resolver si se encuentra o no una palabra en un
   * **buscar** : Array de caracteres 
 
 ```text
-
  1   2   3  ...  m
 -------------------
  R   A   T   O   N
@@ -53,7 +51,6 @@ Realizar un subalgoritmo que compruebe si la palabra se encuentra en horizontal.
 
 Termina de rellenar el código del algoritmo principal que se indica a continuación de forma que se pida al usuario jugar tantas veces como quiera. Utiliza los subalgoritmos que has generado en los apartados anteriores. 
 ```text
-
 ALGORITMO SopaDeLetras
 ENTRADAS:
   sopa: ARRAY (1..100,1..100) DE CARACTERES 

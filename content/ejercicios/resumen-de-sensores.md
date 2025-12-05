@@ -14,7 +14,6 @@ Hemos diseñado un dispositivo con 5 sensores de diversa índole. El dispositivo
 
 Ejemplo del contenido del fichero de datos del sensor: 
 ```text
-
 24 11 2013
 00 12 24 2 530
 00 12 25 1 100
@@ -30,13 +29,11 @@ Módulo que lea el fichero de datos. La entrada será el nombre del fichero y la
 
 Ejemplo del vector fecha: 
 ```text
-
 24 11 2013
 
 ```
 Ejemplo de matriz de datos: 
 ```text
-
 0 12 24 2 530
 0 12 25 1 100
 0 12 30 5 300
@@ -58,14 +55,12 @@ Programa principal, que utilizando los módulos anteriores, pida al usuario el n
   * La fecha (separada por guiones) del fichero a la que corresponde el resumen. Ejemplo: 
 
 ```text
-
 Resumen de sensores del día 24-11-2013
 
 ```
   * El número de valores que se han recogido. Ejemplo: 
 
 ```text
-
 - Se han recogido 4 valores
 
 ```
@@ -73,7 +68,6 @@ Resumen de sensores del día 24-11-2013
 
 no deberá escribirse información de dicha hora. Ejemplo: 
 ```text
-
 - Los datos recogidos en cada hora son:
    Hora 0: 3 datos.
    Hora 1: 1 datos.
@@ -83,7 +77,6 @@ no deberá escribirse información de dicha hora. Ejemplo:
 
 se escribirá su media como 0. Ejemplo: 
 ```text
-
 - La media de cada sensor es:
    Sensor 1: 100
    Sensor 2: 315.50000

@@ -90,7 +90,6 @@ end
 ```
 ####  Módulo 2 
 ```text
-
 function suma=sumac(m,c)
 %FUNCIÓN suma=sumac(m,c)
 %DESCRIPCIÓN: Devuelva la suma de una columna de una matriz.

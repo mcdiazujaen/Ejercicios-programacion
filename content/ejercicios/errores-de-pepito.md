@@ -17,7 +17,6 @@ Pepito esta descontento con su rendimiento en la clase de fundamentos de inform�
 
 ###  Diseño en pseudocódigo 
 ```text
-
  ALGORITMO ErroresPepito
  ENTRADAS:
     _(Ninguna, ya el el número de semanas, errores e incremento de errores es fijo)_

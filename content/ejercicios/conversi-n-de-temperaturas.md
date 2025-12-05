@@ -20,7 +20,6 @@ Un departamento de climatología ha realizado recientemente su conversión al si
 
 ###  Diseño en Pseudocódigo 
 ```text
-
  ALGORITMO SistemaMetrico
  ENTRADAS:
     grados_C: REAL    (* Temperatura en grados celsius *)

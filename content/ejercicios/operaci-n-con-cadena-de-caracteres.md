@@ -16,7 +16,6 @@ Realizar un subalgoritmo que dada una cadena de caracteres obtenga otra cadena d
 
 ###  Pseudocódigo 
 ```text
-
 PROCEDIMIENTO Blancos(Ent, VAR Sal, tam1, VAR tam2)
 ENTRADAS:
    Ent: ARRAY [1..1000] DE CARACTERES  _(frase con varios espacios entre palabras)_

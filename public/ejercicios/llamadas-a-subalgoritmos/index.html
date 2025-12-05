@@ -155,16 +155,13 @@ Dos(1.4, 5) Dos(e&#43;2, b&#43;3) a &lt;-- Dos(e,b) Dos(a, Tres(a,k)) b &lt;-- T
   <article class="markdown book-article"><h1 id="llamadas-a-subalgoritmos">Llamadas a subalgoritmos<a class="anchor" href="#llamadas-a-subalgoritmos">#</a></h1>
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Dada las siguientes declaraciones en un determinado algoritmo:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">a, b, c : ENTERO
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">a, b, c : ENTERO
 </span></span><span class="line"><span class="cl">k: LÓGICO
 </span></span><span class="line"><span class="cl">d,e : REAL</span></span></code></pre></div><p>Y las siguientes declaraciones de subalgoritmos:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">FUNCIÓN Uno (x:REAL, y:ENTERO): LÓGICO
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FUNCIÓN Uno (x:REAL, y:ENTERO): LÓGICO
 </span></span><span class="line"><span class="cl">PROCEDIMIENTO Dos (VAR x: REAL, y: ENTERO)
 </span></span><span class="line"><span class="cl">FUNCIÓN Tres (x:ENTERO, VAR z: LÓGICO):ENTERO</span></span></code></pre></div><p>Decir si las siguientes llamadas a los subalgoritmos desde el cuerpo del algoritmo principal son validas o no. Justificar la respuesta:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Dos(1.4, 5)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Dos(1.4, 5)
 </span></span><span class="line"><span class="cl">Dos(e+2, b+3)
 </span></span><span class="line"><span class="cl">a &lt;-- Dos(e,b)
 </span></span><span class="line"><span class="cl">Dos(a, Tres(a,k))
@@ -177,8 +174,7 @@ Dos(1.4, 5) Dos(e&#43;2, b&#43;3) a &lt;-- Dos(e,b) Dos(a, Tres(a,k)) b &lt;-- T
 </span></span><span class="line"><span class="cl">a &lt;-- Tres(c, Uno(e,b))
 </span></span><span class="line"><span class="cl">Tres(a,k)</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="pseudocódigo">Pseudocódigo<a class="anchor" href="#pseudoc%c3%b3digo">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Dos(1.4, 5)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Dos(1.4, 5)
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> **Incorrecta** : el primer parámetro formal de `Dos` se pasa por variable (`VAR x:REAL`), sin embargo, el primer parámetro actual es un valor constante (`1.4`) que se pasa por copia. 
 </span></span><span class="line"><span class="cl">

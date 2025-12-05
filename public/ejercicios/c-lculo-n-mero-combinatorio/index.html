@@ -153,14 +153,12 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
   <article class="markdown book-article"><h1 id="cálculo-número-combinatorio">Cálculo número combinatorio<a class="anchor" href="#c%c3%a1lculo-n%c3%bamero-combinatorio">#</a></h1>
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">                        a!
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">                        a!
 </span></span><span class="line"><span class="cl">          C(a,b) = -------------
 </span></span><span class="line"><span class="cl">                     b! * (a-b)!</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo">#</a></h3>
 <h4 id="diseño-1-por-lperez">Diseño 1 por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-por-lperez">#</a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> FUNCION Factorial (n): ENTERO
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> FUNCION Factorial (n): ENTERO
 </span></span><span class="line"><span class="cl"> ENTRADAS: n: ENTERO, un número entero positivo.
 </span></span><span class="line"><span class="cl"> SALIDAS: el factorial de n.
 </span></span><span class="line"><span class="cl"> VARIABLES: i, f: ENTERO
@@ -189,8 +187,7 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 </span></span><span class="line"><span class="cl">   FIN_SI   
 </span></span><span class="line"><span class="cl">   ESCRIBIR combi 
 </span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h4 id="diseño-2-por-lperez">Diseño 2 por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-por-lperez">#</a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> PROCEDIMIENTO Factorial (n, VAR f)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> PROCEDIMIENTO Factorial (n, VAR f)
 </span></span><span class="line"><span class="cl"> ENTRADAS: n: ENTERO, un número entero positivo.
 </span></span><span class="line"><span class="cl"> SALIDAS: f: ENTERO, el factorial de n.
 </span></span><span class="line"><span class="cl"> VARIABLES: i: ENTERO.
@@ -306,8 +303,7 @@ a! C(a,b) = ------------- b! * (a-b)!Soluciones# Diseño en Pseudocódigo# Dise�
 </span></span><span class="line"><span class="cl">  <span class="p">}</span></span></span></code></pre></div><h4 id="comentario-1">Comentario<a class="anchor" href="#comentario-1">#</a></h4>
 <p>En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.</p>
 <h3 id="programa-en-pascal-por-lperez">Programa en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-en-pascal-por-lperez">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> program Combinatorio;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> program Combinatorio;
 </span></span><span class="line"><span class="cl"> {ENTRADAS: a,b, dos n£meros enteros positivos, a&gt;b y a&lt;&gt;0
 </span></span><span class="line"><span class="cl"> SALIDAS: combi, el n£mero combinatorio a sobre b, calculado de la forma:
 </span></span><span class="line"><span class="cl">                       a!

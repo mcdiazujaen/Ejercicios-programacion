@@ -21,7 +21,6 @@ Queremos conocer los datos estadísticos de una asignatura, por lo tanto, necesi
 
 ###  Diseño en pseudocódigo 
 ```text
-
 ALGORITMO Estadisticas
 ENTRADAS:
    suspensos: ENTERO      (* Número de suspensos de la asignatura *)

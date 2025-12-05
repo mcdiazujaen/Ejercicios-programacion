@@ -84,7 +84,6 @@ valor = (c(n)/sum(c))*100;
 ```
 ####  Módulo 4 
 ```text
-
 function ganado = GananciaDr( c, p )
 % FUNCIÓN ganado = GananciaDr( c, p )
 % Descripción: Devuelve la cantidad de dinero que ha ganado cada doctor
@@ -106,7 +105,6 @@ end
 ```
 ####  Módulo 5 
 ```text
-
 function media = MediaPaciente( c, p )
 % FUNCIÓN media = MediaPaciente( c, p )
 % Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general

@@ -17,7 +17,6 @@ Los reglamentos de pesca imponen un limite a la cantidad total permitida de kilo
 
 ###  Diseño en Pseudocódigo
 ```text
-
 ALGORITMO Pesca
 ENTRADAS:
    limite:REAL (* limite en kg del peso de toda la pesca del día *)

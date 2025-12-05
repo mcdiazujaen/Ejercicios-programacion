@@ -74,7 +74,6 @@ Para saber en qué posición estaban los elementos en el vector original, se cre
 
 ###  Diseño en Pseudocódigo
 ```text
-
 ALGORITMO Reordena
 CONSTANTES:
     SIZE=7

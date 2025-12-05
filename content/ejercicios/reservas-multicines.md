@@ -14,7 +14,6 @@ Se quiere realizar un programa que gestione las reservas de las salas de un Mult
 
 Ejemplo de matriz de ocupación (1 ocupado, 0 libre): 
 ```text
-
 1							N
 -----------------------------------------------------------	
 1	1	0	0	0	0	0	…  |	1
@@ -26,7 +25,6 @@ Ejemplo de matriz de ocupación (1 ocupado, 0 libre):
 ```
 Ejemplo de array con los nombres de las salas 
 ```text
-
 A  |	1
 P  |	
 B  |	

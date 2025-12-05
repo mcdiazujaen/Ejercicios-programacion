@@ -49,7 +49,6 @@ void main(void) {
 
 Este programa es prácticamente idéntico al anterior. En lugar de las variables max e imax se emplean las variables min e imin que almacenan el valor mínimo y su posición, respectivamente. Una vez hechos estos cambios de nombre de variables, la única línea del programa que varía es la correspondiente a la condición del if, que como se está buscando el valor mínimo, habrá de ser: 
 ```text
-
 if (conjunto[i]<min)
 
 ```

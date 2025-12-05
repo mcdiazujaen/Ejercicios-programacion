@@ -12,7 +12,6 @@ categories: ['enunciado']
 
 Tenemos una estación meteorológica que nos proporciona los datos de temperaturas a lo largo de una semana completa, empezándose a medir cualquier día entre el lunes y el domingo. Los datos se almacenan en un fichero de 3 líneas: la 1ª almacena el día de la semana en el que se empiezan a tomar medidas, la 2ª para temperaturas mínimas y la 3ª para las máximas. Por ejemplo: 
 ```text
-
 miércoles
  2    0    4    6    5    7    6		
 12    9   10   20   16   18   14		

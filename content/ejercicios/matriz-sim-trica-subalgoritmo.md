@@ -27,7 +27,6 @@ Ejemplo de matriz simétrica:
 
 ####  Diseño 1 en Pseudocódigo por **lperez**
 ```text
-
 FUNCION Calculo_simetrica(A, tam): LOGICO
 ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
                             cuadrada.
@@ -49,7 +48,6 @@ FIN
 ```
 ####  Diseño 2 en Pseudocódigo por **lperez**
 ```text
-
 FUNCION Calculo_simetria(A, tam): LOGICO
 ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
                             cuadrada.
@@ -71,7 +69,6 @@ FIN
 ```
 ####  Diseño 3 en Pseudocódigo por **lperez**
 ```text
-
 FUNCION Calculo_simetria(A, tam): LOGICO
 ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
                             cuadrada.
@@ -95,7 +92,6 @@ FIN
 ```
 ####  Diseño 4 en Pseudocódigo por **lperez**
 ```text
-
 PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria
 ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
                             cuadrada.
@@ -161,7 +157,6 @@ int Calculo_simetrica(int A[1000][1000],int tam){
 ```
 ####  Solución 2 en C
 ```text
-
 //CONSTANTES: 
 #define VERDAD 1
 #define FALSO  0
@@ -190,7 +185,6 @@ int Calculo_simetrica(int A[1000][1000],int tam){
 ```
 ####  Solución 3 en C
 ```text
-
 //CONSTANTES: 
 #define VERDAD 1
 #define FALSO  0
@@ -221,7 +215,6 @@ int Calculo_simetrica(int A[1000][1000],int tam){
 ```
 ####  Solución 4 en C
 ```text
-
 //CONSTANTES: 
 #define VERDAD 1
 #define FALSO  0

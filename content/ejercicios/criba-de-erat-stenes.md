@@ -20,7 +20,6 @@ Diseñar un algoritmo para generar los números primos entre 2 y N, utilizando l
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
 PROCEDIMIENTO Criba (N, VAR primos, VAR t)
 ENTRADAS: N: ENTERO, controla el número de primos que queremos obtener, N>0.
 SALIDAS: primos: ARRAY [1..t] DE ENTEROS, contiene los números primos menores que 
@@ -80,7 +79,6 @@ La operación se puede repetir hasta que deseemos terminar.
 
 ###  Programa en Pascal por **lperez**
 ```text
-
 program Criba_Erastostenes;
 uses crt;
 type vector=array[1..100] of integer;

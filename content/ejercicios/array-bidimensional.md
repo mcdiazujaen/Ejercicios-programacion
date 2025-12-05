@@ -25,7 +25,6 @@ b) Un subalgoritmo que se le pase un terreno representado mediante un array y ob
 
 ####  Apartado a 
 ```text
-
  PROCEDIMIENTO LeerEscribir (VAR Terreno, VAR nf, VAR nc, tipo)
  ENTRADAS: 
     tipo: LOGICO  (* VERDAD si se utiliza el procedimiento para lectura de datos y
@@ -60,7 +59,6 @@ b) Un subalgoritmo que se le pase un terreno representado mediante un array y ob
 ```
 ####  Apartado b 
 ```text
-
  PROCEDIMIENTO Invierte (Terreno, nf, nc, VAR Invertido)
  ENTRADAS:
     Terreno: ARRAY (1..1000, 1..1000) DE REALES   (* Altura de los distintos puntos de un terreno *)

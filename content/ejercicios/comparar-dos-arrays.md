@@ -16,7 +16,6 @@ Diseñar un subalgoritmo que devuelva **VERDAD** si los dos arrays dados como en
 
 ###  Diseño en pseudocódigo
 ```text
-
  FUNCION IGUALES(VAR V:ARRAY DE REALES; VAR W:ARRAY DE REALES; n,m:ENTEROS):LOGICO
  
  ENTRADAS:
@@ -48,7 +47,6 @@ Diseñar un subalgoritmo que devuelva **VERDAD** si los dos arrays dados como en
 ```
 ###  Solucion en C
 ```text
-
   int IGUALES(float V[],float W[], int n, int m){
   /*ENTRADAS:
     V: Primer array que vamos a comparar (el primer valor está en la posición 1)
@@ -108,7 +106,6 @@ function igual=iguales(v,w)
 ```
 ####  Solución Matlab 
 ```text
-
 function igual=iguales(v,w)
 %FUNCIÓN igual=iguales(v,w)
 %DESCRIPCIÓN: Diseñar un subalgoritmo que devuelva VERDAD si los arrays 'v' y 'w' son iguales y FALSO, en otro caso.

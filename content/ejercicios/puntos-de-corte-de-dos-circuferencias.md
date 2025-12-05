@@ -14,7 +14,6 @@ tags: ['sin_matlab']
 
 Diseñar un algoritmo que dado dos circunferencias (coordenadas en el plano x e y, y su radio) calcule cuantos puntos tienen en común dichas circunferencias (cero, uno, dos o infinitos). Para realizar este programa, tienes que calcular la suma de los radios y la distancia entre los dos centros de las circunferencias utilizando las siguientes fórmulas: 
 ```text
-
 Suma_radios = Radio1+ Radio2
 Distancia   = RaizCuadrada( (x1-x2)2 + (y1-y2)2 )
 
@@ -25,7 +24,6 @@ Si la distancia es cero y los radios son iguales es que se trata de la misma cir
 
 ###  Pseudocódigo por **mcdiaz**
 ```text
-
  ALGORITMO PuntosDeCorte
  ENTRADAS:
    x1, y1: REALES ''(*Coordenadas del centro de la primera circunferencia*)''

@@ -33,7 +33,7 @@ PROCEDIMIENTO Escr(ch: CARÁCTER, long: ENTERO) INICIO MIENTRAS long&gt;0 HACER 
 Escr(ch,4*numero-12) Escr(ch,6) Escr(5,numero) Escr(&#39;/&#39;,numero) Escr(&#39;.&#39;,6) Escr(&#39;p&#39;,-10)Enunciado b)# Escribe llamadas al procedimiento Escr para que cuando se ejecuten produzcan las siguientes salidas:">
   <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="242">
+  <meta itemprop="wordCount" content="241">
   <meta itemprop="keywords" content="Enunciado,Pseudocódigo">
 
 <title>Análisis de llamadas a procedimientos | Ejercicios de Programación</title>
@@ -159,8 +159,7 @@ Escr(ch,4*numero-12) Escr(ch,6) Escr(5,numero) Escr(&#39;/&#39;,numero) Escr(&#3
   <article class="markdown book-article"><h1 id="análisis-de-llamadas-a-procedimientos">Análisis de llamadas a procedimientos<a class="anchor" href="#an%c3%a1lisis-de-llamadas-a-procedimientos">#</a></h1>
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Considera el siguiente procedimiento:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> PROCEDIMIENTO Escr(ch: CARÁCTER, long: ENTERO)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> PROCEDIMIENTO Escr(ch: CARÁCTER, long: ENTERO)
 </span></span><span class="line"><span class="cl"> INICIO
 </span></span><span class="line"><span class="cl">   MIENTRAS long&gt;0 HACER
 </span></span><span class="line"><span class="cl">     ESCRIBIR ch
@@ -168,8 +167,7 @@ Escr(ch,4*numero-12) Escr(ch,6) Escr(5,numero) Escr(&#39;/&#39;,numero) Escr(&#3
 </span></span><span class="line"><span class="cl">   FIN_MIENTRAS
 </span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h3 id="enunciado-a">Enunciado a)<a class="anchor" href="#enunciado-a">#</a></h3>
 <p>Si <code>ch</code> tiene el valor &lsquo;X&rsquo; y <code>numero</code> el valor 5, ¿cuál sería el efecto de ejecutar cada una de las siguientes llamadas al procedimiento?</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Escr(ch,4*numero-12)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Escr(ch,4*numero-12)
 </span></span><span class="line"><span class="cl"> Escr(ch,6)
 </span></span><span class="line"><span class="cl"> Escr(5,numero)
 </span></span><span class="line"><span class="cl"> Escr(&#39;/&#39;,numero)
@@ -190,31 +188,58 @@ Escr(ch,4*numero-12) Escr(ch,6) Escr(5,numero) Escr(&#39;/&#39;,numero) Escr(&#3
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <p>Para dar la solución del ejercicio hay que tener en cuenta que el procedimiento <code>Escr</code> muestra en el dispositivo de salida el contenido de <code>ch</code> tantas veces como indique el parámetro <code>long</code>.</p>
 <h3 id="solución-de-a">Solución de a)<a class="anchor" href="#soluci%c3%b3n-de-a">#</a></h3>
-<p><code>Escr(ch,4*numero-12)</code> |  Muestra el carácter &lsquo;x&rsquo; 8 veces (4*numero-12)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">xxxxxxxx </span></span></code></pre></div><p>&mdash;|&mdash;<br>
-<code>Escr(ch,6)</code> |  Muestra el carácter &lsquo;x&rsquo; 6 veces</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">xxxxxx</span></span></code></pre></div><p><code>Escr(5,numero)</code> |  La llamada <em>no es correcta</em> , porque para ser un carácter tiene que ir entre comillas, por lo tanto tomará <em>5</em> como un entero.<br>
-<code>Escr('/',numero)</code> |  Muestra el carácter &lsquo;/&rsquo; 5 veces</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/////</span></span></code></pre></div><p><code>Escr('.',6)</code> |  Muestra el carácter &lsquo;.&rsquo; 6 veces</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">......</span></span></code></pre></div><p><code>Escr('p',-10)</code> |  No muestra nada ya que -10 es menor que 0 y no entrará dentro del bucle MIENTRAS del procecimiento.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Línea</th>
+          <th>Explicación</th>
+          <th>Salida</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Escr(ch,4*numero-12)</code></td>
+          <td>Muestra el carácter &lsquo;x&rsquo; 8 veces (4*numero-12)</td>
+          <td><code>xxxxxxxx</code></td>
+      </tr>
+      <tr>
+          <td><code>Escr(ch,6)</code></td>
+          <td>Muestra el carácter &lsquo;x&rsquo; 6 veces</td>
+          <td><code>xxxxxx</code></td>
+      </tr>
+      <tr>
+          <td><code>Escr(5,numero)</code></td>
+          <td>La llamada <em>no es correcta</em> , porque para ser un carácter tiene que ir entre comillas, por lo tanto tomará <em>5</em> como un entero.</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>Escr('/',numero)</code></td>
+          <td>Muestra el carácter &lsquo;/&rsquo; 5 veces</td>
+          <td><code>/////</code></td>
+      </tr>
+      <tr>
+          <td><code>Escr('.',6)</code></td>
+          <td>Muestra el carácter &lsquo;.&rsquo; 6 veces</td>
+          <td><code>......</code></td>
+      </tr>
+      <tr>
+          <td><code>Escr('p',-10)</code></td>
+          <td>No muestra nada ya que -10 es menor que 0 y no entrará dentro del bucle MIENTRAS del procecimiento.</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
 <h3 id="solucion-de-b">Solucion de b)<a class="anchor" href="#solucion-de-b">#</a></h3>
 <ol>
-<li>35 guiones sucesivos</li>
+<li><strong>35 guiones sucesivos</strong></li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Escr(&#39;-&#39;,35)</span></span></code></pre></div><ol start="2">
-<li>6 veces tantos espacios en blanco como el valor de <code>numero</code></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Escr(&#39;-&#39;,35)</span></span></code></pre></div><ol start="2">
+<li><strong>6 veces tantos espacios en blanco como el valor de <code>numero</code></strong></li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Escr(&#39; &#39;,6*numero)</span></span></code></pre></div><ol start="3">
-<li>El valor actual de <code>ch</code> 14 veces</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Escr(&#39; &#39;,6*numero)</span></span></code></pre></div><ol start="3">
+<li><strong>El valor actual de <code>ch</code> 14 veces</strong></li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> Escr(ch,14)</span></span></code></pre></div></article>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> Escr(ch,14)</span></span></code></pre></div></article>
  
       
 

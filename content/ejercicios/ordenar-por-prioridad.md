@@ -14,7 +14,6 @@ En una aplicación de gestión de tareas se tienen dos vectores de información.
 
 **Ejemplo:**
 ```text
-
 Vector con los códigos de las tareas:	123	543	276	27	76	34	145
 Vector con las prioridades..........:	8	3	1	2	4	7	5
 

@@ -19,7 +19,6 @@ Realizar un subalgoritmo que dados dos arrays `x` e `y` de `n` reales, calcule l
 
 ###  Solución en pseudocódigo 
 ```text
-
 FUNCION Suma (X, Y, n): REAL
 ENTRADAS:
    X,Y: ARRAY[1...n] DE REALES  _(representan dos vectores matemáticos)_

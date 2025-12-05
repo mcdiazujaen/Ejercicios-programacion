@@ -19,7 +19,6 @@ Un subalgoritmo que dada una matriz cuadrada de enteros, obtenga un vector de re
 
 ###  Diseño en Pseudocódigo por **lperez**
 ```text
-
  PROCEDIMIENTO Diagonales(A, t, VAR B, VAR h)
  ENTRADAS: A: ARRAY[1..t, 1..t] DE ENTEROS, // matriz cuadrada
            t: ENTERO, // número de filas y columnas de A, t>0
@@ -58,7 +57,6 @@ Un subalgoritmo que dada una matriz cuadrada de enteros, obtenga un vector de re
 ```
 ###  Programa en Pascal por **lperez**
 ```text
-
  Procedure Diagonales(var a:matriz;t:integer;var b:vector;var n:integer);
  (* Entradas: a, una matriz cuadrada y t su tama¤o
     Salidas: b, un array de una columna que contiene en cada elemento la suma

@@ -42,7 +42,6 @@ En la función scanf(), se incluye el operador dirección (&) delante de las var
 
 ###  Solucion en Pseudocódigo
 ```text
-
 ALGORITMO mascota
 ENTRADAS
    edad: ENTERO
