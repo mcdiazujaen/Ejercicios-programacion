@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="es-es" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Matriz Simétrica Subalgoritmo# Enunciado# Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
+<meta name="description" content="Matriz Simétrica Subalgoritmo Enunciado Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
 Ejemplo de matriz simétrica:
-1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FIN Comentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.
+1 4 7 4 2 9 7 9 3 Soluciones Diseño en Pseudocódigo Diseño 1 en Pseudocódigo por lperez FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 2 en Pseudocódigo por lperez FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 4 en Pseudocódigo por lperez PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FIN Comentario En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/matriz-sim-trica-subalgoritmo/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/matriz-sim-trica-subalgoritmo/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Matriz Simétrica Subalgoritmo">
-	<meta property="og:description" content="Matriz Simétrica Subalgoritmo# Enunciado# Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
+	<meta property="og:description" content="Matriz Simétrica Subalgoritmo Enunciado Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
 Ejemplo de matriz simétrica:
-1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FIN Comentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.">
+1 4 7 4 2 9 7 9 3 Soluciones Diseño en Pseudocódigo Diseño 1 en Pseudocódigo por lperez FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 2 en Pseudocódigo por lperez FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 4 en Pseudocódigo por lperez PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FIN Comentario En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="ejercicios">
@@ -29,26 +34,25 @@ Ejemplo de matriz simétrica:
 
 
 	<meta itemprop="name" content="Matriz Simétrica Subalgoritmo">
-	<meta itemprop="description" content="Matriz Simétrica Subalgoritmo# Enunciado# Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
+	<meta itemprop="description" content="Matriz Simétrica Subalgoritmo Enunciado Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.
 Ejemplo de matriz simétrica:
-1 4 7 4 2 9 7 9 3 Soluciones# Diseño en Pseudocódigo# Diseño 1 en Pseudocódigo por lperez# FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 2 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez# FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 4 en Pseudocódigo por lperez# PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FIN Comentario# En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.">
+1 4 7 4 2 9 7 9 3 Soluciones Diseño en Pseudocódigo Diseño 1 en Pseudocódigo por lperez FUNCION Calculo_simetrica(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 2 en Pseudocódigo por lperez FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD PARA i=1 HASTA tam HACER PARA j=i&#43;1 HASTA tam HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 3 en Pseudocódigo por lperez FUNCION Calculo_simetria(A, tam): LOGICO ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; p:LOGICO INICIO p&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES p&lt;--FALSO FIN_SI FIN_PARA FIN_PARA DEVOLVER p FIN Diseño 4 en Pseudocódigo por lperez PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática cuadrada. tam: ENTERO, nº de filas y columnas de A, tam&gt;0. SALIDAS: simetria:LOGICO, VERDAD la matriz A es simétrica y FALSO si no lo es. VARIABLES: i, j: ENTERO; INICIO simetria&lt;--VERDAD i&lt;--1 MIENTRAS (i&lt;= tam) AND (p) HACER j&lt;--i&#43;1 MIENTRAS (j&lt;=tam ) AND (p) HACER SI A(i,j)&lt;&gt;A(j,i) ENTONCES simetria&lt;--FALSO FIN_SI FIN_PARA FIN_PARA FIN Comentario En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="744">
 	<meta itemprop="keywords" content="Sin_matlab">
 
-<title>Matriz Simétrica Subalgoritmo | Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.png" >
+<title>Matriz Simétrica Subalgoritmo • Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/matriz-sim-trica-subalgoritmo/">
-<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
+<link rel="canonical" href="https://example.org/ejercicios/matriz-sim-trica-subalgoritmo/">
+<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
-
-
-
+<script type="module" src="/en.search.min.f08ce34083f0b58f4a4dcd9350a446fb56ae7c128811e3f4ab6161c0ddfa7aa8.js" integrity="sha256-8IzjQIPwtY9KTc2TUKRG&#43;1aufBKIEeP0q2FhwN36eqg=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -88,12 +92,11 @@ pre code,
 </style>
 
 </head>
+
 <body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
+  <div class="book-container flex">
     
-<aside class="book-menu">
+<aside class="book-menu" aria-label="Menu">
   <div class="book-menu-content">
     
   <nav>
@@ -139,15 +142,14 @@ pre code,
 
 
 <div class="book-search hidden">
-  <input id="book-search-input" type="text" 
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
     placeholder="Search"
     aria-label="Search"
-    maxlength="64" data-hotkeys="s/" />
+    maxlength="64" />
   <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+  <ul id="book-search-results" aria-live="polite"></ul>
 </div>
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
 
 
 
@@ -172,47 +174,58 @@ pre code,
 </aside>
  
 
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
   </label>
 
-  <h3>Matriz Simétrica Subalgoritmo</h3>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    
+  </a>
+</h2>
 
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+
+.book-brand img {
+    height: 3.5em;
+    width: 4.5em;
+}
+</style>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
   </label>
+  
 </div>
 
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#diseño-en-pseudocódigo">Diseño en Pseudocódigo</a></li>
-        <li><a href="#programa-en-c">Programa en C</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
  
-      </header>
+    </header>
 
+    <main class="book-page">
       
   
 <div class="exercise-metadata">
@@ -347,8 +360,11 @@ a.badge:hover {
 
 
       
-  <article class="markdown book-article"><h1 id="matriz-simétrica-subalgoritmo">Matriz Simétrica Subalgoritmo<a class="anchor" href="#matriz-sim%c3%a9trica-subalgoritmo">#</a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
+  
+
+      
+  <article class="markdown book-article"><h1 id="matriz-simétrica-subalgoritmo">Matriz Simétrica Subalgoritmo<a class="anchor" href="#matriz-sim%c3%a9trica-subalgoritmo" aria-label="Link"></a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
 <p>Diseñar un subalgoritmo que dada una matriz cuadrada y su tamaño nos diga si es o no simétrica.</p>
 <p>Ejemplo de matriz simétrica:</p>
 <table>
@@ -372,9 +388,9 @@ a.badge:hover {
 			</tr>
 	</tbody>
 </table>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
-<h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo">#</a></h3>
-<h4 id="diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
+<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
+<h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo" aria-label="Link"></a></h3>
+<h4 id="diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-en-pseudoc%c3%b3digo-por-lperez" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FUNCION Calculo_simetrica(A, tam): LOGICO
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
 </span></span><span class="line"><span class="cl">                            cuadrada.
@@ -391,7 +407,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">      FIN_PARA
 </span></span><span class="line"><span class="cl">   FIN_PARA
 </span></span><span class="line"><span class="cl">   DEVOLVER p
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-en-pseudoc%c3%b3digo-por-lperez" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FUNCION Calculo_simetria(A, tam): LOGICO
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
 </span></span><span class="line"><span class="cl">                            cuadrada.
@@ -408,7 +424,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">     FIN_PARA
 </span></span><span class="line"><span class="cl">  FIN_PARA
 </span></span><span class="line"><span class="cl">  DEVOLVER p
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-3-en-pseudocódigo-por-lperez">Diseño 3 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-3-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-3-en-pseudocódigo-por-lperez">Diseño 3 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-3-en-pseudoc%c3%b3digo-por-lperez" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FUNCION Calculo_simetria(A, tam): LOGICO
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
 </span></span><span class="line"><span class="cl">                            cuadrada.
@@ -427,7 +443,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">     FIN_PARA
 </span></span><span class="line"><span class="cl">  FIN_PARA
 </span></span><span class="line"><span class="cl">  DEVOLVER p
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-4-en-pseudocódigo-por-lperez">Diseño 4 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-4-en-pseudoc%c3%b3digo-por-lperez">#</a></h4>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="diseño-4-en-pseudocódigo-por-lperez">Diseño 4 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-4-en-pseudoc%c3%b3digo-por-lperez" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PROCEDIMIENTO Calculo_simetria(A, tam, VAR simetria
 </span></span><span class="line"><span class="cl">ENTRADAS: A: ARRAY [1..tam, 1..tam] DE ENTEROS; matriz matemática 
 </span></span><span class="line"><span class="cl">                            cuadrada.
@@ -445,14 +461,14 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">        FIN_SI
 </span></span><span class="line"><span class="cl">     FIN_PARA
 </span></span><span class="line"><span class="cl">  FIN_PARA
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario">#</a></h4>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario" aria-label="Link"></a></h4>
 <p>En la primera solución se examinan todos los elementos de la matriz, de forma que comparará dos veces algunos elementos.</p>
 <p>En la segunda solución no compara dos veces los mismos elementos ya que se recorre los elementos que están por encima de la diagonal y compara a cada uno con su simétrico.</p>
 <p>Tanto en uno como en otro de los anteriores, si se encontrara un elemento que no cumple la simetría el subalgoritmo no terminaría sino que seguiría con las comparaciones hasta que el ciclo acabase (ya que se trata de ciclos PARA).</p>
 <p>En la tercer solución se recorre los elementos sobre la diagonal principal, igual que en la segunda solución, pero hace que el subalgoritmo acabe en el momento que encuentra dos elementos que no cumplen con la simetría.</p>
 <p>La cuarta solución es análoga a la tercera pero realizado con un procedimiento en lugar de con una función.</p>
-<h3 id="programa-en-c">Programa en C<a class="anchor" href="#programa-en-c">#</a></h3>
-<h4 id="solución-1-en-c">Solución 1 en C<a class="anchor" href="#soluci%c3%b3n-1-en-c">#</a></h4>
+<h3 id="programa-en-c">Programa en C<a class="anchor" href="#programa-en-c" aria-label="Link"></a></h3>
+<h4 id="solución-1-en-c">Solución 1 en C<a class="anchor" href="#soluci%c3%b3n-1-en-c" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//CONSTANTES: 
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define VERDAD 1
@@ -477,7 +493,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="k">return</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h4 id="solución-2-en-c">Solución 2 en C<a class="anchor" href="#soluci%c3%b3n-2-en-c">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h4 id="solución-2-en-c">Solución 2 en C<a class="anchor" href="#soluci%c3%b3n-2-en-c" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">//CONSTANTES: 
 </span></span><span class="line"><span class="cl">#define VERDAD 1
 </span></span><span class="line"><span class="cl">#define FALSO  0
@@ -501,7 +517,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">      }
 </span></span><span class="line"><span class="cl">   }
 </span></span><span class="line"><span class="cl">   return(p);
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h4 id="solución-3-en-c">Solución 3 en C<a class="anchor" href="#soluci%c3%b3n-3-en-c">#</a></h4>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h4 id="solución-3-en-c">Solución 3 en C<a class="anchor" href="#soluci%c3%b3n-3-en-c" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">//CONSTANTES: 
 </span></span><span class="line"><span class="cl">#define VERDAD 1
 </span></span><span class="line"><span class="cl">#define FALSO  0
@@ -527,7 +543,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">     }
 </span></span><span class="line"><span class="cl">  }
 </span></span><span class="line"><span class="cl">  return(p);
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h4 id="solución-4-en-c">Solución 4 en C<a class="anchor" href="#soluci%c3%b3n-4-en-c">#</a></h4>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h4 id="solución-4-en-c">Solución 4 en C<a class="anchor" href="#soluci%c3%b3n-4-en-c" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">//CONSTANTES: 
 </span></span><span class="line"><span class="cl">#define VERDAD 1
 </span></span><span class="line"><span class="cl">#define FALSO  0
@@ -569,18 +585,11 @@ a.badge:hover {
 
 </div>
 
-
-
-
-
-  
-  
-  
-  <div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between">
     <span>
     
       <a href="/ejercicios/matriz-sim-trica/" class="flex align-center">
-        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
         <span>Matriz simétrica</span>
       </a>
     
@@ -589,13 +598,11 @@ a.badge:hover {
     
       <a href="/ejercicios/matriz-transpuesta/" class="flex align-center">
         <span>Matriz transpuesta</span>
-        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
       </a>
     
     </span>
   </div>
-  
-
 
  
         
@@ -606,19 +613,18 @@ a.badge:hover {
   
  
         
-  
   
     <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
   
 
       </footer>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
 
     
   
-  <aside class="book-toc">
+  <aside class="book-toc" aria-label="Table of Contents">
     <div class="book-toc-content">
       
   
@@ -636,15 +642,21 @@ a.badge:hover {
 
 
 
+
+
+
+
     </div>
   </aside>
   
  
-  </main>
+  </div>
 
   
 </body>
 </html>
+
+
 
 
 

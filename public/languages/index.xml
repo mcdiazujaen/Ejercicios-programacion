@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Languages on Ejercicios de Programación</title>
-		<link>http://localhost:1313/languages/</link>
+		<link>https://example.org/languages/</link>
 		<description>Recent content in Languages on Ejercicios de Programación</description>
 		<generator>Hugo</generator>
 		<language>es-es</language>
@@ -12,33 +12,33 @@
 		
 			<lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/languages/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://example.org/languages/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>C</title>
-				<link>http://localhost:1313/languages/c/</link>
+				<link>https://example.org/languages/c/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/languages/c/</guid>
+				<guid>https://example.org/languages/c/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Matlab</title>
-				<link>http://localhost:1313/languages/matlab/</link>
+				<link>https://example.org/languages/matlab/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/languages/matlab/</guid>
+				<guid>https://example.org/languages/matlab/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Pascal</title>
-				<link>http://localhost:1313/languages/pascal/</link>
+				<link>https://example.org/languages/pascal/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/languages/pascal/</guid>
+				<guid>https://example.org/languages/pascal/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Pseudocódigo</title>
-				<link>http://localhost:1313/languages/pseudoc%C3%B3digo/</link>
+				<link>https://example.org/languages/pseudoc%C3%B3digo/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/languages/pseudoc%C3%B3digo/</guid>
+				<guid>https://example.org/languages/pseudoc%C3%B3digo/</guid>
 				<description></description>
 			</item>
 	</channel>

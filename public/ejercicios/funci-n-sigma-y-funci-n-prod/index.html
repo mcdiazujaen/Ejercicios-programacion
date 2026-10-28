@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="es-es" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Función SIGMA y función PROD# Enunciados# Función SIGMA# Diseñar una función SIGMA para calcular la suma de los n elementos de un vector X (X y n son los parámetros de la función).
-Función PROD# Diseñar la función PROD para calcular el producto de los n elementos de un vector X (de nuevo X y n son los parámetros de la función).
-Soluciones# Diseño en pseudocódigo# Función SIGMA# FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: X: ARRAY DE REALES _(Elementos que se van a sumar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a sumar)_ SALIDA: suma: REAL VARIABLES: i: ENTERO INICIO suma &lt;-- 0 PARA i &lt;-- 0 HASTA n CON INCREMENTO DE 1 HACER suma &lt;-- suma &#43; X(i) FIN PARA DEVOLVER (suma) FIN Función PROD# FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: (Están definidas en la cabecera de la función) X: ARRAY DE REALES _(Elementos que se van a multiplicar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a multiplicar)_ SALIDA: producto: REAL VARIABLES: i: ENTERO INICIO producto &lt;-- 1 PARA i &lt;-- 1 HASTA n CON INCREMENTO DE 1 HACER producto &lt;-- producto * X(i) FIN PARA DEVOLVER(producto) FIN Programa en C# Función SIGMA# float SIGMA(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (Elementos que se van a sumar, la primera posición del array es 0)_ _int n ------ &gt; (Número de elementos que se van a sumar)_ */ //SALIDAS float suma; //VARIABLES int i; suma=0; for(i=0; i&lt;=n; i&#43;&#43;){ suma=suma&#43;X[i]; } return(suma); } Función PROD# float PROD(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (es un array de reales,cuya primera posicion es 0)_ _int n ------ &gt; (número de elementos que se van a multiplicar)_ */ //SALIDAS: float producto; //VARIABLES: int i; producto=1; for(i=1; i&lt;=n; i&#43;&#43;){ producto=producto*X[i]; } return(producto); } Comentario# Las sección ENTRADAS de ambas funciones está totalmente comentada, ya que en C no se puede repetir la declaración de los parámetros (X, n) dentro de la función.
+<meta name="description" content="Función SIGMA y función PROD Enunciados Función SIGMA Diseñar una función SIGMA para calcular la suma de los n elementos de un vector X (X y n son los parámetros de la función).
+Función PROD Diseñar la función PROD para calcular el producto de los n elementos de un vector X (de nuevo X y n son los parámetros de la función).
+Soluciones Diseño en pseudocódigo Función SIGMA FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: X: ARRAY DE REALES _(Elementos que se van a sumar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a sumar)_ SALIDA: suma: REAL VARIABLES: i: ENTERO INICIO suma &lt;-- 0 PARA i &lt;-- 0 HASTA n CON INCREMENTO DE 1 HACER suma &lt;-- suma &#43; X(i) FIN PARA DEVOLVER (suma) FIN Función PROD FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: (Están definidas en la cabecera de la función) X: ARRAY DE REALES _(Elementos que se van a multiplicar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a multiplicar)_ SALIDA: producto: REAL VARIABLES: i: ENTERO INICIO producto &lt;-- 1 PARA i &lt;-- 1 HASTA n CON INCREMENTO DE 1 HACER producto &lt;-- producto * X(i) FIN PARA DEVOLVER(producto) FIN Programa en C Función SIGMA float SIGMA(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (Elementos que se van a sumar, la primera posición del array es 0)_ _int n ------ &gt; (Número de elementos que se van a sumar)_ */ //SALIDAS float suma; //VARIABLES int i; suma=0; for(i=0; i&lt;=n; i&#43;&#43;){ suma=suma&#43;X[i]; } return(suma); } Función PROD float PROD(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (es un array de reales,cuya primera posicion es 0)_ _int n ------ &gt; (número de elementos que se van a multiplicar)_ */ //SALIDAS: float producto; //VARIABLES: int i; producto=1; for(i=1; i&lt;=n; i&#43;&#43;){ producto=producto*X[i]; } return(producto); } Comentario Las sección ENTRADAS de ambas funciones está totalmente comentada, ya que en C no se puede repetir la declaración de los parámetros (X, n) dentro de la función.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/funci-n-sigma-y-funci-n-prod/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/funci-n-sigma-y-funci-n-prod/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Función SIGMA y función PROD">
-	<meta property="og:description" content="Función SIGMA y función PROD# Enunciados# Función SIGMA# Diseñar una función SIGMA para calcular la suma de los n elementos de un vector X (X y n son los parámetros de la función).
-Función PROD# Diseñar la función PROD para calcular el producto de los n elementos de un vector X (de nuevo X y n son los parámetros de la función).
-Soluciones# Diseño en pseudocódigo# Función SIGMA# FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: X: ARRAY DE REALES _(Elementos que se van a sumar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a sumar)_ SALIDA: suma: REAL VARIABLES: i: ENTERO INICIO suma &lt;-- 0 PARA i &lt;-- 0 HASTA n CON INCREMENTO DE 1 HACER suma &lt;-- suma &#43; X(i) FIN PARA DEVOLVER (suma) FIN Función PROD# FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: (Están definidas en la cabecera de la función) X: ARRAY DE REALES _(Elementos que se van a multiplicar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a multiplicar)_ SALIDA: producto: REAL VARIABLES: i: ENTERO INICIO producto &lt;-- 1 PARA i &lt;-- 1 HASTA n CON INCREMENTO DE 1 HACER producto &lt;-- producto * X(i) FIN PARA DEVOLVER(producto) FIN Programa en C# Función SIGMA# float SIGMA(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (Elementos que se van a sumar, la primera posición del array es 0)_ _int n ------ &gt; (Número de elementos que se van a sumar)_ */ //SALIDAS float suma; //VARIABLES int i; suma=0; for(i=0; i&lt;=n; i&#43;&#43;){ suma=suma&#43;X[i]; } return(suma); } Función PROD# float PROD(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (es un array de reales,cuya primera posicion es 0)_ _int n ------ &gt; (número de elementos que se van a multiplicar)_ */ //SALIDAS: float producto; //VARIABLES: int i; producto=1; for(i=1; i&lt;=n; i&#43;&#43;){ producto=producto*X[i]; } return(producto); } Comentario# Las sección ENTRADAS de ambas funciones está totalmente comentada, ya que en C no se puede repetir la declaración de los parámetros (X, n) dentro de la función.">
+	<meta property="og:description" content="Función SIGMA y función PROD Enunciados Función SIGMA Diseñar una función SIGMA para calcular la suma de los n elementos de un vector X (X y n son los parámetros de la función).
+Función PROD Diseñar la función PROD para calcular el producto de los n elementos de un vector X (de nuevo X y n son los parámetros de la función).
+Soluciones Diseño en pseudocódigo Función SIGMA FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: X: ARRAY DE REALES _(Elementos que se van a sumar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a sumar)_ SALIDA: suma: REAL VARIABLES: i: ENTERO INICIO suma &lt;-- 0 PARA i &lt;-- 0 HASTA n CON INCREMENTO DE 1 HACER suma &lt;-- suma &#43; X(i) FIN PARA DEVOLVER (suma) FIN Función PROD FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: (Están definidas en la cabecera de la función) X: ARRAY DE REALES _(Elementos que se van a multiplicar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a multiplicar)_ SALIDA: producto: REAL VARIABLES: i: ENTERO INICIO producto &lt;-- 1 PARA i &lt;-- 1 HASTA n CON INCREMENTO DE 1 HACER producto &lt;-- producto * X(i) FIN PARA DEVOLVER(producto) FIN Programa en C Función SIGMA float SIGMA(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (Elementos que se van a sumar, la primera posición del array es 0)_ _int n ------ &gt; (Número de elementos que se van a sumar)_ */ //SALIDAS float suma; //VARIABLES int i; suma=0; for(i=0; i&lt;=n; i&#43;&#43;){ suma=suma&#43;X[i]; } return(suma); } Función PROD float PROD(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (es un array de reales,cuya primera posicion es 0)_ _int n ------ &gt; (número de elementos que se van a multiplicar)_ */ //SALIDAS: float producto; //VARIABLES: int i; producto=1; for(i=1; i&lt;=n; i&#43;&#43;){ producto=producto*X[i]; } return(producto); } Comentario Las sección ENTRADAS de ambas funciones está totalmente comentada, ya que en C no se puede repetir la declaración de los parámetros (X, n) dentro de la función.">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="ejercicios">
@@ -29,26 +34,25 @@ Soluciones# Diseño en pseudocódigo# Función SIGMA# FUNCION SIGMA (VAR X: ARRA
 
 
 	<meta itemprop="name" content="Función SIGMA y función PROD">
-	<meta itemprop="description" content="Función SIGMA y función PROD# Enunciados# Función SIGMA# Diseñar una función SIGMA para calcular la suma de los n elementos de un vector X (X y n son los parámetros de la función).
-Función PROD# Diseñar la función PROD para calcular el producto de los n elementos de un vector X (de nuevo X y n son los parámetros de la función).
-Soluciones# Diseño en pseudocódigo# Función SIGMA# FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: X: ARRAY DE REALES _(Elementos que se van a sumar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a sumar)_ SALIDA: suma: REAL VARIABLES: i: ENTERO INICIO suma &lt;-- 0 PARA i &lt;-- 0 HASTA n CON INCREMENTO DE 1 HACER suma &lt;-- suma &#43; X(i) FIN PARA DEVOLVER (suma) FIN Función PROD# FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: (Están definidas en la cabecera de la función) X: ARRAY DE REALES _(Elementos que se van a multiplicar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a multiplicar)_ SALIDA: producto: REAL VARIABLES: i: ENTERO INICIO producto &lt;-- 1 PARA i &lt;-- 1 HASTA n CON INCREMENTO DE 1 HACER producto &lt;-- producto * X(i) FIN PARA DEVOLVER(producto) FIN Programa en C# Función SIGMA# float SIGMA(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (Elementos que se van a sumar, la primera posición del array es 0)_ _int n ------ &gt; (Número de elementos que se van a sumar)_ */ //SALIDAS float suma; //VARIABLES int i; suma=0; for(i=0; i&lt;=n; i&#43;&#43;){ suma=suma&#43;X[i]; } return(suma); } Función PROD# float PROD(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (es un array de reales,cuya primera posicion es 0)_ _int n ------ &gt; (número de elementos que se van a multiplicar)_ */ //SALIDAS: float producto; //VARIABLES: int i; producto=1; for(i=1; i&lt;=n; i&#43;&#43;){ producto=producto*X[i]; } return(producto); } Comentario# Las sección ENTRADAS de ambas funciones está totalmente comentada, ya que en C no se puede repetir la declaración de los parámetros (X, n) dentro de la función.">
+	<meta itemprop="description" content="Función SIGMA y función PROD Enunciados Función SIGMA Diseñar una función SIGMA para calcular la suma de los n elementos de un vector X (X y n son los parámetros de la función).
+Función PROD Diseñar la función PROD para calcular el producto de los n elementos de un vector X (de nuevo X y n son los parámetros de la función).
+Soluciones Diseño en pseudocódigo Función SIGMA FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: X: ARRAY DE REALES _(Elementos que se van a sumar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a sumar)_ SALIDA: suma: REAL VARIABLES: i: ENTERO INICIO suma &lt;-- 0 PARA i &lt;-- 0 HASTA n CON INCREMENTO DE 1 HACER suma &lt;-- suma &#43; X(i) FIN PARA DEVOLVER (suma) FIN Función PROD FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL ENTRADAS: (Están definidas en la cabecera de la función) X: ARRAY DE REALES _(Elementos que se van a multiplicar, la primera posición del array es 0)_ n: ENTERO _(Número de elementos que se van a multiplicar)_ SALIDA: producto: REAL VARIABLES: i: ENTERO INICIO producto &lt;-- 1 PARA i &lt;-- 1 HASTA n CON INCREMENTO DE 1 HACER producto &lt;-- producto * X(i) FIN PARA DEVOLVER(producto) FIN Programa en C Función SIGMA float SIGMA(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (Elementos que se van a sumar, la primera posición del array es 0)_ _int n ------ &gt; (Número de elementos que se van a sumar)_ */ //SALIDAS float suma; //VARIABLES int i; suma=0; for(i=0; i&lt;=n; i&#43;&#43;){ suma=suma&#43;X[i]; } return(suma); } Función PROD float PROD(float X[], int n){ /*ENTRADAS: _float X[] -- &gt; (es un array de reales,cuya primera posicion es 0)_ _int n ------ &gt; (número de elementos que se van a multiplicar)_ */ //SALIDAS: float producto; //VARIABLES: int i; producto=1; for(i=1; i&lt;=n; i&#43;&#43;){ producto=producto*X[i]; } return(producto); } Comentario Las sección ENTRADAS de ambas funciones está totalmente comentada, ya que en C no se puede repetir la declaración de los parámetros (X, n) dentro de la función.">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="347">
 	<meta itemprop="keywords" content="Sin_matlab">
 
-<title>Función SIGMA y función PROD | Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.png" >
+<title>Función SIGMA y función PROD • Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/funci-n-sigma-y-funci-n-prod/">
-<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
+<link rel="canonical" href="https://example.org/ejercicios/funci-n-sigma-y-funci-n-prod/">
+<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
-
-
-
+<script type="module" src="/en.search.min.f08ce34083f0b58f4a4dcd9350a446fb56ae7c128811e3f4ab6161c0ddfa7aa8.js" integrity="sha256-8IzjQIPwtY9KTc2TUKRG&#43;1aufBKIEeP0q2FhwN36eqg=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -88,12 +92,11 @@ pre code,
 </style>
 
 </head>
+
 <body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
+  <div class="book-container flex">
     
-<aside class="book-menu">
+<aside class="book-menu" aria-label="Menu">
   <div class="book-menu-content">
     
   <nav>
@@ -139,15 +142,14 @@ pre code,
 
 
 <div class="book-search hidden">
-  <input id="book-search-input" type="text" 
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
     placeholder="Search"
     aria-label="Search"
-    maxlength="64" data-hotkeys="s/" />
+    maxlength="64" />
   <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+  <ul id="book-search-results" aria-live="polite"></ul>
 </div>
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
 
 
 
@@ -172,52 +174,58 @@ pre code,
 </aside>
  
 
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
   </label>
 
-  <h3>Función SIGMA y función PROD</h3>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    
+  </a>
+</h2>
 
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+
+.book-brand img {
+    height: 3.5em;
+    width: 4.5em;
+}
+</style>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
   </label>
+  
 </div>
 
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciados">Enunciados</a>
-      <ul>
-        <li><a href="#función-sigma">Función SIGMA</a></li>
-        <li><a href="#función-prod">Función PROD</a></li>
-      </ul>
-    </li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#diseño-en-pseudocódigo">Diseño en pseudocódigo</a></li>
-        <li><a href="#programa-en-c">Programa en C</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
  
-      </header>
+    </header>
 
+    <main class="book-page">
       
   
 <div class="exercise-metadata">
@@ -345,15 +353,18 @@ a.badge:hover {
 
 
       
-  <article class="markdown book-article"><h1 id="función-sigma-y-función-prod">Función SIGMA y función PROD<a class="anchor" href="#funci%c3%b3n-sigma-y-funci%c3%b3n-prod">#</a></h1>
-<h2 id="enunciados">Enunciados<a class="anchor" href="#enunciados">#</a></h2>
-<h3 id="función-sigma">Función SIGMA<a class="anchor" href="#funci%c3%b3n-sigma">#</a></h3>
+  
+
+      
+  <article class="markdown book-article"><h1 id="función-sigma-y-función-prod">Función SIGMA y función PROD<a class="anchor" href="#funci%c3%b3n-sigma-y-funci%c3%b3n-prod" aria-label="Link"></a></h1>
+<h2 id="enunciados">Enunciados<a class="anchor" href="#enunciados" aria-label="Link"></a></h2>
+<h3 id="función-sigma">Función SIGMA<a class="anchor" href="#funci%c3%b3n-sigma" aria-label="Link"></a></h3>
 <p>Diseñar una función SIGMA para calcular la suma de los <em>n</em> elementos de un vector X (X y n son los parámetros de la función).</p>
-<h3 id="función-prod">Función PROD<a class="anchor" href="#funci%c3%b3n-prod">#</a></h3>
+<h3 id="función-prod">Función PROD<a class="anchor" href="#funci%c3%b3n-prod" aria-label="Link"></a></h3>
 <p>Diseñar la función PROD para calcular el producto de los <em>n</em> elementos de un vector X (de nuevo X y n son los parámetros de la función).</p>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
-<h3 id="diseño-en-pseudocódigo">Diseño en pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo">#</a></h3>
-<h4 id="función-sigma-1">Función SIGMA<a class="anchor" href="#funci%c3%b3n-sigma-1">#</a></h4>
+<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
+<h3 id="diseño-en-pseudocódigo">Diseño en pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo" aria-label="Link"></a></h3>
+<h4 id="función-sigma-1">Función SIGMA<a class="anchor" href="#funci%c3%b3n-sigma-1" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> FUNCION SIGMA (VAR X: ARRAY DE REALES; n: ENTERO): REAL
 </span></span><span class="line"><span class="cl"> ENTRADAS:
 </span></span><span class="line"><span class="cl">   X: ARRAY DE REALES  _(Elementos que se van a sumar, la primera posición del array es 0)_
@@ -368,7 +379,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">     suma &lt;-- suma + X(i)
 </span></span><span class="line"><span class="cl">   FIN PARA
 </span></span><span class="line"><span class="cl">   DEVOLVER (suma)
-</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h4 id="función-prod-1">Función PROD<a class="anchor" href="#funci%c3%b3n-prod-1">#</a></h4>
+</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h4 id="función-prod-1">Función PROD<a class="anchor" href="#funci%c3%b3n-prod-1" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> FUNCION PROD (VAR X: ARRAY DE REALES; n: ENTERO): REAL
 </span></span><span class="line"><span class="cl"> ENTRADAS: (Están definidas en la cabecera de la función)
 </span></span><span class="line"><span class="cl">   X: ARRAY DE REALES  _(Elementos que se van a multiplicar, la primera posición del array es 0)_
@@ -383,8 +394,8 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">     producto &lt;-- producto * X(i)
 </span></span><span class="line"><span class="cl">   FIN PARA
 </span></span><span class="line"><span class="cl">   DEVOLVER(producto)
-</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h3 id="programa-en-c">Programa en C<a class="anchor" href="#programa-en-c">#</a></h3>
-<h4 id="función-sigma-2">Función SIGMA<a class="anchor" href="#funci%c3%b3n-sigma-2">#</a></h4>
+</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h3 id="programa-en-c">Programa en C<a class="anchor" href="#programa-en-c" aria-label="Link"></a></h3>
+<h4 id="función-sigma-2">Función SIGMA<a class="anchor" href="#funci%c3%b3n-sigma-2" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="nf">SIGMA</span><span class="p">(</span><span class="kt">float</span> <span class="n">X</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl"><span class="cm">/*ENTRADAS:
@@ -401,7 +412,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">      <span class="n">suma</span><span class="o">=</span><span class="n">suma</span><span class="o">+</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span><span class="p">(</span><span class="n">suma</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h4 id="función-prod-2">Función PROD<a class="anchor" href="#funci%c3%b3n-prod-2">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h4 id="función-prod-2">Función PROD<a class="anchor" href="#funci%c3%b3n-prod-2" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> float PROD(float X[], int n){
 </span></span><span class="line"><span class="cl"> /*ENTRADAS:
 </span></span><span class="line"><span class="cl">  _float X[] -- &gt; (es un array de reales,cuya primera posicion es 0)_
@@ -417,7 +428,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">     producto=producto*X[i];
 </span></span><span class="line"><span class="cl">   }
 </span></span><span class="line"><span class="cl">   return(producto);
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario">#</a></h4>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario" aria-label="Link"></a></h4>
 <p>Las sección <code>ENTRADAS</code> de ambas funciones está totalmente comentada, ya que en C no se puede repetir la declaración de los parámetros (<code>X, n</code>) dentro de la función.</p>
 </article>
  
@@ -437,18 +448,11 @@ a.badge:hover {
 
 </div>
 
-
-
-
-
-  
-  
-  
-  <div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between">
     <span>
     
       <a href="/ejercicios/funci-n-que-comprueba-si-los-elementos-de-una-matriz-son-distintos/" class="flex align-center">
-        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
         <span>Función que comprueba si los elementos de una Matriz son distintos</span>
       </a>
     
@@ -457,13 +461,11 @@ a.badge:hover {
     
       <a href="/ejercicios/funci-n-sin-argumentos/" class="flex align-center">
         <span>Función sin argumentos</span>
-        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
       </a>
     
     </span>
   </div>
-  
-
 
  
         
@@ -474,19 +476,18 @@ a.badge:hover {
   
  
         
-  
   
     <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
   
 
       </footer>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
 
     
   
-  <aside class="book-toc">
+  <aside class="book-toc" aria-label="Table of Contents">
     <div class="book-toc-content">
       
   
@@ -509,15 +510,21 @@ a.badge:hover {
 
 
 
+
+
+
+
     </div>
   </aside>
   
  
-  </main>
+  </div>
 
   
 </body>
 </html>
+
+
 
 
 

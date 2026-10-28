@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="es-es" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Polinomios# Enunciado# Una posible representación para un polinomio P es un vector en el que en cada celda se encuentra almacenado el coeficiente con grado igual a la posición-1 que ocupa en dicho vector. Un ejemplo sería el polinomio de grado 6, P(x)=9x6-5x5&#43;4x3-18x&#43;1 que vendría representado mediante un vector de la forma:
+<meta name="description" content="Polinomios Enunciado Una posible representación para un polinomio P es un vector en el que en cada celda se encuentra almacenado el coeficiente con grado igual a la posición-1 que ocupa en dicho vector. Un ejemplo sería el polinomio de grado 6, P(x)=9x6-5x5&#43;4x3-18x&#43;1 que vendría representado mediante un vector de la forma:
 1 | -18 | 0 | 4 | 0 | -5 | 9 —|—|—|—|—|—|—
 Utilizando dicha representación, realizar en Matlab los siguientes apartados:
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/polinomios/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/polinomios/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Polinomios">
-	<meta property="og:description" content="Polinomios# Enunciado# Una posible representación para un polinomio P es un vector en el que en cada celda se encuentra almacenado el coeficiente con grado igual a la posición-1 que ocupa en dicho vector. Un ejemplo sería el polinomio de grado 6, P(x)=9x6-5x5&#43;4x3-18x&#43;1 que vendría representado mediante un vector de la forma:
+	<meta property="og:description" content="Polinomios Enunciado Una posible representación para un polinomio P es un vector en el que en cada celda se encuentra almacenado el coeficiente con grado igual a la posición-1 que ocupa en dicho vector. Un ejemplo sería el polinomio de grado 6, P(x)=9x6-5x5&#43;4x3-18x&#43;1 que vendría representado mediante un vector de la forma:
 1 | -18 | 0 | 4 | 0 | -5 | 9 —|—|—|—|—|—|—
 Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 	<meta property="og:locale" content="es_es">
@@ -28,7 +33,7 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 
 
 	<meta itemprop="name" content="Polinomios">
-	<meta itemprop="description" content="Polinomios# Enunciado# Una posible representación para un polinomio P es un vector en el que en cada celda se encuentra almacenado el coeficiente con grado igual a la posición-1 que ocupa en dicho vector. Un ejemplo sería el polinomio de grado 6, P(x)=9x6-5x5&#43;4x3-18x&#43;1 que vendría representado mediante un vector de la forma:
+	<meta itemprop="description" content="Polinomios Enunciado Una posible representación para un polinomio P es un vector en el que en cada celda se encuentra almacenado el coeficiente con grado igual a la posición-1 que ocupa en dicho vector. Un ejemplo sería el polinomio de grado 6, P(x)=9x6-5x5&#43;4x3-18x&#43;1 que vendría representado mediante un vector de la forma:
 1 | -18 | 0 | 4 | 0 | -5 | 9 —|—|—|—|—|—|—
 Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
@@ -36,18 +41,17 @@ Utilizando dicha representación, realizar en Matlab los siguientes apartados:">
 	<meta itemprop="wordCount" content="412">
 	<meta itemprop="keywords" content="Enunciado,Matlab">
 
-<title>Polinomios | Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.png" >
+<title>Polinomios • Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/polinomios/">
-<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
+<link rel="canonical" href="https://example.org/ejercicios/polinomios/">
+<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
-
-
-
+<script type="module" src="/en.search.min.f08ce34083f0b58f4a4dcd9350a446fb56ae7c128811e3f4ab6161c0ddfa7aa8.js" integrity="sha256-8IzjQIPwtY9KTc2TUKRG&#43;1aufBKIEeP0q2FhwN36eqg=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -87,12 +91,11 @@ pre code,
 </style>
 
 </head>
+
 <body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
+  <div class="book-container flex">
     
-<aside class="book-menu">
+<aside class="book-menu" aria-label="Menu">
   <div class="book-menu-content">
     
   <nav>
@@ -138,15 +141,14 @@ pre code,
 
 
 <div class="book-search hidden">
-  <input id="book-search-input" type="text" 
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
     placeholder="Search"
     aria-label="Search"
-    maxlength="64" data-hotkeys="s/" />
+    maxlength="64" />
   <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+  <ul id="book-search-results" aria-live="polite"></ul>
 </div>
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
 
 
 
@@ -171,46 +173,58 @@ pre code,
 </aside>
  
 
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
   </label>
 
-  <h3>Polinomios</h3>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    
+  </a>
+</h2>
 
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+
+.book-brand img {
+    height: 3.5em;
+    width: 4.5em;
+}
+</style>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
   </label>
+  
 </div>
 
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#programa-en-matlab">Programa en Matlab</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
  
-      </header>
+    </header>
 
+    <main class="book-page">
       
   
 <div class="exercise-metadata">
@@ -331,8 +345,11 @@ a.badge:hover {
 
 
       
-  <article class="markdown book-article"><h1 id="polinomios">Polinomios<a class="anchor" href="#polinomios">#</a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
+  
+
+      
+  <article class="markdown book-article"><h1 id="polinomios">Polinomios<a class="anchor" href="#polinomios" aria-label="Link"></a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
 <p>Una posible representación para un polinomio P es un vector en el que en cada celda se encuentra almacenado el coeficiente con grado igual a la <code>posición-1</code> que ocupa en dicho vector. Un ejemplo sería el polinomio de grado 6, <strong><code>P(x)=9x6-5x5+4x3-18x+1</code></strong> que vendría representado mediante un vector de la forma:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> 1 |  -18 |  0 |  4 |  0 |  -5 |  9   </span></span></code></pre></div><p>&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;</p>
 <p>Utilizando dicha representación, realizar en Matlab los siguientes apartados:</p>
@@ -343,9 +360,9 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl"> -18 |  0 |  12 |  0 |  -25 |  54   </span></span></code></pre></div><p>&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">**Apartado 3.** Implementar un programa que pida al usuario que introduzca un polinomio y un valor y, utilizando las funciones anteriores, muestre por pantalla el resultado de evaluar el polinomio para ese valor así como su derivada, siguiendo el formato (para el ejemplo): 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">**`P’(x)= 54.0x^5 - 25.0x^4 + 12.0x^2 - 18.0**`</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
-<h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
-<h4 id="apartado-1">Apartado 1<a class="anchor" href="#apartado-1">#</a></h4>
+</span></span><span class="line"><span class="cl">**`P’(x)= 54.0x^5 - 25.0x^4 + 12.0x^2 - 18.0**`</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
+<h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab" aria-label="Link"></a></h3>
+<h4 id="apartado-1">Apartado 1<a class="anchor" href="#apartado-1" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>valor<span class="p">=</span><span class="nf">Evalua</span><span class="p">(</span>p,x<span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="c">%Parámetros de entrada:</span>
@@ -359,7 +376,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl"><span class="n">valor</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">g</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">t</span>
 </span></span><span class="line"><span class="cl">    <span class="n">valor</span><span class="p">=</span><span class="n">valor</span><span class="o">+</span><span class="n">p</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span>^<span class="p">(</span><span class="n">g</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="apartado-2">Apartado 2<a class="anchor" href="#apartado-2">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="apartado-2">Apartado 2<a class="anchor" href="#apartado-2" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function pd=Derivada(p)
 </span></span><span class="line"><span class="cl">%Parámetros de entrada:
 </span></span><span class="line"><span class="cl">%   p: un vector que representa un polinomio. El primer elemento
@@ -371,7 +388,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">t=length(p);
 </span></span><span class="line"><span class="cl">for g=2:t
 </span></span><span class="line"><span class="cl">    pd=[pd (p(g)*(g-1))];
-</span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="apartado-3">Apartado 3<a class="anchor" href="#apartado-3">#</a></h4>
+</span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="apartado-3">Apartado 3<a class="anchor" href="#apartado-3" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">%Programa Polinomio</span>
 </span></span><span class="line"><span class="cl"><span class="c">%Entradas:</span>
@@ -424,18 +441,11 @@ a.badge:hover {
 
 </div>
 
-
-
-
-
-  
-  
-  
-  <div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between">
     <span>
     
       <a href="/ejercicios/plantilla-revisar/" class="flex align-center">
-        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
         <span>Plantilla:Revisar</span>
       </a>
     
@@ -444,13 +454,11 @@ a.badge:hover {
     
       <a href="/ejercicios/porcentajes-de-notas/" class="flex align-center">
         <span>Porcentajes de notas</span>
-        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
       </a>
     
     </span>
   </div>
-  
-
 
  
         
@@ -461,19 +469,18 @@ a.badge:hover {
   
  
         
-  
   
     <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
   
 
       </footer>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
 
     
   
-  <aside class="book-toc">
+  <aside class="book-toc" aria-label="Table of Contents">
     <div class="book-toc-content">
       
   
@@ -490,15 +497,21 @@ a.badge:hover {
 
 
 
+
+
+
+
     </div>
   </aside>
   
  
-  </main>
+  </div>
 
   
 </body>
 </html>
+
+
 
 
 

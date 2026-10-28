@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="es-es" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Médicos# Enunciado# Queremos conocer los datos estadísticos de una consulta médica de varios doctores. Para ello crea un programa principal que pregunte cuántos doctores tiene la clínica, cuántos pacientes han pedido cita para cada doctor, y cuál es el precio de la consulta para cada doctor. Crear u utilizar módulos para realizar las siguientes operaciones:
-Módulo 1: Pedir los datos de citas al usuario y devolverlos en un array. Módulo 2: Pedir el precio de la consulta de cada doctor y devolverlos en un array. Módulo 3 : Calcular el tanto por ciento de pacientes que han ido a un doctor determinado, dado el array de citas. Módulo 4 : La cantidad de dinero que ha ganado cada doctor, dadas las citas y el precio de las consultas. Módulo 5 : La media de dinero que se gana por paciente en la clínica en general. Soluciones# Programa en Matlab# Módulo 1# function c = PedirCitas( num ) % FUNCIÓN c = PedirCitas( num ) % Descripción: Pedir el numero de citas de los 3 médicos % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY(num) DE ENTEROS; Citas de cada médico. % Variables (internas): % x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca citas del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 2# function c = PedirPrecios( num ) % FUNCION c = PedirPrecios( num ) % Descripción: Pedir el precio por cita de cada médico % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY DE REALES; Precio de cada médico. % Variables (internas): % num, x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca precio por cita del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 3# function valor = PorcentajeDr( c, n ) % FUNCIÓN valor = PorcentajeDr( c, n ) % Descripción: Devuelve el porcentaje de pacientes que han tenido cita con % el doctor n % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % n: ENTERO; Doctor para calcular el porcentaje % Parámetros de salida: % valor: REAL; Porcentaje del medico n % Variables (internas): Ninguna valor = (c(n)/sum(c))*100; Módulo 4# function ganado = GananciaDr( c, p ) % FUNCIÓN ganado = GananciaDr( c, p ) % Descripción: Devuelve la cantidad de dinero que ha ganado cada doctor % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % ganado: ARRAY DE REALES; lo que ha ganado cada doctor % Variables (internas): % tama, x: ENTERO tama = length( c ); ganado = zeros(1,tama); for x=1:tama ganado(x) = c(x)*p(x); end Módulo 5# function media = MediaPaciente( c, p ) % FUNCIÓN media = MediaPaciente( c, p ) % Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % media: REAL; la media de dinero por paciente en la clínica % Variables (internas): % gana: ARRAY DE REALES gana = GananciaDr( c, p ); media = sum(gana) / sum(c); Programa principal# % Programa Medicos % Entradas: Citas de los médicos y precios de los médicos % Salidas: Ganancias, porcentajes de pacientes y ganancia de la clínica % Variables: clear all; num = input(&#39;¿Cuántos médicos hay en la clínica?: &#39;); citas = PedirCitas( num ); precios = PedirPrecios( num ); disp(&#39;Porcentajes:&#39;); for doctor=1:num porcen = PorcentajeDr( citas, doctor ); fprintf(&#39;Doctor %d: %f%%\n&#39;,doctor,porcen); end disp(&#39;Cada Doctor ha ganado:&#39;); ganado = GananciaDr( citas, precios ); for doctor=1:num fprintf( &#39;Doctor %d: %f euros\n&#39;, ganado(doctor) ); end disp(&#39;La clinica gana por paciente:&#39;); fprintf(&#39; %f euros\n&#39;, MediaPaciente( citas, precios );">
+<meta name="description" content="Médicos Enunciado Queremos conocer los datos estadísticos de una consulta médica de varios doctores. Para ello crea un programa principal que pregunte cuántos doctores tiene la clínica, cuántos pacientes han pedido cita para cada doctor, y cuál es el precio de la consulta para cada doctor. Crear u utilizar módulos para realizar las siguientes operaciones:
+Módulo 1: Pedir los datos de citas al usuario y devolverlos en un array. Módulo 2: Pedir el precio de la consulta de cada doctor y devolverlos en un array. Módulo 3 : Calcular el tanto por ciento de pacientes que han ido a un doctor determinado, dado el array de citas. Módulo 4 : La cantidad de dinero que ha ganado cada doctor, dadas las citas y el precio de las consultas. Módulo 5 : La media de dinero que se gana por paciente en la clínica en general. Soluciones Programa en Matlab Módulo 1 function c = PedirCitas( num ) % FUNCIÓN c = PedirCitas( num ) % Descripción: Pedir el numero de citas de los 3 médicos % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY(num) DE ENTEROS; Citas de cada médico. % Variables (internas): % x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca citas del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 2 function c = PedirPrecios( num ) % FUNCION c = PedirPrecios( num ) % Descripción: Pedir el precio por cita de cada médico % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY DE REALES; Precio de cada médico. % Variables (internas): % num, x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca precio por cita del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 3 function valor = PorcentajeDr( c, n ) % FUNCIÓN valor = PorcentajeDr( c, n ) % Descripción: Devuelve el porcentaje de pacientes que han tenido cita con % el doctor n % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % n: ENTERO; Doctor para calcular el porcentaje % Parámetros de salida: % valor: REAL; Porcentaje del medico n % Variables (internas): Ninguna valor = (c(n)/sum(c))*100; Módulo 4 function ganado = GananciaDr( c, p ) % FUNCIÓN ganado = GananciaDr( c, p ) % Descripción: Devuelve la cantidad de dinero que ha ganado cada doctor % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % ganado: ARRAY DE REALES; lo que ha ganado cada doctor % Variables (internas): % tama, x: ENTERO tama = length( c ); ganado = zeros(1,tama); for x=1:tama ganado(x) = c(x)*p(x); end Módulo 5 function media = MediaPaciente( c, p ) % FUNCIÓN media = MediaPaciente( c, p ) % Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % media: REAL; la media de dinero por paciente en la clínica % Variables (internas): % gana: ARRAY DE REALES gana = GananciaDr( c, p ); media = sum(gana) / sum(c); Programa principal % Programa Medicos % Entradas: Citas de los médicos y precios de los médicos % Salidas: Ganancias, porcentajes de pacientes y ganancia de la clínica % Variables: clear all; num = input(&#39;¿Cuántos médicos hay en la clínica?: &#39;); citas = PedirCitas( num ); precios = PedirPrecios( num ); disp(&#39;Porcentajes:&#39;); for doctor=1:num porcen = PorcentajeDr( citas, doctor ); fprintf(&#39;Doctor %d: %f%%\n&#39;,doctor,porcen); end disp(&#39;Cada Doctor ha ganado:&#39;); ganado = GananciaDr( citas, precios ); for doctor=1:num fprintf( &#39;Doctor %d: %f euros\n&#39;, ganado(doctor) ); end disp(&#39;La clinica gana por paciente:&#39;); fprintf(&#39; %f euros\n&#39;, MediaPaciente( citas, precios );">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/m-dicos/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/m-dicos/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Médicos">
-	<meta property="og:description" content="Médicos# Enunciado# Queremos conocer los datos estadísticos de una consulta médica de varios doctores. Para ello crea un programa principal que pregunte cuántos doctores tiene la clínica, cuántos pacientes han pedido cita para cada doctor, y cuál es el precio de la consulta para cada doctor. Crear u utilizar módulos para realizar las siguientes operaciones:
-Módulo 1: Pedir los datos de citas al usuario y devolverlos en un array. Módulo 2: Pedir el precio de la consulta de cada doctor y devolverlos en un array. Módulo 3 : Calcular el tanto por ciento de pacientes que han ido a un doctor determinado, dado el array de citas. Módulo 4 : La cantidad de dinero que ha ganado cada doctor, dadas las citas y el precio de las consultas. Módulo 5 : La media de dinero que se gana por paciente en la clínica en general. Soluciones# Programa en Matlab# Módulo 1# function c = PedirCitas( num ) % FUNCIÓN c = PedirCitas( num ) % Descripción: Pedir el numero de citas de los 3 médicos % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY(num) DE ENTEROS; Citas de cada médico. % Variables (internas): % x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca citas del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 2# function c = PedirPrecios( num ) % FUNCION c = PedirPrecios( num ) % Descripción: Pedir el precio por cita de cada médico % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY DE REALES; Precio de cada médico. % Variables (internas): % num, x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca precio por cita del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 3# function valor = PorcentajeDr( c, n ) % FUNCIÓN valor = PorcentajeDr( c, n ) % Descripción: Devuelve el porcentaje de pacientes que han tenido cita con % el doctor n % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % n: ENTERO; Doctor para calcular el porcentaje % Parámetros de salida: % valor: REAL; Porcentaje del medico n % Variables (internas): Ninguna valor = (c(n)/sum(c))*100; Módulo 4# function ganado = GananciaDr( c, p ) % FUNCIÓN ganado = GananciaDr( c, p ) % Descripción: Devuelve la cantidad de dinero que ha ganado cada doctor % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % ganado: ARRAY DE REALES; lo que ha ganado cada doctor % Variables (internas): % tama, x: ENTERO tama = length( c ); ganado = zeros(1,tama); for x=1:tama ganado(x) = c(x)*p(x); end Módulo 5# function media = MediaPaciente( c, p ) % FUNCIÓN media = MediaPaciente( c, p ) % Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % media: REAL; la media de dinero por paciente en la clínica % Variables (internas): % gana: ARRAY DE REALES gana = GananciaDr( c, p ); media = sum(gana) / sum(c); Programa principal# % Programa Medicos % Entradas: Citas de los médicos y precios de los médicos % Salidas: Ganancias, porcentajes de pacientes y ganancia de la clínica % Variables: clear all; num = input(&#39;¿Cuántos médicos hay en la clínica?: &#39;); citas = PedirCitas( num ); precios = PedirPrecios( num ); disp(&#39;Porcentajes:&#39;); for doctor=1:num porcen = PorcentajeDr( citas, doctor ); fprintf(&#39;Doctor %d: %f%%\n&#39;,doctor,porcen); end disp(&#39;Cada Doctor ha ganado:&#39;); ganado = GananciaDr( citas, precios ); for doctor=1:num fprintf( &#39;Doctor %d: %f euros\n&#39;, ganado(doctor) ); end disp(&#39;La clinica gana por paciente:&#39;); fprintf(&#39; %f euros\n&#39;, MediaPaciente( citas, precios );">
+	<meta property="og:description" content="Médicos Enunciado Queremos conocer los datos estadísticos de una consulta médica de varios doctores. Para ello crea un programa principal que pregunte cuántos doctores tiene la clínica, cuántos pacientes han pedido cita para cada doctor, y cuál es el precio de la consulta para cada doctor. Crear u utilizar módulos para realizar las siguientes operaciones:
+Módulo 1: Pedir los datos de citas al usuario y devolverlos en un array. Módulo 2: Pedir el precio de la consulta de cada doctor y devolverlos en un array. Módulo 3 : Calcular el tanto por ciento de pacientes que han ido a un doctor determinado, dado el array de citas. Módulo 4 : La cantidad de dinero que ha ganado cada doctor, dadas las citas y el precio de las consultas. Módulo 5 : La media de dinero que se gana por paciente en la clínica en general. Soluciones Programa en Matlab Módulo 1 function c = PedirCitas( num ) % FUNCIÓN c = PedirCitas( num ) % Descripción: Pedir el numero de citas de los 3 médicos % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY(num) DE ENTEROS; Citas de cada médico. % Variables (internas): % x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca citas del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 2 function c = PedirPrecios( num ) % FUNCION c = PedirPrecios( num ) % Descripción: Pedir el precio por cita de cada médico % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY DE REALES; Precio de cada médico. % Variables (internas): % num, x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca precio por cita del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 3 function valor = PorcentajeDr( c, n ) % FUNCIÓN valor = PorcentajeDr( c, n ) % Descripción: Devuelve el porcentaje de pacientes que han tenido cita con % el doctor n % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % n: ENTERO; Doctor para calcular el porcentaje % Parámetros de salida: % valor: REAL; Porcentaje del medico n % Variables (internas): Ninguna valor = (c(n)/sum(c))*100; Módulo 4 function ganado = GananciaDr( c, p ) % FUNCIÓN ganado = GananciaDr( c, p ) % Descripción: Devuelve la cantidad de dinero que ha ganado cada doctor % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % ganado: ARRAY DE REALES; lo que ha ganado cada doctor % Variables (internas): % tama, x: ENTERO tama = length( c ); ganado = zeros(1,tama); for x=1:tama ganado(x) = c(x)*p(x); end Módulo 5 function media = MediaPaciente( c, p ) % FUNCIÓN media = MediaPaciente( c, p ) % Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % media: REAL; la media de dinero por paciente en la clínica % Variables (internas): % gana: ARRAY DE REALES gana = GananciaDr( c, p ); media = sum(gana) / sum(c); Programa principal % Programa Medicos % Entradas: Citas de los médicos y precios de los médicos % Salidas: Ganancias, porcentajes de pacientes y ganancia de la clínica % Variables: clear all; num = input(&#39;¿Cuántos médicos hay en la clínica?: &#39;); citas = PedirCitas( num ); precios = PedirPrecios( num ); disp(&#39;Porcentajes:&#39;); for doctor=1:num porcen = PorcentajeDr( citas, doctor ); fprintf(&#39;Doctor %d: %f%%\n&#39;,doctor,porcen); end disp(&#39;Cada Doctor ha ganado:&#39;); ganado = GananciaDr( citas, precios ); for doctor=1:num fprintf( &#39;Doctor %d: %f euros\n&#39;, ganado(doctor) ); end disp(&#39;La clinica gana por paciente:&#39;); fprintf(&#39; %f euros\n&#39;, MediaPaciente( citas, precios );">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="ejercicios">
@@ -25,25 +30,24 @@ Módulo 1: Pedir los datos de citas al usuario y devolverlos en un array. Módul
 
 
 	<meta itemprop="name" content="Médicos">
-	<meta itemprop="description" content="Médicos# Enunciado# Queremos conocer los datos estadísticos de una consulta médica de varios doctores. Para ello crea un programa principal que pregunte cuántos doctores tiene la clínica, cuántos pacientes han pedido cita para cada doctor, y cuál es el precio de la consulta para cada doctor. Crear u utilizar módulos para realizar las siguientes operaciones:
-Módulo 1: Pedir los datos de citas al usuario y devolverlos en un array. Módulo 2: Pedir el precio de la consulta de cada doctor y devolverlos en un array. Módulo 3 : Calcular el tanto por ciento de pacientes que han ido a un doctor determinado, dado el array de citas. Módulo 4 : La cantidad de dinero que ha ganado cada doctor, dadas las citas y el precio de las consultas. Módulo 5 : La media de dinero que se gana por paciente en la clínica en general. Soluciones# Programa en Matlab# Módulo 1# function c = PedirCitas( num ) % FUNCIÓN c = PedirCitas( num ) % Descripción: Pedir el numero de citas de los 3 médicos % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY(num) DE ENTEROS; Citas de cada médico. % Variables (internas): % x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca citas del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 2# function c = PedirPrecios( num ) % FUNCION c = PedirPrecios( num ) % Descripción: Pedir el precio por cita de cada médico % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY DE REALES; Precio de cada médico. % Variables (internas): % num, x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca precio por cita del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 3# function valor = PorcentajeDr( c, n ) % FUNCIÓN valor = PorcentajeDr( c, n ) % Descripción: Devuelve el porcentaje de pacientes que han tenido cita con % el doctor n % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % n: ENTERO; Doctor para calcular el porcentaje % Parámetros de salida: % valor: REAL; Porcentaje del medico n % Variables (internas): Ninguna valor = (c(n)/sum(c))*100; Módulo 4# function ganado = GananciaDr( c, p ) % FUNCIÓN ganado = GananciaDr( c, p ) % Descripción: Devuelve la cantidad de dinero que ha ganado cada doctor % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % ganado: ARRAY DE REALES; lo que ha ganado cada doctor % Variables (internas): % tama, x: ENTERO tama = length( c ); ganado = zeros(1,tama); for x=1:tama ganado(x) = c(x)*p(x); end Módulo 5# function media = MediaPaciente( c, p ) % FUNCIÓN media = MediaPaciente( c, p ) % Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % media: REAL; la media de dinero por paciente en la clínica % Variables (internas): % gana: ARRAY DE REALES gana = GananciaDr( c, p ); media = sum(gana) / sum(c); Programa principal# % Programa Medicos % Entradas: Citas de los médicos y precios de los médicos % Salidas: Ganancias, porcentajes de pacientes y ganancia de la clínica % Variables: clear all; num = input(&#39;¿Cuántos médicos hay en la clínica?: &#39;); citas = PedirCitas( num ); precios = PedirPrecios( num ); disp(&#39;Porcentajes:&#39;); for doctor=1:num porcen = PorcentajeDr( citas, doctor ); fprintf(&#39;Doctor %d: %f%%\n&#39;,doctor,porcen); end disp(&#39;Cada Doctor ha ganado:&#39;); ganado = GananciaDr( citas, precios ); for doctor=1:num fprintf( &#39;Doctor %d: %f euros\n&#39;, ganado(doctor) ); end disp(&#39;La clinica gana por paciente:&#39;); fprintf(&#39; %f euros\n&#39;, MediaPaciente( citas, precios );">
+	<meta itemprop="description" content="Médicos Enunciado Queremos conocer los datos estadísticos de una consulta médica de varios doctores. Para ello crea un programa principal que pregunte cuántos doctores tiene la clínica, cuántos pacientes han pedido cita para cada doctor, y cuál es el precio de la consulta para cada doctor. Crear u utilizar módulos para realizar las siguientes operaciones:
+Módulo 1: Pedir los datos de citas al usuario y devolverlos en un array. Módulo 2: Pedir el precio de la consulta de cada doctor y devolverlos en un array. Módulo 3 : Calcular el tanto por ciento de pacientes que han ido a un doctor determinado, dado el array de citas. Módulo 4 : La cantidad de dinero que ha ganado cada doctor, dadas las citas y el precio de las consultas. Módulo 5 : La media de dinero que se gana por paciente en la clínica en general. Soluciones Programa en Matlab Módulo 1 function c = PedirCitas( num ) % FUNCIÓN c = PedirCitas( num ) % Descripción: Pedir el numero de citas de los 3 médicos % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY(num) DE ENTEROS; Citas de cada médico. % Variables (internas): % x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca citas del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 2 function c = PedirPrecios( num ) % FUNCION c = PedirPrecios( num ) % Descripción: Pedir el precio por cita de cada médico % Parámetros de entrada: % num: ENTERO; número de médicos de la clínica % Parámetros de salida: % c: ARRAY DE REALES; Precio de cada médico. % Variables (internas): % num, x: ENTERO c = zeros(1,num); for x=1:num fprintf(&#39;Introduzca precio por cita del medico %d&#39;,x); c(x) = input(&#39;: &#39;); end Módulo 3 function valor = PorcentajeDr( c, n ) % FUNCIÓN valor = PorcentajeDr( c, n ) % Descripción: Devuelve el porcentaje de pacientes que han tenido cita con % el doctor n % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % n: ENTERO; Doctor para calcular el porcentaje % Parámetros de salida: % valor: REAL; Porcentaje del medico n % Variables (internas): Ninguna valor = (c(n)/sum(c))*100; Módulo 4 function ganado = GananciaDr( c, p ) % FUNCIÓN ganado = GananciaDr( c, p ) % Descripción: Devuelve la cantidad de dinero que ha ganado cada doctor % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % ganado: ARRAY DE REALES; lo que ha ganado cada doctor % Variables (internas): % tama, x: ENTERO tama = length( c ); ganado = zeros(1,tama); for x=1:tama ganado(x) = c(x)*p(x); end Módulo 5 function media = MediaPaciente( c, p ) % FUNCIÓN media = MediaPaciente( c, p ) % Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general % Parámetros de entrada: % c: ARRAY DE ENTEROS; citas de todos los doctores % p: ARRAY DE REALES; precios de todos los doctores % Parámetros de salida: % media: REAL; la media de dinero por paciente en la clínica % Variables (internas): % gana: ARRAY DE REALES gana = GananciaDr( c, p ); media = sum(gana) / sum(c); Programa principal % Programa Medicos % Entradas: Citas de los médicos y precios de los médicos % Salidas: Ganancias, porcentajes de pacientes y ganancia de la clínica % Variables: clear all; num = input(&#39;¿Cuántos médicos hay en la clínica?: &#39;); citas = PedirCitas( num ); precios = PedirPrecios( num ); disp(&#39;Porcentajes:&#39;); for doctor=1:num porcen = PorcentajeDr( citas, doctor ); fprintf(&#39;Doctor %d: %f%%\n&#39;,doctor,porcen); end disp(&#39;Cada Doctor ha ganado:&#39;); ganado = GananciaDr( citas, precios ); for doctor=1:num fprintf( &#39;Doctor %d: %f euros\n&#39;, ganado(doctor) ); end disp(&#39;La clinica gana por paciente:&#39;); fprintf(&#39; %f euros\n&#39;, MediaPaciente( citas, precios );">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="647">
 	<meta itemprop="keywords" content="Enunciado,Matlab">
 
-<title>Médicos | Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.png" >
+<title>Médicos • Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/m-dicos/">
-<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
+<link rel="canonical" href="https://example.org/ejercicios/m-dicos/">
+<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
-
-
-
+<script type="module" src="/en.search.min.f08ce34083f0b58f4a4dcd9350a446fb56ae7c128811e3f4ab6161c0ddfa7aa8.js" integrity="sha256-8IzjQIPwtY9KTc2TUKRG&#43;1aufBKIEeP0q2FhwN36eqg=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -83,12 +87,11 @@ pre code,
 </style>
 
 </head>
+
 <body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
+  <div class="book-container flex">
     
-<aside class="book-menu">
+<aside class="book-menu" aria-label="Menu">
   <div class="book-menu-content">
     
   <nav>
@@ -134,15 +137,14 @@ pre code,
 
 
 <div class="book-search hidden">
-  <input id="book-search-input" type="text" 
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
     placeholder="Search"
     aria-label="Search"
-    maxlength="64" data-hotkeys="s/" />
+    maxlength="64" />
   <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+  <ul id="book-search-results" aria-live="polite"></ul>
 </div>
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
 
 
 
@@ -167,46 +169,58 @@ pre code,
 </aside>
  
 
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
   </label>
 
-  <h3>Médicos</h3>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    
+  </a>
+</h2>
 
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+
+.book-brand img {
+    height: 3.5em;
+    width: 4.5em;
+}
+</style>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
   </label>
+  
 </div>
 
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#programa-en-matlab">Programa en Matlab</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
  
-      </header>
+    </header>
 
+    <main class="book-page">
       
   
 <div class="exercise-metadata">
@@ -327,8 +341,11 @@ a.badge:hover {
 
 
       
-  <article class="markdown book-article"><h1 id="médicos">Médicos<a class="anchor" href="#m%c3%a9dicos">#</a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
+  
+
+      
+  <article class="markdown book-article"><h1 id="médicos">Médicos<a class="anchor" href="#m%c3%a9dicos" aria-label="Link"></a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
 <p>Queremos conocer los datos estadísticos de una consulta médica de varios doctores. Para ello crea un programa principal que pregunte cuántos doctores tiene la clínica, cuántos pacientes han pedido cita para cada doctor, y cuál es el precio de la consulta para cada doctor. Crear u utilizar módulos para realizar las siguientes operaciones:</p>
 <ul>
 <li><strong>Módulo 1:</strong> Pedir los datos de citas al usuario y devolverlos en un array.</li>
@@ -337,9 +354,9 @@ a.badge:hover {
 <li><strong>Módulo 4</strong> : La cantidad de dinero que ha ganado cada doctor, dadas las citas y el precio de las consultas.</li>
 <li><strong>Módulo 5</strong> : La media de dinero que se gana por paciente en la clínica en general.</li>
 </ul>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
-<h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
-<h4 id="módulo-1">Módulo 1<a class="anchor" href="#m%c3%b3dulo-1">#</a></h4>
+<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
+<h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab" aria-label="Link"></a></h3>
+<h4 id="módulo-1">Módulo 1<a class="anchor" href="#m%c3%b3dulo-1" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>c <span class="p">=</span><span class="w"> </span><span class="nf">PedirCitas</span><span class="p">(</span> num <span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="c">% FUNCIÓN c = PedirCitas( num )</span>
@@ -356,7 +373,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">num</span>
 </span></span><span class="line"><span class="cl">    <span class="n">fprintf</span><span class="p">(</span><span class="s">&#39;Introduzca citas del medico %d&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">c</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">=</span> <span class="n">input</span><span class="p">(</span><span class="s">&#39;: &#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="módulo-2">Módulo 2<a class="anchor" href="#m%c3%b3dulo-2">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="módulo-2">Módulo 2<a class="anchor" href="#m%c3%b3dulo-2" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>c <span class="p">=</span><span class="w"> </span><span class="nf">PedirPrecios</span><span class="p">(</span> num <span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="c">% FUNCION c = PedirPrecios( num )</span>
@@ -373,7 +390,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">num</span>
 </span></span><span class="line"><span class="cl">    <span class="n">fprintf</span><span class="p">(</span><span class="s">&#39;Introduzca precio por cita del medico %d&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">c</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">=</span> <span class="n">input</span><span class="p">(</span><span class="s">&#39;: &#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="módulo-3">Módulo 3<a class="anchor" href="#m%c3%b3dulo-3">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="módulo-3">Módulo 3<a class="anchor" href="#m%c3%b3dulo-3" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>valor <span class="p">=</span><span class="w"> </span><span class="nf">PorcentajeDr</span><span class="p">(</span> c, n <span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="c">% FUNCIÓN valor = PorcentajeDr( c, n )</span>
@@ -387,7 +404,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="c">% Variables (internas): Ninguna</span>
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">valor</span> <span class="p">=</span> <span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="n">sum</span><span class="p">(</span><span class="n">c</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">;</span></span></span></code></pre></div><h4 id="módulo-4">Módulo 4<a class="anchor" href="#m%c3%b3dulo-4">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="n">valor</span> <span class="p">=</span> <span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="n">sum</span><span class="p">(</span><span class="n">c</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">;</span></span></span></code></pre></div><h4 id="módulo-4">Módulo 4<a class="anchor" href="#m%c3%b3dulo-4" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function ganado = GananciaDr( c, p )
 </span></span><span class="line"><span class="cl">% FUNCIÓN ganado = GananciaDr( c, p )
 </span></span><span class="line"><span class="cl">% Descripción: Devuelve la cantidad de dinero que ha ganado cada doctor
@@ -404,7 +421,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">ganado = zeros(1,tama);
 </span></span><span class="line"><span class="cl">for x=1:tama
 </span></span><span class="line"><span class="cl">    ganado(x) = c(x)*p(x);
-</span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="módulo-5">Módulo 5<a class="anchor" href="#m%c3%b3dulo-5">#</a></h4>
+</span></span><span class="line"><span class="cl">end</span></span></code></pre></div><h4 id="módulo-5">Módulo 5<a class="anchor" href="#m%c3%b3dulo-5" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">function media = MediaPaciente( c, p )
 </span></span><span class="line"><span class="cl">% FUNCIÓN media = MediaPaciente( c, p )
 </span></span><span class="line"><span class="cl">% Descripción: Devuelve la media de dinero que se gana por paciente en la clínica en general
@@ -418,7 +435,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">%   gana: ARRAY DE REALES
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">gana = GananciaDr( c, p );
-</span></span><span class="line"><span class="cl">media = sum(gana) / sum(c);</span></span></code></pre></div><h4 id="programa-principal">Programa principal<a class="anchor" href="#programa-principal">#</a></h4>
+</span></span><span class="line"><span class="cl">media = sum(gana) / sum(c);</span></span></code></pre></div><h4 id="programa-principal">Programa principal<a class="anchor" href="#programa-principal" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">% Programa Medicos</span>
 </span></span><span class="line"><span class="cl"><span class="c">% Entradas: Citas de los médicos y precios de los médicos</span>
@@ -460,18 +477,11 @@ a.badge:hover {
 
 </div>
 
-
-
-
-
-  
-  
-  
-  <div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between">
     <span>
     
       <a href="/ejercicios/mayor-n-mero-de-divisores/" class="flex align-center">
-        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
         <span>Mayor número de divisores</span>
       </a>
     
@@ -480,13 +490,11 @@ a.badge:hover {
     
       <a href="/ejercicios/men--de-un-restaurante/" class="flex align-center">
         <span>Menú de un restaurante</span>
-        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
       </a>
     
     </span>
   </div>
-  
-
 
  
         
@@ -497,19 +505,18 @@ a.badge:hover {
   
  
         
-  
   
     <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
   
 
       </footer>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
 
     
   
-  <aside class="book-toc">
+  <aside class="book-toc" aria-label="Table of Contents">
     <div class="book-toc-content">
       
   
@@ -526,15 +533,21 @@ a.badge:hover {
 
 
 
+
+
+
+
     </div>
   </aside>
   
  
-  </main>
+  </div>
 
   
 </body>
 </html>
+
+
 
 
 

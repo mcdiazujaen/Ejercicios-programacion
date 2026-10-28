@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="es-es" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Descompsición en monedas de una cantidad en euros# Enunciado# Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
-Soluciones# Diseño 1 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario# En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.
+<meta name="description" content="Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
+Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Descompsición en monedas de una cantidad en euros">
-	<meta property="og:description" content="Descompsición en monedas de una cantidad en euros# Enunciado# Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
-Soluciones# Diseño 1 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario# En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.">
+	<meta property="og:description" content="Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
+Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="ejercicios">
@@ -27,25 +32,24 @@ Soluciones# Diseño 1 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRA
 
 
 	<meta itemprop="name" content="Descompsición en monedas de una cantidad en euros">
-	<meta itemprop="description" content="Descompsición en monedas de una cantidad en euros# Enunciado# Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
-Soluciones# Diseño 1 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez# ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario# En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.">
+	<meta itemprop="description" content="Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
+Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="776">
 	<meta itemprop="keywords" content="Sin_matlab">
 
-<title>Descompsición en monedas de una cantidad en euros | Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.png" >
+<title>Descompsición en monedas de una cantidad en euros • Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
-<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
+<link rel="canonical" href="https://example.org/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
+<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
-
-
-
+<script type="module" src="/en.search.min.f08ce34083f0b58f4a4dcd9350a446fb56ae7c128811e3f4ab6161c0ddfa7aa8.js" integrity="sha256-8IzjQIPwtY9KTc2TUKRG&#43;1aufBKIEeP0q2FhwN36eqg=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -85,12 +89,11 @@ pre code,
 </style>
 
 </head>
+
 <body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
+  <div class="book-container flex">
     
-<aside class="book-menu">
+<aside class="book-menu" aria-label="Menu">
   <div class="book-menu-content">
     
   <nav>
@@ -136,15 +139,14 @@ pre code,
 
 
 <div class="book-search hidden">
-  <input id="book-search-input" type="text" 
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
     placeholder="Search"
     aria-label="Search"
-    maxlength="64" data-hotkeys="s/" />
+    maxlength="64" />
   <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+  <ul id="book-search-results" aria-live="polite"></ul>
 </div>
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
 
 
 
@@ -169,51 +171,58 @@ pre code,
 </aside>
  
 
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
   </label>
 
-  <h3>Descompsición en monedas de una cantidad en euros</h3>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    
+  </a>
+</h2>
 
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+
+.book-brand img {
+    height: 3.5em;
+    width: 4.5em;
+}
+</style>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
   </label>
+  
 </div>
 
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong></a></li>
-        <li><a href="#diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong></a></li>
-        <li><a href="#solución-1-en-c">Solución 1 en C</a></li>
-        <li><a href="#solución-2-en-c">Solución 2 en C</a></li>
-        <li><a href="#programa-1-en-pascal-por-lperez">Programa 1 en Pascal por <strong>lperez</strong></a></li>
-        <li><a href="#programa-2-en-pascal-por-lperez">Programa 2 en Pascal por <strong>lperez</strong></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
  
-      </header>
+    </header>
 
+    <main class="book-page">
       
   
 <div class="exercise-metadata">
@@ -352,11 +361,14 @@ a.badge:hover {
 
 
       
-  <article class="markdown book-article"><h1 id="descompsición-en-monedas-de-una-cantidad-en-euros">Descompsición en monedas de una cantidad en euros<a class="anchor" href="#descompsici%c3%b3n-en-monedas-de-una-cantidad-en-euros">#</a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
+  
+
+      
+  <article class="markdown book-article"><h1 id="descompsición-en-monedas-de-una-cantidad-en-euros">Descompsición en monedas de una cantidad en euros<a class="anchor" href="#descompsici%c3%b3n-en-monedas-de-una-cantidad-en-euros" aria-label="Link"></a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
 <p>Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.</p>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
-<h3 id="diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-en-pseudoc%c3%b3digo-por-lperez">#</a></h3>
+<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
+<h3 id="diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-en-pseudoc%c3%b3digo-por-lperez" aria-label="Link"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ALGORITMO Cambio_dinero
 </span></span><span class="line"><span class="cl">ENTRADAS:
 </span></span><span class="line"><span class="cl">   dinero: REAL  _(cantidad de dinero que se tiene, dinero &gt;=0.)_
@@ -405,7 +417,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">    ENTONCES m001&lt;--1
 </span></span><span class="line"><span class="cl">    FIN_SI  *)  Esto puede sustituir al último mientras
 </span></span><span class="line"><span class="cl">  ESCRIBIR m2, m1, m05, m02, m005, m002, m001
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h3 id="diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-en-pseudoc%c3%b3digo-por-lperez">#</a></h3>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h3 id="diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-en-pseudoc%c3%b3digo-por-lperez" aria-label="Link"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ALGORITMO Cambio_dinero
 </span></span><span class="line"><span class="cl">ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
 </span></span><span class="line"><span class="cl">SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que 
@@ -434,9 +446,9 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">  PARA i=1 HASTA 8 HACER
 </span></span><span class="line"><span class="cl">     ESCRIBIR salida(i)
 </span></span><span class="line"><span class="cl">  FIN_PARA
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario">#</a></h4>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario" aria-label="Link"></a></h4>
 <p>En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.</p>
-<h3 id="solución-1-en-c">Solución 1 en C<a class="anchor" href="#soluci%c3%b3n-1-en-c">#</a></h3>
+<h3 id="solución-1-en-c">Solución 1 en C<a class="anchor" href="#soluci%c3%b3n-1-en-c" aria-label="Link"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
@@ -495,7 +507,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">      <span class="n">m001</span><span class="o">=</span><span class="n">m001</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>        
 </span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%f,%f,%f,%f,%f,%f,%f,%f&#34;</span><span class="p">,</span><span class="n">m2</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m05</span><span class="p">,</span><span class="n">m02</span><span class="p">,</span><span class="n">m01</span><span class="p">,</span><span class="n">m005</span><span class="p">,</span><span class="n">m002</span><span class="p">,</span><span class="n">m001</span><span class="p">);</span>                               
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="solución-2-en-c">Solución 2 en C<a class="anchor" href="#soluci%c3%b3n-2-en-c">#</a></h3>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="solución-2-en-c">Solución 2 en C<a class="anchor" href="#soluci%c3%b3n-2-en-c" aria-label="Link"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
@@ -539,7 +551,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">  <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">       <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span><span class="n">salida</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="programa-1-en-pascal-por-lperez">Programa 1 en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-1-en-pascal-por-lperez">#</a></h3>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="programa-1-en-pascal-por-lperez">Programa 1 en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-1-en-pascal-por-lperez" aria-label="Link"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
 </span></span><span class="line"><span class="cl">SALIDAS: m2, m1, m05, m02,m01, m005, m002, m001, cantidad mínima de monedas en
 </span></span><span class="line"><span class="cl">las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
@@ -603,7 +615,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 0.01= &#39;, m001);
 </span></span><span class="line"><span class="cl">    writeln(&#39;Pulse enter para acabar&#39;);
 </span></span><span class="line"><span class="cl">    readln;
-</span></span><span class="line"><span class="cl">end.</span></span></code></pre></div><h3 id="programa-2-en-pascal-por-lperez">Programa 2 en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-2-en-pascal-por-lperez">#</a></h3>
+</span></span><span class="line"><span class="cl">end.</span></span></code></pre></div><h3 id="programa-2-en-pascal-por-lperez">Programa 2 en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-2-en-pascal-por-lperez" aria-label="Link"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
 </span></span><span class="line"><span class="cl">SALIDAS: salida, array con la cantidad mínima de monedas en
 </span></span><span class="line"><span class="cl">     las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
@@ -655,18 +667,11 @@ a.badge:hover {
 
 </div>
 
-
-
-
-
-  
-  
-  
-  <div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between">
     <span>
     
       <a href="/ejercicios/descomposici-n-en-factores-primos/" class="flex align-center">
-        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
         <span>Descomposición en factores primos</span>
       </a>
     
@@ -675,13 +680,11 @@ a.badge:hover {
     
       <a href="/ejercicios/d-a-de-la-semana/" class="flex align-center">
         <span>Día de la semana</span>
-        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
       </a>
     
     </span>
   </div>
-  
-
 
  
         
@@ -692,19 +695,18 @@ a.badge:hover {
   
  
         
-  
   
     <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
   
 
       </footer>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
 
     
   
-  <aside class="book-toc">
+  <aside class="book-toc" aria-label="Table of Contents">
     <div class="book-toc-content">
       
   
@@ -726,15 +728,21 @@ a.badge:hover {
 
 
 
+
+
+
+
     </div>
   </aside>
   
  
-  </main>
+  </div>
 
   
 </body>
 </html>
+
+
 
 
 

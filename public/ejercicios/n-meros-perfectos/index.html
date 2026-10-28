@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="es-es" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Números perfectos# Enunciado# Un número perfecto es un número natural que es igual a la suma de sus divisores propios positivos, sin incluirse él mismo. Así, 6 es un número perfecto, porque sus divisores propios son 1, 2 y 3; y 6 = 1 &#43; 2 &#43; 3.
+<meta name="description" content="Números perfectos Enunciado Un número perfecto es un número natural que es igual a la suma de sus divisores propios positivos, sin incluirse él mismo. Así, 6 es un número perfecto, porque sus divisores propios son 1, 2 y 3; y 6 = 1 &#43; 2 &#43; 3.
 Realizar los siguientes apartados para el cálculo de números perfectos:
-Un subalgoritmo al que se le de un entero, y devuelva los divisores de dicho numero, así como el número de ellos. Un subalgoritmo que reciba como entradas un número, y devuelva VERDADERO si la suma de divisores es igual al número y FALSO en otro caso. Un algoritmo que devuelva los k primeros números perfectos, apoyándose en los módulos anteriores. Soluciones# Diseño en pseudocódigo# Apartado 1# PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS) ENTRADAS: N: ENTERO _(NÚMERO PARA SACAR SUS DIVISORES, N &gt; 0 )_ SALIDAS: VEC: ARRAY (1..1000) DE ENTEROS _(VECTOR PARA ALMACENAR LOS DIVISORES)_ POS: ENTERO _(NUMERO DE DIVISORES)_ VARIABLES: DIVISOR, J: ENTEROS INICIO DIVISOR &lt;-- N – 1 J &lt;-- 1; MIENTRAS ( DIVISOR &lt;&gt; 0 ) HACER SI ((N MOD DIVISOR ) = 0) ENTONCES VEC(J) &lt;-- DIVISOR J &lt;-- J &#43; 1 FIN_SI DIVISOR &lt;-- DIVISOR-1 FIN_MIENTRAS SI N = 1 ENTONCES VEC(J) &lt;-- 1 J &lt;-- J &#43; 1 FIN_SI POS&lt;--J-1 FIN Apartado 2# FUNCIÓN SUMADIVISORES(NUM): LÓGICO ENTRADAS: NUM: ENTERO _(NÚMERO QUE ESTUDIAMOS PARA VER SI LA SUMA DE SUS DIVISORES ES IGUAL AL NÚMERO O NO, NUM &gt; 0)_ SALIDAS: RESULT: LÓGICO _(VERDADERO SI LA SUMA DE LOS DIVISORES ES EL NUMERO Y FALSO SI NO LO ES)_ VARIABLES: K, SUM, LONG : ENTEROS VECTOR:ARRAY (1..1000) DE ENTEROS INICIO _(Calcular divisores)_ DIVISORES(NUM, VECTOR, LONG) _(Sumar los divisores)_ SUM &lt;-- 0 PARA K &lt;-- 1 HASTA LONG HACER SUM &lt;-- SUM &#43; VECTOR(K) FIN_PARA _(Comprobar si la suma de los divisores es igual al número)_ SI ( SUM = NUM ) ENTONCES RESULT &lt;-- VERDADERO SINO RESULT &lt;-- FALSO FIN_SI DEVOLVER RESULT FIN Apartado 3# PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO) ENTRADAS: TOPE: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS QUE DEBEMOS ENCONTRAR)_ SALIDAS: DESTINO: ARRAY (1..1000) DE ENTEROS _(VECTOR EN EL QUE ALMACENAMOS LOS NÚMEROS PERFECTOS)_ VARIABLES: A, B: ENTEROS INICIO A &lt;-- 1 B &lt;-- 1 MIENTRAS (B&lt;=TOPE) HACER SI SUMADIVISORES(A) ENTONCES DESTINO(B) &lt;-- A B &lt;-- B&#43;1 FIN_SI A &lt;-- A &#43; 1 FIN_MIENTRAS FIN ALGORITMO NUMEROPERFECTO ENTRADAS: P: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS HA ENCONTRAR, P &gt; 0)_ SALIDAS: SOLUCIÓN: ARRAY (1..1000) DE ENTEROS _(NÚMEROS PERFECTOS ENCONTRADOS)_ VARIABLES: I: ENTERO INICIO ESCRIBIR &#34;¿CUANTOS NÚMEROS PERFECTOS DESEA CALCULAR? : &#34; LEER P PERFECTO(P, SOLUCION) ESCRIBIR &#34;LOS &#34;,P,&#34; Nº PERFECTOS SON: &#34; PARA I &lt;-- 1 HASTA P HACER ESCRIBIR &#34; &#34;, SOLUCION(I) FIN_PARA FIN.">
+Un subalgoritmo al que se le de un entero, y devuelva los divisores de dicho numero, así como el número de ellos. Un subalgoritmo que reciba como entradas un número, y devuelva VERDADERO si la suma de divisores es igual al número y FALSO en otro caso. Un algoritmo que devuelva los k primeros números perfectos, apoyándose en los módulos anteriores. Soluciones Diseño en pseudocódigo Apartado 1 PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS) ENTRADAS: N: ENTERO _(NÚMERO PARA SACAR SUS DIVISORES, N &gt; 0 )_ SALIDAS: VEC: ARRAY (1..1000) DE ENTEROS _(VECTOR PARA ALMACENAR LOS DIVISORES)_ POS: ENTERO _(NUMERO DE DIVISORES)_ VARIABLES: DIVISOR, J: ENTEROS INICIO DIVISOR &lt;-- N – 1 J &lt;-- 1; MIENTRAS ( DIVISOR &lt;&gt; 0 ) HACER SI ((N MOD DIVISOR ) = 0) ENTONCES VEC(J) &lt;-- DIVISOR J &lt;-- J &#43; 1 FIN_SI DIVISOR &lt;-- DIVISOR-1 FIN_MIENTRAS SI N = 1 ENTONCES VEC(J) &lt;-- 1 J &lt;-- J &#43; 1 FIN_SI POS&lt;--J-1 FIN Apartado 2 FUNCIÓN SUMADIVISORES(NUM): LÓGICO ENTRADAS: NUM: ENTERO _(NÚMERO QUE ESTUDIAMOS PARA VER SI LA SUMA DE SUS DIVISORES ES IGUAL AL NÚMERO O NO, NUM &gt; 0)_ SALIDAS: RESULT: LÓGICO _(VERDADERO SI LA SUMA DE LOS DIVISORES ES EL NUMERO Y FALSO SI NO LO ES)_ VARIABLES: K, SUM, LONG : ENTEROS VECTOR:ARRAY (1..1000) DE ENTEROS INICIO _(Calcular divisores)_ DIVISORES(NUM, VECTOR, LONG) _(Sumar los divisores)_ SUM &lt;-- 0 PARA K &lt;-- 1 HASTA LONG HACER SUM &lt;-- SUM &#43; VECTOR(K) FIN_PARA _(Comprobar si la suma de los divisores es igual al número)_ SI ( SUM = NUM ) ENTONCES RESULT &lt;-- VERDADERO SINO RESULT &lt;-- FALSO FIN_SI DEVOLVER RESULT FIN Apartado 3 PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO) ENTRADAS: TOPE: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS QUE DEBEMOS ENCONTRAR)_ SALIDAS: DESTINO: ARRAY (1..1000) DE ENTEROS _(VECTOR EN EL QUE ALMACENAMOS LOS NÚMEROS PERFECTOS)_ VARIABLES: A, B: ENTEROS INICIO A &lt;-- 1 B &lt;-- 1 MIENTRAS (B&lt;=TOPE) HACER SI SUMADIVISORES(A) ENTONCES DESTINO(B) &lt;-- A B &lt;-- B&#43;1 FIN_SI A &lt;-- A &#43; 1 FIN_MIENTRAS FIN ALGORITMO NUMEROPERFECTO ENTRADAS: P: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS HA ENCONTRAR, P &gt; 0)_ SALIDAS: SOLUCIÓN: ARRAY (1..1000) DE ENTEROS _(NÚMEROS PERFECTOS ENCONTRADOS)_ VARIABLES: I: ENTERO INICIO ESCRIBIR &#34;¿CUANTOS NÚMEROS PERFECTOS DESEA CALCULAR? : &#34; LEER P PERFECTO(P, SOLUCION) ESCRIBIR &#34;LOS &#34;,P,&#34; Nº PERFECTOS SON: &#34; PARA I &lt;-- 1 HASTA P HACER ESCRIBIR &#34; &#34;, SOLUCION(I) FIN_PARA FIN.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/n-meros-perfectos/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/n-meros-perfectos/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Números perfectos">
-	<meta property="og:description" content="Números perfectos# Enunciado# Un número perfecto es un número natural que es igual a la suma de sus divisores propios positivos, sin incluirse él mismo. Así, 6 es un número perfecto, porque sus divisores propios son 1, 2 y 3; y 6 = 1 &#43; 2 &#43; 3.
+	<meta property="og:description" content="Números perfectos Enunciado Un número perfecto es un número natural que es igual a la suma de sus divisores propios positivos, sin incluirse él mismo. Así, 6 es un número perfecto, porque sus divisores propios son 1, 2 y 3; y 6 = 1 &#43; 2 &#43; 3.
 Realizar los siguientes apartados para el cálculo de números perfectos:
-Un subalgoritmo al que se le de un entero, y devuelva los divisores de dicho numero, así como el número de ellos. Un subalgoritmo que reciba como entradas un número, y devuelva VERDADERO si la suma de divisores es igual al número y FALSO en otro caso. Un algoritmo que devuelva los k primeros números perfectos, apoyándose en los módulos anteriores. Soluciones# Diseño en pseudocódigo# Apartado 1# PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS) ENTRADAS: N: ENTERO _(NÚMERO PARA SACAR SUS DIVISORES, N &gt; 0 )_ SALIDAS: VEC: ARRAY (1..1000) DE ENTEROS _(VECTOR PARA ALMACENAR LOS DIVISORES)_ POS: ENTERO _(NUMERO DE DIVISORES)_ VARIABLES: DIVISOR, J: ENTEROS INICIO DIVISOR &lt;-- N – 1 J &lt;-- 1; MIENTRAS ( DIVISOR &lt;&gt; 0 ) HACER SI ((N MOD DIVISOR ) = 0) ENTONCES VEC(J) &lt;-- DIVISOR J &lt;-- J &#43; 1 FIN_SI DIVISOR &lt;-- DIVISOR-1 FIN_MIENTRAS SI N = 1 ENTONCES VEC(J) &lt;-- 1 J &lt;-- J &#43; 1 FIN_SI POS&lt;--J-1 FIN Apartado 2# FUNCIÓN SUMADIVISORES(NUM): LÓGICO ENTRADAS: NUM: ENTERO _(NÚMERO QUE ESTUDIAMOS PARA VER SI LA SUMA DE SUS DIVISORES ES IGUAL AL NÚMERO O NO, NUM &gt; 0)_ SALIDAS: RESULT: LÓGICO _(VERDADERO SI LA SUMA DE LOS DIVISORES ES EL NUMERO Y FALSO SI NO LO ES)_ VARIABLES: K, SUM, LONG : ENTEROS VECTOR:ARRAY (1..1000) DE ENTEROS INICIO _(Calcular divisores)_ DIVISORES(NUM, VECTOR, LONG) _(Sumar los divisores)_ SUM &lt;-- 0 PARA K &lt;-- 1 HASTA LONG HACER SUM &lt;-- SUM &#43; VECTOR(K) FIN_PARA _(Comprobar si la suma de los divisores es igual al número)_ SI ( SUM = NUM ) ENTONCES RESULT &lt;-- VERDADERO SINO RESULT &lt;-- FALSO FIN_SI DEVOLVER RESULT FIN Apartado 3# PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO) ENTRADAS: TOPE: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS QUE DEBEMOS ENCONTRAR)_ SALIDAS: DESTINO: ARRAY (1..1000) DE ENTEROS _(VECTOR EN EL QUE ALMACENAMOS LOS NÚMEROS PERFECTOS)_ VARIABLES: A, B: ENTEROS INICIO A &lt;-- 1 B &lt;-- 1 MIENTRAS (B&lt;=TOPE) HACER SI SUMADIVISORES(A) ENTONCES DESTINO(B) &lt;-- A B &lt;-- B&#43;1 FIN_SI A &lt;-- A &#43; 1 FIN_MIENTRAS FIN ALGORITMO NUMEROPERFECTO ENTRADAS: P: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS HA ENCONTRAR, P &gt; 0)_ SALIDAS: SOLUCIÓN: ARRAY (1..1000) DE ENTEROS _(NÚMEROS PERFECTOS ENCONTRADOS)_ VARIABLES: I: ENTERO INICIO ESCRIBIR &#34;¿CUANTOS NÚMEROS PERFECTOS DESEA CALCULAR? : &#34; LEER P PERFECTO(P, SOLUCION) ESCRIBIR &#34;LOS &#34;,P,&#34; Nº PERFECTOS SON: &#34; PARA I &lt;-- 1 HASTA P HACER ESCRIBIR &#34; &#34;, SOLUCION(I) FIN_PARA FIN.">
+Un subalgoritmo al que se le de un entero, y devuelva los divisores de dicho numero, así como el número de ellos. Un subalgoritmo que reciba como entradas un número, y devuelva VERDADERO si la suma de divisores es igual al número y FALSO en otro caso. Un algoritmo que devuelva los k primeros números perfectos, apoyándose en los módulos anteriores. Soluciones Diseño en pseudocódigo Apartado 1 PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS) ENTRADAS: N: ENTERO _(NÚMERO PARA SACAR SUS DIVISORES, N &gt; 0 )_ SALIDAS: VEC: ARRAY (1..1000) DE ENTEROS _(VECTOR PARA ALMACENAR LOS DIVISORES)_ POS: ENTERO _(NUMERO DE DIVISORES)_ VARIABLES: DIVISOR, J: ENTEROS INICIO DIVISOR &lt;-- N – 1 J &lt;-- 1; MIENTRAS ( DIVISOR &lt;&gt; 0 ) HACER SI ((N MOD DIVISOR ) = 0) ENTONCES VEC(J) &lt;-- DIVISOR J &lt;-- J &#43; 1 FIN_SI DIVISOR &lt;-- DIVISOR-1 FIN_MIENTRAS SI N = 1 ENTONCES VEC(J) &lt;-- 1 J &lt;-- J &#43; 1 FIN_SI POS&lt;--J-1 FIN Apartado 2 FUNCIÓN SUMADIVISORES(NUM): LÓGICO ENTRADAS: NUM: ENTERO _(NÚMERO QUE ESTUDIAMOS PARA VER SI LA SUMA DE SUS DIVISORES ES IGUAL AL NÚMERO O NO, NUM &gt; 0)_ SALIDAS: RESULT: LÓGICO _(VERDADERO SI LA SUMA DE LOS DIVISORES ES EL NUMERO Y FALSO SI NO LO ES)_ VARIABLES: K, SUM, LONG : ENTEROS VECTOR:ARRAY (1..1000) DE ENTEROS INICIO _(Calcular divisores)_ DIVISORES(NUM, VECTOR, LONG) _(Sumar los divisores)_ SUM &lt;-- 0 PARA K &lt;-- 1 HASTA LONG HACER SUM &lt;-- SUM &#43; VECTOR(K) FIN_PARA _(Comprobar si la suma de los divisores es igual al número)_ SI ( SUM = NUM ) ENTONCES RESULT &lt;-- VERDADERO SINO RESULT &lt;-- FALSO FIN_SI DEVOLVER RESULT FIN Apartado 3 PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO) ENTRADAS: TOPE: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS QUE DEBEMOS ENCONTRAR)_ SALIDAS: DESTINO: ARRAY (1..1000) DE ENTEROS _(VECTOR EN EL QUE ALMACENAMOS LOS NÚMEROS PERFECTOS)_ VARIABLES: A, B: ENTEROS INICIO A &lt;-- 1 B &lt;-- 1 MIENTRAS (B&lt;=TOPE) HACER SI SUMADIVISORES(A) ENTONCES DESTINO(B) &lt;-- A B &lt;-- B&#43;1 FIN_SI A &lt;-- A &#43; 1 FIN_MIENTRAS FIN ALGORITMO NUMEROPERFECTO ENTRADAS: P: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS HA ENCONTRAR, P &gt; 0)_ SALIDAS: SOLUCIÓN: ARRAY (1..1000) DE ENTEROS _(NÚMEROS PERFECTOS ENCONTRADOS)_ VARIABLES: I: ENTERO INICIO ESCRIBIR &#34;¿CUANTOS NÚMEROS PERFECTOS DESEA CALCULAR? : &#34; LEER P PERFECTO(P, SOLUCION) ESCRIBIR &#34;LOS &#34;,P,&#34; Nº PERFECTOS SON: &#34; PARA I &lt;-- 1 HASTA P HACER ESCRIBIR &#34; &#34;, SOLUCION(I) FIN_PARA FIN.">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="ejercicios">
@@ -29,26 +34,25 @@ Un subalgoritmo al que se le de un entero, y devuelva los divisores de dicho num
 
 
 	<meta itemprop="name" content="Números perfectos">
-	<meta itemprop="description" content="Números perfectos# Enunciado# Un número perfecto es un número natural que es igual a la suma de sus divisores propios positivos, sin incluirse él mismo. Así, 6 es un número perfecto, porque sus divisores propios son 1, 2 y 3; y 6 = 1 &#43; 2 &#43; 3.
+	<meta itemprop="description" content="Números perfectos Enunciado Un número perfecto es un número natural que es igual a la suma de sus divisores propios positivos, sin incluirse él mismo. Así, 6 es un número perfecto, porque sus divisores propios son 1, 2 y 3; y 6 = 1 &#43; 2 &#43; 3.
 Realizar los siguientes apartados para el cálculo de números perfectos:
-Un subalgoritmo al que se le de un entero, y devuelva los divisores de dicho numero, así como el número de ellos. Un subalgoritmo que reciba como entradas un número, y devuelva VERDADERO si la suma de divisores es igual al número y FALSO en otro caso. Un algoritmo que devuelva los k primeros números perfectos, apoyándose en los módulos anteriores. Soluciones# Diseño en pseudocódigo# Apartado 1# PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS) ENTRADAS: N: ENTERO _(NÚMERO PARA SACAR SUS DIVISORES, N &gt; 0 )_ SALIDAS: VEC: ARRAY (1..1000) DE ENTEROS _(VECTOR PARA ALMACENAR LOS DIVISORES)_ POS: ENTERO _(NUMERO DE DIVISORES)_ VARIABLES: DIVISOR, J: ENTEROS INICIO DIVISOR &lt;-- N – 1 J &lt;-- 1; MIENTRAS ( DIVISOR &lt;&gt; 0 ) HACER SI ((N MOD DIVISOR ) = 0) ENTONCES VEC(J) &lt;-- DIVISOR J &lt;-- J &#43; 1 FIN_SI DIVISOR &lt;-- DIVISOR-1 FIN_MIENTRAS SI N = 1 ENTONCES VEC(J) &lt;-- 1 J &lt;-- J &#43; 1 FIN_SI POS&lt;--J-1 FIN Apartado 2# FUNCIÓN SUMADIVISORES(NUM): LÓGICO ENTRADAS: NUM: ENTERO _(NÚMERO QUE ESTUDIAMOS PARA VER SI LA SUMA DE SUS DIVISORES ES IGUAL AL NÚMERO O NO, NUM &gt; 0)_ SALIDAS: RESULT: LÓGICO _(VERDADERO SI LA SUMA DE LOS DIVISORES ES EL NUMERO Y FALSO SI NO LO ES)_ VARIABLES: K, SUM, LONG : ENTEROS VECTOR:ARRAY (1..1000) DE ENTEROS INICIO _(Calcular divisores)_ DIVISORES(NUM, VECTOR, LONG) _(Sumar los divisores)_ SUM &lt;-- 0 PARA K &lt;-- 1 HASTA LONG HACER SUM &lt;-- SUM &#43; VECTOR(K) FIN_PARA _(Comprobar si la suma de los divisores es igual al número)_ SI ( SUM = NUM ) ENTONCES RESULT &lt;-- VERDADERO SINO RESULT &lt;-- FALSO FIN_SI DEVOLVER RESULT FIN Apartado 3# PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO) ENTRADAS: TOPE: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS QUE DEBEMOS ENCONTRAR)_ SALIDAS: DESTINO: ARRAY (1..1000) DE ENTEROS _(VECTOR EN EL QUE ALMACENAMOS LOS NÚMEROS PERFECTOS)_ VARIABLES: A, B: ENTEROS INICIO A &lt;-- 1 B &lt;-- 1 MIENTRAS (B&lt;=TOPE) HACER SI SUMADIVISORES(A) ENTONCES DESTINO(B) &lt;-- A B &lt;-- B&#43;1 FIN_SI A &lt;-- A &#43; 1 FIN_MIENTRAS FIN ALGORITMO NUMEROPERFECTO ENTRADAS: P: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS HA ENCONTRAR, P &gt; 0)_ SALIDAS: SOLUCIÓN: ARRAY (1..1000) DE ENTEROS _(NÚMEROS PERFECTOS ENCONTRADOS)_ VARIABLES: I: ENTERO INICIO ESCRIBIR &#34;¿CUANTOS NÚMEROS PERFECTOS DESEA CALCULAR? : &#34; LEER P PERFECTO(P, SOLUCION) ESCRIBIR &#34;LOS &#34;,P,&#34; Nº PERFECTOS SON: &#34; PARA I &lt;-- 1 HASTA P HACER ESCRIBIR &#34; &#34;, SOLUCION(I) FIN_PARA FIN.">
+Un subalgoritmo al que se le de un entero, y devuelva los divisores de dicho numero, así como el número de ellos. Un subalgoritmo que reciba como entradas un número, y devuelva VERDADERO si la suma de divisores es igual al número y FALSO en otro caso. Un algoritmo que devuelva los k primeros números perfectos, apoyándose en los módulos anteriores. Soluciones Diseño en pseudocódigo Apartado 1 PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS) ENTRADAS: N: ENTERO _(NÚMERO PARA SACAR SUS DIVISORES, N &gt; 0 )_ SALIDAS: VEC: ARRAY (1..1000) DE ENTEROS _(VECTOR PARA ALMACENAR LOS DIVISORES)_ POS: ENTERO _(NUMERO DE DIVISORES)_ VARIABLES: DIVISOR, J: ENTEROS INICIO DIVISOR &lt;-- N – 1 J &lt;-- 1; MIENTRAS ( DIVISOR &lt;&gt; 0 ) HACER SI ((N MOD DIVISOR ) = 0) ENTONCES VEC(J) &lt;-- DIVISOR J &lt;-- J &#43; 1 FIN_SI DIVISOR &lt;-- DIVISOR-1 FIN_MIENTRAS SI N = 1 ENTONCES VEC(J) &lt;-- 1 J &lt;-- J &#43; 1 FIN_SI POS&lt;--J-1 FIN Apartado 2 FUNCIÓN SUMADIVISORES(NUM): LÓGICO ENTRADAS: NUM: ENTERO _(NÚMERO QUE ESTUDIAMOS PARA VER SI LA SUMA DE SUS DIVISORES ES IGUAL AL NÚMERO O NO, NUM &gt; 0)_ SALIDAS: RESULT: LÓGICO _(VERDADERO SI LA SUMA DE LOS DIVISORES ES EL NUMERO Y FALSO SI NO LO ES)_ VARIABLES: K, SUM, LONG : ENTEROS VECTOR:ARRAY (1..1000) DE ENTEROS INICIO _(Calcular divisores)_ DIVISORES(NUM, VECTOR, LONG) _(Sumar los divisores)_ SUM &lt;-- 0 PARA K &lt;-- 1 HASTA LONG HACER SUM &lt;-- SUM &#43; VECTOR(K) FIN_PARA _(Comprobar si la suma de los divisores es igual al número)_ SI ( SUM = NUM ) ENTONCES RESULT &lt;-- VERDADERO SINO RESULT &lt;-- FALSO FIN_SI DEVOLVER RESULT FIN Apartado 3 PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO) ENTRADAS: TOPE: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS QUE DEBEMOS ENCONTRAR)_ SALIDAS: DESTINO: ARRAY (1..1000) DE ENTEROS _(VECTOR EN EL QUE ALMACENAMOS LOS NÚMEROS PERFECTOS)_ VARIABLES: A, B: ENTEROS INICIO A &lt;-- 1 B &lt;-- 1 MIENTRAS (B&lt;=TOPE) HACER SI SUMADIVISORES(A) ENTONCES DESTINO(B) &lt;-- A B &lt;-- B&#43;1 FIN_SI A &lt;-- A &#43; 1 FIN_MIENTRAS FIN ALGORITMO NUMEROPERFECTO ENTRADAS: P: ENTERO _(CANTIDAD DE NÚMEROS PERFECTOS HA ENCONTRAR, P &gt; 0)_ SALIDAS: SOLUCIÓN: ARRAY (1..1000) DE ENTEROS _(NÚMEROS PERFECTOS ENCONTRADOS)_ VARIABLES: I: ENTERO INICIO ESCRIBIR &#34;¿CUANTOS NÚMEROS PERFECTOS DESEA CALCULAR? : &#34; LEER P PERFECTO(P, SOLUCION) ESCRIBIR &#34;LOS &#34;,P,&#34; Nº PERFECTOS SON: &#34; PARA I &lt;-- 1 HASTA P HACER ESCRIBIR &#34; &#34;, SOLUCION(I) FIN_PARA FIN.">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="448">
 	<meta itemprop="keywords" content="Sin_c,Sin_matlab">
 
-<title>Números perfectos | Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.png" >
+<title>Números perfectos • Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/n-meros-perfectos/">
-<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
+<link rel="canonical" href="https://example.org/ejercicios/n-meros-perfectos/">
+<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
-
-
-
+<script type="module" src="/en.search.min.f08ce34083f0b58f4a4dcd9350a446fb56ae7c128811e3f4ab6161c0ddfa7aa8.js" integrity="sha256-8IzjQIPwtY9KTc2TUKRG&#43;1aufBKIEeP0q2FhwN36eqg=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -88,12 +92,11 @@ pre code,
 </style>
 
 </head>
+
 <body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
+  <div class="book-container flex">
     
-<aside class="book-menu">
+<aside class="book-menu" aria-label="Menu">
   <div class="book-menu-content">
     
   <nav>
@@ -139,15 +142,14 @@ pre code,
 
 
 <div class="book-search hidden">
-  <input id="book-search-input" type="text" 
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
     placeholder="Search"
     aria-label="Search"
-    maxlength="64" data-hotkeys="s/" />
+    maxlength="64" />
   <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+  <ul id="book-search-results" aria-live="polite"></ul>
 </div>
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
 
 
 
@@ -172,46 +174,58 @@ pre code,
 </aside>
  
 
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
   </label>
 
-  <h3>Números perfectos</h3>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    
+  </a>
+</h2>
 
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+
+.book-brand img {
+    height: 3.5em;
+    width: 4.5em;
+}
+</style>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
   </label>
+  
 </div>
 
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#diseño-en-pseudocódigo">Diseño en pseudocódigo</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
  
-      </header>
+    </header>
 
+    <main class="book-page">
       
   
 <div class="exercise-metadata">
@@ -341,8 +355,11 @@ a.badge:hover {
 
 
       
-  <article class="markdown book-article"><h1 id="números-perfectos">Números perfectos<a class="anchor" href="#n%c3%bameros-perfectos">#</a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
+  
+
+      
+  <article class="markdown book-article"><h1 id="números-perfectos">Números perfectos<a class="anchor" href="#n%c3%bameros-perfectos" aria-label="Link"></a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
 <p>Un <strong>número perfecto</strong> es un número natural que es igual a la suma de sus divisores propios positivos, sin incluirse él mismo. Así, 6 es un número perfecto, porque sus divisores propios son 1, 2 y 3; y 6 = 1 + 2 + 3.</p>
 <p>Realizar los siguientes apartados para el cálculo de números perfectos:</p>
 <ol>
@@ -350,9 +367,9 @@ a.badge:hover {
 <li>Un subalgoritmo que reciba como entradas un número, y devuelva VERDADERO si la suma de divisores es igual al número y FALSO en otro caso.</li>
 <li>Un algoritmo que devuelva los <code>k</code> primeros números perfectos, apoyándose en los módulos anteriores.</li>
 </ol>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
-<h3 id="diseño-en-pseudocódigo">Diseño en pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo">#</a></h3>
-<h4 id="apartado-1">Apartado 1<a class="anchor" href="#apartado-1">#</a></h4>
+<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
+<h3 id="diseño-en-pseudocódigo">Diseño en pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo" aria-label="Link"></a></h3>
+<h4 id="apartado-1">Apartado 1<a class="anchor" href="#apartado-1" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PROCEDIMIENTO DIVISORES(N, VAR VEC, VAR POS)
 </span></span><span class="line"><span class="cl">ENTRADAS:
 </span></span><span class="line"><span class="cl">   N: ENTERO  _(NÚMERO PARA SACAR SUS DIVISORES, N &gt; 0 )_
@@ -376,7 +393,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">      J &lt;-- J + 1
 </span></span><span class="line"><span class="cl">   FIN_SI
 </span></span><span class="line"><span class="cl">   POS&lt;--J-1
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="apartado-2">Apartado 2<a class="anchor" href="#apartado-2">#</a></h4>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="apartado-2">Apartado 2<a class="anchor" href="#apartado-2" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FUNCIÓN SUMADIVISORES(NUM): LÓGICO
 </span></span><span class="line"><span class="cl">ENTRADAS:
 </span></span><span class="line"><span class="cl">   NUM: ENTERO    _(NÚMERO QUE ESTUDIAMOS PARA VER SI LA SUMA DE SUS DIVISORES ES IGUAL AL NÚMERO O NO, NUM &gt; 0)_
@@ -400,7 +417,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">        RESULT &lt;-- FALSO
 </span></span><span class="line"><span class="cl">   FIN_SI
 </span></span><span class="line"><span class="cl">   DEVOLVER RESULT
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="apartado-3">Apartado 3<a class="anchor" href="#apartado-3">#</a></h4>
+</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="apartado-3">Apartado 3<a class="anchor" href="#apartado-3" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PROCEDIMIENTO PERFECTO (TOPE, VAR DESTINO)
 </span></span><span class="line"><span class="cl">ENTRADAS:
 </span></span><span class="line"><span class="cl">   TOPE: ENTERO  _(CANTIDAD DE NÚMEROS PERFECTOS QUE DEBEMOS ENCONTRAR)_
@@ -453,18 +470,11 @@ a.badge:hover {
 
 </div>
 
-
-
-
-
-  
-  
-  
-  <div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between">
     <span>
     
       <a href="/ejercicios/numeros-amigos/" class="flex align-center">
-        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
         <span>Numeros amigos</span>
       </a>
     
@@ -473,13 +483,11 @@ a.badge:hover {
     
       <a href="/ejercicios/operaci-n-aritmetica/" class="flex align-center">
         <span>Operación aritmetica</span>
-        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
       </a>
     
     </span>
   </div>
-  
-
 
  
         
@@ -490,19 +498,18 @@ a.badge:hover {
   
  
         
-  
   
     <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
   
 
       </footer>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
 
     
   
-  <aside class="book-toc">
+  <aside class="book-toc" aria-label="Table of Contents">
     <div class="book-toc-content">
       
   
@@ -519,15 +526,21 @@ a.badge:hover {
 
 
 
+
+
+
+
     </div>
   </aside>
   
  
-  </main>
+  </div>
 
   
 </body>
 </html>
+
+
 
 
 

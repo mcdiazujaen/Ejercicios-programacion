@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="es-es" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Máquina fotocopiadora-impresora# Enunciado# Tenemos que controlar una máquina de fotocopiadora-impresora. Esta máquina tiene 3 modos:
+<meta name="description" content="Máquina fotocopiadora-impresora Enunciado Tenemos que controlar una máquina de fotocopiadora-impresora. Esta máquina tiene 3 modos:
 Modo 1 : actúa de fotocopiadora, Modo 2 : impresora Modo 3 : escáner. La maquina conforme le van llegando trabajos los va sirviendo, siguiendo una priorización. Cuando se le envían trabajos a la maquina, esta dispone de una matriz en memoria, llamada trabajos donde se almacena el identificador de trabajo (Columna 1) y el número de páginas (Columna 2), el modo en que va a trabajar (Columna 3) y el orden en el que se van a servir los trabajos (Columna 4). Un ejemplo de cómo podría ser esta matriz con 6 trabajos se muestra a continuación:
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/m-quina-fotocopiadora-impresora/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/m-quina-fotocopiadora-impresora/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Máquina fotocopiadora-impresora">
-	<meta property="og:description" content="Máquina fotocopiadora-impresora# Enunciado# Tenemos que controlar una máquina de fotocopiadora-impresora. Esta máquina tiene 3 modos:
+	<meta property="og:description" content="Máquina fotocopiadora-impresora Enunciado Tenemos que controlar una máquina de fotocopiadora-impresora. Esta máquina tiene 3 modos:
 Modo 1 : actúa de fotocopiadora, Modo 2 : impresora Modo 3 : escáner. La maquina conforme le van llegando trabajos los va sirviendo, siguiendo una priorización. Cuando se le envían trabajos a la maquina, esta dispone de una matriz en memoria, llamada trabajos donde se almacena el identificador de trabajo (Columna 1) y el número de páginas (Columna 2), el modo en que va a trabajar (Columna 3) y el orden en el que se van a servir los trabajos (Columna 4). Un ejemplo de cómo podría ser esta matriz con 6 trabajos se muestra a continuación:">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="article">
@@ -28,25 +33,24 @@ Modo 1 : actúa de fotocopiadora, Modo 2 : impresora Modo 3 : escáner. La maqui
 
 
 	<meta itemprop="name" content="Máquina fotocopiadora-impresora">
-	<meta itemprop="description" content="Máquina fotocopiadora-impresora# Enunciado# Tenemos que controlar una máquina de fotocopiadora-impresora. Esta máquina tiene 3 modos:
+	<meta itemprop="description" content="Máquina fotocopiadora-impresora Enunciado Tenemos que controlar una máquina de fotocopiadora-impresora. Esta máquina tiene 3 modos:
 Modo 1 : actúa de fotocopiadora, Modo 2 : impresora Modo 3 : escáner. La maquina conforme le van llegando trabajos los va sirviendo, siguiendo una priorización. Cuando se le envían trabajos a la maquina, esta dispone de una matriz en memoria, llamada trabajos donde se almacena el identificador de trabajo (Columna 1) y el número de páginas (Columna 2), el modo en que va a trabajar (Columna 3) y el orden en el que se van a servir los trabajos (Columna 4). Un ejemplo de cómo podría ser esta matriz con 6 trabajos se muestra a continuación:">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="985">
 	<meta itemprop="keywords" content="Sin_matlab,Sin_solución">
 
-<title>Máquina fotocopiadora-impresora | Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.png" >
+<title>Máquina fotocopiadora-impresora • Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/m-quina-fotocopiadora-impresora/">
-<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
+<link rel="canonical" href="https://example.org/ejercicios/m-quina-fotocopiadora-impresora/">
+<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
-
-
-
+<script type="module" src="/en.search.min.f08ce34083f0b58f4a4dcd9350a446fb56ae7c128811e3f4ab6161c0ddfa7aa8.js" integrity="sha256-8IzjQIPwtY9KTc2TUKRG&#43;1aufBKIEeP0q2FhwN36eqg=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -86,12 +90,11 @@ pre code,
 </style>
 
 </head>
+
 <body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
+  <div class="book-container flex">
     
-<aside class="book-menu">
+<aside class="book-menu" aria-label="Menu">
   <div class="book-menu-content">
     
   <nav>
@@ -137,15 +140,14 @@ pre code,
 
 
 <div class="book-search hidden">
-  <input id="book-search-input" type="text" 
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
     placeholder="Search"
     aria-label="Search"
-    maxlength="64" data-hotkeys="s/" />
+    maxlength="64" />
   <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+  <ul id="book-search-results" aria-live="polite"></ul>
 </div>
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
 
 
 
@@ -170,51 +172,58 @@ pre code,
 </aside>
  
 
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
   </label>
 
-  <h3>Máquina fotocopiadora-impresora</h3>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    
+  </a>
+</h2>
 
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+
+.book-brand img {
+    height: 3.5em;
+    width: 4.5em;
+}
+</style>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
   </label>
+  
 </div>
 
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a>
-      <ul>
-        <li><a href="#apartado-1">Apartado 1</a></li>
-        <li><a href="#apartado-2">Apartado 2</a></li>
-        <li><a href="#apartado-3">Apartado 3</a></li>
-        <li><a href="#apartado-4">Apartado 4</a></li>
-        <li><a href="#apartado-5">Apartado 5</a></li>
-        <li><a href="#apartado-6">Apartado 6</a></li>
-        <li><a href="#apartado-7">Apartado 7</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
  
-      </header>
+    </header>
 
+    <main class="book-page">
       
   
 <div class="exercise-metadata">
@@ -337,8 +346,11 @@ a.badge:hover {
 
 
       
-  <article class="markdown book-article"><h1 id="máquina-fotocopiadora-impresora">Máquina fotocopiadora-impresora<a class="anchor" href="#m%c3%a1quina-fotocopiadora-impresora">#</a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
+  
+
+      
+  <article class="markdown book-article"><h1 id="máquina-fotocopiadora-impresora">Máquina fotocopiadora-impresora<a class="anchor" href="#m%c3%a1quina-fotocopiadora-impresora" aria-label="Link"></a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
 <p>Tenemos que controlar una máquina de fotocopiadora-impresora. Esta máquina tiene 3 modos:</p>
 <ul>
 <li><em>Modo 1</em> : actúa de fotocopiadora,</li>
@@ -395,18 +407,18 @@ a.badge:hover {
 	</tbody>
 </table>
 <p>El ID del trabajo, es incremental, según vayan llegando trabajos, se le va poniendo un número. El número de copias y el modo se le da al sistema como entrada cada vez que llega un trabajo. La prioridad de los trabajos habrá que calcularla cada vez que llegue un trabajo nuevo al sistema o se elimine un trabajo del sistema. Así pues, en el ejercicio se pide:</p>
-<h3 id="apartado-1">Apartado 1<a class="anchor" href="#apartado-1">#</a></h3>
+<h3 id="apartado-1">Apartado 1<a class="anchor" href="#apartado-1" aria-label="Link"></a></h3>
 <p>Realizar un subalgoritmo que dado como entrada un modo de la fotocopiadora (valor: 1,2 o 3), la matriz de trabajos, y el tamaño de la matriz, se muestre por pantalla la lista de trabajos ordenada por ID que hay pendientes de realizar en este modo. Pista: La matriz ya está ordenada por ID.</p>
 <p><em>Ejemplo</em> : Entrada: Modo: 1 Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">  Trabajo 6
 </span></span><span class="line"><span class="cl">  Trabajo 8
-</span></span><span class="line"><span class="cl">  Trabajo 11</span></span></code></pre></div><h3 id="apartado-2">Apartado 2<a class="anchor" href="#apartado-2">#</a></h3>
+</span></span><span class="line"><span class="cl">  Trabajo 11</span></span></code></pre></div><h3 id="apartado-2">Apartado 2<a class="anchor" href="#apartado-2" aria-label="Link"></a></h3>
 <p>Realizar un subalgoritmo que dado como entrada la matriz y su tamaño devuelva la posición de la matriz (o sea el número de fila) del próximo trabajo a realizar. Si no se encuentra ningún trabajo entonces el subalgoritmo devolverá un -1. Pista: El próximo trabajo a realizar es aquel que tenga el valor 1 en la columna de prioridades (Columna 4).</p>
 <p><em>Ejemplo</em> : En la matriz anterior, devolvería la posición: 1</p>
-<h3 id="apartado-3">Apartado 3<a class="anchor" href="#apartado-3">#</a></h3>
+<h3 id="apartado-3">Apartado 3<a class="anchor" href="#apartado-3" aria-label="Link"></a></h3>
 <p>Realizar un subalgoritmo que dado como entrada un modo (o sea un valor: 1, 2 o 3) y un número de copias a realizar devuelva si es aceptable o no un trabajo, si lo es devolverá verdadero, y sino devolverá falso. Se considera aceptable cuando el número de copias no supera 20 en modo escáner o fotocopiadora. En modo impresora no tiene límite.</p>
 <p><em>Ejemplo</em> : Entrada: Modo: 1, 10 copias. Devuelve Verdadero</p>
-<h3 id="apartado-4">Apartado 4<a class="anchor" href="#apartado-4">#</a></h3>
+<h3 id="apartado-4">Apartado 4<a class="anchor" href="#apartado-4" aria-label="Link"></a></h3>
 <p>Realizar un subalgoritmo que actualice las prioridades del sistema. Para ello se da como entrada la matriz de trabajos y su tamaño. El algoritmo comenzará a dar prioridades a los trabajos con el identificador más bajo pero en el siguiente orden: primero estarán los que sean de fotocopiadora (Modo 1), después los del escáner (Modo 3) y por último los de impresora (Modo 2). Pista: los trabajos ya están ordenados por orden de llegada y por tanto los identificadores más bajos están en las primeras posiciones.</p>
 <p><em>Ejemplo</em> :</p>
 <table>
@@ -457,7 +469,7 @@ a.badge:hover {
 			</tr>
 	</tbody>
 </table>
-<h3 id="apartado-5">Apartado 5<a class="anchor" href="#apartado-5">#</a></h3>
+<h3 id="apartado-5">Apartado 5<a class="anchor" href="#apartado-5" aria-label="Link"></a></h3>
 <p>Realizar un subalgoritmo que de alta un trabajo nuevo. Para hacer esto, se tendrá que pasar como entrada la matriz, el tamaño, el modo en el que se va a trabajar, el número de copias que se quiere realizar y el último identificador de trabajo usado. Una vez hecho esto, se comprueba si el número de copias es correcto usando el subalgoritmo del apartado 3). Si lo es entonces, se añade en la matriz una fila nueva con: el nuevo identificador de trabajo actualizado, es decir, sería el último identificador más 1, el número de copias y el modo. Por último se llama al subalgoritmo 4) para actualizar la lista de prioridades.</p>
 <p><em>Ejemplo</em> : Entrada: Modo: 1, Nº copias: 10, Ultimo ID trabajo: 11.</p>
 <p>Primero se Inserta la fila, si es posible</p>
@@ -570,7 +582,7 @@ a.badge:hover {
 			</tr>
 	</tbody>
 </table>
-<h3 id="apartado-6">Apartado 6<a class="anchor" href="#apartado-6">#</a></h3>
+<h3 id="apartado-6">Apartado 6<a class="anchor" href="#apartado-6" aria-label="Link"></a></h3>
 <p>Realizar un subalgoritmo que elimine un trabajo de la matriz. Se dará como entrada la posición del trabajo a eliminar en la matriz, la matriz y el tamaño de ésta. Entonces se eliminará la fila, y se correrán todas las celdas una posición hacia arriba. Una vez hecho esto, se actualizarán las prioridades del sistema usando el subalgoritmo del apartado 4).</p>
 <p><em>Ejemplo</em> : Entrada: posición: 1</p>
 <p>Primero se elimina trabajo y se decrementa el tamaño.</p>
@@ -671,7 +683,7 @@ a.badge:hover {
 			</tr>
 	</tbody>
 </table>
-<h3 id="apartado-7">Apartado 7<a class="anchor" href="#apartado-7">#</a></h3>
+<h3 id="apartado-7">Apartado 7<a class="anchor" href="#apartado-7" aria-label="Link"></a></h3>
 <p>Hacer el algoritmo principal que realice las siguientes operaciones utilizando un menú con las siguientes opciones:</p>
 <ol>
 <li>Mostrar. En esta opción se mostrarán los trabajos que hay pendientes de hacer: Primero, Escáner, después Impresora y por último Fotocopiadora (usar subalgoritmo del apartado 1).</li>
@@ -697,18 +709,11 @@ a.badge:hover {
 
 </div>
 
-
-
-
-
-  
-  
-  
-  <div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between">
     <span>
     
       <a href="/ejercicios/losas-de-tres-colores/" class="flex align-center">
-        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
         <span>Losas de tres colores</span>
       </a>
     
@@ -717,13 +722,11 @@ a.badge:hover {
     
       <a href="/ejercicios/matriz-sim-trica/" class="flex align-center">
         <span>Matriz simétrica</span>
-        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
       </a>
     
     </span>
   </div>
-  
-
 
  
         
@@ -734,19 +737,18 @@ a.badge:hover {
   
  
         
-  
   
     <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
   
 
       </footer>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
 
     
   
-  <aside class="book-toc">
+  <aside class="book-toc" aria-label="Table of Contents">
     <div class="book-toc-content">
       
   
@@ -768,15 +770,21 @@ a.badge:hover {
 
 
 
+
+
+
+
     </div>
   </aside>
   
  
-  </main>
+  </div>
 
   
 </body>
 </html>
+
+
 
 
 

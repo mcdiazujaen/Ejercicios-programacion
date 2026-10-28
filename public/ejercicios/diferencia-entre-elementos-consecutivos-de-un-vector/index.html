@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="es-es" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Diferencia entre elementos consecutivos de un vector# Enunciado# Realizar un subalgoritmo que dado un vector A de n números reales, obtener la diferencia mas grande y la menor diferencia entre dos elementos consecutivos de ese vector.
-Soluciones# Diseño en Pseudocódigo# PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor) ENTRADAS: A: ARRAY (0..1000) DE REALES &#39;&#39;(*Array donde buscar la menor y mayor diferencia de elementos*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos útiles del array*)&#39;&#39; SALIDAS: mayor: REAL &#39;&#39;(*Mayor diferencia entre elementos consecutivos*)&#39;&#39; menor: REAL &#39;&#39;(*Menor diferencia entre elementos consecutivos*)&#39;&#39; VARIABLES: dif: REAL pos: ENTERO INICIO &#39;&#39;(*Calcular la primera diferencia*)&#39;&#39; dif &lt;-- A(1) - A(0) SI dif&lt;0 ENTONCES dif &lt;-- -dif FIN_SI mayor &lt;-- dif menor &lt;-- dif &#39;&#39;(*Calcular la diferencia del resto de los elementos*)&#39;&#39; PARA pos &lt;--2 HASTA n-1 HACER dif &lt;-- A(pos)-A(pos-1) SI dif&lt;0 ENTONCES dif&lt;-- -dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&gt;mayor ENTONCES mayor &lt;-- dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&lt;menor ENTONCES menor &lt;-- dif FIN_SI FIN_PARA FIN Programa en C&#43;&#43;# #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Diferencias ( float A[1001], int n, float &amp;mayor, float &amp;menor){ /*------ ENTRADAS: A: Array donde buscar la mayor y menor diferencia de elementos. n: Números de elementos útiles del array. SALIDAS: mayor: Mayor diferencia entre elementos consecutivos menor: Menor diferencia entre elementos consecutivos ------*/ //VARIABLES: float dif; int pos; //Calcular la primera diferencia dif = A[1]-A[0]; if (dif&lt;0){ dif=-dif; } mayor=dif; menor=dif; //Calcular la diferencia del resto de los elementos for (pos=2; pos&lt;=n-1; pos&#43;&#43;){ dif=A[pos]-A[pos-1]; if (dif&lt;0){ dif=-dif; } //Comprobar si la diferencia es mayor if (dif&gt;mayor){ mayor=dif; } //Comprobar si la diferencia es menor if (dif&lt;menor){ menor=dif; } } } Programa en Matlab# Solución con programación básica# function [mayor,menor] = Diferencias( A ) %FUNCIÓN [mayor,menor] = Diferencias( A ) %DESCRIPCIÓN: Dado un vector A de n números reales, obtener la diferencia mas grande y % la menor diferencia entre dos elementos consecutivos de ese vector. %ENTRADAS: % A: ARRAY(n) DE REALES; El vector. %SALIDAS: % mayor: REAL; la mayor diferencia % menor: REAL; la menor diferencia %VARIABLES: % n, pos: ENTEROS; % dif: REAL n = length( A ); %Calcular la primera diferencia dif = A(2)-A(1); if dif&lt;0 dif = -dif; end mayor = dif; menor = dif; %Calcular la diferencia del resto de los elementos for pos=2:n-1 dif = A(pos&#43;1)-A(pos); if dif&lt;0, dif = -dif; end %Comprobar si la diferencia es mayor. if dif&gt;mayor mayor = dif; end %Comprobar si la diferencia es menor. if dif&lt;menor menor = dif; end end Solución con programación Matlab avanzada# Para realizar esta función se utilizan las siguientes funciones de Matlab:
+<meta name="description" content="Diferencia entre elementos consecutivos de un vector Enunciado Realizar un subalgoritmo que dado un vector A de n números reales, obtener la diferencia mas grande y la menor diferencia entre dos elementos consecutivos de ese vector.
+Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor) ENTRADAS: A: ARRAY (0..1000) DE REALES &#39;&#39;(*Array donde buscar la menor y mayor diferencia de elementos*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos útiles del array*)&#39;&#39; SALIDAS: mayor: REAL &#39;&#39;(*Mayor diferencia entre elementos consecutivos*)&#39;&#39; menor: REAL &#39;&#39;(*Menor diferencia entre elementos consecutivos*)&#39;&#39; VARIABLES: dif: REAL pos: ENTERO INICIO &#39;&#39;(*Calcular la primera diferencia*)&#39;&#39; dif &lt;-- A(1) - A(0) SI dif&lt;0 ENTONCES dif &lt;-- -dif FIN_SI mayor &lt;-- dif menor &lt;-- dif &#39;&#39;(*Calcular la diferencia del resto de los elementos*)&#39;&#39; PARA pos &lt;--2 HASTA n-1 HACER dif &lt;-- A(pos)-A(pos-1) SI dif&lt;0 ENTONCES dif&lt;-- -dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&gt;mayor ENTONCES mayor &lt;-- dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&lt;menor ENTONCES menor &lt;-- dif FIN_SI FIN_PARA FIN Programa en C&#43;&#43; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Diferencias ( float A[1001], int n, float &amp;mayor, float &amp;menor){ /*------ ENTRADAS: A: Array donde buscar la mayor y menor diferencia de elementos. n: Números de elementos útiles del array. SALIDAS: mayor: Mayor diferencia entre elementos consecutivos menor: Menor diferencia entre elementos consecutivos ------*/ //VARIABLES: float dif; int pos; //Calcular la primera diferencia dif = A[1]-A[0]; if (dif&lt;0){ dif=-dif; } mayor=dif; menor=dif; //Calcular la diferencia del resto de los elementos for (pos=2; pos&lt;=n-1; pos&#43;&#43;){ dif=A[pos]-A[pos-1]; if (dif&lt;0){ dif=-dif; } //Comprobar si la diferencia es mayor if (dif&gt;mayor){ mayor=dif; } //Comprobar si la diferencia es menor if (dif&lt;menor){ menor=dif; } } } Programa en Matlab Solución con programación básica function [mayor,menor] = Diferencias( A ) %FUNCIÓN [mayor,menor] = Diferencias( A ) %DESCRIPCIÓN: Dado un vector A de n números reales, obtener la diferencia mas grande y % la menor diferencia entre dos elementos consecutivos de ese vector. %ENTRADAS: % A: ARRAY(n) DE REALES; El vector. %SALIDAS: % mayor: REAL; la mayor diferencia % menor: REAL; la menor diferencia %VARIABLES: % n, pos: ENTEROS; % dif: REAL n = length( A ); %Calcular la primera diferencia dif = A(2)-A(1); if dif&lt;0 dif = -dif; end mayor = dif; menor = dif; %Calcular la diferencia del resto de los elementos for pos=2:n-1 dif = A(pos&#43;1)-A(pos); if dif&lt;0, dif = -dif; end %Comprobar si la diferencia es mayor. if dif&gt;mayor mayor = dif; end %Comprobar si la diferencia es menor. if dif&lt;menor menor = dif; end end Solución con programación Matlab avanzada Para realizar esta función se utilizan las siguientes funciones de Matlab:
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/diferencia-entre-elementos-consecutivos-de-un-vector/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/diferencia-entre-elementos-consecutivos-de-un-vector/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Diferencia entre elementos consecutivos de un vector">
-	<meta property="og:description" content="Diferencia entre elementos consecutivos de un vector# Enunciado# Realizar un subalgoritmo que dado un vector A de n números reales, obtener la diferencia mas grande y la menor diferencia entre dos elementos consecutivos de ese vector.
-Soluciones# Diseño en Pseudocódigo# PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor) ENTRADAS: A: ARRAY (0..1000) DE REALES &#39;&#39;(*Array donde buscar la menor y mayor diferencia de elementos*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos útiles del array*)&#39;&#39; SALIDAS: mayor: REAL &#39;&#39;(*Mayor diferencia entre elementos consecutivos*)&#39;&#39; menor: REAL &#39;&#39;(*Menor diferencia entre elementos consecutivos*)&#39;&#39; VARIABLES: dif: REAL pos: ENTERO INICIO &#39;&#39;(*Calcular la primera diferencia*)&#39;&#39; dif &lt;-- A(1) - A(0) SI dif&lt;0 ENTONCES dif &lt;-- -dif FIN_SI mayor &lt;-- dif menor &lt;-- dif &#39;&#39;(*Calcular la diferencia del resto de los elementos*)&#39;&#39; PARA pos &lt;--2 HASTA n-1 HACER dif &lt;-- A(pos)-A(pos-1) SI dif&lt;0 ENTONCES dif&lt;-- -dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&gt;mayor ENTONCES mayor &lt;-- dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&lt;menor ENTONCES menor &lt;-- dif FIN_SI FIN_PARA FIN Programa en C&#43;&#43;# #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Diferencias ( float A[1001], int n, float &amp;mayor, float &amp;menor){ /*------ ENTRADAS: A: Array donde buscar la mayor y menor diferencia de elementos. n: Números de elementos útiles del array. SALIDAS: mayor: Mayor diferencia entre elementos consecutivos menor: Menor diferencia entre elementos consecutivos ------*/ //VARIABLES: float dif; int pos; //Calcular la primera diferencia dif = A[1]-A[0]; if (dif&lt;0){ dif=-dif; } mayor=dif; menor=dif; //Calcular la diferencia del resto de los elementos for (pos=2; pos&lt;=n-1; pos&#43;&#43;){ dif=A[pos]-A[pos-1]; if (dif&lt;0){ dif=-dif; } //Comprobar si la diferencia es mayor if (dif&gt;mayor){ mayor=dif; } //Comprobar si la diferencia es menor if (dif&lt;menor){ menor=dif; } } } Programa en Matlab# Solución con programación básica# function [mayor,menor] = Diferencias( A ) %FUNCIÓN [mayor,menor] = Diferencias( A ) %DESCRIPCIÓN: Dado un vector A de n números reales, obtener la diferencia mas grande y % la menor diferencia entre dos elementos consecutivos de ese vector. %ENTRADAS: % A: ARRAY(n) DE REALES; El vector. %SALIDAS: % mayor: REAL; la mayor diferencia % menor: REAL; la menor diferencia %VARIABLES: % n, pos: ENTEROS; % dif: REAL n = length( A ); %Calcular la primera diferencia dif = A(2)-A(1); if dif&lt;0 dif = -dif; end mayor = dif; menor = dif; %Calcular la diferencia del resto de los elementos for pos=2:n-1 dif = A(pos&#43;1)-A(pos); if dif&lt;0, dif = -dif; end %Comprobar si la diferencia es mayor. if dif&gt;mayor mayor = dif; end %Comprobar si la diferencia es menor. if dif&lt;menor menor = dif; end end Solución con programación Matlab avanzada# Para realizar esta función se utilizan las siguientes funciones de Matlab:">
+	<meta property="og:description" content="Diferencia entre elementos consecutivos de un vector Enunciado Realizar un subalgoritmo que dado un vector A de n números reales, obtener la diferencia mas grande y la menor diferencia entre dos elementos consecutivos de ese vector.
+Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor) ENTRADAS: A: ARRAY (0..1000) DE REALES &#39;&#39;(*Array donde buscar la menor y mayor diferencia de elementos*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos útiles del array*)&#39;&#39; SALIDAS: mayor: REAL &#39;&#39;(*Mayor diferencia entre elementos consecutivos*)&#39;&#39; menor: REAL &#39;&#39;(*Menor diferencia entre elementos consecutivos*)&#39;&#39; VARIABLES: dif: REAL pos: ENTERO INICIO &#39;&#39;(*Calcular la primera diferencia*)&#39;&#39; dif &lt;-- A(1) - A(0) SI dif&lt;0 ENTONCES dif &lt;-- -dif FIN_SI mayor &lt;-- dif menor &lt;-- dif &#39;&#39;(*Calcular la diferencia del resto de los elementos*)&#39;&#39; PARA pos &lt;--2 HASTA n-1 HACER dif &lt;-- A(pos)-A(pos-1) SI dif&lt;0 ENTONCES dif&lt;-- -dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&gt;mayor ENTONCES mayor &lt;-- dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&lt;menor ENTONCES menor &lt;-- dif FIN_SI FIN_PARA FIN Programa en C&#43;&#43; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Diferencias ( float A[1001], int n, float &amp;mayor, float &amp;menor){ /*------ ENTRADAS: A: Array donde buscar la mayor y menor diferencia de elementos. n: Números de elementos útiles del array. SALIDAS: mayor: Mayor diferencia entre elementos consecutivos menor: Menor diferencia entre elementos consecutivos ------*/ //VARIABLES: float dif; int pos; //Calcular la primera diferencia dif = A[1]-A[0]; if (dif&lt;0){ dif=-dif; } mayor=dif; menor=dif; //Calcular la diferencia del resto de los elementos for (pos=2; pos&lt;=n-1; pos&#43;&#43;){ dif=A[pos]-A[pos-1]; if (dif&lt;0){ dif=-dif; } //Comprobar si la diferencia es mayor if (dif&gt;mayor){ mayor=dif; } //Comprobar si la diferencia es menor if (dif&lt;menor){ menor=dif; } } } Programa en Matlab Solución con programación básica function [mayor,menor] = Diferencias( A ) %FUNCIÓN [mayor,menor] = Diferencias( A ) %DESCRIPCIÓN: Dado un vector A de n números reales, obtener la diferencia mas grande y % la menor diferencia entre dos elementos consecutivos de ese vector. %ENTRADAS: % A: ARRAY(n) DE REALES; El vector. %SALIDAS: % mayor: REAL; la mayor diferencia % menor: REAL; la menor diferencia %VARIABLES: % n, pos: ENTEROS; % dif: REAL n = length( A ); %Calcular la primera diferencia dif = A(2)-A(1); if dif&lt;0 dif = -dif; end mayor = dif; menor = dif; %Calcular la diferencia del resto de los elementos for pos=2:n-1 dif = A(pos&#43;1)-A(pos); if dif&lt;0, dif = -dif; end %Comprobar si la diferencia es mayor. if dif&gt;mayor mayor = dif; end %Comprobar si la diferencia es menor. if dif&lt;menor menor = dif; end end Solución con programación Matlab avanzada Para realizar esta función se utilizan las siguientes funciones de Matlab:">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="ejercicios">
@@ -27,25 +32,24 @@ Soluciones# Diseño en Pseudocódigo# PROCEDIMIENTO Diferencias (A, n, VAR mayor
 
 
 	<meta itemprop="name" content="Diferencia entre elementos consecutivos de un vector">
-	<meta itemprop="description" content="Diferencia entre elementos consecutivos de un vector# Enunciado# Realizar un subalgoritmo que dado un vector A de n números reales, obtener la diferencia mas grande y la menor diferencia entre dos elementos consecutivos de ese vector.
-Soluciones# Diseño en Pseudocódigo# PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor) ENTRADAS: A: ARRAY (0..1000) DE REALES &#39;&#39;(*Array donde buscar la menor y mayor diferencia de elementos*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos útiles del array*)&#39;&#39; SALIDAS: mayor: REAL &#39;&#39;(*Mayor diferencia entre elementos consecutivos*)&#39;&#39; menor: REAL &#39;&#39;(*Menor diferencia entre elementos consecutivos*)&#39;&#39; VARIABLES: dif: REAL pos: ENTERO INICIO &#39;&#39;(*Calcular la primera diferencia*)&#39;&#39; dif &lt;-- A(1) - A(0) SI dif&lt;0 ENTONCES dif &lt;-- -dif FIN_SI mayor &lt;-- dif menor &lt;-- dif &#39;&#39;(*Calcular la diferencia del resto de los elementos*)&#39;&#39; PARA pos &lt;--2 HASTA n-1 HACER dif &lt;-- A(pos)-A(pos-1) SI dif&lt;0 ENTONCES dif&lt;-- -dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&gt;mayor ENTONCES mayor &lt;-- dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&lt;menor ENTONCES menor &lt;-- dif FIN_SI FIN_PARA FIN Programa en C&#43;&#43;# #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Diferencias ( float A[1001], int n, float &amp;mayor, float &amp;menor){ /*------ ENTRADAS: A: Array donde buscar la mayor y menor diferencia de elementos. n: Números de elementos útiles del array. SALIDAS: mayor: Mayor diferencia entre elementos consecutivos menor: Menor diferencia entre elementos consecutivos ------*/ //VARIABLES: float dif; int pos; //Calcular la primera diferencia dif = A[1]-A[0]; if (dif&lt;0){ dif=-dif; } mayor=dif; menor=dif; //Calcular la diferencia del resto de los elementos for (pos=2; pos&lt;=n-1; pos&#43;&#43;){ dif=A[pos]-A[pos-1]; if (dif&lt;0){ dif=-dif; } //Comprobar si la diferencia es mayor if (dif&gt;mayor){ mayor=dif; } //Comprobar si la diferencia es menor if (dif&lt;menor){ menor=dif; } } } Programa en Matlab# Solución con programación básica# function [mayor,menor] = Diferencias( A ) %FUNCIÓN [mayor,menor] = Diferencias( A ) %DESCRIPCIÓN: Dado un vector A de n números reales, obtener la diferencia mas grande y % la menor diferencia entre dos elementos consecutivos de ese vector. %ENTRADAS: % A: ARRAY(n) DE REALES; El vector. %SALIDAS: % mayor: REAL; la mayor diferencia % menor: REAL; la menor diferencia %VARIABLES: % n, pos: ENTEROS; % dif: REAL n = length( A ); %Calcular la primera diferencia dif = A(2)-A(1); if dif&lt;0 dif = -dif; end mayor = dif; menor = dif; %Calcular la diferencia del resto de los elementos for pos=2:n-1 dif = A(pos&#43;1)-A(pos); if dif&lt;0, dif = -dif; end %Comprobar si la diferencia es mayor. if dif&gt;mayor mayor = dif; end %Comprobar si la diferencia es menor. if dif&lt;menor menor = dif; end end Solución con programación Matlab avanzada# Para realizar esta función se utilizan las siguientes funciones de Matlab:">
+	<meta itemprop="description" content="Diferencia entre elementos consecutivos de un vector Enunciado Realizar un subalgoritmo que dado un vector A de n números reales, obtener la diferencia mas grande y la menor diferencia entre dos elementos consecutivos de ese vector.
+Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor) ENTRADAS: A: ARRAY (0..1000) DE REALES &#39;&#39;(*Array donde buscar la menor y mayor diferencia de elementos*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos útiles del array*)&#39;&#39; SALIDAS: mayor: REAL &#39;&#39;(*Mayor diferencia entre elementos consecutivos*)&#39;&#39; menor: REAL &#39;&#39;(*Menor diferencia entre elementos consecutivos*)&#39;&#39; VARIABLES: dif: REAL pos: ENTERO INICIO &#39;&#39;(*Calcular la primera diferencia*)&#39;&#39; dif &lt;-- A(1) - A(0) SI dif&lt;0 ENTONCES dif &lt;-- -dif FIN_SI mayor &lt;-- dif menor &lt;-- dif &#39;&#39;(*Calcular la diferencia del resto de los elementos*)&#39;&#39; PARA pos &lt;--2 HASTA n-1 HACER dif &lt;-- A(pos)-A(pos-1) SI dif&lt;0 ENTONCES dif&lt;-- -dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&gt;mayor ENTONCES mayor &lt;-- dif FIN_SI &#39;&#39;(*Comprobar si la diferencia es mayor*)&#39;&#39; SI dif&lt;menor ENTONCES menor &lt;-- dif FIN_SI FIN_PARA FIN Programa en C&#43;&#43; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Diferencias ( float A[1001], int n, float &amp;mayor, float &amp;menor){ /*------ ENTRADAS: A: Array donde buscar la mayor y menor diferencia de elementos. n: Números de elementos útiles del array. SALIDAS: mayor: Mayor diferencia entre elementos consecutivos menor: Menor diferencia entre elementos consecutivos ------*/ //VARIABLES: float dif; int pos; //Calcular la primera diferencia dif = A[1]-A[0]; if (dif&lt;0){ dif=-dif; } mayor=dif; menor=dif; //Calcular la diferencia del resto de los elementos for (pos=2; pos&lt;=n-1; pos&#43;&#43;){ dif=A[pos]-A[pos-1]; if (dif&lt;0){ dif=-dif; } //Comprobar si la diferencia es mayor if (dif&gt;mayor){ mayor=dif; } //Comprobar si la diferencia es menor if (dif&lt;menor){ menor=dif; } } } Programa en Matlab Solución con programación básica function [mayor,menor] = Diferencias( A ) %FUNCIÓN [mayor,menor] = Diferencias( A ) %DESCRIPCIÓN: Dado un vector A de n números reales, obtener la diferencia mas grande y % la menor diferencia entre dos elementos consecutivos de ese vector. %ENTRADAS: % A: ARRAY(n) DE REALES; El vector. %SALIDAS: % mayor: REAL; la mayor diferencia % menor: REAL; la menor diferencia %VARIABLES: % n, pos: ENTEROS; % dif: REAL n = length( A ); %Calcular la primera diferencia dif = A(2)-A(1); if dif&lt;0 dif = -dif; end mayor = dif; menor = dif; %Calcular la diferencia del resto de los elementos for pos=2:n-1 dif = A(pos&#43;1)-A(pos); if dif&lt;0, dif = -dif; end %Comprobar si la diferencia es mayor. if dif&gt;mayor mayor = dif; end %Comprobar si la diferencia es menor. if dif&lt;menor menor = dif; end end Solución con programación Matlab avanzada Para realizar esta función se utilizan las siguientes funciones de Matlab:">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="554">
 	<meta itemprop="keywords" content="Sin_matlab">
 
-<title>Diferencia entre elementos consecutivos de un vector | Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.png" >
+<title>Diferencia entre elementos consecutivos de un vector • Ejercicios de Programación</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/diferencia-entre-elementos-consecutivos-de-un-vector/">
-<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
+<link rel="canonical" href="https://example.org/ejercicios/diferencia-entre-elementos-consecutivos-de-un-vector/">
+<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
-
-
-
+<script type="module" src="/en.search.min.f08ce34083f0b58f4a4dcd9350a446fb56ae7c128811e3f4ab6161c0ddfa7aa8.js" integrity="sha256-8IzjQIPwtY9KTc2TUKRG&#43;1aufBKIEeP0q2FhwN36eqg=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -85,12 +89,11 @@ pre code,
 </style>
 
 </head>
+
 <body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
+  <div class="book-container flex">
     
-<aside class="book-menu">
+<aside class="book-menu" aria-label="Menu">
   <div class="book-menu-content">
     
   <nav>
@@ -136,15 +139,14 @@ pre code,
 
 
 <div class="book-search hidden">
-  <input id="book-search-input" type="text" 
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
     placeholder="Search"
     aria-label="Search"
-    maxlength="64" data-hotkeys="s/" />
+    maxlength="64" />
   <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+  <ul id="book-search-results" aria-live="polite"></ul>
 </div>
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
 
 
 
@@ -169,48 +171,58 @@ pre code,
 </aside>
  
 
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
   </label>
 
-  <h3>Diferencia entre elementos consecutivos de un vector</h3>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/">
+    <img src="/icono.png" alt="Logo" class="book-logo" />
+    
+  </a>
+</h2>
 
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
+<style>
+.book-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem;
+  display: block;
+}
+
+.book-brand a {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.book-brand span {
+  margin-top: 0.5rem;
+}
+
+.book-brand img {
+    height: 3.5em;
+    width: 4.5em;
+}
+</style>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
   </label>
+  
 </div>
 
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#diseño-en-pseudocódigo">Diseño en Pseudocódigo</a></li>
-        <li><a href="#programa-en-c">Programa en C++</a></li>
-        <li><a href="#programa-en-matlab">Programa en Matlab</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
  
-      </header>
+    </header>
 
+    <main class="book-page">
       
   
 <div class="exercise-metadata">
@@ -338,11 +350,14 @@ a.badge:hover {
 
 
       
-  <article class="markdown book-article"><h1 id="diferencia-entre-elementos-consecutivos-de-un-vector">Diferencia entre elementos consecutivos de un vector<a class="anchor" href="#diferencia-entre-elementos-consecutivos-de-un-vector">#</a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
+  
+
+      
+  <article class="markdown book-article"><h1 id="diferencia-entre-elementos-consecutivos-de-un-vector">Diferencia entre elementos consecutivos de un vector<a class="anchor" href="#diferencia-entre-elementos-consecutivos-de-un-vector" aria-label="Link"></a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
 <p>Realizar un subalgoritmo que dado un vector <em>A</em> de <em>n</em> números reales, obtener la diferencia mas grande y la menor diferencia entre dos elementos consecutivos de ese vector.</p>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
-<h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo">#</a></h3>
+<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
+<h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo" aria-label="Link"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> PROCEDIMIENTO Diferencias (A, n, VAR mayor, VAR menor)
 </span></span><span class="line"><span class="cl"> ENTRADAS:
 </span></span><span class="line"><span class="cl">    A: ARRAY (0..1000) DE REALES  &#39;&#39;(*Array donde buscar la menor y mayor diferencia de elementos*)&#39;&#39;
@@ -379,7 +394,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">          menor &lt;-- dif
 </span></span><span class="line"><span class="cl">       FIN_SI
 </span></span><span class="line"><span class="cl">    FIN_PARA
-</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h3 id="programa-en-c">Programa en C++<a class="anchor" href="#programa-en-c">#</a></h3>
+</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h3 id="programa-en-c">Programa en C++<a class="anchor" href="#programa-en-c" aria-label="Link"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt; </span><span class="cp">
 </span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
@@ -422,8 +437,8 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">          <span class="n">menor</span><span class="o">=</span><span class="n">dif</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">       <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
-<h4 id="solución-con-programación-básica">Solución con programación básica<a class="anchor" href="#soluci%c3%b3n-con-programaci%c3%b3n-b%c3%a1sica">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab" aria-label="Link"></a></h3>
+<h4 id="solución-con-programación-básica">Solución con programación básica<a class="anchor" href="#soluci%c3%b3n-con-programaci%c3%b3n-b%c3%a1sica" aria-label="Link"></a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[mayor,menor] <span class="p">=</span><span class="w"> </span><span class="nf">Diferencias</span><span class="p">(</span> A <span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="c">%FUNCIÓN [mayor,menor] = Diferencias( A )</span>
@@ -461,7 +476,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">dif</span><span class="o">&lt;</span><span class="n">menor</span>
 </span></span><span class="line"><span class="cl">        <span class="n">menor</span> <span class="p">=</span> <span class="n">dif</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">end</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="solución-con-programación-matlab-avanzada">Solución con programación Matlab avanzada<a class="anchor" href="#soluci%c3%b3n-con-programaci%c3%b3n-matlab-avanzada">#</a></h4>
+</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><h4 id="solución-con-programación-matlab-avanzada">Solución con programación Matlab avanzada<a class="anchor" href="#soluci%c3%b3n-con-programaci%c3%b3n-matlab-avanzada" aria-label="Link"></a></h4>
 <p>Para realizar esta función se utilizan las siguientes funciones de Matlab:</p>
 <ul>
 <li><strong>length</strong> : para calcular la longitud de un array.</li>
@@ -503,18 +518,11 @@ a.badge:hover {
 
 </div>
 
-
-
-
-
-  
-  
-  
-  <div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between">
     <span>
     
       <a href="/ejercicios/dibujo-tri-ngulo-de-asteriscos/" class="flex align-center">
-        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
         <span>Dibujo triángulo de asteriscos</span>
       </a>
     
@@ -523,13 +531,11 @@ a.badge:hover {
     
       <a href="/ejercicios/distancia-entre-ciudades/" class="flex align-center">
         <span>Distancia entre ciudades</span>
-        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
       </a>
     
     </span>
   </div>
-  
-
 
  
         
@@ -540,19 +546,18 @@ a.badge:hover {
   
  
         
-  
   
     <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
   
 
       </footer>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
 
     
   
-  <aside class="book-toc">
+  <aside class="book-toc" aria-label="Table of Contents">
     <div class="book-toc-content">
       
   
@@ -571,15 +576,21 @@ a.badge:hover {
 
 
 
+
+
+
+
     </div>
   </aside>
   
  
-  </main>
+  </div>
 
   
 </body>
 </html>
+
+
 
 
 
