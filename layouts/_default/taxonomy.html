@@ -4,19 +4,23 @@
   
   {{ .Content }}
   
-  <h2>Todos los ejercicios de {{ .Title }}</h2>
+  {{ if eq .Kind "term" }}
+    <h2>Todos los ejercicios de {{ .Title }}</h2>
+  {{ end }}
   
   {{ if .Pages }}
   <ul>
     {{ range .Pages.ByTitle }}
       <li>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <span class="taxonomy-count">({{ len .Pages }} ejercicios)</span>
+        {{ if eq $.Kind "taxonomy" }}
+          <span class="taxonomy-count">({{ len .Pages }} ejercicios)</span>
+        {{ end }}
       </li>
     {{ end }}
   </ul>
   {{ else }}
-    <p>No hay términos disponibles.</p>
+    <p>{{ if eq .Kind "taxonomy" }}No hay términos disponibles.{{ else }}No hay ejercicios disponibles.{{ end }}</p>
   {{ end }}
 </article>
 {{ end }}

@@ -8,7 +8,7 @@
     <loc>http://localhost:1313/categories/an%C3%A1lisis/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ejercicios/an-lisis-de-bucle-for-para-una-variable-booleana/</loc>
+    <loc>http://localhost:1313/ejercicios/analisis-de-bucle-for-para-una-variable-booleana/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/ejercicios/an-lisis-de-la-salida-de-ciclos/</loc>
@@ -81,9 +81,6 @@
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/ejercicios/cambio-de-los-duplicados-de-un-array/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/ejercicios/especial-categor-as/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -254,9 +251,6 @@
     <loc>http://localhost:1313/ejercicios/invertir-contenido-de-un-archivo/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/languages/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/ejercicios/leer-fichero-con-matriz-y-calcular-una-suma/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -273,6 +267,9 @@
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/ejercicios/leer-una-palabra-y-escribirla-al-reves/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/languages/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/ejercicios/letra-del-dni/</loc>
