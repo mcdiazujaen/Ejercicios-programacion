@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Revisar on Ejercicios de Programación</title>
-		<link>https://example.org/tags/revisar/</link>
+		<link>http://localhost:1313/tags/revisar/</link>
 		<description>Recent content in Revisar on Ejercicios de Programación</description>
 		<generator>Hugo</generator>
 		<language>es-es</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://example.org/tags/revisar/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/revisar/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Losas de tres colores</title>
-				<link>https://example.org/ejercicios/losas-de-tres-colores/</link>
+				<link>http://localhost:1313/ejercicios/losas-de-tres-colores/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>https://example.org/ejercicios/losas-de-tres-colores/</guid>
+				<guid>http://localhost:1313/ejercicios/losas-de-tres-colores/</guid>
 				<description>&lt;h1 id=&#34;losas-de-tres-colores&#34;&gt;Losas de tres colores&lt;a class=&#34;anchor&#34; href=&#34;#losas-de-tres-colores&#34; aria-label=&#34;Link&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;enunciado&#34;&gt;Enunciado&lt;a class=&#34;anchor&#34; href=&#34;#enunciado&#34; aria-label=&#34;Link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;A un albañil le encargan hacer un suelo poniendo losas de tres colores. Realizar un algoritmo que le permita al albañil conocer cómo quiere el cliente el suelo teniendo en cuenta que:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Se debe utilizar una matriz de NxM losas para representar dicho suelo.&lt;/li&gt;&#xA;&lt;li&gt;Los colores de las losas se representan con números, así el 1: Azul, el 2: Rojo, el 3: Amarillo.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;El programa se dividirá en los siguientes apartados:&lt;/p&gt;</description>
 			</item>
 	</channel>

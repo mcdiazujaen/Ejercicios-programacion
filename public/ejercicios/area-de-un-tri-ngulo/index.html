@@ -3,7 +3,7 @@
     data-theme="auto"
     data-layout="centered">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <meta name="generator" content="Hugo 0.169.0">
   <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
@@ -16,7 +16,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/area-de-un-tri-ngulo/">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="http://localhost:1313/ejercicios/area-de-un-tri-ngulo/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Area de un triángulo">
 	<meta property="og:description" content="Area de un triángulo Enunciado Diseñar un algoritmo para leer las longitudes de los tres lados de un triángulo (L1, L2, L3) y calcular el área del mismo de acuerdo con la siguiente fórmula: Soluciones Diseño en pseudocódigo ALGORITMO AreaTriangulo ENTRADAS: L1, L2, L3: ENTEROS (* Longitudes de los lados del triángulo *) SALIDAS: area: REAL (* Área del triángulo definido por L1, L2 y L3 *) VARIABLES: SP: REAL INICIO ESCRIBIR &#34;Introduzca la longitud de lado 1 del triángulo: &#34; LEER L1 ESCRIBIR &#34;Introduzca la longitud de lado 2 del triángulo: &#34; LEER L2 ESCRIBIR &#34;Introduzca la longitud de lado 3 del triángulo: &#34; LEER L3 SP &lt;-- (L1 &#43; L2 &#43; L3) / 2 (* Suponemos que disponemos de una función matemática llamada raiz que realiza la raíz cuadrada de un valor *) area &lt;-- raiz(SP * (SP-L1) * (SP-L2) * (SP-L3)) ESCRIBIR &#34;El área del triángulo es: &#34;, area FIN Programa en C #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;math.h&gt; int main(void){ /*ENTRADAS*/ int L1,L2,L3; // Longitudes de los lados del triangulo. /*SALIDAS*/ float area; // Area del triangulo. /*VARIABLES*/ float SP; /*INICIO*/ printf (&#34;Introduzca la longitud del lado 1 del triangulo:&#34;); scanf(&#34;%i&#34;,&amp;L1); printf(&#34;Introduzca la longitud del lado 2 del triangulo:&#34;); scanf(&#34;%i&#34;, &amp;L2); printf(&#34;Introduzca la longitud de lado 3 del triangulo:&#34;); scanf(&#34;%i&#34;,&amp;L3); SP=(L1&#43;L2&#43;L3) /2.0; //Le añadimos el 0 para que la division sea real y no se pierdan decimales siendo una division entera. area=sqrt(SP*(SP-L1)*(SP-L2)*(SP-L3)); printf(&#34;El area del triangulo es:%f&#34;,area); system(&#34;PAUSE&#34;); } Soluciones Programa en Matlab % Programa Area_Triangulo % Descripcion: calcula el área de un triángulo introduciendo los lados. % Entradas: Lados del triángulo. % Salidas: Área del triángulo. % Variables: % L1, L2, L3: ENTEROS % SP, Area: REAL % Leemos los lados del triángulo L1 = input(&#39;Introduce el primer lado del triángulo:&#39;); L2 = input(&#39;Introduce el segundo lado del triángulo:&#39;); L3 = input(&#39;Introduce el tercer lado del triángulo:&#39;); % Calculamos el área del triángulo SP = (L1&#43;L2&#43;L3)/2; Area = sqrt(SP*(SP-L1)*(SP-L2)*(SP-L3)); % Mostramos el resultado disp(&#39;El area es:&#39;); disp(Area);">
@@ -41,7 +41,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/ejercicios/area-de-un-tri-ngulo/">
+<link rel="canonical" href="http://localhost:1313/ejercicios/area-de-un-tri-ngulo/">
 <link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
