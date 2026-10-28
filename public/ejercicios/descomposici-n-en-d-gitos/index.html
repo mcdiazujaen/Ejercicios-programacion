@@ -9,39 +9,39 @@ https://github.com/alex-shpak/hugo-book
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Descomposición en dígitos# Enunciado# Crear un módulo o subalgoritmo que devuelva un array en el que cada posición contenga un dígito de un número entero dado. Por ejemplo, si el número de entrada fuera 109884 , el resultado sería el siguiente array:
-1 0 9 8 8 4 Soluciones# Programa en Matlab# Solución con programación básica# function vec = DescomponerEntero( n ) % FUNCION vec = DescomponerEntero( n ) % DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero &#34;n&#34;. % PARÁMETROS DE ENTRADA: % n: ENTERO; número que se va a descomponer % PARÁMETROS DE SALIDA: % vec: ARRAY DE ENTEROS; dígitos del número &#34;n&#34; % VARIABLES INTERNAS: % pos, tama: ENTEROS % v: ARRAY DE ENTEROS %Obtener el valor absoluto de &#34;n&#34; if n&lt;0 n = -n; end %Descomponer en dígitos pos = 1; while n&gt;9 v(pos) = rem(n,10); n = fix(n/10); pos = pos&#43;1; end v(pos)=n; %Dar la vuelta al array v porque tiene los dígitos de derecha a izquierda. tama = length(v); vec = zeros(1,tama); for pos=1:tama vec(tama-pos&#43;1)=v(pos); endSolución con programación Matlab avanzada# Para esta solución se va a utilizar la función num2str que convierte un número a un array de caracteres (cada elemento del array es el carácter de un dígito). A continuación se le resta el código ASCII de caracter ‘0’ para que el array se convierta en la representación en número entero de cada dígito.
+1 0 9 8 8 4 Soluciones# Programa en Matlab# Solución con programación básica# function vec = DescomponerEntero( n ) % FUNCION vec = DescomponerEntero( n ) % DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero &#34;n&#34;. % PARÁMETROS DE ENTRADA: % n: ENTERO; número que se va a descomponer % PARÁMETROS DE SALIDA: % vec: ARRAY DE ENTEROS; dígitos del número &#34;n&#34; % VARIABLES INTERNAS: % pos, tama: ENTEROS % v: ARRAY DE ENTEROS %Obtener el valor absoluto de &#34;n&#34; if n&lt;0 n = -n; end %Descomponer en dígitos pos = 1; while n&gt;9 v(pos) = rem(n,10); n = fix(n/10); pos = pos&#43;1; end v(pos)=n; %Dar la vuelta al array v porque tiene los dígitos de derecha a izquierda. tama = length(v); vec = zeros(1,tama); for pos=1:tama vec(tama-pos&#43;1)=v(pos); end Solución con programación Matlab avanzada# Para esta solución se va a utilizar la función num2str que convierte un número a un array de caracteres (cada elemento del array es el carácter de un dígito). A continuación se le resta el código ASCII de caracter ‘0’ para que el array se convierta en la representación en número entero de cada dígito.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/descomposici-n-en-d-gitos/">
-  <meta property="og:site_name" content="Ejercicios de Programación">
-  <meta property="og:title" content="Descomposición en dígitos">
-  <meta property="og:description" content="Descomposición en dígitos# Enunciado# Crear un módulo o subalgoritmo que devuelva un array en el que cada posición contenga un dígito de un número entero dado. Por ejemplo, si el número de entrada fuera 109884 , el resultado sería el siguiente array:
-1 0 9 8 8 4 Soluciones# Programa en Matlab# Solución con programación básica# function vec = DescomponerEntero( n ) % FUNCION vec = DescomponerEntero( n ) % DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero &#34;n&#34;. % PARÁMETROS DE ENTRADA: % n: ENTERO; número que se va a descomponer % PARÁMETROS DE SALIDA: % vec: ARRAY DE ENTEROS; dígitos del número &#34;n&#34; % VARIABLES INTERNAS: % pos, tama: ENTEROS % v: ARRAY DE ENTEROS %Obtener el valor absoluto de &#34;n&#34; if n&lt;0 n = -n; end %Descomponer en dígitos pos = 1; while n&gt;9 v(pos) = rem(n,10); n = fix(n/10); pos = pos&#43;1; end v(pos)=n; %Dar la vuelta al array v porque tiene los dígitos de derecha a izquierda. tama = length(v); vec = zeros(1,tama); for pos=1:tama vec(tama-pos&#43;1)=v(pos); endSolución con programación Matlab avanzada# Para esta solución se va a utilizar la función num2str que convierte un número a un array de caracteres (cada elemento del array es el carácter de un dígito). A continuación se le resta el código ASCII de caracter ‘0’ para que el array se convierta en la representación en número entero de cada dígito.">
-  <meta property="og:locale" content="es_es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="ejercicios">
-    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+	<meta property="og:site_name" content="Ejercicios de Programación">
+	<meta property="og:title" content="Descomposición en dígitos">
+	<meta property="og:description" content="Descomposición en dígitos# Enunciado# Crear un módulo o subalgoritmo que devuelva un array en el que cada posición contenga un dígito de un número entero dado. Por ejemplo, si el número de entrada fuera 109884 , el resultado sería el siguiente array:
+1 0 9 8 8 4 Soluciones# Programa en Matlab# Solución con programación básica# function vec = DescomponerEntero( n ) % FUNCION vec = DescomponerEntero( n ) % DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero &#34;n&#34;. % PARÁMETROS DE ENTRADA: % n: ENTERO; número que se va a descomponer % PARÁMETROS DE SALIDA: % vec: ARRAY DE ENTEROS; dígitos del número &#34;n&#34; % VARIABLES INTERNAS: % pos, tama: ENTEROS % v: ARRAY DE ENTEROS %Obtener el valor absoluto de &#34;n&#34; if n&lt;0 n = -n; end %Descomponer en dígitos pos = 1; while n&gt;9 v(pos) = rem(n,10); n = fix(n/10); pos = pos&#43;1; end v(pos)=n; %Dar la vuelta al array v porque tiene los dígitos de derecha a izquierda. tama = length(v); vec = zeros(1,tama); for pos=1:tama vec(tama-pos&#43;1)=v(pos); end Solución con programación Matlab avanzada# Para esta solución se va a utilizar la función num2str que convierte un número a un array de caracteres (cada elemento del array es el carácter de un dígito). A continuación se le resta el código ASCII de caracter ‘0’ para que el array se convierta en la representación en número entero de cada dígito.">
+	<meta property="og:locale" content="es_es">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="ejercicios">
+		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
 
 
-  <meta itemprop="name" content="Descomposición en dígitos">
-  <meta itemprop="description" content="Descomposición en dígitos# Enunciado# Crear un módulo o subalgoritmo que devuelva un array en el que cada posición contenga un dígito de un número entero dado. Por ejemplo, si el número de entrada fuera 109884 , el resultado sería el siguiente array:
-1 0 9 8 8 4 Soluciones# Programa en Matlab# Solución con programación básica# function vec = DescomponerEntero( n ) % FUNCION vec = DescomponerEntero( n ) % DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero &#34;n&#34;. % PARÁMETROS DE ENTRADA: % n: ENTERO; número que se va a descomponer % PARÁMETROS DE SALIDA: % vec: ARRAY DE ENTEROS; dígitos del número &#34;n&#34; % VARIABLES INTERNAS: % pos, tama: ENTEROS % v: ARRAY DE ENTEROS %Obtener el valor absoluto de &#34;n&#34; if n&lt;0 n = -n; end %Descomponer en dígitos pos = 1; while n&gt;9 v(pos) = rem(n,10); n = fix(n/10); pos = pos&#43;1; end v(pos)=n; %Dar la vuelta al array v porque tiene los dígitos de derecha a izquierda. tama = length(v); vec = zeros(1,tama); for pos=1:tama vec(tama-pos&#43;1)=v(pos); endSolución con programación Matlab avanzada# Para esta solución se va a utilizar la función num2str que convierte un número a un array de caracteres (cada elemento del array es el carácter de un dígito). A continuación se le resta el código ASCII de caracter ‘0’ para que el array se convierta en la representación en número entero de cada dígito.">
-  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="301">
-  <meta itemprop="keywords" content="Enunciado,Matlab">
+	<meta itemprop="name" content="Descomposición en dígitos">
+	<meta itemprop="description" content="Descomposición en dígitos# Enunciado# Crear un módulo o subalgoritmo que devuelva un array en el que cada posición contenga un dígito de un número entero dado. Por ejemplo, si el número de entrada fuera 109884 , el resultado sería el siguiente array:
+1 0 9 8 8 4 Soluciones# Programa en Matlab# Solución con programación básica# function vec = DescomponerEntero( n ) % FUNCION vec = DescomponerEntero( n ) % DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero &#34;n&#34;. % PARÁMETROS DE ENTRADA: % n: ENTERO; número que se va a descomponer % PARÁMETROS DE SALIDA: % vec: ARRAY DE ENTEROS; dígitos del número &#34;n&#34; % VARIABLES INTERNAS: % pos, tama: ENTEROS % v: ARRAY DE ENTEROS %Obtener el valor absoluto de &#34;n&#34; if n&lt;0 n = -n; end %Descomponer en dígitos pos = 1; while n&gt;9 v(pos) = rem(n,10); n = fix(n/10); pos = pos&#43;1; end v(pos)=n; %Dar la vuelta al array v porque tiene los dígitos de derecha a izquierda. tama = length(v); vec = zeros(1,tama); for pos=1:tama vec(tama-pos&#43;1)=v(pos); end Solución con programación Matlab avanzada# Para esta solución se va a utilizar la función num2str que convierte un número a un array de caracteres (cada elemento del array es el carácter de un dígito). A continuación se le resta el código ASCII de caracter ‘0’ para que el array se convierta en la representación en número entero de cada dígito.">
+	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="wordCount" content="302">
+	<meta itemprop="keywords" content="Enunciado,Matlab">
 
 <title>Descomposición en dígitos | Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="http://localhost:1313/ejercicios/descomposici-n-en-d-gitos/">
-<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f69a6f3a5878c8ad9efb2f9a332e3eb7515582048dbe48e17729e15302a7f6ea.js" integrity="sha256-9ppvOlh4yK2e&#43;y&#43;aMy4&#43;t1FVggSNvkjhdynhUwKn9uo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
 
 
 
@@ -332,25 +332,25 @@ a.badge:hover {
 <h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado">#</a></h2>
 <p>Crear un módulo o subalgoritmo que devuelva un array en el que cada posición contenga un dígito de un número entero dado. Por ejemplo, si el número de entrada fuera <strong>109884</strong> , el resultado sería el siguiente array:</p>
 <table>
-  <thead>
-      <tr>
-          <th>1</th>
-          <th>0</th>
-          <th>9</th>
-          <th>8</th>
-          <th>8</th>
-          <th>4</th>
-      </tr>
-  </thead>
-  <tbody>
-  </tbody>
+	<thead>
+			<tr>
+					<th>1</th>
+					<th>0</th>
+					<th>9</th>
+					<th>8</th>
+					<th>8</th>
+					<th>4</th>
+			</tr>
+	</thead>
+	<tbody>
+	</tbody>
 </table>
 <h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones">#</a></h2>
 <h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <h4 id="solución-con-programación-básica">Solución con programación básica<a class="anchor" href="#soluci%c3%b3n-con-programaci%c3%b3n-b%c3%a1sica">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>vec <span class="p">=</span><span class="w"> </span><span class="nf">DescomponerEntero</span><span class="p">(</span> n <span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% FUNCION vec = DescomponerEntero( n )</span>
+</span></span></span><span class="line"><span class="cl"><span class="c">% FUNCION vec = DescomponerEntero( n )</span>
 </span></span><span class="line"><span class="cl"><span class="c">% DESCRIPCIÓN: Devuelve un array en el que cada posición contiene un dígito del entero &#34;n&#34;. </span>
 </span></span><span class="line"><span class="cl"><span class="c">% PARÁMETROS DE ENTRADA:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%    n: ENTERO; número que se va a descomponer</span>

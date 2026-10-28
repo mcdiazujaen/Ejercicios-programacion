@@ -10,41 +10,41 @@ https://github.com/alex-shpak/hugo-book
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Calculo de potencias# Enunciado# Realiza un programa que calcule las potencias de la 2 a la 10 del número PI y la raíz cuadrada de dicha potencia. Para ello construye una función que calcule la potencia n-ésima de un número cualquiera y utiliza después la función sqrt de la librería matemática.
 Soluciones# Programa en C por Angel# Solución comentada del Ejercicio:
-/* fichero potencia.c */ #include &lt;stdio.h&gt; #include &lt;math.h&gt; #define PI 3.14159265359 /*---------------------------------------------*/ double poten(double a, int b) { int i; double resul=1.0; for (i=1; i&lt;=b; i&#43;&#43;) resul*=a; return resul; } /*--------------------------------------------*/ void main(void) { int i; for (i=2; i&lt;=10; i&#43;&#43;) { printf(&#34;PI elevado a %d es %5.2lf y su raiz es %5.2lf\n&#34;, i, poten(PI, i), sqrt(poten(PI, i)) ); } }Comentario# Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle for que va de i=2 a i=10 , llamando en cada ejecución a la función poten(). A esta función se le pasa una constante double , que es el número PI, y el exponente entero i. La función poten() sirve para calcular la potencia i-ésima de cualquier número. En este caso, la variable a de la función toma el valor de PI en todas las llamadas, mientras que la variable b copia el valor de i que será distinto en cada una de las llamadas.
+/* fichero potencia.c */ #include &lt;stdio.h&gt; #include &lt;math.h&gt; #define PI 3.14159265359 /*---------------------------------------------*/ double poten(double a, int b) { int i; double resul=1.0; for (i=1; i&lt;=b; i&#43;&#43;) resul*=a; return resul; } /*--------------------------------------------*/ void main(void) { int i; for (i=2; i&lt;=10; i&#43;&#43;) { printf(&#34;PI elevado a %d es %5.2lf y su raiz es %5.2lf\n&#34;, i, poten(PI, i), sqrt(poten(PI, i)) ); } } Comentario# Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle for que va de i=2 a i=10 , llamando en cada ejecución a la función poten(). A esta función se le pasa una constante double , que es el número PI, y el exponente entero i. La función poten() sirve para calcular la potencia i-ésima de cualquier número. En este caso, la variable a de la función toma el valor de PI en todas las llamadas, mientras que la variable b copia el valor de i que será distinto en cada una de las llamadas.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/calculo-de-potencias/">
-  <meta property="og:site_name" content="Ejercicios de Programación">
-  <meta property="og:title" content="Calculo de potencias">
-  <meta property="og:description" content="Calculo de potencias# Enunciado# Realiza un programa que calcule las potencias de la 2 a la 10 del número PI y la raíz cuadrada de dicha potencia. Para ello construye una función que calcule la potencia n-ésima de un número cualquiera y utiliza después la función sqrt de la librería matemática.
+	<meta property="og:site_name" content="Ejercicios de Programación">
+	<meta property="og:title" content="Calculo de potencias">
+	<meta property="og:description" content="Calculo de potencias# Enunciado# Realiza un programa que calcule las potencias de la 2 a la 10 del número PI y la raíz cuadrada de dicha potencia. Para ello construye una función que calcule la potencia n-ésima de un número cualquiera y utiliza después la función sqrt de la librería matemática.
 Soluciones# Programa en C por Angel# Solución comentada del Ejercicio:
-/* fichero potencia.c */ #include &lt;stdio.h&gt; #include &lt;math.h&gt; #define PI 3.14159265359 /*---------------------------------------------*/ double poten(double a, int b) { int i; double resul=1.0; for (i=1; i&lt;=b; i&#43;&#43;) resul*=a; return resul; } /*--------------------------------------------*/ void main(void) { int i; for (i=2; i&lt;=10; i&#43;&#43;) { printf(&#34;PI elevado a %d es %5.2lf y su raiz es %5.2lf\n&#34;, i, poten(PI, i), sqrt(poten(PI, i)) ); } }Comentario# Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle for que va de i=2 a i=10 , llamando en cada ejecución a la función poten(). A esta función se le pasa una constante double , que es el número PI, y el exponente entero i. La función poten() sirve para calcular la potencia i-ésima de cualquier número. En este caso, la variable a de la función toma el valor de PI en todas las llamadas, mientras que la variable b copia el valor de i que será distinto en cada una de las llamadas.">
-  <meta property="og:locale" content="es_es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="ejercicios">
-    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+/* fichero potencia.c */ #include &lt;stdio.h&gt; #include &lt;math.h&gt; #define PI 3.14159265359 /*---------------------------------------------*/ double poten(double a, int b) { int i; double resul=1.0; for (i=1; i&lt;=b; i&#43;&#43;) resul*=a; return resul; } /*--------------------------------------------*/ void main(void) { int i; for (i=2; i&lt;=10; i&#43;&#43;) { printf(&#34;PI elevado a %d es %5.2lf y su raiz es %5.2lf\n&#34;, i, poten(PI, i), sqrt(poten(PI, i)) ); } } Comentario# Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle for que va de i=2 a i=10 , llamando en cada ejecución a la función poten(). A esta función se le pasa una constante double , que es el número PI, y el exponente entero i. La función poten() sirve para calcular la potencia i-ésima de cualquier número. En este caso, la variable a de la función toma el valor de PI en todas las llamadas, mientras que la variable b copia el valor de i que será distinto en cada una de las llamadas.">
+	<meta property="og:locale" content="es_es">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="ejercicios">
+		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
 
 
-  <meta itemprop="name" content="Calculo de potencias">
-  <meta itemprop="description" content="Calculo de potencias# Enunciado# Realiza un programa que calcule las potencias de la 2 a la 10 del número PI y la raíz cuadrada de dicha potencia. Para ello construye una función que calcule la potencia n-ésima de un número cualquiera y utiliza después la función sqrt de la librería matemática.
+	<meta itemprop="name" content="Calculo de potencias">
+	<meta itemprop="description" content="Calculo de potencias# Enunciado# Realiza un programa que calcule las potencias de la 2 a la 10 del número PI y la raíz cuadrada de dicha potencia. Para ello construye una función que calcule la potencia n-ésima de un número cualquiera y utiliza después la función sqrt de la librería matemática.
 Soluciones# Programa en C por Angel# Solución comentada del Ejercicio:
-/* fichero potencia.c */ #include &lt;stdio.h&gt; #include &lt;math.h&gt; #define PI 3.14159265359 /*---------------------------------------------*/ double poten(double a, int b) { int i; double resul=1.0; for (i=1; i&lt;=b; i&#43;&#43;) resul*=a; return resul; } /*--------------------------------------------*/ void main(void) { int i; for (i=2; i&lt;=10; i&#43;&#43;) { printf(&#34;PI elevado a %d es %5.2lf y su raiz es %5.2lf\n&#34;, i, poten(PI, i), sqrt(poten(PI, i)) ); } }Comentario# Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle for que va de i=2 a i=10 , llamando en cada ejecución a la función poten(). A esta función se le pasa una constante double , que es el número PI, y el exponente entero i. La función poten() sirve para calcular la potencia i-ésima de cualquier número. En este caso, la variable a de la función toma el valor de PI en todas las llamadas, mientras que la variable b copia el valor de i que será distinto en cada una de las llamadas.">
-  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="454">
-  <meta itemprop="keywords" content="Enunciado,Comentario,Análisis,C,Matlab,Angel">
+/* fichero potencia.c */ #include &lt;stdio.h&gt; #include &lt;math.h&gt; #define PI 3.14159265359 /*---------------------------------------------*/ double poten(double a, int b) { int i; double resul=1.0; for (i=1; i&lt;=b; i&#43;&#43;) resul*=a; return resul; } /*--------------------------------------------*/ void main(void) { int i; for (i=2; i&lt;=10; i&#43;&#43;) { printf(&#34;PI elevado a %d es %5.2lf y su raiz es %5.2lf\n&#34;, i, poten(PI, i), sqrt(poten(PI, i)) ); } } Comentario# Para calcular las potencias de la 2 a la 10 del número PI, se utiliza un bucle for que va de i=2 a i=10 , llamando en cada ejecución a la función poten(). A esta función se le pasa una constante double , que es el número PI, y el exponente entero i. La función poten() sirve para calcular la potencia i-ésima de cualquier número. En este caso, la variable a de la función toma el valor de PI en todas las llamadas, mientras que la variable b copia el valor de i que será distinto en cada una de las llamadas.">
+	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="wordCount" content="456">
+	<meta itemprop="keywords" content="Enunciado,Comentario,Análisis,C,Matlab,Angel">
 
 <title>Calculo de potencias | Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="http://localhost:1313/ejercicios/calculo-de-potencias/">
-<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f69a6f3a5878c8ad9efb2f9a332e3eb7515582048dbe48e17729e15302a7f6ea.js" integrity="sha256-9ppvOlh4yK2e&#43;y&#43;aMy4&#43;t1FVggSNvkjhdynhUwKn9uo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
 
 
 
@@ -355,9 +355,9 @@ a.badge:hover {
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="cm">/* fichero potencia.c */</span>
 </span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define PI 3.14159265359
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cm">/*---------------------------------------------*/</span>
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#define PI 3.14159265359
+</span></span></span><span class="line"><span class="cl"> <span class="cm">/*---------------------------------------------*/</span>
 </span></span><span class="line"><span class="cl"> <span class="kt">double</span> <span class="nf">poten</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="kt">double</span> <span class="n">resul</span><span class="o">=</span><span class="mf">1.0</span><span class="p">;</span>
@@ -409,7 +409,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>res<span class="p">=</span><span class="nf">poten</span><span class="p">(</span>base,expo<span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% FUNCIÓN res=poten(base,expo)</span>
+</span></span></span><span class="line"><span class="cl"><span class="c">% FUNCIÓN res=poten(base,expo)</span>
 </span></span><span class="line"><span class="cl"><span class="c">% DESCRIPCIÓN: Devuelve el resultado de elevar un número a una potencia dada</span>
 </span></span><span class="line"><span class="cl"><span class="c">% PARÁMETROS DE ENTRADA:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%    base: ENTERO, número que se quiere elevar</span>

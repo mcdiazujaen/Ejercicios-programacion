@@ -10,41 +10,41 @@ https://github.com/alex-shpak/hugo-book
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Máximo de un conjunto de tres números# Enunciado# Realiza un programa principal que lea tres números enteros por teclado, los almacene en tres variables (x, y, z) y llame a una función llamada maximo() , con tres argumentos, que devuelva el máximo de estos tres valores. Guarda el programa como maxval.c.
 Soluciones# Programa en C por Angel# Solución comentada del Ejercicio 5.4.
-/* fichero maxval.c */ #include &lt;stdio.h&gt; void main(void) { int x, y, z; int maximo(int, int, int); printf(&#34;Introduce tres valores:\n&#34;); printf(&#34;primero: &#34;); scanf(&#34;%d&#34;, &amp;x); printf(&#34;segundo: &#34;); scanf(&#34;%d&#34;, &amp;y); printf(&#34;tercero: &#34;); scanf(&#34;%d&#34;, &amp;z); printf(&#34;El maximo de los tres valores introducidos es: &#34;); printf(&#34;%d\n&#34;, maximo(x, y, z)); } int maximo(int a, int b, int c) { int max; max=a; if (b&gt;max) max=b; if (c&gt;max) max=c; return max; }Comentario# Como la función maximo() devuelve un valor entero. Las variables a, b, y c, argumentos formales de la función, reciben una copia de los argumentos actuales: x, y, z. La forma de calcular el máximo de una lista de números es ya conocida.
+/* fichero maxval.c */ #include &lt;stdio.h&gt; void main(void) { int x, y, z; int maximo(int, int, int); printf(&#34;Introduce tres valores:\n&#34;); printf(&#34;primero: &#34;); scanf(&#34;%d&#34;, &amp;x); printf(&#34;segundo: &#34;); scanf(&#34;%d&#34;, &amp;y); printf(&#34;tercero: &#34;); scanf(&#34;%d&#34;, &amp;z); printf(&#34;El maximo de los tres valores introducidos es: &#34;); printf(&#34;%d\n&#34;, maximo(x, y, z)); } int maximo(int a, int b, int c) { int max; max=a; if (b&gt;max) max=b; if (c&gt;max) max=c; return max; } Comentario# Como la función maximo() devuelve un valor entero. Las variables a, b, y c, argumentos formales de la función, reciben una copia de los argumentos actuales: x, y, z. La forma de calcular el máximo de una lista de números es ya conocida.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/m-ximo-de-un-conjunto-de-tres-n-meros/">
-  <meta property="og:site_name" content="Ejercicios de Programación">
-  <meta property="og:title" content="Máximo de un conjunto de tres números">
-  <meta property="og:description" content="Máximo de un conjunto de tres números# Enunciado# Realiza un programa principal que lea tres números enteros por teclado, los almacene en tres variables (x, y, z) y llame a una función llamada maximo() , con tres argumentos, que devuelva el máximo de estos tres valores. Guarda el programa como maxval.c.
+	<meta property="og:site_name" content="Ejercicios de Programación">
+	<meta property="og:title" content="Máximo de un conjunto de tres números">
+	<meta property="og:description" content="Máximo de un conjunto de tres números# Enunciado# Realiza un programa principal que lea tres números enteros por teclado, los almacene en tres variables (x, y, z) y llame a una función llamada maximo() , con tres argumentos, que devuelva el máximo de estos tres valores. Guarda el programa como maxval.c.
 Soluciones# Programa en C por Angel# Solución comentada del Ejercicio 5.4.
-/* fichero maxval.c */ #include &lt;stdio.h&gt; void main(void) { int x, y, z; int maximo(int, int, int); printf(&#34;Introduce tres valores:\n&#34;); printf(&#34;primero: &#34;); scanf(&#34;%d&#34;, &amp;x); printf(&#34;segundo: &#34;); scanf(&#34;%d&#34;, &amp;y); printf(&#34;tercero: &#34;); scanf(&#34;%d&#34;, &amp;z); printf(&#34;El maximo de los tres valores introducidos es: &#34;); printf(&#34;%d\n&#34;, maximo(x, y, z)); } int maximo(int a, int b, int c) { int max; max=a; if (b&gt;max) max=b; if (c&gt;max) max=c; return max; }Comentario# Como la función maximo() devuelve un valor entero. Las variables a, b, y c, argumentos formales de la función, reciben una copia de los argumentos actuales: x, y, z. La forma de calcular el máximo de una lista de números es ya conocida.">
-  <meta property="og:locale" content="es_es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="ejercicios">
-    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+/* fichero maxval.c */ #include &lt;stdio.h&gt; void main(void) { int x, y, z; int maximo(int, int, int); printf(&#34;Introduce tres valores:\n&#34;); printf(&#34;primero: &#34;); scanf(&#34;%d&#34;, &amp;x); printf(&#34;segundo: &#34;); scanf(&#34;%d&#34;, &amp;y); printf(&#34;tercero: &#34;); scanf(&#34;%d&#34;, &amp;z); printf(&#34;El maximo de los tres valores introducidos es: &#34;); printf(&#34;%d\n&#34;, maximo(x, y, z)); } int maximo(int a, int b, int c) { int max; max=a; if (b&gt;max) max=b; if (c&gt;max) max=c; return max; } Comentario# Como la función maximo() devuelve un valor entero. Las variables a, b, y c, argumentos formales de la función, reciben una copia de los argumentos actuales: x, y, z. La forma de calcular el máximo de una lista de números es ya conocida.">
+	<meta property="og:locale" content="es_es">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="ejercicios">
+		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
 
 
-  <meta itemprop="name" content="Máximo de un conjunto de tres números">
-  <meta itemprop="description" content="Máximo de un conjunto de tres números# Enunciado# Realiza un programa principal que lea tres números enteros por teclado, los almacene en tres variables (x, y, z) y llame a una función llamada maximo() , con tres argumentos, que devuelva el máximo de estos tres valores. Guarda el programa como maxval.c.
+	<meta itemprop="name" content="Máximo de un conjunto de tres números">
+	<meta itemprop="description" content="Máximo de un conjunto de tres números# Enunciado# Realiza un programa principal que lea tres números enteros por teclado, los almacene en tres variables (x, y, z) y llame a una función llamada maximo() , con tres argumentos, que devuelva el máximo de estos tres valores. Guarda el programa como maxval.c.
 Soluciones# Programa en C por Angel# Solución comentada del Ejercicio 5.4.
-/* fichero maxval.c */ #include &lt;stdio.h&gt; void main(void) { int x, y, z; int maximo(int, int, int); printf(&#34;Introduce tres valores:\n&#34;); printf(&#34;primero: &#34;); scanf(&#34;%d&#34;, &amp;x); printf(&#34;segundo: &#34;); scanf(&#34;%d&#34;, &amp;y); printf(&#34;tercero: &#34;); scanf(&#34;%d&#34;, &amp;z); printf(&#34;El maximo de los tres valores introducidos es: &#34;); printf(&#34;%d\n&#34;, maximo(x, y, z)); } int maximo(int a, int b, int c) { int max; max=a; if (b&gt;max) max=b; if (c&gt;max) max=c; return max; }Comentario# Como la función maximo() devuelve un valor entero. Las variables a, b, y c, argumentos formales de la función, reciben una copia de los argumentos actuales: x, y, z. La forma de calcular el máximo de una lista de números es ya conocida.">
-  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="171">
-  <meta itemprop="keywords" content="Enunciado,Comentario,Análisis,C,Pseudocódigo,Angel">
+/* fichero maxval.c */ #include &lt;stdio.h&gt; void main(void) { int x, y, z; int maximo(int, int, int); printf(&#34;Introduce tres valores:\n&#34;); printf(&#34;primero: &#34;); scanf(&#34;%d&#34;, &amp;x); printf(&#34;segundo: &#34;); scanf(&#34;%d&#34;, &amp;y); printf(&#34;tercero: &#34;); scanf(&#34;%d&#34;, &amp;z); printf(&#34;El maximo de los tres valores introducidos es: &#34;); printf(&#34;%d\n&#34;, maximo(x, y, z)); } int maximo(int a, int b, int c) { int max; max=a; if (b&gt;max) max=b; if (c&gt;max) max=c; return max; } Comentario# Como la función maximo() devuelve un valor entero. Las variables a, b, y c, argumentos formales de la función, reciben una copia de los argumentos actuales: x, y, z. La forma de calcular el máximo de una lista de números es ya conocida.">
+	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="wordCount" content="172">
+	<meta itemprop="keywords" content="Enunciado,Comentario,Análisis,C,Pseudocódigo,Angel">
 
 <title>Máximo de un conjunto de tres números | Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="http://localhost:1313/ejercicios/m-ximo-de-un-conjunto-de-tres-n-meros/">
-<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f69a6f3a5878c8ad9efb2f9a332e3eb7515582048dbe48e17729e15302a7f6ea.js" integrity="sha256-9ppvOlh4yK2e&#43;y&#43;aMy4&#43;t1FVggSNvkjhdynhUwKn9uo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
 
 
 
@@ -353,7 +353,7 @@ a.badge:hover {
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cm">/* fichero maxval.c */</span>
 </span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="nf">maximo</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Introduce tres valores:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>

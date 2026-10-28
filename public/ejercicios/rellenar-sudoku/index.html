@@ -14,35 +14,35 @@ Aquellas casillas que estén rellenas mostrarán el número introducido. Las cas
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/rellenar-sudoku/">
-  <meta property="og:site_name" content="Ejercicios de Programación">
-  <meta property="og:title" content="Rellenar sudoku">
-  <meta property="og:description" content="Rellenar sudoku# Enunciado# Realizar un subalgoritmo con todos los subalgoritmos necesarios para rellenar un sudoku casilla por casilla. El algoritmo mostrará en pantalla el sudoku parcialmente relleno, teniendo en cuenta que:
+	<meta property="og:site_name" content="Ejercicios de Programación">
+	<meta property="og:title" content="Rellenar sudoku">
+	<meta property="og:description" content="Rellenar sudoku# Enunciado# Realizar un subalgoritmo con todos los subalgoritmos necesarios para rellenar un sudoku casilla por casilla. El algoritmo mostrará en pantalla el sudoku parcialmente relleno, teniendo en cuenta que:
 Aquellas casillas que estén rellenas mostrarán el número introducido. Las casillas vacías mostrarán los posibles valores que pueden introducirse. El algoritmo solicitará al usuario la casilla que desea rellenar (fila y columna) y el valor que desea introducir. El valor se guardará en la casilla si éste es un valor válido para la posición (véase las normas del sudoku) y se mostrará al usuario el estado actual del sudoku.">
-  <meta property="og:locale" content="es_es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="ejercicios">
-    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:tag" content="Sin_matlab">
+	<meta property="og:locale" content="es_es">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="ejercicios">
+		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:tag" content="Sin_matlab">
 
 
-  <meta itemprop="name" content="Rellenar sudoku">
-  <meta itemprop="description" content="Rellenar sudoku# Enunciado# Realizar un subalgoritmo con todos los subalgoritmos necesarios para rellenar un sudoku casilla por casilla. El algoritmo mostrará en pantalla el sudoku parcialmente relleno, teniendo en cuenta que:
+	<meta itemprop="name" content="Rellenar sudoku">
+	<meta itemprop="description" content="Rellenar sudoku# Enunciado# Realizar un subalgoritmo con todos los subalgoritmos necesarios para rellenar un sudoku casilla por casilla. El algoritmo mostrará en pantalla el sudoku parcialmente relleno, teniendo en cuenta que:
 Aquellas casillas que estén rellenas mostrarán el número introducido. Las casillas vacías mostrarán los posibles valores que pueden introducirse. El algoritmo solicitará al usuario la casilla que desea rellenar (fila y columna) y el valor que desea introducir. El valor se guardará en la casilla si éste es un valor válido para la posición (véase las normas del sudoku) y se mostrará al usuario el estado actual del sudoku.">
-  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1011">
-  <meta itemprop="keywords" content="Sin_matlab">
+	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="wordCount" content="1012">
+	<meta itemprop="keywords" content="Sin_matlab">
 
 <title>Rellenar sudoku | Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="http://localhost:1313/ejercicios/rellenar-sudoku/">
-<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f69a6f3a5878c8ad9efb2f9a332e3eb7515582048dbe48e17729e15302a7f6ea.js" integrity="sha256-9ppvOlh4yK2e&#43;y&#43;aMy4&#43;t1FVggSNvkjhdynhUwKn9uo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
 
 
 
@@ -526,13 +526,13 @@ a.badge:hover {
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> 
+</span></span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="cp">#define GRUESO  &#39;*&#39;
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1">//#define GRUESO  219
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define FINO &#39; &#39;
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> 
+</span></span></span><span class="line"><span class="cl"><span class="c1">//#define GRUESO  219
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define FINO &#39; &#39;
+</span></span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">Inicializa</span><span class="p">(</span> <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">9</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span> <span class="p">){</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Inicializa</span><span class="p">(</span> <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">9</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span> <span class="p">){</span>
 </span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -545,18 +545,18 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">Pinta</span><span class="p">(</span> <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">9</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span> <span class="p">){</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Pinta</span><span class="p">(</span> <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">9</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span> <span class="p">){</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">p</span><span class="p">[</span><span class="mi">37</span><span class="p">][</span><span class="mi">37</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">    <span class="c1">//Inicializar
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">36</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">36</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="mi">36</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">         <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="sc">&#39; &#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">//Colocar bordes
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">36</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">36</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">      <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">GRUESO</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">      <span class="n">p</span><span class="p">[</span><span class="mi">36</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">GRUESO</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">      <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">GRUESO</span><span class="p">;</span>
@@ -575,7 +575,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">//Volcar matriz de enteros en matriz de caracteres
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">         <span class="k">if</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">            <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">i</span><span class="p">);</span>
@@ -593,7 +593,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">//Pintar pantalla
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">36</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">36</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="mi">36</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">         <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
@@ -602,7 +602,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">LeerEntero</span><span class="p">(</span><span class="kt">int</span> <span class="n">min</span><span class="p">,</span> <span class="kt">int</span> <span class="n">max</span><span class="p">){</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">LeerEntero</span><span class="p">(</span><span class="kt">int</span> <span class="n">min</span><span class="p">,</span> <span class="kt">int</span> <span class="n">max</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">entero</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">    <span class="k">do</span><span class="p">{</span>
@@ -615,15 +615,15 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">(</span> <span class="n">entero</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">QuitarOpcion</span><span class="p">(</span> <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">9</span><span class="p">][</span><span class="mi">10</span><span class="p">],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span> <span class="p">){</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">QuitarOpcion</span><span class="p">(</span> <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">9</span><span class="p">][</span><span class="mi">10</span><span class="p">],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span> <span class="p">){</span>
 </span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">   <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">      <span class="n">m</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>  <span class="c1">//Quitar en fila
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>  <span class="c1">//Quitar en columna
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">      <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>  <span class="c1">//Quitar en columna
+</span></span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">//Quitar en submatriz
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">f</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">   <span class="n">f</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">f</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">f</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">c</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">c</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
@@ -633,7 +633,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span> 
+</span></span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">){</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">sudoku</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">9</span><span class="p">][</span><span class="mi">10</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">valor</span><span class="p">;</span>

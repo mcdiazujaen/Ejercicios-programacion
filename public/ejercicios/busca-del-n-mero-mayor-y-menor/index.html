@@ -14,35 +14,35 @@ Análisis# Lo primero que debe hacer el programa es preguntar al usuario cuantos
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/busca-del-n-mero-mayor-y-menor/">
-  <meta property="og:site_name" content="Ejercicios de Programación">
-  <meta property="og:title" content="Busca del número mayor y menor">
-  <meta property="og:description" content="Busca del número mayor y menor# Enunciado# Escribir un programa que pida por teclado una serie de números enteros, los almacene en una tabla estática y posteriormente escriba por pantalla todos los números introducidos indicando además cual es el mayor y el menor.
+	<meta property="og:site_name" content="Ejercicios de Programación">
+	<meta property="og:title" content="Busca del número mayor y menor">
+	<meta property="og:description" content="Busca del número mayor y menor# Enunciado# Escribir un programa que pida por teclado una serie de números enteros, los almacene en una tabla estática y posteriormente escriba por pantalla todos los números introducidos indicando además cual es el mayor y el menor.
 Análisis# Lo primero que debe hacer el programa es preguntar al usuario cuantos números se van a introducir y comprobar que dicha cantidad es menor que la dimensión de la tabla. Para dicha dimensión debe definirse una constante (por ejemplo MAX_DIMENSION) a la cual se puede asignar un valor razonable (por ejemplo, 100).">
-  <meta property="og:locale" content="es_es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="ejercicios">
-    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:tag" content="Sin_pseudocódigo">
+	<meta property="og:locale" content="es_es">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="ejercicios">
+		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:tag" content="Sin_pseudocódigo">
 
 
-  <meta itemprop="name" content="Busca del número mayor y menor">
-  <meta itemprop="description" content="Busca del número mayor y menor# Enunciado# Escribir un programa que pida por teclado una serie de números enteros, los almacene en una tabla estática y posteriormente escriba por pantalla todos los números introducidos indicando además cual es el mayor y el menor.
+	<meta itemprop="name" content="Busca del número mayor y menor">
+	<meta itemprop="description" content="Busca del número mayor y menor# Enunciado# Escribir un programa que pida por teclado una serie de números enteros, los almacene en una tabla estática y posteriormente escriba por pantalla todos los números introducidos indicando además cual es el mayor y el menor.
 Análisis# Lo primero que debe hacer el programa es preguntar al usuario cuantos números se van a introducir y comprobar que dicha cantidad es menor que la dimensión de la tabla. Para dicha dimensión debe definirse una constante (por ejemplo MAX_DIMENSION) a la cual se puede asignar un valor razonable (por ejemplo, 100).">
-  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="971">
-  <meta itemprop="keywords" content="Sin_pseudocódigo">
+	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="wordCount" content="973">
+	<meta itemprop="keywords" content="Sin_pseudocódigo">
 
 <title>Busca del número mayor y menor | Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="http://localhost:1313/ejercicios/busca-del-n-mero-mayor-y-menor/">
-<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f69a6f3a5878c8ad9efb2f9a332e3eb7515582048dbe48e17729e15302a7f6ea.js" integrity="sha256-9ppvOlh4yK2e&#43;y&#43;aMy4&#43;t1FVggSNvkjhdynhUwKn9uo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
 
 
 
@@ -374,12 +374,12 @@ a.badge:hover {
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="cm">/**********************************************************/</span>
 </span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define OK 1
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define ERR -10001
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define MAX_DIM 100
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="kt">int</span> <span class="n">enteros</span><span class="p">[</span><span class="n">MAX_DIM</span><span class="p">];</span> <span class="cm">/* Array para guardar los enteros */</span>
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#define OK 1
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#define ERR -10001
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#define MAX_DIM 100
+</span></span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">enteros</span><span class="p">[</span><span class="n">MAX_DIM</span><span class="p">];</span> <span class="cm">/* Array para guardar los enteros */</span>
 </span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">num_total</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">lectura</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">sacarpantalla</span><span class="p">(</span><span class="kt">int</span> <span class="n">max</span><span class="p">,</span> <span class="kt">int</span> <span class="n">min</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_total</span><span class="p">);</span>

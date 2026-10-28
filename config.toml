@@ -1,5 +1,5 @@
 baseURL = "https://example.org/"
-languageCode = "es-es"
+locale = "es-es"
 title = "Ejercicios de Programación"
 theme = "hugo-book"
 

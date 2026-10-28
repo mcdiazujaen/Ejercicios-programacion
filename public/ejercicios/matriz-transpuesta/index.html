@@ -10,41 +10,41 @@ https://github.com/alex-shpak/hugo-book
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Matriz transpuesta# Enunciado# Dada una matriz A su transpuesta A’ es:
 Realizar un subalgoritmo al que se le de una matriz de orden NxM y devuelva su transpuesta.
-Soluciones# Diseño en pseudocódigo# PROCEDIMIENTO transpuesta( mat, n, m, VAR trans) ENTRADAS: mat:ARRAY(n,m) DE REALES (* Matriz original *) n: ENTERO (* Filas de la matriz original o columnas de la transpuesta *) m: ENTERO (* Columnas de la matriz original o filas de la transpuesta *) SALIDAS: trans: ARRAY (n,m) DE REALES (* Matriz transpuesta *) VARIABLES: i,j: ENTEROS INICIO PARA i&lt;--1 HASTA n HACER PARA j&lt;--1 HASTA m HACER trans (j,i)&lt;-- mat(i,j) FIN_PARA FIN_PARA FINPrograma en Matlab# Solución con programación básica# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: % x, y, n, m: ENTEROS [n,m] = size( a ); for x=1:n for y=1:m b(y,x) = a(x,y); end endSolución con programación Matlab avanzada# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: Ninguna b=a&#39;;">
+Soluciones# Diseño en pseudocódigo# PROCEDIMIENTO transpuesta( mat, n, m, VAR trans) ENTRADAS: mat:ARRAY(n,m) DE REALES (* Matriz original *) n: ENTERO (* Filas de la matriz original o columnas de la transpuesta *) m: ENTERO (* Columnas de la matriz original o filas de la transpuesta *) SALIDAS: trans: ARRAY (n,m) DE REALES (* Matriz transpuesta *) VARIABLES: i,j: ENTEROS INICIO PARA i&lt;--1 HASTA n HACER PARA j&lt;--1 HASTA m HACER trans (j,i)&lt;-- mat(i,j) FIN_PARA FIN_PARA FIN Programa en Matlab# Solución con programación básica# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: % x, y, n, m: ENTEROS [n,m] = size( a ); for x=1:n for y=1:m b(y,x) = a(x,y); end end Solución con programación Matlab avanzada# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: Ninguna b=a&#39;;">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/matriz-transpuesta/">
-  <meta property="og:site_name" content="Ejercicios de Programación">
-  <meta property="og:title" content="Matriz transpuesta">
-  <meta property="og:description" content="Matriz transpuesta# Enunciado# Dada una matriz A su transpuesta A’ es:
+	<meta property="og:site_name" content="Ejercicios de Programación">
+	<meta property="og:title" content="Matriz transpuesta">
+	<meta property="og:description" content="Matriz transpuesta# Enunciado# Dada una matriz A su transpuesta A’ es:
 Realizar un subalgoritmo al que se le de una matriz de orden NxM y devuelva su transpuesta.
-Soluciones# Diseño en pseudocódigo# PROCEDIMIENTO transpuesta( mat, n, m, VAR trans) ENTRADAS: mat:ARRAY(n,m) DE REALES (* Matriz original *) n: ENTERO (* Filas de la matriz original o columnas de la transpuesta *) m: ENTERO (* Columnas de la matriz original o filas de la transpuesta *) SALIDAS: trans: ARRAY (n,m) DE REALES (* Matriz transpuesta *) VARIABLES: i,j: ENTEROS INICIO PARA i&lt;--1 HASTA n HACER PARA j&lt;--1 HASTA m HACER trans (j,i)&lt;-- mat(i,j) FIN_PARA FIN_PARA FINPrograma en Matlab# Solución con programación básica# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: % x, y, n, m: ENTEROS [n,m] = size( a ); for x=1:n for y=1:m b(y,x) = a(x,y); end endSolución con programación Matlab avanzada# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: Ninguna b=a&#39;;">
-  <meta property="og:locale" content="es_es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="ejercicios">
-    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:tag" content="Sin_c">
+Soluciones# Diseño en pseudocódigo# PROCEDIMIENTO transpuesta( mat, n, m, VAR trans) ENTRADAS: mat:ARRAY(n,m) DE REALES (* Matriz original *) n: ENTERO (* Filas de la matriz original o columnas de la transpuesta *) m: ENTERO (* Columnas de la matriz original o filas de la transpuesta *) SALIDAS: trans: ARRAY (n,m) DE REALES (* Matriz transpuesta *) VARIABLES: i,j: ENTEROS INICIO PARA i&lt;--1 HASTA n HACER PARA j&lt;--1 HASTA m HACER trans (j,i)&lt;-- mat(i,j) FIN_PARA FIN_PARA FIN Programa en Matlab# Solución con programación básica# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: % x, y, n, m: ENTEROS [n,m] = size( a ); for x=1:n for y=1:m b(y,x) = a(x,y); end end Solución con programación Matlab avanzada# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: Ninguna b=a&#39;;">
+	<meta property="og:locale" content="es_es">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="ejercicios">
+		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:tag" content="Sin_c">
 
 
-  <meta itemprop="name" content="Matriz transpuesta">
-  <meta itemprop="description" content="Matriz transpuesta# Enunciado# Dada una matriz A su transpuesta A’ es:
+	<meta itemprop="name" content="Matriz transpuesta">
+	<meta itemprop="description" content="Matriz transpuesta# Enunciado# Dada una matriz A su transpuesta A’ es:
 Realizar un subalgoritmo al que se le de una matriz de orden NxM y devuelva su transpuesta.
-Soluciones# Diseño en pseudocódigo# PROCEDIMIENTO transpuesta( mat, n, m, VAR trans) ENTRADAS: mat:ARRAY(n,m) DE REALES (* Matriz original *) n: ENTERO (* Filas de la matriz original o columnas de la transpuesta *) m: ENTERO (* Columnas de la matriz original o filas de la transpuesta *) SALIDAS: trans: ARRAY (n,m) DE REALES (* Matriz transpuesta *) VARIABLES: i,j: ENTEROS INICIO PARA i&lt;--1 HASTA n HACER PARA j&lt;--1 HASTA m HACER trans (j,i)&lt;-- mat(i,j) FIN_PARA FIN_PARA FINPrograma en Matlab# Solución con programación básica# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: % x, y, n, m: ENTEROS [n,m] = size( a ); for x=1:n for y=1:m b(y,x) = a(x,y); end endSolución con programación Matlab avanzada# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: Ninguna b=a&#39;;">
-  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="237">
-  <meta itemprop="keywords" content="Sin_c">
+Soluciones# Diseño en pseudocódigo# PROCEDIMIENTO transpuesta( mat, n, m, VAR trans) ENTRADAS: mat:ARRAY(n,m) DE REALES (* Matriz original *) n: ENTERO (* Filas de la matriz original o columnas de la transpuesta *) m: ENTERO (* Columnas de la matriz original o filas de la transpuesta *) SALIDAS: trans: ARRAY (n,m) DE REALES (* Matriz transpuesta *) VARIABLES: i,j: ENTEROS INICIO PARA i&lt;--1 HASTA n HACER PARA j&lt;--1 HASTA m HACER trans (j,i)&lt;-- mat(i,j) FIN_PARA FIN_PARA FIN Programa en Matlab# Solución con programación básica# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: % x, y, n, m: ENTEROS [n,m] = size( a ); for x=1:n for y=1:m b(y,x) = a(x,y); end end Solución con programación Matlab avanzada# function b = Transpuesta( a ) % FUNCION b = Transpuesta( a ) % DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a % PARÁMETROS DE ENTRADA: % a: ARRAY(n,m) DE REALES; matriz original % PARÁMETROS DE SALIDA: % b: ARRAY(m,n) DE REALES; matriz transpuesta % VARIABLES INTERNAS: Ninguna b=a&#39;;">
+	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="wordCount" content="239">
+	<meta itemprop="keywords" content="Sin_c">
 
 <title>Matriz transpuesta | Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="http://localhost:1313/ejercicios/matriz-transpuesta/">
-<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f69a6f3a5878c8ad9efb2f9a332e3eb7515582048dbe48e17729e15302a7f6ea.js" integrity="sha256-9ppvOlh4yK2e&#43;y&#43;aMy4&#43;t1FVggSNvkjhdynhUwKn9uo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
 
 
 
@@ -369,7 +369,7 @@ a.badge:hover {
 <h4 id="solución-con-programación-básica">Solución con programación básica<a class="anchor" href="#soluci%c3%b3n-con-programaci%c3%b3n-b%c3%a1sica">#</a></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>b <span class="p">=</span><span class="w"> </span><span class="nf">Transpuesta</span><span class="p">(</span> a <span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% FUNCION b = Transpuesta( a )</span>
+</span></span></span><span class="line"><span class="cl"><span class="c">% FUNCION b = Transpuesta( a )</span>
 </span></span><span class="line"><span class="cl"><span class="c">% DESCRIPCIÓN: Devuelve una matriz b que es la transpuesta de a</span>
 </span></span><span class="line"><span class="cl"><span class="c">% PARÁMETROS DE ENTRADA:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%    a: ARRAY(n,m) DE REALES; matriz original</span>

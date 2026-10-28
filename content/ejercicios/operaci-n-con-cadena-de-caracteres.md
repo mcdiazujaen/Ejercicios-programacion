@@ -2,19 +2,20 @@
 title: "Operación con cadena de caracteres"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo', 'matlab']
+languages: ['pseudocódigo']
 categories: ['enunciado']
 ---
 
 # Operación con cadena de caracteres
 
-##  Enunciado 
+## Enunciado
 
-Realizar un subalgoritmo que dada una cadena de caracteres obtenga otra cadena de caracteres en la que se han eliminado todas las subcadenas formadas por más de un espacio en blanco. Por ejemplo, la cadena “la-----asignatura---de---fundamentos----de----informática---es---interesante” debe quedar “la-asignatura-de-fundamentos-de-informática-es-interesante”, donde hemos representado el espacio en blanco con el guión “-”. 
+Realizar un subalgoritmo que dada una cadena de caracteres obtenga otra cadena de caracteres en la que se han eliminado todas las subcadenas formadas por más de un espacio en blanco. Por ejemplo, la cadena “la-----asignatura---de---fundamentos----de----informática---es---interesante” debe quedar “la-asignatura-de-fundamentos-de-informática-es-interesante”, donde hemos representado el espacio en blanco con el guión “-”.
 
-##  Soluciones 
+## Soluciones
 
-###  Pseudocódigo 
+### Pseudocódigo
+
 ```text
 PROCEDIMIENTO Blancos(Ent, VAR Sal, tam1, VAR tam2)
 ENTRADAS:

@@ -16,40 +16,40 @@ Escribir un programa que permita calcular la aproximación al número e dada por
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/ejercicios/calculo-del-n-mero-e/">
-  <meta property="og:site_name" content="Ejercicios de Programación">
-  <meta property="og:title" content="Calculo del número E">
-  <meta property="og:description" content="Calculo del número E# Enunciado# El número e (2.7183…) se puede aproximar mediante la suma:
+	<meta property="og:site_name" content="Ejercicios de Programación">
+	<meta property="og:title" content="Calculo del número E">
+	<meta property="og:description" content="Calculo del número E# Enunciado# El número e (2.7183…) se puede aproximar mediante la suma:
 Sumatorio de 1/n! desde n=0 hasta n=N
 En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·…·(n -1)·n). Recordemos que, por definición, 0!=1.
 Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.">
-  <meta property="og:locale" content="es_es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="ejercicios">
-    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-    <meta property="article:tag" content="Sin_c">
-    <meta property="article:tag" content="Sin_matlab">
+	<meta property="og:locale" content="es_es">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="ejercicios">
+		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:tag" content="Sin_c">
+		<meta property="article:tag" content="Sin_matlab">
 
 
-  <meta itemprop="name" content="Calculo del número E">
-  <meta itemprop="description" content="Calculo del número E# Enunciado# El número e (2.7183…) se puede aproximar mediante la suma:
+	<meta itemprop="name" content="Calculo del número E">
+	<meta itemprop="description" content="Calculo del número E# Enunciado# El número e (2.7183…) se puede aproximar mediante la suma:
 Sumatorio de 1/n! desde n=0 hasta n=N
 En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·…·(n -1)·n). Recordemos que, por definición, 0!=1.
 Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.">
-  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1019">
-  <meta itemprop="keywords" content="Sin_c,Sin_matlab">
+	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="wordCount" content="1020">
+	<meta itemprop="keywords" content="Sin_c,Sin_matlab">
 
 <title>Calculo del número E | Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="http://localhost:1313/ejercicios/calculo-del-n-mero-e/">
-<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.2fa23a946482f5dde4bcd6f6e23abdb131b0b5301de3974bc993b2b7d100b25e.css" integrity="sha256-L6I6lGSC9d3kvNb24jq9sTGwtTAd45dLyZOyt9EAsl4=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f69a6f3a5878c8ad9efb2f9a332e3eb7515582048dbe48e17729e15302a7f6ea.js" integrity="sha256-9ppvOlh4yK2e&#43;y&#43;aMy4&#43;t1FVggSNvkjhdynhUwKn9uo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.d4c99a3e2a22f9ad5d34025d5b05ebcb20596754fbd3384c38538e0b592a0eb9.js" integrity="sha256-1MmaPioi&#43;a1dNAJdWwXryyBZZ1T70zhMOFOOC1kqDrk=" crossorigin="anonymous"></script>
 
 
 
@@ -380,12 +380,12 @@ a.badge:hover {
 </span></span></span><span class="line"><span class="cl"><span class="cm"> *
 </span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
 </span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define OK 1
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define ERR -10001
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define NO 0
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="cp">#define MAX_TERM 1000000
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="kt">float</span> <span class="n">n_term</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#define OK 1
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#define ERR -10001
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#define NO 0
+</span></span></span><span class="line"><span class="cl"> <span class="cp">#define MAX_TERM 1000000
+</span></span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="n">n_term</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">eficiente</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">lectura</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">eficiente</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">n_term</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">calcular</span><span class="p">(</span><span class="kt">float</span> <span class="n">n_term</span><span class="p">);</span>
@@ -567,7 +567,7 @@ a.badge:hover {
 </span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div><h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>res<span class="p">=</span><span class="nf">factorial_recursivo</span><span class="p">(</span>n<span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">% FUNCIÓN res=factorial_recursivo(n)</span>
+</span></span></span><span class="line"><span class="cl"><span class="c">% FUNCIÓN res=factorial_recursivo(n)</span>
 </span></span><span class="line"><span class="cl"><span class="c">% DESCRIPCIÓN: Calcula el factorial de n de forma recursiva</span>
 </span></span><span class="line"><span class="cl"><span class="c">% ENTRADAS:</span>
 </span></span><span class="line"><span class="cl"><span class="c">%    n: ENTERO;  valor para calcular el factorial</span>
