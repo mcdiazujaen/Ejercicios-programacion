@@ -1,4 +1,5 @@
 baseURL = "https://mcdiazujaen.github.io/Ejercicios-programacion/"
+canonifyURLs = true
 locale = "es-es"
 title = "Ejercicios de Programación"
 theme = "hugo-book"
