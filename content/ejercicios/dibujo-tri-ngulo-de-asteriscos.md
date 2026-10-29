@@ -2,10 +2,10 @@
 title: "Dibujo triángulo de asteriscos"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pascal', 'pseudocódigo']
+languages: ['pascal']
 professors: ['lperez']
-categories: ['enunciado']
-tags: ['sin_matlab']
+categories: ['comentario', 'enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Dibujo triángulo de asteriscos

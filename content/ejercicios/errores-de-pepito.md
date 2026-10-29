@@ -4,7 +4,7 @@ date: 2024-01-01
 draft: false
 languages: ['pseudocódigo']
 categories: ['enunciado']
-tags: ['sin_c', 'sin_matlab']
+tags: ['Sin C', 'Sin Matlab']
 ---
 
 # Errores de pepito

@@ -2,9 +2,9 @@
 title: "Eliminar duplicados de un array"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo']
+languages: ['pseudocódigo']
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin C', 'Sin Matlab']
 ---
 
 # Eliminar duplicados de un array

@@ -2,9 +2,8 @@
 title: "Diferencia entre elementos consecutivos de un vector"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
+languages: ['c', 'matlab', 'pseudocódigo']
 categories: ['enunciado']
-tags: ['sin_matlab']
 ---
 
 # Diferencia entre elementos consecutivos de un vector

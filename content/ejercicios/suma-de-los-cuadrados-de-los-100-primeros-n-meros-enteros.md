@@ -2,10 +2,10 @@
 title: "Suma de los cuadrados de los 100 primeros números enteros"
 date: 2024-01-01
 draft: false
-languages: ['c']
+languages: ['c', 'pseudocódigo']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
-tags: ['sin_pseudocódigo']
+categories: ['enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Suma de los cuadrados de los 100 primeros números enteros

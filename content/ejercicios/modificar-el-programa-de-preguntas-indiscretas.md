@@ -4,7 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['c']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Pseudocódigo']
 ---
 
 # Modificar el programa de Preguntas indiscretas

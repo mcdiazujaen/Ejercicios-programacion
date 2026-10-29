@@ -1,0 +1,25 @@
+{{ $icon := .Get "icon" | default "/images/4/44/Icono_revisar.png" }}
+{{ $title := .Get "title" }}
+{{ $text := .Get "text" }}
+{{ $param0 := "" }}
+{{ if not .IsNamedParams }}
+  {{ $param0 = .Get 0 }}
+{{ end }}
+<div class="aviso-cuadro aviso-advertencia" style="background:#ffeae1; border:1px solid #ffaaaa; padding: 10px 14px; margin: 1.2rem 0; display: flex; align-items: center; gap: 15px; border-radius: 4px; box-sizing: border-box;">
+  <div class="aviso-icono" style="flex-shrink: 0; display: flex; align-items: center;">
+    <img src="{{ $icon }}" alt="Icono de advertencia" width="80" height="40" style="display: block; border: 0; max-width: none;" />
+  </div>
+  <div class="aviso-contenido" style="flex: 1; color: #222222; font-size: 0.95rem; line-height: 1.45;">
+    {{- if .Inner -}}
+      {{ .Inner | markdownify }}
+    {{- else if $param0 -}}
+      <p style="margin: 0;">{{ $param0 | markdownify }}</p>
+    {{- else if or $title $text -}}
+      {{ if $title }}<p style="margin: 0 0 4px 0;"><strong>{{ $title }}</strong></p>{{ end }}
+      {{ if $text }}<p style="margin: 0;">{{ $text }}</p>{{ end }}
+    {{- else -}}
+      <p style="margin: 0 0 4px 0;"><strong>Este ejercicio no está revisado y puede contener errores.</strong></p>
+      <p style="margin: 0;">Cuando el ejercicio esté corregido, no aparecerá este mensaje.</p>
+    {{- end -}}
+  </div>
+</div>

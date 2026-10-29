@@ -2,8 +2,9 @@
 title: "Reservas Multicines"
 date: 2024-01-01
 draft: false
+languages: []
 categories: ['enunciado']
-tags: ['sin_matlab', 'sin_solución']
+tags: ['Sin Matlab', 'Sin solución']
 ---
 
 # Reservas Multicines

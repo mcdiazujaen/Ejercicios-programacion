@@ -4,6 +4,7 @@ date: 2024-01-01
 draft: false
 languages: []
 categories: ['enunciado']
+tags: ['Sin Matlab', 'Sin solución']
 ---
 
 # Estadísticas de fútbol 2

@@ -4,7 +4,7 @@ date: 2024-01-01
 draft: false
 languages: ['c', 'pseudocódigo']
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab']
 ---
 
 # Conversion decimal a octal

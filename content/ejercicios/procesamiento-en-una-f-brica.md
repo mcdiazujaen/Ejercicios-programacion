@@ -2,8 +2,9 @@
 title: "Procesamiento en una fábrica"
 date: 2024-01-01
 draft: false
-languages: ['matlab']
+languages: []
 categories: ['enunciado']
+tags: ['Sin Matlab', 'Sin solución']
 ---
 
 # Procesamiento en una fábrica

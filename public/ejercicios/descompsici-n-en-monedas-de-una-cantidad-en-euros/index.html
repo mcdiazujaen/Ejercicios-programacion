@@ -3,7 +3,7 @@
     data-theme="auto"
     data-layout="centered">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   
   <meta name="generator" content="Hugo 0.169.0">
   <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
@@ -18,7 +18,7 @@ Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADA
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="http://localhost:1313/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Descompsición en monedas de una cantidad en euros">
 	<meta property="og:description" content="Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
@@ -28,7 +28,7 @@ Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADA
 		<meta property="article:section" content="ejercicios">
 		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
 		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-		<meta property="article:tag" content="Sin_matlab">
+		<meta property="article:tag" content="Sin Matlab">
 
 
 	<meta itemprop="name" content="Descompsición en monedas de una cantidad en euros">
@@ -37,7 +37,7 @@ Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADA
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="776">
-	<meta itemprop="keywords" content="Sin_matlab">
+	<meta itemprop="keywords" content="Sin Matlab">
 
 <title>Descompsición en monedas de una cantidad en euros • Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -45,11 +45,11 @@ Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADA
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
+<link rel="canonical" href="https://example.org/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
 <link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-<script type="module" src="/en.search.min.edefffa244a8dcb07915b2b0043c01e627930bcfe137fbd8079e9a2edcb0c5f2.js" integrity="sha256-7e//okSo3LB5FbKwBDwB5ieTC8/hN/vYB56aLtywxfI=" crossorigin="anonymous"></script>
+<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -86,7 +86,94 @@ pre code,
   background-color: transparent !important;
   padding: 0;
 }
+
+ 
+.aviso-cuadro,
+.aviso-revisar,
+.aviso-advertencia {
+  background: #ffeae1;
+  border: 1px solid #ffaaaa;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.aviso-cuadro .aviso-icono,
+.aviso-revisar .aviso-icono,
+.aviso-advertencia .aviso-icono {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.aviso-cuadro .aviso-icono img,
+.aviso-revisar .aviso-icono img,
+.aviso-advertencia .aviso-icono img {
+  width: 80px;
+  height: 40px;
+  max-width: none;
+  object-fit: contain;
+  border: 0;
+  display: block;
+  margin: 0;
+}
+
+.aviso-cuadro .aviso-contenido,
+.aviso-revisar .aviso-contenido,
+.aviso-advertencia .aviso-contenido {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p,
+.aviso-revisar .aviso-contenido p,
+.aviso-advertencia .aviso-contenido p {
+  margin: 0;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p + p,
+.aviso-revisar .aviso-contenido p + p,
+.aviso-advertencia .aviso-contenido p + p {
+  margin-top: 4px;
+}
+
+.aviso-cuadro .aviso-contenido strong,
+.aviso-revisar .aviso-contenido strong,
+.aviso-advertencia .aviso-contenido strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .aviso-cuadro,
+  .aviso-revisar,
+  .aviso-advertencia {
+    background: #361b1b;
+    border-color: #8c3a3a;
+  }
+  .aviso-cuadro .aviso-contenido,
+  .aviso-revisar .aviso-contenido,
+  .aviso-advertencia .aviso-contenido,
+  .aviso-cuadro .aviso-contenido p,
+  .aviso-revisar .aviso-contenido p,
+  .aviso-advertencia .aviso-contenido p {
+    color: #f7d7d7;
+  }
+  .aviso-cuadro .aviso-contenido strong,
+  .aviso-revisar .aviso-contenido strong,
+  .aviso-advertencia .aviso-contenido strong {
+    color: #ffffff;
+  }
+}
 </style>
+
 
 </head>
 
@@ -237,6 +324,8 @@ pre code,
   <div class="metadata-item">
     <span class="metadata-label">💻 Lenguajes:</span>
     
+      <a href="/languages/c/" class="badge badge-language">C</a>
+    
       <a href="/languages/pascal/" class="badge badge-language">Pascal</a>
     
       <a href="/languages/pseudoc%C3%B3digo/" class="badge badge-language">Pseudocódigo</a>
@@ -257,9 +346,9 @@ pre code,
   <div class="metadata-item">
     <span class="metadata-label">📂 Categorías:</span>
     
-      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
-    
       <a href="/categories/comentario/" class="badge badge-category">Comentario</a>
+    
+      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
     
   </div>
   
@@ -268,7 +357,7 @@ pre code,
   <div class="metadata-item">
     <span class="metadata-label">🏷️ Tags:</span>
     
-      <a href="/tags/sin_matlab/" class="badge badge-tag">Sin_matlab</a>
+      <a href="/tags/sin-matlab/" class="badge badge-tag">Sin Matlab</a>
     
   </div>
   

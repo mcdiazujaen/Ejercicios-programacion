@@ -3,7 +3,7 @@
     data-theme="auto"
     data-layout="centered">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   
   <meta name="generator" content="Hugo 0.169.0">
   <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
@@ -16,30 +16,30 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="http://localhost:1313/tags/sin_c/">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/tags/sin-pseudoc%C3%B3digo/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
-	<meta property="og:title" content="Sin_c">
+	<meta property="og:title" content="Sin Pseudocódigo">
 	<meta property="og:description" content="Ejercicios de programación en diferentes lenguajes">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="website">
 
 
-	<meta itemprop="name" content="Sin_c">
+	<meta itemprop="name" content="Sin Pseudocódigo">
 	<meta itemprop="description" content="Ejercicios de programación en diferentes lenguajes">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 
-<title>Sin_c • Ejercicios de Programación</title>
+<title>Sin Pseudocódigo • Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/tags/sin_c/">
+<link rel="canonical" href="https://example.org/tags/sin-pseudoc%C3%B3digo/">
 <link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-<script type="module" src="/en.search.min.edefffa244a8dcb07915b2b0043c01e627930bcfe137fbd8079e9a2edcb0c5f2.js" integrity="sha256-7e//okSo3LB5FbKwBDwB5ieTC8/hN/vYB56aLtywxfI=" crossorigin="anonymous"></script><link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/sin_c/index.xml" title="Sin_c" />
+<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script><link rel="alternate" type="application/rss+xml" href="https://example.org/tags/sin-pseudoc%C3%B3digo/index.xml" title="Sin Pseudocódigo" />
 
   <link rel="stylesheet" href="/syntax.css">
 <style>
@@ -77,7 +77,94 @@ pre code,
   background-color: transparent !important;
   padding: 0;
 }
+
+ 
+.aviso-cuadro,
+.aviso-revisar,
+.aviso-advertencia {
+  background: #ffeae1;
+  border: 1px solid #ffaaaa;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.aviso-cuadro .aviso-icono,
+.aviso-revisar .aviso-icono,
+.aviso-advertencia .aviso-icono {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.aviso-cuadro .aviso-icono img,
+.aviso-revisar .aviso-icono img,
+.aviso-advertencia .aviso-icono img {
+  width: 80px;
+  height: 40px;
+  max-width: none;
+  object-fit: contain;
+  border: 0;
+  display: block;
+  margin: 0;
+}
+
+.aviso-cuadro .aviso-contenido,
+.aviso-revisar .aviso-contenido,
+.aviso-advertencia .aviso-contenido {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p,
+.aviso-revisar .aviso-contenido p,
+.aviso-advertencia .aviso-contenido p {
+  margin: 0;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p + p,
+.aviso-revisar .aviso-contenido p + p,
+.aviso-advertencia .aviso-contenido p + p {
+  margin-top: 4px;
+}
+
+.aviso-cuadro .aviso-contenido strong,
+.aviso-revisar .aviso-contenido strong,
+.aviso-advertencia .aviso-contenido strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .aviso-cuadro,
+  .aviso-revisar,
+  .aviso-advertencia {
+    background: #361b1b;
+    border-color: #8c3a3a;
+  }
+  .aviso-cuadro .aviso-contenido,
+  .aviso-revisar .aviso-contenido,
+  .aviso-advertencia .aviso-contenido,
+  .aviso-cuadro .aviso-contenido p,
+  .aviso-revisar .aviso-contenido p,
+  .aviso-advertencia .aviso-contenido p {
+    color: #f7d7d7;
+  }
+  .aviso-cuadro .aviso-contenido strong,
+  .aviso-revisar .aviso-contenido strong,
+  .aviso-advertencia .aviso-contenido strong {
+    color: #ffffff;
+  }
+}
 </style>
+
 
 </head>
 
@@ -221,19 +308,39 @@ pre code,
 
       
 <article class="markdown book-post">
-  <h1>Sin_c</h1>
+  <h1>Sin Pseudocódigo</h1>
   
   
   
   
-    <h2>Todos los ejercicios de Sin_c</h2>
+    <h2>Todos los ejercicios de Sin Pseudocódigo</h2>
   
   
   
   <ul>
     
       <li>
-        <a href="/ejercicios/array-bidimensional/">Array bidimensional</a>
+        <a href="/ejercicios/busca-del-n-mero-mayor-y-menor/">Busca del número mayor y menor</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/buscar-subcadena/">Buscar subcadena</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/calculo-de-los-esca-os-electorales/">Calculo de los escaños electorales</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/c-lculo-de-un-polinomio/">Cálculo de un polinomio</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/calculo-del-determenante-de-una-matriz-3x3/">Calculo del determenante de una matriz 3x3</a>
         
       </li>
     
@@ -243,17 +350,22 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/contar-vocales/">Contar vocales</a>
+        <a href="/ejercicios/comprobar-si-un-n-mero-es-primo/">Comprobar si un número es primo</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/conversaci-n-en-c/">Conversación en C</a>
+        <a href="/ejercicios/d-a-de-la-semana/">Día de la semana</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/criba-de-eratostenes/">Criba de Eratóstenes</a>
+        <a href="/ejercicios/distancia-entre-ciudades/">Distancia entre ciudades</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/divisible/">Divisible</a>
         
       </li>
     
@@ -263,47 +375,107 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/errores-de-pepito/">Errores de pepito</a>
+        <a href="/ejercicios/evaluaci-n-de-la-funci-n-exp-x--por-desarrollo-serie/">Evaluación de la función Exp(x) por desarrollo serie</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/limite-peso/">Limite peso</a>
+        <a href="/ejercicios/formas-de-utilizar-el-bucle-for/">Formas de utilizar el bucle For</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/matriz-transpuesta/">Matriz transpuesta</a>
+        <a href="/ejercicios/giro-de-una-barra-extensible/">Giro de una barra extensible</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/men--de-un-restaurante/">Menú de un restaurante</a>
+        <a href="/ejercicios/leer-una-frase-y-escribirla-al-reves/">Leer una frase y escribirla al reves</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/n-mero-primo/">Número Primo</a>
+        <a href="/ejercicios/m-ximo-de-un-conjunto-de-tres-n-meros/">Máximo de un conjunto de tres números</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/n-meros-perfectos/">Números perfectos</a>
+        <a href="/ejercicios/minimo-elemento-de-un-conjunto-de-n-meros/">Minimo elemento de un conjunto de números</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/porcentajes-de-notas/">Porcentajes de notas</a>
+        <a href="/ejercicios/modificar-el-programa-de-preguntas-indiscretas/">Modificar el programa de Preguntas indiscretas</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/procedimiento-que-multiplica-las-diagonales-de-una-matriz/">Procedimiento que multiplica las diagonales de una Matriz</a>
+        <a href="/ejercicios/numeros-amigos/">Numeros amigos</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/suma-condicional/">Suma condicional</a>
+        <a href="/ejercicios/operaci-n-aritmetica/">Operación aritmetica</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/operaciones-con-vectores/">Operaciones con vectores</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/operaciones-estadisticas/">Operaciones estadisticas</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/ordenaci-n-de-la-burbuja/">Ordenación de la burbuja</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/otra-funci-n-recursiva--la-suma-de-los-n-primeros-n-mero-enteros/">Otra función recursiva: La suma de los N primeros número enteros</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/producto-de-matrices/">Producto de matrices</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/producto-de-una-matriz-por-un-vector/">Producto de una matriz por un vector</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/suma-primeros-cinco-n-meros-naturales/">Suma primeros cinco números naturales</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/tabla-de-conversi-n-de-grados-centigrados-a-fahrenheit/">Tabla de conversión de grados centigrados a fahrenheit</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/tipo-de-tri-ngulo/">Tipo de triángulo</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/transformar-un-texto/">Transformar un texto</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/tri-ngulo-de-pascal/">Triángulo de Pascal</a>
+        
+      </li>
+    
+      <li>
+        <a href="/ejercicios/vectores-planos/">Vectores planos</a>
         
       </li>
     

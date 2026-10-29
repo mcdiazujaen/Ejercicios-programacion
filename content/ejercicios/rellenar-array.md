@@ -2,9 +2,9 @@
 title: "Rellenar array"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo']
+languages: []
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab', 'Sin solución']
 ---
 
 # Rellenar array

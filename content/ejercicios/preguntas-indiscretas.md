@@ -2,9 +2,9 @@
 title: "Preguntas indiscretas"
 date: 2024-01-01
 draft: false
-languages: ['c']
+languages: ['c', 'pseudocódigo']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
+categories: ['análisis', 'comentario', 'enunciado']
 ---
 
 # Preguntas indiscretas

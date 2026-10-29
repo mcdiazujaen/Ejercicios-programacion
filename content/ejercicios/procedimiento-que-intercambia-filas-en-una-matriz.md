@@ -2,8 +2,10 @@
 title: "Procedimiento que intercambia filas en una matriz"
 date: 2024-01-01
 draft: false
+languages: ['pascal', 'pseudocódigo']
+professors: ['lperez']
 categories: ['enunciado']
-tags: ['sin_matlab', 'sin_solución']
+tags: ['Sin Matlab']
 ---
 
 # Procedimiento que intercambia filas en una matriz

@@ -4,8 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['c', 'pascal', 'pseudocódigo']
 professors: ['lperez']
-categories: ['enunciado', 'comentario']
-tags: ['sin_matlab']
+categories: ['comentario', 'enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Función que comprueba si los elementos de una Matriz son distintos

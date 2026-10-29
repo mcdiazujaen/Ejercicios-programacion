@@ -5,7 +5,7 @@ draft: false
 languages: ['c', 'pseudocódigo']
 professors: ['mcdiaz']
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab']
 ---
 
 # Coste de un automóvil

@@ -4,8 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['c']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
-tags: ['sin_pseudocódigo']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Pseudocódigo']
 ---
 
 # Giro de una barra extensible

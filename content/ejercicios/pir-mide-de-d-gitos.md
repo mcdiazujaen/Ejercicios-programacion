@@ -2,8 +2,9 @@
 title: "Pirámide de dígitos"
 date: 2024-01-01
 draft: false
-languages: ['matlab']
+languages: []
 categories: ['enunciado']
+tags: ['Sin Matlab', 'Sin solución']
 ---
 
 # Pirámide de dígitos

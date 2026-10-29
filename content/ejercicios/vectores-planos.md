@@ -4,8 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['c']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
-tags: ['sin_matlab', 'sin_pseudocódigo']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Matlab', 'Sin Pseudocódigo']
 ---
 
 # Vectores planos

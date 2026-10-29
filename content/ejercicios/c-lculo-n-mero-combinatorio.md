@@ -2,9 +2,9 @@
 title: "Cálculo número combinatorio"
 date: 2024-01-01
 draft: false
-languages: ['matlab', 'pascal', 'pseudocódigo']
+languages: ['c', 'matlab', 'pascal', 'pseudocódigo']
 professors: ['lperez']
-categories: ['enunciado', 'comentario']
+categories: ['comentario', 'enunciado']
 ---
 
 # Cálculo número combinatorio

@@ -2,9 +2,9 @@
 title: "Función SIGMA y función PROD"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
+languages: ['c', 'pseudocódigo']
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab']
 ---
 
 # Función SIGMA y función PROD

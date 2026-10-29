@@ -2,8 +2,8 @@
 title: "Suma de los 4 vecinos en una matriz"
 date: 2024-01-01
 draft: false
+languages: ['matlab']
 categories: ['enunciado']
-tags: ['sin_matlab', 'sin_solución']
 ---
 
 # Suma de los 4 vecinos en una matriz

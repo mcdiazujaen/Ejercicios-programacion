@@ -2,10 +2,10 @@
 title: "Evaluación de la función Exp(x) por desarrollo serie"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo']
+languages: ['c']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
-tags: ['sin_matlab']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Matlab', 'Sin Pseudocódigo']
 ---
 
 # Evaluación de la función Exp(x) por desarrollo serie

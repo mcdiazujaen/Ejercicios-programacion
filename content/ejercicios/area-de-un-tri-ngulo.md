@@ -2,9 +2,9 @@
 title: "Area de un triángulo"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
+languages: ['c', 'matlab', 'pseudocódigo']
+professors: ['mcdiaz']
 categories: ['enunciado']
-tags: ['sin_matlab']
 ---
 
 # Area de un triángulo

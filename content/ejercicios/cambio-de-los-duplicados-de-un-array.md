@@ -2,9 +2,8 @@
 title: "Cambio de los duplicados de un array"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo']
+languages: ['c', 'matlab', 'pseudocódigo']
 categories: ['enunciado']
-tags: ['sin_matlab']
 ---
 
 # Cambio de los duplicados de un array

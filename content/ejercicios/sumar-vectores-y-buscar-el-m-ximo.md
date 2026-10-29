@@ -2,9 +2,10 @@
 title: "Sumar vectores y buscar el máximo"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo']
+languages: ['pseudocódigo']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
+categories: ['enunciado']
+tags: ['Sin C', 'Sin Matlab']
 ---
 
 # Sumar vectores y buscar el máximo

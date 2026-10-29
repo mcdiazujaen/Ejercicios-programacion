@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Categorías on Ejercicios de Programación</title>
-		<link>http://localhost:1313/categories/</link>
+		<link>https://example.org/categories/</link>
 		<description>Recent content in Categorías on Ejercicios de Programación</description>
 		<generator>Hugo</generator>
 		<language>es-es</language>
@@ -12,26 +12,26 @@
 		
 			<lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Análisis</title>
-				<link>http://localhost:1313/categories/an%C3%A1lisis/</link>
+				<link>https://example.org/categories/an%C3%A1lisis/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/categories/an%C3%A1lisis/</guid>
+				<guid>https://example.org/categories/an%C3%A1lisis/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Comentario</title>
-				<link>http://localhost:1313/categories/comentario/</link>
+				<link>https://example.org/categories/comentario/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/categories/comentario/</guid>
+				<guid>https://example.org/categories/comentario/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Enunciado</title>
-				<link>http://localhost:1313/categories/enunciado/</link>
+				<link>https://example.org/categories/enunciado/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/categories/enunciado/</guid>
+				<guid>https://example.org/categories/enunciado/</guid>
 				<description></description>
 			</item>
 	</channel>

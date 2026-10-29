@@ -2,7 +2,7 @@
 title: "Calcular la varianza"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo', 'matlab']
+languages: ['matlab', 'pseudocódigo']
 categories: ['enunciado']
 ---
 

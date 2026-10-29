@@ -4,8 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['c', 'pseudocódigo']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
-tags: ['sin_matlab']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Matlab']
 ---
 
 # El sultan y el estudiante

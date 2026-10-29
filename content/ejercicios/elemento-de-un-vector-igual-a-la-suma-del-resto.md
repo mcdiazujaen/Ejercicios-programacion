@@ -2,10 +2,10 @@
 title: "Elemento de un vector igual a la suma del resto"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo']
+languages: []
 professors: ['mcdiaz']
-categories: ['enunciado', 'análisis']
-tags: ['sin_matlab']
+categories: ['enunciado']
+tags: ['Sin Matlab', 'Sin solución']
 ---
 
 # Elemento de un vector igual a la suma del resto

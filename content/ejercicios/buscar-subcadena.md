@@ -4,7 +4,7 @@ date: 2024-01-01
 draft: false
 languages: ['matlab']
 categories: ['enunciado']
-tags: ['sin_pseudocódigo']
+tags: ['Sin Pseudocódigo']
 ---
 
 # Buscar subcadena

@@ -2,8 +2,9 @@
 title: "Errores subalgoritmos"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
+languages: []
 categories: ['enunciado']
+tags: ['Sin solución']
 ---
 
 # Errores subalgoritmos

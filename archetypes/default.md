@@ -8,3 +8,6 @@ categories: []
 tags: []
 ---
 
+<!-- Si el ejercicio no está revisado, descomentar la siguiente línea: -->
+<!-- {{< revisar >}} -->
+

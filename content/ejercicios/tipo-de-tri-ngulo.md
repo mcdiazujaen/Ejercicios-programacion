@@ -2,9 +2,9 @@
 title: "Tipo de triángulo"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
+languages: []
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab', 'Sin Pseudocódigo', 'Sin solución']
 ---
 
 # Tipo de triángulo

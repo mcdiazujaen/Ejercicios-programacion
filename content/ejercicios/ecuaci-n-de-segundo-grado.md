@@ -2,10 +2,10 @@
 title: "Ecuación de segundo grado"
 date: 2024-01-01
 draft: false
-languages: ['c']
+languages: ['c', 'pseudocódigo']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
-tags: ['sin_matlab', 'sin_pseudocódigo']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Ecuación de segundo grado

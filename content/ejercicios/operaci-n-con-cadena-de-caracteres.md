@@ -4,6 +4,7 @@ date: 2024-01-01
 draft: false
 languages: ['pseudocódigo']
 categories: ['enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Operación con cadena de caracteres

@@ -4,8 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['c', 'pseudocódigo']
 professors: ['mcdiaz']
-categories: ['enunciado', 'análisis']
-tags: ['sin_matlab']
+categories: ['análisis', 'enunciado']
+tags: ['Sin Matlab']
 ---
 
 # División entera y resto utilizan restar y sumar

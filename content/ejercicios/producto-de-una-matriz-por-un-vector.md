@@ -2,9 +2,10 @@
 title: "Producto de una matriz por un vector"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
-categories: ['enunciado']
-tags: ['sin_matlab']
+languages: ['c']
+professors: ['angel']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Matlab', 'Sin Pseudocódigo']
 ---
 
 # Producto de una matriz por un vector

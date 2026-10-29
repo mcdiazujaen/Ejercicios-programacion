@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tags on Ejercicios de Programación</title>
-		<link>http://localhost:1313/tags/</link>
+		<link>https://example.org/tags/</link>
 		<description>Recent content in Tags on Ejercicios de Programación</description>
 		<generator>Hugo</generator>
 		<language>es-es</language>
@@ -12,40 +12,40 @@
 		
 			<lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Revisar</title>
-				<link>http://localhost:1313/tags/revisar/</link>
+				<link>https://example.org/tags/revisar/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/revisar/</guid>
+				<guid>https://example.org/tags/revisar/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Sin_c</title>
-				<link>http://localhost:1313/tags/sin_c/</link>
+				<title>Sin C</title>
+				<link>https://example.org/tags/sin-c/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/sin_c/</guid>
+				<guid>https://example.org/tags/sin-c/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Sin_matlab</title>
-				<link>http://localhost:1313/tags/sin_matlab/</link>
+				<title>Sin Matlab</title>
+				<link>https://example.org/tags/sin-matlab/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/sin_matlab/</guid>
+				<guid>https://example.org/tags/sin-matlab/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Sin_pseudocódigo</title>
-				<link>http://localhost:1313/tags/sin_pseudoc%C3%B3digo/</link>
+				<title>Sin Pseudocódigo</title>
+				<link>https://example.org/tags/sin-pseudoc%C3%B3digo/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/sin_pseudoc%C3%B3digo/</guid>
+				<guid>https://example.org/tags/sin-pseudoc%C3%B3digo/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Sin_solución</title>
-				<link>http://localhost:1313/tags/sin_soluci%C3%B3n/</link>
+				<title>Sin Solución</title>
+				<link>https://example.org/tags/sin-soluci%C3%B3n/</link>
 				<pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/sin_soluci%C3%B3n/</guid>
+				<guid>https://example.org/tags/sin-soluci%C3%B3n/</guid>
 				<description></description>
 			</item>
 	</channel>

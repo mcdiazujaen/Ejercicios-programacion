@@ -4,7 +4,7 @@ date: 2024-01-01
 draft: false
 languages: ['c', 'pseudocódigo']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
+categories: ['análisis', 'comentario', 'enunciado']
 ---
 
 # Máximo elemento de un conjunto de números

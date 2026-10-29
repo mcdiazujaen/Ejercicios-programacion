@@ -2,9 +2,9 @@
 title: "Calculo de potencias"
 date: 2024-01-01
 draft: false
-languages: ['c', 'matlab']
+languages: ['c', 'matlab', 'pseudocódigo']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
+categories: ['análisis', 'comentario', 'enunciado']
 ---
 
 # Calculo de potencias

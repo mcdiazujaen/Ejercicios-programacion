@@ -2,9 +2,9 @@
 title: "Triángulo de Pascal"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
+languages: []
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab', 'Sin Pseudocódigo', 'Sin solución']
 ---
 
 # Triángulo de Pascal

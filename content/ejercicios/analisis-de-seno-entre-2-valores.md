@@ -2,7 +2,7 @@
 title: "Analisis de Seno entre 2 valores"
 date: 2024-01-01
 draft: false
-languages: ['matlab']
+languages: ['c', 'matlab', 'pseudocódigo']
 categories: ['enunciado']
 ---
 

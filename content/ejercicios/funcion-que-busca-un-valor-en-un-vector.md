@@ -2,9 +2,9 @@
 title: "Funcion que busca un valor en un vector"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
+languages: ['c', 'pseudocódigo']
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab']
 ---
 
 # Funcion que busca un valor en un vector

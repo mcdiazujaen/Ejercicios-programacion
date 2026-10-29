@@ -4,7 +4,7 @@ date: 2024-01-01
 draft: false
 languages: ['pseudocódigo']
 categories: ['enunciado']
-tags: ['revisar', 'sin_matlab']
+tags: ['revisar', 'Sin Matlab']
 ---
 
 # Losas de tres colores
@@ -127,10 +127,7 @@ FIN
 
 ####  Algoritmo principal
 
-![Icono de revisar](images/4/44/Icono_revisar.png)
-
-**Este ejercicio no está revisado y puede contener errores.**  
-Cuando el ejercicio esté corregido, no aparecerá este mensaje. 
+{{< revisar >}} 
 ```text
 ALGORITMO LosasDeTresColores
 ENTRADAS:

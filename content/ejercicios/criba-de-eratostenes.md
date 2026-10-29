@@ -4,8 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['pascal', 'pseudocódigo']
 professors: ['lperez']
-categories: ['enunciado', 'comentario']
-tags: ['sin_c', 'sin_matlab']
+categories: ['comentario', 'enunciado']
+tags: ['Sin C', 'Sin Matlab']
 ---
 
 # Criba de Eratóstenes

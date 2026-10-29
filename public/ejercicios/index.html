@@ -3,7 +3,7 @@
     data-theme="auto"
     data-layout="centered">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   
   <meta name="generator" content="Hugo 0.169.0">
   <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
@@ -13,26 +13,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Esta página contiene la lista completa de todos los ejercicios disponibles, ordenados alfabéticamente por título.
-Puedes navegar por los ejercicios o usar el menú superior para filtrar por lenguaje de programación o categoría.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="http://localhost:1313/ejercicios/">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Todos los Ejercicios">
-	<meta property="og:description" content="Esta página contiene la lista completa de todos los ejercicios disponibles, ordenados alfabéticamente por título.
-Puedes navegar por los ejercicios o usar el menú superior para filtrar por lenguaje de programación o categoría.">
+	<meta property="og:description" content="Esta página contiene la lista completa de todos los ejercicios disponibles, ordenados alfabéticamente por título.">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="website">
 
 
 	<meta itemprop="name" content="Todos los Ejercicios">
-	<meta itemprop="description" content="Esta página contiene la lista completa de todos los ejercicios disponibles, ordenados alfabéticamente por título.
-Puedes navegar por los ejercicios o usar el menú superior para filtrar por lenguaje de programación o categoría.">
+	<meta itemprop="description" content="Esta página contiene la lista completa de todos los ejercicios disponibles, ordenados alfabéticamente por título.">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="wordCount" content="33">
+	<meta itemprop="wordCount" content="15">
 
 <title>Todos los Ejercicios • Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -40,11 +37,11 @@ Puedes navegar por los ejercicios o usar el menú superior para filtrar por leng
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/">
+<link rel="canonical" href="https://example.org/ejercicios/">
 <link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-<script type="module" src="/en.search.min.edefffa244a8dcb07915b2b0043c01e627930bcfe137fbd8079e9a2edcb0c5f2.js" integrity="sha256-7e//okSo3LB5FbKwBDwB5ieTC8/hN/vYB56aLtywxfI=" crossorigin="anonymous"></script><link rel="alternate" type="application/rss+xml" href="http://localhost:1313/ejercicios/index.xml" title="Todos los Ejercicios" />
+<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script><link rel="alternate" type="application/rss+xml" href="https://example.org/ejercicios/index.xml" title="Todos los Ejercicios" />
 
   <link rel="stylesheet" href="/syntax.css">
 <style>
@@ -82,7 +79,94 @@ pre code,
   background-color: transparent !important;
   padding: 0;
 }
+
+ 
+.aviso-cuadro,
+.aviso-revisar,
+.aviso-advertencia {
+  background: #ffeae1;
+  border: 1px solid #ffaaaa;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.aviso-cuadro .aviso-icono,
+.aviso-revisar .aviso-icono,
+.aviso-advertencia .aviso-icono {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.aviso-cuadro .aviso-icono img,
+.aviso-revisar .aviso-icono img,
+.aviso-advertencia .aviso-icono img {
+  width: 80px;
+  height: 40px;
+  max-width: none;
+  object-fit: contain;
+  border: 0;
+  display: block;
+  margin: 0;
+}
+
+.aviso-cuadro .aviso-contenido,
+.aviso-revisar .aviso-contenido,
+.aviso-advertencia .aviso-contenido {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p,
+.aviso-revisar .aviso-contenido p,
+.aviso-advertencia .aviso-contenido p {
+  margin: 0;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p + p,
+.aviso-revisar .aviso-contenido p + p,
+.aviso-advertencia .aviso-contenido p + p {
+  margin-top: 4px;
+}
+
+.aviso-cuadro .aviso-contenido strong,
+.aviso-revisar .aviso-contenido strong,
+.aviso-advertencia .aviso-contenido strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .aviso-cuadro,
+  .aviso-revisar,
+  .aviso-advertencia {
+    background: #361b1b;
+    border-color: #8c3a3a;
+  }
+  .aviso-cuadro .aviso-contenido,
+  .aviso-revisar .aviso-contenido,
+  .aviso-advertencia .aviso-contenido,
+  .aviso-cuadro .aviso-contenido p,
+  .aviso-revisar .aviso-contenido p,
+  .aviso-advertencia .aviso-contenido p {
+    color: #f7d7d7;
+  }
+  .aviso-cuadro .aviso-contenido strong,
+  .aviso-revisar .aviso-contenido strong,
+  .aviso-advertencia .aviso-contenido strong {
+    color: #ffffff;
+  }
+}
 </style>
+
 
 </head>
 
@@ -229,11 +313,10 @@ pre code,
   <h1>Todos los Ejercicios</h1>
   
   <p>Esta página contiene la lista completa de todos los ejercicios disponibles, ordenados alfabéticamente por título.</p>
-<p>Puedes navegar por los ejercicios o usar el menú superior para filtrar por lenguaje de programación o categoría.</p>
 
   
   
-  <h2>Lista de Ejercicios (164)</h2>
+  <h2>Lista de Ejercicios (163)</h2>
   
   <ul class="exercise-list">
     
@@ -268,7 +351,7 @@ pre code,
         <a href="/ejercicios/analisis-de-seno-entre-2-valores/">Analisis de Seno entre 2 valores</a>
         
           <span class="exercise-meta">
-            matlab
+            c, matlab, pseudocódigo
           </span>
         
       </li>
@@ -286,7 +369,7 @@ pre code,
         <a href="/ejercicios/area-de-un-tri-ngulo/">Area de un triángulo</a>
         
           <span class="exercise-meta">
-            pseudocódigo
+            c, matlab, pseudocódigo
           </span>
         
       </li>
@@ -304,7 +387,7 @@ pre code,
         <a href="/ejercicios/array-de-caracteres-que-devuelve-el-n-mero-de-comas-leido/">Array de caracteres que devuelve el número de comas leido</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo, matlab
+            c, matlab, pseudocódigo
           </span>
         
       </li>
@@ -336,7 +419,7 @@ pre code,
         <a href="/ejercicios/calcular-la-varianza/">Calcular la varianza</a>
         
           <span class="exercise-meta">
-            pseudocódigo, matlab
+            matlab, pseudocódigo
           </span>
         
       </li>
@@ -372,7 +455,7 @@ pre code,
         <a href="/ejercicios/calculo-de-potencias/">Calculo de potencias</a>
         
           <span class="exercise-meta">
-            c, matlab
+            c, matlab, pseudocódigo
           </span>
         
       </li>
@@ -400,7 +483,7 @@ pre code,
         <a href="/ejercicios/calculo-del-n-mero-e/">Calculo del número E</a>
         
           <span class="exercise-meta">
-            pascal, pseudocódigo
+            c, matlab
           </span>
         
       </li>
@@ -409,7 +492,7 @@ pre code,
         <a href="/ejercicios/c-lculo-del-valor-pi/">Cálculo del valor Pi</a>
         
           <span class="exercise-meta">
-            pseudocódigo, matlab
+            matlab, pseudocódigo
           </span>
         
       </li>
@@ -418,7 +501,7 @@ pre code,
         <a href="/ejercicios/c-lculo-n-mero-combinatorio/">Cálculo número combinatorio</a>
         
           <span class="exercise-meta">
-            matlab, pascal, pseudocódigo
+            c, matlab, pascal, pseudocódigo
           </span>
         
       </li>
@@ -427,7 +510,7 @@ pre code,
         <a href="/ejercicios/cambio-de-los-duplicados-de-un-array/">Cambio de los duplicados de un array</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo
+            c, matlab, pseudocódigo
           </span>
         
       </li>
@@ -436,7 +519,7 @@ pre code,
         <a href="/ejercicios/comparar-dos-arrays/">Comparar dos arrays</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo, matlab
+            c, matlab, pseudocódigo
           </span>
         
       </li>
@@ -454,7 +537,7 @@ pre code,
         <a href="/ejercicios/comprobar-si-un-n-mero-es-primo/">Comprobar si un número es primo</a>
         
           <span class="exercise-meta">
-            c, matlab, pseudocódigo
+            c, matlab
           </span>
         
       </li>
@@ -463,7 +546,7 @@ pre code,
         <a href="/ejercicios/contar-vocales/">Contar vocales</a>
         
           <span class="exercise-meta">
-            pseudocódigo, matlab
+            matlab, pseudocódigo
           </span>
         
       </li>
@@ -472,7 +555,7 @@ pre code,
         <a href="/ejercicios/conversaci-n-en-c/">Conversación en C</a>
         
           <span class="exercise-meta">
-            pascal, pseudocódigo
+            c
           </span>
         
       </li>
@@ -558,7 +641,7 @@ pre code,
         <a href="/ejercicios/descomposici-n-en-factores-primos/">Descomposición en factores primos</a>
         
           <span class="exercise-meta">
-            c, matlab, pseudocódigo
+            pascal
           </span>
         
       </li>
@@ -567,7 +650,7 @@ pre code,
         <a href="/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">Descompsición en monedas de una cantidad en euros</a>
         
           <span class="exercise-meta">
-            pascal, pseudocódigo
+            c, pascal, pseudocódigo
           </span>
         
       </li>
@@ -590,7 +673,7 @@ pre code,
         <a href="/ejercicios/dibujo-tri-ngulo-de-asteriscos/">Dibujo triángulo de asteriscos</a>
         
           <span class="exercise-meta">
-            c, pascal, pseudocódigo
+            pascal
           </span>
         
       </li>
@@ -599,7 +682,7 @@ pre code,
         <a href="/ejercicios/diferencia-entre-elementos-consecutivos-de-un-vector/">Diferencia entre elementos consecutivos de un vector</a>
         
           <span class="exercise-meta">
-            pseudocódigo
+            c, matlab, pseudocódigo
           </span>
         
       </li>
@@ -627,7 +710,7 @@ pre code,
         <a href="/ejercicios/ecuaci-n-de-segundo-grado/">Ecuación de segundo grado</a>
         
           <span class="exercise-meta">
-            c
+            c, pseudocódigo
           </span>
         
       </li>
@@ -636,7 +719,7 @@ pre code,
         <a href="/ejercicios/el-primer-ejercicio-en-c/">El primer ejercicio en C</a>
         
           <span class="exercise-meta">
-            pascal, pseudocódigo
+            c
           </span>
         
       </li>
@@ -663,17 +746,13 @@ pre code,
       <li>
         <a href="/ejercicios/elemento-de-un-vector-igual-a-la-suma-del-resto/">Elemento de un vector igual a la suma del resto</a>
         
-          <span class="exercise-meta">
-            c, pseudocódigo
-          </span>
-        
       </li>
     
       <li>
         <a href="/ejercicios/eliminar-duplicados-de-un-array/">Eliminar duplicados de un array</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo
+            pseudocódigo
           </span>
         
       </li>
@@ -699,10 +778,6 @@ pre code,
     
       <li>
         <a href="/ejercicios/errores-subalgoritmos/">Errores subalgoritmos</a>
-        
-          <span class="exercise-meta">
-            pseudocódigo
-          </span>
         
       </li>
     
@@ -734,7 +809,7 @@ pre code,
         <a href="/ejercicios/evaluaci-n-de-la-funci-n-exp-x--por-desarrollo-serie/">Evaluación de la función Exp(x) por desarrollo serie</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo
+            c
           </span>
         
       </li>
@@ -784,7 +859,7 @@ pre code,
         <a href="/ejercicios/funcion-que-busca-un-valor-en-un-vector/">Funcion que busca un valor en un vector</a>
         
           <span class="exercise-meta">
-            pseudocódigo
+            c, pseudocódigo
           </span>
         
       </li>
@@ -802,7 +877,7 @@ pre code,
         <a href="/ejercicios/funci-n-sigma-y-funci-n-prod/">Función SIGMA y función PROD</a>
         
           <span class="exercise-meta">
-            pseudocódigo
+            c, pseudocódigo
           </span>
         
       </li>
@@ -855,10 +930,6 @@ pre code,
       <li>
         <a href="/ejercicios/leer-fichero-con-matriz-y-calcular-una-suma/">Leer fichero con matriz y calcular una suma</a>
         
-          <span class="exercise-meta">
-            c, pseudocódigo
-          </span>
-        
       </li>
     
       <li>
@@ -892,7 +963,7 @@ pre code,
         <a href="/ejercicios/leer-una-frase-y-escribirla-al-reves/">Leer una frase y escribirla al reves</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo
+            c
           </span>
         
       </li>
@@ -987,7 +1058,7 @@ pre code,
         <a href="/ejercicios/matriz-sim-trica-subalgoritmo/">Matriz Simétrica Subalgoritmo</a>
         
           <span class="exercise-meta">
-            pseudocódigo
+            c, pseudocódigo
           </span>
         
       </li>
@@ -996,7 +1067,7 @@ pre code,
         <a href="/ejercicios/matriz-transpuesta/">Matriz transpuesta</a>
         
           <span class="exercise-meta">
-            pseudocódigo, matlab
+            matlab, pseudocódigo
           </span>
         
       </li>
@@ -1005,7 +1076,7 @@ pre code,
         <a href="/ejercicios/m-ximo-de-un-conjunto-de-tres-n-meros/">Máximo de un conjunto de tres números</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo
+            c
           </span>
         
       </li>
@@ -1055,7 +1126,7 @@ pre code,
         <a href="/ejercicios/minimo-elemento-de-un-conjunto-de-n-meros/">Minimo elemento de un conjunto de números</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo
+            c
           </span>
         
       </li>
@@ -1073,7 +1144,7 @@ pre code,
         <a href="/ejercicios/modificar-el-programa-de-suma-primeros-cinco-n-meros-naturales/">Modificar el programa de Suma primeros cinco números naturales</a>
         
           <span class="exercise-meta">
-            c
+            c, pseudocódigo
           </span>
         
       </li>
@@ -1150,7 +1221,7 @@ pre code,
         <a href="/ejercicios/operaciones-con-vectores/">Operaciones con vectores</a>
         
           <span class="exercise-meta">
-            pseudocódigo
+            c
           </span>
         
       </li>
@@ -1201,15 +1272,6 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/p-gina-principal/">Página Principal</a>
-        
-          <span class="exercise-meta">
-            c, matlab, pascal, pseudocódigo
-          </span>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/paridad/">Paridad</a>
         
       </li>
@@ -1225,10 +1287,6 @@ pre code,
     
       <li>
         <a href="/ejercicios/pir-mide-de-d-gitos/">Pirámide de dígitos</a>
-        
-          <span class="exercise-meta">
-            matlab
-          </span>
         
       </li>
     
@@ -1259,7 +1317,7 @@ pre code,
         <a href="/ejercicios/preguntas-indiscretas/">Preguntas indiscretas</a>
         
           <span class="exercise-meta">
-            c
+            c, pseudocódigo
           </span>
         
       </li>
@@ -1276,23 +1334,23 @@ pre code,
       <li>
         <a href="/ejercicios/procedimiento-que-intercambia-filas-en-una-matriz/">Procedimiento que intercambia filas en una matriz</a>
         
+          <span class="exercise-meta">
+            pascal, pseudocódigo
+          </span>
+        
       </li>
     
       <li>
         <a href="/ejercicios/procedimiento-que-multiplica-las-diagonales-de-una-matriz/">Procedimiento que multiplica las diagonales de una Matriz</a>
         
           <span class="exercise-meta">
-            pseudocódigo, matlab
+            pascal, pseudocódigo
           </span>
         
       </li>
     
       <li>
         <a href="/ejercicios/procesamiento-en-una-f-brica/">Procesamiento en una fábrica</a>
-        
-          <span class="exercise-meta">
-            matlab
-          </span>
         
       </li>
     
@@ -1309,13 +1367,17 @@ pre code,
         <a href="/ejercicios/producto-de-una-matriz-por-un-vector/">Producto de una matriz por un vector</a>
         
           <span class="exercise-meta">
-            pseudocódigo
+            c
           </span>
         
       </li>
     
       <li>
         <a href="/ejercicios/programa-que-opera-con-matriz/">Programa que opera con matriz</a>
+        
+          <span class="exercise-meta">
+            pseudocódigo
+          </span>
         
       </li>
     
@@ -1344,10 +1406,6 @@ pre code,
     
       <li>
         <a href="/ejercicios/rellenar-array/">Rellenar array</a>
-        
-          <span class="exercise-meta">
-            c, pseudocódigo
-          </span>
         
       </li>
     
@@ -1465,13 +1523,17 @@ pre code,
       <li>
         <a href="/ejercicios/suma-de-los-4-vecinos-en-una-matriz/">Suma de los 4 vecinos en una matriz</a>
         
+          <span class="exercise-meta">
+            matlab
+          </span>
+        
       </li>
     
       <li>
         <a href="/ejercicios/suma-de-los-cuadrados-de-los-100-primeros-n-meros-enteros/">Suma de los cuadrados de los 100 primeros números enteros</a>
         
           <span class="exercise-meta">
-            c
+            c, pseudocódigo
           </span>
         
       </li>
@@ -1480,7 +1542,7 @@ pre code,
         <a href="/ejercicios/suma-de-una-serie/">Suma de una serie</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo
+            pseudocódigo
           </span>
         
       </li>
@@ -1521,7 +1583,7 @@ pre code,
         <a href="/ejercicios/sumar-vectores-y-buscar-el-m-ximo/">Sumar vectores y buscar el máximo</a>
         
           <span class="exercise-meta">
-            c, pseudocódigo
+            pseudocódigo
           </span>
         
       </li>
@@ -1547,10 +1609,6 @@ pre code,
       <li>
         <a href="/ejercicios/tipo-de-tri-ngulo/">Tipo de triángulo</a>
         
-          <span class="exercise-meta">
-            pseudocódigo
-          </span>
-        
       </li>
     
       <li>
@@ -1564,10 +1622,6 @@ pre code,
     
       <li>
         <a href="/ejercicios/tri-ngulo-de-pascal/">Triángulo de Pascal</a>
-        
-          <span class="exercise-meta">
-            pseudocódigo
-          </span>
         
       </li>
     

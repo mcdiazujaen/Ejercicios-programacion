@@ -3,7 +3,7 @@
     data-theme="auto"
     data-layout="centered">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   
   <meta name="generator" content="Hugo 0.169.0">
   <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
@@ -18,7 +18,7 @@ Observación: hay que resolverlo sin utilizar arrays. Por ejemplo, si la secuenc
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="http://localhost:1313/ejercicios/sumar-valores-pares-de-posiciones-pares/">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/sumar-valores-pares-de-posiciones-pares/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Sumar valores pares de posiciones pares">
 	<meta property="og:description" content="Sumar valores pares de posiciones pares Enunciado Implementa un programa que lea desde teclado una secuencia de números enteros terminada en 0 (es decir, va pidiendo datos al usuario hasta que pulse 0) y muestre en pantalla el número de veces que un número par de la secuencia ocupa una posición par en la misma.
@@ -44,11 +44,11 @@ Observación: hay que resolverlo sin utilizar arrays. Por ejemplo, si la secuenc
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/sumar-valores-pares-de-posiciones-pares/">
+<link rel="canonical" href="https://example.org/ejercicios/sumar-valores-pares-de-posiciones-pares/">
 <link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-<script type="module" src="/en.search.min.edefffa244a8dcb07915b2b0043c01e627930bcfe137fbd8079e9a2edcb0c5f2.js" integrity="sha256-7e//okSo3LB5FbKwBDwB5ieTC8/hN/vYB56aLtywxfI=" crossorigin="anonymous"></script>
+<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -85,7 +85,94 @@ pre code,
   background-color: transparent !important;
   padding: 0;
 }
+
+ 
+.aviso-cuadro,
+.aviso-revisar,
+.aviso-advertencia {
+  background: #ffeae1;
+  border: 1px solid #ffaaaa;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.aviso-cuadro .aviso-icono,
+.aviso-revisar .aviso-icono,
+.aviso-advertencia .aviso-icono {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.aviso-cuadro .aviso-icono img,
+.aviso-revisar .aviso-icono img,
+.aviso-advertencia .aviso-icono img {
+  width: 80px;
+  height: 40px;
+  max-width: none;
+  object-fit: contain;
+  border: 0;
+  display: block;
+  margin: 0;
+}
+
+.aviso-cuadro .aviso-contenido,
+.aviso-revisar .aviso-contenido,
+.aviso-advertencia .aviso-contenido {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p,
+.aviso-revisar .aviso-contenido p,
+.aviso-advertencia .aviso-contenido p {
+  margin: 0;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p + p,
+.aviso-revisar .aviso-contenido p + p,
+.aviso-advertencia .aviso-contenido p + p {
+  margin-top: 4px;
+}
+
+.aviso-cuadro .aviso-contenido strong,
+.aviso-revisar .aviso-contenido strong,
+.aviso-advertencia .aviso-contenido strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .aviso-cuadro,
+  .aviso-revisar,
+  .aviso-advertencia {
+    background: #361b1b;
+    border-color: #8c3a3a;
+  }
+  .aviso-cuadro .aviso-contenido,
+  .aviso-revisar .aviso-contenido,
+  .aviso-advertencia .aviso-contenido,
+  .aviso-cuadro .aviso-contenido p,
+  .aviso-revisar .aviso-contenido p,
+  .aviso-advertencia .aviso-contenido p {
+    color: #f7d7d7;
+  }
+  .aviso-cuadro .aviso-contenido strong,
+  .aviso-revisar .aviso-contenido strong,
+  .aviso-advertencia .aviso-contenido strong {
+    color: #ffffff;
+  }
+}
 </style>
+
 
 </head>
 

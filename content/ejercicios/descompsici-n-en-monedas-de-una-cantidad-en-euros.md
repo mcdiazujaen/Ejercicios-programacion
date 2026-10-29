@@ -2,10 +2,10 @@
 title: "Descompsición en monedas de una cantidad en euros"
 date: 2024-01-01
 draft: false
-languages: ['pascal', 'pseudocódigo']
+languages: ['c', 'pascal', 'pseudocódigo']
 professors: ['lperez']
-categories: ['enunciado', 'comentario']
-tags: ['sin_matlab']
+categories: ['comentario', 'enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Descompsición en monedas de una cantidad en euros

@@ -4,8 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['pascal', 'pseudocódigo']
 professors: ['lperez']
-categories: ['enunciado', 'comentario', 'análisis']
-tags: ['sin_matlab']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Sistema de ecuaciones

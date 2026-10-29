@@ -2,10 +2,10 @@
 title: "Calculo del número E"
 date: 2024-01-01
 draft: false
-languages: ['pascal', 'pseudocódigo']
-professors: ['lperez']
-categories: ['enunciado', 'comentario']
-tags: ['sin_c', 'sin_matlab']
+languages: ['c', 'matlab']
+professors: ['angel']
+categories: ['análisis', 'enunciado']
+tags: ['Sin Pseudocódigo']
 ---
 
 # Calculo del número E

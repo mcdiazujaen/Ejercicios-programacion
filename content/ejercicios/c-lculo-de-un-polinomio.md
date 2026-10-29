@@ -2,8 +2,9 @@
 title: "Cálculo de un polinomio"
 date: 2024-01-01
 draft: false
+languages: []
 categories: ['enunciado']
-tags: ['sin_pseudocódigo', 'sin_matlab']
+tags: ['Sin Matlab', 'Sin Pseudocódigo', 'Sin solución']
 ---
 
 # Cálculo de un polinomio

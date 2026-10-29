@@ -5,7 +5,7 @@ draft: false
 languages: ['pseudocódigo']
 professors: ['mcdiaz']
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab']
 ---
 
 # Puntos de corte de dos circuferencias

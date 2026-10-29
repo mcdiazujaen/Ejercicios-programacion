@@ -2,9 +2,10 @@
 title: "Comprobar si un número es primo"
 date: 2024-01-01
 draft: false
-languages: ['c', 'matlab', 'pseudocódigo']
+languages: ['c', 'matlab']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Pseudocódigo']
 ---
 
 # Comprobar si un número es primo

@@ -2,7 +2,7 @@
 title: "Array de caracteres que devuelve el número de comas leido"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo', 'matlab']
+languages: ['c', 'matlab', 'pseudocódigo']
 categories: ['enunciado']
 ---
 

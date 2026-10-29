@@ -2,8 +2,9 @@
 title: "Programa que opera con matriz"
 date: 2024-01-01
 draft: false
+languages: ['pseudocódigo']
 categories: ['enunciado']
-tags: ['sin_matlab', 'sin_solución']
+tags: ['Sin Matlab']
 ---
 
 # Programa que opera con matriz

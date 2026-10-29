@@ -3,7 +3,7 @@
     data-theme="auto"
     data-layout="centered">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   
   <meta name="generator" content="Hugo 0.169.0">
   <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
@@ -19,7 +19,7 @@ Soluciones Programa en C por Angel Solución comentada del Ejercicio:
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="http://localhost:1313/ejercicios/calculo-de-n-meros-primos/">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/calculo-de-n-meros-primos/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
 	<meta property="og:title" content="Calculo de números primos">
 	<meta property="og:description" content="Calculo de números primos Enunciado Basándote en el ejercicio Comprobar si un número es primo, realiza un programa que imprima todos los números primos comprendidos entre el 2 y un valor límite que se preguntará al ejecutar el programa.
@@ -39,7 +39,7 @@ Soluciones Programa en C por Angel Solución comentada del Ejercicio:
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="wordCount" content="463">
-	<meta itemprop="keywords" content="Enunciado,Comentario,Análisis,C,Matlab,Pseudocódigo,Angel">
+	<meta itemprop="keywords" content="Análisis,Comentario,Enunciado,C,Matlab,Pseudocódigo,Angel">
 
 <title>Calculo de números primos • Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -47,11 +47,11 @@ Soluciones Programa en C por Angel Solución comentada del Ejercicio:
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/ejercicios/calculo-de-n-meros-primos/">
+<link rel="canonical" href="https://example.org/ejercicios/calculo-de-n-meros-primos/">
 <link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-<script type="module" src="/en.search.min.edefffa244a8dcb07915b2b0043c01e627930bcfe137fbd8079e9a2edcb0c5f2.js" integrity="sha256-7e//okSo3LB5FbKwBDwB5ieTC8/hN/vYB56aLtywxfI=" crossorigin="anonymous"></script>
+<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/syntax.css">
 <style>
  
@@ -88,7 +88,94 @@ pre code,
   background-color: transparent !important;
   padding: 0;
 }
+
+ 
+.aviso-cuadro,
+.aviso-revisar,
+.aviso-advertencia {
+  background: #ffeae1;
+  border: 1px solid #ffaaaa;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.aviso-cuadro .aviso-icono,
+.aviso-revisar .aviso-icono,
+.aviso-advertencia .aviso-icono {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.aviso-cuadro .aviso-icono img,
+.aviso-revisar .aviso-icono img,
+.aviso-advertencia .aviso-icono img {
+  width: 80px;
+  height: 40px;
+  max-width: none;
+  object-fit: contain;
+  border: 0;
+  display: block;
+  margin: 0;
+}
+
+.aviso-cuadro .aviso-contenido,
+.aviso-revisar .aviso-contenido,
+.aviso-advertencia .aviso-contenido {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p,
+.aviso-revisar .aviso-contenido p,
+.aviso-advertencia .aviso-contenido p {
+  margin: 0;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p + p,
+.aviso-revisar .aviso-contenido p + p,
+.aviso-advertencia .aviso-contenido p + p {
+  margin-top: 4px;
+}
+
+.aviso-cuadro .aviso-contenido strong,
+.aviso-revisar .aviso-contenido strong,
+.aviso-advertencia .aviso-contenido strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .aviso-cuadro,
+  .aviso-revisar,
+  .aviso-advertencia {
+    background: #361b1b;
+    border-color: #8c3a3a;
+  }
+  .aviso-cuadro .aviso-contenido,
+  .aviso-revisar .aviso-contenido,
+  .aviso-advertencia .aviso-contenido,
+  .aviso-cuadro .aviso-contenido p,
+  .aviso-revisar .aviso-contenido p,
+  .aviso-advertencia .aviso-contenido p {
+    color: #f7d7d7;
+  }
+  .aviso-cuadro .aviso-contenido strong,
+  .aviso-revisar .aviso-contenido strong,
+  .aviso-advertencia .aviso-contenido strong {
+    color: #ffffff;
+  }
+}
 </style>
+
 
 </head>
 
@@ -261,11 +348,11 @@ pre code,
   <div class="metadata-item">
     <span class="metadata-label">📂 Categorías:</span>
     
-      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
+      <a href="/categories/an%C3%A1lisis/" class="badge badge-category">Análisis</a>
     
       <a href="/categories/comentario/" class="badge badge-category">Comentario</a>
     
-      <a href="/categories/an%C3%A1lisis/" class="badge badge-category">Análisis</a>
+      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
     
   </div>
   

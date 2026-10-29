@@ -2,9 +2,10 @@
 title: "Procedimiento que multiplica las diagonales de una Matriz"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo', 'matlab']
+languages: ['pascal', 'pseudocódigo']
+professors: ['lperez']
 categories: ['enunciado']
-tags: ['sin_c']
+tags: ['Sin C', 'Sin Matlab']
 ---
 
 # Procedimiento que multiplica las diagonales de una Matriz

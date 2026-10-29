@@ -3,7 +3,7 @@
     data-theme="auto"
     data-layout="centered">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   
   <meta name="generator" content="Hugo 0.169.0">
   <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
@@ -16,30 +16,30 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="http://localhost:1313/tags/sin_matlab/">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/tags/sin-soluci%C3%B3n/">
 	<meta property="og:site_name" content="Ejercicios de Programación">
-	<meta property="og:title" content="Sin_matlab">
+	<meta property="og:title" content="Sin Solución">
 	<meta property="og:description" content="Ejercicios de programación en diferentes lenguajes">
 	<meta property="og:locale" content="es_es">
 	<meta property="og:type" content="website">
 
 
-	<meta itemprop="name" content="Sin_matlab">
+	<meta itemprop="name" content="Sin Solución">
 	<meta itemprop="description" content="Ejercicios de programación en diferentes lenguajes">
 	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
 
-<title>Sin_matlab • Ejercicios de Programación</title>
+<title>Sin Solución • Ejercicios de Programación</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/tags/sin_matlab/">
+<link rel="canonical" href="https://example.org/tags/sin-soluci%C3%B3n/">
 <link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
 
 
-<script type="module" src="/en.search.min.edefffa244a8dcb07915b2b0043c01e627930bcfe137fbd8079e9a2edcb0c5f2.js" integrity="sha256-7e//okSo3LB5FbKwBDwB5ieTC8/hN/vYB56aLtywxfI=" crossorigin="anonymous"></script><link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/sin_matlab/index.xml" title="Sin_matlab" />
+<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script><link rel="alternate" type="application/rss+xml" href="https://example.org/tags/sin-soluci%C3%B3n/index.xml" title="Sin Solución" />
 
   <link rel="stylesheet" href="/syntax.css">
 <style>
@@ -77,7 +77,94 @@ pre code,
   background-color: transparent !important;
   padding: 0;
 }
+
+ 
+.aviso-cuadro,
+.aviso-revisar,
+.aviso-advertencia {
+  background: #ffeae1;
+  border: 1px solid #ffaaaa;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.aviso-cuadro .aviso-icono,
+.aviso-revisar .aviso-icono,
+.aviso-advertencia .aviso-icono {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.aviso-cuadro .aviso-icono img,
+.aviso-revisar .aviso-icono img,
+.aviso-advertencia .aviso-icono img {
+  width: 80px;
+  height: 40px;
+  max-width: none;
+  object-fit: contain;
+  border: 0;
+  display: block;
+  margin: 0;
+}
+
+.aviso-cuadro .aviso-contenido,
+.aviso-revisar .aviso-contenido,
+.aviso-advertencia .aviso-contenido {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p,
+.aviso-revisar .aviso-contenido p,
+.aviso-advertencia .aviso-contenido p {
+  margin: 0;
+  color: #222222;
+}
+
+.aviso-cuadro .aviso-contenido p + p,
+.aviso-revisar .aviso-contenido p + p,
+.aviso-advertencia .aviso-contenido p + p {
+  margin-top: 4px;
+}
+
+.aviso-cuadro .aviso-contenido strong,
+.aviso-revisar .aviso-contenido strong,
+.aviso-advertencia .aviso-contenido strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .aviso-cuadro,
+  .aviso-revisar,
+  .aviso-advertencia {
+    background: #361b1b;
+    border-color: #8c3a3a;
+  }
+  .aviso-cuadro .aviso-contenido,
+  .aviso-revisar .aviso-contenido,
+  .aviso-advertencia .aviso-contenido,
+  .aviso-cuadro .aviso-contenido p,
+  .aviso-revisar .aviso-contenido p,
+  .aviso-advertencia .aviso-contenido p {
+    color: #f7d7d7;
+  }
+  .aviso-cuadro .aviso-contenido strong,
+  .aviso-revisar .aviso-contenido strong,
+  .aviso-advertencia .aviso-contenido strong {
+    color: #ffffff;
+  }
+}
 </style>
+
 
 </head>
 
@@ -221,26 +308,16 @@ pre code,
 
       
 <article class="markdown book-post">
-  <h1>Sin_matlab</h1>
+  <h1>Sin Solución</h1>
   
   
   
   
-    <h2>Todos los ejercicios de Sin_matlab</h2>
+    <h2>Todos los ejercicios de Sin Solución</h2>
   
   
   
   <ul>
-    
-      <li>
-        <a href="/ejercicios/area-de-un-tri-ngulo/">Area de un triángulo</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/array-bidimensional/">Array bidimensional</a>
-        
-      </li>
     
       <li>
         <a href="/ejercicios/ascensores/">Ascensores</a>
@@ -258,62 +335,12 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/calculo-del-n-mero-e/">Calculo del número E</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/cambio-de-los-duplicados-de-un-array/">Cambio de los duplicados de un array</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/conversaci-n-en-c/">Conversación en C</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/conversion-decimal-a-octal/">Conversion decimal a octal</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/conversor-euros-2fpesetas/">Conversor euros/pesetas</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/coste-de-un-autom-vil/">Coste de un automóvil</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/criba-de-eratostenes/">Criba de Eratóstenes</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/curiosa-propiedad/">Curiosa propiedad</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">Descompsición en monedas de una cantidad en euros</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/d-a-de-la-semana/">Día de la semana</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/dibujo-tri-ngulo-de-asteriscos/">Dibujo triángulo de asteriscos</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/diferencia-entre-elementos-consecutivos-de-un-vector/">Diferencia entre elementos consecutivos de un vector</a>
         
       </li>
     
@@ -324,26 +351,6 @@ pre code,
     
       <li>
         <a href="/ejercicios/divisible/">Divisible</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/divisi-n-entera-y-resto-utilizan-restar-y-sumar/">División entera y resto utilizan restar y sumar</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/ecuaci-n-de-segundo-grado/">Ecuación de segundo grado</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/el-primer-ejercicio-en-c/">El primer ejercicio en C</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/el-sultan-y-el-estudiante/">El sultan y el estudiante</a>
         
       </li>
     
@@ -363,11 +370,6 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/eliminar-duplicados-de-un-array/">Eliminar duplicados de un array</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/enteros-abundantes/">Enteros abundantes</a>
         
       </li>
@@ -378,7 +380,7 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/errores-de-pepito/">Errores de pepito</a>
+        <a href="/ejercicios/errores-subalgoritmos/">Errores subalgoritmos</a>
         
       </li>
     
@@ -393,7 +395,7 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/evaluaci-n-de-la-funci-n-exp-x--por-desarrollo-serie/">Evaluación de la función Exp(x) por desarrollo serie</a>
+        <a href="/ejercicios/estad-sticas-de-f-tbol-2/">Estadísticas de fútbol 2</a>
         
       </li>
     
@@ -403,32 +405,7 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/funcion-que-busca-un-valor-en-un-vector/">Funcion que busca un valor en un vector</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/funci-n-que-comprueba-si-los-elementos-de-una-matriz-son-distintos/">Función que comprueba si los elementos de una Matriz son distintos</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/funci-n-sigma-y-funci-n-prod/">Función SIGMA y función PROD</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/leer-fichero-con-matriz-y-calcular-una-suma/">Leer fichero con matriz y calcular una suma</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/limite-peso/">Limite peso</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/losas-de-tres-colores/">Losas de tres colores</a>
         
       </li>
     
@@ -438,32 +415,7 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/matriz-sim-trica/">Matriz simétrica</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/matriz-sim-trica-subalgoritmo/">Matriz Simétrica Subalgoritmo</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/m-ximo-de-una-submatriz/">Máximo de una submatriz</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/men--de-un-restaurante/">Menú de un restaurante</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/modificar-el-programa-de-suma-primeros-cinco-n-meros-naturales/">Modificar el programa de Suma primeros cinco números naturales</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/n-mero-primo/">Número Primo</a>
         
       </li>
     
@@ -473,57 +425,17 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/n-meros-perfectos/">Números perfectos</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/operaci-n-con-dos-vectores/">Operación con dos vectores</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/operaciones-aritm-ticas/">Operaciones aritméticas</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/operaciones-con-vectores/">Operaciones con vectores</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/operaciones-estadisticas/">Operaciones estadisticas</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/paridad/">Paridad</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/porcentajes-de-notas/">Porcentajes de notas</a>
+        <a href="/ejercicios/pir-mide-de-d-gitos/">Pirámide de dígitos</a>
         
       </li>
     
       <li>
-        <a href="/ejercicios/procedimiento-que-intercambia-filas-en-una-matriz/">Procedimiento que intercambia filas en una matriz</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/producto-de-una-matriz-por-un-vector/">Producto de una matriz por un vector</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/programa-que-opera-con-matriz/">Programa que opera con matriz</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/puntos-de-corte-de-dos-circuferencias/">Puntos de corte de dos circuferencias</a>
+        <a href="/ejercicios/procesamiento-en-una-f-brica/">Procesamiento en una fábrica</a>
         
       </li>
     
@@ -543,16 +455,6 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/rellenar-sudoku/">Rellenar sudoku</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/reorganizaci-n-de-un-array/">Reorganización de un array</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/reservas-multicines/">Reservas Multicines</a>
         
       </li>
@@ -568,11 +470,6 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/sistema-de-ecuaciones/">Sistema de ecuaciones</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/sopa-de-letras/">Sopa de letras</a>
         
       </li>
@@ -583,32 +480,7 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/suma-condicional/">Suma condicional</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/suma-de-los-4-vecinos-en-una-matriz/">Suma de los 4 vecinos en una matriz</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/suma-de-una-serie/">Suma de una serie</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/suma-entre-l-mites/">Suma entre límites</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/suma-primeros-cinco-n-meros-naturales/">Suma primeros cinco números naturales</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/tabla-de-conversi-n-de-grados-centigrados-a-fahrenheit/">Tabla de conversión de grados centigrados a fahrenheit</a>
         
       </li>
     
@@ -618,17 +490,7 @@ pre code,
       </li>
     
       <li>
-        <a href="/ejercicios/transformar-un-texto/">Transformar un texto</a>
-        
-      </li>
-    
-      <li>
         <a href="/ejercicios/tri-ngulo-de-pascal/">Triángulo de Pascal</a>
-        
-      </li>
-    
-      <li>
-        <a href="/ejercicios/vectores-planos/">Vectores planos</a>
         
       </li>
     

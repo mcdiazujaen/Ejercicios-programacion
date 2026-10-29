@@ -2,10 +2,10 @@
 title: "Suma de una serie"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo']
+languages: ['pseudocódigo']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
-tags: ['sin_matlab']
+categories: ['enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Suma de una serie

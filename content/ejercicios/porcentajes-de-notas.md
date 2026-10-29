@@ -5,7 +5,7 @@ draft: false
 languages: ['pseudocódigo']
 professors: ['mcdiaz']
 categories: ['enunciado']
-tags: ['sin_c', 'sin_matlab']
+tags: ['Sin C', 'Sin Matlab']
 ---
 
 # Porcentajes de notas

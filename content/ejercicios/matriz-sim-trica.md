@@ -5,7 +5,7 @@ draft: false
 languages: ['pseudocódigo']
 professors: ['lperez']
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin C', 'Sin Matlab']
 ---
 
 # Matriz simétrica

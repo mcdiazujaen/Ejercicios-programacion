@@ -2,10 +2,10 @@
 title: "Matriz Simétrica Subalgoritmo"
 date: 2024-01-01
 draft: false
-languages: ['pseudocódigo']
+languages: ['c', 'pseudocódigo']
 professors: ['lperez']
 categories: ['enunciado']
-tags: ['sin_matlab']
+tags: ['Sin Matlab']
 ---
 
 # Matriz Simétrica Subalgoritmo

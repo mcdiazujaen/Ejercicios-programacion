@@ -2,9 +2,10 @@
 title: "Minimo elemento de un conjunto de números"
 date: 2024-01-01
 draft: false
-languages: ['c', 'pseudocódigo']
+languages: ['c']
 professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
+categories: ['análisis', 'comentario', 'enunciado']
+tags: ['Sin Pseudocódigo']
 ---
 
 # Minimo elemento de un conjunto de números

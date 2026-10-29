@@ -4,8 +4,8 @@ date: 2024-01-01
 draft: false
 languages: ['c', 'matlab']
 professors: ['angel']
-categories: ['enunciado', 'análisis']
-tags: ['sin_pseudocódigo']
+categories: ['análisis', 'enunciado']
+tags: ['Sin Pseudocódigo']
 ---
 
 # Busca del número mayor y menor

@@ -2,9 +2,10 @@
 title: "Descomposición en factores primos"
 date: 2024-01-01
 draft: false
-languages: ['c', 'matlab', 'pseudocódigo']
-professors: ['angel']
-categories: ['enunciado', 'comentario', 'análisis']
+languages: ['pascal']
+professors: ['lperez']
+categories: ['comentario', 'enunciado']
+tags: ['Sin Matlab']
 ---
 
 # Descomposición en factores primos
