@@ -1,826 +1,264 @@
-<!DOCTYPE html>
-<html lang="es-es" dir="ltr"
-    data-theme="auto"
-    data-layout="centered">
-
-<head>
-  
-  <meta name="generator" content="Hugo 0.169.0">
-  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cálculo número combinatorio Enunciado Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:
-a! C(a,b) = ------------- b! * (a-b)! Soluciones Diseño en Pseudocódigo Diseño 1 por lperez FUNCION Factorial (n): ENTERO ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: el factorial de n. VARIABLES: i, f: ENTERO INICIO f&lt;--1 PARA i=2 HASTA n HACER f&lt;--f *i FIN_PARA DEVOLVER f FIN ********************************************* ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi&lt;--1 SI NO combi&lt;--Factorial(a)/(Factorial(b)*Factorial(a-b)) FIN_SI ESCRIBIR combi FIN Diseño 2 por lperez PROCEDIMIENTO Factorial (n, VAR f) ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: f: ENTERO, el factorial de n. VARIABLES: i: ENTERO. INICIO f&lt;--1 PARA i=2 HASTA n HACER f&lt;--f *i FIN_PARA FIN ******************************************************************** ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi&lt;--1 SI NO Factorial(a,fa) Factorial(b,fb) Factorial(a-b,fab) combi&lt;--fa/(fb*fab) FIN_SI ESCRIBIR combi FIN Comentario En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.
-">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
-<meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/c-lculo-n-mero-combinatorio/">
-	<meta property="og:site_name" content="Ejercicios de Programación">
-	<meta property="og:title" content="Cálculo número combinatorio">
-	<meta property="og:description" content="Cálculo número combinatorio Enunciado Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:
-a! C(a,b) = ------------- b! * (a-b)! Soluciones Diseño en Pseudocódigo Diseño 1 por lperez FUNCION Factorial (n): ENTERO ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: el factorial de n. VARIABLES: i, f: ENTERO INICIO f&lt;--1 PARA i=2 HASTA n HACER f&lt;--f *i FIN_PARA DEVOLVER f FIN ********************************************* ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi&lt;--1 SI NO combi&lt;--Factorial(a)/(Factorial(b)*Factorial(a-b)) FIN_SI ESCRIBIR combi FIN Diseño 2 por lperez PROCEDIMIENTO Factorial (n, VAR f) ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: f: ENTERO, el factorial de n. VARIABLES: i: ENTERO. INICIO f&lt;--1 PARA i=2 HASTA n HACER f&lt;--f *i FIN_PARA FIN ******************************************************************** ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi&lt;--1 SI NO Factorial(a,fa) Factorial(b,fb) Factorial(a-b,fab) combi&lt;--fa/(fb*fab) FIN_SI ESCRIBIR combi FIN Comentario En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.">
-	<meta property="og:locale" content="es_es">
-	<meta property="og:type" content="article">
-		<meta property="article:section" content="ejercicios">
-		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-
-
-	<meta itemprop="name" content="Cálculo número combinatorio">
-	<meta itemprop="description" content="Cálculo número combinatorio Enunciado Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:
-a! C(a,b) = ------------- b! * (a-b)! Soluciones Diseño en Pseudocódigo Diseño 1 por lperez FUNCION Factorial (n): ENTERO ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: el factorial de n. VARIABLES: i, f: ENTERO INICIO f&lt;--1 PARA i=2 HASTA n HACER f&lt;--f *i FIN_PARA DEVOLVER f FIN ********************************************* ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi&lt;--1 SI NO combi&lt;--Factorial(a)/(Factorial(b)*Factorial(a-b)) FIN_SI ESCRIBIR combi FIN Diseño 2 por lperez PROCEDIMIENTO Factorial (n, VAR f) ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: f: ENTERO, el factorial de n. VARIABLES: i: ENTERO. INICIO f&lt;--1 PARA i=2 HASTA n HACER f&lt;--f *i FIN_PARA FIN ******************************************************************** ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi&lt;--1 SI NO Factorial(a,fa) Factorial(b,fb) Factorial(a-b,fab) combi&lt;--fa/(fb*fab) FIN_SI ESCRIBIR combi FIN Comentario En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.">
-	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="wordCount" content="954">
-	<meta itemprop="keywords" content="Comentario,Enunciado,C,Matlab,Pascal,Pseudocódigo,Lperez">
-
-<title>Cálculo número combinatorio • Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.png" sizes="any">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-<link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/ejercicios/c-lculo-n-mero-combinatorio/">
-<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
-
-
-<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/syntax.css">
-<style>
- 
-.highlight,
-.chroma,
-pre.chroma {
-  background-color: #272822 !important;
-  color: #f8f8f2 !important;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-.highlight pre {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-}
-
- 
- 
-.markdown code,
-code {
-  background-color: #3a3a3a !important;
-  color: #f8f8f2 !important;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-family: monospace;
-}
-
- 
-pre code,
-.markdown pre code {
-  background-color: transparent !important;
-  padding: 0;
-}
-
- 
-.aviso-cuadro,
-.aviso-revisar,
-.aviso-advertencia {
-  background: #ffeae1;
-  border: 1px solid #ffaaaa;
-  border-radius: 4px;
-  padding: 10px 14px;
-  margin: 1.2rem 0;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-sizing: border-box;
-}
-
-.aviso-cuadro .aviso-icono,
-.aviso-revisar .aviso-icono,
-.aviso-advertencia .aviso-icono {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.aviso-cuadro .aviso-icono img,
-.aviso-revisar .aviso-icono img,
-.aviso-advertencia .aviso-icono img {
-  width: 80px;
-  height: 40px;
-  max-width: none;
-  object-fit: contain;
-  border: 0;
-  display: block;
-  margin: 0;
-}
-
-.aviso-cuadro .aviso-contenido,
-.aviso-revisar .aviso-contenido,
-.aviso-advertencia .aviso-contenido {
-  flex: 1;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: #222222;
-}
-
-.aviso-cuadro .aviso-contenido p,
-.aviso-revisar .aviso-contenido p,
-.aviso-advertencia .aviso-contenido p {
-  margin: 0;
-  color: #222222;
-}
-
-.aviso-cuadro .aviso-contenido p + p,
-.aviso-revisar .aviso-contenido p + p,
-.aviso-advertencia .aviso-contenido p + p {
-  margin-top: 4px;
-}
-
-.aviso-cuadro .aviso-contenido strong,
-.aviso-revisar .aviso-contenido strong,
-.aviso-advertencia .aviso-contenido strong {
-  color: #111111;
-  font-weight: 700;
-}
-
-@media (prefers-color-scheme: dark) {
-  .aviso-cuadro,
-  .aviso-revisar,
-  .aviso-advertencia {
-    background: #361b1b;
-    border-color: #8c3a3a;
-  }
-  .aviso-cuadro .aviso-contenido,
-  .aviso-revisar .aviso-contenido,
-  .aviso-advertencia .aviso-contenido,
-  .aviso-cuadro .aviso-contenido p,
-  .aviso-revisar .aviso-contenido p,
-  .aviso-advertencia .aviso-contenido p {
-    color: #f7d7d7;
-  }
-  .aviso-cuadro .aviso-contenido strong,
-  .aviso-revisar .aviso-contenido strong,
-  .aviso-advertencia .aviso-contenido strong {
-    color: #ffffff;
-  }
-}
-</style>
-
-
-</head>
-
-<body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <div class="book-container flex">
-    
-<aside class="book-menu" aria-label="Menu">
-  <div class="book-menu-content">
-    
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/">
-    <img src="/icono.png" alt="Logo" class="book-logo" />
-    
-  </a>
-</h2>
-
-<style>
-.book-logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0rem;
-  display: block;
-}
-
-.book-brand a {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.book-brand span {
-  margin-top: 0.5rem;
-}
-
-.book-brand img {
-    height: 3.5em;
-    width: 4.5em;
-}
-</style>
-
-
-
-
-
-<ul><li><a href="/">Inicio</a></li><li><a href="/languages/">Lenguajes</a></li><li><a href="/categories/">Categorías</a></li><li><a href="/professors/">Profesores</a></li><li><a href="/tags/">Tags</a></li></ul>
-
-
-
-
-
-<div class="book-search hidden">
-  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
-    placeholder="Search"
-    aria-label="Search"
-    maxlength="64" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results" aria-live="polite"></ul>
-</div>
-<script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
-
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
-
-  </div>
-</aside>
- 
-
-    <header class="book-header hidden">
-      
-  <div class="flex align-center justify-between gap">
-  <input type="checkbox" class="toggle" id="menu-control" />
-  <label for="menu-control" aria-label="Menu">
-    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
-  </label>
-
-  <h2 class="book-brand">
-  <a class="flex align-center" href="/">
-    <img src="/icono.png" alt="Logo" class="book-logo" />
-    
-  </a>
-</h2>
-
-<style>
-.book-logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0rem;
-  display: block;
-}
-
-.book-brand a {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.book-brand span {
-  margin-top: 0.5rem;
-}
-
-.book-brand img {
-    height: 3.5em;
-    width: 4.5em;
-}
-</style>
-
-
-  
-  <input type="checkbox" class="toggle" id="toc-control" />
-  <label for="toc-control" aria-label="Table of Contents">
-    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
-  </label>
-  
-</div>
-
- 
-    </header>
-
-    <main class="book-page">
-      
-  
-<div class="exercise-metadata">
-  
-  <div class="metadata-item">
-    <span class="metadata-label">📅 Fecha:</span>
-    <time datetime="2024-01-01">01/01/2024</time>
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">💻 Lenguajes:</span>
-    
-      <a href="/languages/c/" class="badge badge-language">C</a>
-    
-      <a href="/languages/matlab/" class="badge badge-language">Matlab</a>
-    
-      <a href="/languages/pascal/" class="badge badge-language">Pascal</a>
-    
-      <a href="/languages/pseudoc%C3%B3digo/" class="badge badge-language">Pseudocódigo</a>
-    
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">👨‍🏫 Profesores:</span>
-    
-      <a href="/professors/lperez/" class="badge badge-professor">Lperez</a>
-    
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">📂 Categorías:</span>
-    
-      <a href="/categories/comentario/" class="badge badge-category">Comentario</a>
-    
-      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
-    
-  </div>
-  
-  
-  
-</div>
-
-<style>
-.exercise-metadata {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-radius: 6px;
-  border-left: 4px solid #007bff;
-}
-
-.metadata-item {
-  margin: 0.5rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.metadata-label {
-  font-weight: 600;
-  color: #495057;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  line-height: 1;
-  border-radius: 12px;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
- 
-a.badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  filter: brightness(1.1);
-}
-
-.badge-language {
-  background-color: #007bff;
-  color: white !important;
-}
-
-.badge-professor {
-  background-color: #28a745;
-  color: white !important;
-}
-
-.badge-category {
-  background-color: #ffc107;
-  color: #212529 !important;
-}
-
-.badge-tag {
-  background-color: #6c757d;
-  color: white !important;
-}
-
- 
-@media (prefers-color-scheme: dark) {
-  .exercise-metadata {
-    background-color: #2d3748;
-    border-left-color: #4299e1;
-  }
-  
-  .metadata-label {
-    color: #e2e8f0;
-  }
-  
-  .badge-category {
-    background-color: #d69e2e;
-    color: #1a202c !important;
-  }
-}
-</style>
-
-
-
-
-      
-  
-
-      
-  <article class="markdown book-article"><h1 id="cálculo-número-combinatorio">Cálculo número combinatorio<a class="anchor" href="#c%c3%a1lculo-n%c3%bamero-combinatorio" aria-label="Link"></a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
-<p>Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">                        a!
-</span></span><span class="line"><span class="cl">          C(a,b) = -------------
-</span></span><span class="line"><span class="cl">                     b! * (a-b)!</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
-<h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo" aria-label="Link"></a></h3>
-<h4 id="diseño-1-por-lperez">Diseño 1 por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-por-lperez" aria-label="Link"></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> FUNCION Factorial (n): ENTERO
-</span></span><span class="line"><span class="cl"> ENTRADAS: n: ENTERO, un número entero positivo.
-</span></span><span class="line"><span class="cl"> SALIDAS: el factorial de n.
-</span></span><span class="line"><span class="cl"> VARIABLES: i, f: ENTERO
-</span></span><span class="line"><span class="cl"> INICIO
-</span></span><span class="line"><span class="cl">   f&lt;--1
-</span></span><span class="line"><span class="cl">   PARA i=2 HASTA n HACER
-</span></span><span class="line"><span class="cl">      f&lt;--f *i
-</span></span><span class="line"><span class="cl">   FIN_PARA
-</span></span><span class="line"><span class="cl">   DEVOLVER   f
-</span></span><span class="line"><span class="cl"> FIN
-</span></span><span class="line"><span class="cl"> *********************************************
-</span></span><span class="line"><span class="cl"> ALGORITMO Combinatorio
-</span></span><span class="line"><span class="cl"> ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b .
-</span></span><span class="line"><span class="cl"> SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma:
-</span></span><span class="line"><span class="cl">                          a!
-</span></span><span class="line"><span class="cl">           C(a,b) = -------------
-</span></span><span class="line"><span class="cl">                      b! * (a-b)!
-</span></span><span class="line"><span class="cl"> VARIABLES: fa, fb, fab:ENTERO
-</span></span><span class="line"><span class="cl"> INICIO
-</span></span><span class="line"><span class="cl">   LEER a,b
-</span></span><span class="line"><span class="cl">   SI ( ( b = 0 ) or ( a = b ) )
-</span></span><span class="line"><span class="cl">   ENTONCES
-</span></span><span class="line"><span class="cl">      combi&lt;--1
-</span></span><span class="line"><span class="cl">   SI NO
-</span></span><span class="line"><span class="cl">      combi&lt;--Factorial(a)/(Factorial(b)*Factorial(a-b))
-</span></span><span class="line"><span class="cl">   FIN_SI   
-</span></span><span class="line"><span class="cl">   ESCRIBIR combi 
-</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h4 id="diseño-2-por-lperez">Diseño 2 por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-por-lperez" aria-label="Link"></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> PROCEDIMIENTO Factorial (n, VAR f)
-</span></span><span class="line"><span class="cl"> ENTRADAS: n: ENTERO, un número entero positivo.
-</span></span><span class="line"><span class="cl"> SALIDAS: f: ENTERO, el factorial de n.
-</span></span><span class="line"><span class="cl"> VARIABLES: i: ENTERO.
-</span></span><span class="line"><span class="cl"> INICIO
-</span></span><span class="line"><span class="cl">   f&lt;--1
-</span></span><span class="line"><span class="cl">   PARA i=2 HASTA n HACER
-</span></span><span class="line"><span class="cl">      f&lt;--f *i
-</span></span><span class="line"><span class="cl">   FIN_PARA
-</span></span><span class="line"><span class="cl"> FIN
-</span></span><span class="line"><span class="cl"> ********************************************************************
-</span></span><span class="line"><span class="cl"> ALGORITMO Combinatorio
-</span></span><span class="line"><span class="cl"> ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b .
-</span></span><span class="line"><span class="cl"> SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma:
-</span></span><span class="line"><span class="cl">                      a!
-</span></span><span class="line"><span class="cl">        C(a,b) = -------------
-</span></span><span class="line"><span class="cl">                   b! * (a-b)!
-</span></span><span class="line"><span class="cl"> VARIABLES: fa, fb, fab:ENTERO
-</span></span><span class="line"><span class="cl"> INICIO
-</span></span><span class="line"><span class="cl">   LEER a,b
-</span></span><span class="line"><span class="cl">   SI ( ( b = 0 ) or ( a = b ) )
-</span></span><span class="line"><span class="cl">   ENTONCES
-</span></span><span class="line"><span class="cl">      combi&lt;--1
-</span></span><span class="line"><span class="cl">   SI NO
-</span></span><span class="line"><span class="cl">      Factorial(a,fa)
-</span></span><span class="line"><span class="cl">      Factorial(b,fb)
-</span></span><span class="line"><span class="cl">      Factorial(a-b,fab)
-</span></span><span class="line"><span class="cl">      combi&lt;--fa/(fb*fab)
-</span></span><span class="line"><span class="cl">   FIN_SI   
-</span></span><span class="line"><span class="cl">   ESCRIBIR combi 
-</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario" aria-label="Link"></a></h4>
-<p>En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.</p>
-<h3 id="programa-en-c">Programa en C<a class="anchor" href="#programa-en-c" aria-label="Link"></a></h3>
-<h4 id="solución-1">Solución 1<a class="anchor" href="#soluci%c3%b3n-1" aria-label="Link"></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="c1">//&#39;&#39;(Este programa se ha hecho con una función)&#39;&#39;            
-</span></span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">Factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">   <span class="c1">//ENTRADAS: &#39;&#39;(n: un número entero positivo)&#39;&#39;
-</span></span></span><span class="line"><span class="cl">   <span class="c1">//SALIDAS: &#39;&#39;(El factorial de n)&#39;&#39;
-</span></span></span><span class="line"><span class="cl">   <span class="c1">//VARIABLES
-</span></span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">   <span class="n">f</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">       <span class="n">f</span><span class="o">=</span><span class="n">f</span><span class="o">*</span><span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="k">return</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="c1">//*******************************************************
-</span></span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">   <span class="c1">//ENTRADAS
-</span></span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//&#39;&#39;(Dos numeros enteros positivos: a&gt;0, b&gt;=0, a&gt;b)&#39;&#39;
-</span></span></span><span class="line"><span class="cl">   <span class="c1">//SALIDAS
-</span></span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">combi</span><span class="p">;</span> <span class="c1">//&#39;&#39;(El numero combinatorio a sobre b calculado de la forma:
-</span></span></span><span class="line"><span class="cl">   <span class="cm">/*                                                                                        
-</span></span></span><span class="line"><span class="cl"><span class="cm">                               a!
-</span></span></span><span class="line"><span class="cl"><span class="cm">                     c(a,b)=----------- )&#39;&#39;
-</span></span></span><span class="line"><span class="cl"><span class="cm">                             b!*(a-b)!                                     
-</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
-</span></span><span class="line"><span class="cl">   <span class="c1">//VARIABLES
-</span></span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">fa</span><span class="p">,</span><span class="n">fb</span><span class="p">,</span><span class="n">fab</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Introduzca dos numeros enteros positivos: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">   <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%i %i&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">((</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">        <span class="n">combi</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">combi</span><span class="o">=</span><span class="nf">Factorial</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nf">Factorial</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="nf">Factorial</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span><span class="n">combi</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div><h4 id="solución-2">Solución 2<a class="anchor" href="#soluci%c3%b3n-2" aria-label="Link"></a></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">Factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//VARIABLES
-</span></span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">       <span class="n">f</span><span class="o">=</span><span class="n">f</span><span class="o">*</span><span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="c1">//**********************************
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl"> <span class="c1">//ENTRADAS
-</span></span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">//&#39;&#39;(Dos numeros enteros positivos: a&gt;0, b&gt;=0, a&gt;b)&#39;&#39;
-</span></span></span><span class="line"><span class="cl"> <span class="c1">//SALIDAS
-</span></span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">combi</span><span class="p">;</span> <span class="cm">/*&#39;&#39;(El numero combinatorio a sobre b calculado de la forma:
-</span></span></span><span class="line"><span class="cl"><span class="cm"> 
-</span></span></span><span class="line"><span class="cl"><span class="cm">                               a!
-</span></span></span><span class="line"><span class="cl"><span class="cm">                     c(a,b)=----------- )&#39;&#39;
-</span></span></span><span class="line"><span class="cl"><span class="cm">                             b!*(a-b)!  
-</span></span></span><span class="line"><span class="cl"><span class="cm">              */</span>                                   
-</span></span><span class="line"><span class="cl">  <span class="c1">//VARIABLES
-</span></span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fa</span><span class="p">,</span> <span class="n">fb</span><span class="p">,</span> <span class="n">fab</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Introduzca dos numeros enteros positivos: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%i %i&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">((</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">        <span class="n">combi</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">Factorial</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">fa</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">Factorial</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">fb</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">Factorial</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">,</span><span class="n">fab</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">combi</span><span class="o">=</span><span class="n">fa</span><span class="o">/</span><span class="p">(</span><span class="n">fb</span><span class="o">*</span><span class="n">fab</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span><span class="n">combi</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span></span></span></code></pre></div><h4 id="comentario-1">Comentario<a class="anchor" href="#comentario-1" aria-label="Link"></a></h4>
-<p>En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.</p>
-<h3 id="programa-en-pascal-por-lperez">Programa en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-en-pascal-por-lperez" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> program Combinatorio;
-</span></span><span class="line"><span class="cl"> {ENTRADAS: a,b, dos n£meros enteros positivos, a&gt;b y a&lt;&gt;0
-</span></span><span class="line"><span class="cl"> SALIDAS: combi, el n£mero combinatorio a sobre b, calculado de la forma:
-</span></span><span class="line"><span class="cl">                       a!
-</span></span><span class="line"><span class="cl">        C(a,b) = -------------
-</span></span><span class="line"><span class="cl">                  b! * (a-b)!
-</span></span><span class="line"><span class="cl"> }
-</span></span><span class="line"><span class="cl"> uses crt;
-</span></span><span class="line"><span class="cl"> (****************************************************)
-</span></span><span class="line"><span class="cl"> procedure Lectura(var n, m:integer);
-</span></span><span class="line"><span class="cl"> {ENTRADAS: Ninguna;
-</span></span><span class="line"><span class="cl"> SALIDAS: n y m, dos n£meros enteros que cumplen que n&gt;0, m&gt;=0 y n&gt;m}
-</span></span><span class="line"><span class="cl"> begin
-</span></span><span class="line"><span class="cl">   {repite la entrada de los datos hasta conseguir que n sea un entero positivo,
-</span></span><span class="line"><span class="cl">     m sea positivo o 0 y n sea mayor que m}
-</span></span><span class="line"><span class="cl">  repeat
-</span></span><span class="line"><span class="cl">     clrscr;
-</span></span><span class="line"><span class="cl">     writeln(&#39;Este programa calcula un el n£mero combinatorio n sobre m&#39;);
-</span></span><span class="line"><span class="cl">     writeln(&#39;              n!&#39;);
-</span></span><span class="line"><span class="cl">     writeln(&#39;C(n,m) = -------------&#39;);
-</span></span><span class="line"><span class="cl">     writeln(&#39;           m! * (n-m)!&#39;);
-</span></span><span class="line"><span class="cl">     writeln(&#39;Reglas de utilizaci¢n: &#39;);
-</span></span><span class="line"><span class="cl">     writeln(&#39;      El primer operando ha de ser mayor que 0&#39;);
-</span></span><span class="line"><span class="cl">     writeln(&#39;      El segundo operando ha de ser mayor o igual que 0&#39;);
-</span></span><span class="line"><span class="cl">     writeln(&#39;      El primer operando ha de ser mayor o igual que el segundo&#39;);
-</span></span><span class="line"><span class="cl">     write(&#39;Introduce el primer operando: &#39;);
-</span></span><span class="line"><span class="cl">     readln(n);
-</span></span><span class="line"><span class="cl">     write(&#39;Introduce el segundo operando:&#39;) ;
-</span></span><span class="line"><span class="cl">     readln(m);
-</span></span><span class="line"><span class="cl">  until (n&gt;=m) and (n&gt;0) and (m&gt;=0);
-</span></span><span class="line"><span class="cl"> end;
-</span></span><span class="line"><span class="cl"> (****************************************************************)
-</span></span><span class="line"><span class="cl"> function factorial(n:integer):integer;
-</span></span><span class="line"><span class="cl"> {ENTRADAS: n, un número entero positivo
-</span></span><span class="line"><span class="cl"> SALIDAS: el factorial de n}
-</span></span><span class="line"><span class="cl"> var i,f:integer;
-</span></span><span class="line"><span class="cl"> begin
-</span></span><span class="line"><span class="cl">  f:=1;
-</span></span><span class="line"><span class="cl">  for i:=1 to n do
-</span></span><span class="line"><span class="cl">    f:=f*i;
-</span></span><span class="line"><span class="cl">  factorial:=f;
-</span></span><span class="line"><span class="cl"> end;
-</span></span><span class="line"><span class="cl"> (*****************************************************************)
-</span></span><span class="line"><span class="cl"> procedure factorial2(n:integer;var f:integer);
-</span></span><span class="line"><span class="cl"> {ENTRADAS: n, un número entero positivo
-</span></span><span class="line"><span class="cl"> SALIDAS: f, el factorial de n}
-</span></span><span class="line"><span class="cl"> var i:integer;
-</span></span><span class="line"><span class="cl"> begin
-</span></span><span class="line"><span class="cl">  f:=1;
-</span></span><span class="line"><span class="cl">  for i:=1 to n do
-</span></span><span class="line"><span class="cl">    f:=f*i;
-</span></span><span class="line"><span class="cl"> end;
-</span></span><span class="line"><span class="cl"> (***************************************************************)
-</span></span><span class="line"><span class="cl"> {variables LOCALES del programa principal}
-</span></span><span class="line"><span class="cl"> var a,b,combi:integer;opcion:char;
-</span></span><span class="line"><span class="cl">    fa,fb,fab:integer; {estas variables son necesarias si se utiliza el
-</span></span><span class="line"><span class="cl">                        procedimiento para calcular el factorial}
-</span></span><span class="line"><span class="cl"> begin
-</span></span><span class="line"><span class="cl">  repeat  {repite el programa hasta que se pulsa el caracter n};
-</span></span><span class="line"><span class="cl">    Lectura(a,b);
-</span></span><span class="line"><span class="cl">    { C(a,0) = C(a,a) = 1. En este caso no es necesario llamar al subprograma
-</span></span><span class="line"><span class="cl">       que calcula el factorial }
-</span></span><span class="line"><span class="cl">    if ( ( b = 0 ) or ( a = b ) )
-</span></span><span class="line"><span class="cl">    then
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">        combi := 1;
-</span></span><span class="line"><span class="cl">       end
-</span></span><span class="line"><span class="cl">    else
-</span></span><span class="line"><span class="cl">      begin
-</span></span><span class="line"><span class="cl">         factorial2(a,fa);    {llamadas }
-</span></span><span class="line"><span class="cl">         factorial2(b,fb);     {al}
-</span></span><span class="line"><span class="cl">         factorial2(a-b,fab); {procedimiento }
-</span></span><span class="line"><span class="cl">         combi:= fa DIV (fb*fab);
-</span></span><span class="line"><span class="cl">         {combi:=factorial(a)/(factorial(b)*factorial(a-b))  llamada a la funci¢n
-</span></span><span class="line"><span class="cl">          si utilizamos la función la línea anterior comentada sustituye a las
-</span></span><span class="line"><span class="cl">          4 líneas anteriores}
-</span></span><span class="line"><span class="cl">      end;
-</span></span><span class="line"><span class="cl">    writeln(&#39;Combinatorio( &#39;,a,&#39;,&#39;,b,&#39;)=&#39;,combi);
-</span></span><span class="line"><span class="cl">    write(&#39;Pulsa n para acabar y otro para repetir  &#39;);
-</span></span><span class="line"><span class="cl">    readln(opcion);
-</span></span><span class="line"><span class="cl">  until opcion=&#39;n&#39;;
-</span></span><span class="line"><span class="cl"> end.</span></span></code></pre></div><h4 id="comentario-2">Comentario<a class="anchor" href="#comentario-2" aria-label="Link"></a></h4>
-<p>Tal y como está el programa anterior, utiliza el procedimiento para resolver el cálculo del factorial. Si se quiere utilizar la función se tendría que quitar de comentario la línea que lo hace y se tendría que comentar las líneas de llamadas al procediemiento.</p>
-<h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab" aria-label="Link"></a></h3>
-<p>Para realizar este programa utilizamos el módulo <strong>factorial</strong> existente en Matlab.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c">%Programa CalcularCombinatorio</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Descripción: Calcula el combinatorio de dos números a y b, de la forma:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%                          a!</span>
-</span></span><span class="line"><span class="cl"><span class="c">%           C(a,b) = -------------</span>
-</span></span><span class="line"><span class="cl"><span class="c">%                      b! * (a-b)!</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Entradas: Dos números enteros.</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Salidas:El combinatorio de los dos números.</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Variables:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%   a,b,c,res:ENTEROS</span>
-</span></span><span class="line"><span class="cl"><span class="c">%   texto:CADENA (o ARRAY) DE CARACTERES.</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="p">=</span> <span class="n">input</span><span class="p">(</span><span class="s">&#39;Introduzca el primer valor:&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="p">=</span> <span class="n">input</span><span class="p">(</span><span class="s">&#39;Introduzca el segundo valor:&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Asignar a la variable a el mayor valor</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span>
-</span></span><span class="line"><span class="cl">    <span class="n">c</span><span class="p">=</span><span class="n">a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="p">=</span><span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">b</span><span class="p">=</span><span class="n">c</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Calculamos el combinatorio si es posible</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">b</span><span class="o">==</span><span class="mi">0</span> <span class="o">||</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="p">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">else</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="p">=</span> <span class="nb">factorial</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nb">factorial</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="nb">factorial</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span>    
-</span></span><span class="line"><span class="cl"><span class="n">texto</span><span class="p">=[</span><span class="s">&#39;el combinatorio es: &#39;</span> <span class="n">num2str</span><span class="p">(</span><span class="n">res</span><span class="p">)];</span>
-</span></span><span class="line"><span class="cl"><span class="nb">disp</span><span class="p">(</span><span class="n">texto</span><span class="p">);</span></span></span></code></pre></div></article>
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-<div>
-
-</div>
-
-<div>
-
-</div>
-
-</div>
-
-<div class="flex flex-wrap justify-between">
-    <span>
-    
-      <a href="/ejercicios/c-lculo-del-valor-pi/" class="flex align-center">
-        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
-        <span>Cálculo del valor Pi</span>
-      </a>
-    
-    </span>
-    <span>
-    
-      <a href="/ejercicios/cambio-de-los-duplicados-de-un-array/" class="flex align-center">
-        <span>Cambio de los duplicados de un array</span>
-        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
-      </a>
-    
-    </span>
-  </div>
-
- 
-        
-  
- 
-        
-        
-  
- 
-        
-  
-    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
-  
-
-      </footer>
-
-      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
-    </main>
-
-    
-  
-  <aside class="book-toc" aria-label="Table of Contents">
-    <div class="book-toc-content">
-      
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#diseño-en-pseudocódigo">Diseño en Pseudocódigo</a></li>
-        <li><a href="#programa-en-c">Programa en C</a></li>
-        <li><a href="#programa-en-pascal-por-lperez">Programa en Pascal por <strong>lperez</strong></a></li>
-        <li><a href="#programa-en-matlab">Programa en Matlab</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-
-
-
-
-    </div>
-  </aside>
-  
- 
-  </div>
-
-  
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!doctype html><html lang=es-es dir=ltr data-theme=auto data-layout=centered><head><meta name=generator content="Hugo 0.169.0"><meta name=generator-theme content="Book Theme: https://github.com/alex-shpak/hugo-book"><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Cálculo número combinatorio Enunciado Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:
+a! C(a,b) = ------------- b! * (a-b)! Soluciones Diseño en Pseudocódigo Diseño 1 por lperez FUNCION Factorial (n): ENTERO ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: el factorial de n. VARIABLES: i, f: ENTERO INICIO f<--1 PARA i=2 HASTA n HACER f<--f *i FIN_PARA DEVOLVER f FIN ********************************************* ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a>0, b>=0 y a>b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi<--1 SI NO combi<--Factorial(a)/(Factorial(b)*Factorial(a-b)) FIN_SI ESCRIBIR combi FIN Diseño 2 por lperez PROCEDIMIENTO Factorial (n, VAR f) ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: f: ENTERO, el factorial de n. VARIABLES: i: ENTERO. INICIO f<--1 PARA i=2 HASTA n HACER f<--f *i FIN_PARA FIN ******************************************************************** ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a>0, b>=0 y a>b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi<--1 SI NO Factorial(a,fa) Factorial(b,fb) Factorial(a-b,fab) combi<--fa/(fb*fab) FIN_SI ESCRIBIR combi FIN Comentario En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#2e3440"><meta name=color-scheme content="light dark"><meta name=format-detection content="telephone=no"><meta property="og:url" content="https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/c-lculo-n-mero-combinatorio/"><meta property="og:site_name" content="Ejercicios de Programación"><meta property="og:title" content="Cálculo número combinatorio"><meta property="og:description" content="Cálculo número combinatorio Enunciado Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:
+a! C(a,b) = ------------- b! * (a-b)! Soluciones Diseño en Pseudocódigo Diseño 1 por lperez FUNCION Factorial (n): ENTERO ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: el factorial de n. VARIABLES: i, f: ENTERO INICIO f<--1 PARA i=2 HASTA n HACER f<--f *i FIN_PARA DEVOLVER f FIN ********************************************* ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a>0, b>=0 y a>b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi<--1 SI NO combi<--Factorial(a)/(Factorial(b)*Factorial(a-b)) FIN_SI ESCRIBIR combi FIN Diseño 2 por lperez PROCEDIMIENTO Factorial (n, VAR f) ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: f: ENTERO, el factorial de n. VARIABLES: i: ENTERO. INICIO f<--1 PARA i=2 HASTA n HACER f<--f *i FIN_PARA FIN ******************************************************************** ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a>0, b>=0 y a>b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi<--1 SI NO Factorial(a,fa) Factorial(b,fb) Factorial(a-b,fab) combi<--fa/(fb*fab) FIN_SI ESCRIBIR combi FIN Comentario En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento."><meta property="og:locale" content="es_es"><meta property="og:type" content="article"><meta property="article:section" content="ejercicios"><meta property="article:published_time" content="2024-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2024-01-01T00:00:00+00:00"><meta itemprop=name content="Cálculo número combinatorio"><meta itemprop=description content="Cálculo número combinatorio Enunciado Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:
+a! C(a,b) = ------------- b! * (a-b)! Soluciones Diseño en Pseudocódigo Diseño 1 por lperez FUNCION Factorial (n): ENTERO ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: el factorial de n. VARIABLES: i, f: ENTERO INICIO f<--1 PARA i=2 HASTA n HACER f<--f *i FIN_PARA DEVOLVER f FIN ********************************************* ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a>0, b>=0 y a>b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi<--1 SI NO combi<--Factorial(a)/(Factorial(b)*Factorial(a-b)) FIN_SI ESCRIBIR combi FIN Diseño 2 por lperez PROCEDIMIENTO Factorial (n, VAR f) ENTRADAS: n: ENTERO, un número entero positivo. SALIDAS: f: ENTERO, el factorial de n. VARIABLES: i: ENTERO. INICIO f<--1 PARA i=2 HASTA n HACER f<--f *i FIN_PARA FIN ******************************************************************** ALGORITMO Combinatorio ENTRADAS: a, b: ENTERO, dos número entero positivos, a>0, b>=0 y a>b . SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma: a! C(a,b) = ------------- b! * (a-b)! VARIABLES: fa, fb, fab:ENTERO INICIO LEER a,b SI ( ( b = 0 ) or ( a = b ) ) ENTONCES combi<--1 SI NO Factorial(a,fa) Factorial(b,fb) Factorial(a-b,fab) combi<--fa/(fb*fab) FIN_SI ESCRIBIR combi FIN Comentario En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento."><meta itemprop=datePublished content="2024-01-01T00:00:00+00:00"><meta itemprop=dateModified content="2024-01-01T00:00:00+00:00"><meta itemprop=wordCount content="954"><meta itemprop=keywords content="Comentario,Enunciado,C,Matlab,Pascal,Pseudocódigo,Lperez"><title>Cálculo número combinatorio • Ejercicios de Programación</title><link rel=icon href=/Ejercicios-programacion/favicon.svg type=image/svg+xml><link rel=icon href=/Ejercicios-programacion/favicon.png sizes=any><link rel=apple-touch-icon href=/Ejercicios-programacion/apple-touch-icon.png><link rel=manifest href=/Ejercicios-programacion/manifest.json><link rel=canonical href=https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/c-lculo-n-mero-combinatorio/><link rel=stylesheet href=/Ejercicios-programacion/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css integrity="sha256-O0fFwwU93RhGtEygJ4+TZdHMbe8MVu+u5Pu4t6V8eCs=" crossorigin=anonymous><script type=module src=/Ejercicios-programacion/en.search.min.e9ba19edb4a6c661df9f383eec42435012df2d3fc63488e5c4a37272dae6f7a2.js integrity="sha256-6boZ7bSmxmHfnzg+7EJDUBLfLT/GNIjlxKNyctrm96I=" crossorigin=anonymous></script><link rel=stylesheet href=/syntax.css><style>.highlight,.chroma,pre.chroma{background-color:#272822!important;color:#f8f8f2!important;padding:1rem;border-radius:4px;overflow-x:auto}.highlight pre{background-color:transparent;margin:0;padding:0}.markdown code,code{background-color:#3a3a3a!important;color:#f8f8f2!important;padding:.2em .4em;border-radius:3px;font-family:monospace}pre code,.markdown pre code{background-color:transparent!important;padding:0}.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#ffeae1;border:1px solid #faa;border-radius:4px;padding:10px 14px;margin:1.2rem 0;display:flex;align-items:center;gap:15px;box-sizing:border-box}.aviso-cuadro .aviso-icono,.aviso-revisar .aviso-icono,.aviso-advertencia .aviso-icono{flex-shrink:0;display:flex;align-items:center}.aviso-cuadro .aviso-icono img,.aviso-revisar .aviso-icono img,.aviso-advertencia .aviso-icono img{width:80px;height:40px;max-width:none;object-fit:contain;border:0;display:block;margin:0}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido{flex:1;font-size:.95rem;line-height:1.45;color:#222}.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{margin:0;color:#222}.aviso-cuadro .aviso-contenido p+p,.aviso-revisar .aviso-contenido p+p,.aviso-advertencia .aviso-contenido p+p{margin-top:4px}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#111;font-weight:700}@media(prefers-color-scheme:dark){.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#361b1b;border-color:#8c3a3a}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido,.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{color:#f7d7d7}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#fff}}</style></head><body dir=ltr class="book-kind-page book-type-ejercicios"><div class="book-container flex"><aside class=book-menu aria-label=Menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><ul><li><a href=/Ejercicios-programacion/>Inicio</a></li><li><a href=/Ejercicios-programacion/languages/>Lenguajes</a></li><li><a href=/Ejercicios-programacion/categories/>Categorías</a></li><li><a href=/Ejercicios-programacion/professors/>Profesores</a></li><li><a href=/Ejercicios-programacion/tags/>Tags</a></li></ul><div class="book-search hidden"><input id=book-search-input type=text role=searchbox enterkeyhint=search placeholder=Search aria-label=Search maxlength=64><div class="book-search-spinner hidden"></div><ul id=book-search-results aria-live=polite></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><header class="book-header hidden"><div class="flex align-center justify-between gap"><input type=checkbox class=toggle id=menu-control>
+<label for=menu-control aria-label=Menu><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"/></svg></label><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><input type=checkbox class=toggle id=toc-control>
+<label for=toc-control aria-label="Table of Contents"><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"/></svg></label></div></header><main class=book-page><div class=exercise-metadata><div class=metadata-item><span class=metadata-label>📅 Fecha:</span>
+<time datetime=2024-01-01>01/01/2024</time></div><div class=metadata-item><span class=metadata-label>💻 Lenguajes:</span>
+<a href=/Ejercicios-programacion/languages/c/ class="badge badge-language">C</a>
+<a href=/Ejercicios-programacion/languages/matlab/ class="badge badge-language">Matlab</a>
+<a href=/Ejercicios-programacion/languages/pascal/ class="badge badge-language">Pascal</a>
+<a href=/Ejercicios-programacion/languages/pseudoc%C3%B3digo/ class="badge badge-language">Pseudocódigo</a></div><div class=metadata-item><span class=metadata-label>👨‍🏫 Profesores:</span>
+<a href=/Ejercicios-programacion/professors/lperez/ class="badge badge-professor">Lperez</a></div><div class=metadata-item><span class=metadata-label>📂 Categorías:</span>
+<a href=/Ejercicios-programacion/categories/comentario/ class="badge badge-category">Comentario</a>
+<a href=/Ejercicios-programacion/categories/enunciado/ class="badge badge-category">Enunciado</a></div></div><style>.exercise-metadata{margin:1.5rem 0;padding:1rem;background-color:#f8f9fa;border-radius:6px;border-left:4px solid #007bff}.metadata-item{margin:.5rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}.metadata-label{font-weight:600;color:#495057;margin-right:.5rem;flex-shrink:0}.badge{display:inline-block;padding:.25rem .6rem;font-size:.85rem;font-weight:500;line-height:1;border-radius:12px;text-transform:capitalize;text-decoration:none;transition:all .2s ease;white-space:nowrap;flex-shrink:0}a.badge:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(0,0,0,.2);filter:brightness(1.1)}.badge-language{background-color:#007bff;color:#fff!important}.badge-professor{background-color:#28a745;color:#fff!important}.badge-category{background-color:#ffc107;color:#212529!important}.badge-tag{background-color:#6c757d;color:#fff!important}@media(prefers-color-scheme:dark){.exercise-metadata{background-color:#2d3748;border-left-color:#4299e1}.metadata-label{color:#e2e8f0}.badge-category{background-color:#d69e2e;color:#1a202c!important}}</style><article class="markdown book-article"><h1 id=cálculo-número-combinatorio>Cálculo número combinatorio<a class=anchor href=#c%c3%a1lculo-n%c3%bamero-combinatorio aria-label=Link></a></h1><h2 id=enunciado>Enunciado<a class=anchor href=#enunciado aria-label=Link></a></h2><p>Realizar el diseño y programa capaces de calcular el combinatorio de dos números a y b:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>                        a!
+</span></span><span class=line><span class=cl>          C(a,b) = -------------
+</span></span><span class=line><span class=cl>                     b! * (a-b)!</span></span></code></pre></div><h2 id=soluciones>Soluciones<a class=anchor href=#soluciones aria-label=Link></a></h2><h3 id=diseño-en-pseudocódigo>Diseño en Pseudocódigo<a class=anchor href=#dise%c3%b1o-en-pseudoc%c3%b3digo aria-label=Link></a></h3><h4 id=diseño-1-por-lperez>Diseño 1 por <strong>lperez</strong><a class=anchor href=#dise%c3%b1o-1-por-lperez aria-label=Link></a></h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl> FUNCION Factorial (n): ENTERO
+</span></span><span class=line><span class=cl> ENTRADAS: n: ENTERO, un número entero positivo.
+</span></span><span class=line><span class=cl> SALIDAS: el factorial de n.
+</span></span><span class=line><span class=cl> VARIABLES: i, f: ENTERO
+</span></span><span class=line><span class=cl> INICIO
+</span></span><span class=line><span class=cl>   f&lt;--1
+</span></span><span class=line><span class=cl>   PARA i=2 HASTA n HACER
+</span></span><span class=line><span class=cl>      f&lt;--f *i
+</span></span><span class=line><span class=cl>   FIN_PARA
+</span></span><span class=line><span class=cl>   DEVOLVER   f
+</span></span><span class=line><span class=cl> FIN
+</span></span><span class=line><span class=cl> *********************************************
+</span></span><span class=line><span class=cl> ALGORITMO Combinatorio
+</span></span><span class=line><span class=cl> ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b .
+</span></span><span class=line><span class=cl> SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma:
+</span></span><span class=line><span class=cl>                          a!
+</span></span><span class=line><span class=cl>           C(a,b) = -------------
+</span></span><span class=line><span class=cl>                      b! * (a-b)!
+</span></span><span class=line><span class=cl> VARIABLES: fa, fb, fab:ENTERO
+</span></span><span class=line><span class=cl> INICIO
+</span></span><span class=line><span class=cl>   LEER a,b
+</span></span><span class=line><span class=cl>   SI ( ( b = 0 ) or ( a = b ) )
+</span></span><span class=line><span class=cl>   ENTONCES
+</span></span><span class=line><span class=cl>      combi&lt;--1
+</span></span><span class=line><span class=cl>   SI NO
+</span></span><span class=line><span class=cl>      combi&lt;--Factorial(a)/(Factorial(b)*Factorial(a-b))
+</span></span><span class=line><span class=cl>   FIN_SI   
+</span></span><span class=line><span class=cl>   ESCRIBIR combi 
+</span></span><span class=line><span class=cl> FIN</span></span></code></pre></div><h4 id=diseño-2-por-lperez>Diseño 2 por <strong>lperez</strong><a class=anchor href=#dise%c3%b1o-2-por-lperez aria-label=Link></a></h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl> PROCEDIMIENTO Factorial (n, VAR f)
+</span></span><span class=line><span class=cl> ENTRADAS: n: ENTERO, un número entero positivo.
+</span></span><span class=line><span class=cl> SALIDAS: f: ENTERO, el factorial de n.
+</span></span><span class=line><span class=cl> VARIABLES: i: ENTERO.
+</span></span><span class=line><span class=cl> INICIO
+</span></span><span class=line><span class=cl>   f&lt;--1
+</span></span><span class=line><span class=cl>   PARA i=2 HASTA n HACER
+</span></span><span class=line><span class=cl>      f&lt;--f *i
+</span></span><span class=line><span class=cl>   FIN_PARA
+</span></span><span class=line><span class=cl> FIN
+</span></span><span class=line><span class=cl> ********************************************************************
+</span></span><span class=line><span class=cl> ALGORITMO Combinatorio
+</span></span><span class=line><span class=cl> ENTRADAS: a, b: ENTERO, dos número entero positivos, a&gt;0, b&gt;=0 y a&gt;b .
+</span></span><span class=line><span class=cl> SALIDAS: combi: ENTERO, el número combinatorio a sobre b, calculado de la forma:
+</span></span><span class=line><span class=cl>                      a!
+</span></span><span class=line><span class=cl>        C(a,b) = -------------
+</span></span><span class=line><span class=cl>                   b! * (a-b)!
+</span></span><span class=line><span class=cl> VARIABLES: fa, fb, fab:ENTERO
+</span></span><span class=line><span class=cl> INICIO
+</span></span><span class=line><span class=cl>   LEER a,b
+</span></span><span class=line><span class=cl>   SI ( ( b = 0 ) or ( a = b ) )
+</span></span><span class=line><span class=cl>   ENTONCES
+</span></span><span class=line><span class=cl>      combi&lt;--1
+</span></span><span class=line><span class=cl>   SI NO
+</span></span><span class=line><span class=cl>      Factorial(a,fa)
+</span></span><span class=line><span class=cl>      Factorial(b,fb)
+</span></span><span class=line><span class=cl>      Factorial(a-b,fab)
+</span></span><span class=line><span class=cl>      combi&lt;--fa/(fb*fab)
+</span></span><span class=line><span class=cl>   FIN_SI   
+</span></span><span class=line><span class=cl>   ESCRIBIR combi 
+</span></span><span class=line><span class=cl> FIN</span></span></code></pre></div><h4 id=comentario>Comentario<a class=anchor href=#comentario aria-label=Link></a></h4><p>En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.</p><h3 id=programa-en-c>Programa en C<a class=anchor href=#programa-en-c aria-label=Link></a></h3><h4 id=solución-1>Solución 1<a class=anchor href=#soluci%c3%b3n-1 aria-label=Link></a></h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> <span class=c1>//&#39;&#39;(Este programa se ha hecho con una función)&#39;&#39;            
+</span></span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>Factorial</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>   <span class=c1>//ENTRADAS: &#39;&#39;(n: un número entero positivo)&#39;&#39;
+</span></span></span><span class=line><span class=cl>   <span class=c1>//SALIDAS: &#39;&#39;(El factorial de n)&#39;&#39;
+</span></span></span><span class=line><span class=cl>   <span class=c1>//VARIABLES
+</span></span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>i</span><span class=p>,</span> <span class=n>f</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>   <span class=n>f</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=k>for</span><span class=p>(</span><span class=n>i</span><span class=o>=</span><span class=mi>2</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;=</span><span class=n>n</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>       <span class=n>f</span><span class=o>=</span><span class=n>f</span><span class=o>*</span><span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=p>}</span>
+</span></span><span class=line><span class=cl>   <span class=k>return</span><span class=p>(</span><span class=n>f</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=c1>//*******************************************************
+</span></span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl> <span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl> <span class=cp>#include</span> <span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>main</span><span class=p>(</span><span class=kt>void</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>   <span class=c1>//ENTRADAS
+</span></span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>;</span> <span class=c1>//&#39;&#39;(Dos numeros enteros positivos: a&gt;0, b&gt;=0, a&gt;b)&#39;&#39;
+</span></span></span><span class=line><span class=cl>   <span class=c1>//SALIDAS
+</span></span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>combi</span><span class=p>;</span> <span class=c1>//&#39;&#39;(El numero combinatorio a sobre b calculado de la forma:
+</span></span></span><span class=line><span class=cl>   <span class=cm>/*                                                                                        
+</span></span></span><span class=line><span class=cl><span class=cm>                               a!
+</span></span></span><span class=line><span class=cl><span class=cm>                     c(a,b)=----------- )&#39;&#39;
+</span></span></span><span class=line><span class=cl><span class=cm>                             b!*(a-b)!                                     
+</span></span></span><span class=line><span class=cl><span class=cm>   */</span>
+</span></span><span class=line><span class=cl>   <span class=c1>//VARIABLES
+</span></span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>fa</span><span class=p>,</span><span class=n>fb</span><span class=p>,</span><span class=n>fab</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>   <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Introduzca dos numeros enteros positivos: &#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>   <span class=nf>scanf</span><span class=p>(</span><span class=s>&#34;%i %i&#34;</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>((</span><span class=n>b</span><span class=o>==</span><span class=mi>0</span><span class=p>)</span><span class=o>||</span><span class=p>(</span><span class=n>a</span><span class=o>==</span><span class=n>b</span><span class=p>)){</span>
+</span></span><span class=line><span class=cl>        <span class=n>combi</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span><span class=k>else</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>combi</span><span class=o>=</span><span class=nf>Factorial</span><span class=p>(</span><span class=n>a</span><span class=p>)</span><span class=o>/</span><span class=p>(</span><span class=nf>Factorial</span><span class=p>(</span><span class=n>b</span><span class=p>)</span><span class=o>*</span><span class=nf>Factorial</span><span class=p>(</span><span class=n>a</span><span class=o>-</span><span class=n>b</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%i&#34;</span><span class=p>,</span><span class=n>combi</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span></span></span></code></pre></div><h4 id=solución-2>Solución 2<a class=anchor href=#soluci%c3%b3n-2 aria-label=Link></a></h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kt>void</span> <span class=nf>Factorial</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>,</span> <span class=kt>int</span> <span class=o>&amp;</span><span class=n>f</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//VARIABLES
+</span></span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>    <span class=n>f</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span><span class=p>(</span><span class=n>i</span><span class=o>=</span><span class=mi>2</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;=</span><span class=n>n</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>       <span class=n>f</span><span class=o>=</span><span class=n>f</span><span class=o>*</span><span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=c1>//**********************************
+</span></span></span><span class=line><span class=cl> <span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl> <span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>main</span><span class=p>(</span><span class=kt>void</span><span class=p>){</span>
+</span></span><span class=line><span class=cl> <span class=c1>//ENTRADAS
+</span></span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>;</span>  <span class=c1>//&#39;&#39;(Dos numeros enteros positivos: a&gt;0, b&gt;=0, a&gt;b)&#39;&#39;
+</span></span></span><span class=line><span class=cl> <span class=c1>//SALIDAS
+</span></span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>combi</span><span class=p>;</span> <span class=cm>/*&#39;&#39;(El numero combinatorio a sobre b calculado de la forma:
+</span></span></span><span class=line><span class=cl><span class=cm> 
+</span></span></span><span class=line><span class=cl><span class=cm>                               a!
+</span></span></span><span class=line><span class=cl><span class=cm>                     c(a,b)=----------- )&#39;&#39;
+</span></span></span><span class=line><span class=cl><span class=cm>                             b!*(a-b)!  
+</span></span></span><span class=line><span class=cl><span class=cm>              */</span>                                   
+</span></span><span class=line><span class=cl>  <span class=c1>//VARIABLES
+</span></span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>fa</span><span class=p>,</span> <span class=n>fb</span><span class=p>,</span> <span class=n>fab</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Introduzca dos numeros enteros positivos: &#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nf>scanf</span><span class=p>(</span><span class=s>&#34;%i %i&#34;</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>((</span><span class=n>b</span><span class=o>==</span><span class=mi>0</span><span class=p>)</span><span class=o>||</span><span class=p>(</span><span class=n>a</span><span class=o>==</span><span class=n>b</span><span class=p>)){</span>
+</span></span><span class=line><span class=cl>        <span class=n>combi</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span><span class=k>else</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nf>Factorial</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>fa</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nf>Factorial</span><span class=p>(</span><span class=n>b</span><span class=p>,</span><span class=n>fb</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nf>Factorial</span><span class=p>(</span><span class=n>a</span><span class=o>-</span><span class=n>b</span><span class=p>,</span><span class=n>fab</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>combi</span><span class=o>=</span><span class=n>fa</span><span class=o>/</span><span class=p>(</span><span class=n>fb</span><span class=o>*</span><span class=n>fab</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%i&#34;</span><span class=p>,</span><span class=n>combi</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span></span></span></code></pre></div><h4 id=comentario-1>Comentario<a class=anchor href=#comentario-1 aria-label=Link></a></h4><p>En la primera solución se ha utilizado una función para resolver el factorial, mientras que en la segunda se ha utilizado un procedimiento.</p><h3 id=programa-en-pascal-por-lperez>Programa en Pascal por <strong>lperez</strong><a class=anchor href=#programa-en-pascal-por-lperez aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl> program Combinatorio;
+</span></span><span class=line><span class=cl> {ENTRADAS: a,b, dos n£meros enteros positivos, a&gt;b y a&lt;&gt;0
+</span></span><span class=line><span class=cl> SALIDAS: combi, el n£mero combinatorio a sobre b, calculado de la forma:
+</span></span><span class=line><span class=cl>                       a!
+</span></span><span class=line><span class=cl>        C(a,b) = -------------
+</span></span><span class=line><span class=cl>                  b! * (a-b)!
+</span></span><span class=line><span class=cl> }
+</span></span><span class=line><span class=cl> uses crt;
+</span></span><span class=line><span class=cl> (****************************************************)
+</span></span><span class=line><span class=cl> procedure Lectura(var n, m:integer);
+</span></span><span class=line><span class=cl> {ENTRADAS: Ninguna;
+</span></span><span class=line><span class=cl> SALIDAS: n y m, dos n£meros enteros que cumplen que n&gt;0, m&gt;=0 y n&gt;m}
+</span></span><span class=line><span class=cl> begin
+</span></span><span class=line><span class=cl>   {repite la entrada de los datos hasta conseguir que n sea un entero positivo,
+</span></span><span class=line><span class=cl>     m sea positivo o 0 y n sea mayor que m}
+</span></span><span class=line><span class=cl>  repeat
+</span></span><span class=line><span class=cl>     clrscr;
+</span></span><span class=line><span class=cl>     writeln(&#39;Este programa calcula un el n£mero combinatorio n sobre m&#39;);
+</span></span><span class=line><span class=cl>     writeln(&#39;              n!&#39;);
+</span></span><span class=line><span class=cl>     writeln(&#39;C(n,m) = -------------&#39;);
+</span></span><span class=line><span class=cl>     writeln(&#39;           m! * (n-m)!&#39;);
+</span></span><span class=line><span class=cl>     writeln(&#39;Reglas de utilizaci¢n: &#39;);
+</span></span><span class=line><span class=cl>     writeln(&#39;      El primer operando ha de ser mayor que 0&#39;);
+</span></span><span class=line><span class=cl>     writeln(&#39;      El segundo operando ha de ser mayor o igual que 0&#39;);
+</span></span><span class=line><span class=cl>     writeln(&#39;      El primer operando ha de ser mayor o igual que el segundo&#39;);
+</span></span><span class=line><span class=cl>     write(&#39;Introduce el primer operando: &#39;);
+</span></span><span class=line><span class=cl>     readln(n);
+</span></span><span class=line><span class=cl>     write(&#39;Introduce el segundo operando:&#39;) ;
+</span></span><span class=line><span class=cl>     readln(m);
+</span></span><span class=line><span class=cl>  until (n&gt;=m) and (n&gt;0) and (m&gt;=0);
+</span></span><span class=line><span class=cl> end;
+</span></span><span class=line><span class=cl> (****************************************************************)
+</span></span><span class=line><span class=cl> function factorial(n:integer):integer;
+</span></span><span class=line><span class=cl> {ENTRADAS: n, un número entero positivo
+</span></span><span class=line><span class=cl> SALIDAS: el factorial de n}
+</span></span><span class=line><span class=cl> var i,f:integer;
+</span></span><span class=line><span class=cl> begin
+</span></span><span class=line><span class=cl>  f:=1;
+</span></span><span class=line><span class=cl>  for i:=1 to n do
+</span></span><span class=line><span class=cl>    f:=f*i;
+</span></span><span class=line><span class=cl>  factorial:=f;
+</span></span><span class=line><span class=cl> end;
+</span></span><span class=line><span class=cl> (*****************************************************************)
+</span></span><span class=line><span class=cl> procedure factorial2(n:integer;var f:integer);
+</span></span><span class=line><span class=cl> {ENTRADAS: n, un número entero positivo
+</span></span><span class=line><span class=cl> SALIDAS: f, el factorial de n}
+</span></span><span class=line><span class=cl> var i:integer;
+</span></span><span class=line><span class=cl> begin
+</span></span><span class=line><span class=cl>  f:=1;
+</span></span><span class=line><span class=cl>  for i:=1 to n do
+</span></span><span class=line><span class=cl>    f:=f*i;
+</span></span><span class=line><span class=cl> end;
+</span></span><span class=line><span class=cl> (***************************************************************)
+</span></span><span class=line><span class=cl> {variables LOCALES del programa principal}
+</span></span><span class=line><span class=cl> var a,b,combi:integer;opcion:char;
+</span></span><span class=line><span class=cl>    fa,fb,fab:integer; {estas variables son necesarias si se utiliza el
+</span></span><span class=line><span class=cl>                        procedimiento para calcular el factorial}
+</span></span><span class=line><span class=cl> begin
+</span></span><span class=line><span class=cl>  repeat  {repite el programa hasta que se pulsa el caracter n};
+</span></span><span class=line><span class=cl>    Lectura(a,b);
+</span></span><span class=line><span class=cl>    { C(a,0) = C(a,a) = 1. En este caso no es necesario llamar al subprograma
+</span></span><span class=line><span class=cl>       que calcula el factorial }
+</span></span><span class=line><span class=cl>    if ( ( b = 0 ) or ( a = b ) )
+</span></span><span class=line><span class=cl>    then
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>        combi := 1;
+</span></span><span class=line><span class=cl>       end
+</span></span><span class=line><span class=cl>    else
+</span></span><span class=line><span class=cl>      begin
+</span></span><span class=line><span class=cl>         factorial2(a,fa);    {llamadas }
+</span></span><span class=line><span class=cl>         factorial2(b,fb);     {al}
+</span></span><span class=line><span class=cl>         factorial2(a-b,fab); {procedimiento }
+</span></span><span class=line><span class=cl>         combi:= fa DIV (fb*fab);
+</span></span><span class=line><span class=cl>         {combi:=factorial(a)/(factorial(b)*factorial(a-b))  llamada a la funci¢n
+</span></span><span class=line><span class=cl>          si utilizamos la función la línea anterior comentada sustituye a las
+</span></span><span class=line><span class=cl>          4 líneas anteriores}
+</span></span><span class=line><span class=cl>      end;
+</span></span><span class=line><span class=cl>    writeln(&#39;Combinatorio( &#39;,a,&#39;,&#39;,b,&#39;)=&#39;,combi);
+</span></span><span class=line><span class=cl>    write(&#39;Pulsa n para acabar y otro para repetir  &#39;);
+</span></span><span class=line><span class=cl>    readln(opcion);
+</span></span><span class=line><span class=cl>  until opcion=&#39;n&#39;;
+</span></span><span class=line><span class=cl> end.</span></span></code></pre></div><h4 id=comentario-2>Comentario<a class=anchor href=#comentario-2 aria-label=Link></a></h4><p>Tal y como está el programa anterior, utiliza el procedimiento para resolver el cálculo del factorial. Si se quiere utilizar la función se tendría que quitar de comentario la línea que lo hace y se tendría que comentar las líneas de llamadas al procediemiento.</p><h3 id=programa-en-matlab>Programa en Matlab<a class=anchor href=#programa-en-matlab aria-label=Link></a></h3><p>Para realizar este programa utilizamos el módulo <strong>factorial</strong> existente en Matlab.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-matlab data-lang=matlab><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>%Programa CalcularCombinatorio</span>
+</span></span><span class=line><span class=cl><span class=c>%Descripción: Calcula el combinatorio de dos números a y b, de la forma:</span>
+</span></span><span class=line><span class=cl><span class=c>%                          a!</span>
+</span></span><span class=line><span class=cl><span class=c>%           C(a,b) = -------------</span>
+</span></span><span class=line><span class=cl><span class=c>%                      b! * (a-b)!</span>
+</span></span><span class=line><span class=cl><span class=c>%Entradas: Dos números enteros.</span>
+</span></span><span class=line><span class=cl><span class=c>%Salidas:El combinatorio de los dos números.</span>
+</span></span><span class=line><span class=cl><span class=c>%Variables:</span>
+</span></span><span class=line><span class=cl><span class=c>%   a,b,c,res:ENTEROS</span>
+</span></span><span class=line><span class=cl><span class=c>%   texto:CADENA (o ARRAY) DE CARACTERES.</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=n>a</span> <span class=p>=</span> <span class=n>input</span><span class=p>(</span><span class=s>&#39;Introduzca el primer valor:&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>b</span> <span class=p>=</span> <span class=n>input</span><span class=p>(</span><span class=s>&#39;Introduzca el segundo valor:&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c>%Asignar a la variable a el mayor valor</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>a</span><span class=o>&lt;</span><span class=n>b</span>
+</span></span><span class=line><span class=cl>    <span class=n>c</span><span class=p>=</span><span class=n>a</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>a</span><span class=p>=</span><span class=n>b</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>b</span><span class=p>=</span><span class=n>c</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=c>%Calculamos el combinatorio si es posible</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>b</span><span class=o>==</span><span class=mi>0</span> <span class=o>||</span> <span class=n>a</span><span class=o>==</span><span class=n>b</span>
+</span></span><span class=line><span class=cl>    <span class=n>res</span> <span class=p>=</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>    <span class=n>res</span> <span class=p>=</span> <span class=nb>factorial</span><span class=p>(</span><span class=n>a</span><span class=p>)</span><span class=o>/</span><span class=p>(</span><span class=nb>factorial</span><span class=p>(</span><span class=n>b</span><span class=p>)</span><span class=o>*</span><span class=nb>factorial</span><span class=p>(</span><span class=n>a</span><span class=o>-</span><span class=n>b</span><span class=p>));</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>    
+</span></span><span class=line><span class=cl><span class=n>texto</span><span class=p>=[</span><span class=s>&#39;el combinatorio es: &#39;</span> <span class=n>num2str</span><span class=p>(</span><span class=n>res</span><span class=p>)];</span>
+</span></span><span class=line><span class=cl><span class=nb>disp</span><span class=p>(</span><span class=n>texto</span><span class=p>);</span></span></span></code></pre></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class="flex flex-wrap justify-between"><span><a href=/Ejercicios-programacion/ejercicios/c-lculo-del-valor-pi/ class="flex align-center"><svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"/></svg>
+<span>Cálculo del valor Pi</span>
+</a></span><span><a href=/Ejercicios-programacion/ejercicios/cambio-de-los-duplicados-de-un-array/ class="flex align-center"><span>Cambio de los duplicados de un array</span>
+<svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"/></svg></a></span></div><script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay" aria-hidden=true></label></main><aside class=book-toc aria-label="Table of Contents"><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#enunciado>Enunciado</a></li><li><a href=#soluciones>Soluciones</a><ul><li><a href=#diseño-en-pseudocódigo>Diseño en Pseudocódigo</a></li><li><a href=#programa-en-c>Programa en C</a></li><li><a href=#programa-en-pascal-por-lperez>Programa en Pascal por <strong>lperez</strong></a></li><li><a href=#programa-en-matlab>Programa en Matlab</a></li></ul></li></ul></nav></div></aside></div></body></html>

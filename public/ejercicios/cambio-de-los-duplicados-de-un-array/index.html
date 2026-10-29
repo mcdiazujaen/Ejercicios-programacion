@@ -1,621 +1,80 @@
-<!DOCTYPE html>
-<html lang="es-es" dir="ltr"
-    data-theme="auto"
-    data-layout="centered">
-
-<head>
-  
-  <meta name="generator" content="Hugo 0.169.0">
-  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cambio de los duplicados de un array Enunciado Diseñar un procedimiento que acepte como parámetro un vector que pueda contener elementos duplicados. El procedimiento debe reemplazar cada elemento repetido por -1 y devolver el vector modificado, además del número de modificaciones hecho.
-Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO) ENTRADAS: V: ARRAY DE REALES &#39;&#39;(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos del array*)&#39;&#39; SALIDA: V: ARRAY DE REALES &#39;&#39;(*Array con los elementos repetidos sustituidos por -1*)&#39;&#39; nmodif: ENTERO &#39;&#39;(*Número de elementos modificados en el array*)&#39;&#39; VARIABLES: i, j: REAL INICIO nmodif &lt;-- 0 PARA i &lt;-- 1 HASTA n-1 CON INCREMENTO DE 1 HACER PARA j &lt;-- i&#43;1 HASTA n CON INCREMENTO DE 1 HACER SI ( V(i)=V(j) Y V(j)&lt;&gt;-1 ) ENTONCES V(j) &lt;-- -1 nmodif &lt;-- nmodif&#43;1 FIN SI FIN PARA FIN PARA FIN Programa en C #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Repeticion(float V[n], int n , int &amp;nmodif){ /*------- ENTRADAS: V: Array contiene los elementos repetidos. El array empieza en la posición 0 n: Números de elementos del array SALIDAS: V: Array con los elementos repetidos sustituidos por -1 nmodif: número de elementos modificados en el array ---------*/ //VARIABLES: float i,j; nmodif=0; for (i=0; i&lt;=n-2; i&#43;&#43;){ for (j=i&#43;1; j&lt;=n-1; j&#43;&#43;){ if ( V[i]==V[j] &amp;&amp; V[j] != -1 ){ V[j]=-1; nmodif=nmodif&#43;1; } } } } Solución en Matlab function [v,nrepe]=Repeticion(w) %FUNCION [v,nrepe]=Repeticion(w) %DESCRIPCION: Cambia los elementos repetidos de un vector por -1. %PARÁMETROS DE ENTRADA: % w: ARRAY DE ENTEROS, vector con elementos repetidos. %PARÁMETROS DE SALIDA: % v: ARRAY DE ENTEROS, vector con los repetidos cambiados por -1 % nrepe: ENTERO, número de repeticiones encontradas. %VARIABLES: % n,pos1,pos2:ENTEROS v=w; n=length(v) nrepe=0; for pos1=1:n for pos2=pos1&#43;1:n if(v(pos1))==(v(pos2))&amp;&amp;(v(pos2)~=-1), v(pos2)=-1; nrepe=nrepe&#43;1; end end end">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
-<meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/cambio-de-los-duplicados-de-un-array/">
-	<meta property="og:site_name" content="Ejercicios de Programación">
-	<meta property="og:title" content="Cambio de los duplicados de un array">
-	<meta property="og:description" content="Cambio de los duplicados de un array Enunciado Diseñar un procedimiento que acepte como parámetro un vector que pueda contener elementos duplicados. El procedimiento debe reemplazar cada elemento repetido por -1 y devolver el vector modificado, además del número de modificaciones hecho.
-Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO) ENTRADAS: V: ARRAY DE REALES &#39;&#39;(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos del array*)&#39;&#39; SALIDA: V: ARRAY DE REALES &#39;&#39;(*Array con los elementos repetidos sustituidos por -1*)&#39;&#39; nmodif: ENTERO &#39;&#39;(*Número de elementos modificados en el array*)&#39;&#39; VARIABLES: i, j: REAL INICIO nmodif &lt;-- 0 PARA i &lt;-- 1 HASTA n-1 CON INCREMENTO DE 1 HACER PARA j &lt;-- i&#43;1 HASTA n CON INCREMENTO DE 1 HACER SI ( V(i)=V(j) Y V(j)&lt;&gt;-1 ) ENTONCES V(j) &lt;-- -1 nmodif &lt;-- nmodif&#43;1 FIN SI FIN PARA FIN PARA FIN Programa en C #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Repeticion(float V[n], int n , int &amp;nmodif){ /*------- ENTRADAS: V: Array contiene los elementos repetidos. El array empieza en la posición 0 n: Números de elementos del array SALIDAS: V: Array con los elementos repetidos sustituidos por -1 nmodif: número de elementos modificados en el array ---------*/ //VARIABLES: float i,j; nmodif=0; for (i=0; i&lt;=n-2; i&#43;&#43;){ for (j=i&#43;1; j&lt;=n-1; j&#43;&#43;){ if ( V[i]==V[j] &amp;&amp; V[j] != -1 ){ V[j]=-1; nmodif=nmodif&#43;1; } } } } Solución en Matlab function [v,nrepe]=Repeticion(w) %FUNCION [v,nrepe]=Repeticion(w) %DESCRIPCION: Cambia los elementos repetidos de un vector por -1. %PARÁMETROS DE ENTRADA: % w: ARRAY DE ENTEROS, vector con elementos repetidos. %PARÁMETROS DE SALIDA: % v: ARRAY DE ENTEROS, vector con los repetidos cambiados por -1 % nrepe: ENTERO, número de repeticiones encontradas. %VARIABLES: % n,pos1,pos2:ENTEROS v=w; n=length(v) nrepe=0; for pos1=1:n for pos2=pos1&#43;1:n if(v(pos1))==(v(pos2))&amp;&amp;(v(pos2)~=-1), v(pos2)=-1; nrepe=nrepe&#43;1; end end end">
-	<meta property="og:locale" content="es_es">
-	<meta property="og:type" content="article">
-		<meta property="article:section" content="ejercicios">
-		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-
-
-	<meta itemprop="name" content="Cambio de los duplicados de un array">
-	<meta itemprop="description" content="Cambio de los duplicados de un array Enunciado Diseñar un procedimiento que acepte como parámetro un vector que pueda contener elementos duplicados. El procedimiento debe reemplazar cada elemento repetido por -1 y devolver el vector modificado, además del número de modificaciones hecho.
-Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO) ENTRADAS: V: ARRAY DE REALES &#39;&#39;(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)&#39;&#39; n: ENTERO &#39;&#39;(*Número de elementos del array*)&#39;&#39; SALIDA: V: ARRAY DE REALES &#39;&#39;(*Array con los elementos repetidos sustituidos por -1*)&#39;&#39; nmodif: ENTERO &#39;&#39;(*Número de elementos modificados en el array*)&#39;&#39; VARIABLES: i, j: REAL INICIO nmodif &lt;-- 0 PARA i &lt;-- 1 HASTA n-1 CON INCREMENTO DE 1 HACER PARA j &lt;-- i&#43;1 HASTA n CON INCREMENTO DE 1 HACER SI ( V(i)=V(j) Y V(j)&lt;&gt;-1 ) ENTONCES V(j) &lt;-- -1 nmodif &lt;-- nmodif&#43;1 FIN SI FIN PARA FIN PARA FIN Programa en C #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; void Repeticion(float V[n], int n , int &amp;nmodif){ /*------- ENTRADAS: V: Array contiene los elementos repetidos. El array empieza en la posición 0 n: Números de elementos del array SALIDAS: V: Array con los elementos repetidos sustituidos por -1 nmodif: número de elementos modificados en el array ---------*/ //VARIABLES: float i,j; nmodif=0; for (i=0; i&lt;=n-2; i&#43;&#43;){ for (j=i&#43;1; j&lt;=n-1; j&#43;&#43;){ if ( V[i]==V[j] &amp;&amp; V[j] != -1 ){ V[j]=-1; nmodif=nmodif&#43;1; } } } } Solución en Matlab function [v,nrepe]=Repeticion(w) %FUNCION [v,nrepe]=Repeticion(w) %DESCRIPCION: Cambia los elementos repetidos de un vector por -1. %PARÁMETROS DE ENTRADA: % w: ARRAY DE ENTEROS, vector con elementos repetidos. %PARÁMETROS DE SALIDA: % v: ARRAY DE ENTEROS, vector con los repetidos cambiados por -1 % nrepe: ENTERO, número de repeticiones encontradas. %VARIABLES: % n,pos1,pos2:ENTEROS v=w; n=length(v) nrepe=0; for pos1=1:n for pos2=pos1&#43;1:n if(v(pos1))==(v(pos2))&amp;&amp;(v(pos2)~=-1), v(pos2)=-1; nrepe=nrepe&#43;1; end end end">
-	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="wordCount" content="302">
-	<meta itemprop="keywords" content="Enunciado,C,Matlab,Pseudocódigo">
-
-<title>Cambio de los duplicados de un array • Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.png" sizes="any">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-<link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/ejercicios/cambio-de-los-duplicados-de-un-array/">
-<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
-
-
-<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/syntax.css">
-<style>
- 
-.highlight,
-.chroma,
-pre.chroma {
-  background-color: #272822 !important;
-  color: #f8f8f2 !important;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-.highlight pre {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-}
-
- 
- 
-.markdown code,
-code {
-  background-color: #3a3a3a !important;
-  color: #f8f8f2 !important;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-family: monospace;
-}
-
- 
-pre code,
-.markdown pre code {
-  background-color: transparent !important;
-  padding: 0;
-}
-
- 
-.aviso-cuadro,
-.aviso-revisar,
-.aviso-advertencia {
-  background: #ffeae1;
-  border: 1px solid #ffaaaa;
-  border-radius: 4px;
-  padding: 10px 14px;
-  margin: 1.2rem 0;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-sizing: border-box;
-}
-
-.aviso-cuadro .aviso-icono,
-.aviso-revisar .aviso-icono,
-.aviso-advertencia .aviso-icono {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.aviso-cuadro .aviso-icono img,
-.aviso-revisar .aviso-icono img,
-.aviso-advertencia .aviso-icono img {
-  width: 80px;
-  height: 40px;
-  max-width: none;
-  object-fit: contain;
-  border: 0;
-  display: block;
-  margin: 0;
-}
-
-.aviso-cuadro .aviso-contenido,
-.aviso-revisar .aviso-contenido,
-.aviso-advertencia .aviso-contenido {
-  flex: 1;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: #222222;
-}
-
-.aviso-cuadro .aviso-contenido p,
-.aviso-revisar .aviso-contenido p,
-.aviso-advertencia .aviso-contenido p {
-  margin: 0;
-  color: #222222;
-}
-
-.aviso-cuadro .aviso-contenido p + p,
-.aviso-revisar .aviso-contenido p + p,
-.aviso-advertencia .aviso-contenido p + p {
-  margin-top: 4px;
-}
-
-.aviso-cuadro .aviso-contenido strong,
-.aviso-revisar .aviso-contenido strong,
-.aviso-advertencia .aviso-contenido strong {
-  color: #111111;
-  font-weight: 700;
-}
-
-@media (prefers-color-scheme: dark) {
-  .aviso-cuadro,
-  .aviso-revisar,
-  .aviso-advertencia {
-    background: #361b1b;
-    border-color: #8c3a3a;
-  }
-  .aviso-cuadro .aviso-contenido,
-  .aviso-revisar .aviso-contenido,
-  .aviso-advertencia .aviso-contenido,
-  .aviso-cuadro .aviso-contenido p,
-  .aviso-revisar .aviso-contenido p,
-  .aviso-advertencia .aviso-contenido p {
-    color: #f7d7d7;
-  }
-  .aviso-cuadro .aviso-contenido strong,
-  .aviso-revisar .aviso-contenido strong,
-  .aviso-advertencia .aviso-contenido strong {
-    color: #ffffff;
-  }
-}
-</style>
-
-
-</head>
-
-<body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <div class="book-container flex">
-    
-<aside class="book-menu" aria-label="Menu">
-  <div class="book-menu-content">
-    
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/">
-    <img src="/icono.png" alt="Logo" class="book-logo" />
-    
-  </a>
-</h2>
-
-<style>
-.book-logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0rem;
-  display: block;
-}
-
-.book-brand a {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.book-brand span {
-  margin-top: 0.5rem;
-}
-
-.book-brand img {
-    height: 3.5em;
-    width: 4.5em;
-}
-</style>
-
-
-
-
-
-<ul><li><a href="/">Inicio</a></li><li><a href="/languages/">Lenguajes</a></li><li><a href="/categories/">Categorías</a></li><li><a href="/professors/">Profesores</a></li><li><a href="/tags/">Tags</a></li></ul>
-
-
-
-
-
-<div class="book-search hidden">
-  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
-    placeholder="Search"
-    aria-label="Search"
-    maxlength="64" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results" aria-live="polite"></ul>
-</div>
-<script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
-
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
-
-  </div>
-</aside>
- 
-
-    <header class="book-header hidden">
-      
-  <div class="flex align-center justify-between gap">
-  <input type="checkbox" class="toggle" id="menu-control" />
-  <label for="menu-control" aria-label="Menu">
-    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
-  </label>
-
-  <h2 class="book-brand">
-  <a class="flex align-center" href="/">
-    <img src="/icono.png" alt="Logo" class="book-logo" />
-    
-  </a>
-</h2>
-
-<style>
-.book-logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0rem;
-  display: block;
-}
-
-.book-brand a {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.book-brand span {
-  margin-top: 0.5rem;
-}
-
-.book-brand img {
-    height: 3.5em;
-    width: 4.5em;
-}
-</style>
-
-
-  
-  <input type="checkbox" class="toggle" id="toc-control" />
-  <label for="toc-control" aria-label="Table of Contents">
-    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
-  </label>
-  
-</div>
-
- 
-    </header>
-
-    <main class="book-page">
-      
-  
-<div class="exercise-metadata">
-  
-  <div class="metadata-item">
-    <span class="metadata-label">📅 Fecha:</span>
-    <time datetime="2024-01-01">01/01/2024</time>
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">💻 Lenguajes:</span>
-    
-      <a href="/languages/c/" class="badge badge-language">C</a>
-    
-      <a href="/languages/matlab/" class="badge badge-language">Matlab</a>
-    
-      <a href="/languages/pseudoc%C3%B3digo/" class="badge badge-language">Pseudocódigo</a>
-    
-  </div>
-  
-  
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">📂 Categorías:</span>
-    
-      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
-    
-  </div>
-  
-  
-  
-</div>
-
-<style>
-.exercise-metadata {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-radius: 6px;
-  border-left: 4px solid #007bff;
-}
-
-.metadata-item {
-  margin: 0.5rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.metadata-label {
-  font-weight: 600;
-  color: #495057;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  line-height: 1;
-  border-radius: 12px;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
- 
-a.badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  filter: brightness(1.1);
-}
-
-.badge-language {
-  background-color: #007bff;
-  color: white !important;
-}
-
-.badge-professor {
-  background-color: #28a745;
-  color: white !important;
-}
-
-.badge-category {
-  background-color: #ffc107;
-  color: #212529 !important;
-}
-
-.badge-tag {
-  background-color: #6c757d;
-  color: white !important;
-}
-
- 
-@media (prefers-color-scheme: dark) {
-  .exercise-metadata {
-    background-color: #2d3748;
-    border-left-color: #4299e1;
-  }
-  
-  .metadata-label {
-    color: #e2e8f0;
-  }
-  
-  .badge-category {
-    background-color: #d69e2e;
-    color: #1a202c !important;
-  }
-}
-</style>
-
-
-
-
-      
-  
-
-      
-  <article class="markdown book-article"><h1 id="cambio-de-los-duplicados-de-un-array">Cambio de los duplicados de un array<a class="anchor" href="#cambio-de-los-duplicados-de-un-array" aria-label="Link"></a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
-<p>Diseñar un procedimiento que acepte como parámetro un vector que pueda contener elementos duplicados. El procedimiento debe reemplazar cada elemento repetido por -1 y devolver el vector modificado, además del número de modificaciones hecho.</p>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
-<h3 id="diseño-en-pseudocódigo">Diseño en Pseudocódigo<a class="anchor" href="#dise%c3%b1o-en-pseudoc%c3%b3digo" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">  PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO)
-</span></span><span class="line"><span class="cl">  ENTRADAS:
-</span></span><span class="line"><span class="cl">    V: ARRAY DE REALES  &#39;&#39;(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)&#39;&#39;
-</span></span><span class="line"><span class="cl">    n: ENTERO           &#39;&#39;(*Número de elementos del array*)&#39;&#39;
-</span></span><span class="line"><span class="cl">  SALIDA:
-</span></span><span class="line"><span class="cl">    V: ARRAY DE REALES  &#39;&#39;(*Array con los elementos repetidos sustituidos por -1*)&#39;&#39;
-</span></span><span class="line"><span class="cl">    nmodif: ENTERO      &#39;&#39;(*Número de elementos modificados en el array*)&#39;&#39;
-</span></span><span class="line"><span class="cl">  VARIABLES: 
-</span></span><span class="line"><span class="cl">    i, j: REAL 
-</span></span><span class="line"><span class="cl">  INICIO
-</span></span><span class="line"><span class="cl">    nmodif &lt;-- 0
-</span></span><span class="line"><span class="cl">    PARA i &lt;-- 1 HASTA n-1 CON INCREMENTO DE 1 HACER
-</span></span><span class="line"><span class="cl">      PARA j &lt;-- i+1 HASTA n CON INCREMENTO DE 1 HACER
-</span></span><span class="line"><span class="cl">        SI ( V(i)=V(j) Y V(j)&lt;&gt;-1 ) ENTONCES
-</span></span><span class="line"><span class="cl">          V(j) &lt;-- -1
-</span></span><span class="line"><span class="cl">          nmodif &lt;-- nmodif+1
-</span></span><span class="line"><span class="cl">        FIN SI
-</span></span><span class="line"><span class="cl">      FIN PARA
-</span></span><span class="line"><span class="cl">    FIN PARA
-</span></span><span class="line"><span class="cl">  FIN</span></span></code></pre></div><h3 id="programa-en-c">Programa en C<a class="anchor" href="#programa-en-c" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"> <span class="kt">void</span> <span class="nf">Repeticion</span><span class="p">(</span><span class="kt">float</span> <span class="n">V</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">nmodif</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">    <span class="cm">/*-------
-</span></span></span><span class="line"><span class="cl"><span class="cm">    ENTRADAS:
-</span></span></span><span class="line"><span class="cl"><span class="cm">      V: Array contiene los elementos repetidos. El array empieza en la posición 0
-</span></span></span><span class="line"><span class="cl"><span class="cm">      n: Números de elementos del array
-</span></span></span><span class="line"><span class="cl"><span class="cm">    SALIDAS:
-</span></span></span><span class="line"><span class="cl"><span class="cm">      V:      Array con los elementos repetidos sustituidos por -1
-</span></span></span><span class="line"><span class="cl"><span class="cm">      nmodif: número de elementos modificados en el array
-</span></span></span><span class="line"><span class="cl"><span class="cm">    ---------*/</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//VARIABLES:
-</span></span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">    <span class="n">nmodif</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">       <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="p">(</span> <span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">V</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">V</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">){</span>
-</span></span><span class="line"><span class="cl">             <span class="n">V</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">             <span class="n">nmodif</span><span class="o">=</span><span class="n">nmodif</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">       <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>         
-</span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div><h3 id="solución-en-matlab">Solución en Matlab<a class="anchor" href="#soluci%c3%b3n-en-matlab" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>[v,nrepe]<span class="p">=</span><span class="nf">Repeticion</span><span class="p">(</span>w<span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="c">%FUNCION [v,nrepe]=Repeticion(w)</span>
-</span></span><span class="line"><span class="cl"><span class="c">%DESCRIPCION: Cambia los elementos repetidos de un vector por -1.</span>
-</span></span><span class="line"><span class="cl"><span class="c">%PARÁMETROS DE ENTRADA:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%   w: ARRAY DE ENTEROS, vector con elementos repetidos.</span>
-</span></span><span class="line"><span class="cl"><span class="c">%PARÁMETROS DE SALIDA:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%   v: ARRAY DE ENTEROS, vector con los repetidos cambiados por -1</span>
-</span></span><span class="line"><span class="cl"><span class="c">%   nrepe: ENTERO, número de repeticiones encontradas.</span>
-</span></span><span class="line"><span class="cl"><span class="c">%VARIABLES:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%   n,pos1,pos2:ENTEROS</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">v</span><span class="p">=</span><span class="n">w</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">n</span><span class="p">=</span><span class="nb">length</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">nrepe</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">pos1</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">pos2</span><span class="p">=</span><span class="n">pos1</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">v</span><span class="p">(</span><span class="n">pos1</span><span class="p">))</span><span class="o">==</span><span class="p">(</span><span class="n">v</span><span class="p">(</span><span class="n">pos2</span><span class="p">))</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">v</span><span class="p">(</span><span class="n">pos2</span><span class="p">)</span><span class="o">~=-</span><span class="mi">1</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">            <span class="n">v</span><span class="p">(</span><span class="n">pos2</span><span class="p">)=</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">nrepe</span><span class="p">=</span><span class="n">nrepe</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">end</span>
-</span></span><span class="line"><span class="cl">    <span class="k">end</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div></article>
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-<div>
-
-</div>
-
-<div>
-
-</div>
-
-</div>
-
-<div class="flex flex-wrap justify-between">
-    <span>
-    
-      <a href="/ejercicios/c-lculo-n-mero-combinatorio/" class="flex align-center">
-        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
-        <span>Cálculo número combinatorio</span>
-      </a>
-    
-    </span>
-    <span>
-    
-      <a href="/ejercicios/comparar-dos-arrays/" class="flex align-center">
-        <span>Comparar dos arrays</span>
-        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
-      </a>
-    
-    </span>
-  </div>
-
- 
-        
-  
- 
-        
-        
-  
- 
-        
-  
-    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
-  
-
-      </footer>
-
-      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
-    </main>
-
-    
-  
-  <aside class="book-toc" aria-label="Table of Contents">
-    <div class="book-toc-content">
-      
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#diseño-en-pseudocódigo">Diseño en Pseudocódigo</a></li>
-        <li><a href="#programa-en-c">Programa en C</a></li>
-        <li><a href="#solución-en-matlab">Solución en Matlab</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-
-
-
-
-    </div>
-  </aside>
-  
- 
-  </div>
-
-  
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!doctype html><html lang=es-es dir=ltr data-theme=auto data-layout=centered><head><meta name=generator content="Hugo 0.169.0"><meta name=generator-theme content="Book Theme: https://github.com/alex-shpak/hugo-book"><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Cambio de los duplicados de un array Enunciado Diseñar un procedimiento que acepte como parámetro un vector que pueda contener elementos duplicados. El procedimiento debe reemplazar cada elemento repetido por -1 y devolver el vector modificado, además del número de modificaciones hecho.
+Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO) ENTRADAS: V: ARRAY DE REALES ''(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)'' n: ENTERO ''(*Número de elementos del array*)'' SALIDA: V: ARRAY DE REALES ''(*Array con los elementos repetidos sustituidos por -1*)'' nmodif: ENTERO ''(*Número de elementos modificados en el array*)'' VARIABLES: i, j: REAL INICIO nmodif <-- 0 PARA i <-- 1 HASTA n-1 CON INCREMENTO DE 1 HACER PARA j <-- i+1 HASTA n CON INCREMENTO DE 1 HACER SI ( V(i)=V(j) Y V(j)<>-1 ) ENTONCES V(j) <-- -1 nmodif <-- nmodif+1 FIN SI FIN PARA FIN PARA FIN Programa en C #include <stdio.h> #include <stdlib.h> void Repeticion(float V[n], int n , int &amp;nmodif){ /*------- ENTRADAS: V: Array contiene los elementos repetidos. El array empieza en la posición 0 n: Números de elementos del array SALIDAS: V: Array con los elementos repetidos sustituidos por -1 nmodif: número de elementos modificados en el array ---------*/ //VARIABLES: float i,j; nmodif=0; for (i=0; i<=n-2; i++){ for (j=i+1; j<=n-1; j++){ if ( V[i]==V[j] && V[j] != -1 ){ V[j]=-1; nmodif=nmodif+1; } } } } Solución en Matlab function [v,nrepe]=Repeticion(w) %FUNCION [v,nrepe]=Repeticion(w) %DESCRIPCION: Cambia los elementos repetidos de un vector por -1. %PARÁMETROS DE ENTRADA: % w: ARRAY DE ENTEROS, vector con elementos repetidos. %PARÁMETROS DE SALIDA: % v: ARRAY DE ENTEROS, vector con los repetidos cambiados por -1 % nrepe: ENTERO, número de repeticiones encontradas. %VARIABLES: % n,pos1,pos2:ENTEROS v=w; n=length(v) nrepe=0; for pos1=1:n for pos2=pos1+1:n if(v(pos1))==(v(pos2))&&(v(pos2)~=-1), v(pos2)=-1; nrepe=nrepe+1; end end end"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#2e3440"><meta name=color-scheme content="light dark"><meta name=format-detection content="telephone=no"><meta property="og:url" content="https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/cambio-de-los-duplicados-de-un-array/"><meta property="og:site_name" content="Ejercicios de Programación"><meta property="og:title" content="Cambio de los duplicados de un array"><meta property="og:description" content="Cambio de los duplicados de un array Enunciado Diseñar un procedimiento que acepte como parámetro un vector que pueda contener elementos duplicados. El procedimiento debe reemplazar cada elemento repetido por -1 y devolver el vector modificado, además del número de modificaciones hecho.
+Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO) ENTRADAS: V: ARRAY DE REALES ''(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)'' n: ENTERO ''(*Número de elementos del array*)'' SALIDA: V: ARRAY DE REALES ''(*Array con los elementos repetidos sustituidos por -1*)'' nmodif: ENTERO ''(*Número de elementos modificados en el array*)'' VARIABLES: i, j: REAL INICIO nmodif <-- 0 PARA i <-- 1 HASTA n-1 CON INCREMENTO DE 1 HACER PARA j <-- i+1 HASTA n CON INCREMENTO DE 1 HACER SI ( V(i)=V(j) Y V(j)<>-1 ) ENTONCES V(j) <-- -1 nmodif <-- nmodif+1 FIN SI FIN PARA FIN PARA FIN Programa en C #include <stdio.h> #include <stdlib.h> void Repeticion(float V[n], int n , int &amp;nmodif){ /*------- ENTRADAS: V: Array contiene los elementos repetidos. El array empieza en la posición 0 n: Números de elementos del array SALIDAS: V: Array con los elementos repetidos sustituidos por -1 nmodif: número de elementos modificados en el array ---------*/ //VARIABLES: float i,j; nmodif=0; for (i=0; i<=n-2; i++){ for (j=i+1; j<=n-1; j++){ if ( V[i]==V[j] && V[j] != -1 ){ V[j]=-1; nmodif=nmodif+1; } } } } Solución en Matlab function [v,nrepe]=Repeticion(w) %FUNCION [v,nrepe]=Repeticion(w) %DESCRIPCION: Cambia los elementos repetidos de un vector por -1. %PARÁMETROS DE ENTRADA: % w: ARRAY DE ENTEROS, vector con elementos repetidos. %PARÁMETROS DE SALIDA: % v: ARRAY DE ENTEROS, vector con los repetidos cambiados por -1 % nrepe: ENTERO, número de repeticiones encontradas. %VARIABLES: % n,pos1,pos2:ENTEROS v=w; n=length(v) nrepe=0; for pos1=1:n for pos2=pos1+1:n if(v(pos1))==(v(pos2))&&(v(pos2)~=-1), v(pos2)=-1; nrepe=nrepe+1; end end end"><meta property="og:locale" content="es_es"><meta property="og:type" content="article"><meta property="article:section" content="ejercicios"><meta property="article:published_time" content="2024-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2024-01-01T00:00:00+00:00"><meta itemprop=name content="Cambio de los duplicados de un array"><meta itemprop=description content="Cambio de los duplicados de un array Enunciado Diseñar un procedimiento que acepte como parámetro un vector que pueda contener elementos duplicados. El procedimiento debe reemplazar cada elemento repetido por -1 y devolver el vector modificado, además del número de modificaciones hecho.
+Soluciones Diseño en Pseudocódigo PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO) ENTRADAS: V: ARRAY DE REALES ''(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)'' n: ENTERO ''(*Número de elementos del array*)'' SALIDA: V: ARRAY DE REALES ''(*Array con los elementos repetidos sustituidos por -1*)'' nmodif: ENTERO ''(*Número de elementos modificados en el array*)'' VARIABLES: i, j: REAL INICIO nmodif <-- 0 PARA i <-- 1 HASTA n-1 CON INCREMENTO DE 1 HACER PARA j <-- i+1 HASTA n CON INCREMENTO DE 1 HACER SI ( V(i)=V(j) Y V(j)<>-1 ) ENTONCES V(j) <-- -1 nmodif <-- nmodif+1 FIN SI FIN PARA FIN PARA FIN Programa en C #include <stdio.h> #include <stdlib.h> void Repeticion(float V[n], int n , int &amp;nmodif){ /*------- ENTRADAS: V: Array contiene los elementos repetidos. El array empieza en la posición 0 n: Números de elementos del array SALIDAS: V: Array con los elementos repetidos sustituidos por -1 nmodif: número de elementos modificados en el array ---------*/ //VARIABLES: float i,j; nmodif=0; for (i=0; i<=n-2; i++){ for (j=i+1; j<=n-1; j++){ if ( V[i]==V[j] && V[j] != -1 ){ V[j]=-1; nmodif=nmodif+1; } } } } Solución en Matlab function [v,nrepe]=Repeticion(w) %FUNCION [v,nrepe]=Repeticion(w) %DESCRIPCION: Cambia los elementos repetidos de un vector por -1. %PARÁMETROS DE ENTRADA: % w: ARRAY DE ENTEROS, vector con elementos repetidos. %PARÁMETROS DE SALIDA: % v: ARRAY DE ENTEROS, vector con los repetidos cambiados por -1 % nrepe: ENTERO, número de repeticiones encontradas. %VARIABLES: % n,pos1,pos2:ENTEROS v=w; n=length(v) nrepe=0; for pos1=1:n for pos2=pos1+1:n if(v(pos1))==(v(pos2))&&(v(pos2)~=-1), v(pos2)=-1; nrepe=nrepe+1; end end end"><meta itemprop=datePublished content="2024-01-01T00:00:00+00:00"><meta itemprop=dateModified content="2024-01-01T00:00:00+00:00"><meta itemprop=wordCount content="302"><meta itemprop=keywords content="Enunciado,C,Matlab,Pseudocódigo"><title>Cambio de los duplicados de un array • Ejercicios de Programación</title><link rel=icon href=/Ejercicios-programacion/favicon.svg type=image/svg+xml><link rel=icon href=/Ejercicios-programacion/favicon.png sizes=any><link rel=apple-touch-icon href=/Ejercicios-programacion/apple-touch-icon.png><link rel=manifest href=/Ejercicios-programacion/manifest.json><link rel=canonical href=https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/cambio-de-los-duplicados-de-un-array/><link rel=stylesheet href=/Ejercicios-programacion/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css integrity="sha256-O0fFwwU93RhGtEygJ4+TZdHMbe8MVu+u5Pu4t6V8eCs=" crossorigin=anonymous><script type=module src=/Ejercicios-programacion/en.search.min.e9ba19edb4a6c661df9f383eec42435012df2d3fc63488e5c4a37272dae6f7a2.js integrity="sha256-6boZ7bSmxmHfnzg+7EJDUBLfLT/GNIjlxKNyctrm96I=" crossorigin=anonymous></script><link rel=stylesheet href=/syntax.css><style>.highlight,.chroma,pre.chroma{background-color:#272822!important;color:#f8f8f2!important;padding:1rem;border-radius:4px;overflow-x:auto}.highlight pre{background-color:transparent;margin:0;padding:0}.markdown code,code{background-color:#3a3a3a!important;color:#f8f8f2!important;padding:.2em .4em;border-radius:3px;font-family:monospace}pre code,.markdown pre code{background-color:transparent!important;padding:0}.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#ffeae1;border:1px solid #faa;border-radius:4px;padding:10px 14px;margin:1.2rem 0;display:flex;align-items:center;gap:15px;box-sizing:border-box}.aviso-cuadro .aviso-icono,.aviso-revisar .aviso-icono,.aviso-advertencia .aviso-icono{flex-shrink:0;display:flex;align-items:center}.aviso-cuadro .aviso-icono img,.aviso-revisar .aviso-icono img,.aviso-advertencia .aviso-icono img{width:80px;height:40px;max-width:none;object-fit:contain;border:0;display:block;margin:0}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido{flex:1;font-size:.95rem;line-height:1.45;color:#222}.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{margin:0;color:#222}.aviso-cuadro .aviso-contenido p+p,.aviso-revisar .aviso-contenido p+p,.aviso-advertencia .aviso-contenido p+p{margin-top:4px}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#111;font-weight:700}@media(prefers-color-scheme:dark){.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#361b1b;border-color:#8c3a3a}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido,.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{color:#f7d7d7}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#fff}}</style></head><body dir=ltr class="book-kind-page book-type-ejercicios"><div class="book-container flex"><aside class=book-menu aria-label=Menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><ul><li><a href=/Ejercicios-programacion/>Inicio</a></li><li><a href=/Ejercicios-programacion/languages/>Lenguajes</a></li><li><a href=/Ejercicios-programacion/categories/>Categorías</a></li><li><a href=/Ejercicios-programacion/professors/>Profesores</a></li><li><a href=/Ejercicios-programacion/tags/>Tags</a></li></ul><div class="book-search hidden"><input id=book-search-input type=text role=searchbox enterkeyhint=search placeholder=Search aria-label=Search maxlength=64><div class="book-search-spinner hidden"></div><ul id=book-search-results aria-live=polite></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><header class="book-header hidden"><div class="flex align-center justify-between gap"><input type=checkbox class=toggle id=menu-control>
+<label for=menu-control aria-label=Menu><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"/></svg></label><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><input type=checkbox class=toggle id=toc-control>
+<label for=toc-control aria-label="Table of Contents"><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"/></svg></label></div></header><main class=book-page><div class=exercise-metadata><div class=metadata-item><span class=metadata-label>📅 Fecha:</span>
+<time datetime=2024-01-01>01/01/2024</time></div><div class=metadata-item><span class=metadata-label>💻 Lenguajes:</span>
+<a href=/Ejercicios-programacion/languages/c/ class="badge badge-language">C</a>
+<a href=/Ejercicios-programacion/languages/matlab/ class="badge badge-language">Matlab</a>
+<a href=/Ejercicios-programacion/languages/pseudoc%C3%B3digo/ class="badge badge-language">Pseudocódigo</a></div><div class=metadata-item><span class=metadata-label>📂 Categorías:</span>
+<a href=/Ejercicios-programacion/categories/enunciado/ class="badge badge-category">Enunciado</a></div></div><style>.exercise-metadata{margin:1.5rem 0;padding:1rem;background-color:#f8f9fa;border-radius:6px;border-left:4px solid #007bff}.metadata-item{margin:.5rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}.metadata-label{font-weight:600;color:#495057;margin-right:.5rem;flex-shrink:0}.badge{display:inline-block;padding:.25rem .6rem;font-size:.85rem;font-weight:500;line-height:1;border-radius:12px;text-transform:capitalize;text-decoration:none;transition:all .2s ease;white-space:nowrap;flex-shrink:0}a.badge:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(0,0,0,.2);filter:brightness(1.1)}.badge-language{background-color:#007bff;color:#fff!important}.badge-professor{background-color:#28a745;color:#fff!important}.badge-category{background-color:#ffc107;color:#212529!important}.badge-tag{background-color:#6c757d;color:#fff!important}@media(prefers-color-scheme:dark){.exercise-metadata{background-color:#2d3748;border-left-color:#4299e1}.metadata-label{color:#e2e8f0}.badge-category{background-color:#d69e2e;color:#1a202c!important}}</style><article class="markdown book-article"><h1 id=cambio-de-los-duplicados-de-un-array>Cambio de los duplicados de un array<a class=anchor href=#cambio-de-los-duplicados-de-un-array aria-label=Link></a></h1><h2 id=enunciado>Enunciado<a class=anchor href=#enunciado aria-label=Link></a></h2><p>Diseñar un procedimiento que acepte como parámetro un vector que pueda contener elementos duplicados. El procedimiento debe reemplazar cada elemento repetido por -1 y devolver el vector modificado, además del número de modificaciones hecho.</p><h2 id=soluciones>Soluciones<a class=anchor href=#soluciones aria-label=Link></a></h2><h3 id=diseño-en-pseudocódigo>Diseño en Pseudocódigo<a class=anchor href=#dise%c3%b1o-en-pseudoc%c3%b3digo aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>  PROCEDIMIENTO Repeticion(VAR V: ARRAY DE REALES; n: ENTERO; VAR nmodif: ENTERO)
+</span></span><span class=line><span class=cl>  ENTRADAS:
+</span></span><span class=line><span class=cl>    V: ARRAY DE REALES  &#39;&#39;(*Array que contiene los elementos repetidos. En array empieza en la posición 1*)&#39;&#39;
+</span></span><span class=line><span class=cl>    n: ENTERO           &#39;&#39;(*Número de elementos del array*)&#39;&#39;
+</span></span><span class=line><span class=cl>  SALIDA:
+</span></span><span class=line><span class=cl>    V: ARRAY DE REALES  &#39;&#39;(*Array con los elementos repetidos sustituidos por -1*)&#39;&#39;
+</span></span><span class=line><span class=cl>    nmodif: ENTERO      &#39;&#39;(*Número de elementos modificados en el array*)&#39;&#39;
+</span></span><span class=line><span class=cl>  VARIABLES: 
+</span></span><span class=line><span class=cl>    i, j: REAL 
+</span></span><span class=line><span class=cl>  INICIO
+</span></span><span class=line><span class=cl>    nmodif &lt;-- 0
+</span></span><span class=line><span class=cl>    PARA i &lt;-- 1 HASTA n-1 CON INCREMENTO DE 1 HACER
+</span></span><span class=line><span class=cl>      PARA j &lt;-- i+1 HASTA n CON INCREMENTO DE 1 HACER
+</span></span><span class=line><span class=cl>        SI ( V(i)=V(j) Y V(j)&lt;&gt;-1 ) ENTONCES
+</span></span><span class=line><span class=cl>          V(j) &lt;-- -1
+</span></span><span class=line><span class=cl>          nmodif &lt;-- nmodif+1
+</span></span><span class=line><span class=cl>        FIN SI
+</span></span><span class=line><span class=cl>      FIN PARA
+</span></span><span class=line><span class=cl>    FIN PARA
+</span></span><span class=line><span class=cl>  FIN</span></span></code></pre></div><h3 id=programa-en-c>Programa en C<a class=anchor href=#programa-en-c aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> <span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl> <span class=cp>#include</span> <span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl> <span class=kt>void</span> <span class=nf>Repeticion</span><span class=p>(</span><span class=kt>float</span> <span class=n>V</span><span class=p>[</span><span class=n>n</span><span class=p>],</span> <span class=kt>int</span> <span class=n>n</span> <span class=p>,</span> <span class=kt>int</span> <span class=o>&amp;</span><span class=n>nmodif</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=cm>/*-------
+</span></span></span><span class=line><span class=cl><span class=cm>    ENTRADAS:
+</span></span></span><span class=line><span class=cl><span class=cm>      V: Array contiene los elementos repetidos. El array empieza en la posición 0
+</span></span></span><span class=line><span class=cl><span class=cm>      n: Números de elementos del array
+</span></span></span><span class=line><span class=cl><span class=cm>    SALIDAS:
+</span></span></span><span class=line><span class=cl><span class=cm>      V:      Array con los elementos repetidos sustituidos por -1
+</span></span></span><span class=line><span class=cl><span class=cm>      nmodif: número de elementos modificados en el array
+</span></span></span><span class=line><span class=cl><span class=cm>    ---------*/</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//VARIABLES:
+</span></span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>i</span><span class=p>,</span><span class=n>j</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>    <span class=n>nmodif</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;=</span><span class=n>n</span><span class=o>-</span><span class=mi>2</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>       <span class=k>for</span> <span class=p>(</span><span class=n>j</span><span class=o>=</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span> <span class=n>j</span><span class=o>&lt;=</span><span class=n>n</span><span class=o>-</span><span class=mi>1</span><span class=p>;</span> <span class=n>j</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>          <span class=k>if</span> <span class=p>(</span> <span class=n>V</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>==</span><span class=n>V</span><span class=p>[</span><span class=n>j</span><span class=p>]</span> <span class=o>&amp;&amp;</span> <span class=n>V</span><span class=p>[</span><span class=n>j</span><span class=p>]</span> <span class=o>!=</span> <span class=o>-</span><span class=mi>1</span> <span class=p>){</span>
+</span></span><span class=line><span class=cl>             <span class=n>V</span><span class=p>[</span><span class=n>j</span><span class=p>]</span><span class=o>=-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>             <span class=n>nmodif</span><span class=o>=</span><span class=n>nmodif</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>          <span class=p>}</span>
+</span></span><span class=line><span class=cl>       <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>         
+</span></span><span class=line><span class=cl> <span class=p>}</span></span></span></code></pre></div><h3 id=solución-en-matlab>Solución en Matlab<a class=anchor href=#soluci%c3%b3n-en-matlab aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-matlab data-lang=matlab><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>function</span><span class=w> </span>[v,nrepe]<span class=p>=</span><span class=nf>Repeticion</span><span class=p>(</span>w<span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=c>%FUNCION [v,nrepe]=Repeticion(w)</span>
+</span></span><span class=line><span class=cl><span class=c>%DESCRIPCION: Cambia los elementos repetidos de un vector por -1.</span>
+</span></span><span class=line><span class=cl><span class=c>%PARÁMETROS DE ENTRADA:</span>
+</span></span><span class=line><span class=cl><span class=c>%   w: ARRAY DE ENTEROS, vector con elementos repetidos.</span>
+</span></span><span class=line><span class=cl><span class=c>%PARÁMETROS DE SALIDA:</span>
+</span></span><span class=line><span class=cl><span class=c>%   v: ARRAY DE ENTEROS, vector con los repetidos cambiados por -1</span>
+</span></span><span class=line><span class=cl><span class=c>%   nrepe: ENTERO, número de repeticiones encontradas.</span>
+</span></span><span class=line><span class=cl><span class=c>%VARIABLES:</span>
+</span></span><span class=line><span class=cl><span class=c>%   n,pos1,pos2:ENTEROS</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=n>v</span><span class=p>=</span><span class=n>w</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>n</span><span class=p>=</span><span class=nb>length</span><span class=p>(</span><span class=n>v</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>nrepe</span><span class=p>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>pos1</span><span class=p>=</span><span class=mi>1</span><span class=p>:</span><span class=n>n</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>pos2</span><span class=p>=</span><span class=n>pos1</span><span class=o>+</span><span class=mi>1</span><span class=p>:</span><span class=n>n</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>v</span><span class=p>(</span><span class=n>pos1</span><span class=p>))</span><span class=o>==</span><span class=p>(</span><span class=n>v</span><span class=p>(</span><span class=n>pos2</span><span class=p>))</span><span class=o>&amp;&amp;</span><span class=p>(</span><span class=n>v</span><span class=p>(</span><span class=n>pos2</span><span class=p>)</span><span class=o>~=-</span><span class=mi>1</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>            <span class=n>v</span><span class=p>(</span><span class=n>pos2</span><span class=p>)=</span><span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>nrepe</span><span class=p>=</span><span class=n>nrepe</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>end</span>
+</span></span><span class=line><span class=cl>    <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span></span></span></code></pre></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class="flex flex-wrap justify-between"><span><a href=/Ejercicios-programacion/ejercicios/c-lculo-n-mero-combinatorio/ class="flex align-center"><svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"/></svg>
+<span>Cálculo número combinatorio</span>
+</a></span><span><a href=/Ejercicios-programacion/ejercicios/comparar-dos-arrays/ class="flex align-center"><span>Comparar dos arrays</span>
+<svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"/></svg></a></span></div><script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay" aria-hidden=true></label></main><aside class=book-toc aria-label="Table of Contents"><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#enunciado>Enunciado</a></li><li><a href=#soluciones>Soluciones</a><ul><li><a href=#diseño-en-pseudocódigo>Diseño en Pseudocódigo</a></li><li><a href=#programa-en-c>Programa en C</a></li><li><a href=#solución-en-matlab>Solución en Matlab</a></li></ul></li></ul></nav></div></aside></div></body></html>

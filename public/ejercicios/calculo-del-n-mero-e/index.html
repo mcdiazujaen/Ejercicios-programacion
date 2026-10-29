@@ -1,810 +1,253 @@
-<!DOCTYPE html>
-<html lang="es-es" dir="ltr"
-    data-theme="auto"
-    data-layout="centered">
-
-<head>
-  
-  <meta name="generator" content="Hugo 0.169.0">
-  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Calculo del número E Enunciado El número e (2.7183…) se puede aproximar mediante la suma:
+<!doctype html><html lang=es-es dir=ltr data-theme=auto data-layout=centered><head><meta name=generator content="Hugo 0.169.0"><meta name=generator-theme content="Book Theme: https://github.com/alex-shpak/hugo-book"><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Calculo del número E Enunciado El número e (2.7183…) se puede aproximar mediante la suma:
 Sumatorio de 1/n! desde n=0 hasta n=N
 En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·…·(n -1)·n). Recordemos que, por definición, 0!=1.
 Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.
-">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
-<meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/calculo-del-n-mero-e/">
-	<meta property="og:site_name" content="Ejercicios de Programación">
-	<meta property="og:title" content="Calculo del número E">
-	<meta property="og:description" content="Calculo del número E Enunciado El número e (2.7183…) se puede aproximar mediante la suma:
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#2e3440"><meta name=color-scheme content="light dark"><meta name=format-detection content="telephone=no"><meta property="og:url" content="https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/calculo-del-n-mero-e/"><meta property="og:site_name" content="Ejercicios de Programación"><meta property="og:title" content="Calculo del número E"><meta property="og:description" content="Calculo del número E Enunciado El número e (2.7183…) se puede aproximar mediante la suma:
 Sumatorio de 1/n! desde n=0 hasta n=N
 En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·…·(n -1)·n). Recordemos que, por definición, 0!=1.
-Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.">
-	<meta property="og:locale" content="es_es">
-	<meta property="og:type" content="article">
-		<meta property="article:section" content="ejercicios">
-		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-		<meta property="article:tag" content="Sin Pseudocódigo">
-
-
-	<meta itemprop="name" content="Calculo del número E">
-	<meta itemprop="description" content="Calculo del número E Enunciado El número e (2.7183…) se puede aproximar mediante la suma:
+Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!."><meta property="og:locale" content="es_es"><meta property="og:type" content="article"><meta property="article:section" content="ejercicios"><meta property="article:published_time" content="2024-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2024-01-01T00:00:00+00:00"><meta property="article:tag" content="Sin Pseudocódigo"><meta itemprop=name content="Calculo del número E"><meta itemprop=description content="Calculo del número E Enunciado El número e (2.7183…) se puede aproximar mediante la suma:
 Sumatorio de 1/n! desde n=0 hasta n=N
 En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·…·(n -1)·n). Recordemos que, por definición, 0!=1.
-Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.">
-	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="wordCount" content="1020">
-	<meta itemprop="keywords" content="Sin Pseudocódigo">
-
-<title>Calculo del número E • Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.png" sizes="any">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-<link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/ejercicios/calculo-del-n-mero-e/">
-<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
-
-
-<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/syntax.css">
-<style>
- 
-.highlight,
-.chroma,
-pre.chroma {
-  background-color: #272822 !important;
-  color: #f8f8f2 !important;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-.highlight pre {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-}
-
- 
- 
-.markdown code,
-code {
-  background-color: #3a3a3a !important;
-  color: #f8f8f2 !important;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-family: monospace;
-}
-
- 
-pre code,
-.markdown pre code {
-  background-color: transparent !important;
-  padding: 0;
-}
-
- 
-.aviso-cuadro,
-.aviso-revisar,
-.aviso-advertencia {
-  background: #ffeae1;
-  border: 1px solid #ffaaaa;
-  border-radius: 4px;
-  padding: 10px 14px;
-  margin: 1.2rem 0;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-sizing: border-box;
-}
-
-.aviso-cuadro .aviso-icono,
-.aviso-revisar .aviso-icono,
-.aviso-advertencia .aviso-icono {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.aviso-cuadro .aviso-icono img,
-.aviso-revisar .aviso-icono img,
-.aviso-advertencia .aviso-icono img {
-  width: 80px;
-  height: 40px;
-  max-width: none;
-  object-fit: contain;
-  border: 0;
-  display: block;
-  margin: 0;
-}
-
-.aviso-cuadro .aviso-contenido,
-.aviso-revisar .aviso-contenido,
-.aviso-advertencia .aviso-contenido {
-  flex: 1;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: #222222;
-}
-
-.aviso-cuadro .aviso-contenido p,
-.aviso-revisar .aviso-contenido p,
-.aviso-advertencia .aviso-contenido p {
-  margin: 0;
-  color: #222222;
-}
-
-.aviso-cuadro .aviso-contenido p + p,
-.aviso-revisar .aviso-contenido p + p,
-.aviso-advertencia .aviso-contenido p + p {
-  margin-top: 4px;
-}
-
-.aviso-cuadro .aviso-contenido strong,
-.aviso-revisar .aviso-contenido strong,
-.aviso-advertencia .aviso-contenido strong {
-  color: #111111;
-  font-weight: 700;
-}
-
-@media (prefers-color-scheme: dark) {
-  .aviso-cuadro,
-  .aviso-revisar,
-  .aviso-advertencia {
-    background: #361b1b;
-    border-color: #8c3a3a;
-  }
-  .aviso-cuadro .aviso-contenido,
-  .aviso-revisar .aviso-contenido,
-  .aviso-advertencia .aviso-contenido,
-  .aviso-cuadro .aviso-contenido p,
-  .aviso-revisar .aviso-contenido p,
-  .aviso-advertencia .aviso-contenido p {
-    color: #f7d7d7;
-  }
-  .aviso-cuadro .aviso-contenido strong,
-  .aviso-revisar .aviso-contenido strong,
-  .aviso-advertencia .aviso-contenido strong {
-    color: #ffffff;
-  }
-}
-</style>
-
-
-</head>
-
-<body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <div class="book-container flex">
-    
-<aside class="book-menu" aria-label="Menu">
-  <div class="book-menu-content">
-    
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/">
-    <img src="/icono.png" alt="Logo" class="book-logo" />
-    
-  </a>
-</h2>
-
-<style>
-.book-logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0rem;
-  display: block;
-}
-
-.book-brand a {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.book-brand span {
-  margin-top: 0.5rem;
-}
-
-.book-brand img {
-    height: 3.5em;
-    width: 4.5em;
-}
-</style>
-
-
-
-
-
-<ul><li><a href="/">Inicio</a></li><li><a href="/languages/">Lenguajes</a></li><li><a href="/categories/">Categorías</a></li><li><a href="/professors/">Profesores</a></li><li><a href="/tags/">Tags</a></li></ul>
-
-
-
-
-
-<div class="book-search hidden">
-  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
-    placeholder="Search"
-    aria-label="Search"
-    maxlength="64" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results" aria-live="polite"></ul>
-</div>
-<script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
-
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
-
-  </div>
-</aside>
- 
-
-    <header class="book-header hidden">
-      
-  <div class="flex align-center justify-between gap">
-  <input type="checkbox" class="toggle" id="menu-control" />
-  <label for="menu-control" aria-label="Menu">
-    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
-  </label>
-
-  <h2 class="book-brand">
-  <a class="flex align-center" href="/">
-    <img src="/icono.png" alt="Logo" class="book-logo" />
-    
-  </a>
-</h2>
-
-<style>
-.book-logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0rem;
-  display: block;
-}
-
-.book-brand a {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.book-brand span {
-  margin-top: 0.5rem;
-}
-
-.book-brand img {
-    height: 3.5em;
-    width: 4.5em;
-}
-</style>
-
-
-  
-  <input type="checkbox" class="toggle" id="toc-control" />
-  <label for="toc-control" aria-label="Table of Contents">
-    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
-  </label>
-  
-</div>
-
- 
-    </header>
-
-    <main class="book-page">
-      
-  
-<div class="exercise-metadata">
-  
-  <div class="metadata-item">
-    <span class="metadata-label">📅 Fecha:</span>
-    <time datetime="2024-01-01">01/01/2024</time>
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">💻 Lenguajes:</span>
-    
-      <a href="/languages/c/" class="badge badge-language">C</a>
-    
-      <a href="/languages/matlab/" class="badge badge-language">Matlab</a>
-    
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">👨‍🏫 Profesores:</span>
-    
-      <a href="/professors/angel/" class="badge badge-professor">Angel</a>
-    
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">📂 Categorías:</span>
-    
-      <a href="/categories/an%C3%A1lisis/" class="badge badge-category">Análisis</a>
-    
-      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
-    
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">🏷️ Tags:</span>
-    
-      <a href="/tags/sin-pseudoc%C3%B3digo/" class="badge badge-tag">Sin Pseudocódigo</a>
-    
-  </div>
-  
-</div>
-
-<style>
-.exercise-metadata {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-radius: 6px;
-  border-left: 4px solid #007bff;
-}
-
-.metadata-item {
-  margin: 0.5rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.metadata-label {
-  font-weight: 600;
-  color: #495057;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  line-height: 1;
-  border-radius: 12px;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
- 
-a.badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  filter: brightness(1.1);
-}
-
-.badge-language {
-  background-color: #007bff;
-  color: white !important;
-}
-
-.badge-professor {
-  background-color: #28a745;
-  color: white !important;
-}
-
-.badge-category {
-  background-color: #ffc107;
-  color: #212529 !important;
-}
-
-.badge-tag {
-  background-color: #6c757d;
-  color: white !important;
-}
-
- 
-@media (prefers-color-scheme: dark) {
-  .exercise-metadata {
-    background-color: #2d3748;
-    border-left-color: #4299e1;
-  }
-  
-  .metadata-label {
-    color: #e2e8f0;
-  }
-  
-  .badge-category {
-    background-color: #d69e2e;
-    color: #1a202c !important;
-  }
-}
-</style>
-
-
-
-
-      
-  
-
-      
-  <article class="markdown book-article"><h1 id="calculo-del-número-e">Calculo del número E<a class="anchor" href="#calculo-del-n%c3%bamero-e" aria-label="Link"></a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
-<p>El número <strong>e</strong> (2.7183&hellip;) se puede aproximar mediante la suma:</p>
-<p><img src="images/0/05/Numero_e.GIF" alt="Imagen:Numero_e.GIF" /></p>
-<p>Sumatorio de 1/n! desde n=0 hasta n=N</p>
-<p>En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·&hellip;·(n -1)·n). Recordemos que, por definición, 0!=1.</p>
-<p>Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.</p>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
-<h3 id="programa-en-c-por-angel">Programa en C por <strong>angel</strong><a class="anchor" href="#programa-en-c-por-angel" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Este programa realiza la aproximacion al numero e.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Lo hemos realizado de 2 maneras:
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * - Recursivamente.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * - Forma mas eficiente (sin usar recursividad).
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Un ejemplo: (introduciendo 10000 terminos)
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * - Recursividad: 12 segundos aproximadamente
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * - Eficientemente: Se obtiene el resultado instantaneamente.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
-</span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#define OK 1
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#define ERR -10001
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#define NO 0
-</span></span></span><span class="line"><span class="cl"> <span class="cp">#define MAX_TERM 1000000
-</span></span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="n">n_term</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="n">eficiente</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">lectura</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">eficiente</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">n_term</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">calcular</span><span class="p">(</span><span class="kt">float</span> <span class="n">n_term</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">sacarpantalla</span><span class="p">(</span><span class="kt">float</span> <span class="n">numeroe</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">es_digito</span><span class="p">(</span><span class="kt">char</span> <span class="n">caracter</span><span class="p">[]);</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">  <span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="nf">lectura</span><span class="p">(</span><span class="o">&amp;</span><span class="n">eficiente</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n_term</span><span class="p">)</span> <span class="o">==</span> <span class="n">ERR</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error al leer el numero de terminos</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="nf">sacarpantalla</span><span class="p">(</span><span class="nf">calcular</span><span class="p">(</span><span class="n">n_term</span><span class="p">))</span> <span class="o">==</span> <span class="n">ERR</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error al sacar por pantalla/calcular el numero</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="n">OK</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: int sacarpantalla(float numeroe)
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Toma la variable numeroe de tipo float.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: Devuelve OK si lo consigue, ERR si hay algun
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Saca por pantalla el resultado. No modifica ninguna  variable.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">sacarpantalla</span><span class="p">(</span><span class="kt">float</span> <span class="n">numeroe</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">El valor de la aproximacion al numero e es: %f</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">numeroe</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">OK</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: int lectura(int *eficiente, float *n_term)
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Toma la direccion de la variable eficiente, y el numero de  términos
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: Nos devuelve OK si lo consigue ERR si hay algun fallo.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Se encarga de leer el numero de terminos a calcular.  Modifica
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * n_term y eficiente.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">lectura</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">eficiente</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">n_term</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="n">numero</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">continuar</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Introduzca el numero de terminos a calcular del numero e: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="nf">gets</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span> <span class="p">((</span><span class="o">*</span><span class="n">n_term</span> <span class="o">=</span> <span class="nf">es_digito</span><span class="p">(</span><span class="n">numero</span><span class="p">))</span> <span class="o">==</span> <span class="n">ERR</span> <span class="o">||</span> <span class="p">(</span><span class="o">*</span><span class="n">n_term</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Desea usar el modo de calculo rapido? [S,N]:</span><span class="se">\t</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="nf">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="nf">fflush</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">temp</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="nf">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">((</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;S&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;N&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;s&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;n&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">       <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="n">continuar</span> <span class="o">=</span> <span class="n">OK</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="p">((</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;S&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="sc">&#39;s&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">         <span class="o">*</span><span class="n">eficiente</span> <span class="o">=</span> <span class="n">OK</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span>
-</span></span><span class="line"><span class="cl">         <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="o">*</span><span class="n">eficiente</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="p">(</span><span class="nf">strlen</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="cm">/* Permitimos hasta el numero 9999 */</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">             <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Si desea calcular este numero con recursividad puede ocasionar problemas.&#34;</span><span class="p">);</span> 
-</span></span><span class="line"><span class="cl"> <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Intentelo con la manera eficiente.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"> <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">else</span>
-</span></span><span class="line"><span class="cl">  <span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="n">continuar</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Por favor introduzca un valor valido!!! </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">continuar</span> <span class="o">!=</span> <span class="n">OK</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">OK</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: float calcular(float terminos)
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Numero de terminos para realizar la aproximacion.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: La aproximacion al numero e si es correcto o ERR si ha habido un
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * fallo.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Calcula la serie: 1 entre el factorial de un numero dado.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">calcular</span><span class="p">(</span><span class="kt">float</span> <span class="n">terminos</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">facto</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="cm">/* Va a ir acumulando el valor del factorial cuando se haya seleccionado &#34;eficiente&#34; */</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">eficiente</span> <span class="o">==</span> <span class="n">OK</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">   <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Se esta calculando el numero e de la manera mas eficiente.&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">e</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">terminos</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="n">facto</span> <span class="o">*=</span> <span class="n">n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">e</span> <span class="o">+=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">facto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">e</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="k">else</span> <span class="cm">/* Calculamos la serie usando recursividad */</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="k">do</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="n">e</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="nf">factorial</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="n">terminos</span><span class="o">--</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">         <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">terminos</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Se esta calculando el numero e usando recursividad.&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">e</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: float factorial (int n)
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Numero de terminos de los que se calcularan sucesivos   factoriales
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: El factorial del numero o ERR si ha habido algun error.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Calcula el factorial de un numero dado.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">float</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">else</span>
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/*********************************************************
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Funcion: int es_digito(char caracter)
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * IN: Se le da una serie de caracteres para que se pasen a numero
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * OUT: Nos devolvera ERR si se produce un eroor
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * MAKE: Comprueba la integridad de los datos
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *
-</span></span></span><span class="line"><span class="cl"><span class="cm"> **********************************************************/</span>
-</span></span><span class="line"><span class="cl"> <span class="kt">int</span> <span class="nf">es_digito</span><span class="p">(</span><span class="kt">char</span> <span class="n">caracter</span><span class="p">[])</span>
-</span></span><span class="line"><span class="cl">  <span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">i</span><span class="p">;</span> 
-</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">rango</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="cm">/* Si la cadena esta vacía */</span>
-</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="n">caracter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="n">caracter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="cm">/* Si se ha introducido un numero negativo */</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="cm">/* Empezamos el bucle para ver si es caracter desde el siguiente caracter */</span>
-</span></span><span class="line"><span class="cl">      <span class="n">rango</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="cm">/* Debe un numero positivo o hay algun error */</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">rango</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/* Comprobamos que todos los elementos sean digitos */</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/* El mayor numero permitido es 9999999 */</span>
-</span></span><span class="line"><span class="cl"> <span class="k">if</span> <span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">rango</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;No puede introducir esa cantidad de numeros!!!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Es demasiado grande. Rango: -9999999 y 9999999</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">caracter</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">caracter</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">||</span> <span class="n">caracter</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">   <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Introduzca unicamente digitos, por favor.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ERR</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/* Si solo se ha introducido un caracter */</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nf">strlen</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">num</span> <span class="o">=</span> <span class="n">caracter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="cm">/* Devolvemos el digito */</span>
-</span></span><span class="line"><span class="cl"> <span class="cm">/* Si hay mas de un caracter */</span>
-</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">caracter</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">       <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">caracter</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div><h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>res<span class="p">=</span><span class="nf">factorial_recursivo</span><span class="p">(</span>n<span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="c">% FUNCIÓN res=factorial_recursivo(n)</span>
-</span></span><span class="line"><span class="cl"><span class="c">% DESCRIPCIÓN: Calcula el factorial de n de forma recursiva</span>
-</span></span><span class="line"><span class="cl"><span class="c">% ENTRADAS:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%    n: ENTERO;  valor para calcular el factorial</span>
-</span></span><span class="line"><span class="cl"><span class="c">% SALIDAS:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%    res: ENTERO; factorial de n</span>
-</span></span><span class="line"><span class="cl"><span class="c">% VARIABLES:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%    No son necesarias</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="o">||</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">else</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="p">=</span><span class="n">n</span><span class="o">*</span><span class="n">factorial_recursivo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span></span></span></code></pre></div><hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c">%Programa Calcular_e</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Descripción: Aproxima el valor del número e</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Entradas: Número de iteraciones</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Salidas: El valor de e aproximado</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Variables:</span>
-</span></span><span class="line"><span class="cl"><span class="c">%    N,n: ENTEROS;</span>
-</span></span><span class="line"><span class="cl"><span class="c">%    aprox: REAL.</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="c">%Pedir el factor de aproximacion (iteraciones)</span>
-</span></span><span class="line"><span class="cl"><span class="n">N</span><span class="p">=</span><span class="n">input</span><span class="p">(</span><span class="s">&#39;Introduzca el número de términos (&lt;170):&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">aprox</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Calcular e</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">n</span><span class="p">=</span><span class="mi">0</span><span class="p">:</span><span class="n">N</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">aprox</span><span class="p">=</span><span class="n">aprox</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">factorial_recursivo</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span>
-</span></span><span class="line"><span class="cl"><span class="c">%Mostrar resultado</span>
-</span></span><span class="line"><span class="cl"><span class="nb">disp</span><span class="p">(</span><span class="n">aprox</span><span class="p">);</span></span></span></code></pre></div></article>
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-<div>
-
-</div>
-
-<div>
-
-</div>
-
-</div>
-
-<div class="flex flex-wrap justify-between">
-    <span>
-    
-      <a href="/ejercicios/c-lculo-del-m-s-repetido/" class="flex align-center">
-        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
-        <span>Cálculo del más repetido</span>
-      </a>
-    
-    </span>
-    <span>
-    
-      <a href="/ejercicios/c-lculo-del-valor-pi/" class="flex align-center">
-        <span>Cálculo del valor Pi</span>
-        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
-      </a>
-    
-    </span>
-  </div>
-
- 
-        
-  
- 
-        
-        
-  
- 
-        
-  
-    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
-  
-
-      </footer>
-
-      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
-    </main>
-
-    
-  
-  <aside class="book-toc" aria-label="Table of Contents">
-    <div class="book-toc-content">
-      
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#programa-en-c-por-angel">Programa en C por <strong>angel</strong></a></li>
-        <li><a href="#programa-en-matlab">Programa en Matlab</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-
-
-
-
-    </div>
-  </aside>
-  
- 
-  </div>
-
-  
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!."><meta itemprop=datePublished content="2024-01-01T00:00:00+00:00"><meta itemprop=dateModified content="2024-01-01T00:00:00+00:00"><meta itemprop=wordCount content="1020"><meta itemprop=keywords content="Sin Pseudocódigo"><title>Calculo del número E • Ejercicios de Programación</title><link rel=icon href=/Ejercicios-programacion/favicon.svg type=image/svg+xml><link rel=icon href=/Ejercicios-programacion/favicon.png sizes=any><link rel=apple-touch-icon href=/Ejercicios-programacion/apple-touch-icon.png><link rel=manifest href=/Ejercicios-programacion/manifest.json><link rel=canonical href=https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/calculo-del-n-mero-e/><link rel=stylesheet href=/Ejercicios-programacion/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css integrity="sha256-O0fFwwU93RhGtEygJ4+TZdHMbe8MVu+u5Pu4t6V8eCs=" crossorigin=anonymous><script type=module src=/Ejercicios-programacion/en.search.min.e9ba19edb4a6c661df9f383eec42435012df2d3fc63488e5c4a37272dae6f7a2.js integrity="sha256-6boZ7bSmxmHfnzg+7EJDUBLfLT/GNIjlxKNyctrm96I=" crossorigin=anonymous></script><link rel=stylesheet href=/syntax.css><style>.highlight,.chroma,pre.chroma{background-color:#272822!important;color:#f8f8f2!important;padding:1rem;border-radius:4px;overflow-x:auto}.highlight pre{background-color:transparent;margin:0;padding:0}.markdown code,code{background-color:#3a3a3a!important;color:#f8f8f2!important;padding:.2em .4em;border-radius:3px;font-family:monospace}pre code,.markdown pre code{background-color:transparent!important;padding:0}.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#ffeae1;border:1px solid #faa;border-radius:4px;padding:10px 14px;margin:1.2rem 0;display:flex;align-items:center;gap:15px;box-sizing:border-box}.aviso-cuadro .aviso-icono,.aviso-revisar .aviso-icono,.aviso-advertencia .aviso-icono{flex-shrink:0;display:flex;align-items:center}.aviso-cuadro .aviso-icono img,.aviso-revisar .aviso-icono img,.aviso-advertencia .aviso-icono img{width:80px;height:40px;max-width:none;object-fit:contain;border:0;display:block;margin:0}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido{flex:1;font-size:.95rem;line-height:1.45;color:#222}.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{margin:0;color:#222}.aviso-cuadro .aviso-contenido p+p,.aviso-revisar .aviso-contenido p+p,.aviso-advertencia .aviso-contenido p+p{margin-top:4px}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#111;font-weight:700}@media(prefers-color-scheme:dark){.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#361b1b;border-color:#8c3a3a}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido,.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{color:#f7d7d7}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#fff}}</style></head><body dir=ltr class="book-kind-page book-type-ejercicios"><div class="book-container flex"><aside class=book-menu aria-label=Menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><ul><li><a href=/Ejercicios-programacion/>Inicio</a></li><li><a href=/Ejercicios-programacion/languages/>Lenguajes</a></li><li><a href=/Ejercicios-programacion/categories/>Categorías</a></li><li><a href=/Ejercicios-programacion/professors/>Profesores</a></li><li><a href=/Ejercicios-programacion/tags/>Tags</a></li></ul><div class="book-search hidden"><input id=book-search-input type=text role=searchbox enterkeyhint=search placeholder=Search aria-label=Search maxlength=64><div class="book-search-spinner hidden"></div><ul id=book-search-results aria-live=polite></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><header class="book-header hidden"><div class="flex align-center justify-between gap"><input type=checkbox class=toggle id=menu-control>
+<label for=menu-control aria-label=Menu><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"/></svg></label><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><input type=checkbox class=toggle id=toc-control>
+<label for=toc-control aria-label="Table of Contents"><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"/></svg></label></div></header><main class=book-page><div class=exercise-metadata><div class=metadata-item><span class=metadata-label>📅 Fecha:</span>
+<time datetime=2024-01-01>01/01/2024</time></div><div class=metadata-item><span class=metadata-label>💻 Lenguajes:</span>
+<a href=/Ejercicios-programacion/languages/c/ class="badge badge-language">C</a>
+<a href=/Ejercicios-programacion/languages/matlab/ class="badge badge-language">Matlab</a></div><div class=metadata-item><span class=metadata-label>👨‍🏫 Profesores:</span>
+<a href=/Ejercicios-programacion/professors/angel/ class="badge badge-professor">Angel</a></div><div class=metadata-item><span class=metadata-label>📂 Categorías:</span>
+<a href=/Ejercicios-programacion/categories/an%C3%A1lisis/ class="badge badge-category">Análisis</a>
+<a href=/Ejercicios-programacion/categories/enunciado/ class="badge badge-category">Enunciado</a></div><div class=metadata-item><span class=metadata-label>🏷️ Tags:</span>
+<a href=/Ejercicios-programacion/tags/sin-pseudoc%C3%B3digo/ class="badge badge-tag">Sin Pseudocódigo</a></div></div><style>.exercise-metadata{margin:1.5rem 0;padding:1rem;background-color:#f8f9fa;border-radius:6px;border-left:4px solid #007bff}.metadata-item{margin:.5rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}.metadata-label{font-weight:600;color:#495057;margin-right:.5rem;flex-shrink:0}.badge{display:inline-block;padding:.25rem .6rem;font-size:.85rem;font-weight:500;line-height:1;border-radius:12px;text-transform:capitalize;text-decoration:none;transition:all .2s ease;white-space:nowrap;flex-shrink:0}a.badge:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(0,0,0,.2);filter:brightness(1.1)}.badge-language{background-color:#007bff;color:#fff!important}.badge-professor{background-color:#28a745;color:#fff!important}.badge-category{background-color:#ffc107;color:#212529!important}.badge-tag{background-color:#6c757d;color:#fff!important}@media(prefers-color-scheme:dark){.exercise-metadata{background-color:#2d3748;border-left-color:#4299e1}.metadata-label{color:#e2e8f0}.badge-category{background-color:#d69e2e;color:#1a202c!important}}</style><article class="markdown book-article"><h1 id=calculo-del-número-e>Calculo del número E<a class=anchor href=#calculo-del-n%c3%bamero-e aria-label=Link></a></h1><h2 id=enunciado>Enunciado<a class=anchor href=#enunciado aria-label=Link></a></h2><p>El número <strong>e</strong> (2.7183&mldr;) se puede aproximar mediante la suma:</p><p><img src=images/0/05/Numero_e.GIF alt=Imagen:Numero_e.GIF></p><p>Sumatorio de 1/n! desde n=0 hasta n=N</p><p>En esta expresión la precisión queda determinada por el valor N. El valor n! representa el factorial de n (1·2·&mldr;·(n -1)·n). Recordemos que, por definición, 0!=1.</p><p>Escribir un programa que permita calcular la aproximación al número e dada por N (valor preguntado al usuario). Debe crearse una función recursiva que calcule el factorial, puesto que n!=n·(n-1)!.</p><h2 id=soluciones>Soluciones<a class=anchor href=#soluciones aria-label=Link></a></h2><h3 id=programa-en-c-por-angel>Programa en C por <strong>angel</strong><a class=anchor href=#programa-en-c-por-angel aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> <span class=cm>/*********************************************************
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * MAKE: Este programa realiza la aproximacion al numero e.
+</span></span></span><span class=line><span class=cl><span class=cm> * Lo hemos realizado de 2 maneras:
+</span></span></span><span class=line><span class=cl><span class=cm> * - Recursivamente.
+</span></span></span><span class=line><span class=cl><span class=cm> * - Forma mas eficiente (sin usar recursividad).
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * Un ejemplo: (introduciendo 10000 terminos)
+</span></span></span><span class=line><span class=cl><span class=cm> * - Recursividad: 12 segundos aproximadamente
+</span></span></span><span class=line><span class=cl><span class=cm> * - Eficientemente: Se obtiene el resultado instantaneamente.
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> **********************************************************/</span>
+</span></span><span class=line><span class=cl> <span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl> <span class=cp>#include</span> <span class=cpf>&lt;string.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl> <span class=cp>#define OK 1
+</span></span></span><span class=line><span class=cl> <span class=cp>#define ERR -10001
+</span></span></span><span class=line><span class=cl> <span class=cp>#define NO 0
+</span></span></span><span class=line><span class=cl> <span class=cp>#define MAX_TERM 1000000
+</span></span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=n>n_term</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>eficiente</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>lectura</span><span class=p>(</span><span class=kt>int</span> <span class=o>*</span><span class=n>eficiente</span><span class=p>,</span> <span class=kt>float</span> <span class=o>*</span><span class=n>n_term</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=nf>calcular</span><span class=p>(</span><span class=kt>float</span> <span class=n>n_term</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>sacarpantalla</span><span class=p>(</span><span class=kt>float</span> <span class=n>numeroe</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=nf>factorial</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>es_digito</span><span class=p>(</span><span class=kt>char</span> <span class=n>caracter</span><span class=p>[]);</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>main</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=k>if</span> <span class=p>(</span><span class=nf>lectura</span><span class=p>(</span><span class=o>&amp;</span><span class=n>eficiente</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>n_term</span><span class=p>)</span> <span class=o>==</span> <span class=n>ERR</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>     <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Error al leer el numero de terminos</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>     <span class=k>return</span> <span class=n>ERR</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>   <span class=k>if</span> <span class=p>(</span><span class=nf>sacarpantalla</span><span class=p>(</span><span class=nf>calcular</span><span class=p>(</span><span class=n>n_term</span><span class=p>))</span> <span class=o>==</span> <span class=n>ERR</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>     <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Error al sacar por pantalla/calcular el numero</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>     <span class=k>return</span> <span class=n>ERR</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>   <span class=k>return</span> <span class=n>OK</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=cm>/*********************************************************
+</span></span></span><span class=line><span class=cl><span class=cm> * Funcion: int sacarpantalla(float numeroe)
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * IN: Toma la variable numeroe de tipo float.
+</span></span></span><span class=line><span class=cl><span class=cm> * OUT: Devuelve OK si lo consigue, ERR si hay algun
+</span></span></span><span class=line><span class=cl><span class=cm> * MAKE: Saca por pantalla el resultado. No modifica ninguna  variable.
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> **********************************************************/</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>sacarpantalla</span><span class=p>(</span><span class=kt>float</span> <span class=n>numeroe</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>El valor de la aproximacion al numero e es: %f</span><span class=se>\n\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>numeroe</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>OK</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=cm>/*********************************************************
+</span></span></span><span class=line><span class=cl><span class=cm> * Funcion: int lectura(int *eficiente, float *n_term)
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * IN: Toma la direccion de la variable eficiente, y el numero de  términos
+</span></span></span><span class=line><span class=cl><span class=cm> * OUT: Nos devuelve OK si lo consigue ERR si hay algun fallo.
+</span></span></span><span class=line><span class=cl><span class=cm> * MAKE: Se encarga de leer el numero de terminos a calcular.  Modifica
+</span></span></span><span class=line><span class=cl><span class=cm> * n_term y eficiente.
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> **********************************************************/</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>lectura</span><span class=p>(</span><span class=kt>int</span> <span class=o>*</span><span class=n>eficiente</span><span class=p>,</span> <span class=kt>float</span> <span class=o>*</span><span class=n>n_term</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kt>char</span> <span class=n>numero</span><span class=p>[</span><span class=mi>5</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>  <span class=kt>char</span> <span class=n>temp</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kt>int</span> <span class=n>continuar</span> <span class=o>=</span> <span class=n>NO</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>do</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>Introduzca el numero de terminos a calcular del numero e: &#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nf>gets</span><span class=p>(</span><span class=n>numero</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span> <span class=k>while</span> <span class=p>((</span><span class=o>*</span><span class=n>n_term</span> <span class=o>=</span> <span class=nf>es_digito</span><span class=p>(</span><span class=n>numero</span><span class=p>))</span> <span class=o>==</span> <span class=n>ERR</span> <span class=o>||</span> <span class=p>(</span><span class=o>*</span><span class=n>n_term</span> <span class=o>&lt;</span> <span class=mi>1</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>  <span class=k>do</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Desea usar el modo de calculo rapido? [S,N]:</span><span class=se>\t</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nf>fflush</span><span class=p>(</span><span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nf>fflush</span><span class=p>(</span><span class=n>stdout</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nf>scanf</span><span class=p>(</span><span class=s>&#34;%c&#34;</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>temp</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nf>fflush</span><span class=p>(</span><span class=n>stdin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>((</span><span class=n>temp</span> <span class=o>==</span> <span class=sc>&#39;S&#39;</span><span class=p>)</span> <span class=o>||</span> <span class=p>(</span><span class=n>temp</span> <span class=o>==</span> <span class=sc>&#39;N&#39;</span><span class=p>)</span> <span class=o>||</span> <span class=p>(</span><span class=n>temp</span> <span class=o>==</span> <span class=sc>&#39;s&#39;</span><span class=p>)</span> <span class=o>||</span> <span class=p>(</span><span class=n>temp</span> <span class=o>==</span> <span class=sc>&#39;n&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>       <span class=p>{</span>
+</span></span><span class=line><span class=cl>         <span class=n>continuar</span> <span class=o>=</span> <span class=n>OK</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>         <span class=k>if</span> <span class=p>((</span><span class=n>temp</span> <span class=o>==</span> <span class=sc>&#39;S&#39;</span><span class=p>)</span> <span class=o>||</span> <span class=p>(</span><span class=n>temp</span> <span class=o>==</span> <span class=sc>&#39;s&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>         <span class=o>*</span><span class=n>eficiente</span> <span class=o>=</span> <span class=n>OK</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>         <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=o>*</span><span class=n>eficiente</span> <span class=o>=</span> <span class=n>NO</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>          <span class=k>if</span> <span class=p>(</span><span class=nf>strlen</span><span class=p>(</span><span class=n>numero</span><span class=p>)</span> <span class=o>&gt;</span> <span class=mi>4</span><span class=p>)</span> <span class=cm>/* Permitimos hasta el numero 9999 */</span>
+</span></span><span class=line><span class=cl>          <span class=p>{</span>
+</span></span><span class=line><span class=cl>             <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>Si desea calcular este numero con recursividad puede ocasionar problemas.&#34;</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl> <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>Intentelo con la manera eficiente.</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=n>ERR</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>else</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=n>continuar</span> <span class=o>=</span> <span class=n>NO</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Por favor introduzca un valor valido!!! </span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span> <span class=k>while</span> <span class=p>(</span><span class=n>continuar</span> <span class=o>!=</span> <span class=n>OK</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>OK</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=cm>/*********************************************************
+</span></span></span><span class=line><span class=cl><span class=cm> * Funcion: float calcular(float terminos)
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * IN: Numero de terminos para realizar la aproximacion.
+</span></span></span><span class=line><span class=cl><span class=cm> * OUT: La aproximacion al numero e si es correcto o ERR si ha habido un
+</span></span></span><span class=line><span class=cl><span class=cm> * fallo.
+</span></span></span><span class=line><span class=cl><span class=cm> * MAKE: Calcula la serie: 1 entre el factorial de un numero dado.
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> **********************************************************/</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=nf>calcular</span><span class=p>(</span><span class=kt>float</span> <span class=n>terminos</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kt>float</span> <span class=n>e</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kt>float</span> <span class=n>facto</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=cm>/* Va a ir acumulando el valor del factorial cuando se haya seleccionado &#34;eficiente&#34; */</span>
+</span></span><span class=line><span class=cl>  <span class=kt>int</span> <span class=n>n</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>eficiente</span> <span class=o>==</span> <span class=n>OK</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>Se esta calculando el numero e de la manera mas eficiente.&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>e</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=n>n</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=n>n</span> <span class=o>&lt;</span> <span class=p>(</span><span class=kt>int</span><span class=p>)</span> <span class=n>terminos</span><span class=p>;</span> <span class=o>++</span><span class=n>n</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>     <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=n>facto</span> <span class=o>*=</span> <span class=n>n</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>e</span> <span class=o>+=</span> <span class=mi>1</span> <span class=o>/</span> <span class=n>facto</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>     <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>e</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=p>}</span>
+</span></span><span class=line><span class=cl>   <span class=k>else</span> <span class=cm>/* Calculamos la serie usando recursividad */</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>     <span class=k>do</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=n>e</span> <span class=o>+=</span> <span class=p>(</span><span class=mi>1</span> <span class=o>/</span> <span class=nf>factorial</span><span class=p>((</span><span class=kt>int</span><span class=p>)</span> <span class=n>terminos</span><span class=o>--</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>         <span class=p>}</span> <span class=k>while</span> <span class=p>(</span><span class=n>terminos</span> <span class=o>&gt;=</span> <span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>     <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>Se esta calculando el numero e usando recursividad.&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>e</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=cm>/*********************************************************
+</span></span></span><span class=line><span class=cl><span class=cm> * Funcion: float factorial (int n)
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * IN: Numero de terminos de los que se calcularan sucesivos   factoriales
+</span></span></span><span class=line><span class=cl><span class=cm> * OUT: El factorial del numero o ERR si ha habido algun error.
+</span></span></span><span class=line><span class=cl><span class=cm> * MAKE: Calcula el factorial de un numero dado.
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> **********************************************************/</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=nf>factorial</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=k>if</span> <span class=p>(</span><span class=n>n</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>else</span>
+</span></span><span class=line><span class=cl>     <span class=k>return</span> <span class=p>(</span><span class=n>n</span> <span class=o>*</span> <span class=nf>factorial</span><span class=p>(</span><span class=n>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>));</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=cm>/*********************************************************
+</span></span></span><span class=line><span class=cl><span class=cm> * Funcion: int es_digito(char caracter)
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * IN: Se le da una serie de caracteres para que se pasen a numero
+</span></span></span><span class=line><span class=cl><span class=cm> * OUT: Nos devolvera ERR si se produce un eroor
+</span></span></span><span class=line><span class=cl><span class=cm> * MAKE: Comprueba la integridad de los datos
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> **********************************************************/</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=nf>es_digito</span><span class=p>(</span><span class=kt>char</span> <span class=n>caracter</span><span class=p>[])</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>i</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>num</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=kt>int</span> <span class=n>rango</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=cm>/* Si la cadena esta vacía */</span>
+</span></span><span class=line><span class=cl>   <span class=k>if</span> <span class=p>(</span><span class=n>caracter</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>ERR</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=k>if</span> <span class=p>(</span><span class=n>caracter</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>==</span> <span class=sc>&#39;-&#39;</span><span class=p>)</span> <span class=cm>/* Si se ha introducido un numero negativo */</span>
+</span></span><span class=line><span class=cl>     <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=cm>/* Empezamos el bucle para ver si es caracter desde el siguiente caracter */</span>
+</span></span><span class=line><span class=cl>      <span class=n>rango</span> <span class=o>=</span> <span class=mi>7</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>     <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span> <span class=cm>/* Debe un numero positivo o hay algun error */</span>
+</span></span><span class=line><span class=cl>     <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>rango</span> <span class=o>=</span> <span class=mi>7</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>     <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Comprobamos que todos los elementos sean digitos */</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* El mayor numero permitido es 9999999 */</span>
+</span></span><span class=line><span class=cl> <span class=k>if</span> <span class=p>((</span><span class=kt>int</span><span class=p>)</span> <span class=nf>strlen</span><span class=p>(</span><span class=n>caracter</span><span class=p>)</span> <span class=o>&gt;</span> <span class=n>rango</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;No puede introducir esa cantidad de numeros!!!</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Es demasiado grande. Rango: -9999999 y 9999999</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>ERR</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=n>i</span> <span class=o>=</span> <span class=n>i</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=p>(</span><span class=kt>int</span><span class=p>)</span> <span class=nf>strlen</span><span class=p>(</span><span class=n>caracter</span><span class=p>);</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=n>caracter</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>&lt;</span> <span class=sc>&#39;0&#39;</span> <span class=o>||</span> <span class=n>caracter</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>&gt;</span> <span class=sc>&#39;9&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>   <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>Introduzca unicamente digitos, por favor.</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>ERR</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Si solo se ha introducido un caracter */</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=nf>strlen</span><span class=p>(</span><span class=n>caracter</span><span class=p>)</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=n>num</span> <span class=o>=</span> <span class=n>caracter</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>-</span> <span class=sc>&#39;0&#39;</span><span class=p>;</span> <span class=cm>/* Devolvemos el digito */</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Si hay mas de un caracter */</span>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>!=</span> <span class=p>(</span><span class=kt>int</span><span class=p>)</span> <span class=nf>strlen</span><span class=p>(</span><span class=n>caracter</span><span class=p>);</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>       <span class=n>num</span> <span class=o>=</span> <span class=p>(</span><span class=n>num</span> <span class=o>*</span> <span class=mi>10</span><span class=p>)</span> <span class=o>+</span> <span class=p>(</span><span class=n>caracter</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>-</span> <span class=sc>&#39;0&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>num</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span></span></span></code></pre></div><h3 id=programa-en-matlab>Programa en Matlab<a class=anchor href=#programa-en-matlab aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-matlab data-lang=matlab><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>function</span><span class=w> </span>res<span class=p>=</span><span class=nf>factorial_recursivo</span><span class=p>(</span>n<span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=c>% FUNCIÓN res=factorial_recursivo(n)</span>
+</span></span><span class=line><span class=cl><span class=c>% DESCRIPCIÓN: Calcula el factorial de n de forma recursiva</span>
+</span></span><span class=line><span class=cl><span class=c>% ENTRADAS:</span>
+</span></span><span class=line><span class=cl><span class=c>%    n: ENTERO;  valor para calcular el factorial</span>
+</span></span><span class=line><span class=cl><span class=c>% SALIDAS:</span>
+</span></span><span class=line><span class=cl><span class=c>%    res: ENTERO; factorial de n</span>
+</span></span><span class=line><span class=cl><span class=c>% VARIABLES:</span>
+</span></span><span class=line><span class=cl><span class=c>%    No son necesarias</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>n</span><span class=o>==</span><span class=mi>0</span><span class=o>||</span><span class=n>n</span><span class=o>==</span><span class=mi>1</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>res</span><span class=p>=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>    <span class=n>res</span><span class=p>=</span><span class=n>n</span><span class=o>*</span><span class=n>factorial_recursivo</span><span class=p>(</span><span class=n>n</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=k>end</span></span></span></code></pre></div><hr><div class=highlight><pre tabindex=0 class=chroma><code class=language-matlab data-lang=matlab><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>%Programa Calcular_e</span>
+</span></span><span class=line><span class=cl><span class=c>%Descripción: Aproxima el valor del número e</span>
+</span></span><span class=line><span class=cl><span class=c>%Entradas: Número de iteraciones</span>
+</span></span><span class=line><span class=cl><span class=c>%Salidas: El valor de e aproximado</span>
+</span></span><span class=line><span class=cl><span class=c>%Variables:</span>
+</span></span><span class=line><span class=cl><span class=c>%    N,n: ENTEROS;</span>
+</span></span><span class=line><span class=cl><span class=c>%    aprox: REAL.</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=c>%Pedir el factor de aproximacion (iteraciones)</span>
+</span></span><span class=line><span class=cl><span class=n>N</span><span class=p>=</span><span class=n>input</span><span class=p>(</span><span class=s>&#39;Introduzca el número de términos (&lt;170):&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>aprox</span><span class=p>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=c>%Calcular e</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>n</span><span class=p>=</span><span class=mi>0</span><span class=p>:</span><span class=n>N</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>aprox</span><span class=p>=</span><span class=n>aprox</span><span class=o>+</span><span class=p>(</span><span class=mi>1</span><span class=o>/</span><span class=n>factorial_recursivo</span><span class=p>(</span><span class=n>n</span><span class=p>));</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=c>%Mostrar resultado</span>
+</span></span><span class=line><span class=cl><span class=nb>disp</span><span class=p>(</span><span class=n>aprox</span><span class=p>);</span></span></span></code></pre></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class="flex flex-wrap justify-between"><span><a href=/Ejercicios-programacion/ejercicios/c-lculo-del-m-s-repetido/ class="flex align-center"><svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"/></svg>
+<span>Cálculo del más repetido</span>
+</a></span><span><a href=/Ejercicios-programacion/ejercicios/c-lculo-del-valor-pi/ class="flex align-center"><span>Cálculo del valor Pi</span>
+<svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"/></svg></a></span></div><script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay" aria-hidden=true></label></main><aside class=book-toc aria-label="Table of Contents"><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#enunciado>Enunciado</a></li><li><a href=#soluciones>Soluciones</a><ul><li><a href=#programa-en-c-por-angel>Programa en C por <strong>angel</strong></a></li><li><a href=#programa-en-matlab>Programa en Matlab</a></li></ul></li></ul></nav></div></aside></div></body></html>

@@ -1,854 +1,291 @@
-<!DOCTYPE html>
-<html lang="es-es" dir="ltr"
-    data-theme="auto"
-    data-layout="centered">
-
-<head>
-  
-  <meta name="generator" content="Hugo 0.169.0">
-  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
-Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.
-">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
-<meta name="color-scheme" content="light dark">
-<meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://example.org/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
-	<meta property="og:site_name" content="Ejercicios de Programación">
-	<meta property="og:title" content="Descompsición en monedas de una cantidad en euros">
-	<meta property="og:description" content="Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
-Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.">
-	<meta property="og:locale" content="es_es">
-	<meta property="og:type" content="article">
-		<meta property="article:section" content="ejercicios">
-		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
-		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
-		<meta property="article:tag" content="Sin Matlab">
-
-
-	<meta itemprop="name" content="Descompsición en monedas de una cantidad en euros">
-	<meta itemprop="description" content="Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
-Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero &gt;=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34; LEER dinero m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0 resto&lt;--dinero MIENTRAS resto&gt;=2) HACER resto&lt;--resto-2 m2&lt;--m2&#43;1 FIN_MIENTRAS MIENTRAS resto&gt;=1) HACER resto&lt;--resto-1 m1&lt;--m1&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.5) HACER resto&lt;--resto-0.5 m05&lt;--m05&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.2) HACER resto&lt;--resto-0.2 m02&lt;--m02&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.1) HACER resto&lt;--resto-0.1 m01&lt;--m01&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.05) HACER resto&lt;--resto-0.05 m005&lt;--m005&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.02) HACER resto&lt;--resto-0.02 m002&lt;--m002&#43;1 FIN_MIENTRAS MIENTRAS (resto&gt;=0.01) HACER resto&lt;--resto-0.01 m001&lt;--m001&#43;1 FIN_MIENTRAS (*SI resto&gt;0 ENTONCES m001&lt;--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)&lt;--0 FIN_PARA monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2; monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01; resto&lt;--dinero i&lt;--1 MIENTRAS (i&lt;=8) HACER MIENTRAS (resto&gt;=monedas(i)) HACER resto&lt;--resto-monedas(i) salida(i)&lt;--salida(i)&#43;1 FIN_MIENTRAS SI resto&gt;0 ENTONCES i&lt;--i&#43;1 SI NO i&lt;--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.">
-	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-	<meta itemprop="wordCount" content="776">
-	<meta itemprop="keywords" content="Sin Matlab">
-
-<title>Descompsición en monedas de una cantidad en euros • Ejercicios de Programación</title>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.png" sizes="any">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-<link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/">
-<link rel="stylesheet" href="/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
-
-
-<script type="module" src="/en.search.min.034401a429bedc445897c3c6166fe2516b68d75d7ee68de7a04371f40a7345e5.js" integrity="sha256-A0QBpCm&#43;3ERYl8PGFm/iUWto111&#43;5o3noENx9ApzReU=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/syntax.css">
-<style>
- 
-.highlight,
-.chroma,
-pre.chroma {
-  background-color: #272822 !important;
-  color: #f8f8f2 !important;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-.highlight pre {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-}
-
- 
- 
-.markdown code,
-code {
-  background-color: #3a3a3a !important;
-  color: #f8f8f2 !important;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-family: monospace;
-}
-
- 
-pre code,
-.markdown pre code {
-  background-color: transparent !important;
-  padding: 0;
-}
-
- 
-.aviso-cuadro,
-.aviso-revisar,
-.aviso-advertencia {
-  background: #ffeae1;
-  border: 1px solid #ffaaaa;
-  border-radius: 4px;
-  padding: 10px 14px;
-  margin: 1.2rem 0;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-sizing: border-box;
-}
-
-.aviso-cuadro .aviso-icono,
-.aviso-revisar .aviso-icono,
-.aviso-advertencia .aviso-icono {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.aviso-cuadro .aviso-icono img,
-.aviso-revisar .aviso-icono img,
-.aviso-advertencia .aviso-icono img {
-  width: 80px;
-  height: 40px;
-  max-width: none;
-  object-fit: contain;
-  border: 0;
-  display: block;
-  margin: 0;
-}
-
-.aviso-cuadro .aviso-contenido,
-.aviso-revisar .aviso-contenido,
-.aviso-advertencia .aviso-contenido {
-  flex: 1;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: #222222;
-}
-
-.aviso-cuadro .aviso-contenido p,
-.aviso-revisar .aviso-contenido p,
-.aviso-advertencia .aviso-contenido p {
-  margin: 0;
-  color: #222222;
-}
-
-.aviso-cuadro .aviso-contenido p + p,
-.aviso-revisar .aviso-contenido p + p,
-.aviso-advertencia .aviso-contenido p + p {
-  margin-top: 4px;
-}
-
-.aviso-cuadro .aviso-contenido strong,
-.aviso-revisar .aviso-contenido strong,
-.aviso-advertencia .aviso-contenido strong {
-  color: #111111;
-  font-weight: 700;
-}
-
-@media (prefers-color-scheme: dark) {
-  .aviso-cuadro,
-  .aviso-revisar,
-  .aviso-advertencia {
-    background: #361b1b;
-    border-color: #8c3a3a;
-  }
-  .aviso-cuadro .aviso-contenido,
-  .aviso-revisar .aviso-contenido,
-  .aviso-advertencia .aviso-contenido,
-  .aviso-cuadro .aviso-contenido p,
-  .aviso-revisar .aviso-contenido p,
-  .aviso-advertencia .aviso-contenido p {
-    color: #f7d7d7;
-  }
-  .aviso-cuadro .aviso-contenido strong,
-  .aviso-revisar .aviso-contenido strong,
-  .aviso-advertencia .aviso-contenido strong {
-    color: #ffffff;
-  }
-}
-</style>
-
-
-</head>
-
-<body dir="ltr" class="book-kind-page book-type-ejercicios">
-  <div class="book-container flex">
-    
-<aside class="book-menu" aria-label="Menu">
-  <div class="book-menu-content">
-    
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/">
-    <img src="/icono.png" alt="Logo" class="book-logo" />
-    
-  </a>
-</h2>
-
-<style>
-.book-logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0rem;
-  display: block;
-}
-
-.book-brand a {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.book-brand span {
-  margin-top: 0.5rem;
-}
-
-.book-brand img {
-    height: 3.5em;
-    width: 4.5em;
-}
-</style>
-
-
-
-
-
-<ul><li><a href="/">Inicio</a></li><li><a href="/languages/">Lenguajes</a></li><li><a href="/categories/">Categorías</a></li><li><a href="/professors/">Profesores</a></li><li><a href="/tags/">Tags</a></li></ul>
-
-
-
-
-
-<div class="book-search hidden">
-  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
-    placeholder="Search"
-    aria-label="Search"
-    maxlength="64" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results" aria-live="polite"></ul>
-</div>
-<script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
-
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
-
-  </div>
-</aside>
- 
-
-    <header class="book-header hidden">
-      
-  <div class="flex align-center justify-between gap">
-  <input type="checkbox" class="toggle" id="menu-control" />
-  <label for="menu-control" aria-label="Menu">
-    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
-  </label>
-
-  <h2 class="book-brand">
-  <a class="flex align-center" href="/">
-    <img src="/icono.png" alt="Logo" class="book-logo" />
-    
-  </a>
-</h2>
-
-<style>
-.book-logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0rem;
-  display: block;
-}
-
-.book-brand a {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.book-brand span {
-  margin-top: 0.5rem;
-}
-
-.book-brand img {
-    height: 3.5em;
-    width: 4.5em;
-}
-</style>
-
-
-  
-  <input type="checkbox" class="toggle" id="toc-control" />
-  <label for="toc-control" aria-label="Table of Contents">
-    <svg class="book-icon"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
-  </label>
-  
-</div>
-
- 
-    </header>
-
-    <main class="book-page">
-      
-  
-<div class="exercise-metadata">
-  
-  <div class="metadata-item">
-    <span class="metadata-label">📅 Fecha:</span>
-    <time datetime="2024-01-01">01/01/2024</time>
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">💻 Lenguajes:</span>
-    
-      <a href="/languages/c/" class="badge badge-language">C</a>
-    
-      <a href="/languages/pascal/" class="badge badge-language">Pascal</a>
-    
-      <a href="/languages/pseudoc%C3%B3digo/" class="badge badge-language">Pseudocódigo</a>
-    
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">👨‍🏫 Profesores:</span>
-    
-      <a href="/professors/lperez/" class="badge badge-professor">Lperez</a>
-    
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">📂 Categorías:</span>
-    
-      <a href="/categories/comentario/" class="badge badge-category">Comentario</a>
-    
-      <a href="/categories/enunciado/" class="badge badge-category">Enunciado</a>
-    
-  </div>
-  
-  
-  
-  <div class="metadata-item">
-    <span class="metadata-label">🏷️ Tags:</span>
-    
-      <a href="/tags/sin-matlab/" class="badge badge-tag">Sin Matlab</a>
-    
-  </div>
-  
-</div>
-
-<style>
-.exercise-metadata {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-radius: 6px;
-  border-left: 4px solid #007bff;
-}
-
-.metadata-item {
-  margin: 0.5rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.metadata-label {
-  font-weight: 600;
-  color: #495057;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  line-height: 1;
-  border-radius: 12px;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
- 
-a.badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  filter: brightness(1.1);
-}
-
-.badge-language {
-  background-color: #007bff;
-  color: white !important;
-}
-
-.badge-professor {
-  background-color: #28a745;
-  color: white !important;
-}
-
-.badge-category {
-  background-color: #ffc107;
-  color: #212529 !important;
-}
-
-.badge-tag {
-  background-color: #6c757d;
-  color: white !important;
-}
-
- 
-@media (prefers-color-scheme: dark) {
-  .exercise-metadata {
-    background-color: #2d3748;
-    border-left-color: #4299e1;
-  }
-  
-  .metadata-label {
-    color: #e2e8f0;
-  }
-  
-  .badge-category {
-    background-color: #d69e2e;
-    color: #1a202c !important;
-  }
-}
-</style>
-
-
-
-
-      
-  
-
-      
-  <article class="markdown book-article"><h1 id="descompsición-en-monedas-de-una-cantidad-en-euros">Descompsición en monedas de una cantidad en euros<a class="anchor" href="#descompsici%c3%b3n-en-monedas-de-una-cantidad-en-euros" aria-label="Link"></a></h1>
-<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
-<p>Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.</p>
-<h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
-<h3 id="diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-1-en-pseudoc%c3%b3digo-por-lperez" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ALGORITMO Cambio_dinero
-</span></span><span class="line"><span class="cl">ENTRADAS:
-</span></span><span class="line"><span class="cl">   dinero: REAL  _(cantidad de dinero que se tiene, dinero &gt;=0.)_
-</span></span><span class="line"><span class="cl">SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1,  0.05, 0.02 y 0.01.)_
-</span></span><span class="line"><span class="cl">   m2, m1, m05, m02, m01, m005, m002, m001: REAL
-</span></span><span class="line"><span class="cl">VARIABLES:
-</span></span><span class="line"><span class="cl">   resto:REAL
-</span></span><span class="line"><span class="cl">INICIO
-</span></span><span class="line"><span class="cl">  ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34;
-</span></span><span class="line"><span class="cl">  LEER dinero
-</span></span><span class="line"><span class="cl">  m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0
-</span></span><span class="line"><span class="cl">  resto&lt;--dinero
-</span></span><span class="line"><span class="cl">  MIENTRAS resto&gt;=2) HACER
-</span></span><span class="line"><span class="cl">     resto&lt;--resto-2
-</span></span><span class="line"><span class="cl">     m2&lt;--m2+1
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS 
-</span></span><span class="line"><span class="cl">  MIENTRAS resto&gt;=1) HACER
-</span></span><span class="line"><span class="cl">     resto&lt;--resto-1
-</span></span><span class="line"><span class="cl">     m1&lt;--m1+1
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS
-</span></span><span class="line"><span class="cl">  MIENTRAS (resto&gt;=0.5) HACER
-</span></span><span class="line"><span class="cl">     resto&lt;--resto-0.5
-</span></span><span class="line"><span class="cl">     m05&lt;--m05+1
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS
-</span></span><span class="line"><span class="cl">  MIENTRAS (resto&gt;=0.2)  HACER
-</span></span><span class="line"><span class="cl">     resto&lt;--resto-0.2
-</span></span><span class="line"><span class="cl">     m02&lt;--m02+1
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS
-</span></span><span class="line"><span class="cl">  MIENTRAS (resto&gt;=0.1)  HACER
-</span></span><span class="line"><span class="cl">     resto&lt;--resto-0.1
-</span></span><span class="line"><span class="cl">     m01&lt;--m01+1
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS
-</span></span><span class="line"><span class="cl">  MIENTRAS (resto&gt;=0.05)  HACER
-</span></span><span class="line"><span class="cl">     resto&lt;--resto-0.05
-</span></span><span class="line"><span class="cl">     m005&lt;--m005+1
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS
-</span></span><span class="line"><span class="cl">  MIENTRAS (resto&gt;=0.02)  HACER
-</span></span><span class="line"><span class="cl">     resto&lt;--resto-0.02
-</span></span><span class="line"><span class="cl">     m002&lt;--m002+1
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS
-</span></span><span class="line"><span class="cl">  MIENTRAS (resto&gt;=0.01)  HACER
-</span></span><span class="line"><span class="cl">     resto&lt;--resto-0.01
-</span></span><span class="line"><span class="cl">     m001&lt;--m001+1
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS
-</span></span><span class="line"><span class="cl">  (*SI resto&gt;0
-</span></span><span class="line"><span class="cl">    ENTONCES m001&lt;--1
-</span></span><span class="line"><span class="cl">    FIN_SI  *)  Esto puede sustituir al último mientras
-</span></span><span class="line"><span class="cl">  ESCRIBIR m2, m1, m05, m02, m005, m002, m001
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h3 id="diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong><a class="anchor" href="#dise%c3%b1o-2-en-pseudoc%c3%b3digo-por-lperez" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ALGORITMO Cambio_dinero
-</span></span><span class="line"><span class="cl">ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
-</span></span><span class="line"><span class="cl">SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que 
-</span></span><span class="line"><span class="cl">           se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. 
-</span></span><span class="line"><span class="cl">VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL
-</span></span><span class="line"><span class="cl">INICIO
-</span></span><span class="line"><span class="cl">  PARA i=1 HASTA 8
-</span></span><span class="line"><span class="cl">     salida(i)&lt;--0
-</span></span><span class="line"><span class="cl">  FIN_PARA
-</span></span><span class="line"><span class="cl">  monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2;
-</span></span><span class="line"><span class="cl">  monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01;
-</span></span><span class="line"><span class="cl">  resto&lt;--dinero
-</span></span><span class="line"><span class="cl">  i&lt;--1
-</span></span><span class="line"><span class="cl">  MIENTRAS (i&lt;=8) HACER
-</span></span><span class="line"><span class="cl">     MIENTRAS (resto&gt;=monedas(i)) HACER
-</span></span><span class="line"><span class="cl">        resto&lt;--resto-monedas(i)
-</span></span><span class="line"><span class="cl">        salida(i)&lt;--salida(i)+1
-</span></span><span class="line"><span class="cl">     FIN_MIENTRAS 
-</span></span><span class="line"><span class="cl">     SI resto&gt;0
-</span></span><span class="line"><span class="cl">     ENTONCES 
-</span></span><span class="line"><span class="cl">        i&lt;--i+1
-</span></span><span class="line"><span class="cl">     SI NO 
-</span></span><span class="line"><span class="cl">       i&lt;--9
-</span></span><span class="line"><span class="cl">     FIN_SI
-</span></span><span class="line"><span class="cl">  FIN_MIENTRAS
-</span></span><span class="line"><span class="cl">  PARA i=1 HASTA 8 HACER
-</span></span><span class="line"><span class="cl">     ESCRIBIR salida(i)
-</span></span><span class="line"><span class="cl">  FIN_PARA
-</span></span><span class="line"><span class="cl">FIN</span></span></code></pre></div><h4 id="comentario">Comentario<a class="anchor" href="#comentario" aria-label="Link"></a></h4>
-<p>En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.</p>
-<h3 id="solución-1-en-c">Solución 1 en C<a class="anchor" href="#soluci%c3%b3n-1-en-c" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl">               
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">//ENTRADAS:
-</span></span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">dinero</span><span class="p">;</span> <span class="c1">//_(Dinero que se tiene, dinero &gt;=0)_
-</span></span></span><span class="line"><span class="cl">  <span class="c1">//SALIDAS: _(Cantidad mínima de monedas en que se descompone:2,1,0.5,0.2,0.1,0.05,0.02,0.01)_ 
-</span></span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">,</span><span class="n">m05</span><span class="p">,</span><span class="n">m02</span><span class="p">,</span><span class="n">m01</span><span class="p">,</span><span class="n">m005</span><span class="p">,</span><span class="n">m002</span><span class="p">,</span><span class="n">m001</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">//VARIABLES:
-</span></span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">resto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                      
-</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Introduzca la cantidad de dinero: &#34;</span><span class="p">);</span>               
-</span></span><span class="line"><span class="cl">  <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">dinero</span><span class="p">);</span>                                     
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="n">m1</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">m2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">m05</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">m02</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">m01</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">m005</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">m002</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">m001</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">resto</span><span class="o">=</span><span class="n">dinero</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                 
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">m2</span><span class="o">=</span><span class="n">m2</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">m1</span><span class="o">=</span><span class="n">m1</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="mf">0.5</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="mf">0.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">m05</span><span class="o">=</span><span class="n">m05</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="mf">0.2</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="mf">0.2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">m02</span><span class="o">=</span><span class="n">m02</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="mf">0.1</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="mf">0.1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">m01</span><span class="o">=</span><span class="n">m01</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="mf">0.05</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="mf">0.05</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">m005</span><span class="o">=</span><span class="n">m005</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="mf">0.02</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="mf">0.02</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">m002</span><span class="o">=</span><span class="n">m002</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="mf">0.01</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="mf">0.01</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="n">m001</span><span class="o">=</span><span class="n">m001</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>        
-</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%f,%f,%f,%f,%f,%f,%f,%f&#34;</span><span class="p">,</span><span class="n">m2</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m05</span><span class="p">,</span><span class="n">m02</span><span class="p">,</span><span class="n">m01</span><span class="p">,</span><span class="n">m005</span><span class="p">,</span><span class="n">m002</span><span class="p">,</span><span class="n">m001</span><span class="p">);</span>                               
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="solución-2-en-c">Solución 2 en C<a class="anchor" href="#soluci%c3%b3n-2-en-c" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl">                 
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl"> <span class="c1">//ENTRADAS
-</span></span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">dinero</span><span class="p">;</span>  <span class="c1">//_(Cantidad de dinero que se tiene, dinero &gt;=0)_
-</span></span></span><span class="line"><span class="cl"> <span class="c1">//SALIDAS
-</span></span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">salida</span><span class="p">[</span><span class="mi">9</span><span class="p">];</span> <span class="c1">//_(Cantidad minima de monedas en que se descompone:_
-</span></span></span><span class="line"><span class="cl">                 <span class="c1">//  de 2,1,0.5,0.2,0.1,0.05,0.02,0.01)
-</span></span></span><span class="line"><span class="cl"> <span class="c1">//VARIABLES
-</span></span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">resto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kt">float</span> <span class="n">monedas</span><span class="p">[</span><span class="mi">9</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">         
-</span></span><span class="line"><span class="cl">  <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">         <span class="n">salida</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="n">monedas</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">monedas</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">monedas</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">monedas</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="mf">0.2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">monedas</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="mf">0.1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">monedas</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">=</span><span class="mf">0.05</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">monedas</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="mf">0.02</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">monedas</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">=</span><span class="mf">0.01</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">resto</span><span class="o">=</span><span class="n">dinero</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">               
-</span></span><span class="line"><span class="cl">  <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">       <span class="k">while</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;=</span><span class="n">monedas</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
-</span></span><span class="line"><span class="cl">               <span class="n">resto</span><span class="o">=</span><span class="n">resto</span><span class="o">-</span><span class="n">monedas</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">               <span class="n">salida</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">salida</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">       <span class="p">}</span>
-</span></span><span class="line"><span class="cl">       <span class="k">if</span><span class="p">(</span><span class="n">resto</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">               <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">       <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">               <span class="n">i</span><span class="o">=</span><span class="mi">9</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">       <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">       <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span><span class="n">salida</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h3 id="programa-1-en-pascal-por-lperez">Programa 1 en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-1-en-pascal-por-lperez" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
-</span></span><span class="line"><span class="cl">SALIDAS: m2, m1, m05, m02,m01, m005, m002, m001, cantidad mínima de monedas en
-</span></span><span class="line"><span class="cl">las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
-</span></span><span class="line"><span class="cl">(***************************************)
-</span></span><span class="line"><span class="cl">program Cambio_dinero;
-</span></span><span class="line"><span class="cl">uses crt;
-</span></span><span class="line"><span class="cl">var m2, m1, m05, m02, m01, m005, m002, m001:integer;dinero,resto:REAL;
-</span></span><span class="line"><span class="cl">begin
-</span></span><span class="line"><span class="cl">    clrscr;
-</span></span><span class="line"><span class="cl">    write(&#39;Introduce la cantidad total de dinero: &#39;);
-</span></span><span class="line"><span class="cl">    readln(dinero);
-</span></span><span class="line"><span class="cl">    m2:=0; m1:=0; m05:=0; m01:=0; m02:=0; m005:=0; m002:=0; m001:=0;
-</span></span><span class="line"><span class="cl">    resto:=dinero;
-</span></span><span class="line"><span class="cl">    while (resto&gt;=2) do
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">  	  resto:=resto-2;
-</span></span><span class="line"><span class="cl">         m2:=m2+1;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    while (resto&gt;=1) do
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">  	  resto:=resto-1;
-</span></span><span class="line"><span class="cl">         m1:=m1+1;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    while (resto&gt;=0.5) do
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">  	  resto:=resto-0.5;
-</span></span><span class="line"><span class="cl">         m05:=m05+1;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    while (resto&gt;=0.2) do
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">  	  resto:=resto-0.2;
-</span></span><span class="line"><span class="cl">         m02:=m02+1;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    while (resto&gt;=0.1) do
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">  	  resto:=resto-0.1;
-</span></span><span class="line"><span class="cl">         m01:=m01+1;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    while (resto&gt;=0.05) do
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">  	  resto:=resto-0.05;
-</span></span><span class="line"><span class="cl">         m005:=m005+1;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    while (resto&gt;=0.02) do
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">  	  resto:=resto-0.02;
-</span></span><span class="line"><span class="cl">         m002:=m002+1;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    while (resto&gt;=0.01) do
-</span></span><span class="line"><span class="cl">       begin
-</span></span><span class="line"><span class="cl">  	  resto:=resto-0.01;
-</span></span><span class="line"><span class="cl">         m001:=m001+1;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 2= &#39;, m2);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 1= &#39;, m1);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 0.5= &#39;, m05);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 0.2= &#39;, m02);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 0.1= &#39;, m01);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 0.05= &#39;, m005);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 0.02= &#39;, m002);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Monedas de 0.01= &#39;, m001);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Pulse enter para acabar&#39;);
-</span></span><span class="line"><span class="cl">    readln;
-</span></span><span class="line"><span class="cl">end.</span></span></code></pre></div><h3 id="programa-2-en-pascal-por-lperez">Programa 2 en Pascal por <strong>lperez</strong><a class="anchor" href="#programa-2-en-pascal-por-lperez" aria-label="Link"></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
-</span></span><span class="line"><span class="cl">SALIDAS: salida, array con la cantidad mínima de monedas en
-</span></span><span class="line"><span class="cl">     las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
-</span></span><span class="line"><span class="cl">(*********************************)
-</span></span><span class="line"><span class="cl">program Cambio_dinero;
-</span></span><span class="line"><span class="cl">uses crt;
-</span></span><span class="line"><span class="cl">var salida:array[1..8] of integer;dinero,resto:REAL;
-</span></span><span class="line"><span class="cl">   monedas:array[1..8] of real;i:integer;
-</span></span><span class="line"><span class="cl">begin
-</span></span><span class="line"><span class="cl">    clrscr;
-</span></span><span class="line"><span class="cl">    write(&#39;Introduce la cantidad total de dinero: &#39;);
-</span></span><span class="line"><span class="cl">    readln(dinero);
-</span></span><span class="line"><span class="cl">    for i:=1 to 8 do
-</span></span><span class="line"><span class="cl">        salida[i]:=0;
-</span></span><span class="line"><span class="cl">    resto:=dinero;
-</span></span><span class="line"><span class="cl">    monedas[1]:=2;monedas[2]:=1;monedas[3]:=0.5;monedas[4]:=0.2;
-</span></span><span class="line"><span class="cl">    monedas[5]:=0.1;monedas[6]:=0.05;monedas[7]:=0.02;monedas[8]:=0.01;
-</span></span><span class="line"><span class="cl">    i:=1;
-</span></span><span class="line"><span class="cl">    while (i&lt;=8) do  
-</span></span><span class="line"><span class="cl">      begin
-</span></span><span class="line"><span class="cl">         while (resto&gt;=monedas[i]) do
-</span></span><span class="line"><span class="cl">           begin
-</span></span><span class="line"><span class="cl">  	      resto:=resto-monedas[i];
-</span></span><span class="line"><span class="cl">             salida[i]:=salida[i]+1;
-</span></span><span class="line"><span class="cl">           end;
-</span></span><span class="line"><span class="cl">         if resto&gt;0
-</span></span><span class="line"><span class="cl">         then i:=i+1
-</span></span><span class="line"><span class="cl">         else i:=9;
-</span></span><span class="line"><span class="cl">       end;
-</span></span><span class="line"><span class="cl">    for i:=1 to 8 do
-</span></span><span class="line"><span class="cl">       writeln(&#39;Monedas de &#39;,monedas[i]:2:2,&#39;=&#39;,salida[i]);
-</span></span><span class="line"><span class="cl">    writeln(&#39;Pulsa enter para acabar&#39;);
-</span></span><span class="line"><span class="cl">    readln;
-</span></span><span class="line"><span class="cl">end.</span></span></code></pre></div></article>
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-<div>
-
-</div>
-
-<div>
-
-</div>
-
-</div>
-
-<div class="flex flex-wrap justify-between">
-    <span>
-    
-      <a href="/ejercicios/descomposici-n-en-factores-primos/" class="flex align-center">
-        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
-        <span>Descomposición en factores primos</span>
-      </a>
-    
-    </span>
-    <span>
-    
-      <a href="/ejercicios/d-a-de-la-semana/" class="flex align-center">
-        <span>Día de la semana</span>
-        <svg class="book-icon" aria-hidden="true"><use href="/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
-      </a>
-    
-    </span>
-  </div>
-
- 
-        
-  
- 
-        
-        
-  
- 
-        
-  
-    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
-  
-
-      </footer>
-
-      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
-    </main>
-
-    
-  
-  <aside class="book-toc" aria-label="Table of Contents">
-    <div class="book-toc-content">
-      
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#enunciado">Enunciado</a></li>
-    <li><a href="#soluciones">Soluciones</a>
-      <ul>
-        <li><a href="#diseño-1-en-pseudocódigo-por-lperez">Diseño 1 en Pseudocódigo por <strong>lperez</strong></a></li>
-        <li><a href="#diseño-2-en-pseudocódigo-por-lperez">Diseño 2 en Pseudocódigo por <strong>lperez</strong></a></li>
-        <li><a href="#solución-1-en-c">Solución 1 en C</a></li>
-        <li><a href="#solución-2-en-c">Solución 2 en C</a></li>
-        <li><a href="#programa-1-en-pascal-por-lperez">Programa 1 en Pascal por <strong>lperez</strong></a></li>
-        <li><a href="#programa-2-en-pascal-por-lperez">Programa 2 en Pascal por <strong>lperez</strong></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-
-
-
-
-    </div>
-  </aside>
-  
- 
-  </div>
-
-  
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!doctype html><html lang=es-es dir=ltr data-theme=auto data-layout=centered><head><meta name=generator content="Hugo 0.169.0"><meta name=generator-theme content="Book Theme: https://github.com/alex-shpak/hugo-book"><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content='Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
+Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero >=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR "Introduzca una cantidad de dinero: " LEER dinero m2<--0; m1<--0; m05<--0; m02<--0; m005<--0; m002<--0; m001<--0 resto<--dinero MIENTRAS resto>=2) HACER resto<--resto-2 m2<--m2+1 FIN_MIENTRAS MIENTRAS resto>=1) HACER resto<--resto-1 m1<--m1+1 FIN_MIENTRAS MIENTRAS (resto>=0.5) HACER resto<--resto-0.5 m05<--m05+1 FIN_MIENTRAS MIENTRAS (resto>=0.2) HACER resto<--resto-0.2 m02<--m02+1 FIN_MIENTRAS MIENTRAS (resto>=0.1) HACER resto<--resto-0.1 m01<--m01+1 FIN_MIENTRAS MIENTRAS (resto>=0.05) HACER resto<--resto-0.05 m005<--m005+1 FIN_MIENTRAS MIENTRAS (resto>=0.02) HACER resto<--resto-0.02 m002<--m002+1 FIN_MIENTRAS MIENTRAS (resto>=0.01) HACER resto<--resto-0.01 m001<--m001+1 FIN_MIENTRAS (*SI resto>0 ENTONCES m001<--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)<--0 FIN_PARA monedas(1)<--2; monedas(2)<--1; monedas(3)<--0.5; monedas(4)<--0.2; monedas(5)<--0.1; monedas(6)<--0.05; monedas(7)<--0.02; monedas(8)<--0.01; resto<--dinero i<--1 MIENTRAS (i<=8) HACER MIENTRAS (resto>=monedas(i)) HACER resto<--resto-monedas(i) salida(i)<--salida(i)+1 FIN_MIENTRAS SI resto>0 ENTONCES i<--i+1 SI NO i<--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.
+'><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#2e3440"><meta name=color-scheme content="light dark"><meta name=format-detection content="telephone=no"><meta property="og:url" content="https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/"><meta property="og:site_name" content="Ejercicios de Programación"><meta property="og:title" content="Descompsición en monedas de una cantidad en euros"><meta property="og:description" content='Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
+Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero >=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR "Introduzca una cantidad de dinero: " LEER dinero m2<--0; m1<--0; m05<--0; m02<--0; m005<--0; m002<--0; m001<--0 resto<--dinero MIENTRAS resto>=2) HACER resto<--resto-2 m2<--m2+1 FIN_MIENTRAS MIENTRAS resto>=1) HACER resto<--resto-1 m1<--m1+1 FIN_MIENTRAS MIENTRAS (resto>=0.5) HACER resto<--resto-0.5 m05<--m05+1 FIN_MIENTRAS MIENTRAS (resto>=0.2) HACER resto<--resto-0.2 m02<--m02+1 FIN_MIENTRAS MIENTRAS (resto>=0.1) HACER resto<--resto-0.1 m01<--m01+1 FIN_MIENTRAS MIENTRAS (resto>=0.05) HACER resto<--resto-0.05 m005<--m005+1 FIN_MIENTRAS MIENTRAS (resto>=0.02) HACER resto<--resto-0.02 m002<--m002+1 FIN_MIENTRAS MIENTRAS (resto>=0.01) HACER resto<--resto-0.01 m001<--m001+1 FIN_MIENTRAS (*SI resto>0 ENTONCES m001<--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)<--0 FIN_PARA monedas(1)<--2; monedas(2)<--1; monedas(3)<--0.5; monedas(4)<--0.2; monedas(5)<--0.1; monedas(6)<--0.05; monedas(7)<--0.02; monedas(8)<--0.01; resto<--dinero i<--1 MIENTRAS (i<=8) HACER MIENTRAS (resto>=monedas(i)) HACER resto<--resto-monedas(i) salida(i)<--salida(i)+1 FIN_MIENTRAS SI resto>0 ENTONCES i<--i+1 SI NO i<--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.'><meta property="og:locale" content="es_es"><meta property="og:type" content="article"><meta property="article:section" content="ejercicios"><meta property="article:published_time" content="2024-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2024-01-01T00:00:00+00:00"><meta property="article:tag" content="Sin Matlab"><meta itemprop=name content="Descompsición en monedas de una cantidad en euros"><meta itemprop=description content='Descompsición en monedas de una cantidad en euros Enunciado Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.
+Soluciones Diseño 1 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL _(cantidad de dinero que se tiene, dinero >=0.)_ SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01.)_ m2, m1, m05, m02, m01, m005, m002, m001: REAL VARIABLES: resto:REAL INICIO ESCRIBIR "Introduzca una cantidad de dinero: " LEER dinero m2<--0; m1<--0; m05<--0; m02<--0; m005<--0; m002<--0; m001<--0 resto<--dinero MIENTRAS resto>=2) HACER resto<--resto-2 m2<--m2+1 FIN_MIENTRAS MIENTRAS resto>=1) HACER resto<--resto-1 m1<--m1+1 FIN_MIENTRAS MIENTRAS (resto>=0.5) HACER resto<--resto-0.5 m05<--m05+1 FIN_MIENTRAS MIENTRAS (resto>=0.2) HACER resto<--resto-0.2 m02<--m02+1 FIN_MIENTRAS MIENTRAS (resto>=0.1) HACER resto<--resto-0.1 m01<--m01+1 FIN_MIENTRAS MIENTRAS (resto>=0.05) HACER resto<--resto-0.05 m005<--m005+1 FIN_MIENTRAS MIENTRAS (resto>=0.02) HACER resto<--resto-0.02 m002<--m002+1 FIN_MIENTRAS MIENTRAS (resto>=0.01) HACER resto<--resto-0.01 m001<--m001+1 FIN_MIENTRAS (*SI resto>0 ENTONCES m001<--1 FIN_SI *) Esto puede sustituir al último mientras ESCRIBIR m2, m1, m05, m02, m005, m002, m001 FIN Diseño 2 en Pseudocódigo por lperez ALGORITMO Cambio_dinero ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero>=0. SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL INICIO PARA i=1 HASTA 8 salida(i)<--0 FIN_PARA monedas(1)<--2; monedas(2)<--1; monedas(3)<--0.5; monedas(4)<--0.2; monedas(5)<--0.1; monedas(6)<--0.05; monedas(7)<--0.02; monedas(8)<--0.01; resto<--dinero i<--1 MIENTRAS (i<=8) HACER MIENTRAS (resto>=monedas(i)) HACER resto<--resto-monedas(i) salida(i)<--salida(i)+1 FIN_MIENTRAS SI resto>0 ENTONCES i<--i+1 SI NO i<--9 FIN_SI FIN_MIENTRAS PARA i=1 HASTA 8 HACER ESCRIBIR salida(i) FIN_PARA FIN Comentario En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.'><meta itemprop=datePublished content="2024-01-01T00:00:00+00:00"><meta itemprop=dateModified content="2024-01-01T00:00:00+00:00"><meta itemprop=wordCount content="776"><meta itemprop=keywords content="Sin Matlab"><title>Descompsición en monedas de una cantidad en euros • Ejercicios de Programación</title><link rel=icon href=/Ejercicios-programacion/favicon.svg type=image/svg+xml><link rel=icon href=/Ejercicios-programacion/favicon.png sizes=any><link rel=apple-touch-icon href=/Ejercicios-programacion/apple-touch-icon.png><link rel=manifest href=/Ejercicios-programacion/manifest.json><link rel=canonical href=https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/><link rel=stylesheet href=/Ejercicios-programacion/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css integrity="sha256-O0fFwwU93RhGtEygJ4+TZdHMbe8MVu+u5Pu4t6V8eCs=" crossorigin=anonymous><script type=module src=/Ejercicios-programacion/en.search.min.e9ba19edb4a6c661df9f383eec42435012df2d3fc63488e5c4a37272dae6f7a2.js integrity="sha256-6boZ7bSmxmHfnzg+7EJDUBLfLT/GNIjlxKNyctrm96I=" crossorigin=anonymous></script><link rel=stylesheet href=/syntax.css><style>.highlight,.chroma,pre.chroma{background-color:#272822!important;color:#f8f8f2!important;padding:1rem;border-radius:4px;overflow-x:auto}.highlight pre{background-color:transparent;margin:0;padding:0}.markdown code,code{background-color:#3a3a3a!important;color:#f8f8f2!important;padding:.2em .4em;border-radius:3px;font-family:monospace}pre code,.markdown pre code{background-color:transparent!important;padding:0}.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#ffeae1;border:1px solid #faa;border-radius:4px;padding:10px 14px;margin:1.2rem 0;display:flex;align-items:center;gap:15px;box-sizing:border-box}.aviso-cuadro .aviso-icono,.aviso-revisar .aviso-icono,.aviso-advertencia .aviso-icono{flex-shrink:0;display:flex;align-items:center}.aviso-cuadro .aviso-icono img,.aviso-revisar .aviso-icono img,.aviso-advertencia .aviso-icono img{width:80px;height:40px;max-width:none;object-fit:contain;border:0;display:block;margin:0}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido{flex:1;font-size:.95rem;line-height:1.45;color:#222}.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{margin:0;color:#222}.aviso-cuadro .aviso-contenido p+p,.aviso-revisar .aviso-contenido p+p,.aviso-advertencia .aviso-contenido p+p{margin-top:4px}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#111;font-weight:700}@media(prefers-color-scheme:dark){.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#361b1b;border-color:#8c3a3a}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido,.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{color:#f7d7d7}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#fff}}</style></head><body dir=ltr class="book-kind-page book-type-ejercicios"><div class="book-container flex"><aside class=book-menu aria-label=Menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><ul><li><a href=/Ejercicios-programacion/>Inicio</a></li><li><a href=/Ejercicios-programacion/languages/>Lenguajes</a></li><li><a href=/Ejercicios-programacion/categories/>Categorías</a></li><li><a href=/Ejercicios-programacion/professors/>Profesores</a></li><li><a href=/Ejercicios-programacion/tags/>Tags</a></li></ul><div class="book-search hidden"><input id=book-search-input type=text role=searchbox enterkeyhint=search placeholder=Search aria-label=Search maxlength=64><div class="book-search-spinner hidden"></div><ul id=book-search-results aria-live=polite></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><header class="book-header hidden"><div class="flex align-center justify-between gap"><input type=checkbox class=toggle id=menu-control>
+<label for=menu-control aria-label=Menu><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"/></svg></label><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><input type=checkbox class=toggle id=toc-control>
+<label for=toc-control aria-label="Table of Contents"><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"/></svg></label></div></header><main class=book-page><div class=exercise-metadata><div class=metadata-item><span class=metadata-label>📅 Fecha:</span>
+<time datetime=2024-01-01>01/01/2024</time></div><div class=metadata-item><span class=metadata-label>💻 Lenguajes:</span>
+<a href=/Ejercicios-programacion/languages/c/ class="badge badge-language">C</a>
+<a href=/Ejercicios-programacion/languages/pascal/ class="badge badge-language">Pascal</a>
+<a href=/Ejercicios-programacion/languages/pseudoc%C3%B3digo/ class="badge badge-language">Pseudocódigo</a></div><div class=metadata-item><span class=metadata-label>👨‍🏫 Profesores:</span>
+<a href=/Ejercicios-programacion/professors/lperez/ class="badge badge-professor">Lperez</a></div><div class=metadata-item><span class=metadata-label>📂 Categorías:</span>
+<a href=/Ejercicios-programacion/categories/comentario/ class="badge badge-category">Comentario</a>
+<a href=/Ejercicios-programacion/categories/enunciado/ class="badge badge-category">Enunciado</a></div><div class=metadata-item><span class=metadata-label>🏷️ Tags:</span>
+<a href=/Ejercicios-programacion/tags/sin-matlab/ class="badge badge-tag">Sin Matlab</a></div></div><style>.exercise-metadata{margin:1.5rem 0;padding:1rem;background-color:#f8f9fa;border-radius:6px;border-left:4px solid #007bff}.metadata-item{margin:.5rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}.metadata-label{font-weight:600;color:#495057;margin-right:.5rem;flex-shrink:0}.badge{display:inline-block;padding:.25rem .6rem;font-size:.85rem;font-weight:500;line-height:1;border-radius:12px;text-transform:capitalize;text-decoration:none;transition:all .2s ease;white-space:nowrap;flex-shrink:0}a.badge:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(0,0,0,.2);filter:brightness(1.1)}.badge-language{background-color:#007bff;color:#fff!important}.badge-professor{background-color:#28a745;color:#fff!important}.badge-category{background-color:#ffc107;color:#212529!important}.badge-tag{background-color:#6c757d;color:#fff!important}@media(prefers-color-scheme:dark){.exercise-metadata{background-color:#2d3748;border-left-color:#4299e1}.metadata-label{color:#e2e8f0}.badge-category{background-color:#d69e2e;color:#1a202c!important}}</style><article class="markdown book-article"><h1 id=descompsición-en-monedas-de-una-cantidad-en-euros>Descompsición en monedas de una cantidad en euros<a class=anchor href=#descompsici%c3%b3n-en-monedas-de-una-cantidad-en-euros aria-label=Link></a></h1><h2 id=enunciado>Enunciado<a class=anchor href=#enunciado aria-label=Link></a></h2><p>Dada una cantidad de dinero en euros se desea conocer el número mínimo de monedas en las que se descompone dicha cantidad. Las monedas que se han de tener en cuenta para su descomposición son las de 2, 1, 0.50, 0.20, 0.10, 0.05, 0.02 y 0.01 euros.</p><h2 id=soluciones>Soluciones<a class=anchor href=#soluciones aria-label=Link></a></h2><h3 id=diseño-1-en-pseudocódigo-por-lperez>Diseño 1 en Pseudocódigo por <strong>lperez</strong><a class=anchor href=#dise%c3%b1o-1-en-pseudoc%c3%b3digo-por-lperez aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>ALGORITMO Cambio_dinero
+</span></span><span class=line><span class=cl>ENTRADAS:
+</span></span><span class=line><span class=cl>   dinero: REAL  _(cantidad de dinero que se tiene, dinero &gt;=0.)_
+</span></span><span class=line><span class=cl>SALIDAS: _(cantidad mínima de monedas en las que se descompone, de 2,1, 0.5, 0.2, 0.1,  0.05, 0.02 y 0.01.)_
+</span></span><span class=line><span class=cl>   m2, m1, m05, m02, m01, m005, m002, m001: REAL
+</span></span><span class=line><span class=cl>VARIABLES:
+</span></span><span class=line><span class=cl>   resto:REAL
+</span></span><span class=line><span class=cl>INICIO
+</span></span><span class=line><span class=cl>  ESCRIBIR &#34;Introduzca una cantidad de dinero: &#34;
+</span></span><span class=line><span class=cl>  LEER dinero
+</span></span><span class=line><span class=cl>  m2&lt;--0; m1&lt;--0; m05&lt;--0; m02&lt;--0; m005&lt;--0; m002&lt;--0; m001&lt;--0
+</span></span><span class=line><span class=cl>  resto&lt;--dinero
+</span></span><span class=line><span class=cl>  MIENTRAS resto&gt;=2) HACER
+</span></span><span class=line><span class=cl>     resto&lt;--resto-2
+</span></span><span class=line><span class=cl>     m2&lt;--m2+1
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS 
+</span></span><span class=line><span class=cl>  MIENTRAS resto&gt;=1) HACER
+</span></span><span class=line><span class=cl>     resto&lt;--resto-1
+</span></span><span class=line><span class=cl>     m1&lt;--m1+1
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS
+</span></span><span class=line><span class=cl>  MIENTRAS (resto&gt;=0.5) HACER
+</span></span><span class=line><span class=cl>     resto&lt;--resto-0.5
+</span></span><span class=line><span class=cl>     m05&lt;--m05+1
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS
+</span></span><span class=line><span class=cl>  MIENTRAS (resto&gt;=0.2)  HACER
+</span></span><span class=line><span class=cl>     resto&lt;--resto-0.2
+</span></span><span class=line><span class=cl>     m02&lt;--m02+1
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS
+</span></span><span class=line><span class=cl>  MIENTRAS (resto&gt;=0.1)  HACER
+</span></span><span class=line><span class=cl>     resto&lt;--resto-0.1
+</span></span><span class=line><span class=cl>     m01&lt;--m01+1
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS
+</span></span><span class=line><span class=cl>  MIENTRAS (resto&gt;=0.05)  HACER
+</span></span><span class=line><span class=cl>     resto&lt;--resto-0.05
+</span></span><span class=line><span class=cl>     m005&lt;--m005+1
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS
+</span></span><span class=line><span class=cl>  MIENTRAS (resto&gt;=0.02)  HACER
+</span></span><span class=line><span class=cl>     resto&lt;--resto-0.02
+</span></span><span class=line><span class=cl>     m002&lt;--m002+1
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS
+</span></span><span class=line><span class=cl>  MIENTRAS (resto&gt;=0.01)  HACER
+</span></span><span class=line><span class=cl>     resto&lt;--resto-0.01
+</span></span><span class=line><span class=cl>     m001&lt;--m001+1
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS
+</span></span><span class=line><span class=cl>  (*SI resto&gt;0
+</span></span><span class=line><span class=cl>    ENTONCES m001&lt;--1
+</span></span><span class=line><span class=cl>    FIN_SI  *)  Esto puede sustituir al último mientras
+</span></span><span class=line><span class=cl>  ESCRIBIR m2, m1, m05, m02, m005, m002, m001
+</span></span><span class=line><span class=cl>FIN</span></span></code></pre></div><h3 id=diseño-2-en-pseudocódigo-por-lperez>Diseño 2 en Pseudocódigo por <strong>lperez</strong><a class=anchor href=#dise%c3%b1o-2-en-pseudoc%c3%b3digo-por-lperez aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>ALGORITMO Cambio_dinero
+</span></span><span class=line><span class=cl>ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
+</span></span><span class=line><span class=cl>SALIDAS: salida:ARRAY [1..8] DE ENTEROS, cantidad mínima de monedas en las que 
+</span></span><span class=line><span class=cl>           se descompone, de 2,1, 0.5, 0.2, 0.1, 0.05, 0.02 y 0.01. 
+</span></span><span class=line><span class=cl>VARIABLES: i: ENTERO, resto:REAL; monedas:ARRAY[1..8] DE REAL
+</span></span><span class=line><span class=cl>INICIO
+</span></span><span class=line><span class=cl>  PARA i=1 HASTA 8
+</span></span><span class=line><span class=cl>     salida(i)&lt;--0
+</span></span><span class=line><span class=cl>  FIN_PARA
+</span></span><span class=line><span class=cl>  monedas(1)&lt;--2; monedas(2)&lt;--1; monedas(3)&lt;--0.5; monedas(4)&lt;--0.2;
+</span></span><span class=line><span class=cl>  monedas(5)&lt;--0.1; monedas(6)&lt;--0.05; monedas(7)&lt;--0.02; monedas(8)&lt;--0.01;
+</span></span><span class=line><span class=cl>  resto&lt;--dinero
+</span></span><span class=line><span class=cl>  i&lt;--1
+</span></span><span class=line><span class=cl>  MIENTRAS (i&lt;=8) HACER
+</span></span><span class=line><span class=cl>     MIENTRAS (resto&gt;=monedas(i)) HACER
+</span></span><span class=line><span class=cl>        resto&lt;--resto-monedas(i)
+</span></span><span class=line><span class=cl>        salida(i)&lt;--salida(i)+1
+</span></span><span class=line><span class=cl>     FIN_MIENTRAS 
+</span></span><span class=line><span class=cl>     SI resto&gt;0
+</span></span><span class=line><span class=cl>     ENTONCES 
+</span></span><span class=line><span class=cl>        i&lt;--i+1
+</span></span><span class=line><span class=cl>     SI NO 
+</span></span><span class=line><span class=cl>       i&lt;--9
+</span></span><span class=line><span class=cl>     FIN_SI
+</span></span><span class=line><span class=cl>  FIN_MIENTRAS
+</span></span><span class=line><span class=cl>  PARA i=1 HASTA 8 HACER
+</span></span><span class=line><span class=cl>     ESCRIBIR salida(i)
+</span></span><span class=line><span class=cl>  FIN_PARA
+</span></span><span class=line><span class=cl>FIN</span></span></code></pre></div><h4 id=comentario>Comentario<a class=anchor href=#comentario aria-label=Link></a></h4><p>En la segunda forma se utiliza array para almacenar los valores de las monedas de cambio por lo que los ciclos hechos en la primera resolución para calcular las monedas de cada tipo se pueden agrupar poniendo dos ciclos aninados, lo cual simplifica la escritura, aunque el comportamiento es el mismo.</p><h3 id=solución-1-en-c>Solución 1 en C<a class=anchor href=#soluci%c3%b3n-1-en-c aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl>               
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(</span><span class=kt>void</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>  <span class=c1>//ENTRADAS:
+</span></span></span><span class=line><span class=cl>  <span class=kt>float</span> <span class=n>dinero</span><span class=p>;</span> <span class=c1>//_(Dinero que se tiene, dinero &gt;=0)_
+</span></span></span><span class=line><span class=cl>  <span class=c1>//SALIDAS: _(Cantidad mínima de monedas en que se descompone:2,1,0.5,0.2,0.1,0.05,0.02,0.01)_ 
+</span></span></span><span class=line><span class=cl>  <span class=kt>float</span> <span class=n>m1</span><span class=p>,</span><span class=n>m2</span><span class=p>,</span><span class=n>m05</span><span class=p>,</span><span class=n>m02</span><span class=p>,</span><span class=n>m01</span><span class=p>,</span><span class=n>m005</span><span class=p>,</span><span class=n>m002</span><span class=p>,</span><span class=n>m001</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=c1>//VARIABLES:
+</span></span></span><span class=line><span class=cl>  <span class=kt>float</span> <span class=n>resto</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                      
+</span></span><span class=line><span class=cl>  <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Introduzca la cantidad de dinero: &#34;</span><span class=p>);</span>               
+</span></span><span class=line><span class=cl>  <span class=nf>scanf</span><span class=p>(</span><span class=s>&#34;%f&#34;</span><span class=p>,</span><span class=o>&amp;</span><span class=n>dinero</span><span class=p>);</span>                                     
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=n>m1</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>m2</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>m05</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>m02</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>m01</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>m005</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>m002</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>m001</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>resto</span><span class=o>=</span><span class=n>dinero</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                 
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=mi>2</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>      <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>m2</span><span class=o>=</span><span class=n>m2</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=mi>1</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>      <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>m1</span><span class=o>=</span><span class=n>m1</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=mf>0.5</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>      <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=mf>0.5</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>m05</span><span class=o>=</span><span class=n>m05</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=mf>0.2</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>      <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=mf>0.2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>m02</span><span class=o>=</span><span class=n>m02</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=mf>0.1</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>      <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=mf>0.1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>m01</span><span class=o>=</span><span class=n>m01</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=mf>0.05</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>      <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=mf>0.05</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>m005</span><span class=o>=</span><span class=n>m005</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=mf>0.02</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>      <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=mf>0.02</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>m002</span><span class=o>=</span><span class=n>m002</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=mf>0.01</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>      <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=mf>0.01</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=n>m001</span><span class=o>=</span><span class=n>m001</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>        
+</span></span><span class=line><span class=cl>  <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%f,%f,%f,%f,%f,%f,%f,%f&#34;</span><span class=p>,</span><span class=n>m2</span><span class=p>,</span><span class=n>m1</span><span class=p>,</span><span class=n>m05</span><span class=p>,</span><span class=n>m02</span><span class=p>,</span><span class=n>m01</span><span class=p>,</span><span class=n>m005</span><span class=p>,</span><span class=n>m002</span><span class=p>,</span><span class=n>m001</span><span class=p>);</span>                               
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></div><h3 id=solución-2-en-c>Solución 2 en C<a class=anchor href=#soluci%c3%b3n-2-en-c aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl>                 
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(</span><span class=kt>void</span><span class=p>){</span>
+</span></span><span class=line><span class=cl> <span class=c1>//ENTRADAS
+</span></span></span><span class=line><span class=cl>  <span class=kt>float</span> <span class=n>dinero</span><span class=p>;</span>  <span class=c1>//_(Cantidad de dinero que se tiene, dinero &gt;=0)_
+</span></span></span><span class=line><span class=cl> <span class=c1>//SALIDAS
+</span></span></span><span class=line><span class=cl>  <span class=kt>int</span> <span class=n>salida</span><span class=p>[</span><span class=mi>9</span><span class=p>];</span> <span class=c1>//_(Cantidad minima de monedas en que se descompone:_
+</span></span></span><span class=line><span class=cl>                 <span class=c1>//  de 2,1,0.5,0.2,0.1,0.05,0.02,0.01)
+</span></span></span><span class=line><span class=cl> <span class=c1>//VARIABLES
+</span></span></span><span class=line><span class=cl>  <span class=kt>int</span> <span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kt>float</span> <span class=n>resto</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kt>float</span> <span class=n>monedas</span><span class=p>[</span><span class=mi>9</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>         
+</span></span><span class=line><span class=cl>  <span class=k>for</span><span class=p>(</span><span class=n>i</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;=</span><span class=mi>8</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>         <span class=n>salida</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=n>monedas</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span><span class=o>=</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>monedas</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>monedas</span><span class=p>[</span><span class=mi>3</span><span class=p>]</span><span class=o>=</span><span class=mf>0.5</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>monedas</span><span class=p>[</span><span class=mi>4</span><span class=p>]</span><span class=o>=</span><span class=mf>0.2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>monedas</span><span class=p>[</span><span class=mi>5</span><span class=p>]</span><span class=o>=</span><span class=mf>0.1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>monedas</span><span class=p>[</span><span class=mi>6</span><span class=p>]</span><span class=o>=</span><span class=mf>0.05</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>monedas</span><span class=p>[</span><span class=mi>7</span><span class=p>]</span><span class=o>=</span><span class=mf>0.02</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>monedas</span><span class=p>[</span><span class=mi>8</span><span class=p>]</span><span class=o>=</span><span class=mf>0.01</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>resto</span><span class=o>=</span><span class=n>dinero</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>i</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>               
+</span></span><span class=line><span class=cl>  <span class=k>while</span><span class=p>(</span><span class=n>i</span><span class=o>&lt;=</span><span class=mi>8</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>       <span class=k>while</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;=</span><span class=n>monedas</span><span class=p>[</span><span class=n>i</span><span class=p>]){</span>
+</span></span><span class=line><span class=cl>               <span class=n>resto</span><span class=o>=</span><span class=n>resto</span><span class=o>-</span><span class=n>monedas</span><span class=p>[</span><span class=n>i</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>               <span class=n>salida</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>=</span><span class=n>salida</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>       <span class=p>}</span>
+</span></span><span class=line><span class=cl>       <span class=k>if</span><span class=p>(</span><span class=n>resto</span><span class=o>&gt;</span><span class=mi>0</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>               <span class=n>i</span><span class=o>=</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>       <span class=p>}</span><span class=k>else</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>               <span class=n>i</span><span class=o>=</span><span class=mi>9</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>       <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>for</span><span class=p>(</span><span class=n>i</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;=</span><span class=mi>8</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>       <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%i&#34;</span><span class=p>,</span><span class=n>salida</span><span class=p>[</span><span class=n>i</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></div><h3 id=programa-1-en-pascal-por-lperez>Programa 1 en Pascal por <strong>lperez</strong><a class=anchor href=#programa-1-en-pascal-por-lperez aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
+</span></span><span class=line><span class=cl>SALIDAS: m2, m1, m05, m02,m01, m005, m002, m001, cantidad mínima de monedas en
+</span></span><span class=line><span class=cl>las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
+</span></span><span class=line><span class=cl>(***************************************)
+</span></span><span class=line><span class=cl>program Cambio_dinero;
+</span></span><span class=line><span class=cl>uses crt;
+</span></span><span class=line><span class=cl>var m2, m1, m05, m02, m01, m005, m002, m001:integer;dinero,resto:REAL;
+</span></span><span class=line><span class=cl>begin
+</span></span><span class=line><span class=cl>    clrscr;
+</span></span><span class=line><span class=cl>    write(&#39;Introduce la cantidad total de dinero: &#39;);
+</span></span><span class=line><span class=cl>    readln(dinero);
+</span></span><span class=line><span class=cl>    m2:=0; m1:=0; m05:=0; m01:=0; m02:=0; m005:=0; m002:=0; m001:=0;
+</span></span><span class=line><span class=cl>    resto:=dinero;
+</span></span><span class=line><span class=cl>    while (resto&gt;=2) do
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>  	  resto:=resto-2;
+</span></span><span class=line><span class=cl>         m2:=m2+1;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    while (resto&gt;=1) do
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>  	  resto:=resto-1;
+</span></span><span class=line><span class=cl>         m1:=m1+1;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    while (resto&gt;=0.5) do
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>  	  resto:=resto-0.5;
+</span></span><span class=line><span class=cl>         m05:=m05+1;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    while (resto&gt;=0.2) do
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>  	  resto:=resto-0.2;
+</span></span><span class=line><span class=cl>         m02:=m02+1;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    while (resto&gt;=0.1) do
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>  	  resto:=resto-0.1;
+</span></span><span class=line><span class=cl>         m01:=m01+1;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    while (resto&gt;=0.05) do
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>  	  resto:=resto-0.05;
+</span></span><span class=line><span class=cl>         m005:=m005+1;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    while (resto&gt;=0.02) do
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>  	  resto:=resto-0.02;
+</span></span><span class=line><span class=cl>         m002:=m002+1;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    while (resto&gt;=0.01) do
+</span></span><span class=line><span class=cl>       begin
+</span></span><span class=line><span class=cl>  	  resto:=resto-0.01;
+</span></span><span class=line><span class=cl>         m001:=m001+1;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    writeln(&#39;Monedas de 2= &#39;, m2);
+</span></span><span class=line><span class=cl>    writeln(&#39;Monedas de 1= &#39;, m1);
+</span></span><span class=line><span class=cl>    writeln(&#39;Monedas de 0.5= &#39;, m05);
+</span></span><span class=line><span class=cl>    writeln(&#39;Monedas de 0.2= &#39;, m02);
+</span></span><span class=line><span class=cl>    writeln(&#39;Monedas de 0.1= &#39;, m01);
+</span></span><span class=line><span class=cl>    writeln(&#39;Monedas de 0.05= &#39;, m005);
+</span></span><span class=line><span class=cl>    writeln(&#39;Monedas de 0.02= &#39;, m002);
+</span></span><span class=line><span class=cl>    writeln(&#39;Monedas de 0.01= &#39;, m001);
+</span></span><span class=line><span class=cl>    writeln(&#39;Pulse enter para acabar&#39;);
+</span></span><span class=line><span class=cl>    readln;
+</span></span><span class=line><span class=cl>end.</span></span></code></pre></div><h3 id=programa-2-en-pascal-por-lperez>Programa 2 en Pascal por <strong>lperez</strong><a class=anchor href=#programa-2-en-pascal-por-lperez aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>(* ENTRADAS: dinero: REAL, cantidad de dinero que se tiene, dinero&gt;=0.
+</span></span><span class=line><span class=cl>SALIDAS: salida, array con la cantidad mínima de monedas en
+</span></span><span class=line><span class=cl>     las que se descompone, de 2,1, 0.5, 0.2, 0.05, 0.02 y 0.01 *)
+</span></span><span class=line><span class=cl>(*********************************)
+</span></span><span class=line><span class=cl>program Cambio_dinero;
+</span></span><span class=line><span class=cl>uses crt;
+</span></span><span class=line><span class=cl>var salida:array[1..8] of integer;dinero,resto:REAL;
+</span></span><span class=line><span class=cl>   monedas:array[1..8] of real;i:integer;
+</span></span><span class=line><span class=cl>begin
+</span></span><span class=line><span class=cl>    clrscr;
+</span></span><span class=line><span class=cl>    write(&#39;Introduce la cantidad total de dinero: &#39;);
+</span></span><span class=line><span class=cl>    readln(dinero);
+</span></span><span class=line><span class=cl>    for i:=1 to 8 do
+</span></span><span class=line><span class=cl>        salida[i]:=0;
+</span></span><span class=line><span class=cl>    resto:=dinero;
+</span></span><span class=line><span class=cl>    monedas[1]:=2;monedas[2]:=1;monedas[3]:=0.5;monedas[4]:=0.2;
+</span></span><span class=line><span class=cl>    monedas[5]:=0.1;monedas[6]:=0.05;monedas[7]:=0.02;monedas[8]:=0.01;
+</span></span><span class=line><span class=cl>    i:=1;
+</span></span><span class=line><span class=cl>    while (i&lt;=8) do  
+</span></span><span class=line><span class=cl>      begin
+</span></span><span class=line><span class=cl>         while (resto&gt;=monedas[i]) do
+</span></span><span class=line><span class=cl>           begin
+</span></span><span class=line><span class=cl>  	      resto:=resto-monedas[i];
+</span></span><span class=line><span class=cl>             salida[i]:=salida[i]+1;
+</span></span><span class=line><span class=cl>           end;
+</span></span><span class=line><span class=cl>         if resto&gt;0
+</span></span><span class=line><span class=cl>         then i:=i+1
+</span></span><span class=line><span class=cl>         else i:=9;
+</span></span><span class=line><span class=cl>       end;
+</span></span><span class=line><span class=cl>    for i:=1 to 8 do
+</span></span><span class=line><span class=cl>       writeln(&#39;Monedas de &#39;,monedas[i]:2:2,&#39;=&#39;,salida[i]);
+</span></span><span class=line><span class=cl>    writeln(&#39;Pulsa enter para acabar&#39;);
+</span></span><span class=line><span class=cl>    readln;
+</span></span><span class=line><span class=cl>end.</span></span></code></pre></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class="flex flex-wrap justify-between"><span><a href=/Ejercicios-programacion/ejercicios/descomposici-n-en-factores-primos/ class="flex align-center"><svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"/></svg>
+<span>Descomposición en factores primos</span>
+</a></span><span><a href=/Ejercicios-programacion/ejercicios/d-a-de-la-semana/ class="flex align-center"><span>Día de la semana</span>
+<svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"/></svg></a></span></div><script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay" aria-hidden=true></label></main><aside class=book-toc aria-label="Table of Contents"><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#enunciado>Enunciado</a></li><li><a href=#soluciones>Soluciones</a><ul><li><a href=#diseño-1-en-pseudocódigo-por-lperez>Diseño 1 en Pseudocódigo por <strong>lperez</strong></a></li><li><a href=#diseño-2-en-pseudocódigo-por-lperez>Diseño 2 en Pseudocódigo por <strong>lperez</strong></a></li><li><a href=#solución-1-en-c>Solución 1 en C</a></li><li><a href=#solución-2-en-c>Solución 2 en C</a></li><li><a href=#programa-1-en-pascal-por-lperez>Programa 1 en Pascal por <strong>lperez</strong></a></li><li><a href=#programa-2-en-pascal-por-lperez>Programa 2 en Pascal por <strong>lperez</strong></a></li></ul></li></ul></nav></div></aside></div></body></html>

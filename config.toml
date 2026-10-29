@@ -1,4 +1,4 @@
-baseURL = "https://example.org/"
+baseURL = "https://mcdiazujaen.github.io/Ejercicios-programacion/"
 locale = "es-es"
 title = "Ejercicios de Programación"
 theme = "hugo-book"
