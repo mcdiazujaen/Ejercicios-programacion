@@ -10,17 +10,17 @@ tags: ['Sin Pseudocódigo']
 
 # Comprobar si un número es primo
 
-##  Enunciado 
+## Enunciado
 
-El siguiente programa comprueba si un número es primo o no. Recuerda que un número primo es aquél que puede dividirse únicamente por sí mismo y por la unidad. Una manera de decidir si un número es primo o no, es dividirlo por todos los números comprendidos entre el 1 y su raíz cuadrada. Si se encuentra que el número es divisible por alguno de ellos, se deduce que ese número no es primo. Vamos a utilizar el operador módulo o resto de la división entera (%) para comprobar si la división es exacta. Este operador da como resultado el resto de la división del primer operando por el segundo. Por ejemplo, 5%2 es 1, puesto que el resto de dividir 5 entre 2 es 1. Guarda el programa con el nombre primos.c. 
+El siguiente programa comprueba si un número es primo o no. Recuerda que un número primo es aquél que puede dividirse únicamente por sí mismo y por la unidad. Una manera de decidir si un número es primo o no, es dividirlo por todos los números comprendidos entre el 1 y su raíz cuadrada. Si se encuentra que el número es divisible por alguno de ellos, se deduce que ese número no es primo. Vamos a utilizar el operador módulo o resto de la división entera (%) para comprobar si la división es exacta. Este operador da como resultado el resto de la división del primer operando por el segundo. Por ejemplo, 5%2 es 1, puesto que el resto de dividir 5 entre 2 es 1. Guarda el programa con el nombre primos.c.
 
-##  Soluciones 
+## Soluciones
 
-###  Programa en C por **Angel**
+### Programa en C por **Angel**
 
-Solución comentada al Ejercicio: 
+Solución comentada al Ejercicio:
+
 ```c
-
  /* fichero primos.c */
  /* programa para determinar si un número es primo */
  #include <stdio.h>
@@ -44,15 +44,15 @@ Solución comentada al Ejercicio:
  }
 ```
 
-####  Comentario 
+#### Comentario
 
-El comentario más apropiado para este ejercicio es el algoritmo para calcular el primo con el bucle for (divisor=2; divisor<=sqrt(numero); divisor++). Observa que este bucle se termina cuando se encuentra un divisor del número, en cuyo caso se escribe el mensaje de que el número no es primo y se termina la ejecución del programa con un return, o cuando divisor llega a su valor límite, en cuyo caso el número es primo porque no se ha encontrado ningún divisor. 
+El comentario más apropiado para este ejercicio es el algoritmo para calcular el primo con el bucle for (divisor=2; divisor<=sqrt(numero); divisor++). Observa que este bucle se termina cuando se encuentra un divisor del número, en cuyo caso se escribe el mensaje de que el número no es primo y se termina la ejecución del programa con un return, o cuando divisor llega a su valor límite, en cuyo caso el número es primo porque no se ha encontrado ningún divisor.
 
-###  Programa en Matlab 
+### Programa en Matlab
 
-####  Solución con programación básica 
+#### Solución con programación básica
+
 ```matlab
-
 %Programa NumeroPrimo
 %Descripción: Comprueba si un número es primo o no.
 %Entradas: valor a comprobar.
@@ -87,11 +87,11 @@ switch num
 end
 ```
 
-####  Solución con programación básica mejorada
+#### Solución con programación básica mejorada
 
 Se sustituye el bucle **for** por uno de tipo **while** , para que el programa sea más rápido. 
-```matlab
 
+```matlab
 %Programa NumeroPrimo
 %Descripción: Comprueba si un número es primo o no.
 %Entradas: valor a comprobar.
@@ -129,9 +129,9 @@ switch num
 end
 ```
 
-####  Solución con programación Matlab avanzada 
-```matlab
+#### Solución con programación Matlab avanzada 
 
+```matlab
 %Programa NumeroPrimo
 %Descripción: Comprueba si un número es primo o no.
 %Entradas: valor a comprobar.
@@ -159,10 +159,10 @@ switch num
 end
 ```
 
-#####  Comentario 
+##### Comentario
 
-Para esta solución se han utilizado las siguientes funciones de Matlab: 
+Para esta solución se han utilizado las siguientes funciones de Matlab:
 
-  * **abs** : devuelve el valor absoluto de un número. 
-  * **rem** : devuelve el resto de dividir un número entre otro. En este ejemplo, se divide un número entre varios existentes en un array. La solución obtenida es un array con los restos. 
-  * **sum** : devuelve la suma de todos los elementos de un array.
+* **abs** : devuelve el valor absoluto de un número.
+* **rem** : devuelve el resto de dividir un número entre otro. En este ejemplo, se divide un número entre varios existentes en un array. La solución obtenida es un array con los restos.
+* **sum** : devuelve la suma de todos los elementos de un array.
