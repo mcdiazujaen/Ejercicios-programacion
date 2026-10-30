@@ -1,0 +1,20 @@
+# Directorio de salida generado por Hugo
+/public/
+
+# Recursos y caché generados por Hugo
+/resources/
+/resources/_gen/
+
+# Archivo de bloqueo de compilación de Hugo
+.hugo_build.lock
+
+# Archivos de sistema y editores
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+
+# Python (scripts locales)
+__pycache__/
+*.py[cod]
