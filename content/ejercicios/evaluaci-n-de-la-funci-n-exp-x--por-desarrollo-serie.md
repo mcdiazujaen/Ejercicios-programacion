@@ -14,11 +14,11 @@ tags: ['Sin Matlab', 'Sin Pseudocódigo']
 
 Según la fórmula de Taylor, podemos expresar la función exponencial **e x** mediante la siguiente serie de potencias de x: 
 
-![imagen:Taylor1.JPG](images/6/6a/Taylor1.JPG)
+![imagen:Taylor1.JPG](/images/6/6a/Taylor1.JPG)
 
 En el programa que te presentamos a continuación, las variables z y numero, argumentos formales de la función, reciben respectivamente una copia de x y terminos, que son los argumentos actuales. La variable **frac** va almacenando la fracción a sumar en cada término del sumatorio. Así para cada nuevo sumando no hay más que multiplicar el anterior valor por **z/i** : 
 
-![imagen:Taylor2.JPG](images/3/37/Taylor2.JPG)
+![imagen:Taylor2.JPG](/images/3/37/Taylor2.JPG)
 
 Guarda el programa en un fichero con el nombre **serie.c**. 
 

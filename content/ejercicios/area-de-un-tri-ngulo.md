@@ -11,7 +11,7 @@ categories: ['enunciado']
 
 ##  Enunciado 
 
-Diseñar un algoritmo para leer las longitudes de los tres lados de un triángulo (L1, L2, L3) y calcular el área del mismo de acuerdo con la siguiente fórmula: ![Imagen:FormulaTriangulo.jpg](images/1/12/FormulaTriangulo.jpg)
+Diseñar un algoritmo para leer las longitudes de los tres lados de un triángulo (L1, L2, L3) y calcular el área del mismo de acuerdo con la siguiente fórmula: ![Imagen:FormulaTriangulo.jpg](/images/1/12/FormulaTriangulo.jpg)
 
 ##  Soluciones 
 

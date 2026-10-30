@@ -12,7 +12,7 @@ categories: ['enunciado']
 
 La siguiente fórmula proporciona la varianza de los valores de un vector _x_ (denota la media de los _n_ valores del vector): 
 
-![imagen:varianza.jpg](images/a/a5/Varianza.jpg)
+![imagen:varianza.jpg](/images/a/a5/Varianza.jpg)
 
 Diseñar un algoritmo para leer los elementos de un vector _x_ y calcular la media y la varianza de los valores usando la fórmula dada anteriormente. 
 

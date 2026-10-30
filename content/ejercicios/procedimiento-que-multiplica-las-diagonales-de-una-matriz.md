@@ -14,7 +14,7 @@ tags: ['Sin C', 'Sin Matlab']
 
 Un subalgoritmo que dada una matriz cuadrada de enteros, obtenga un vector de reales de la siguiente forma: cada elemento del vector será el valor obtenido tras el producto de elementos de la diagonal correspondiente de la matriz. Ejemplo: 
 
-![Imagen:diagonales.jpg](images/4/41/Diagonales.jpg)
+![Imagen:diagonales.jpg](/images/4/41/Diagonales.jpg)
 
 ##  Soluciones 
 

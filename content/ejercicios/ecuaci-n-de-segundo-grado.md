@@ -16,17 +16,17 @@ SOLUCIÓN DE LA ECUACIÓN DE SEGUNDO GRADO. Dada la ecuación de segundo grado a
 
   * Si discr >0.0 las dos raíces son reales y distintas, y valen: 
 
-![imagen:Ecuacion2grado1.JPG](images/9/9f/Ecuacion2grado1.JPG)
+![imagen:Ecuacion2grado1.JPG](/images/9/9f/Ecuacion2grado1.JPG)
 
   * Si discr = 0.0 las dos raíces son reales e iguales, y valen: 
 
-![imagen:Ecuacion2grado2.JPG](images/e/ef/Ecuacion2grado2.JPG)
+![imagen:Ecuacion2grado2.JPG](/images/e/ef/Ecuacion2grado2.JPG)
 
   * Finalmente, si discr<0.0 las dos raíces son complejas conjugadas. 
 
 Las partes real e imaginaria valen: 
 
-![imagen:Ecuacion2grado3.JPG](images/9/9d/Ecuacion2grado3.JPG)
+![imagen:Ecuacion2grado3.JPG](/images/9/9d/Ecuacion2grado3.JPG)
 
 Teclea y compila el siguiente programa para resolver la ecuación de segundo grado. Llámalo **ecuacion2.c.**
 

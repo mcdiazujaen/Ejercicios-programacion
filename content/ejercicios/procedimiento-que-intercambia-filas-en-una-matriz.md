@@ -14,7 +14,7 @@ tags: ['Sin Matlab']
 
 Se desea un subalgoritmo que permute las columnas de la matriz, moficándola y devolviendo el resultado en la misma matriz. Ejemplo: 
 
-![Imagen:intercambiofilas.jpg](images/2/20/Intercambiofilas.jpg)
+![Imagen:intercambiofilas.jpg](/images/2/20/Intercambiofilas.jpg)
 
 ##  Soluciones 
 

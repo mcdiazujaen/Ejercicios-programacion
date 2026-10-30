@@ -14,7 +14,7 @@ tags: ['Sin Pseudocódigo']
 
 Realiza un programa que calcule el determinante de una matriz 3×3. En el caso de que la matriz sea singular, el programa deberá advertirlo con un mensaje. Recuerda que la fórmula para el cálculo del determinante es la siguiente: 
 
-![Imagen:Determinante.JPG](images/5/57/Determinante.JPG)
+![Imagen:Determinante.JPG](/images/5/57/Determinante.JPG)
 
 En vez de tener que introducir la matriz tecleándola cada vez, utiliza un fichero llamado **matriz.d** que contiene una matriz 3×3 cualquiera. 
 

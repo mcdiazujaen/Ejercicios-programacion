@@ -13,7 +13,7 @@ tags: ['Sin C']
 
 Dada una matriz A su transpuesta A’ es: 
 
-![Imagen:Transpuesta.png](images/4/49/Transpuesta.png)
+![Imagen:Transpuesta.png](/images/4/49/Transpuesta.png)
 
 Realizar un subalgoritmo al que se le de una matriz de orden _**NxM**_ y devuelva su transpuesta. 
 

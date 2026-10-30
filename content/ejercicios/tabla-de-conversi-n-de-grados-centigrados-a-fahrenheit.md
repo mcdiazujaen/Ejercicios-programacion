@@ -14,7 +14,7 @@ tags: ['Sin Matlab', 'Sin Pseudocódigo']
 
 Realiza un programa en C que escriba una tabla de dos columnas para la conversión entre las temperaturas en grados Fahrenheit −comprendidas entre 0 ºF y 300 ºF, según incrementos de 20 ºF− y su equivalente en grados centígrados. Se realizarán dos versiones de este programa: una llamada temp1.c que empleará un bucle while. La otra versión se llamará temp2.c y utilizará un bucle for. La conversión entre grados Centígrados y grados Fahrenheit obedece a la fórmula: 
 
-![imagen:Fahrenheit.JPG](images/9/95/Fahrenheit.JPG)
+![imagen:Fahrenheit.JPG](/images/9/95/Fahrenheit.JPG)
 
 siendo ºC la temperatura en grados Centígrados y ºF en grados Fahrenheit. 
 

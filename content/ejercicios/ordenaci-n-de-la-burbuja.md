@@ -18,7 +18,7 @@ El siguiente programa, al que llamarás **ordena.c** , ordena un conjunto de nú
 
 Para implementar este algoritmo son necesarios dos bucles: el primero, bucle i, recorre el vector desde la posición i=0 hasta i=SIZE-1. El segundo bucle, bucle j, recorre el vector desde la posición j=i+1 hasta el final. Para que quede más claro, vamos a ver con un ejemplo como funciona este algoritmo. Supongamos que queremos ordenar los siguientes cinco números: 7,3,5,1,4. Estos números se almacenarán en un vector de la siguiente manera: 
 
-![imagen:burbuja1.JPG](images/8/82/Burbuja1.JPG)
+![imagen:burbuja1.JPG](/images/8/82/Burbuja1.JPG)
 
 Vamos a recorrer las posiciones del vector desde **i=0** hasta **i=3**. 
 

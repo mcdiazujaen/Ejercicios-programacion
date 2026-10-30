@@ -14,7 +14,7 @@ tags: ['Sin Pseudocódigo']
 
 El número **e** (2.7183...) se puede aproximar mediante la suma: 
 
-![Imagen:Numero_e.GIF](images/0/05/Numero_e.GIF)
+![Imagen:Numero_e.GIF](/images/0/05/Numero_e.GIF)
 
 Sumatorio de 1/n! desde n=0 hasta n=N 
 

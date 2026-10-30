@@ -13,7 +13,7 @@ tags: ['Sin Matlab']
 
 Realizar un subalgoritmo que dados dos arrays `x` e `y` de `n` reales, calcule lo siguiente: 
 
-![Imagen:formulaSum.png](images/2/2c/FormulaSum.png)
+![Imagen:formulaSum.png](/images/2/2c/FormulaSum.png)
 
 ##  Soluciones 
 

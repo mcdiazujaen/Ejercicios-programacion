@@ -75,9 +75,19 @@ def process_file(filepath):
     
     # Pattern 2: Image links - remove the outer link, keep just the image
     # Format: [![alt](image.jpg)](index.php%3Ftitle=Archivo:image.jpg.html "title")
-    # Replace with just: ![alt](image.jpg)
+    # Replace with just: ![alt](/image.jpg)
+    def clean_image(m):
+        alt = m.group(1)
+        src = m.group(2)
+        if not src.startswith('/') and not src.startswith('http'):
+            src = '/' + src
+        return f'![{alt}]({src})'
+    
     pattern2 = r'\[!\[([^\]]*)\]\(([^)]+)\)\]\(index\.php%3Ftitle=Archivo:[^)]+\s+"[^"]*"\)'
-    content = re.sub(pattern2, r'![\1](\2)', content)
+    content = re.sub(pattern2, clean_image, content)
+    
+    # Also ensure any relative image path starting with images/ gets a leading /
+    content = re.sub(r'(!\[[^\]]*\]\()(?!/|https?://)(images/)', r'\1/\2', content)
     
     # Pattern 3: Links with escaped characters or any other special formatting
     # Use a more permissive pattern that matches any URL ending in .html
