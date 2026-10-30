@@ -1,20 +1,20 @@
 {
   "name": "Ejercicios de Programación",
   "short_name": "Ejercicios de Programación",
-  "start_url": "/./",
-  "scope": "/./",
+  "start_url": "/Ejercicios-programacion/",
+  "scope": "/Ejercicios-programacion/",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#FFFFFF",
   "icons": [
     {
       "type": "image/png",
-      "src": "/./favicon.png",
+      "src": "/Ejercicios-programacion/favicon.png",
       "sizes": "96x96"
     },
     {
       "type": "image/svg+xml",
-      "src": "/./favicon.svg",
+      "src": "/Ejercicios-programacion/favicon.svg",
       "sizes": "any"
     }
   ]

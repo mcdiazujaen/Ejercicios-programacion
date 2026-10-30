@@ -1,5 +1,5 @@
 baseURL = "https://mcdiazujaen.github.io/Ejercicios-programacion/"
-canonifyURLs = true
+defaultContentLanguage = "es"
 locale = "es-es"
 title = "Ejercicios de Programación"
 theme = "hugo-book"
@@ -24,27 +24,27 @@ theme = "hugo-book"
 [menu]
   [[menu.before]]
     name = "Inicio"
-    url = "/"
+    pageRef = "/"
     weight = 1
   
   [[menu.before]]
     name = "Lenguajes"
-    url = "/languages/"
+    pageRef = "/languages"
     weight = 2
   
   [[menu.before]]
     name = "Categorías"
-    url = "/categories/"
+    pageRef = "/categories"
     weight = 3
   
   [[menu.before]]
     name = "Profesores"
-    url = "/professors/"
+    pageRef = "/professors"
     weight = 4
   
   [[menu.before]]
     name = "Tags"
-    url = "/tags/"
+    pageRef = "/tags"
     weight = 5
 
 [markup]
