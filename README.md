@@ -3,8 +3,8 @@
 Este directorio contiene el sitio WikiEjercicios convertido al framework Hugo.
 
 ## Estructura del Proyecto
-```
 
+```text
 hugo_deploy/
 ├── config.toml              # Configuración de Hugo
 ├── content/
@@ -54,6 +54,7 @@ tags: ['sin_matlab']
 Para usar este sitio, necesitas instalar Hugo:
 
 ### Ubuntu/Debian
+
 ```bash
 # Opción 1: Snap (versión más reciente)
 sudo snap install hugo
@@ -63,11 +64,13 @@ sudo apt install hugo
 ```
 
 ### macOS
+
 ```bash
 brew install hugo
 ```
 
 ### Windows
+
 ```bash
 choco install hugo-extended
 ```
@@ -96,45 +99,6 @@ hugo
 
 Los archivos generados estarán en `hugo_deploy/public/` listos para ser desplegados.
 
-## Estadísticas de Conversión
-
-- **Ejercicios convertidos**: 185
-- **Ejercicios omitidos**: 14 (debido a caracteres especiales en nombres de archivo)
-- **Imágenes copiadas**: Todas las imágenes del directorio original
-
-## Navegación del Sitio
-
-El sitio incluye las siguientes páginas:
-
-- **Inicio**: Página principal con enlaces a taxonomías y ejercicios recientes
-- **Todos los Ejercicios**: Lista completa de ejercicios
-- **Por Lenguaje**: Ejercicios filtrados por lenguaje de programación
-- **Categorías**: Ejercicios organizados por categoría
-
-## Personalización
-
-### Modificar el Tema
-
-Los archivos del tema están en `themes/wikiejercicios/layouts/`. Puedes modificar:
-
-- `_default/baseof.html`: Plantilla base con estilos CSS
-- `_default/single.html`: Página de ejercicio individual
-- `_default/list.html`: Listas de ejercicios
-- `index.html`: Página de inicio
-
-### Modificar la Configuración
-
-Edita `config.toml` para cambiar:
-
-- Título del sitio
-- URL base
-- Menús de navegación
-- Taxonomías
-
-## Problemas Conocidos
-
-Algunos archivos no se pudieron convertir debido a caracteres especiales en los nombres de archivo (14 archivos). Estos pueden ser convertidos manualmente si es necesario.
-
 ## Soporte
 
-Para más información sobre Hugo, visita: https://gohugo.io/documentation/
+Para más información sobre Hugo, visita [Hugo Documentation](https://gohugo.io/documentation/).
