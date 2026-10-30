@@ -1,65 +1,2599 @@
-<!doctype html><html lang=es-es dir=ltr data-theme=auto data-layout=centered><head><meta name=generator content="Hugo 0.169.0"><meta name=generator-theme content="Book Theme: https://github.com/alex-shpak/hugo-book"><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Cálculo del valor Pi Enunciado Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:
-PI1 = 4 * (1 – 1/3) PI2 = 4 * (1 – 1/3 + 1/5 – 1/7) PIn = 4 * (1 – 1/3 + 1/5 – 1/7 + ...) El error se calcula como la diferencia entre un término de la serie y el anterior.
-"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#2e3440"><meta name=color-scheme content="light dark"><meta name=format-detection content="telephone=no"><meta property="og:url" content="https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/c-lculo-del-valor-pi/"><meta property="og:site_name" content="Ejercicios de Programación"><meta property="og:title" content="Cálculo del valor Pi"><meta property="og:description" content="Cálculo del valor Pi Enunciado Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:
-PI1 = 4 * (1 – 1/3) PI2 = 4 * (1 – 1/3 + 1/5 – 1/7) PIn = 4 * (1 – 1/3 + 1/5 – 1/7 + ...) El error se calcula como la diferencia entre un término de la serie y el anterior."><meta property="og:locale" content="es_es"><meta property="og:type" content="article"><meta property="article:section" content="ejercicios"><meta property="article:published_time" content="2024-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2024-01-01T00:00:00+00:00"><meta itemprop=name content="Cálculo del valor Pi"><meta itemprop=description content="Cálculo del valor Pi Enunciado Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:
-PI1 = 4 * (1 – 1/3) PI2 = 4 * (1 – 1/3 + 1/5 – 1/7) PIn = 4 * (1 – 1/3 + 1/5 – 1/7 + ...) El error se calcula como la diferencia entre un término de la serie y el anterior."><meta itemprop=datePublished content="2024-01-01T00:00:00+00:00"><meta itemprop=dateModified content="2024-01-01T00:00:00+00:00"><meta itemprop=wordCount content="291"><meta itemprop=keywords content="Enunciado,Matlab,Pseudocódigo"><title>Cálculo del valor Pi • Ejercicios de Programación</title><link rel=icon href=/Ejercicios-programacion/favicon.svg type=image/svg+xml><link rel=icon href=/Ejercicios-programacion/favicon.png sizes=any><link rel=apple-touch-icon href=/Ejercicios-programacion/apple-touch-icon.png><link rel=manifest href=/Ejercicios-programacion/manifest.json><link rel=canonical href=https://mcdiazujaen.github.io/Ejercicios-programacion/ejercicios/c-lculo-del-valor-pi/><link rel=stylesheet href=/Ejercicios-programacion/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css integrity="sha256-O0fFwwU93RhGtEygJ4+TZdHMbe8MVu+u5Pu4t6V8eCs=" crossorigin=anonymous><script type=module src=/Ejercicios-programacion/es.search.min.fd6a7dbd51dbd4423621a61d1020117080d17c9fdf3d03cbff8560edefecc69b.js integrity="sha256-/Wp9vVHb1EI2IaYdECARcIDRfJ/fPQPL/4Vg7e/sxps=" crossorigin=anonymous></script><link rel=stylesheet href=/Ejercicios-programacion/syntax.css><style>.highlight,.chroma,pre.chroma{background-color:#272822!important;color:#f8f8f2!important;padding:1rem;border-radius:4px;overflow-x:auto}.highlight pre{background-color:transparent;margin:0;padding:0}.markdown code,code{background-color:#3a3a3a!important;color:#f8f8f2!important;padding:.2em .4em;border-radius:3px;font-family:monospace}pre code,.markdown pre code{background-color:transparent!important;padding:0}.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#ffeae1;border:1px solid #faa;border-radius:4px;padding:10px 14px;margin:1.2rem 0;display:flex;align-items:center;gap:15px;box-sizing:border-box}.aviso-cuadro .aviso-icono,.aviso-revisar .aviso-icono,.aviso-advertencia .aviso-icono{flex-shrink:0;display:flex;align-items:center}.aviso-cuadro .aviso-icono img,.aviso-revisar .aviso-icono img,.aviso-advertencia .aviso-icono img{width:80px;height:40px;max-width:none;object-fit:contain;border:0;display:block;margin:0}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido{flex:1;font-size:.95rem;line-height:1.45;color:#222}.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{margin:0;color:#222}.aviso-cuadro .aviso-contenido p+p,.aviso-revisar .aviso-contenido p+p,.aviso-advertencia .aviso-contenido p+p{margin-top:4px}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#111;font-weight:700}@media(prefers-color-scheme:dark){.aviso-cuadro,.aviso-revisar,.aviso-advertencia{background:#361b1b;border-color:#8c3a3a}.aviso-cuadro .aviso-contenido,.aviso-revisar .aviso-contenido,.aviso-advertencia .aviso-contenido,.aviso-cuadro .aviso-contenido p,.aviso-revisar .aviso-contenido p,.aviso-advertencia .aviso-contenido p{color:#f7d7d7}.aviso-cuadro .aviso-contenido strong,.aviso-revisar .aviso-contenido strong,.aviso-advertencia .aviso-contenido strong{color:#fff}}</style></head><body dir=ltr class="book-kind-page book-type-ejercicios"><div class="book-container flex"><aside class=book-menu aria-label=Menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/Ejercicios-programacion/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><ul><li><a href=/Ejercicios-programacion/ title="Ejercicios de Programación">Inicio</a></li><li><a href=/Ejercicios-programacion/languages/ title=Lenguajes>Lenguajes</a></li><li><a href=/Ejercicios-programacion/categories/ title=Categorías>Categorías</a></li><li><a href=/Ejercicios-programacion/professors/ title=Profesores>Profesores</a></li><li><a href=/Ejercicios-programacion/tags/ title=Tags>Tags</a></li></ul><div class="book-search hidden"><input id=book-search-input type=text role=searchbox enterkeyhint=search placeholder=Buscar aria-label=Buscar maxlength=64><div class="book-search-spinner hidden"></div><ul id=book-search-results aria-live=polite></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><header class="book-header hidden"><div class="flex align-center justify-between gap"><input type=checkbox class=toggle id=menu-control>
-<label for=menu-control aria-label=Menu><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"/></svg></label><h2 class=book-brand><a class="flex align-center" href=/Ejercicios-programacion/><img src=/Ejercicios-programacion/icono.png alt=Logo class=book-logo></a></h2><style>.book-logo{max-width:100%;height:auto;margin-bottom:0;display:block}.book-brand a{flex-direction:column;align-items:center;text-align:center}.book-brand span{margin-top:.5rem}.book-brand img{height:3.5em;width:4.5em}</style><input type=checkbox class=toggle id=toc-control>
-<label for=toc-control aria-label="Table of Contents"><svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"/></svg></label></div></header><main class=book-page><div class=exercise-metadata><div class=metadata-item><span class=metadata-label>📅 Fecha:</span>
-<time datetime=2024-01-01>01/01/2024</time></div><div class=metadata-item><span class=metadata-label>💻 Lenguajes:</span>
-<a href=/Ejercicios-programacion/languages/matlab/ class="badge badge-language">Matlab</a>
-<a href=/Ejercicios-programacion/languages/pseudoc%C3%B3digo/ class="badge badge-language">Pseudocódigo</a></div><div class=metadata-item><span class=metadata-label>📂 Categorías:</span>
-<a href=/Ejercicios-programacion/categories/enunciado/ class="badge badge-category">Enunciado</a></div></div><style>.exercise-metadata{margin:1.5rem 0;padding:1rem;background-color:#f8f9fa;border-radius:6px;border-left:4px solid #007bff}.metadata-item{margin:.5rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}.metadata-label{font-weight:600;color:#495057;margin-right:.5rem;flex-shrink:0}.badge{display:inline-block;padding:.25rem .6rem;font-size:.85rem;font-weight:500;line-height:1;border-radius:12px;text-transform:capitalize;text-decoration:none;transition:all .2s ease;white-space:nowrap;flex-shrink:0}a.badge:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(0,0,0,.2);filter:brightness(1.1)}.badge-language{background-color:#007bff;color:#fff!important}.badge-professor{background-color:#28a745;color:#fff!important}.badge-category{background-color:#ffc107;color:#212529!important}.badge-tag{background-color:#6c757d;color:#fff!important}@media(prefers-color-scheme:dark){.exercise-metadata{background-color:#2d3748;border-left-color:#4299e1}.metadata-label{color:#e2e8f0}.badge-category{background-color:#d69e2e;color:#1a202c!important}}</style><article class="markdown book-article"><h1 id=cálculo-del-valor-pi>Cálculo del valor Pi<a class=anchor href=#c%c3%a1lculo-del-valor-pi aria-label=Link></a></h1><h2 id=enunciado>Enunciado<a class=anchor href=#enunciado aria-label=Link></a></h2><p>Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>PI1 = 4 * (1 – 1/3)
-</span></span><span class=line><span class=cl>PI2 = 4 * (1 – 1/3 + 1/5 – 1/7)
-</span></span><span class=line><span class=cl>PIn = 4 * (1 – 1/3 + 1/5 – 1/7 + ...)</span></span></code></pre></div><p>El error se calcula como la diferencia entre un término de la serie y el anterior.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>error = PIi - PIi-1</span></span></code></pre></div><h2 id=soluciones>Soluciones<a class=anchor href=#soluciones aria-label=Link></a></h2><h3 id=pseudocódigo>Pseudocódigo<a class=anchor href=#pseudoc%c3%b3digo aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl> FUNCION Pi (error):REAL
-</span></span><span class=line><span class=cl> ENTRADAS:
-</span></span><span class=line><span class=cl>    error: REAL (* valor permitido de error en el calculo de PI *)
-</span></span><span class=line><span class=cl> SALIDAS:
-</span></span><span class=line><span class=cl>    (* Aproximación al valor PI, con un error cometido menor que el dado como entrada *)
-</span></span><span class=line><span class=cl> VARIABLES:
-</span></span><span class=line><span class=cl>    termino, erroractual, siguiente: REALES
-</span></span><span class=line><span class=cl>    i:ENTERO
-</span></span><span class=line><span class=cl> INICIO
-</span></span><span class=line><span class=cl>    (* Calcular el primer término de la sucesión *)
-</span></span><span class=line><span class=cl>    termino &lt;-- 0
-</span></span><span class=line><span class=cl>    siguiente &lt;-- 1-(1/3)
-</span></span><span class=line><span class=cl>    erroractual &lt;-- siguiente-termino
-</span></span><span class=line><span class=cl> 
-</span></span><span class=line><span class=cl>    (* Calcular los siguientes términos de la sucesión *)
-</span></span><span class=line><span class=cl>    i&lt;--5
-</span></span><span class=line><span class=cl>    MIENTRAS 4*erroractual&gt;=error HACER
-</span></span><span class=line><span class=cl>       termino &lt;-- siguiente
-</span></span><span class=line><span class=cl>       siguiente &lt;-- siguiente+(1/i -1/i+2)
-</span></span><span class=line><span class=cl>       erroractual &lt;-- siguiente-termino
-</span></span><span class=line><span class=cl>       i &lt;-- i+4
-</span></span><span class=line><span class=cl>    FIN_MIENTRAS
-</span></span><span class=line><span class=cl> 
-</span></span><span class=line><span class=cl>    DEVOLVER 4*siguiente
-</span></span><span class=line><span class=cl> FIN</span></span></code></pre></div><h3 id=programa-en-matlab>Programa en Matlab<a class=anchor href=#programa-en-matlab aria-label=Link></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-matlab data-lang=matlab><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=k>function</span><span class=w> </span>aproxpi <span class=p>=</span><span class=w> </span><span class=nf>CalcularPi</span><span class=p>(</span> valorerror <span class=p>)</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=c>% FUNCION aproxpi = CalcularPi( valorerror )</span>
-</span></span><span class=line><span class=cl><span class=c>% DESCRIPCIÓN: Calcula el valor de PI de forma aproximada</span>
-</span></span><span class=line><span class=cl><span class=c>% PARÁMETROS DE ENTRADA:</span>
-</span></span><span class=line><span class=cl><span class=c>%   valorerror: REAL, valor permitido de error en el calculo de PI</span>
-</span></span><span class=line><span class=cl><span class=c>% PARÁMETROS DE SALIDA:</span>
-</span></span><span class=line><span class=cl><span class=c>%   aproxpi: REAL,  Aproximación al valor PI, con un error cometido menor que el dado como entrada</span>
-</span></span><span class=line><span class=cl><span class=c>% VARIABLES:</span>
-</span></span><span class=line><span class=cl><span class=c>%   termino, erroractual, siguiente: REALES</span>
-</span></span><span class=line><span class=cl><span class=c>%   x: ENTERO</span>
-</span></span><span class=line><span class=cl> 
-</span></span><span class=line><span class=cl><span class=c>%Calcular el primer término de la sucesión)</span>
-</span></span><span class=line><span class=cl><span class=n>termino</span> <span class=p>=</span> <span class=mi>0</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=n>siguiente</span> <span class=p>=</span> <span class=mi>1</span><span class=o>-</span><span class=p>(</span><span class=mi>1</span><span class=o>/</span><span class=mi>3</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=n>erroractual</span> <span class=p>=</span> <span class=n>siguiente</span><span class=o>-</span><span class=n>termino</span><span class=p>;</span>
-</span></span><span class=line><span class=cl> 
-</span></span><span class=line><span class=cl><span class=c>%Calcular los siguientes términos de la sucesión)</span>
-</span></span><span class=line><span class=cl><span class=n>x</span> <span class=p>=</span> <span class=mi>5</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=k>while</span> <span class=mi>4</span><span class=o>*</span><span class=n>erroractual</span><span class=o>&gt;</span><span class=p>=</span><span class=n>valorerror</span> 
-</span></span><span class=line><span class=cl>      <span class=n>termino</span> <span class=p>=</span> <span class=n>siguiente</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>      <span class=n>siguiente</span> <span class=p>=</span> <span class=n>siguiente</span><span class=o>+</span><span class=p>(</span><span class=mi>1</span><span class=o>/</span><span class=n>x</span> <span class=o>-</span><span class=mi>1</span><span class=o>/</span><span class=n>x</span><span class=o>+</span><span class=mi>2</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>      <span class=n>erroractual</span> <span class=p>=</span> <span class=n>siguiente</span><span class=o>-</span><span class=n>termino</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>      <span class=n>x</span> <span class=p>=</span> <span class=n>x</span><span class=o>+</span><span class=mi>4</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=k>end</span>
-</span></span><span class=line><span class=cl><span class=n>aproxpi</span> <span class=p>=</span> <span class=mi>4</span><span class=o>*</span><span class=n>siguiente</span><span class=p>;</span></span></span></code></pre></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class="flex flex-wrap justify-between"><span><a href=/Ejercicios-programacion/ejercicios/calculo-del-n-mero-e/ class="flex align-center"><svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"/></svg>
-<span>Calculo del número E</span>
-</a></span><span><a href=/Ejercicios-programacion/ejercicios/c-lculo-n-mero-combinatorio/ class="flex align-center"><span>Cálculo número combinatorio</span>
-<svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"/></svg></a></span></div><script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay" aria-hidden=true></label></main><aside class=book-toc aria-label="Table of Contents"><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#enunciado>Enunciado</a></li><li><a href=#soluciones>Soluciones</a><ul><li><a href=#pseudocódigo>Pseudocódigo</a></li><li><a href=#programa-en-matlab>Programa en Matlab</a></li></ul></li></ul></nav></div></aside></div></body></html>
+<!DOCTYPE html>
+<html lang="es-es" dir="ltr"
+    data-theme="auto"
+    data-layout="centered">
+
+<head><script src="/Ejercicios-programacion/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Ejercicios-programacion/livereload" data-no-instant defer></script>
+  
+  <meta name="generator" content="Hugo 0.169.0">
+  <meta name="generator-theme" content="Book Theme: https://github.com/alex-shpak/hugo-book">
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cálculo del valor Pi Enunciado Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:
+PI1 = 4 * (1 – 1/3) PI2 = 4 * (1 – 1/3 &#43; 1/5 – 1/7) PIn = 4 * (1 – 1/3 &#43; 1/5 – 1/7 &#43; ...) El error se calcula como la diferencia entre un término de la serie y el anterior.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no"><meta property="og:url" content="http://localhost:1313/Ejercicios-programacion/ejercicios/c-lculo-del-valor-pi/">
+	<meta property="og:site_name" content="Ejercicios de Programación">
+	<meta property="og:title" content="Cálculo del valor Pi">
+	<meta property="og:description" content="Cálculo del valor Pi Enunciado Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:
+PI1 = 4 * (1 – 1/3) PI2 = 4 * (1 – 1/3 &#43; 1/5 – 1/7) PIn = 4 * (1 – 1/3 &#43; 1/5 – 1/7 &#43; ...) El error se calcula como la diferencia entre un término de la serie y el anterior.">
+	<meta property="og:locale" content="es_es">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="ejercicios">
+		<meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+
+
+	<meta itemprop="name" content="Cálculo del valor Pi">
+	<meta itemprop="description" content="Cálculo del valor Pi Enunciado Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:
+PI1 = 4 * (1 – 1/3) PI2 = 4 * (1 – 1/3 &#43; 1/5 – 1/7) PIn = 4 * (1 – 1/3 &#43; 1/5 – 1/7 &#43; ...) El error se calcula como la diferencia entre un término de la serie y el anterior.">
+	<meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+	<meta itemprop="wordCount" content="291">
+	<meta itemprop="keywords" content="Enunciado,Matlab,Pseudocódigo">
+
+<title>Cálculo del valor Pi • Ejercicios de Programación</title>
+<link rel="icon" href="/Ejercicios-programacion/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/Ejercicios-programacion/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/Ejercicios-programacion/apple-touch-icon.png">
+
+<link rel="manifest" href="/Ejercicios-programacion/manifest.json">
+<link rel="canonical" href="http://localhost:1313/Ejercicios-programacion/ejercicios/c-lculo-del-valor-pi/">
+<link rel="stylesheet" href="/Ejercicios-programacion/book.min.3b47c5c3053ddd1846b44ca0278f9365d1cc6def0c56efaee4fbb8b7a57c782b.css" integrity="sha256-O0fFwwU93RhGtEygJ4&#43;TZdHMbe8MVu&#43;u5Pu4t6V8eCs=" crossorigin="anonymous">
+
+
+<script type="module" src="/Ejercicios-programacion/es.search.min.fd6a7dbd51dbd4423621a61d1020117080d17c9fdf3d03cbff8560edefecc69b.js" integrity="sha256-/Wp9vVHb1EI2IaYdECARcIDRfJ/fPQPL/4Vg7e/sxps=" crossorigin="anonymous"></script>
+  
+</head>
+
+<body dir="ltr" class="book-kind-page book-type-ejercicios">
+  <div class="book-container flex">
+    
+<aside class="book-menu" aria-label="Menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<div class="book-brand">
+  <a class="flex align-center" href="/Ejercicios-programacion/"><span>Ejercicios de Programación</span>
+  </a>
+</div>
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" role="searchbox" enterkeyhint="search"
+    placeholder="Buscar"
+    aria-label="Buscar"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results" aria-live="polite"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+<ul><li><a href="/Ejercicios-programacion/" title="Ejercicios de Programación">Inicio</a></li><li><a href="/Ejercicios-programacion/languages/" title="Lenguajes">Lenguajes</a></li><li><a href="/Ejercicios-programacion/categories/" title="Categorías">Categorías</a></li><li><a href="/Ejercicios-programacion/professors/" title="Profesores">Profesores</a></li><li><a href="/Ejercicios-programacion/tags/" title="Tags">Tags</a></li></ul>
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/analisis-de-bucle-for-para-una-variable-booleana/" class="">
+      Análisis de bucle FOR para una variable booleana</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/an-lisis-de-la-salida-de-ciclos/" class="">
+      Análisis de la salida de ciclos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/an-lisis-de-llamadas-a-procedimientos/" class="">
+      Análisis de llamadas a procedimientos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/analisis-de-seno-entre-2-valores/" class="">
+      Analisis de Seno entre 2 valores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/analisis-del-bucle-mientras/" class="">
+      Análisis del bucle MIENTRAS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/area-de-un-tri-ngulo/" class="">
+      Area de un triángulo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/array-bidimensional/" class="">
+      Array bidimensional</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/array-de-caracteres-que-devuelve-el-n-mero-de-comas-leido/" class="">
+      Array de caracteres que devuelve el número de comas leido</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/ascensores/" class="">
+      Ascensores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/busca-del-n-mero-mayor-y-menor/" class="">
+      Busca del número mayor y menor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/buscar-subcadena/" class="">
+      Buscar subcadena</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/calcular-la-varianza/" class="">
+      Calcular la varianza</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/calculo-de-la-diferencia-entre-dos-fechas/" class="">
+      Calculo de la diferencia entre dos fechas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/calculo-de-los-esca-os-electorales/" class="">
+      Calculo de los escaños electorales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/calculo-de-n-meros-primos/" class="">
+      Calculo de números primos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/calculo-de-potencias/" class="">
+      Calculo de potencias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/c-lculo-de-un-polinomio/" class="">
+      Cálculo de un polinomio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/calculo-del-determenante-de-una-matriz-3x3/" class="">
+      Calculo del determenante de una matriz 3x3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/c-lculo-del-m-s-repetido/" class="">
+      Cálculo del más repetido</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/calculo-del-n-mero-e/" class="">
+      Calculo del número E</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/c-lculo-del-valor-pi/" class="active">
+      Cálculo del valor Pi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/c-lculo-n-mero-combinatorio/" class="">
+      Cálculo número combinatorio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/cambio-de-los-duplicados-de-un-array/" class="">
+      Cambio de los duplicados de un array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/comparar-dos-arrays/" class="">
+      Comparar dos arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/comparar-dos-arrays-desordenados/" class="">
+      Comparar dos arrays desordenados</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/comprobar-si-un-numero-es-primo/" class="">
+      Comprobar si un número es primo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/contar-vocales/" class="">
+      Contar vocales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/conversaci-n-en-c/" class="">
+      Conversación en C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/conversi-n-de-temperaturas/" class="">
+      Conversión de temperaturas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/conversion-decimal-a-octal/" class="">
+      Conversion decimal a octal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/conversor-euros-2fpesetas/" class="">
+      Conversor euros/pesetas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/coste-de-un-autom-vil/" class="">
+      Coste de un automóvil</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/criba-de-eratostenes/" class="">
+      Criba de Eratóstenes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/cuadrado-magico/" class="">
+      Cuadrado Mágico</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/curiosa-propiedad/" class="">
+      Curiosa propiedad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/decodificar-clave-de-acceso/" class="">
+      Decodificar clave de acceso</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/descomposici-n-en-d-gitos/" class="">
+      Descomposición en dígitos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/descomposici-n-en-factores-primos/" class="">
+      Descomposición en factores primos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/descompsici-n-en-monedas-de-una-cantidad-en-euros/" class="">
+      Descompsición en monedas de una cantidad en euros</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/d-a-de-la-semana/" class="">
+      Día de la semana</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/dia-de-la-semana-de-hoy/" class="">
+      Dia de la semana de hoy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/dibujo-tri-ngulo-de-asteriscos/" class="">
+      Dibujo triángulo de asteriscos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/diferencia-entre-elementos-consecutivos-de-un-vector/" class="">
+      Diferencia entre elementos consecutivos de un vector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/distancia-entre-ciudades/" class="">
+      Distancia entre ciudades</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/divisible/" class="">
+      Divisible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/divisi-n-entera-y-resto-utilizan-restar-y-sumar/" class="">
+      División entera y resto utilizan restar y sumar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/ecuaci-n-de-segundo-grado/" class="">
+      Ecuación de segundo grado</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/el-primer-ejercicio-en-c/" class="">
+      El primer ejercicio en C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/el-sultan-y-el-estudiante/" class="">
+      El sultan y el estudiante</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/elecciones-de-rector/" class="">
+      Elecciones de rector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/elecciones-municipales/" class="">
+      Elecciones municipales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/elemento-de-un-vector-igual-a-la-suma-del-resto/" class="">
+      Elemento de un vector igual a la suma del resto</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/eliminar-duplicados-de-un-array/" class="">
+      Eliminar duplicados de un array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/enteros-abundantes/" class="">
+      Enteros abundantes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/equipo-que-mas-partidos-a-ganado-fuera/" class="">
+      Equipo que mas partidos a ganado fuera</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/errores-de-pepito/" class="">
+      Errores de pepito</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/errores-subalgoritmos/" class="">
+      Errores subalgoritmos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/estaci-n-meteorol-gica/" class="">
+      Estación meteorológica</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/estad-stica-de-asistencia-al-cine/" class="">
+      Estadística de asistencia al cine</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/estad-sticas-de-f-tbol/" class="">
+      Estadísticas de fútbol</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/estad-sticas-de-f-tbol-2/" class="">
+      Estadísticas de fútbol 2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/evaluaci-n-de-la-funci-n-exp-x--por-desarrollo-serie/" class="">
+      Evaluación de la función Exp(x) por desarrollo serie</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/evaluar-condiciones/" class="">
+      Evaluar condiciones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/f-brica-de-electrodom-sticos/" class="">
+      Fábrica de electrodomésticos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/fabrica-de-piezas/" class="">
+      Fabrica de piezas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/formas-de-utilizar-el-bucle-for/" class="">
+      Formas de utilizar el bucle For</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/formas-de-utilizar-el-bucle-mientras/" class="">
+      Formas de utilizar el bucle MIENTRAS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/funcion-que-busca-un-valor-en-un-vector/" class="">
+      Funcion que busca un valor en un vector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/funci-n-que-comprueba-si-los-elementos-de-una-matriz-son-distintos/" class="">
+      Función que comprueba si los elementos de una Matriz son distintos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/funci-n-sigma-y-funci-n-prod/" class="">
+      Función SIGMA y función PROD</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/funci-n-sin-argumentos/" class="">
+      Función sin argumentos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/gestionar-lotes-de-sutura/" class="">
+      Gestionar lotes de sutura</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/giro-de-una-barra-extensible/" class="">
+      Giro de una barra extensible</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/hijos-de-los-empleados/" class="">
+      Hijos de los empleados</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/invertir-contenido-de-un-archivo/" class="">
+      Invertir contenido de un archivo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/leer-fichero-con-matriz-y-calcular-una-suma/" class="">
+      Leer fichero con matriz y calcular una suma</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/leer-matrices-2x2-de-un-fichero/" class="">
+      Leer matrices 2x2 de un fichero</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/leer-numero-de-un-fichero-mayores-de-un-umbral/" class="">
+      Leer numero de un fichero mayores de un umbral</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/leer-n-meros-sin-repetidos/" class="">
+      Leer números sin repetidos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/leer-una-frase-y-escribirla-al-reves/" class="">
+      Leer una frase y escribirla al reves</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/leer-una-palabra-y-escribirla-al-reves/" class="">
+      Leer una palabra y escribirla al reves</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/letra-del-dni/" class="">
+      Letra del DNI</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/limite-peso/" class="">
+      Limite peso</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/listar-fichero-enumerando-lineas/" class="">
+      Listar fichero enumerando lineas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/llamadas-a-subalgoritmos/" class="">
+      Llamadas a subalgoritmos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/llamadas-a-subalgoritmos-desde-el-algoritmo-principal/" class="">
+      Llamadas a subalgoritmos desde el algoritmo principal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/llamadas-desde-algoritmos/" class="">
+      Llamadas desde algoritmos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/losas-de-tres-colores/" class="">
+      Losas de tres colores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/m-quina-fotocopiadora-impresora/" class="">
+      Máquina fotocopiadora-impresora</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/matriz-sim-trica/" class="">
+      Matriz simétrica</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/matriz-sim-trica-subalgoritmo/" class="">
+      Matriz Simétrica Subalgoritmo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/matriz-transpuesta/" class="">
+      Matriz transpuesta</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/m-ximo-de-un-conjunto-de-tres-n-meros/" class="">
+      Máximo de un conjunto de tres números</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/m-ximo-de-una-submatriz/" class="">
+      Máximo de una submatriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/m-ximo-elemento-de-un-conjunto-de-n-meros/" class="">
+      Máximo elemento de un conjunto de números</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/mayor-n-mero-de-divisores/" class="">
+      Mayor número de divisores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/m-dicos/" class="">
+      Médicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/men--de-un-restaurante/" class="">
+      Menú de un restaurante</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/minimo-elemento-de-un-conjunto-de-n-meros/" class="">
+      Minimo elemento de un conjunto de números</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/modificar-el-programa-de-preguntas-indiscretas/" class="">
+      Modificar el programa de Preguntas indiscretas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/modificar-el-programa-de-suma-primeros-cinco-n-meros-naturales/" class="">
+      Modificar el programa de Suma primeros cinco números naturales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/multiplicar-dos-n-meros-sumando/" class="">
+      Multiplicar dos números sumando</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/n-mero-primo/" class="">
+      Número Primo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/numeros-amigos/" class="">
+      Numeros amigos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/n-meros-perfectos/" class="">
+      Números perfectos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/operaci-n-aritmetica/" class="">
+      Operación aritmetica</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/operaci-n-con-cadena-de-caracteres/" class="">
+      Operación con cadena de caracteres</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/operaci-n-con-dos-vectores/" class="">
+      Operación con dos vectores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/operaciones-aritm-ticas/" class="">
+      Operaciones aritméticas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/operaciones-con-vectores/" class="">
+      Operaciones con vectores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/operaciones-estadisticas/" class="">
+      Operaciones estadisticas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/ordenaci-n-de-la-burbuja/" class="">
+      Ordenación de la burbuja</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/ordenar-por-prioridad/" class="">
+      Ordenar por prioridad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/ordenar-sin-olvidar-el-orden-inicial/" class="">
+      Ordenar sin olvidar el orden inicial</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/otra-funci-n-recursiva--la-suma-de-los-n-primeros-n-mero-enteros/" class="">
+      Otra función recursiva: La suma de los N primeros número enteros</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/paridad/" class="">
+      Paridad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/paso-de-segundos-a-hora-min-seg/" class="">
+      Paso de segundos a hora-min-seg</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/pir-mide-de-d-gitos/" class="">
+      Pirámide de dígitos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/plantilla-revisar/" class="">
+      Plantilla:Revisar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/polinomios/" class="">
+      Polinomios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/porcentajes-de-notas/" class="">
+      Porcentajes de notas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/preguntas-indiscretas/" class="">
+      Preguntas indiscretas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/premios-primitiva/" class="">
+      Premios Primitiva</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/procedimiento-que-intercambia-filas-en-una-matriz/" class="">
+      Procedimiento que intercambia filas en una matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/procedimiento-que-multiplica-las-diagonales-de-una-matriz/" class="">
+      Procedimiento que multiplica las diagonales de una Matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/procesamiento-en-una-f-brica/" class="">
+      Procesamiento en una fábrica</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/producto-de-matrices/" class="">
+      Producto de matrices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/producto-de-una-matriz-por-un-vector/" class="">
+      Producto de una matriz por un vector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/programa-que-opera-con-matriz/" class="">
+      Programa que opera con matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/puntos-de-corte-de-dos-circuferencias/" class="">
+      Puntos de corte de dos circuferencias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/puntos-de-un-equipo/" class="">
+      Puntos de un equipo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/reescribir-un-bucle-cambiando-las-sentencias/" class="">
+      Reescribir un bucle cambiando las sentencias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/rellenar-array/" class="">
+      Rellenar array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/rellenar-matriz/" class="">
+      Rellenar matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/rellenar-matriz-con-ceros/" class="">
+      Rellenar matriz con ceros</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/rellenar-sudoku/" class="">
+      Rellenar sudoku</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/reorganizaci-n-de-un-array/" class="">
+      Reorganización de un array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/reservas-multicines/" class="">
+      Reservas Multicines</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/resultado-seg-n-el-orden-de-las-instrucciones/" class="">
+      Resultado según el orden de las instrucciones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/resultados-de-la-carrera/" class="">
+      Resultados de la carrera</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/resultados-del-bucle-for/" class="">
+      Resultados del bucle FOR</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/resultados-parciales/" class="">
+      Resultados parciales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/resumen-de-sensores/" class="">
+      Resumen de sensores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/sistema-de-ecuaciones/" class="">
+      Sistema de ecuaciones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/sopa-de-letras/" class="">
+      Sopa de letras</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/submatriz-cuadrada/" class="">
+      Submatriz cuadrada</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/suma-condicional/" class="">
+      Suma condicional</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/suma-de-las-diagonales-inferiores/" class="">
+      Suma de las diagonales inferiores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/suma-de-los-4-vecinos-en-una-matriz/" class="">
+      Suma de los 4 vecinos en una matriz</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/suma-de-los-cuadrados-de-los-100-primeros-n-meros-enteros/" class="">
+      Suma de los cuadrados de los 100 primeros números enteros</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/suma-de-una-serie/" class="">
+      Suma de una serie</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/suma-entre-l-mites/" class="">
+      Suma entre límites</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/suma-primeros-cinco-n-meros-naturales/" class="">
+      Suma primeros cinco números naturales</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/sumar-filas-impares-y-columnas-pares/" class="">
+      Sumar filas impares y columnas pares</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/sumar-valores-pares-de-posiciones-pares/" class="">
+      Sumar valores pares de posiciones pares</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/sumar-vectores-y-buscar-el-m-ximo/" class="">
+      Sumar vectores y buscar el máximo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/tabla-de-conversi-n-de-grados-centigrados-a-fahrenheit/" class="">
+      Tabla de conversión de grados centigrados a fahrenheit</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/tabla-de-multiplicar/" class="">
+      Tabla de multiplicar</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/tipo-de-tri-ngulo/" class="">
+      Tipo de triángulo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/transformar-un-texto/" class="">
+      Transformar un texto</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/tri-ngulo-de-pascal/" class="">
+      Triángulo de Pascal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/tri-ngulo-de-pascal-centrado/" class="">
+      Triángulo de Pascal centrado</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Ejercicios-programacion/ejercicios/vectores-planos/" class="">
+      Vectores planos</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <header class="book-header hidden">
+      
+  <div class="flex align-center justify-between gap">
+  <input type="checkbox" class="toggle" id="menu-control" />
+  <label for="menu-control" aria-label="Menu">
+    <svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#menu"></use></svg>
+  </label>
+
+  <div class="book-brand">
+  <a class="flex align-center" href="/Ejercicios-programacion/"><span>Ejercicios de Programación</span>
+  </a>
+</div>
+
+
+  
+  <input type="checkbox" class="toggle" id="toc-control" />
+  <label for="toc-control" aria-label="Table of Contents">
+    <svg class="book-icon"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#toc"></use></svg>
+  </label>
+  
+</div>
+
+ 
+    </header>
+
+    <main class="book-page">
+      
+      
+  
+
+      
+  <article class="markdown book-article"><h1 id="cálculo-del-valor-pi">Cálculo del valor Pi<a class="anchor" href="#c%c3%a1lculo-del-valor-pi" aria-label="Link"></a></h1>
+<h2 id="enunciado">Enunciado<a class="anchor" href="#enunciado" aria-label="Link"></a></h2>
+<p>Realizar un subalgoritmo que calcule el valor de la constante PI, con un error menor que el indicado. Para ello debe utilizar la siguiente serie:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PI1 = 4 * (1 – 1/3)
+</span></span><span class="line"><span class="cl">PI2 = 4 * (1 – 1/3 + 1/5 – 1/7)
+</span></span><span class="line"><span class="cl">PIn = 4 * (1 – 1/3 + 1/5 – 1/7 + ...)</span></span></code></pre></div><p>El error se calcula como la diferencia entre un término de la serie y el anterior.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">error = PIi - PIi-1</span></span></code></pre></div><h2 id="soluciones">Soluciones<a class="anchor" href="#soluciones" aria-label="Link"></a></h2>
+<h3 id="pseudocódigo">Pseudocódigo<a class="anchor" href="#pseudoc%c3%b3digo" aria-label="Link"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> FUNCION Pi (error):REAL
+</span></span><span class="line"><span class="cl"> ENTRADAS:
+</span></span><span class="line"><span class="cl">    error: REAL (* valor permitido de error en el calculo de PI *)
+</span></span><span class="line"><span class="cl"> SALIDAS:
+</span></span><span class="line"><span class="cl">    (* Aproximación al valor PI, con un error cometido menor que el dado como entrada *)
+</span></span><span class="line"><span class="cl"> VARIABLES:
+</span></span><span class="line"><span class="cl">    termino, erroractual, siguiente: REALES
+</span></span><span class="line"><span class="cl">    i:ENTERO
+</span></span><span class="line"><span class="cl"> INICIO
+</span></span><span class="line"><span class="cl">    (* Calcular el primer término de la sucesión *)
+</span></span><span class="line"><span class="cl">    termino &lt;-- 0
+</span></span><span class="line"><span class="cl">    siguiente &lt;-- 1-(1/3)
+</span></span><span class="line"><span class="cl">    erroractual &lt;-- siguiente-termino
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    (* Calcular los siguientes términos de la sucesión *)
+</span></span><span class="line"><span class="cl">    i&lt;--5
+</span></span><span class="line"><span class="cl">    MIENTRAS 4*erroractual&gt;=error HACER
+</span></span><span class="line"><span class="cl">       termino &lt;-- siguiente
+</span></span><span class="line"><span class="cl">       siguiente &lt;-- siguiente+(1/i -1/i+2)
+</span></span><span class="line"><span class="cl">       erroractual &lt;-- siguiente-termino
+</span></span><span class="line"><span class="cl">       i &lt;-- i+4
+</span></span><span class="line"><span class="cl">    FIN_MIENTRAS
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    DEVOLVER 4*siguiente
+</span></span><span class="line"><span class="cl"> FIN</span></span></code></pre></div><h3 id="programa-en-matlab">Programa en Matlab<a class="anchor" href="#programa-en-matlab" aria-label="Link"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="w"> </span>aproxpi <span class="p">=</span><span class="w"> </span><span class="nf">CalcularPi</span><span class="p">(</span> valorerror <span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c">% FUNCION aproxpi = CalcularPi( valorerror )</span>
+</span></span><span class="line"><span class="cl"><span class="c">% DESCRIPCIÓN: Calcula el valor de PI de forma aproximada</span>
+</span></span><span class="line"><span class="cl"><span class="c">% PARÁMETROS DE ENTRADA:</span>
+</span></span><span class="line"><span class="cl"><span class="c">%   valorerror: REAL, valor permitido de error en el calculo de PI</span>
+</span></span><span class="line"><span class="cl"><span class="c">% PARÁMETROS DE SALIDA:</span>
+</span></span><span class="line"><span class="cl"><span class="c">%   aproxpi: REAL,  Aproximación al valor PI, con un error cometido menor que el dado como entrada</span>
+</span></span><span class="line"><span class="cl"><span class="c">% VARIABLES:</span>
+</span></span><span class="line"><span class="cl"><span class="c">%   termino, erroractual, siguiente: REALES</span>
+</span></span><span class="line"><span class="cl"><span class="c">%   x: ENTERO</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c">%Calcular el primer término de la sucesión)</span>
+</span></span><span class="line"><span class="cl"><span class="n">termino</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">siguiente</span> <span class="p">=</span> <span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">erroractual</span> <span class="p">=</span> <span class="n">siguiente</span><span class="o">-</span><span class="n">termino</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c">%Calcular los siguientes términos de la sucesión)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="p">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="mi">4</span><span class="o">*</span><span class="n">erroractual</span><span class="o">&gt;</span><span class="p">=</span><span class="n">valorerror</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">termino</span> <span class="p">=</span> <span class="n">siguiente</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">siguiente</span> <span class="p">=</span> <span class="n">siguiente</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">x</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">erroractual</span> <span class="p">=</span> <span class="n">siguiente</span><span class="o">-</span><span class="n">termino</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">x</span> <span class="p">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="n">aproxpi</span> <span class="p">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">siguiente</span><span class="p">;</span></span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/Ejercicios-programacion/ejercicios/calculo-del-n-mero-e/" class="flex align-center">
+        <svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#backward"></use></svg>
+        <span>Calculo del número E</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/Ejercicios-programacion/ejercicios/c-lculo-n-mero-combinatorio/" class="flex align-center">
+        <span>Cálculo número combinatorio</span>
+        <svg class="book-icon" aria-hidden="true"><use href="/Ejercicios-programacion/iconset.min.90a7fd302dc1b9bc3c291688faee66a3e60a9209f59b89fa00669e35d6907b3f.svg#forward"></use></svg>
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay" aria-hidden="true"></label>
+    </main>
+
+    
+  
+  <aside class="book-toc" aria-label="Table of Contents">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#enunciado">Enunciado</a></li>
+    <li><a href="#soluciones">Soluciones</a>
+      <ul>
+        <li><a href="#pseudocódigo">Pseudocódigo</a></li>
+        <li><a href="#programa-en-matlab">Programa en Matlab</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </div>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

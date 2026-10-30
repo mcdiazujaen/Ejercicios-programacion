@@ -1,4 +1,7 @@
 {{ $icon := .Get "icon" | default "/images/4/44/Icono_revisar.png" }}
+{{ if not (or (hasPrefix $icon "http://") (hasPrefix $icon "https://") (hasPrefix $icon "data:")) }}
+  {{ $icon = strings.TrimPrefix "/" $icon | relURL }}
+{{ end }}
 {{ $title := .Get "title" }}
 {{ $text := .Get "text" }}
 {{ $param0 := "" }}
