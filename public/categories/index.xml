@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categorías on Ejercicios de Programación</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/categories/</link><description>Recent content in Categorías on Ejercicios de Programación</description><generator>Hugo</generator><language>es-es</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mcdiazujaen.github.io/Ejercicios-programacion/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/categories/an%C3%A1lisis/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mcdiazujaen.github.io/Ejercicios-programacion/categories/an%C3%A1lisis/</guid><description/></item><item><title>Comentario</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/categories/comentario/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mcdiazujaen.github.io/Ejercicios-programacion/categories/comentario/</guid><description/></item><item><title>Enunciado</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/categories/enunciado/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mcdiazujaen.github.io/Ejercicios-programacion/categories/enunciado/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Categorías on Ejercicios de Programación</title>
+		<link>http://localhost:1313/Ejercicios-programacion/categories/</link>
+		<description>Recent content in Categorías on Ejercicios de Programación</description>
+		<generator>Hugo</generator>
+		<language>es-es</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/Ejercicios-programacion/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Análisis</title>
+				<link>http://localhost:1313/Ejercicios-programacion/categories/an%C3%A1lisis/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Ejercicios-programacion/categories/an%C3%A1lisis/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Comentario</title>
+				<link>http://localhost:1313/Ejercicios-programacion/categories/comentario/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Ejercicios-programacion/categories/comentario/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Enunciado</title>
+				<link>http://localhost:1313/Ejercicios-programacion/categories/enunciado/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Ejercicios-programacion/categories/enunciado/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

@@ -1,1 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Ejercicios de Programación</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/</link><description>Recent content in Tags on Ejercicios de Programación</description><generator>Hugo</generator><language>es-es</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mcdiazujaen.github.io/Ejercicios-programacion/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Revisar</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/revisar/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/revisar/</guid><description/></item><item><title>Sin C</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/sin-c/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/sin-c/</guid><description/></item><item><title>Sin Matlab</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/sin-matlab/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/sin-matlab/</guid><description/></item><item><title>Sin Pseudocódigo</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/sin-pseudoc%C3%B3digo/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/sin-pseudoc%C3%B3digo/</guid><description/></item><item><title>Sin Solución</title><link>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/sin-soluci%C3%B3n/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mcdiazujaen.github.io/Ejercicios-programacion/tags/sin-soluci%C3%B3n/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tags on Ejercicios de Programación</title>
+		<link>http://localhost:1313/Ejercicios-programacion/tags/</link>
+		<description>Recent content in Tags on Ejercicios de Programación</description>
+		<generator>Hugo</generator>
+		<language>es-es</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/Ejercicios-programacion/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Revisar</title>
+				<link>http://localhost:1313/Ejercicios-programacion/tags/revisar/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Ejercicios-programacion/tags/revisar/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sin C</title>
+				<link>http://localhost:1313/Ejercicios-programacion/tags/sin-c/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Ejercicios-programacion/tags/sin-c/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sin Matlab</title>
+				<link>http://localhost:1313/Ejercicios-programacion/tags/sin-matlab/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Ejercicios-programacion/tags/sin-matlab/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sin Pseudocódigo</title>
+				<link>http://localhost:1313/Ejercicios-programacion/tags/sin-pseudoc%C3%B3digo/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Ejercicios-programacion/tags/sin-pseudoc%C3%B3digo/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sin Solución</title>
+				<link>http://localhost:1313/Ejercicios-programacion/tags/sin-soluci%C3%B3n/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Ejercicios-programacion/tags/sin-soluci%C3%B3n/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

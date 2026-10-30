@@ -8,13 +8,14 @@ categories: ['enunciado']
 
 # Comparar dos arrays
 
-##  Enunciado
+## Enunciado
 
 Diseñar un subalgoritmo que devuelva **VERDAD** si los dos arrays dados como entrada son iguales y **FALSO** , en otro caso. 
 
-##  Soluciones
+## Soluciones
 
-###  Diseño en pseudocódigo
+### Diseño en pseudocódigo
+
 ```text
  FUNCION IGUALES(VAR V:ARRAY DE REALES; VAR W:ARRAY DE REALES; n,m:ENTEROS):LOGICO
  
@@ -45,7 +46,8 @@ Diseñar un subalgoritmo que devuelva **VERDAD** si los dos arrays dados como en
  FIN
 ```
 
-###  Solucion en C
+### Solucion en C
+
 ```text
   int IGUALES(float V[],float W[], int n, int m){
   /*ENTRADAS:
@@ -75,11 +77,11 @@ Diseñar un subalgoritmo que devuelva **VERDAD** si los dos arrays dados como en
  }
 ```
 
-###  Programa en Matlab 
+### Programa en Matlab
 
-####  Solución con programación clásica 
+#### Solución con programación clásica
+
 ```matlab
-
 function igual=iguales(v,w)
 %FUNCIÓN igual=iguales(v,w)
 %DESCRIPCIÓN: Diseñar un subalgoritmo que devuelva VERDAD si los arrays 'v' y 'w' son iguales y FALSO, en otro caso.
@@ -104,8 +106,9 @@ function igual=iguales(v,w)
     end
 ```
 
-####  Solución Matlab 
-```text
+#### Solución Matlab
+
+```matlab
 function igual=iguales(v,w)
 %FUNCIÓN igual=iguales(v,w)
 %DESCRIPCIÓN: Diseñar un subalgoritmo que devuelva VERDAD si los arrays 'v' y 'w' son iguales y FALSO, en otro caso.
